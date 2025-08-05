@@ -157,7 +157,7 @@ function Contact() {
       try {
         // EmailJS template parameters
         const templateParams = {
-          to_email: 'gokul03903@gmail.com', // Same recipient as Home.js
+          to_email: 'info@thoughtflows.in', // Same recipient as Home.js
           from_name: formData.name,
           from_email: formData.email,
           phone: formData.ph,
