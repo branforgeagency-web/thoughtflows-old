@@ -1,6 +1,6 @@
 import React from 'react'
 import bannerImage from '../../images/homebannerbg.png'
-import hopes from '../../images/Branches/5.png'
+import hopes from '../../images/Branches/5(1).png'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 import CountUp from 'react-countup';

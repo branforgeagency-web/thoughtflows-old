@@ -50,15 +50,7 @@ function KochiStick() {
          <p>In addition to physical infrastructure, Thoughtflows Medical Coding Academy also utilizes online learning platforms to supplement classroom learning. Through virtual classrooms and e-learning modules, students can access course materials and resources at their convenience, facilitating flexible and self-paced learning.</p>
          <p>The combination of state-of-the-art physical infrastructure and online learning resources ensures that our students have access to a diverse range of resources that support their educational journey at Thoughtflows Medical Coding Academy</p>
           </div>
-          <div id="static-1" style={{paddingBottom:"40px"}}>
-            <h2 className="highh">Career-Building Job Placement Assistance</h2>
-            <p>
-            At Thoughtflows Medical Coding Academy, we understand that securing a rewarding job after completing training is a top priority for our students. To support their career aspirations, we offer comprehensive job placement assistance. Our academy maintains strong partnerships with leading healthcare providers and coding organizations, giving our graduates an edge in the competitive job market.
-            </p>
-            <p>
-            Our job placement assistance includes career counseling, resume preparation, interview coaching, and job search support. We guide our students in showcasing their skills and knowledge effectively to potential employers. We also organize job fairs and networking events, connecting our students with industry professionals and potential employers. Our commitment to the success of our students extends beyond the training period, ensuring that they embark on a fulfilling career as certified medical coders.
-            </p>
-          </div>
+          
         </div>
       </div>
     </>

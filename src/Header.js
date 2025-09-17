@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import "./App.css";
 import logo from "./images/image2.png";
-
 
 const DropdownMenu = () => {
   const menuItems = {
@@ -10,72 +11,104 @@ const DropdownMenu = () => {
       Coimbatore: [
         { name: "Hopes", path: "/hopes" },
         { name: "Saravanampatti", path: "/saravanampatti" },
-        { name: "Gandhipuram", path: "/gandhipuram" }
+        { name: "Gandhipuram", path: "/gandhipuram" },
       ],
       Kerala: [
         { name: "Kochi", path: "/kochi" },
-        { name: "Trivandrum", path: "/trivandrum" }
+        { name: "Trivandrum", path: "/trivandrum" },
       ],
       Hyderabad: [
         { name: "Ameerpet", path: "/ameerpet" },
-        { name: "Dilsukhnagar", path: "/dilsukhnagar" }
+        { name: "Dilsukhnagar", path: "/dilsukhnagar" },
       ],
-      OtherLocations: [
-        { name: "Tirupati", path: "/tirupati" },
-        { name: "Trichy", path: "/trichy" },
-        { name: "Salem", path: "/salem" }
-      ],
+      Tirupati: [{ name: "Tirupati", path: "/tirupati" }],
+      Trichy: [{ name: "Trichy", path: "/trichy" }],
+      Salem: [{ name: "Salem", path: "/salem" }],
+      Vizag: [{ name: "Vizag", path: "/vizag" }],
     },
   };
+
   const [openMainMenu, setOpenMainMenu] = useState(null);
   const [openSubMenu, setOpenSubMenu] = useState(null);
+
+  // Branches with no dropdown
+  const noDropdown = ["Trichy", "Salem", "Vizag", "Tirupati"];
 
   return (
     <div className="relative inline-block">
       <div
-        className="cursor-pointer md:!text-white py-2 "
+        className="cursor-pointer md:!text-white py-2"
         onMouseEnter={() => setOpenMainMenu("Branches")}
-        onMouseLeave={() => setOpenMainMenu(null)}
-    
+        onMouseLeave={() => {
+          setOpenMainMenu(null);
+          setOpenSubMenu(null);
+        }}
       >
         Branches
         {openMainMenu === "Branches" && (
-          <div className="absolute left-0 mt-2 w-48  bg-white shadow-lg rounded-md">
-            {Object.keys(menuItems.Branches).map((branch) => (
-              <div
-                key={branch}
-                className="relative group px-4 py-2 hover:bg-gray-200 cursor-pointer"
-                onMouseEnter={() => setOpenSubMenu(branch)}
-                onMouseLeave={() => setOpenSubMenu(null)}
-                style={{ fontWeight: "500", cursor: "pointer" ,color:"#000"}}
-              >
-                {branch}
-                {openSubMenu === branch && (
-                  <div className="absolute left-full top-0 mt-0 w-48   bg-white shadow-lg rounded-md">
-                    {menuItems.Branches[branch].map((subBranch) => (
-                      <Link 
-                        key={subBranch.name}
-                        to={subBranch.path}
-                        className="block px-4 py-2 hover:bg-gray-200 text-black" 
-                        style={{ color: "#578fca",fontWeight:"400"}}
-                        onClick={() => {
-                          setOpenMainMenu(null);
-                          setOpenSubMenu(null);
-                        }}
-                      >
-                        {subBranch.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
+          <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md">
+            {Object.keys(menuItems.Branches).map((branch) => {
+              const isNoDropdown = noDropdown.includes(branch);
+
+              return (
+                <div
+                  key={branch}
+                  className="relative group px-4 py-2 hover:bg-gray-200"
+                  style={{ fontWeight: "500", color: "#000" }}
+                  onMouseEnter={() => !isNoDropdown && setOpenSubMenu(branch)}
+                  onMouseLeave={() => !isNoDropdown && setOpenSubMenu(null)}
+                >
+                  {isNoDropdown ? (
+                    // Direct link (no dropdown)
+                    <Link
+                      to={menuItems.Branches[branch][0].path}
+                      className="block text-black"
+                      style={{ color: "#578fca", fontWeight: "400" }}
+                      onClick={() => {
+                        setOpenMainMenu(null);
+                        setOpenSubMenu(null);
+                      }}
+                    >
+                      {branch}
+                    </Link>
+                  ) : (
+                    <>
+                      <div className="flex justify-between items-center">
+                        {branch}
+                        <span className="ml-2">{">"}</span>
+                      </div>
+
+                      {openSubMenu === branch && (
+                        <div className="absolute left-full top-0 w-48 bg-white shadow-lg rounded-md">
+                          {menuItems.Branches[branch].map((subBranch) => (
+                            <Link
+                              key={subBranch.name}
+                              to={subBranch.path}
+                              className="block px-4 py-2 hover:bg-gray-200 text-black"
+                              style={{ color: "#578fca", fontWeight: "400" }}
+                              onClick={() => {
+                                setOpenMainMenu(null);
+                                setOpenSubMenu(null);
+                              }}
+                            >
+                              {subBranch.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  )}
+                </div>
+              );
+            })}
           </div>
         )}
       </div>
     </div>
   );
 };
+
+
 
 const Header = () => {
   const [open, setOpen] = useState({ submenu: "", open: false });
