@@ -6,9 +6,9 @@ import { Container, Row } from "react-bootstrap";
 import CountUp from "react-countup";
 import { Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import ameerpet from '../../images/Branches/8.png'
+import vizag from '../../images/Branches/8.png'
 
-const HyderabadBanner = () => {
+const VizagBanner = () => {
   return (
     <>
       <Row
@@ -24,7 +24,6 @@ const HyderabadBanner = () => {
           alignItems: "center",
           padding: "80px 0 40px 0",
           marginTop: "20px",
-          margin: 0
         }}
       >
         <Col lg={1} xs={0}></Col>
@@ -37,14 +36,14 @@ const HyderabadBanner = () => {
             <h2 style={{ 
               fontSize: 'clamp(28px, 5vw, 40px)',
               lineHeight: '1.2'
-            }}>Institute in <span style={{ color: '#097D8A' }}>Ameerpet</span></h2>
+            }}>Institute in <span style={{ color: '#097D8A' }}>Visakhapatnam</span></h2>
           </Col>
           <Col>
             <p style={{ 
               fontSize: 'clamp(14px, 3vw, 16px)', 
               marginTop: '20px',
               maxWidth: '600px'
-            }}>Experience world-class education at our leading training institute in Ameerpet, specializing in medical coding.</p>
+            }}>Join the premier medical coding training institute in Visakhapatnam. Get hands-on training with industry experts and secure your future in healthcare.</p>
           </Col>
           <Col className='cbe1-btn '>
             <Link to="/contact" className=" button-animation d">
@@ -60,12 +59,12 @@ const HyderabadBanner = () => {
           paddingTop: '0'
         }}>
           <img 
-            src={ameerpet} 
+            src={vizag} 
             alt='bannergif' 
-            className='bannergif'
+            className='bannergif banner-appear' 
             style={{
-              maxWidth: '100%',
-              width: 'auto',
+              maxWidth: '700px',
+              width: '100%',
               height: 'auto',
               objectFit: 'contain'
             }}
@@ -97,14 +96,14 @@ const HyderabadBanner = () => {
                     margin: 0,
                     lineHeight: '1.2'
                   }}>
-                    <CountUp start={0} end={30000} separator="," />+
+                    <CountUp start={0} end={2500} separator="," />+
                   </p>
                   <p style={{ 
                     fontWeight: '500', 
                     fontSize: 'clamp(12px, 2.5vw, 18px)', 
                     marginTop: '5px',
                     lineHeight: '1.2'
-                  }}>Training</p>
+                  }}>Students Trained</p>
                 </div>
               </Col>
               <Col xs={6} sm={6} md={3} lg={3} className="text-center">
@@ -116,14 +115,14 @@ const HyderabadBanner = () => {
                     margin: 0,
                     lineHeight: '1.2'
                   }}>
-                    <CountUp start={0} end={18000} separator="," />+
+                    <CountUp start={0} end={95} separator="," />%
                   </p>
                   <p style={{ 
                     fontWeight: '500', 
                     fontSize: 'clamp(12px, 2.5vw, 18px)', 
                     marginTop: '5px',
                     lineHeight: '1.2'
-                  }}>Placement</p>
+                  }}>Placement Rate</p>
                 </div>
               </Col>
               <Col xs={6} sm={6} md={3} lg={3} className="text-center">
@@ -135,14 +134,14 @@ const HyderabadBanner = () => {
                     margin: 0,
                     lineHeight: '1.2'
                   }}>
-                    <CountUp start={0} end={20} separator="," />+
+                    <CountUp start={0} end={15} separator="," />+
                   </p>
                   <p style={{ 
                     fontWeight: '500', 
                     fontSize: 'clamp(12px, 2.5vw, 18px)', 
                     marginTop: '5px',
                     lineHeight: '1.2'
-                  }}>Courses</p>
+                  }}>Expert Faculty</p>
                 </div>
               </Col>
               <Col xs={6} sm={6} md={3} lg={3} className="text-center">
@@ -154,14 +153,14 @@ const HyderabadBanner = () => {
                     margin: 0,
                     lineHeight: '1.2'
                   }}>
-                    <CountUp start={0} end={11} separator="," />+
+                    <CountUp start={0} end={5} separator="," />+
                   </p>
                   <p style={{ 
                     fontWeight: '500', 
                     fontSize: 'clamp(12px, 2.5vw, 18px)', 
                     marginTop: '5px',
                     lineHeight: '1.2'
-                  }}>Branches</p>
+                  }}>Years Experience</p>
                 </div>
               </Col>
             </Row>
@@ -172,4 +171,4 @@ const HyderabadBanner = () => {
   );
 };
 
-export default HyderabadBanner;
+export default VizagBanner;

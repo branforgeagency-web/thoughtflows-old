@@ -16,13 +16,15 @@ const Cbe2Banner = () => {
                     overflow: 'hidden',
                     backgroundRepeat: 'no-repeat',
                     minHeight: '95vh',
+                    height: 'auto',
                     alignItems: 'center',
                     margin: 0,
-                    padding: '40px 0'
+                    padding: '80px 0 40px 0',
+                    marginTop: '20px'
                 }}
             >
                 <Col lg={1} xs={0}></Col>
-                <Col lg={5} xs={12} className='cbe1-banner-lft px-4 mb-4 mb-lg-0 d-flex flex-column justify-content-lg-start justify-content-center align-items-lg-start align-items-center'>
+                <Col lg={3} md={4} xs={12} className='cbe1-banner-lft px-4 mb-4 mb-lg-0 d-flex flex-column justify-content-lg-start justify-content-center align-items-lg-start align-items-center'>
                     <Col className='cbe1-banner-heading'>
                         <h2 style={{ 
                             fontSize: 'clamp(28px, 5vw, 40px)',
@@ -47,7 +49,7 @@ const Cbe2Banner = () => {
                     </Col>
                 </Col>
 
-                <Col lg={5} xs={12} className='cbe1-banner-rht' style={{ 
+                <Col lg={7} md={8} xs={12} className='cbe1-banner-rht' style={{ 
                     display: 'flex', 
                     justifyContent: 'center', 
                     alignItems: 'center',
@@ -82,7 +84,7 @@ const Cbe2Banner = () => {
                 <Row className="align-items-center">
                     <Col lg={12}>
                         <Row className="gy-4 gx-3">
-                            <Col xs={6} sm={6} md={3} className="text-center">
+                            <Col xs={6} sm={6} md={3} lg={3} className="text-center">
                                 <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
                                     <p style={{ 
                                         color: '#FFC100', 
@@ -101,7 +103,7 @@ const Cbe2Banner = () => {
                                     }}>Training</p>
                                 </div>
                             </Col>
-                            <Col xs={6} sm={6} md={3} className="text-center">
+                            <Col xs={6} sm={6} md={3} lg={3} className="text-center">
                                 <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
                                     <p style={{ 
                                         color: '#F15BB5', 
@@ -120,7 +122,7 @@ const Cbe2Banner = () => {
                                     }}>Placement</p>
                                 </div>
                             </Col>
-                            <Col xs={6} sm={6} md={3} className="text-center">
+                            <Col xs={6} sm={6} md={3} lg={3} className="text-center">
                                 <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
                                     <p style={{ 
                                         color: '#00BBFA', 
@@ -139,7 +141,7 @@ const Cbe2Banner = () => {
                                     }}>Courses</p>
                                 </div>
                             </Col>
-                            <Col xs={6} sm={6} md={3} className="text-center">
+                            <Col xs={6} sm={6} md={3} lg={3} className="text-center">
                                 <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
                                     <p style={{ 
                                         color: '#01F6D5', 

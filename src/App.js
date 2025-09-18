@@ -35,6 +35,7 @@ import CbeBranch3 from './Branches/CbeBranch3';
 import Kochi from './Branches/Kochi';
 import Trivandrum from './Branches/Trivandrum';
 import Hyderabad from './Branches/Hyderabad';
+import Vizag from './Branches/Vizag';
 import TrichyBranches from './Branches/TrichyBranches';
 import ScrollToTop from './ScrollToTop';
 import IpDrug from './Courses/IpDrug';
@@ -100,6 +101,7 @@ function App() {
           <Route path='/salem' element={<Salem/>}/>
           <Route path='/ameerpet' element={<Hyderabad/>}/>
           <Route path='/dilsukhnagar' element={<Hyderabad2/>}/>
+          <Route path='/vizag' element={<Vizag/>}/>
           <Route path='/trichy' element={<TrichyBranches/>}/>
           <Route path='/ip-drg' element={<IpDrug/>}/>
           <Route path='/ccs' element={<CCS/>}/>

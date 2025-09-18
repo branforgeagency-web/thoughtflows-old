@@ -182,157 +182,149 @@ const TrichyBanner = () => {
           overflow: "hidden",
           backgroundRepeat: "no-repeat",
           minHeight: "95vh",
+          height: "auto",
           alignItems: "center",
-          padding: "40px 0",
+          padding: "80px 0 40px 0",
+          marginTop: "20px",
+          margin: 0
         }}
       >
-        <Col lg={1}></Col>
-        <Col lg={5} className="cbe1-banner-lft mb-4 mb-lg-0 order-1 order-lg-1">
-          {/* <Col className='cbe1-banner-dis'>
-                    <h6 className='disc'>20% Off</h6>
-                    <p className='cbe1-banner-lrn' style={{marginLeft:'15px', marginTop:'5px'}}>Learn from today</p>
-                </Col> */}
-          <Col className="cbe1-banner-heading">
-            <h2 style={{ fontSize: "clamp(28px, 5vw, 40px)" }}>Medical Coding Training </h2>
-            <h2 style={{ fontSize: "clamp(28px, 5vw, 40px)" }}>
-              Institute in <span style={{ color: "#097D8A" }}>Trichy</span>
-            </h2>
+        <Col lg={1} xs={0}></Col>
+        <Col lg={3} md={4} xs={12} className='cbe1-banner-lft px-4 mb-4 mb-lg-0 d-flex flex-column justify-content-lg-start justify-content-center align-items-lg-start align-items-center'>
+          <Col className='cbe1-banner-heading'>
+            <h2 style={{ 
+              fontSize: 'clamp(28px, 5vw, 40px)',
+              lineHeight: '1.2'
+            }}>Medical Coding </h2>
+            <h2 style={{ 
+              fontSize: 'clamp(28px, 5vw, 40px)',
+              lineHeight: '1.2'
+            }}>Institute in <span style={{ color: '#097D8A' }}>Trichy</span></h2>
           </Col>
           <Col>
-            <p style={{ fontSize: "16px", marginTop: "20px" }}>
-                Discover excellence and seize opportunities with Thoughtflows Medical Coding Academy in Trichy.
-            </p>
+            <p style={{ 
+              fontSize: 'clamp(14px, 3vw, 16px)', 
+              marginTop: '20px',
+              maxWidth: '600px'
+            }}>Discover excellence and seize opportunities with Thoughtflows Medical Coding Academy in Trichy.</p>
           </Col>
-          <div className="d-flex justify-content-center justify-content-lg-start " >
-          <Col className="cbe1-btn  " style={{maxWidth: "250px"}}>
-          
-          
-            <Link to="/contact" className="button-animation " id="popup-contact" style={{maxWidth: "250px"}}> 
+          <Col className='cbe1-btn '>
+            <Link to="/contact" className=" button-animation d">
               Register Now
             </Link>
           </Col>
-          </div>
         </Col>
 
-        <Col lg={5} className="cbe1-banner-rht text-center order-2 order-lg-2" >
-          <img src={cbe1banner} alt='bannersmall' style={{ maxWidth: "100%", height: "auto" ,marginBottom: "-130px"}} />
-          {/* <video
-            src={bannerVid}
-            className="bannerVideo"
-            autoPlay
-            loop
-            muted
-            playsInline
-            alt="bannervideo"
-          /> */}
+        <Col lg={7} md={8} xs={12} className='cbe1-banner-rht' style={{ 
+          display: 'flex', 
+          justifyContent: 'center', 
+          alignItems: 'center',
+          paddingTop: '0'
+        }}>
+          <img 
+            src={cbe1banner} 
+            alt='bannergif' 
+            className='bannergif'
+            style={{
+              maxWidth: '100%',
+              width: 'auto',
+              height: 'auto',
+              objectFit: 'contain'
+            }}
+          />
         </Col>
-        <Col lg={1}></Col>
+        <Col lg={1} xs={0}></Col>
       </Row>
-      <Container
-        className="cbe1-counter mx-3 mx-md-auto"
+      <Container fluid className='cbe1-counter px-3'
         style={{
-          background: "#fff",
-          borderRadius: "10px",
-          boxShadow: "0 3px 15px 0 rgba(0, 0, 0, 0.13)",
-          padding: "20px 15px 10px",
+          background: '#fff',
+          borderRadius: 'clamp(15px, 3vw, 80px)',
+          boxShadow: '0 3px 15px 0 rgba(0, 0, 0, 0.13)',
+          marginTop: '-40px',
+          padding: 'clamp(15px, 3vw, 30px)',
           zIndex: 2,
-          position: "relative",
-          maxWidth: "calc(100% - 30px)",
-        }}
-      >
+          position: 'relative',
+          maxWidth: '95%',
+          margin: 'clamp(-30px, -4vw, -40px) auto 0'
+        }}>
         <Row className="align-items-center">
           <Col lg={12}>
-            <Row className="gy-4">
-              <Col xs={6} md={3} className="text-center">
-               
-                <p
-                  style={{
-                    color: "#FFC100",
-                    fontWeight: "700",
-                    fontSize: "clamp(20px, 4vw, 30px)",
+            <Row className="gy-4 gx-3">
+              <Col xs={6} sm={6} md={3} lg={3} className="text-center">
+                <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
+                  <p style={{ 
+                    color: '#FFC100', 
+                    fontWeight: '700', 
+                    fontSize: 'clamp(18px, 3.5vw, 30px)', 
                     margin: 0,
-                  }}
-                >
-                  <CountUp start={0} end={30000} separator="," />+
-                </p>
-                <p
-                  style={{ 
-                    fontWeight: "500", 
-                    fontSize: "clamp(14px, 3vw, 20px)", 
-                    marginTop: 0,
-                    wordBreak: "break-word" 
-                  }}
-                >
-                  Training
-                </p>
+                    lineHeight: '1.2'
+                  }}>
+                    <CountUp start={0} end={30000} separator="," />+
+                  </p>
+                  <p style={{ 
+                    fontWeight: '500', 
+                    fontSize: 'clamp(12px, 2.5vw, 18px)', 
+                    marginTop: '5px',
+                    lineHeight: '1.2'
+                  }}>Training</p>
+                </div>
               </Col>
-              <Col xs={6} md={3} className="text-center">
-         
-                <p
-                  style={{
-                    color: "#F15BB5",
-                    fontWeight: "700",
-                    fontSize: "clamp(20px, 4vw, 30px)",
+              <Col xs={6} sm={6} md={3} lg={3} className="text-center">
+                <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
+                  <p style={{ 
+                    color: '#F15BB5', 
+                    fontWeight: '700', 
+                    fontSize: 'clamp(18px, 3.5vw, 30px)', 
                     margin: 0,
-                  }}
-                >
-                  <CountUp start={0} end={18000} separator="," />+
-                </p>
-                <p
-                  style={{ 
-                    fontWeight: "500", 
-                    fontSize: "clamp(14px, 3vw, 20px)", 
-                    marginTop: 0,
-                    wordBreak: "break-word" 
-                  }}
-                >
-                  Placement
-                </p>
+                    lineHeight: '1.2'
+                  }}>
+                    <CountUp start={0} end={18000} separator="," />+
+                  </p>
+                  <p style={{ 
+                    fontWeight: '500', 
+                    fontSize: 'clamp(12px, 2.5vw, 18px)', 
+                    marginTop: '5px',
+                    lineHeight: '1.2'
+                  }}>Placement</p>
+                </div>
               </Col>
-              <Col xs={6} md={3} className="text-center">
-                <p
-                  style={{
-                    color: "#00BBFA",
-                    fontWeight: "700",
-                    fontSize: "clamp(20px, 4vw, 30px)",
+              <Col xs={6} sm={6} md={3} lg={3} className="text-center">
+                <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
+                  <p style={{ 
+                    color: '#00BBFA', 
+                    fontWeight: '700', 
+                    fontSize: 'clamp(18px, 3.5vw, 30px)', 
                     margin: 0,
-                  }}
-                >
-                  <CountUp start={0} end={20} separator="," />+
-                </p>
-                <p
-                  style={{ 
-                    fontWeight: "500", 
-                    fontSize: "clamp(14px, 3vw, 20px)", 
-                    marginTop: 0,
-                    wordBreak: "break-word" 
-                  }}
-                >
-                  Courses
-                </p>
+                    lineHeight: '1.2'
+                  }}>
+                    <CountUp start={0} end={20} separator="," />+
+                  </p>
+                  <p style={{ 
+                    fontWeight: '500', 
+                    fontSize: 'clamp(12px, 2.5vw, 18px)', 
+                    marginTop: '5px',
+                    lineHeight: '1.2'
+                  }}>Courses</p>
+                </div>
               </Col>
-              <Col xs={6} md={3} className="text-center">
-                {/* <img src={counter4img} alt="Branch Icon" className="mb-3" /> */}
-                <p
-                  style={{
-                    color: "#01F6D5",
-                    fontWeight: "700",
-                    fontSize: "clamp(20px, 4vw, 30px)",
+              <Col xs={6} sm={6} md={3} lg={3} className="text-center">
+                <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
+                  <p style={{ 
+                    color: '#01F6D5', 
+                    fontWeight: '700', 
+                    fontSize: 'clamp(18px, 3.5vw, 30px)', 
                     margin: 0,
-                  }}
-                >
-                  <CountUp start={0} end={11} separator="," />+
-                </p>
-                <p
-                  style={{ 
-                    fontWeight: "500", 
-                    fontSize: "clamp(14px, 3vw, 20px)", 
-                    marginTop: 0,
-                    wordBreak: "break-word" 
-                  }}
-                >
-                  Branches
-                </p>
+                    lineHeight: '1.2'
+                  }}>
+                    <CountUp start={0} end={11} separator="," />+
+                  </p>
+                  <p style={{ 
+                    fontWeight: '500', 
+                    fontSize: 'clamp(12px, 2.5vw, 18px)', 
+                    marginTop: '5px',
+                    lineHeight: '1.2'
+                  }}>Branches</p>
+                </div>
               </Col>
             </Row>
           </Col>
