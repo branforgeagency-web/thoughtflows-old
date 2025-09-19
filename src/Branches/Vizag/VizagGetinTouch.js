@@ -9,7 +9,7 @@ function VizagGetinTouch() {
             Competitive Fees with Flexible Payment Plans
           </h2>
           <p>
-            Our Visakhapatnam institute offers the most competitive fees in Andhra Pradesh 
+            Our Vizag institute offers the most competitive fees in Andhra Pradesh 
             for medical coding training. We provide flexible payment options including 
             monthly installments, EMI options, and scholarship programs for deserving 
             students. Our fee structure is designed to make quality medical coding education 
@@ -17,9 +17,9 @@ function VizagGetinTouch() {
           </p>
         </div>
         <div className="get-2">
-          <h2 style={{ marginBottom: "20px" }}>Visit Our Visakhapatnam Campus</h2>
+          <h2 style={{ marginBottom: "20px" }}>Visit Our Vizag Campus</h2>
           <p>
-            Located in the heart of Visakhapatnam, our institute is easily accessible 
+            Located in the heart of Vizag, our institute is easily accessible 
             by public transport. We offer free counseling sessions, campus tours, and 
             demo classes for prospective students. Our experienced counselors are 
             available to guide you through course selection, career planning, and 

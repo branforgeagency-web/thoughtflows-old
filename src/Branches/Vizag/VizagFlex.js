@@ -15,9 +15,9 @@ function VizagFlex() {
           height: "", 
         }}
       >
-        <h2 style={{ textAlign: "center"}}>Flexible Learning Options in Visakhapatnam</h2>
+        <h2 style={{ textAlign: "center"}}>Flexible Learning Options in Vizag</h2>
         <p style={{ textAlign:"center", fontWeight:"800px", marginTop:"30px", lineHeight:"28px"}}>
-          Understanding the diverse needs of our students in Visakhapatnam, we offer 
+          Understanding the diverse needs of our students in Vizag, we offer 
           multiple learning formats to fit your schedule. Choose from morning batches 
           (9 AM - 12 PM), afternoon batches (2 PM - 5 PM), evening batches (6 PM - 9 PM), 
           or weekend intensive programs. We also provide online learning options for 

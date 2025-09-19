@@ -115,7 +115,7 @@ const TirupathiBanner = () => {
         className="cbe1-banner"
         style={{
           backgroundImage: `url(${bannerImage})`,
-          backgroundSize: "cover",
+          // backgroundSize: "fill",
           backgroundPosition: "center",
           overflow: "hidden",
           backgroundRepeat: "no-repeat",
@@ -164,9 +164,8 @@ const TirupathiBanner = () => {
             alt='bannergif' 
             className='bannergif'
             style={{
-              maxWidth: '100%',
-              width: 'auto',
-              height: 'auto',
+              width: '884px',
+              height: '420px',
               objectFit: 'contain'
             }}
           />

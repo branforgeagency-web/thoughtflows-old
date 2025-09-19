@@ -9,12 +9,12 @@ function VizagAbout() {
       <div className="trivandrum-abt">
         <h4 style={{ color: "#21A7D0", textAlign: "center" }}>Why Choose</h4>
         <h2 style={{ textAlign: "center", marginBottom: "30px" }}>
-          Our Institute in Visakhapatnam?
+          Our Institute in Vizag?
         </h2>
         <div className="trivandrum-abt-1">
           <div>
             <p style={{ fontSize: "18px", textAlign: "justify" }}>
-              Located in the heart of Visakhapatnam, our medical coding training institute 
+              Located in the heart of Vizag, our medical coding training institute 
               stands as the premier destination for healthcare education in Andhra Pradesh. 
               We offer industry-leading curriculum, certified instructors, state-of-the-art 
               infrastructure, guaranteed job placement assistance, competitive fees, and 
@@ -31,7 +31,7 @@ function VizagAbout() {
           Advanced Infrastructure for Seamless Learning
         </h2>
         <p style={{ padding: "20px 50px", textAlign: "justify" }}>
-          Our Visakhapatnam campus features cutting-edge infrastructure designed 
+          Our Vizag campus features cutting-edge infrastructure designed 
           specifically for medical coding education. We have modern computer labs 
           with high-speed internet, dedicated coding practice rooms, and a 
           comprehensive library with the latest medical coding resources. Our 
@@ -48,7 +48,7 @@ function VizagAbout() {
         <div className="f-item-1">
           <h2>Comprehensive Medical Coding Curriculum</h2>
           <p style={{ textAlign: "justify" }}>
-            Our Visakhapatnam institute offers a comprehensive curriculum covering 
+            Our Vizag institute offers a comprehensive curriculum covering 
             ICD-10-CM, CPT, HCPCS coding systems, medical terminology, anatomy & 
             physiology, healthcare documentation, and billing procedures. Students 
             learn through hands-on practice with real medical records, case studies, 
@@ -58,7 +58,7 @@ function VizagAbout() {
           </p >
           <h2 style={{ marginTop: "45px" }}>Expert Faculty with Industry Experience</h2>
           <p style={{ textAlign: "justify" }}>
-            Our faculty in Visakhapatnam consists of certified medical coders and 
+            Our faculty in Vizag consists of certified medical coders and 
             healthcare professionals with 10+ years of industry experience. They 
             bring real-world expertise from hospitals, clinics, and healthcare 
             organizations. Our instructors are not just teachers but mentors who 
@@ -67,7 +67,7 @@ function VizagAbout() {
           </p>
 
           <h2 style={{ marginTop: "45px" }}>State-of-the-Art Learning Environment</h2>
-          <p style={{ textAlign: "justify" }}>Our Visakhapatnam campus provides an ideal learning environment with modern computer labs, high-speed internet, and access to the latest medical coding software. Students practice on real medical records and coding scenarios, ensuring they are job-ready upon completion. Our infrastructure supports both individual learning and collaborative group projects.</p>
+          <p style={{ textAlign: "justify" }}>Our Vizag campus provides an ideal learning environment with modern computer labs, high-speed internet, and access to the latest medical coding software. Students practice on real medical records and coding scenarios, ensuring they are job-ready upon completion. Our infrastructure supports both individual learning and collaborative group projects.</p>
         </div>
 
       </div>

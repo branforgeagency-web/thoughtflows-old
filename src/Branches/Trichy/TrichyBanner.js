@@ -226,9 +226,8 @@ const TrichyBanner = () => {
             alt='bannergif' 
             className='bannergif'
             style={{
-              maxWidth: '100%',
-              width: 'auto',
-              height: 'auto',
+              width: '884px',
+              height: '420px',
               objectFit: 'contain'
             }}
           />

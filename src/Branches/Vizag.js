@@ -18,7 +18,7 @@ function Vizag() {
  },[])
   return (
     <>
-                      <Meta title="Visakhapatnam Medical Coding Training Institute - Thoughtflows Academy" description="Join the premier medical coding training institute in Visakhapatnam. Expert faculty, hands-on training, 95% placement rate, and flexible batch timings. Start your healthcare career today!" />
+                      <Meta title="Vizag Medical Coding Training Institute - Thoughtflows Academy" description="Join the premier medical coding training institute in Vizag. Expert faculty, hands-on training, 95% placement rate, and flexible batch timings. Start your healthcare career today!" />
 
     <VizagBanner />
     <VizagAbout />

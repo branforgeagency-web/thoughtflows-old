@@ -36,14 +36,14 @@ const VizagBanner = () => {
             <h2 style={{ 
               fontSize: 'clamp(28px, 5vw, 40px)',
               lineHeight: '1.2'
-            }}>Institute in <span style={{ color: '#097D8A' }}>Visakhapatnam</span></h2>
+            }}>Institute in <span style={{ color: '#097D8A' }}>Vizag</span></h2>
           </Col>
           <Col>
             <p style={{ 
               fontSize: 'clamp(14px, 3vw, 16px)', 
               marginTop: '20px',
               maxWidth: '600px'
-            }}>Join the premier medical coding training institute in Visakhapatnam. Get hands-on training with industry experts and secure your future in healthcare.</p>
+            }}>Join the premier medical coding training institute in Vizag. Get hands-on training with industry experts and secure your future in healthcare.</p>
           </Col>
           <Col className='cbe1-btn '>
             <Link to="/contact" className=" button-animation d">
