@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
-import { Link, useLocation } from "react-router-dom";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
 import "./App.css";
 import logo from "./images/image2.png";
-
 
 const DropdownMenu = () => {
   const menuItems = {
@@ -10,66 +11,96 @@ const DropdownMenu = () => {
       Coimbatore: [
         { name: "Hopes", path: "/hopes" },
         { name: "Saravanampatti", path: "/saravanampatti" },
-        { name: "Gandhipuram", path: "/gandhipuram" }
+        { name: "Gandhipuram", path: "/gandhipuram" },
       ],
       Kerala: [
         { name: "Kochi", path: "/kochi" },
-        { name: "Trivandrum", path: "/trivandrum" }
+        { name: "Trivandrum", path: "/trivandrum" },
       ],
       Hyderabad: [
         { name: "Ameerpet", path: "/ameerpet" },
-        { name: "Dilsukhnagar", path: "/dilsukhnagar" }
+        { name: "Dilsukhnagar", path: "/dilsukhnagar" },
       ],
-      OtherLocations: [
-        { name: "Tirupati", path: "/tirupati" },
-        { name: "Trichy", path: "/trichy" },
-        { name: "Salem", path: "/salem" }
-      ],
+      Tirupati: [{ name: "Tirupati", path: "/tirupati" }],
+      Trichy: [{ name: "Trichy", path: "/trichy" }],
+      Salem: [{ name: "Salem", path: "/salem" }],
+      Vizag: [{ name: "Vizag", path: "/vizag" }],
     },
   };
+
   const [openMainMenu, setOpenMainMenu] = useState(null);
   const [openSubMenu, setOpenSubMenu] = useState(null);
+
+  // Branches with no dropdown
+  const noDropdown = ["Trichy", "Salem", "Vizag", "Tirupati"];
 
   return (
     <div className="relative inline-block">
       <div
-        className="cursor-pointer md:!text-cyan-500 py-2 "
+        className="cursor-pointer md:!text-cyan-500 py-2"
         onMouseEnter={() => setOpenMainMenu("Branches")}
-        onMouseLeave={() => setOpenMainMenu(null)}
-    
+        onMouseLeave={() => {
+          setOpenMainMenu(null);
+          setOpenSubMenu(null);
+        }}
       >
         Branches
         {openMainMenu === "Branches" && (
-          <div className="absolute left-0 mt-2 w-48  bg-white shadow-lg rounded-md">
-            {Object.keys(menuItems.Branches).map((branch) => (
-              <div
-                key={branch}
-                className="relative group px-4 py-2 hover:bg-gray-200 cursor-pointer"
-                onMouseEnter={() => setOpenSubMenu(branch)}
-                onMouseLeave={() => setOpenSubMenu(null)}
-                style={{ fontWeight: "500", cursor: "pointer" ,color:"#000"}}
-              >
-                {branch}
-                {openSubMenu === branch && (
-                  <div className="absolute left-full top-0 mt-0 w-48   bg-white shadow-lg rounded-md">
-                    {menuItems.Branches[branch].map((subBranch) => (
-                      <Link 
-                        key={subBranch.name}
-                        to={subBranch.path}
-                        className="block px-4 py-2 hover:bg-gray-200 text-black" 
-                        style={{ color: "#578fca",fontWeight:"400"}}
-                        onClick={() => {
-                          setOpenMainMenu(null);
-                          setOpenSubMenu(null);
-                        }}
-                      >
-                        {subBranch.name}
-                      </Link>
-                    ))}
-                  </div>
-                )}
-              </div>
-            ))}
+          <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md">
+            {Object.keys(menuItems.Branches).map((branch) => {
+              const isNoDropdown = noDropdown.includes(branch);
+
+              return (
+                <div
+                  key={branch}
+                  className="relative group px-4 py-2 hover:bg-gray-200"
+                  style={{ fontWeight: "500", color: "#000" }}
+                  onMouseEnter={() => !isNoDropdown && setOpenSubMenu(branch)}
+                  onMouseLeave={() => !isNoDropdown && setOpenSubMenu(null)}
+                >
+                  {isNoDropdown ? (
+                    // Direct link (no dropdown)
+                    <Link
+                      to={menuItems.Branches[branch][0].path}
+                      className="block text-black"
+                      style={{ color: "#578fca", fontWeight: "400" }}
+                      onClick={() => {
+                        setOpenMainMenu(null);
+                        setOpenSubMenu(null);
+                      }}
+                    >
+                      {branch}
+                    </Link>
+                  ) : (
+                    <>
+                      <div className="flex justify-between items-center">
+                        {branch}
+                        <span className="ml-2">{">"}</span>
+                      </div>
+
+                      {openSubMenu === branch && (
+                        <div className="absolute left-full top-0 w-48 bg-white shadow-lg rounded-md">
+                          {menuItems.Branches[branch].map((subBranch) => (
+                            <Link
+                              key={subBranch.name}
+                              to={subBranch.path}
+                              className="block px-4 py-2 hover:bg-gray-200 text-black"
+                              style={{ color: "#578fca", fontWeight: "400" }}
+                              onClick={() => {
+                                setOpenMainMenu(null);
+                                setOpenSubMenu(null);
+                              }}
+                            >
+                              {subBranch.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  )}
+                </div>
+              );
+            })}
           </div>
         )}
       </div>
@@ -77,12 +108,13 @@ const DropdownMenu = () => {
   );
 };
 
+
+
 const Header = () => {
   const [open, setOpen] = useState({ submenu: "", open: false });
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(""); // Track which submenu is open
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const [isTransparent, setIsTransparent] = useState(false);
 
   const location = useLocation();
   const isHome = location.pathname === '/';
@@ -112,51 +144,6 @@ const Header = () => {
       document.body.style.overflow = "auto"; // Cleanup on unmount
     };
   }, [mobileMenuOpen]);
-
-  // Ensure scrolling is always enabled on component mount
-  useEffect(() => {
-    document.body.style.overflow = "auto";
-    document.documentElement.style.overflow = "auto";
-    return () => {
-      document.body.style.overflow = "auto";
-      document.documentElement.style.overflow = "auto";
-    };
-  }, []);
-
-  // Reset overflow on window load
-  useEffect(() => {
-    const handleLoad = () => {
-      document.body.style.overflow = "auto";
-      document.documentElement.style.overflow = "auto";
-    };
-    
-    window.addEventListener('load', handleLoad);
-    return () => window.removeEventListener('load', handleLoad);
-  }, []);
-
-  // Scroll detection for transparent header
-  useEffect(() => {
-    const handleScroll = () => {
-      if (isHome) {
-        // Get video section height (assuming it's the first section)
-        const videoSection = document.querySelector('.video-section, .banner-section, .hero-section');
-        if (videoSection) {
-          const videoHeight = videoSection.offsetHeight;
-          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-          
-          // Make header transparent after video section
-          if (scrollTop > videoHeight) {
-            setIsTransparent(true);
-          } else {
-            setIsTransparent(false);
-          }
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [isHome]);
 
   const submenu = {
     courses: [
@@ -242,9 +229,12 @@ const Header = () => {
  
   return (
     <>
-      <header className={` ${isHome ? (isTransparent ? 'glass-header transparent-header' : 'glass-header') : 'glass-header'}`}>
-        <nav className="navbar">
-          {/* Mobile Hamburger Menu */}
+      <header className={` ${isHome ? 'glass-header' : 'glass-header'}`}>
+        <nav className="navbar ">
+          {/* Logo */}
+          
+
+          {/* Hamburger Menu */}
           <div className="hamburger-menu">
             <div
               className="hamburger"
@@ -254,26 +244,32 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Desktop Navigation Container */}
+          {/* Navigation Menu */}
           <div
             className="App"
             onMouseLeave={() => setOpen({ submenu: "", open: false })}
           >
-            <div className="header-container">
-              {/* Logo Section */}
-              <div className="logo-section">
-                <a href="/" className="logo-link">
-                  <img src={logo} alt="Website Logo" className="logo-img" />
-                </a>
-              </div>
-
-              {/* Navigation Menu */}
-              <div className="nav-menu-container">
-                <ul
-                  className={`border-gray-300  sm:shadow md:shadow-none  menu ${
-                    mobileMenuOpen ? "open" : ""
-                  }`}
-                >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "6%",
+                height: "auto",
+                width: "100%",
+              }}
+              className={` ${isHome ? 'w-full' : 'w-full'}`}
+            >
+               <div className="logo">
+            <a href="/">
+              <img src={logo} alt="Website Logo"  />
+            </a>
+          </div>
+              <ul
+                className={`border-gray-300  sm:shadow md:shadow-none  menu ${
+                  mobileMenuOpen ? "open" : ""
+                }`}
+              >
                 
                 <li>
                   <div
@@ -281,7 +277,7 @@ const Header = () => {
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
-                    <Link to="/" className="md:!text-cyan-500">Home</Link>
+                    <Link to="/" className="text-cyan-500">Home</Link>
                   </div>
                 </li>
                 <li>
@@ -290,7 +286,7 @@ const Header = () => {
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
-                    <Link to="/about" className="md:!text-cyan-500">About us</Link>
+                    <Link to="/about" className="text-cyan-500">About us</Link>
                   </div>
                 </li>
                 <li>
@@ -303,7 +299,7 @@ const Header = () => {
                       isMobile &&
                       setSubmenuOpen(submenuOpen === "courses" ? "" : "courses")
                     }
-                    className="py-2 whitespace-nowrap md:!text-cyan-500"
+                    className="py-2 whitespace-nowrap text-cyan-500"
                   >
                     Courses
                   </div>
@@ -316,8 +312,8 @@ const Header = () => {
                           </div>
                           {item.courseMenu.map((course, i) => (
                             <Link
-                              className=" text-center md:!text-cyan-500"
-                              style={{ color: "#578fca" }}
+                               className="text-center text-cyan-500"
+                              style={{ color: "#06b6d4" }}
                               key={i}
                               to={course.path}
                               onClick={() => {
@@ -354,7 +350,7 @@ const Header = () => {
                         submenuOpen === "branches" ? "" : "branches"
                       )
                     }
-                    className="py-2 !md:!text-cyan-500"  
+                    className="py-2 text-cyan-500"
                   >
                     Branches
                   </div>
@@ -373,7 +369,7 @@ const Header = () => {
                           </div>
                           {item.courseMenu.map((branch, i) => (
                             <Link
-                              style={{ color: "#578fca" }}
+                               style={{ color: "#06b6d4" }}
                               key={i}
                               to={branch.path}
                               onClick={() => {
@@ -395,7 +391,7 @@ const Header = () => {
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
-                    <Link to="/ourteam" className="md:!text-cyan-500">Our team</Link>
+                    <Link to="/ourteam" className="text-cyan-500">Our team</Link>
                   </div>
                 </li>
                 <li>
@@ -404,11 +400,11 @@ const Header = () => {
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
-                    <Link to="/contact" className="md:!text-cyan-500">Contact us</Link>
+                    <Link to="/contact" className="text-cyan-500">Contact us</Link>
                   </div>
                 </li>
-                </ul>
-              </div>
+                
+              </ul>
             </div>
 
             {/* Submenu */}

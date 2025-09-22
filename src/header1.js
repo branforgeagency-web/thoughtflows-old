@@ -4,7 +4,7 @@ export default function Header1() {
   return (
     <header className="relative w-full bg-gradient-to-r from-gray-900/90 to-gray-800/90 py-4">
       <div
-        className="absolute inset-0 -z-10 bg-cover bg-center"
+        className="absolute inset-0 -z-10 bg-cover bg-center "
         style={{ backgroundImage: "url('/placeholder.svg?height=400&width=1200')" }}
       />
 
