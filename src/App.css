@@ -197,18 +197,20 @@ body {
 }
 
 .menu li a {
-  color: #A8A8A8;
+  color: #06b6d4; /* cyan-500 */
   text-decoration: none;
   display: block;
-  color: #0b3a66;
+  
 }
 
-.menu li a:hover {
-  color: #093769;
+.menu li > div {
+  color: #06b6d4; /* ensure non-link menu items like Branches are cyan */
 }
 
+.menu li > div:hover,
+.menu li a:hover,
 .menu li a:active {
-  color: #093769;
+  color: #06b6d4; /* keep cyan-500 on hover/active */
 }
 
 .contact-info p {
@@ -3448,6 +3450,40 @@ h1 {
   }
 }
 
+/* Desktop-only header layout adjustments */
+@media (min-width: 1024px) {
+  .navbar {
+    justify-content: flex-center !important; /* push menu to the right */
+    
+    padding: 40px 40px;
+    position: relative;
+  }
+
+  .logo {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    left: 150px; /* three-finger padding from left */
+    padding: 25px;
+  }
+
+  .logo img {
+    margin-left: 0;
+  }
+
+  /* Add spacing between menu items on desktop only */
+  .menu {
+    gap: 4rem; /* 64px */
+    margin-left: 350px;
+  }
+
+  /* Remove large per-li margins; rely on gap above */
+  .menu li {
+    margin: 15px;
+    font-size: 23PX;
+  }
+}
+
 
 @media (max-width: 480px) {
  
@@ -3651,19 +3687,14 @@ ul.menu.open {
 
 
 .glass-header {
-  background: rgba(255, 255, 255, ); /* Semi-transparent */
-  /* border-radius: 16px; */
-  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);  */
-  /* backdrop-filter: blur(3px); */
-  /* -webkit-backdrop-filter: blur(9px);  */
-  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1000;
-  /* width: 100%; */
-  /* padding: 10px 20px; */
-  margin-bottom: -180px;
+  width: 100%;
 }
 
 /* globals.css or index.css */
