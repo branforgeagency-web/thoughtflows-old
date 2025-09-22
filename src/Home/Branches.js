@@ -1,15 +1,16 @@
 import React from "react";
-import cbeImg from "../images/Group636.png";
-import kochiImg from "../images/Group637.png";
-import thiruImg from "../images/Group638.png";
-import hydImg from "../images/Group639.png";
-import tiruvanImg from "../images/Group640.png";
-import trichyImg from "../images/Group641.png";
-import salemImg from "../images/salem.png";
-import hopes from "../images/hopes.png";
-import gandhi from "../images/gandhi.png";
-import prozone from "../images/prozone.png";
-import hy1 from "../images/hy1.png";
+import cbeImg from "../images/Branches/updated/HOPES.png";
+import kochiImg from "../images/Branches/updated/Kochi.png";
+import thiruImg from "../images/Branches/updated/Tirupati.png";
+import hydImg from "../images/Branches/updated/Ameerpet.png";
+import tiruvanImg from "../images/Branches/updated/Trivandrum.png";
+import trichyImg from "../images/Branches/updated/Trichy.png";
+import salemImg from "../images/Branches/updated/Salem.png";
+import hopes from "../images/Branches/updated/HOPES.png";
+import vizag from "../images/Branches/updated/Vizag.png";
+import gandhi from "../images/Branches/updated/Gandhipuram.png";
+import prozone from "../images/Branches/updated/Saravanampatti.png";
+import hy1 from "../images/Branches/updated/Dilsukhnagar.png";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";  
 const Branches = () => {
@@ -27,6 +28,44 @@ const Branches = () => {
       </Row>
       <Row className="branches-list text-center justify-content-center">
         <Col xs={6} sm={6} lg={2} className="mb-4">
+         <Link to="/ameerpet" style={{ textDecoration: "none", color: "inherit" }}>
+          <div
+            style={{
+              transition: "all 0.3s ease",
+              cursor: "pointer",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "scale(1.1) rotate(-5deg)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "scale(1) rotate(0deg)";
+            }}
+          >
+            <img src={hydImg} alt="Hyderabad" className="img-fluid mb-2" />
+            <p>Ameerpet</p>
+          </div>
+          </Link>
+        </Col>
+        <Col xs={6} sm={6} lg={2} className="mb-4">
+         <Link to="/dilsukhnagar" style={{ textDecoration: "none", color: "inherit" }}>
+          <div
+            style={{
+              transition: "all 0.3s ease",
+              cursor: "pointer",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "scale(1.1) rotate(-5deg)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "scale(1) rotate(0deg)";
+            }}
+          >
+            <img src={hy1} alt="Hyderabad" className="img-fluid mb-2" />
+            <p>Dilsukhnagar</p>
+          </div>
+          </Link>
+        </Col>
+        <Col xs={6} sm={6} lg={2} className="mb-4">
          <Link to="/gandhipuram" style={{ textDecoration: "none", color: "inherit" }}>
           <div
             style={{
@@ -42,6 +81,63 @@ const Branches = () => {
           >
             <img src={gandhi} alt="Coimbatore" className="img-fluid mb-2" />
             <p>Gandhipuram</p>
+          </div>
+          </Link>
+        </Col>
+        <Col xs={6} sm={6} lg={2} className="mb-4">
+         <Link to="/hopes" style={{ textDecoration: "none", color: "inherit" }}>
+          <div
+            style={{
+              transition: "all 0.3s ease",
+              cursor: "pointer",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "scale(1.1) rotate(5deg)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "scale(1) rotate(0deg)";
+            }}
+          >
+            <img src={hopes} alt="Coimbatore" className="img-fluid mb-2" />
+            <p>Hopes</p>
+          </div>
+          </Link>
+        </Col>
+        <Col xs={6} sm={6} lg={2} className="mb-4">
+         <Link to="/kochi" style={{ textDecoration: "none", color: "inherit" }}>
+          <div
+            style={{
+              transition: "all 0.3s ease",
+              cursor: "pointer",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "scale(1.1) rotate(-5deg)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "scale(1) rotate(0deg)";
+            }}
+          >
+            <img src={kochiImg} alt="Kochi" className="img-fluid mb-2" />
+            <p>Kochi</p>
+          </div>
+          </Link>
+        </Col>
+        <Col xs={6} sm={6} lg={2} className="mb-4">
+         <Link to="/salem" style={{ textDecoration: "none", color: "inherit" }}>
+          <div
+            style={{
+              transition: "all 0.3s ease",
+              cursor: "pointer",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "scale(1.1) rotate(-5deg)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "scale(1) rotate(0deg)";
+            }}
+          >
+            <img src={salemImg} alt="Salem" className="img-fluid mb-2" />
+            <p>Salem</p>
           </div>
           </Link>
         </Col>
@@ -63,47 +159,6 @@ const Branches = () => {
             <p>Saravanampatti</p>
           </div>
           </Link>
-
-        </Col>
-        <Col xs={6} sm={6} lg={2} className="mb-4">
-         <Link to="/hopes" style={{ textDecoration: "none", color: "inherit" }}>
-          <div
-            style={{
-              transition: "all 0.3s ease",
-              cursor: "pointer",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "scale(1.1) rotate(5deg)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "scale(1) rotate(0deg)";
-            }}
-          >
-            <img src={hopes} alt="Coimbatore" className="img-fluid mb-2" />
-            <p>Hopes</p>
-          </div>
-          </Link>
-
-        </Col>
-        <Col xs={6} sm={6} lg={2} className="mb-4">
-         <Link to="/kochi" style={{ textDecoration: "none", color: "inherit" }}>
-          <div
-            style={{
-              transition: "all 0.3s ease",
-              cursor: "pointer",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "scale(1.1) rotate(-5deg)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "scale(1) rotate(0deg)";
-            }}
-          >
-            <img src={kochiImg} alt="Kochi" className="img-fluid mb-2" />
-            <p>Kochi</p>
-          </div>
-          </Link>
-
         </Col>
         <Col xs={6} sm={6} lg={2} className="mb-4">
          <Link to="/tirupati" style={{ textDecoration: "none", color: "inherit" }}>
@@ -123,67 +178,6 @@ const Branches = () => {
             <p>Tirupati</p>
           </div>
           </Link>
-
-        </Col>
-        <Col xs={6} sm={6} lg={2} className="mb-4">
-         <Link to="/ameerpet" style={{ textDecoration: "none", color: "inherit" }}>
-          <div
-            style={{
-              transition: "all 0.3s ease",
-              cursor: "pointer",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "scale(1.1) rotate(-5deg)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "scale(1) rotate(0deg)";
-            }}
-          >
-            <img src={hydImg} alt="Hyderabad" className="img-fluid mb-2" />
-            <p>Ameerpet</p>
-          </div>
-          </Link>
-
-        </Col>
-        <Col xs={6} sm={6} lg={2} className="mb-4">
-         <Link to="/dilsukhnagar" style={{ textDecoration: "none", color: "inherit" }}>
-          <div
-            style={{
-              transition: "all 0.3s ease",
-              cursor: "pointer",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "scale(1.1) rotate(-5deg)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "scale(1) rotate(0deg)";
-            }}
-          >
-            <img src={hy1} alt="Hyderabad" className="img-fluid mb-2" />
-            <p>Dilsukhnagar</p>
-          </div>
-          </Link>
-
-        </Col>
-        <Col xs={6} sm={6} lg={2} className="mb-4">
-         <Link to="/trivandrum" style={{ textDecoration: "none", color: "inherit" }}>
-          <div
-            style={{
-              transition: "all 0.3s ease",
-              cursor: "pointer",
-            }}
-            onMouseEnter={(e) => {
-              e.currentTarget.style.transform = "scale(1.1) rotate(5deg)";
-            }}
-            onMouseLeave={(e) => {
-              e.currentTarget.style.transform = "scale(1) rotate(0deg)";
-            }}
-          >
-            <img src={tiruvanImg} alt="Trivandrum" className="img-fluid mb-2" />
-            <p>Trivandrum</p>
-          </div>
-          </Link>
-
         </Col>
         <Col xs={6} sm={6} lg={2} className="mb-4">
          <Link to="/trichy" style={{ textDecoration: "none", color: "inherit" }}>
@@ -203,10 +197,28 @@ const Branches = () => {
             <p>Trichy</p>
           </div>
           </Link>
-
         </Col>
         <Col xs={6} sm={6} lg={2} className="mb-4">
-         <Link to="/salem" style={{ textDecoration: "none", color: "inherit" }}>
+         <Link to="/trivandrum" style={{ textDecoration: "none", color: "inherit" }}>
+          <div
+            style={{
+              transition: "all 0.3s ease",
+              cursor: "pointer",
+            }}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.transform = "scale(1.1) rotate(5deg)";
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.transform = "scale(1) rotate(0deg)";
+            }}
+          >
+            <img src={tiruvanImg} alt="Trivandrum" className="img-fluid mb-2" />
+            <p>Trivandrum</p>
+          </div>
+          </Link>
+        </Col>
+        <Col xs={6} sm={6} lg={2} className="mb-4">
+         <Link to="/vizag" style={{ textDecoration: "none", color: "inherit" }}>
           <div
             style={{
               transition: "all 0.3s ease",
@@ -219,11 +231,10 @@ const Branches = () => {
               e.currentTarget.style.transform = "scale(1) rotate(0deg)";
             }}
           >
-            <img src={salemImg} alt="Salem" className="img-fluid mb-2" />
-            <p>Salem</p>
+            <img src={vizag} alt="Vizag" className="img-fluid mb-2" />
+            <p>Vizag</p>
           </div>
           </Link>
-
         </Col>
       </Row>
 

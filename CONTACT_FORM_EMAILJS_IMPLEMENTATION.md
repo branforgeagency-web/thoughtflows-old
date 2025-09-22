@@ -56,13 +56,15 @@ The contact form sends these parameters to EmailJS:
 - `phone`: Sender's phone number
 - `qualification`: Sender's qualification
 - `message`: The actual message
-- `subject`: "New Contact Form Submission"
+- `subject`: "Contact Form Submission from [Name] ([Email])"
 - `full_message`: Formatted message with all details
 
 ### 5. Important Notes
 - The same EmailJS template is used for both forms (Home.js popup and Contact form)
 - Make sure the template in EmailJS can handle both sets of parameters
 - The template should use conditional logic to display fields that may or may not be present
+- **EmailJS Limitation**: Emails will always be sent from your configured email service (dhanuskumar18@gmail.com), but the template clearly shows the user's information as the actual sender
+- The subject line now includes the sender's name and email for easy identification
 
 ### 6. Testing
 To test the implementation:
@@ -102,6 +104,24 @@ Below is the template to be used in EmailJS. Create a new template in EmailJS da
             text-align: center;
             border-radius: 5px 5px 0 0;
         }
+        .sender-info {
+            background-color: #f8f9fa;
+            border: 2px solid #0D8F9C;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 20px 0;
+            text-align: center;
+        }
+        .sender-title {
+            font-weight: bold;
+            color: #0D8F9C;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .sender-details {
+            font-size: 14px;
+            color: #333;
+        }
         .content {
             padding: 20px;
             border: 1px solid #ddd;
@@ -117,6 +137,13 @@ Below is the template to be used in EmailJS. Create a new template in EmailJS da
         .value {
             margin-top: 5px;
         }
+        .message-box {
+            background-color: #f8f9fa;
+            border-left: 4px solid #0D8F9C;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
         .footer {
             margin-top: 20px;
             font-size: 12px;
@@ -129,22 +156,17 @@ Below is the template to be used in EmailJS. Create a new template in EmailJS da
     <div class="header">
         <h2>New Contact Form Submission</h2>
     </div>
+    
+    <div class="sender-info">
+        <div class="sender-title">📧 MESSAGE FROM:</div>
+        <div class="sender-details">
+            <strong>{{from_name}}</strong><br>
+            Email: {{from_email}}<br>
+            Phone: {{phone}}
+        </div>
+    </div>
+    
     <div class="content">
-        <div class="field">
-            <div class="label">Name:</div>
-            <div class="value">{{from_name}}</div>
-        </div>
-        
-        <div class="field">
-            <div class="label">Email:</div>
-            <div class="value">{{from_email}}</div>
-        </div>
-        
-        <div class="field">
-            <div class="label">Phone:</div>
-            <div class="value">{{phone}}</div>
-        </div>
-        
         <div class="field">
             <div class="label">Qualification:</div>
             <div class="value">{{qualification}}</div>
@@ -152,11 +174,13 @@ Below is the template to be used in EmailJS. Create a new template in EmailJS da
         
         <div class="field">
             <div class="label">Message:</div>
-            <div class="value">{{message}}</div>
+            <div class="message-box">{{message}}</div>
         </div>
     </div>
+    
     <div class="footer">
         <p>This email was sent from the Thoughtflows Medical Coding Academy contact form.</p>
+        <p><strong>Reply directly to: {{from_email}}</strong></p>
     </div>
 </body>
 </html>
