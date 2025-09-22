@@ -33,7 +33,7 @@ const DropdownMenu = () => {
   return (
     <div className="relative inline-block">
       <div
-        className="cursor-pointer md:!text-cyan-500 py-2 "
+        className="cursor-pointer md:!text-white py-2 "
         onMouseEnter={() => setOpenMainMenu("Branches")}
         onMouseLeave={() => setOpenMainMenu(null)}
     
@@ -82,7 +82,6 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(""); // Track which submenu is open
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
-  const [isTransparent, setIsTransparent] = useState(false);
 
   const location = useLocation();
   const isHome = location.pathname === '/';
@@ -112,51 +111,6 @@ const Header = () => {
       document.body.style.overflow = "auto"; // Cleanup on unmount
     };
   }, [mobileMenuOpen]);
-
-  // Ensure scrolling is always enabled on component mount
-  useEffect(() => {
-    document.body.style.overflow = "auto";
-    document.documentElement.style.overflow = "auto";
-    return () => {
-      document.body.style.overflow = "auto";
-      document.documentElement.style.overflow = "auto";
-    };
-  }, []);
-
-  // Reset overflow on window load
-  useEffect(() => {
-    const handleLoad = () => {
-      document.body.style.overflow = "auto";
-      document.documentElement.style.overflow = "auto";
-    };
-    
-    window.addEventListener('load', handleLoad);
-    return () => window.removeEventListener('load', handleLoad);
-  }, []);
-
-  // Scroll detection for transparent header
-  useEffect(() => {
-    const handleScroll = () => {
-      if (isHome) {
-        // Get video section height (assuming it's the first section)
-        const videoSection = document.querySelector('.video-section, .banner-section, .hero-section');
-        if (videoSection) {
-          const videoHeight = videoSection.offsetHeight;
-          const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
-          
-          // Make header transparent after video section
-          if (scrollTop > videoHeight) {
-            setIsTransparent(true);
-          } else {
-            setIsTransparent(false);
-          }
-        }
-      }
-    };
-
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [isHome]);
 
   const submenu = {
     courses: [
@@ -242,9 +196,12 @@ const Header = () => {
  
   return (
     <>
-      <header className={` ${isHome ? (isTransparent ? 'glass-header transparent-header' : 'glass-header') : 'glass-header'}`}>
-        <nav className="navbar">
-          {/* Mobile Hamburger Menu */}
+      <header className={` ${isHome ? 'glass-header' : 'glass-header'}`}>
+        <nav className="navbar ">
+          {/* Logo */}
+          
+
+          {/* Hamburger Menu */}
           <div className="hamburger-menu">
             <div
               className="hamburger"
@@ -254,26 +211,31 @@ const Header = () => {
             </div>
           </div>
 
-          {/* Desktop Navigation Container */}
+          {/* Navigation Menu */}
           <div
             className="App"
             onMouseLeave={() => setOpen({ submenu: "", open: false })}
           >
-            <div className="header-container">
-              {/* Logo Section */}
-              <div className="logo-section">
-                <a href="/" className="logo-link">
-                  <img src={logo} alt="Website Logo" className="logo-img" />
-                </a>
-              </div>
-
-              {/* Navigation Menu */}
-              <div className="nav-menu-container">
-                <ul
-                  className={`border-gray-300  sm:shadow md:shadow-none  menu ${
-                    mobileMenuOpen ? "open" : ""
-                  }`}
-                >
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+                gap: "6%",
+                height: "auto",
+              }}
+              className={` ${isHome ? 'w-full md:bg-gray-500 md:rounded-md md:bg-clip-padding md:backdrop-filter md:backdrop-blur-sm md:bg-opacity-40 md:border md:border-gray-100' :  'w-full md:bg-gray-500 md:rounded-md md:bg-clip-padding md:backdrop-filter md:backdrop-blur-sm md:bg-opacity-40 md:border md:border-gray-100'}`}
+            >
+              <div className="logo">
+            <a href="/">
+              <img src={logo} alt="Website Logo"  />
+            </a>
+          </div>
+              <ul
+                className={`border-gray-300  sm:shadow md:shadow-none  menu ${
+                  mobileMenuOpen ? "open" : ""
+                }`}
+              >
                 
                 <li>
                   <div
@@ -281,7 +243,7 @@ const Header = () => {
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
-                    <Link to="/" className="md:!text-cyan-500">Home</Link>
+                    <Link to="/" className="md:!text-white">Home</Link>
                   </div>
                 </li>
                 <li>
@@ -290,7 +252,7 @@ const Header = () => {
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
-                    <Link to="/about" className="md:!text-cyan-500">About us</Link>
+                    <Link to="/about" className="md:!text-white">About us</Link>
                   </div>
                 </li>
                 <li>
@@ -303,7 +265,7 @@ const Header = () => {
                       isMobile &&
                       setSubmenuOpen(submenuOpen === "courses" ? "" : "courses")
                     }
-                    className="py-2 whitespace-nowrap md:!text-cyan-500"
+                    className="py-2 whitespace-nowrap md:!text-white"
                   >
                     Courses
                   </div>
@@ -316,7 +278,7 @@ const Header = () => {
                           </div>
                           {item.courseMenu.map((course, i) => (
                             <Link
-                              className=" text-center md:!text-cyan-500"
+                              className=" text-center md:!text-white"
                               style={{ color: "#578fca" }}
                               key={i}
                               to={course.path}
@@ -354,7 +316,7 @@ const Header = () => {
                         submenuOpen === "branches" ? "" : "branches"
                       )
                     }
-                    className="py-2 !md:!text-cyan-500"  
+                    className="py-2 !md:!text-white"mobcolor  
                   >
                     Branches
                   </div>
@@ -395,7 +357,7 @@ const Header = () => {
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
-                    <Link to="/ourteam" className="md:!text-cyan-500">Our team</Link>
+                    <Link to="/ourteam" className="md:!text-white">Our team</Link>
                   </div>
                 </li>
                 <li>
@@ -404,11 +366,11 @@ const Header = () => {
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
-                    <Link to="/contact" className="md:!text-cyan-500">Contact us</Link>
+                    <Link to="/contact" className="md:!text-white">Contact us</Link>
                   </div>
                 </li>
-                </ul>
-              </div>
+                
+              </ul>
             </div>
 
             {/* Submenu */}
