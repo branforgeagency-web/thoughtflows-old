@@ -59,7 +59,7 @@ const Cbe2Banner = () => {
                     <img 
                         src={cbe1banner} 
                         alt='bannergif' 
-                        className='bannergif'
+                        className='bannergif banner-appear'
                         style={{
                             maxWidth: '100%',
                             width: 'auto',

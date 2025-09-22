@@ -224,10 +224,11 @@ const TrichyBanner = () => {
           <img 
             src={cbe1banner} 
             alt='bannergif' 
-            className='bannergif'
+            className='bannergif banner-appear'
             style={{
-              width: '884px',
-              height: '420px',
+              maxWidth: '700px',  
+              width: '100%',
+              height: 'auto',
               objectFit: 'contain'
             }}
           />

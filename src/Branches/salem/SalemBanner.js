@@ -274,7 +274,7 @@ const SalemBanner = () => {
           <img 
             src={cbe1banner} 
             alt='bannergif' 
-            className='bannergif'
+            className='bannergif banner-appear'
             style={{
               width: '884px',
               height: '420px',

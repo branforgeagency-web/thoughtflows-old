@@ -57,7 +57,7 @@ const Cbe1Banner = () => {
                     alignItems: 'center',
                     paddingTop: '0'
                 }}>
-                    <img src={saravanampatti} alt='bannergif' className='bannergif' style={{
+                    <img src={saravanampatti} alt='bannergif' className='bannergif banner-appear' style={{
                         maxWidth: '100%',
                         width: 'auto',
                         height: 'auto',

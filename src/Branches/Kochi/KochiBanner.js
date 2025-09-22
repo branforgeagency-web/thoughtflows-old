@@ -64,7 +64,7 @@ const KochiBanner = () => {
           <img 
             src={cbe1banner} 
             alt='bannergif' 
-            className='bannergif'
+            className='bannergif banner-appear'
             style={{
               width: '884px',
               height: '420px',
@@ -167,7 +167,7 @@ const KochiBanner = () => {
               </Col>
             </Row>
           </Col>
-        </Row>
+        </Row>  
       </Container>
     </>
   );
