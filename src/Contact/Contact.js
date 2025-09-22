@@ -240,7 +240,7 @@ function Contact() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.2 }}
       >
-        <h1 style={{ fontSize: '2.5em', paddingTop: isMobile ? '120px' : isTablet ? '160px' : '180px' }}>Get in touch</h1>
+        <h1 style={{ fontSize: '2.5em', paddingTop: isMobile ? '50px' : isTablet ? '50px' : '50px', paddingBottom: isMobile ? '0px' : '0px' }}>Get in touch</h1>
         <p style={{ fontSize: '16px', maxWidth: '700px', margin: 'auto' }}>
           Feel Free To Reach Out To Us Using The Options Below, And Our Dedicated Team Will Respond To Your Inquiries Promptly.
         </p>
