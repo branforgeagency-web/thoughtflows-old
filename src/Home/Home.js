@@ -84,11 +84,10 @@ const Home = () => {
     try {
       // EmailJS template parameters
       const templateParams = {
-        to_email: 'workshops2025@thoughtflows.in', // Corrected email address
+        to_email: 'info@thoughtflows.in', // Corrected email address
         from_name: formData.name,
         from_email: formData.email,
         phone: formData.phone,
-        course: formData.course,
         qualification: formData.qualification,
         year_of_passing: formData.yearOfPassing,
         location: formData.location,
@@ -100,7 +99,6 @@ const Home = () => {
           Name: ${formData.name}
           Email: ${formData.email}
           Phone: ${formData.phone}
-          Course: ${formData.course}
           Qualification: ${formData.qualification}
           Year of Passing: ${formData.yearOfPassing}
           Location: ${formData.location}
@@ -112,8 +110,8 @@ const Home = () => {
       // Send email using EmailJS
       // You'll need to replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with actual values
       const response = await emailjs.send(
-        'service_k1hktqq', // Replace with your EmailJS service ID
-        'template_pldhwhc', // Replace with your EmailJS template ID
+        'service_2anzqj9', // Replace with your EmailJS service ID
+        'template_vx3lkna', // Replace with your EmailJS template ID
         templateParams
       );
       
