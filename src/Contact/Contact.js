@@ -11,7 +11,7 @@ function Contact() {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
     
     // Initialize EmailJS with the same key from Home.js
-    emailjs.init("0J_1VFdtt2A1E5DL5");
+    emailjs.init("KLhirNBaXDhIlDonK");
  },[])
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   useEffect(() => {

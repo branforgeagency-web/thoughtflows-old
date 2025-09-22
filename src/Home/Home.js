@@ -26,17 +26,13 @@ const Home = () => {
     email: '',
     phone: '',
     course: '',
-    qualification: '',
-    yearOfPassing: '',
-    location: '',
-    source: '',
-    workshop: ''
+    
   });
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
     // Initialize EmailJS
-    emailjs.init("0J_1VFdtt2A1E5DL5"); // You'll need to replace this with your actual EmailJS public key
+    emailjs.init("KLhirNBaXDhIlDonK"); // You'll need to replace this with your actual EmailJS public key
     
     // For production, use environment variables instead:
     // emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
@@ -57,11 +53,7 @@ const Home = () => {
       email: '',
       phone: '',
       course: '',
-      qualification: '',
-      yearOfPassing: '',
-      location: '',
-      source: '',
-      workshop: ''
+      
     });
     setSubmitStatus({ type: '', message: '' });
   };
@@ -88,22 +80,14 @@ const Home = () => {
         from_name: formData.name,
         from_email: formData.email,
         phone: formData.phone,
-        qualification: formData.qualification,
-        year_of_passing: formData.yearOfPassing,
-        location: formData.location,
-        source: formData.source || 'Not specified',
-        workshop: formData.workshop,
+        course: formData.course,
         message: `
           New Workshop Registration:
           
           Name: ${formData.name}
           Email: ${formData.email}
           Phone: ${formData.phone}
-          Qualification: ${formData.qualification}
-          Year of Passing: ${formData.yearOfPassing}
-          Location: ${formData.location}
-          Source: ${formData.source || 'Not specified'}
-          Workshop Location: ${formData.workshop}
+          Course: ${formData.course}
         `
       };
 
