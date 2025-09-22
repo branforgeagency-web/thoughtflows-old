@@ -218,7 +218,7 @@ const Branches = () => {
           </Link>
         </Col>
         <Col xs={6} sm={6} lg={2} className="mb-4">
-         <Link to="/vizag" style={{ textDecoration: "none", color: "inherit" }}>
+         <Link to="/Innovative-Medical-Coding-Vizag" style={{ textDecoration: "none", color: "inherit" }}>
           <div
             style={{
               transition: "all 0.3s ease",

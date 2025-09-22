@@ -13,6 +13,14 @@ function Contact() {
     // Initialize EmailJS with the same key from Home.js
     emailjs.init("0J_1VFdtt2A1E5DL5");
  },[])
+  const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
+  useEffect(() => {
+    const onResize = () => setViewportWidth(window.innerWidth);
+    window.addEventListener('resize', onResize);
+    return () => window.removeEventListener('resize', onResize);
+  }, []);
+  const isMobile = viewportWidth <= 768;
+  const isTablet = viewportWidth > 768 && viewportWidth <= 1024;
   const [activeSection, setActiveSection] = useState(null);
   const [formData, setFormData] = useState({
     name: '',
@@ -112,7 +120,7 @@ function Contact() {
     cursor: 'pointer',
     boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
     minHeight: '200px',
-    flex: '1 1 calc(50% - 20px)',
+    flex: isMobile ? '1 1 100%' : '1 1 calc(50% - 20px)',
   };
 
   const activeStyle = {
@@ -232,16 +240,16 @@ function Contact() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.2 }}
       >
-        <h1 style={{ fontSize: '2.5em',paddingTop:"200px" }}>Get in touch</h1>
+        <h1 style={{ fontSize: '2.5em', paddingTop: isMobile ? '120px' : isTablet ? '160px' : '180px' }}>Get in touch</h1>
         <p style={{ fontSize: '16px', maxWidth: '700px', margin: 'auto' }}>
           Feel Free To Reach Out To Us Using The Options Below, And Our Dedicated Team Will Respond To Your Inquiries Promptly.
         </p>
       </motion.div>
 
-      <div className="contact-container" style={{ display: 'flex', justifyContent: 'center', marginBottom: '20px', marginTop:'0px' }}>
+      <div className="contact-container" style={{ display: 'flex', flexDirection: isMobile ? 'column-reverse' : 'row', justifyContent: 'center', alignItems: 'center', gap: isMobile ? '20px' : '0', marginBottom: '20px', marginTop:'0px' }}>
         <motion.div 
           className="contact-form"
-          style={{ flex: '1', marginLeft: '100px' }}
+          style={{ flex: 1, marginLeft: isMobile ? '0px' : isTablet ? '40px' : '100px', width: isMobile ? '100%' : 'auto' }}
           initial={{ x: -100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.4 }}
@@ -360,32 +368,34 @@ function Contact() {
         </motion.div>
         <motion.div 
           className="contact-image" 
-          style={{ flex: '1', marginRight: '100px' }}
+          style={{ flex: 1, marginRight: isMobile ? '0px' : isTablet ? '40px' : '100px', width: isMobile ? '100%' : 'auto' }}
           initial={{ x: 100, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.4 }}
         >
-          <img src={contact} alt='contact' style={{ width: '100%', borderRadius: '0px', }} />
+          <img src={contact} alt='contact' style={{ width: '100%', maxWidth: isMobile ? '480px' : '100%', height: 'auto', borderRadius: '0px' }} />
         </motion.div>
       </div>
 
       <motion.div 
-        style={{ display: 'flex', justifyContent: 'space-around', marginTop:'40px',alignItems:'center' }}
+        style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'space-around', marginTop:'40px',alignItems:'center', gap: isMobile ? '10px' : '0' }}
         initial={{ y: 50, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
         viewport={{ once: true }}
         transition={{ duration: 0.7 }}
       >
         <div>
-          <h1 className='highligh' style={{ color: "#0a848f",paddingLeft:"20px", fontSize: "50PX", marginTop: "55px" }}>OUR BRANCHES</h1>
-          <h2 style={{ marginTop: "20px" ,paddingLeft:"20px"}}>All Over South India Zone</h2>
+          <h1 className='highligh' style={{ color: "#0a848f", paddingLeft: isMobile ? '0px' : '20px', fontSize: isMobile ? '32px' : '50px', marginTop: isMobile ? '10px' : '55px', textAlign: isMobile ? 'center' : 'left' }}>OUR BRANCHES</h1>
+          <h2 style={{ marginTop: "20px" , paddingLeft: isMobile ? '0px' : '20px', textAlign: isMobile ? 'center' : 'left' }}>All Over South India Zone</h2>
         </div>
         <div style={{
-          width: '450px',
-          height: '400px',
+          width: isMobile ? '100%' : '450px',
+          maxWidth: isMobile ? '360px' : '450px',
+          height: isMobile ? 'auto' : '400px',
           perspective: '1000px',
           overflow: 'hidden',
-          padding:"25px"
+          padding: isMobile ? '10px' : '25px',
+          margin: isMobile ? '0 auto' : '0'
         }}>
           <img 
             src={map} 
@@ -393,7 +403,7 @@ function Contact() {
             alt="map" 
             style={{ 
               width: '100%',
-              height: '100%',
+              height: isMobile ? 'auto' : '100%',
               borderRadius: '0px',
               transition: 'transform 0.3s ease-out',
               transformStyle: 'preserve-3d'
@@ -404,7 +414,7 @@ function Contact() {
               const y = (e.clientY - rect.top) / rect.height;
               const tiltX = (y - 0.5) * 30;
               const tiltY = (x - 0.5) * -30;
-              e.currentTarget.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.1)`;
+              e.currentTarget.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(${isMobile ? 1.02 : 1.1})`;
             }}
             onMouseLeave={(e) => {
               e.currentTarget.style.transform = 'none';
