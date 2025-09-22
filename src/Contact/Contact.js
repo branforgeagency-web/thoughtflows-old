@@ -11,7 +11,7 @@ function Contact() {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
     
     // Initialize EmailJS with the same key from Home.js
-    emailjs.init("KLhirNBaXDhIlDonK");
+    emailjs.init("0J_1VFdtt2A1E5DL5");
  },[])
   const [activeSection, setActiveSection] = useState(null);
   const [formData, setFormData] = useState({
@@ -163,7 +163,7 @@ function Contact() {
           phone: formData.ph,
           qualification: formData.qualification,
           message: formData.message,
-          subject: `Contact Form Submission from ${formData.name} (${formData.email})`,
+          subject: 'New Contact Form Submission',
           full_message: `
             New Contact Form Submission:
             
@@ -177,8 +177,8 @@ function Contact() {
 
         // Send email using the same EmailJS credentials as Home.js
         const response = await emailjs.send(
-          'service_2anzqj9', // Same service ID as Home.js67
-          'template_y72j1ke', // Same template ID as Home.js
+          'service_k1hktqq', // Same service ID as Home.js
+          'template_rrxzg6i', // Same template ID as Home.js
           templateParams
         );
 
