@@ -24,7 +24,7 @@ const DropdownMenu = () => {
       Tirupati: [{ name: "Tirupati", path: "/Expert-Medical-Coding-Tirupathi" }],
       Trichy: [{ name: "Trichy", path: "/Career-Focused-Medical-Coding-Trichy" }],
       Salem: [{ name: "Salem", path: "/Future-Ready-Medical-Coding-Salem" }],
-      Vizag: [{ name: "Vizag", path: "/Innovative-Medical-Coding-Vizag" }],l
+      Vizag: [{ name: "Vizag", path: "/Innovative-Medical-Coding-Vizag" }],
     },
   };
 
@@ -46,7 +46,7 @@ const DropdownMenu = () => {
       >
         Branches
         {openMainMenu === "Branches" && (
-          <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md">
+          <div className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md">
             {Object.keys(menuItems.Branches).map((branch) => {
               const isNoDropdown = noDropdown.includes(branch);
 
@@ -79,7 +79,7 @@ const DropdownMenu = () => {
                       </div>
 
                       {openSubMenu === branch && (
-                        <div className="absolute left-full top-0 w-48 bg-white shadow-lg rounded-md">
+                        <div className="absolute left-full top-0 w-64 bg-white shadow-lg rounded-md">
                           {menuItems.Branches[branch].map((subBranch) => (
                             <Link
                               key={subBranch.name}
@@ -197,7 +197,7 @@ const Header = () => {
       {
         label: "COIMBATORE",
         courseMenu: [
-          { label: "Saravanampatti", path: "/saravanampatti" },
+          { label: "Saravanampatti ", path: "/saravanampatti" },
           { label: "Hopes", path: "/hopes" },
           { label: "Gandhipuram", path: "/gandhipuram" },
         ],
