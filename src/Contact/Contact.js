@@ -171,13 +171,13 @@ function Contact() {
       try {
         // EmailJS template parameters
         const templateParams = {
-          to_email: 'dhanuskumar18@gmail.com', // Same recipient as Home.js
+          to_email: 'info@thoughtflows.in', // Same recipient as Home.js
           from_name: formData.name,
           from_email: formData.email,
           phone: formData.ph,
           qualification: formData.qualification,
           message: formData.message,
-          subject: 'New Contact Form Submission',
+          subject: `Contact Form Submission from ${formData.name} (${formData.email})`,
           full_message: `
             New Contact Form Submission:
             
@@ -191,8 +191,8 @@ function Contact() {
 
         // Send email using the same EmailJS credentials as Home.js
         const response = await emailjs.send(
-          'service_k1hktqq', // Same service ID as Home.js
-          'template_rrxzg6i', // Same template ID as Home.js
+          'service_2anzqj9', // Same service ID as Home.js67
+          'template_y72j1ke', // Same template ID as Home.js
           templateParams
         );
 
