@@ -37,7 +37,7 @@ const DropdownMenu = () => {
   return (
     <div className="relative inline-block">
       <div
-        className="cursor-pointer md:!text-cyan-500 py-2"
+        className="cursor-pointer md:!text-white py-2 "
         onMouseEnter={() => setOpenMainMenu("Branches")}
         onMouseLeave={() => {
           setOpenMainMenu(null);
@@ -256,11 +256,10 @@ const Header = () => {
                 alignItems: "center",
                 gap: "6%",
                 height: "auto",
-                width: "100%",
               }}
-              className={` ${isHome ? 'w-full' : 'w-full'}`}
+              className={` ${isHome ? 'w-full md:bg-gray-500 md:rounded-md md:bg-clip-padding md:backdrop-filter md:backdrop-blur-sm md:bg-opacity-40 md:border md:border-gray-100' :  'w-full md:bg-gray-500 md:rounded-md md:bg-clip-padding md:backdrop-filter md:backdrop-blur-sm md:bg-opacity-40 md:border md:border-gray-100'}`}
             >
-               <div className="logo">
+              <div className="logo">
             <a href="/">
               <img src={logo} alt="Website Logo"  />
             </a>
@@ -277,7 +276,7 @@ const Header = () => {
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
-                    <Link to="/" className="text-cyan-500">Home</Link>
+                    <Link to="/" className="md:!text-white">Home</Link>
                   </div>
                 </li>
                 <li>
@@ -286,7 +285,7 @@ const Header = () => {
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
-                    <Link to="/about" className="text-cyan-500">About us</Link>
+                    <Link to="/about" className="md:!text-white">About us</Link>
                   </div>
                 </li>
                 <li>
@@ -299,7 +298,7 @@ const Header = () => {
                       isMobile &&
                       setSubmenuOpen(submenuOpen === "courses" ? "" : "courses")
                     }
-                    className="py-2 whitespace-nowrap text-cyan-500"
+                    className="py-2 whitespace-nowrap md:!text-white"
                   >
                     Courses
                   </div>
@@ -312,8 +311,8 @@ const Header = () => {
                           </div>
                           {item.courseMenu.map((course, i) => (
                             <Link
-                               className="text-center text-cyan-500"
-                              style={{ color: "#06b6d4" }}
+                              className=" text-center md:!text-white"
+                              style={{ color: "#578fca" }}
                               key={i}
                               to={course.path}
                               onClick={() => {
@@ -350,7 +349,7 @@ const Header = () => {
                         submenuOpen === "branches" ? "" : "branches"
                       )
                     }
-                    className="py-2 text-cyan-500"
+                    className="py-2 !md:!text-white"mobcolor  
                   >
                     Branches
                   </div>
@@ -391,7 +390,7 @@ const Header = () => {
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
-                    <Link to="/ourteam" className="text-cyan-500">Our team</Link>
+                    <Link to="/ourteam" className="md:!text-white">Our team</Link>
                   </div>
                 </li>
                 <li>
@@ -400,7 +399,7 @@ const Header = () => {
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
-                    <Link to="/contact" className="text-cyan-500">Contact us</Link>
+                    <Link to="/contact" className="md:!text-white">Contact us</Link>
                   </div>
                 </li>
                 
