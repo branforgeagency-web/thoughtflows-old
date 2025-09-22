@@ -6,7 +6,7 @@ import { Container, Row } from "react-bootstrap";
 import CountUp from "react-countup";
 import { Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import vizag from '../../images/Branches/8.png'
+import vizag from '../../images/Branches/ameerpet.png'
 
 const VizagBanner = () => {
   return (
@@ -84,7 +84,7 @@ const VizagBanner = () => {
           maxWidth: '95%',
           margin: 'clamp(-30px, -4vw, -40px) auto 0'
         }}>
-        <Row className="align-items-center">
+       <Row className="align-items-center">
           <Col lg={12}>
             <Row className="gy-4 gx-3">
               <Col xs={6} sm={6} md={3} lg={3} className="text-center">
@@ -96,14 +96,14 @@ const VizagBanner = () => {
                     margin: 0,
                     lineHeight: '1.2'
                   }}>
-                    <CountUp start={0} end={2500} separator="," />+
+                    <CountUp start={0} end={30000} separator="," />+
                   </p>
                   <p style={{ 
                     fontWeight: '500', 
                     fontSize: 'clamp(12px, 2.5vw, 18px)', 
                     marginTop: '5px',
                     lineHeight: '1.2'
-                  }}>Students Trained</p>
+                  }}>Training</p>
                 </div>
               </Col>
               <Col xs={6} sm={6} md={3} lg={3} className="text-center">
@@ -115,14 +115,14 @@ const VizagBanner = () => {
                     margin: 0,
                     lineHeight: '1.2'
                   }}>
-                    <CountUp start={0} end={95} separator="," />%
+                    <CountUp start={0} end={25000} separator="," />+
                   </p>
                   <p style={{ 
                     fontWeight: '500', 
                     fontSize: 'clamp(12px, 2.5vw, 18px)', 
                     marginTop: '5px',
                     lineHeight: '1.2'
-                  }}>Placement Rate</p>
+                  }}>Placement</p>
                 </div>
               </Col>
               <Col xs={6} sm={6} md={3} lg={3} className="text-center">
@@ -134,14 +134,14 @@ const VizagBanner = () => {
                     margin: 0,
                     lineHeight: '1.2'
                   }}>
-                    <CountUp start={0} end={15} separator="," />+
+                    <CountUp start={0} end={49} separator="," />+
                   </p>
                   <p style={{ 
                     fontWeight: '500', 
                     fontSize: 'clamp(12px, 2.5vw, 18px)', 
                     marginTop: '5px',
                     lineHeight: '1.2'
-                  }}>Expert Faculty</p>
+                  }}>Courses</p>
                 </div>
               </Col>
               <Col xs={6} sm={6} md={3} lg={3} className="text-center">
@@ -153,14 +153,14 @@ const VizagBanner = () => {
                     margin: 0,
                     lineHeight: '1.2'
                   }}>
-                    <CountUp start={0} end={5} separator="," />+
+                    <CountUp start={0} end={12} separator="," />+
                   </p>
                   <p style={{ 
                     fontWeight: '500', 
                     fontSize: 'clamp(12px, 2.5vw, 18px)', 
                     marginTop: '5px',
                     lineHeight: '1.2'
-                  }}>Years Experience</p>
+                  }}>Branches</p>
                 </div>
               </Col>
             </Row>

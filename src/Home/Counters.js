@@ -61,7 +61,7 @@ const Counters = () => {
                 {placementInView && (
                   <>
                     <p style={{ color: '#F15BB5', fontWeight: '700', fontSize: '50px', margin: 0 }}>
-                      <CountUp start={0} end={18000} separator="," duration={3} />+
+                      <CountUp start={0} end={25000} separator="," duration={3} />+
                     </p>
                     <img src={counter2img} alt="Placement Icon" className="mx-auto mb-3" />
                     <p style={{ fontWeight: '700', fontSize: '20px', marginTop: 0 }}>Placement</p>

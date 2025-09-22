@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { Col, Row, Container } from "react-bootstrap";
 import study1 from "../images/AboutImg/course-02.jpg";
 import study2 from "../images/AboutImg/course-05.jpg";
-import study3 from "../images/AboutImg/Our Motto-Support.jpg";
+import study3 from "../images/AboutImg/Our Motto-Support.png";
 import join from "../images/AboutImg/join.jpg";
 // import { faBullseye } from "@fortawesome/free-solid-svg-icons";
 // import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

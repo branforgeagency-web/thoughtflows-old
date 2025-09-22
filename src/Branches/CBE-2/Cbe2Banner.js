@@ -112,7 +112,7 @@ const Cbe2Banner = () => {
                                         margin: 0,
                                         lineHeight: '1.2'
                                     }}>
-                                        <CountUp start={0} end={18000} separator="," />+
+                                        <CountUp start={0} end={25000} separator="," />+
                                     </p>
                                     <p style={{ 
                                         fontWeight: '500', 
@@ -131,7 +131,7 @@ const Cbe2Banner = () => {
                                         margin: 0,
                                         lineHeight: '1.2'
                                     }}>
-                                        <CountUp start={0} end={20} separator="," />+
+                                        <CountUp start={0} end={49} separator="," />+
                                     </p>
                                     <p style={{ 
                                         fontWeight: '500', 
@@ -150,7 +150,7 @@ const Cbe2Banner = () => {
                                         margin: 0,
                                         lineHeight: '1.2'
                                     }}>
-                                        <CountUp start={0} end={11} separator="," />+
+                                        <CountUp start={0} end={12} separator="," />+
                                     </p>
                                     <p style={{ 
                                         fontWeight: '500', 

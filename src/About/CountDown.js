@@ -9,9 +9,9 @@ function CountDown() {
   const [count4, setCount4] = useState(0);
   const [isHovered, setIsHovered] = useState({ box1: false, box2: false, box3: false, box4: false });
   const target1 = 30000;
-  const target2 = 18000;
-  const target3 = 20;
-  const target4 = 11;
+  const target2 = 25000;
+  const target3 = 49;
+  const target4 = 12;
   const duration = 3000;
 
   useEffect(() => {
