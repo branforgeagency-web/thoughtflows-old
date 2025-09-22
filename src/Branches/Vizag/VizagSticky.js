@@ -1,5 +1,5 @@
 import React from 'react'
-import micro from "../../images/Branches/online/testtube.png"
+import micro from "../../images/Branches/vizhag2.png"
 import microbg from "../../images/Branches/online/microbg.png"
 
 function VizagSticky() {

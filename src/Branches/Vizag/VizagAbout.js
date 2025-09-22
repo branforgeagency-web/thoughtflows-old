@@ -1,5 +1,5 @@
 import React from "react";
-import labi from "../../images/Branches/online/hydera1.jpg";
+import labi from "../../images/Branches/vizhag3.png";
 import branch from "../../images/Branches/image7 copy.png";
 // import bannerVid from ""
 

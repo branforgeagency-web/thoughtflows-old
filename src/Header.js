@@ -9,22 +9,22 @@ const DropdownMenu = () => {
   const menuItems = {
     Branches: {
       Coimbatore: [
-        { name: "Hopes", path: "/hopes" },
-        { name: "Saravanampatti", path: "/saravanampatti" },
-        { name: "Gandhipuram", path: "/gandhipuram" },
+        { name: "Hopes", path: "/Medical-Coding-Excellence-at-Hopes" },
+        { name: "Saravanampatti", path: "/Top-Medical-Coding-Training-Saravanampatti" },
+        { name: "Gandhipuram", path: "/Premier-Medical-Coding-Institute-Gandhipuram" },
       ],
       Kerala: [
-        { name: "Kochi", path: "/kochi" },
-        { name: "Trivandrum", path: "/trivandrum" },
+        { name: "Kochi", path: "/Medical-Coding-Academy-Kochi" },
+        { name: "Trivandrum", path: "/Advanced-Medical-Coding-Tiruvandrum" },
       ],
       Hyderabad: [
-        { name: "Ameerpet", path: "/ameerpet" },
-        { name: "Dilsukhnagar", path: "/dilsukhnagar" },
+        { name: "Ameerpet", path: "/Trusted-Medical-Coding-Ameerpet" },
+        { name: "Dilsukhnagar", path: "/Professional-Medical-Coding-Dilsukhnagar" },
       ],
-      Tirupati: [{ name: "Tirupati", path: "/tirupati" }],
-      Trichy: [{ name: "Trichy", path: "/trichy" }],
-      Salem: [{ name: "Salem", path: "/salem" }],
-      Vizag: [{ name: "Vizag", path: "/vizag" }],
+      Tirupati: [{ name: "Tirupati", path: "/Expert-Medical-Coding-Tirupathi" }],
+      Trichy: [{ name: "Trichy", path: "/Career-Focused-Medical-Coding-Trichy" }],
+      Salem: [{ name: "Salem", path: "/Future-Ready-Medical-Coding-Salem" }],
+      Vizag: [{ name: "Vizag", path: "/Innovative-Medical-Coding-Vizag" }],
     },
   };
 

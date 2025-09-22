@@ -92,17 +92,17 @@ function App() {
           <Route path='/him' element={<HIM />} />
           <Route path='/radiology' element={<Radio />} />
           <Route path='/anesesthesia' element={<Anesesthesia />} />
-          <Route path='/saravanampatti' element={<CbeBranch1 />} />
-          <Route path='/hopes' element={<CbeBranch2/>}/>
-          <Route path='/gandhipuram' element={<CbeBranch3/>}/>
-          <Route path='/tirupati' element={<TirupathiBranch />} />
-          <Route path='/kochi' element={<Kochi/>}/>
-          <Route path='/trivandrum' element={<Trivandrum/>}/>
-          <Route path='/salem' element={<Salem/>}/>
-          <Route path='/ameerpet' element={<Hyderabad/>}/>
-          <Route path='/dilsukhnagar' element={<Hyderabad2/>}/>
-          <Route path='/vizag' element={<Vizag/>}/>
-          <Route path='/trichy' element={<TrichyBranches/>}/>
+          <Route path='/Top-Medical-Coding-Training-Saravanampatti' element={<CbeBranch1 />} />
+          <Route path='/Medical-Coding-Excellence-at-Hopes' element={<CbeBranch2/>}/>
+          <Route path='/Premier-Medical-Coding-Institute-Gandhipuram' element={<CbeBranch3/>}/>
+          <Route path='/Expert-Medical-Coding-Tirupathi' element={<TirupathiBranch />} />
+          <Route path='/Medical-Coding-Academy-Kochi' element={<Kochi/>}/>
+          <Route path='/Advanced-Medical-Coding-Tiruvandrum' element={<Trivandrum/>}/>
+          <Route path='/Future-Ready-Medical-Coding-Salem' element={<Salem/>}/>
+          <Route path='/Trusted-Medical-Coding-Ameerpet' element={<Hyderabad/>}/>
+          <Route path='/Professional-Medical-Coding-Dilsukhnagar' element={<Hyderabad2/>}/>
+          <Route path='/Innovative-Medical-Coding-Vizag' element={<Vizag/>}/>
+          <Route path='/Career-Focused-Medical-Coding-Trichy' element={<TrichyBranches/>}/>
           <Route path='/ip-drg' element={<IpDrug/>}/>
           <Route path='/ccs' element={<CCS/>}/>
           <Route path='/ccs-p' element={<CSS/>}/>

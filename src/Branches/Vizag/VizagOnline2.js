@@ -1,5 +1,5 @@
 import React from 'react'
-import triEnroll from "../../images/Branches/online/nurse-typing.jpg"
+import triEnroll from "../../images/Branches/vizhag1.png"
 
 
 function VizagEnroll() {
