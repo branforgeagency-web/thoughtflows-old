@@ -35,7 +35,7 @@ const Home = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
     // Initialize EmailJS
-    emailjs.init("0J_1VFdtt2A1E5DL5"); // You'll need to replace this with your actual EmailJS public key
+    emailjs.init("KLhirNBaXDhIlDonK"); // You'll need to replace this with your actual EmailJS public key
     
     // For production, use environment variables instead:
     // emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
@@ -82,7 +82,7 @@ const Home = () => {
     try {
       // EmailJS template parameters
       const templateParams = {
-        to_email: 'workshops2025@thoughtflows.in', // Corrected email address
+        to_email: 'info@thoughtflows.in', // Corrected email address
         from_name: formData.name,
         from_email: formData.email,
         phone: formData.phone,
@@ -108,8 +108,8 @@ const Home = () => {
       // Send email using EmailJS
       // You'll need to replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with actual values
       const response = await emailjs.send(
-        'service_k1hktqq', // Replace with your EmailJS service ID
-        'template_pldhwhc', // Replace with your EmailJS template ID
+        'service_2anzqj9', // Replace with your EmailJS service ID
+        'template_vx3lkna', // Replace with your EmailJS template ID
         templateParams
       );
       
