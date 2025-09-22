@@ -1,6 +1,6 @@
 import React, { useState,useEffect } from 'react';
 import contact from "../images/contact/6.jpg";
-import map from "../images/contact/PIN MAP UPDATED.png";
+import map from "../images/contact/pinmap.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
 import Meta from '../Meta';
@@ -11,7 +11,7 @@ function Contact() {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
     
     // Initialize EmailJS with the same key from Home.js
-    emailjs.init("0J_1VFdtt2A1E5DL5");
+    emailjs.init("KLhirNBaXDhIlDonK");
  },[])
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -63,7 +63,7 @@ function Contact() {
       address: '20-1-171/C1, 1st floor Upstairs MIOT Diagnostic center oppo. Sai Baba temple, Tirumala Bypass Rd, Korlagunta, Tirupati, Andhra Pradesh 517501',
     },
     {
-      name: 'Ameerpet',
+      name: 'Hyderabad',
       email: 'info@thoughtflows.in',
       phone: '+91 8790751742 & +91 98045 76852',
       address: 'No:405, 3rd Floor & No:606/A, 5th Floor, Vasavi MPM Grand Yellareddyguda, Ameerpet X Road Telangana 500073',
@@ -93,16 +93,10 @@ function Contact() {
       address: '1st floor, S Square Towers, Omalur Main Rd, Arthanari Nagar, Mamangam, Salem, Tamil Nadu 636302',
     },
     {
-      name: 'Dilsukhnagar',
+      name: 'Dilsuknagar',
       email: 'info@thoughtflows.in',
       phone: '+91 8148732017 & +91 9384576852',
       address: 'Sai Towers H.No:-16-11-477-/6/1/A, 2nd floor Opp.pillar No:-1519, Dilshuknagar., Hyderabad, Telangana 500102',
-    },
-    {
-      name: 'Vizag',
-      email: 'info@thoughtflows.in',
-      phone: '+91 89775 07230',
-      address: '7th Floor, Flat No #802 Grand Palace Building, D. No. 47-11-16, Lane Dwarka Nagar, Visakhapatnam- 530016',
     },
   ];
   
@@ -171,13 +165,13 @@ function Contact() {
       try {
         // EmailJS template parameters
         const templateParams = {
-          to_email: 'dhanuskumar18@gmail.com', // Same recipient as Home.js
+          to_email: 'info@thoughtflows.in', // Same recipient as Home.js
           from_name: formData.name,
           from_email: formData.email,
           phone: formData.ph,
           qualification: formData.qualification,
           message: formData.message,
-          subject: 'New Contact Form Submission',
+          subject: `Contact Form Submission from ${formData.name} (${formData.email})`,
           full_message: `
             New Contact Form Submission:
             
@@ -191,8 +185,8 @@ function Contact() {
 
         // Send email using the same EmailJS credentials as Home.js
         const response = await emailjs.send(
-          'service_k1hktqq', // Same service ID as Home.js
-          'template_rrxzg6i', // Same template ID as Home.js
+          'service_2anzqj9', // Same service ID as Home.js67
+          'template_y72j1ke', // Same template ID as Home.js
           templateParams
         );
 
@@ -242,7 +236,7 @@ function Contact() {
       >
         <h1 style={{ fontSize: '2.5em', paddingTop: isMobile ? '120px' : isTablet ? '160px' : '180px' }}>Get in touch</h1>
         <p style={{ fontSize: '16px', maxWidth: '700px', margin: 'auto' }}>
-          Feel Free To Reach Out To Us Using The Options Below, And Our Dedicated Team Will Respond To Your Inquiries Promptly.
+          Feel free to reach out to us using the options below, and our dedicated team will respond to your inquiries promptly.
         </p>
       </motion.div>
 
