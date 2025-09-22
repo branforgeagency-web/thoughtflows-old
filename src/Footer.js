@@ -195,7 +195,7 @@ const Footer = () => {
                                 <a href="/radiology" className="text-decoration-none text-light">Radiology</a>
                             </li>
                             <li className="mb-3">
-                                <a href="/anesthesia" className="text-decoration-none text-light">Anesthesia</a>
+                                <a href="/anesesthesia" className="text-decoration-none text-light">Anesesthesia</a>
                             </li>
                             <li className="mb-3">
                                 <a href="/ip-drg" className="text-decoration-none text-light">IP DRG</a>
@@ -247,24 +247,20 @@ const Footer = () => {
                     <Col lg={2}className="text-start mb-4 mb-lg-0">
                         <p className="fs-5 fw-bold">Contact</p>
                         <hr className="" style={{ width: '60px', borderColor: '#FFFFFF' }} />
-                        <div className="d-flex align-items-center mb-2">
-                            <i className="fas fa-phone text-white me-2"></i>
+                        <p className="fw-light mt-3">
                             <a
                                 href="tel:+919384576852"
-                                style={{ textDecoration:'none', color: 'white' }}
+                                style={{ textDecoration:'none' }}
                             >
                                 +91-9384576852
                             </a>
-                        </div>
-                        <div className="d-flex align-items-center">
-                            <i className="fas fa-envelope text-white me-2"></i>
-                            <a
+                        </p>
+                        <p className="fw-light"><a
                                 href="mailto:info@thoughtflows.in"
-                                style={{ textDecoration:'none', color: 'white' }}
+                                style={{ textDecoration:'none' }}
                             >
                                 info@thoughtflows.in
-                            </a>
-                        </div>
+                            </a></p>
                         <div className="d-flex gap-3 mt-4">
                             <a href=" https://www.instagram.com/thought_flows/" target="_blank" rel="noopener noreferrer" className="text-light">
                                 <i className="fab fa-instagram fa-lg"></i>

@@ -25,7 +25,6 @@ const Home = () => {
     name: '',
     email: '',
     phone: '',
-    course: '',
     qualification: '',
     yearOfPassing: '',
     location: '',
@@ -36,7 +35,7 @@ const Home = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
     // Initialize EmailJS
-    emailjs.init("0J_1VFdtt2A1E5DL5"); // You'll need to replace this with your actual EmailJS public key
+    emailjs.init("KLhirNBaXDhIlDonK"); // You'll need to replace this with your actual EmailJS public key
     
     // For production, use environment variables instead:
     // emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
@@ -56,7 +55,6 @@ const Home = () => {
       name: '',
       email: '',
       phone: '',
-      course: '',
       qualification: '',
       yearOfPassing: '',
       location: '',
@@ -84,11 +82,10 @@ const Home = () => {
     try {
       // EmailJS template parameters
       const templateParams = {
-        to_email: 'workshops2025@thoughtflows.in', // Corrected email address
+        to_email: 'info@thoughtflows.in', // Corrected email address
         from_name: formData.name,
         from_email: formData.email,
         phone: formData.phone,
-        course: formData.course,
         qualification: formData.qualification,
         year_of_passing: formData.yearOfPassing,
         location: formData.location,
@@ -100,7 +97,6 @@ const Home = () => {
           Name: ${formData.name}
           Email: ${formData.email}
           Phone: ${formData.phone}
-          Course: ${formData.course}
           Qualification: ${formData.qualification}
           Year of Passing: ${formData.yearOfPassing}
           Location: ${formData.location}
@@ -112,8 +108,8 @@ const Home = () => {
       // Send email using EmailJS
       // You'll need to replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with actual values
       const response = await emailjs.send(
-        'service_k1hktqq', // Replace with your EmailJS service ID
-        'template_pldhwhc', // Replace with your EmailJS template ID
+        'service_2anzqj9', // Replace with your EmailJS service ID
+        'template_vx3lkna', // Replace with your EmailJS template ID
         templateParams
       );
       
@@ -244,28 +240,11 @@ const Home = () => {
             >
               ×
             </button>
-            {/* Left side - Image */}
-            <div style={{
-              flex: window.innerWidth <= 768 ? "none" : "1",
-              width: window.innerWidth <= 768 ? "100%" : "45%",
-              display: "block",
-            }}>
-              <img
-                src={formimg}
-                alt="Enquiry"
-                style={{
-                  display: "block",
-                  width: "100%",
-                  height: window.innerWidth <= 768 ? "220px" : "100%",
-                  objectFit: "cover",
-                }}
-              />
-            </div>
 
-            {/* Right side - Form */}
+            {/* Left side - Form */}
             <div style={{ 
-              flex: window.innerWidth <= 768 ? "none" : "1.2",
-              padding: window.innerWidth <= 768 ? "24px 20px" : "40px",
+              flex: window.innerWidth <= 768 ? "none" : "1.5",
+              padding: window.innerWidth <= 768 ? "30px 20px" : "40px",
               width: "100%",
             }}>
               {/* Header */}
@@ -279,14 +258,14 @@ const Home = () => {
                   backgroundClip: "text",
                   marginBottom: "8px",
                 }}>
-                  Book for Free Demo Class!
+                  Transform Your Career
                 </h2>
                 <p style={{
                   fontSize: window.innerWidth <= 768 ? "14px" : "15px",
                   color: "#64748b",
                   fontWeight: "500",
                 }}>
-                  Fill in your details and we’ll reach out soon
+                  Join our exclusive medical coding workshop
                 </p>
               </div>
 
@@ -314,16 +293,18 @@ const Home = () => {
                 onSubmit={handleSubmit}
                 style={{
                   display: "grid",
-                  gridTemplateColumns: "1fr",
-                  gap: window.innerWidth <= 768 ? "12px" : "14px",
+                  gridTemplateColumns: window.innerWidth <= 768 ? "1fr" : "1fr 1fr",
+                  gap: window.innerWidth <= 768 ? "12px" : "16px",
                 }}
               >
-                {/* Input fields */}
+                {/* Compact input fields */}
                 {[
-                  { name: "name", type: "text", placeholder: "Full Name", icon: "👤" },
-                  { name: "phone", type: "tel", placeholder: "Phone Number", icon: "📱" },
-                  { name: "email", type: "email", placeholder: "Email Address", icon: "✉️" },
-                  { name: "course", type: "text", placeholder: "Course", icon: "🎓" },
+                  { name: "name", label: "Name", type: "text", placeholder: "John Doe", icon: "👤" },
+                  { name: "email", label: "Email", type: "email", placeholder: "john@example.com", icon: "✉️" },
+                  { name: "phone", label: "Phone", type: "tel", placeholder: "+91 98765 43210", icon: "📱" },
+                  { name: "qualification", label: "Qualification", type: "text", placeholder: "B.Sc, M.Sc, etc.", icon: "🎓" },
+                  { name: "yearOfPassing", label: "Year of Passing", type: "text", placeholder: "2023", icon: "📅" },
+                  { name: "location", label: "Location", type: "text", placeholder: "Chennai, Mumbai, etc.", icon: "📍" },
                 ].map((field, index) => (
                   <div key={index} style={{ position: "relative" }}>
                     <div style={{
@@ -342,10 +323,10 @@ const Home = () => {
                       placeholder={field.placeholder}
                       style={{
                         width: "100%",
-                        padding: window.innerWidth <= 768 ? "12px 12px 12px 40px" : "14px 14px 14px 44px",
+                        padding: window.innerWidth <= 768 ? "10px 10px 10px 38px" : "12px 12px 12px 40px",
                         borderRadius: "10px",
                         border: "2px solid #e2e8f0",
-                        fontSize: window.innerWidth <= 768 ? "14px" : "16px",
+                        fontSize: window.innerWidth <= 768 ? "14px" : "15px",
                         outline: "none",
                         transition: "all 0.3s ease",
                         backgroundColor: "#f8fafc",
@@ -364,11 +345,114 @@ const Home = () => {
                         e.target.style.boxShadow = "none";
                       }}
                       name={field.name}
-                      value={formData[field.name]}
+                      value={formData[field.name.toLowerCase()]}
                       onChange={handleInputChange}
                     />
                   </div>
                 ))}
+
+                {/* Dropdowns with same style */}
+                <div style={{ position: "relative" }}>
+                  <div style={{
+                    position: "absolute",
+                    left: "12px",
+                    top: "50%",
+                    transform: "translateY(-50%)",
+                    fontSize: "16px",
+                    opacity: "0.7",
+                  }}>
+                    🔍
+                  </div>
+                  <select
+                    style={{
+                      width: "100%",
+                      padding: window.innerWidth <= 768 ? "10px 10px 10px 38px" : "12px 12px 12px 40px",
+                      borderRadius: "10px",
+                      border: "2px solid #e2e8f0",
+                      fontSize: window.innerWidth <= 768 ? "14px" : "15px",
+                      outline: "none",
+                      backgroundColor: "#f8fafc",
+                      transition: "all 0.3s ease",
+                      cursor: "pointer",
+                      fontWeight: "500",
+                      appearance: "none",
+                      backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E")`,
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "right 12px center",
+                      paddingRight: "35px",
+                    }}
+                    onFocus={(e) => {
+                      e.target.style.borderColor = "#00BBFA";
+                      e.target.style.backgroundColor = "#ffffff";
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.borderColor = "#e2e8f0";
+                      e.target.style.backgroundColor = "#f8fafc";
+                    }}
+                    name="source"
+                    value={formData.source}
+                    onChange={handleInputChange}
+                  >
+                    <option value="">How did you hear about us?</option>
+                    <option value="instagram">Instagram</option>
+                    <option value="facebook">Facebook</option>
+                    <option value="linkedin">LinkedIn</option>
+                    <option value="whatsapp">WhatsApp</option>
+                    <option value="youtube">YouTube</option>
+                    <option value="reference">Friend/Reference</option>
+                  </select>
+                </div>
+
+                <div style={{ position: "relative" }}>
+                  <div style={{
+                    position: "absolute",
+                    left: "12px",
+                    top: "50%",
+                    transform: "translateY(-50%)",
+                    fontSize: "16px",
+                    opacity: "0.7",
+                  }}>
+                    🏢
+                  </div>
+                  <select
+                    required
+                    style={{
+                      width: "100%",
+                      padding: window.innerWidth <= 768 ? "10px 10px 10px 38px" : "12px 12px 12px 40px",
+                      borderRadius: "10px",
+                      border: "2px solid #e2e8f0",
+                      fontSize: window.innerWidth <= 768 ? "14px" : "15px",
+                      outline: "none",
+                      backgroundColor: "#f8fafc",
+                      transition: "all 0.3s ease",
+                      cursor: "pointer",
+                      fontWeight: "500",
+                      appearance: "none",
+                      backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 12 12'%3E%3Cpath fill='%23666' d='M10.293 3.293L6 7.586 1.707 3.293A1 1 0 00.293 4.707l5 5a1 1 0 001.414 0l5-5a1 1 0 10-1.414-1.414z'/%3E%3C/svg%3E")`,
+                      backgroundRepeat: "no-repeat",
+                      backgroundPosition: "right 12px center",
+                      paddingRight: "35px",
+                    }}
+                    onFocus={(e) => {
+                      e.target.style.borderColor = "#00BBFA";
+                      e.target.style.backgroundColor = "#ffffff";
+                    }}
+                    onBlur={(e) => {
+                      e.target.style.borderColor = "#e2e8f0";
+                      e.target.style.backgroundColor = "#f8fafc";
+                    }}
+                    name="workshop"
+                    value={formData.workshop}
+                    onChange={handleInputChange}
+                  >
+                    <option value="">Select Workshop Location *</option>
+                    <option value="pondicherry">Pondicherry</option>
+                    <option value="kochi">Kochi</option>
+                    <option value="vijayawada">Vijayawada</option>
+                    <option value="calicut">Calicut</option>
+                  </select>
+                </div>
+
                 {/* Submit Button */}
                 <motion.button
                   type="submit"
@@ -402,13 +486,91 @@ const Home = () => {
                         Submitting...
                       </>
                     ) : (
-                      'Register Now '
+                      'Register Now →'
                     )}
                   </span>
                 </motion.button>
               </form>
             </div>
-            {/* No right visual panel in new design */}
+
+            {/* Right side - Visual (Hidden on mobile) */}
+            {window.innerWidth > 768 && (
+              <div style={{
+                flex: "1",
+                background: "linear-gradient(135deg, #00BBFA 0%, #0099D6 100%)",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "center",
+                alignItems: "center",
+                padding: "40px 30px",
+                position: "relative",
+                overflow: "hidden",
+              }}>
+                {/* Animated background pattern */}
+                <div style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  right: 0,
+                  bottom: 0,
+                  opacity: 0.1,
+                  background: `repeating-linear-gradient(
+                    45deg,
+                    transparent,
+                    transparent 10px,
+                    rgba(255,255,255,.1) 10px,
+                    rgba(255,255,255,.1) 20px
+                  )`,
+                }} />
+
+                <div style={{ textAlign: "center", color: "white", position: "relative", zIndex: 1 }}>
+                  <div style={{
+                    fontSize: "72px",
+                    marginBottom: "20px",
+                    animation: "pulse 2s ease-in-out infinite",
+                  }}>
+                    🚀
+                  </div>
+                  <h3 style={{
+                    fontSize: "24px",
+                    fontWeight: "700",
+                    marginBottom: "16px",
+                  }}>
+                    Limited Seats!
+                  </h3>
+                  <p style={{
+                    fontSize: "16px",
+                    marginBottom: "30px",
+                    opacity: 0.95,
+                  }}>
+                    Join 10,000+ successful graduates
+                  </p>
+
+                  {/* Benefits list */}
+                  <div style={{ textAlign: "left" }}>
+                    {[
+                      "100% Job Placement Support",
+                      "Industry Expert Trainers",
+                      "Hands-on Practical Training",
+                      "Globally Recognized Certificate"
+                    ].map((benefit, index) => (
+                      <div key={index} style={{
+                        display: "flex",
+                        alignItems: "center",
+                        marginBottom: "12px",
+                        fontSize: "14px",
+                      }}>
+                        <span style={{
+                          marginRight: "8px",
+                          fontSize: "16px",
+                        }}>✓</span>
+                        {benefit}
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            )}
           </motion.div>
         </motion.div>
       )}
