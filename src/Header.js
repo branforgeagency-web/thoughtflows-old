@@ -303,7 +303,7 @@ const Header = () => {
                       isMobile &&
                       setSubmenuOpen(submenuOpen === "courses" ? "" : "courses")
                     }
-                    className="py-2 whitespace-nowrap md:!text-cyan-500"
+                    className="py-2 whitespace-nowrap md:!text-red-500"
                   >
                     Courses
                   </div>
