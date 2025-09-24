@@ -98,7 +98,7 @@
 
 import React from "react";
 import bannerImage from "../../images/homebannerbg.png";
-import cbe1banner from "../../images/Branches/2.png";
+import tirupathi from "../../images/Branches/Pic 8.webp";
 import banner2 from "../../images/Branches/lapgirl.png";
 // import cbe1banner from '../../images/Branches/cbe1bannerRight.png'
 import { Container, Row } from "react-bootstrap";
@@ -137,7 +137,7 @@ const TirupathiBanner = () => {
             <h2 style={{ 
               fontSize: 'clamp(28px, 5vw, 40px)',
               lineHeight: '1.2'
-            }}>Institute in <span style={{ color: '#097D8A' }}>Tirupathi</span></h2>
+            }}>Institute in <span style={{ color: '#097D8A' }}>Tirupati</span></h2>
           </Col>
           <Col>
             <p style={{ 
@@ -160,13 +160,14 @@ const TirupathiBanner = () => {
           paddingTop: '0'
         }}>
           <img 
-            src={cbe1banner} 
+            src={tirupathi} 
             alt='bannergif' 
             className='bannergif banner-appear'
             style={{
               width: '884px',
               height: '420px',
-              objectFit: 'contain'
+              objectFit: 'contain',
+              marginBottom:'-130px'
             }}
           />
         </Col>

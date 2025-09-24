@@ -1,14 +1,12 @@
 import React from "react";
 import bannerImage from "../../images/homebannerbg.png";
-import cbe1banner from "../../images/Branches/7.png";
-import banner2 from "../../images/Branches/lapgirl.png";
 // import cbe1banner from '../../images/Branches/cbe1bannerRight.png'
 import { Container, Row } from "react-bootstrap";
 import CountUp from "react-countup";
 import { Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 // import bannerVid from "../../images/Branches/online/Comp.mp4"
-import dilsukhnagar from '../../images/Branches/7.png'
+import dilsukhnagar from '../../images/Branches/Pic 7.webp'
 
 const HyderabadBanner = () => {
   return (
@@ -62,13 +60,14 @@ const HyderabadBanner = () => {
           paddingTop: '0'
         }}>
           <img 
-            src={cbe1banner} 
+            src={dilsukhnagar} 
             alt='bannergif' 
             className='bannergif banner-appear'
             style={{
               width: '884px',
               height: '420px',
-              objectFit: 'contain'
+              objectFit: 'contain',
+              marginBottom:'-135px'
             }}
           />
         </Col>

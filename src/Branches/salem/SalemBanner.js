@@ -210,7 +210,7 @@
 
 import React from "react";
 import bannerImage from "../../images/homebannerbg.png";
-import cbe1banner from "../../images/Branches/3.png";
+import salem from "../../images/Branches/Pic 10.webp";
 import banner2 from "../../images/Branches/lapgirl.png";
 // import cbe1banner from '../../images/Branches/cbe1bannerRight.png'
 import { Container, Row } from "react-bootstrap";
@@ -272,13 +272,14 @@ const SalemBanner = () => {
           paddingTop: '0'
         }}>
           <img 
-            src={cbe1banner} 
+            src={salem} 
             alt='bannergif' 
             className='bannergif banner-appear'
             style={{
               width: '884px',
               height: '420px',
-              objectFit: 'contain'
+              objectFit: 'contain',
+              marginBottom:'-190px'
             }}
           />
         </Col>

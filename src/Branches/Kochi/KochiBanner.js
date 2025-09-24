@@ -1,6 +1,6 @@
 import React from "react";
 import bannerImage from "../../images/homebannerbg.png";
-import cbe1banner from "../../images/Branches/Group 2 copy.png";
+import kochi from "../../images/Branches/Pic 4.webp";
 import banner2 from "../../images/Branches/lapgirl.png";
 // import cbe1banner from '../../images/Branches/cbe1bannerRight.png'
 import { Container, Row } from "react-bootstrap";
@@ -62,13 +62,14 @@ const KochiBanner = () => {
           paddingTop: '0'
         }}>
           <img 
-            src={cbe1banner} 
+            src={kochi} 
             alt='bannergif' 
             className='bannergif banner-appear'
             style={{
               width: '884px',
               height: '420px',
-              objectFit: 'contain'
+              objectFit: 'contain',
+              marginBottom:'-135px'
             }}
           />
         </Col>

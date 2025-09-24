@@ -1,12 +1,12 @@
 import React from "react";
 import bannerImage from "../../images/homebannerbg.png";
-import cbe1banner from "../../images/Branches/cbe1banner (2).png";
+import cbe1banner from "../../images/Branches/Pic 2.webp";
 import banner2 from "../../images/Branches/lapgirl.png";
 import { Container, Row } from "react-bootstrap";
 import CountUp from "react-countup";
 import { Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import ameerpet from '../../images/Branches/8.png'
+import ameerpet from '../../images/Branches/Pic 6.webp'
 
 const HyderabadBanner = () => {
   return (
@@ -67,7 +67,8 @@ const HyderabadBanner = () => {
               maxWidth: '100%',
               width: 'auto',
               height: 'auto',
-              objectFit: 'contain'
+              objectFit: 'contain',
+              marginBottom:'-40px'
             }}
           />
         </Col>

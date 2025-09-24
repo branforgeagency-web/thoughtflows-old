@@ -10,7 +10,6 @@ import VizagOnline2 from './Vizag/VizagOnline2'
 import VizagGetinTouch from './Vizag/VizagGetinTouch'
 import VizagStudents from './Vizag/VizagStudents'
 import Meta from '../Meta';
-import Cbe1Testi from './CBE-1/cbe1Testi'
 
 function Vizag() {
   useEffect(() => {
@@ -28,8 +27,8 @@ function Vizag() {
     <VizagOnline />
     <VizagOnline2 />
     <VizagGetinTouch />
-    {/* <VizagStudents /> */}
-    <Cbe1Testi/>
+   
+    <VizagStudents />
     </>
   )
 }

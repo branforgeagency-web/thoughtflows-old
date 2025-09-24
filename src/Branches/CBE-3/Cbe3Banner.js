@@ -1,6 +1,6 @@
 import React from 'react'
 import bannerImage from '../../images/homebannerbg.png'
-import cbe1banner from '../../images/Branches/6.png'
+import cbe1banner from '../../images/Branches/Pic 3.webp'
 import { Container, Row } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 import CountUp from 'react-countup';
@@ -64,7 +64,8 @@ const Cbe2Banner = () => {
                             maxWidth: '100%',
                             width: 'auto',
                             height: 'auto',
-                            objectFit: 'contain'
+                            objectFit: 'contain',
+                            marginBottom:'-40px'
                         }}
                     />
                 </Col>

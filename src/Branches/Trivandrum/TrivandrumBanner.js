@@ -152,7 +152,7 @@
 // export default TrivandrumBanner;
 import React from "react";
 import bannerImage from "../../images/homebannerbg.png";
-import cbe1banner from "../../images/Trivandrum/Group 2.png";
+import trivandrum from "../../images/Branches/Pic 5.webp";
 import banner2 from "../../images/Branches/lapgirl.png";
 // import cbe1banner from '../../images/Branches/cbe1bannerRight.png'
 import { Container, Row } from "react-bootstrap";
@@ -214,13 +214,14 @@ const TrivandrumBanner = () => {
           paddingTop: '0'
         }}>
           <img 
-            src={cbe1banner} 
+            src={trivandrum} 
             alt='bannergif' 
             className='bannergif banner-appear'
             style={{
               width: '884px',
               height: '420px',
-              objectFit: 'contain'
+              objectFit: 'contain',
+              marginBottom:'-140px'
             }}
           />
         </Col>
