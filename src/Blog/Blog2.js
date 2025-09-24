@@ -10,7 +10,18 @@ export default function Blog2() {
     const toggles = document.querySelectorAll(".faq-toggle");
     const toggleFaq = (event) => {
       const faqElement = event.currentTarget.closest(".faq");
-      faqElement.classList.toggle("active");
+      const isActive = faqElement.classList.contains('active');
+      
+      // Close all other FAQs first
+      const allFaqs = document.querySelectorAll('.faq');
+      allFaqs.forEach(faq => {
+        faq.classList.remove('active');
+      });
+      
+      // If the clicked FAQ was not active, open it
+      if (!isActive) {
+        faqElement.classList.add('active');
+      }
     };
 
     toggles.forEach((toggle) => {

@@ -1,13 +1,13 @@
 import { useEffect } from "react"
 import { TeamMember } from "./TeamMember"
-import Awanth from "../images/Profile images/Group 1.png"
+import Awanth from "../images/Profile images/blazer pic/Aswanth - Regional Head.webp"
 import Ashok from "../images/Profile images/Group 2.png"
 import Arun from "../images/Profile images/Group 2 copy.png"
 import Arputhakumar from "../images/Profile images/Group 2 copy 2.png"
 import Anakha from "../images/Profile images/Group 2 copy 3.png"
 import Aleena from "../images/Profile images/Group 2 copy 4.png"
 import Akshaya from "../images/Profile images/Group 2 copy 5.png"
-import Ajai from "../images/Profile images/Group 2 copy 6.png"
+import Ajai from "../images/Profile images/blazer pic/Arputha Kumar - TA Executive.webp"
 import Aswini from "../images/Profile images/Group 2 copy 8.png"
 import Atchaya from "../images/Profile images/Group 2 copy 9.png"
 import Babu from "../images/Profile images/Group 2 copy 10.png"
@@ -15,74 +15,91 @@ import Deva from "../images/Profile images/Group 2 copy 11.png"
 import Devi from "../images/Profile images/Group 2 copy 12.png"
 import Dharshini from "../images/Profile images/Group 2 copy 13.png"
 import Elilarasi from "../images/Profile images/Group 2 copy 14.png"  
-import Gayatri from "../images/Profile images/Group 2 copy 15.png"
-import Gayathri from "../images/Profile images/Group 2 copy 16.png"
+import Gayatri from "../images/Profile images/blazer pic/Gayathri - BRANCH HEAD.webp"
+import Gayathri from "../images/Profile images/blazer pic/Gayathri - HR Executive.webp"
 import Jasmin from "../images/Profile images/Group 2 copy 17.png"
 import Kalai from "../images/Profile images/Group 2 copy 18.png"  
 import Kalaimathi from "../images/Profile images/Group 2 copy 19.png"
-import Kanchana from "../images/Profile images/Group 2 copy 20.png"
+import Kanchana from "../images/Profile images/blazer pic/Kanchana - HR Executive.webp"
 import Kartheeswari from "../images/Profile images/Group 2 copy 21.png"
-import Karthik from "../images/Profile images/Group 2 copy 22.png"
+import Karthik from "../images/Profile images/blazer pic/Karthick - DM TL.webp"
 import Karthika from "../images/Profile images/Group 2 copy 23.png"  
 import Keerthika from "../images/Profile images/Group 2 copy 24.png"
-import Kiruthika from "../images/Profile images/Group 2 copy 25.png"
-import Kishore from "../images/Profile images/Group 2 copy 26.png"
+import Kiruthika from "../images/Profile images/blazer pic/Kiruthika - Digital Marketing Executive.webp"
+import Kishore from "../images/Profile images/blazer pic/Kishore - HR Executive.webp"
 import Kowsikan from "../images/Profile images/Group 2 copy 27.png"
 import Logeshwaran from "../images/Profile images/Group 2 copy 28.png"  
-import Lokesh from "../images/Profile images/Group 2 copy 29.png"          
+import Lokesh from "../images/Profile images/blazer pic/Lokesh Babu - Marketing Head.webp"           
 import Madhumitha from "../images/Profile images/Group 2 copy 30.png"
-import Manoj from "../images/Profile images/Group 2 copy 31.png"
+import Manoj from "../images/Profile images/blazer pic/Manoj - Training Department Head.webp"
 import Mohamed from "../images/Profile images/Group 2 copy 32.png"
-import Mounika from "../images/Profile images/Group 2 copy 33.png"
+import Mounika from "../images/Profile images/blazer pic/Mounika - Trainer.webp"
 import group2copy34 from "../images/Profile images/Group 2 copy 34.png"  
-import Pavithra from "../images/Profile images/Group 2 copy 35.png"
-import Peemuthannagari from "../images/Profile images/Group 2 copy 36.png"
+import Pavithra from "../images/Profile images/blazer pic/Pavithra - Training Manager.webp"
+import Peemuthannagari from "../images/Profile images/blazer pic/Peemuthannagari Supraja - HR Executive.webp"
 import group2copy37 from "../images/Profile images/Group 2 copy 37.png"
-import Prabhu from "../images/Profile images/Group 2 copy 38.png"  
+import Prabhu from "../images/Profile images/blazer pic/Prabhu - HR Executive.webp"  
 import Pradheesh from "../images/Profile images/Group 2 copy 39.png"
 import Priyadharshini from "../images/Profile images/Group 2 copy 40.png"
 import Ram from "../images/Profile images/Group 2 copy 41.png"
 import Punitha from "../images/Profile images/Group 2 copy 42.png"
-import kumar from "../images/Profile images/Group 2 copy 43.png"
+import kumar from "../images/Profile images/blazer pic/Ram Kumar - DM Executive.webp"
 import Reshma from "../images/Profile images/Group 2 copy 44.png"
 import Sabnam from "../images/Profile images/Group 2 copy 45.png"
 import Sanjay from "../images/Profile images/Group 2 copy 46.png"
 import group2copy47 from "../images/Profile images/Group 2 copy 47.png"
 import Sasikala from "../images/Profile images/Sasikala.png"
 import Sindhu from "../images/Profile images/Group 2 copy 48.png"
-import Sindhuja from "../images/Profile images/Group 2 copy 49.png"      
+import Sindhuja from "../images/Profile images/blazer pic/Sindhuja - HR TL.webp"      
 import Srujana from "../images/Profile images/Group 2 copy 50.png"
 import Sruthi from "../images/Profile images/Group 2 copy 51.png"
-import Subashini from "../images/Profile images/Group 2 copy 52.png"
-import Suvarna from "../images/Profile images/Group 2 copy 53.png"
+import Subashini from "../images/Profile images/blazer pic/Subashini - HR Executive.webp"
+import Suvarna from "../images/Profile images/blazer pic/Maisani Suvarna - TA Executive.webp"
 import Subiksha from "../images/Profile images/Group 2 copy 54.png"
 import Swetha from "../images/Profile images/Group 2 copy 55.png"  
 import thulasi from "../images/Profile images/Group 2 copy 56.png"
 import Vaanmathi from "../images/Profile images/Group 2 copy 57.png"  
 import Vaishna from "../images/Profile images/Group 2 copy 58.png"
-import Veenadhari from "../images/Profile images/Group 2 copy 59.png"
+import Veenadhari from "../images/Profile images/blazer pic/VEENA - FRANCHISE PARTNER.webp"
 import Vidya from "../images/Profile images/Group 2 copy 60.png"
-import Vignesh from "../images/Profile images/Group 2 copy 61.png"
-import Vishnupriya from "../images/Profile images/Group 2 copy 62.png"
+import Vignesh from "../images/Profile images/blazer pic/Vignesh - HR Executive.webp"
+import Vishnupriya from "../images/Profile images/blazer pic/Vishnupriya - OFFICE ASSISTANT.webp"
 import group2copy63 from "../images/Profile images/Group 2 copy 63.png"
 import Mittu from "../images/Profile images/Mittu - Franchise Partner - Kerala.png"
 import BalaMurali from "../images/Profile images/founder.png"
 import Banumathy from "../images/Profile images/ceo.png"
 import Meta from '../Meta';
-import Kobika from "../images/Profile images/Kobika.png"
+import Kobika from "../images/Profile images/blazer pic/Kobika - Trainer.webp"
 import Shilpa from "../images/Profile images/Shilpa.png"
-import Sreenath from "../images/Profile images/Sreenath.png"
-import Kamara from "../images/Profile images/Kamara.png"
+import Sreenath from "../images/Profile images/blazer pic/Sreenath Reddy - HR Executive.webp"
+import Kamara from "../images/Profile images/blazer pic/Kammara Boya Shiva - HR Executive.webp"
 import Sobika from "../images/Profile images/Sobika.png"
 import Manasa from "../images/Profile images/Manasa.png"
-import Pranav from "../images/Profile images/Pranav.png"
-import Manojs from "../images/Profile images/Manojs.png"
-import Aasifa from "../images/Profile images/aasifa.png"
-import Jadav from "../images/Profile images/jadav.png"
-import Prasanna from "../images/Profile images/Prasanna.png"
-import Rukshar from "../images/Profile images/Ruksar.png"
+import Manojs from "../images/Profile images/blazer pic/Manoj Kumar - OFFICE ASSISTANT.webp"
+import Aasifa from "../images/Profile images/blazer pic/Aashifa - Trainer.webp"
+import Jadav from "../images/Profile images/blazer pic/Pooja Jadav - Trainer.webp"
+import Prasanna from "../images/Profile images/blazer pic/Prasanna - Trainer.webp"
+import Rukshar from "../images/Profile images/blazer pic/Rukshar - HR Executive.webp"
 import basu from "../images/Profile images/basu.png"
 import shruthy from "../images/Profile images/shruthy.png"
+import Sreelekha from "../images/Profile images/blazer pic/Sreelekha - HR Executive.webp"
+import Julie from "../images/man.png"
+import PavithraN from "../images/Profile images/blazer pic/Pavithra N - HR Executive.webp"
+import KalaiMathi from "../images/Profile images/blazer pic/KalaiMathi - HR Executive.webp"
+import Kannan from "../images/Profile images/blazer pic/Kannan - HR.webp"
+import logarasan from "../images/man.png"
+import kathleen from "../images/Profile images/blazer pic/kathleen - HR Executive.webp"
+import PriyadharshiniR from "../images/Profile images/blazer pic/Priyadharshini - HR Executive.webp"
+import SangaviP from "../images/Profile images/blazer pic/Sangavi - HR Executive.webp"
+import Megha from "../images/man.png"
+import Karthick from "../images/Profile images/blazer pic/Karthick - DM Executive.webp"
+import Pranav from "../images/Profile images/blazer pic/Pranav - DM Executive.webp"
+import Chandu from "../images/man.png"
+import Sharon from "../images/Profile images/blazer pic/Sharon Roopavathy - Trainer.webp"
+import Charishma from "../images/Profile images/blazer pic/Charishma- Trainer.webp"
+import KamatamVarsha from "../images/Profile images/blazer pic/Kamatam Varsha - Trainer.webp"
+import Nayana from "../images/Profile images/blazer pic/Nayana - Trainer.webp"
+
 
 
 const profileImages = [     
@@ -96,26 +113,37 @@ const profileImages = [
 const teamMemberData =  [
   {"name": "Mr. BalaMurali", "role": "FOUNDER & MD", "phone": "733 875 3815", "email": "", "Branch": "","image":BalaMurali},
   {"name": "Ms. Bhanu Mathi", "role": "FOUNDER & CEO", "phone": "93845 76852", "email": "", "Branch": "","image":Banumathy},
-  {"name": "Mittu", "role": "FRANCHISE PARTNER", "phone": "", "email": "", "Branch": "Kerala","image":Mittu},
-  {"name": "Aswini", "role": "FRANCHISE PARTNER", "phone": "", "email": "","Branch": "Kerala","image":Aswini},
+
+
   {"name": "Logeshwaran", "role": "FRANCHISE PARTNER", "phone": "81487 32017, 96553 63552", "email": "", "Branch": "Salem","image":Logeshwaran},
   {"name": "Arun Kumar Pandey", "role": "FRANCHISE PARTNER", "phone": "", "email": "", "Branch": "DSNR","image":Arun},
   {"name": "Ashok Uppara", "role": "FRANCHISE PARTNER", "phone": "", "email": "", "Branch": "DSNR","image":Ashok},
+  {"name": "Veenadhari", "role": "FRANCHISE PARTNER", "phone": "", "email": "veenadharithoughtflows@gmail.com", "Branch": "Vizag","image":Veenadhari},
+
+
   {"name": "Thulasi", "role": "GENERAL MANAGER", "phone": "78936 82459", "email": "thulasick@thoughtflows.in", "Branch": "","image":thulasi},
+
+
   {"name": "Nilanjan Basu", "role": "INDIA HEAD - OPERATIONS & STRATEGIC PARTNERSHIP", "phone": "", "email": "", "Branch": "","image":basu},
+
+
   {"name": "Kartheeswari", "role": "OPERATIONAL HEAD", "phone": "95009 87080", "email": "karthik@thoughtflows.in", "Branch": "","image":Kartheeswari},
-  {"name": "Jasmin", "role": "REGIONAL HEAD", "phone": "96550 79784", "email": "jasmin@thoughtflows.in", "Branch": "","image":Jasmin},
-  {"name": "Vidya", "role": "REGIONAL HEAD", "phone": "97919 74560", "email": "vidya@thoughtflows.in", "Branch": "","image":Vidya},
-  {"name": "Lokesh Babu", "role": "REGIONAL HEAD", "phone": "8790424835", "email": "lokesh@thoughtflows.in", "Branch": "","image":Lokesh},
+  {"name": "Jasmin", "role": "HR DEPARTMENT HEAD", "phone": "96550 79784", "email": "jasmin@thoughtflows.in", "Branch": "","image":Jasmin},
+  {"name": "Vidya", "role": "TALENT ACQUISITION HEAD", "phone": "97919 74560", "email": "vidya@thoughtflows.in", "Branch": "","image":Vidya},
   {"name": "Manoj", "role": "TRAINING DEPARTMENT HEAD", "phone": "9629417645", "email": "manojs@thoughtflows.in", "Branch": "","image":Manoj},
+  {"name": "Lokesh Babu", "role": "MARKETING HEAD", "phone": "8790424835", "email": "lokesh@thoughtflows.in", "Branch": "","image":Lokesh},
+  {"name": "Mohamed Asiq", "role": "DIGITAL MARKETING HEAD", "phone": "", "email": "", "Branch": "","image":Mohamed},
+
+
+  {"name": "Awanth", "role": "REGIONAL HEAD", "phone": "9048023242", "email": "aswanth@thoughtflows.in", "Branch": "Kerala","image":Awanth},
+
+
   {"name": "Keerthika", "role": "TRAINING MANAGER", "phone": "9600655803", "email": "keerthisakthi03@gmail.com", "Branch": "","image":Keerthika},
   {"name": "Pavithra", "role": "TRAINING MANAGER", "phone": "7418578160", "email": "pavithra@thoughtflows.in", "Branch": "","image":Pavithra},
+
+
   {"name": "Prasanna", "role": "TRAINER", "phone": "9618226640", "email": "prasannan@thoughtflows.in", "Branch": "","image":Prasanna},
-  {"name": "Sasikala", "role": "TRAINER", "phone": "", "email": "", "Branch": "","image":Sasikala},
-  {"name": "Kalaimathi", "role": "TRAINER", "phone": "8870193124", "email": "", "Branch": "","image":Kalaimathi},
   {"name": "Vaanmathi", "role": "TRAINER", "phone": "8883656915", "email": "vanmathi@thoughtflows.in", "Branch": "","image":Vaanmathi},
-  {"name": "Devi Kiruba", "role": "TRAINER", "phone": "", "email": "devik@thoughtflows.in", "Branch": "","image":Devi},
-  {"name": "Veenadhari", "role": "TRAINER", "phone": "", "email": "veenadharithoughtflows@gmail.com", "Branch": "","image":Veenadhari},
   {"name": "Aleena Susan JG", "role": "TRAINER", "phone": "85902 18123", "email": "aleenasusanJ@thoughtflows.in", "Branch": "","image":Aleena},
   {"name": "Ram Balaji", "role": "TRAINER", "phone": "", "email": "rambalaji@thoughtflows.in", "Branch": "","image":Ram},
   {"name": "Priyadharshini", "role": "TRAINER", "phone": "", "email": "", "Branch": "","image":Priyadharshini},
@@ -123,76 +151,101 @@ const teamMemberData =  [
   {"name": "Pooja Jadav", "role": "TRAINER", "phone": "9346194108", "email": "poojajadhav@thoughtflows.in", "Branch": "","image":Jadav},
   {"name": "Kobika", "role": "TRAINER", "phone": "", "email": "", "Branch": "","image":Kobika},
   {"name": "Aashifa", "role": "TRAINER", "phone": "", "email": "", "Branch": "","image":Aasifa},
-  {"name": "Shilpa", "role": "TRAINER", "phone": "", "email": "", "Branch": "","image":Shilpa},
+  {"name": "Sharon ", "role": "TRAINER", "phone": "8870951112", "email": "sharonr@thoughtflows.in", "Branch": "Trichy","image":Sharon},
+  {"name": "Charishma", "role": "TRAINER", "phone": "", "email": "", "Branch": "Vizag","image":Charishma},
+  {"name": "Kamatam Varsha", "role": "TRAINER", "phone": "", "email": "", "Branch": "Ameerpet","image":KamatamVarsha},
+  {"name": "Nayana", "role": "TRAINER", "phone": "", "email": "", "Branch": "","image":Nayana},
+
+
   // {"name": "Elilarasi", "role": "TRAINER", "phone": "", "email": "", "Branch": "","image":Elilarasi},
   {"name": "Gayathri", "role": "BRANCH HEAD", "phone": "8807510359", "email": "gayathrib@thoughtflows.in", "Branch": "","image":Gayatri},
   {"name": "Sruthi", "role": "BRANCH HEAD", "phone": "8438974736", "email": "sruthig@thoughtflows.in", "Branch": "","image":Sruthi},
-  {"name": "Awanth", "role": "BRANCH HEAD", "phone": "9048023242", "email": "aswanth@thoughtflows.in", "Branch": "","image":Awanth},
   {"name": "Swetha", "role": "TEAM LEAD", "phone": "8438939806", "email": "swethac@thoughtflows.in", "Branch": "TA - Team Lead","image":Swetha},
-  {"name": "Anakha Suresh", "role": "TEAM LEAD", "phone": "7306388099", "email": "anakhas@thoughtflows.in", "Branch": "HR - Team Lead","image":Anakha},
-  // {"name": "Karthika", "role": "TEAM LEAD", "phone": "", "email": "", "Branch": "HR - Team Lead","image":Karthika},
-  {"name": "Vaishna", "role": "TEAM LEAD", "phone": "7736469198", "email": "vaishnas@thoughtflows.in", "Branch": "Trainer - Team Lead","image":Vaishna},
-  {"name": "Sindhuja", "role": "TEAM LEAD", "phone": "90302 33115", "email": "", "Branch": "HR - Team Lead","image":Sindhuja},
-  {"name": "Kalai Selvi", "role": "TEAM LEAD", "phone": "8122854228", "email": "kalaiselvic@thoughtflows.in", "Branch": "HR - Team Lead","image":Kalai},
+  {"name": "Madhumitha", "role": "Inhouse Placement - Team Lead", "phone": "8754561316", "email": "madhumitham@thoughtflows.in", "Branch": "","image":Madhumitha},
+  {"name": "Anakha Suresh", "role": "HR - Team Lead", "phone": "7306388099", "email": "anakhas@thoughtflows.in", "Branch": "HR - Team Lead","image":Anakha},
+  {"name": "Srujana Erothu", "role": "HR - Team Lead", "phone": "8074729024", "email": "srujanaerothu@thoughtflows.in", "Branch": "","image":Srujana},
+  {"name": "Sindhuja", "role": "HR - Team Lead", "phone": "90302 33115", "email": "", "Branch": "HR - Team Lead","image":Sindhuja},
+  {"name": "Kalai Selvi", "role": "HR - Team Lead", "phone": "8122854228", "email": "kalaiselvic@thoughtflows.in", "Branch": "HR - Team Lead","image":Kalai},
+  {"name": "Karthick", "role": "DM - Team Lead", "phone": "", "email": "", "Branch": "","image":Karthik},
+  {"name": "Vaishna", "role": "Trainer - Team Lead", "phone": "7736469198", "email": "vaishnas@thoughtflows.in", "Branch": "Trainer - Team Lead","image":Vaishna},
+
   {"name": "Sindhu Thakaiya", "role": "PROCESS COACH", "phone": "8807765495", "email": "sindhus@thoughtflows.in", "Branch": "","image":Sindhu},
+  // {"name": "Karthika", "role": "TEAM LEAD", "phone": "", "email": "", "Branch": "HR - Team Lead","image":Karthika},
+
+
   {"name": "Punitha", "role": "HR EXECUTIVE", "phone": "+91 78458 28547", "email": "punithac@thoughtflows.in", "Branch": "","image":Punitha},
   {"name": "Vignesh", "role": "HR EXECUTIVE", "phone": "91 7396213531", "email": "vigneshp@thoughtflows.in", "Branch": "","image":Vignesh},
   {"name": "Reshma Jenifar", "role": "HR EXECUTIVE", "phone": "7200603257", "email": "reshmaj@thoughtflows.in", "Branch": "","image":Reshma},
   {"name": "Peemuthannagari Supraja", "role": "HR EXECUTIVE", "phone": "8015108186", "email": "suprajap@thoughtflows.in", "Branch": "","image":Peemuthannagari},
-  {"name": "Sabnam Banu", "role": "HR EXECUTIVE", "phone": "6381960026", "email": "mohameds@thoughtflows.in", "Branch": "","image":Sabnam},
-  {"name": "Srujana Erothu", "role": "HR EXECUTIVE", "phone": "8074729024", "email": "srujanaerothu@thoughtflows.in", "Branch": "","image":Srujana},
+  {"name": "Sreelekha ", "role": "HR EXECUTIVE", "phone": "89437 44055", "email": "sreelekhapc@thoughtflows.in", "Branch": "","image":Sreelekha},
+  // {"name": "Sabnam Banu", "role": "HR EXECUTIVE", "phone": "6381960026", "email": "mohameds@thoughtflows.in", "Branch": "","image":Sabnam},
   {"name": "Dharshini", "role": "HR EXECUTIVE", "phone": "9944484356", "email": "dharshinis@thoughtflows.in", "Branch": "","image":Dharshini},
   {"name": "Sreenath Reddy", "role": "HR EXECUTIVE", "phone": "6305839325", "email": "sreenathr@thoghtflows.in", "Branch": "","image":Sreenath},
   {"name": "Prabhu", "role": "HR EXECUTIVE", "phone": "9789518184", "email": "prabhum@thoughtflows.in", "Branch": "","image":Prabhu},
   {"name": "Kishore Senthil", "role": "HR EXECUTIVE", "phone": "7397574599", "email": "kishoresenthil@thoughtflows.in", "Branch": "","image":Kishore},
-  {"name": "Atchaya", "role": "HR EXECUTIVE", "phone": "8015693629", "email": "atchayas@thoughtflows.in", "Branch": "","image":Atchaya},
+  // {"name": "Atchaya", "role": "HR EXECUTIVE", "phone": "8015693629", "email": "atchayas@thoughtflows.in", "Branch": "","image":Atchaya},
   {"name": "Subashini", "role": "HR EXECUTIVE", "phone": "8015059899", "email": "subashinit@thoughtflows.in", "Branch": "","image":Subashini},
+  {"name": "Pavithra N", "role": "HR EXECUTIVE", "phone": "63856 18301", "email": "pavithran@thoughtflows.in", "Branch": "","image":PavithraN},
   {"name": "Gayathri", "role": "HR EXECUTIVE", "phone": "6374582079", "email": "ugayathri@thoughtflows.in", "Branch": "","image":Gayathri},
   {"name": "Kanchana", "role": "HR EXECUTIVE", "phone": "7339564314", "email": "kanchana@thoughtflows.in", "Branch": "","image":Kanchana},
   {"name": "Subiksha", "role": "HR EXECUTIVE", "phone": "7845986967", "email": "subiksham@thoughtflows.in", "Branch": "","image":Subiksha},
   {"name": "Rukshar", "role": "HR EXECUTIVE", "phone": "9701729110", "email": "", "Branch": "","image":Rukshar},
   {"name": "Kammara Boya Shiva", "role": "HR EXECUTIVE", "phone": "7382831810", "email": "", "Branch": "","image":Kamara},
-  {"name": "Manasa Bulle", "role": "HR EXECUTIVE", "phone": "7675922965", "email": "", "Branch": "","image":Manasa},
-  {"name": "Sobika", "role": "HR EXECUTIVE", "phone": "8807141379", "email": "sobikac@thoughtflows.in", "Branch": "","image":Sobika},
-  {"name": "Madhumitha", "role": "TALENT ACQUISITION EXECUTIVE", "phone": "8754561316", "email": "madhumitham@thoughtflows.in", "Branch": "","image":Madhumitha},
+  {"name": "Julie", "role": "HR EXECUTIVE", "phone": "80156 93629", "email": "julie@thoughtflows.in", "Branch": "","image":Julie},
+  {"name": "KalaiMathi", "role": "HR EXECUTIVE", "phone": "8122241392", "email": "kalaim@thoughtflows.in", "Branch": "","image":KalaiMathi},
+  {"name": "logarasan", "role": "HR EXECUTIVE", "phone": "8122241977", "email": "logarasanb@thoughtflows.in", "Branch": "","image":logarasan},
+  {"name": "kathleen", "role": "HR EXECUTIVE", "phone": "8122234005", "email": "kathleenr@thoughtflows.in", "Branch": "","image":kathleen},
+  {"name": "Priyadharshini R", "role": "HR EXECUTIVE", "phone": "8015769049", "email": "Priyar@thoughtflows.in", "Branch": "","image":PriyadharshiniR},
+  {"name": "Sangavi.P", "role": "HR EXECUTIVE", "phone": "8122242136", "email": "sangavipthoughtflows.in", "Branch": "","image":SangaviP},
+  {"name": "Kannan", "role": "HR EXECUTIVE", "phone": "755 811 901", "email": "kannans@thoughtflows.in", "Branch": "","image":Kannan},
+
+  // {"name": "Manasa Bulle", "role": "HR EXECUTIVE", "phone": "7675922965", "email": "", "Branch": "","image":Manasa},
+  // {"name": "Sobika", "role": "HR EXECUTIVE", "phone": "8807141379", "email": "sobikac@thoughtflows.in", "Branch": "","image":Sobika},
+  
   {"name": "Sanjay", "role": "TALENT ACQUISITION EXECUTIVE", "phone": "8122920938", "email": "sanjayp@thoughtflows.in", "Branch": "","image":Sanjay},
-  {"name": "Akshaya", "role": "TALENT ACQUISITION EXECUTIVE", "phone": "8939761685", "email": "akshaya@thoughtflows.in", "Branch": "","image":Akshaya},
+  // 
   {"name": "Shruthy", "role": "TALENT ACQUISITION EXECUTIVE", "phone": "9043354505", "email": "shruthys@thoughtflows.in", "Branch": "","image":shruthy },
   {"name": "Ajai Suriya", "role": "TALENT ACQUISITION EXECUTIVE", "phone": "9042149163", "email": "ajaisuriya@thoughtflows.in", "Branch": "","image":Ajai},
   {"name": "Maisani Suvarna", "role": "TALENT ACQUISITION EXECUTIVE", "phone": "90302 33115", "email": "", "Branch": "","image":Suvarna},
   {"name": "Arputhakumar", "role": "TALENT ACQUISITION EXECUTIVE", "phone": "8939761685", "email": "arputhakumara@thoughtflows.in", "Branch": "","image":Arputhakumar},
+  {"name": "Megha", "role": "TALENT ACQUISITION EXECUTIVE", "phone": "81222 60271", "email": "", "Branch": "","image":Megha},
+  
+  
   {"name": "Kowsikan", "role": "DIGITAL MARKETING EXECUTIVE", "phone": "", "email": "", "Branch": "","image":Kowsikan},
   {"name": "Kiruthika", "role": "DIGITAL MARKETING EXECUTIVE", "phone": "", "email": "", "Branch": "","image":Kiruthika},
-  {"name": "Mohamed Asiq", "role": "DIGITAL MARKETING EXECUTIVE", "phone": "", "email": "", "Branch": "","image":Mohamed},
-  {"name": "Karthick", "role": "DIGITAL MARKETING EXECUTIVE", "phone": "", "email": "", "Branch": "","image":Karthik},
   {"name": "Ram Kumar", "role": "DIGITAL MARKETING EXECUTIVE", "phone": "", "email": "", "Branch": "","image":kumar},
   {"name": "Pranav", "role": "DIGITAL MARKETING EXECUTIVE", "phone": "", "email": "", "Branch": "","image":Pranav},
+  {"name": "Karthick ", "role": "DIGITAL MARKETING EXECUTIVE", "phone": "", "email": "", "Branch": "","image":Karthick },
+
   {"name": "Manoj Kumar", "role": "OFFICE ASSISTANT", "phone": "7660834401", "email": "manojkumar@thoughtflows.in", "Branch": "","image":Manojs},
   {"name": "Deva Dharshini", "role": "OFFICE ASSISTANT", "phone": "6380099212", "email": "devadharshinis@thoughtflows.in", "Branch": "","image":Deva},
   {"name": "Vishnupriya", "role": "OFFICE ASSISTANT", "phone": "9360213843", "email": "vishnupriyav@thoughtflows.in", "Branch": "","image":Vishnupriya},
+
+
   {"name": "Babu", "role": "OUTDOOR MARKETING EXECUTIVE", "phone": "8978593885", "email": "", "Branch": "","image":Babu},
-  {"name": "Pradheesh", "role": "OUTDOOR MARKETING EXECUTIVE", "phone": "70947 02901", "email": "pradheeshthoughtflow@gmail.com", "Branch": "","image":Pradheesh}
+  {"name": "Pradheesh", "role": "OUTDOOR MARKETING EXECUTIVE", "phone": "70947 02901", "email": "pradheeshthoughtflow@gmail.com", "Branch": "","image":Pradheesh},
+  {"name": "Chandu", "role": "OUTDOOR MARKETING EXECUTIVE", "phone": "", "email": "", "Branch": "","image":Chandu},
 ]
 
 
 const teamStructure = [
   { role: "OUR FOUNDERS", count: 2 },
-  { role: "FRANCHISE PARTNERS", count: 5 },
+  { role: "FRANCHISE PARTNERS", count: 4 },
   { role: "GENERAL MANAGER", count: 1 },
   { role: "INDIA HEAD - OPERATIONS &  STRATEGIC PARTNERSHIP", count: 1 },
   { role: "OPERATIONAL HEAD", count: 1},
-  { role: "REGIONAL HEAD", count: 3},
-  { role: "TRAINING DEPARTMENT HEAD", count: 1},
+  { role: "DEPARTMENT HEADS", count: 5},
+  { role: "REGIONAL HEAD", count: 1},
   { role: "TRAINING MANAGER", count: 2},
-  { role: "TRAINER", count: 14},
-  { role: "BRANCH HEAD", count: 3 },
-  { role: "TEAM LEAD", count: 5 },
+  { role: "TRAINER", count: 13},
+  { role: "BRANCH HEAD", count: 2},
+  { role: "TEAM LEAD", count: 8 },
   { role: "PROCESS COACH", count: 1 },
-  { role: "HR EXECUTIVE", count: 19 },
-  { role: "TALENT ACQUISITION EXECUTIVE", count: 7 },
-  { role: "DIGITAL MARKETING EXECUTIVE", count: 6 },
+  { role: "HR EXECUTIVE", count: 23 },
+  { role: "TALENT ACQUISITION EXECUTIVE", count: 6 },
+  { role: "DIGITAL MARKETING EXECUTIVE", count: 5 },
   { role: "OFFICE ASSISTANT", count: 3 },
-  { role: "OUTDOOR MARKETING EXECUTIVE", count: 2 },
+  { role: "OUTDOOR MARKETING EXECUTIVE", count: 3 },
 ]
 
 // Background colors for profile images
