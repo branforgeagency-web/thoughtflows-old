@@ -71,13 +71,13 @@ function Contact() {
     {
       name: 'Trivandrum',
       email: 'info@thoughtflows.in',
-      phone: '070122 47525 & +91 9384576852',
+      phone: '+91 93845 76852 ',
       address: '167, 1st Floor, Karimpanal Arcade, opp. to Padmanabhaswamy Temple, East Fort, Thiruvananthapuram, Kerala 695024',
     },
     {
       name: 'Kochi',
       email: 'info@thoughtflows.in',
-      phone: '+91 9995790525 & +91 9384576852',
+      phone: '  +91 90480 23242 , +91 93845 76852',
       address: '4 th floor, Vee Vee Tower , NH Bypass road, Near Bhima Jewels, Edappally, Kochi, Eranakulam, Kerala 682024',
     },
     {
