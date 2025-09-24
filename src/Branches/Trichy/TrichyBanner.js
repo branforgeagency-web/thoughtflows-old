@@ -160,7 +160,7 @@
 
 import React from "react";
 import bannerImage from "../../images/homebannerbg.png";
-import cbe1banner from "../../images/Branches/1.png";
+import trichy from "../../images/Branches/Pic 9.webp";
 import banner2 from "../../images/Branches/lapgirl.png";
 // import cbe1banner from '../../images/Branches/cbe1bannerRight.png'
 import { Container, Row } from "react-bootstrap";
@@ -222,14 +222,15 @@ const TrichyBanner = () => {
           paddingTop: '0'
         }}>
           <img 
-            src={cbe1banner} 
+            src={trichy} 
             alt='bannergif' 
             className='bannergif banner-appear'
             style={{
               maxWidth: '700px',  
               width: '100%',
               height: 'auto',
-              objectFit: 'contain'
+              objectFit: 'contain',
+              marginBottom:'-130px'
             }}
           />
         </Col>

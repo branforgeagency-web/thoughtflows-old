@@ -8,7 +8,7 @@ import SalemCore from './salem/SalemCore'
 import SalemSolidLayout from './salem/SalemSolidLayout'
 import SalemGuiding from './salem/SalemGuiding'
 import SalemModern from './salem/SalemModern'
-import Cbe1Testi from './CBE-1/cbe1Testi';
+import SalemTestimonial from './salem/SalemTestimonial';
 
 const SalemBranch = () => {
   useEffect(() => {
@@ -25,7 +25,7 @@ const SalemBranch = () => {
       <SalemSolidLayout/>
       <SalemModern/>
       <SalemGuiding/>
-      <Cbe1Testi/>
+      <SalemTestimonial/>
     </>
   )
 }

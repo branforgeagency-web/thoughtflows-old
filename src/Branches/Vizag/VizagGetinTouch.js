@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 function VizagGetinTouch() {
   return (
     <>
-      <div className="get">
+      <div className="get" style={{marginBottom:"50px"}}>
         <div className="get-1">
           <h2 style={{ marginBottom: "20px" }}>
             Competitive Fees with Flexible Payment Plans

@@ -1,12 +1,13 @@
 import React from "react";
 import bannerImage from "../../images/homebannerbg.png";
-import cbe1banner from "../../images/Branches/cbe1banner (2).png";
+import vizag from "../../images/Branches/Pic 11.webp";
 import banner2 from "../../images/Branches/lapgirl.png";
 import { Container, Row } from "react-bootstrap";
-import CountUp from "react-countup";
+import CountUp from "react-countup";    
 import { Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import vizag from '../../images/Branches/ameerpet.png'
+
+
 
 const VizagBanner = () => {
   return (
@@ -53,10 +54,11 @@ const VizagBanner = () => {
         </Col>
 
         <Col lg={7} md={8} xs={12} className='cbe1-banner-rht' style={{ 
-          display: 'flex', 
+          display: 'flex',
           justifyContent: 'center', 
-          alignItems: 'center',
+          alignItems: 'end',
           paddingTop: '0'
+          
         }}>
           <img 
             src={vizag} 
@@ -66,7 +68,8 @@ const VizagBanner = () => {
               maxWidth: '700px',
               width: '100%',
               height: 'auto',
-              objectFit: 'contain'
+              objectFit: 'contain',
+             marginBottom:'-90px'
             }}
           />
         </Col>
@@ -77,7 +80,7 @@ const VizagBanner = () => {
           background: '#fff',
           borderRadius: 'clamp(15px, 3vw, 80px)',
           boxShadow: '0 3px 15px 0 rgba(0, 0, 0, 0.13)',
-          marginTop: '-40px',
+          marginTop: '-170px',
           padding: 'clamp(15px, 3vw, 30px)',
           zIndex: 2,
           position: 'relative',

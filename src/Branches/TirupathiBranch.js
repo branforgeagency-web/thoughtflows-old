@@ -7,7 +7,7 @@ import TirupathiCore from './Tirupathi/TirupathiCore'
 import TirupathiSolidLayout from './Tirupathi/TirupathiSolidLayout'
 import TirupathiGuiding from './Tirupathi/TirupathiGuiding'
 import TirupathiModern from './Tirupathi/TirupathiModern'
-import Cbe1Testi from './CBE-1/cbe1Testi';
+import TirupathiTestimonial from './Tirupathi/TirupathiTestimonial';
 
 const TirupathiBranch = () => {
   useEffect(() => {
@@ -24,7 +24,7 @@ const TirupathiBranch = () => {
       <TirupathiSolidLayout/>
       <TirupathiModern/>
       <TirupathiGuiding/>
-      <Cbe1Testi/>
+      <TirupathiTestimonial/>
     </>
   )
 }

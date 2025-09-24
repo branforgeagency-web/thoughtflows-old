@@ -13,7 +13,7 @@ import TrivandrumCard from './Trivandrum/TrivandrumCard'
 import TrivandrumCertifications from './Trivandrum/TrivandrumCertifications'
 import TrivandrumCompanies from './Trivandrum/TrivandrumCompanies'
 import Meta from '../Meta';
-import Cbe1Testi from './CBE-1/cbe1Testi'
+import TrivandrumTestimonial from './Trivandrum/TrivandrumTestimonial'
 
 function Trivandrum() {
   useEffect(() => {
@@ -33,7 +33,7 @@ function Trivandrum() {
       <TiruvandrumStat />
       <TrivandrumOnline />
       <TrivandrumOnline2 />
-      <Cbe1Testi/>
+      <TrivandrumTestimonial/>
       {/* <TrivandrumStudent /> */}
       {/* <TrivandrumCompanies /> */}
     </>

@@ -3,21 +3,19 @@ import Meta from '../Meta';
 
 import TrichyBanner from './Trichy/TrichyBanner'
 import TrichyAbout from './Trichy/TrichyAbout'
+import TrichyFlex from './Trichy/TrichyFlex'
 import TrichyCore from './Trichy/TrichyCore'
-import TrichyChoice from './Trichy/TrichyChoice'
-import TrichyInter from './Trichy/TrichyInter'
+import TrichySticky from './Trichy/TrichySticky'
 import TrichyOnline from './Trichy/TrichyOnline'
 import TrichyOnline2 from './Trichy/TrichyOnline2'
-import TrichyEmpower from './Trichy/TrichyEmpower'
-import TrichyEnroll from './Trichy/TrichyEnroll'
+import TrichyGetinTouch from './Trichy/TrichyGetinTouch'
 import TrichyTestimonial from './Trichy/TrichyTestimonial'
 import TrichyExams from './Trichy/TrichyExams'
-import TrichyCompanies from './Trichy/TrichyCompanies'
 import TrichyDiscover from './Trichy/TrichyDiscover'
 import TrichyExperts from './Trichy/TrichyExperts'
-import TrichyPlacement from './Trichy/TrichyPlacement'
 import TrichyAffordableLearning from './Trichy/TrichyAffordableLearning'
-import TrichyMedicalCodingContent from './Trichy/TrichyMedicalCodingContent'
+import TrichySolidLayout from './Trichy/TrichySolidLayout'
+import TrichyEmpower from './Trichy/TrichyEmpower'
 
 
 function TrichyBranches() {
@@ -30,20 +28,19 @@ function TrichyBranches() {
 
       <TrichyBanner />
       <TrichyAbout />
-      {/* <TrichyCore /> */}
-      <TrichyInter />
-      {/* <TrichyChoice /> */}
+      <TrichyFlex />
+      <TrichyCore />
+      <TrichySticky />
+      <TrichyOnline />
+      <TrichyOnline2 />
+      <TrichyGetinTouch />
+      <TrichyTestimonial />
+      {/* <TrichyExams />
       <TrichyDiscover />
       <TrichyExperts />
-      {/* <TrichyPlacement /> */}
       <TrichyAffordableLearning />
-      {/* <TrichyMedicalCodingContent /> */}
-      <TrichyOnline2 />
-      <TrichyEmpower />
-      <TrichyExams />
-      {/* <TrichyEnroll /> */}
-      <TrichyTestimonial />
-      {/* <TrichyCompanies /> */}
+      <TrichySolidLayout />
+      <TrichyEmpower /> */}
 
     </>
   )

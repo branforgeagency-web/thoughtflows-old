@@ -1,92 +1,135 @@
 import React from "react";
-import Nandhini from '../../images/Trivandrum/nandhini.png'
-import Karthika from '../../images/Trivandrum/Karthika.png'
-import Archana from '../../images/Trivandrum/Dr.Archana.png'
-import Meenu from '../../images/Trivandrum/Meenu.png'
-import Shemeema from '../../images/Trivandrum/Shemeema.png'
-import Saravana from '../../images/Trivandrum/Saravana.png'
-import kamale from "../../images/Kamale.G.png"
-import SUGANYA from '../../images/SUGANYA.G.png'
-import Ramya from '../../images/Ramya senthilkumar.png'
-import Vidhya from '../../images/Vidhya .K.png'
-import Rino from '../../images/Rino.png'
-import muhsina from '../../images/Muhsina Surmi.png'
-import nemmadi from '../../images/Nemmadi Udaychinna.png'
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
+import { Container, Row, Col, Carousel } from 'react-bootstrap';
+import bgrev from '../../images/Group.png';
+import gowtham from "../../images/Testimonials/Gowtham (SVM).jpeg"
+import sourav from "../../images/Testimonials/Sourav Malik (SVM).jpeg"
+import madhumita from "../../images/Testimonials/Madhumita (SVM).jpeg"
+import sarana from "../../images/Testimonials/Saran Balu (SVM).jpeg"
+import tamilarasi from "../../images/Testimonials/Tamilarasi (SVM).jpeg"
 
-const testimonials =  [
+const testimonials = [
   {
-    name: "Kamale.G",
-    image: `${kamale}`,
-    text: "Thoughtflows is one of the best places to grab a huge knowledge about medical coding. I've had a great guidance by my HR Reshma mam and special thanks to Radika mam and Keerthi mam. I'm really thankful for all the staffs who made me get into a reputed company. Other activities conducted by the academy helped to engage ourselves and gain confidence. Thank you for the entire team. Best academy to kick-start your career. Thank you…"
+    image: `${gowtham}`,
+    name: "GOWTHAM",
+    title: "Student",
+    rating: 5,
+    review: "I just finished my CPC exam with 90%. As a non-life science graduate, I was a bit nervous at first, but I honestly had a good time throughout. The trainers did a great job explaining things simply, and the HR team was super helpful with everything. It was really good that the institute was available 7 days a week, and they offered personal help to schedule exams and follow up.I'm very satisfied with the overall experience indeed.",
+    avatar: `${gowtham}`
   },
   {
-    name: "SUGANYA.G",
-    image: `${SUGANYA}`,
-    text: "Thoughtflow institute is best to learn medical coding, and the trainer teaching the class is very well. Best platform to learn medical coding. All the trainers are friendly. Thoughtflow provides daily practice questions in its own app, which is very useful. The platform also contains daily syllabus, etc."
+    image: `${sourav}`,
+    name: "SOURAV MALIK",
+    title: "Student",
+    rating: 5,
+    review: "THOUGHT FLOWS this is the place where we can gain alot of knowledge. I feel thought flows as my family. Everyone supported me and guided me to crack CPC. My trainers are Pavitra mam and Mounika mam they tought us in a simple and easy manner. They helped me in my preparation.My HR Gayathri mam also helped me well. Here in this institution there is a practice room where we can practice and clarify our doubts with friends and trainers. Trainers are available from morning to evening. At last I heartly thankful to thought flows. A special thanks to Bala sir for revision classes.",
+    avatar: `${sourav}`
   },
   {
-    name: "Ramya Senthilkumar",
-    image: `${Ramya}`,
-    text: "I recently completed my CPC certificate with 95% with the help of Thought Medical Coding Academy, and I highly recommend it to anyone pursuing a career in medical coding. They provide detailed study materials, conduct regular mock tests, and offer thorough exam preparation, which greatly helped me feel confident about the CPC exam. My trainer Keerthi mam, Keerthana, Pooja mam, and my HR Sindhu were very approachable and created a friendly atmosphere, making learning both effective and enjoyable. Thank you."
+    image: `${madhumita}`,
+    name: "MADHUMITA",
+    title: "Student",
+    rating: 5,
+    review: "I am really grateful to choose thought flows accademy. Trainers and HR delivered 100% of efforts to clearing our doubts with detail explanation as friendly. The trainers way of teaching really awesome to ensure our knowledge , they explained every topics with real time examples which helps to understand with concept. They provide extreme practice questions and mock that really helps to improve our corrections and HR encourage us to make confident. Really I recommend this institution to clear our certification at first attempt itself. Thank you thought flows team for your excellent training and support, especially thanks❤️ for your encourage and support HR Swetha mam.",
+    avatar: `${madhumita}`
   },
   {
-    name: "Vidhya.K",
-    image: `${Vidhya}`,
-    text: "It was a good decision that I made by joining THOUGHTFLOWS as a student. The course content is very well explained, even a beginner like me could understand it easily. A special mention to HR Reshma mam and trainers Pooja and Ezhil mam for clearing my doubts and helping me whenever I was stuck. I cleared CPC with 92%. Thank you! Overall, a good experience."
+    image: `${sarana}`,
+    name: "SARAN BALU",
+    title: "Student",
+    rating: 5,
+    review: "My experience with the Advanced Medical Coding training at Thought Flows Medical Coding Training Centre in Saravanampatti was largely positive. The course provided a solid foundation in medical coding. The Trainers and all working staffs were generally effective, particularly in explaining all of our doubts both in portions and placement. The learning environment was very good and friendly manner.And a Placement team gives a continuous instructions and guides me. The overall training provided significant value and has equipped me with the necessary skills for advanced medical coding.",
+    avatar: `${sarana}`
   },
   {
-    name: "Muhsina Surmi",
-    image: `${muhsina}`,
-    text: "My name is Muhsina, I completed the Medical Coding course at Thought Flows Institute and was thoroughly impressed with the quality of instruction and course materials. Thanks to the solid foundation I gained, I was able to crack CPC exam shortly after finishing the course. I highly recommend this program to anyone looking to start a career in the field! Thank you Thought Flows."
-  },
-  {
-    name: "Rino",
-    image: `${Rino}`,
-    text: "I'm Rino R, I completed the medical coding course in Thought Flows Academy in Trivandrum. I completed my Bachelor's degree in BSc Chemistry. I passed CPC with 89%. Thank you Thought Flows for the guidance and special thanks to my trainers, Aleena mam and Vaishna mam, for the valuable support to crack CPC exam. Thank you to Anakha mam and Aiswarya mam for daily motivation. Special thanks to Gokul sir for the great support. Thank you Thought Flows."
-  },
-  {
-    name: "Nemmadi Udaychinna",
-    image: `${nemmadi}`,
-    text: "I had an excellent experience at Thought Flows Medical Coding Academy where the dedicated faculty provided comprehensive instruction and a supportive learning environment. The curriculum was well-structured, incorporating both theoretical knowledge and practical applications, which significantly enhanced my skills. I particularly appreciated the personalized attention from the teachers, who were always available to answer questions and guide me through challenges. Overall, I highly recommend Thought Flows to anyone seeking quality education in medical coding."
+    image: `${tamilarasi}`,
+    name: "TAMILARASI",
+    title: "Student",
+    rating: 5,
+    review: "Thought flows is Excellent medical coding training academy and good platform to who want great career as a medical coder. I recently completed my Amct course in thought flows, And i was completed my cpc certification with the help of great trainers, They kindly teach every chapters and clear all my doubts at any time. Thanks to thought flows Medical coding academy.",
+    avatar: `${tamilarasi}`
   }
 ];
 
 // Cbe1Testi
 const Cbe1Testi = () => {
   return (
-    <section className="relative isolate overflow-hidden bg-white px-6 py-10 sm:py-26 lg:px-8">
-      <div className="absolute inset-0 -z-10 bg-[radial-gradient(45rem_50rem_at_top,theme(colors.indigo.100),white)] opacity-20" />
-      <div className="absolute inset-y-0 right-1/2 -z-10 mr-16 w-[200%] origin-bottom-left skew-x-[-30deg] bg-white shadow-xl shadow-indigo-600/10 ring-1 ring-indigo-50 sm:mr-28 lg:mr-0 xl:mr-16 xl:origin-center" />
-      <div className="mx-auto max-w-2xl lg:max-w-4xl">
-        <h2 className="text-center font-bold text-5xl text-primaryy pb-5">What Our Students Says</h2>
-        <Swiper pagination={true} modules={[EffectFade, Pagination, Autoplay]} className="mySwiper ">
-          {testimonials.map((testimonial, index) => (
-            <SwiperSlide key={index}>
-              <figure className="text-center">
-                <blockquote className="text-lg/6 font-light text-gray-900 sm:text-xl/7">
-                  <p>{testimonial.text}</p>
-                </blockquote>
-                <figcaption className="mt-6 flex flex-col items-center">
-                  <img
-                    alt={testimonial.name}
-                    src={testimonial.image}
-                    className="mx-auto h-20 w-20 rounded-full object-cover"
-                  />
-                  <div className="m-4  text-base font-semibold text-gray-900">
-                    {testimonial.name}
-                  </div>
-                </figcaption>
-              </figure>
-            </SwiperSlide>
-          ))}
-        </Swiper>
+    <>
+      <div
+        className="google-rev text-center text-lg-start"
+        style={{
+          backgroundImage: `url(${bgrev})`,
+          backgroundSize: '6% 30%',
+          backgroundPosition: 'left top',
+          backgroundRepeat: 'no-repeat',
+          backgroundColor: '#E5F8F9',
+          padding: '60px 0px 180px 0px'
+        }}
+      >
+        <Container>
+          <Row className="align-items-center">
+            <Col lg={5} className="mb-4">
+              <h5>OUR TESTIMONIALS</h5>
+              <h2>Hear from Our <br /> Successful Candidates</h2>
+              <p className="text-muted">Don't just take our word for it. Hear from our successful candidates who have gone on to have successful careers in medical coding.</p>
+            </Col>
+
+            <Col lg={7}>
+              <Carousel indicators={true} controls={true} interval={3000}>
+                {testimonials.map((testimonial, index) => (
+                  <Carousel.Item key={index} style={{ marginTop: '20px' }}>
+                    <div className="testimonial-card p-5" style={{
+                      backgroundColor: "#fff",
+                      borderRadius: "8px",
+                      position: "relative",
+                      overflow: "hidden"
+                    }}>
+                      <img
+                        src={testimonial.avatar}
+                        alt={testimonial.name}
+                        className="rounded-circle"
+                        style={{
+                          width: "100px",
+                          height: "100px",
+                          position: "absolute",
+                          top: "10px",
+                          right: "20px",
+                          border: "3px solid #fff",
+                          boxShadow: "0 2px 6px rgba(0,0,0,0.1)"
+                        }}
+                      />
+                      <div className="text-start mb-3 star-rating">
+                        {[...Array(testimonial.rating)].map((star, i) => (
+                          <span key={i} className="star text-warning">&#9733;</span>
+                        ))}
+                      </div>
+                      <p className="text-muted text-start mt-5">{testimonial.review}</p>
+                      <div className="d-flex align-items-center mt-4">
+                        <div className="rounded-circle" style={{
+                          backgroundColor: "#003366",
+                          color: "#fff",
+                          width: "60px",
+                          height: "60px",
+                          display: "flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          fontSize: "80px",
+                          marginRight: "15px"
+                        }}>
+                          &#8220; {/* Quote icon */}
+                        </div>
+                        <div>
+                          <h5 className=" mb-1 testi-name">{testimonial.name}</h5>
+                        </div>
+                      </div>
+                    </div>
+                  </Carousel.Item>
+                ))}
+              </Carousel>
+            </Col>
+          </Row>
+        </Container>
       </div>
-    </section>
+    </>
   );
 };
 

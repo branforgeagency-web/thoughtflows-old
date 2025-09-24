@@ -1,6 +1,6 @@
 import React from 'react'
 import bannerImage from '../../images/homebannerbg.png'
-import hopes from '../../images/Branches/5(1).png'
+import hopes from '../../images/Branches/Pic 1.webp'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 import CountUp from 'react-countup';
@@ -50,22 +50,24 @@ const Cbe2Banner = () => {
                 </Col>
 
                 <Col lg={7} md={8} xs={12} className='cbe1-banner-rht' style={{ 
-                    display: 'flex', 
-                    justifyContent: 'center', 
-                    alignItems: 'center',
-                    paddingTop: '0'
+                display: 'flex',
+                justifyContent: 'center', 
+                alignItems: 'end',
+                paddingTop: '0',
+                
                 }}>
-                    <img 
-                        src={hopes} 
-                        alt='bannergif' 
-                        className='bannergif banner-appear' 
-                        style={{
-                            maxWidth: '100%',
-                            width: 'auto',
-                            height: 'auto',
-                            objectFit: 'contain'
-                        }}
-                    />
+                <img 
+                    src={hopes} 
+                    alt='bannergif' 
+                    className='bannergif banner-appear' 
+                    style={{
+                    maxWidth: '700px',
+                    width: '100%',
+                    height: 'auto',
+                    objectFit: 'contain',
+                    marginBottom: '-90px'
+                    }}
+                />
                 </Col>
                 <Col lg={1} xs={0}></Col>
             </Row>

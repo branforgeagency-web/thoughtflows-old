@@ -1,6 +1,6 @@
 import React from 'react'
 import bannerImage from '../../images/homebannerbg.png'
-import saravanampatti from '../../images/Branches/4.png'
+import saravanampatti from '../../images/Branches/Pic 2.webp'
 import { Container, Row } from 'react-bootstrap'
 import CountUp from 'react-countup';
 import { Col } from 'react-bootstrap'
@@ -61,7 +61,8 @@ const Cbe1Banner = () => {
                         maxWidth: '100%',
                         width: 'auto',
                         height: 'auto',
-                        objectFit: 'contain'
+                        objectFit: 'contain',
+                        marginBottom: '-30px'
                     }} />
                 </Col>
                 <Col lg={1} xs={0}></Col>
@@ -71,7 +72,7 @@ const Cbe1Banner = () => {
                     background: '#fff',
                     borderRadius: 'clamp(15px, 3vw, 80px)',
                     boxShadow: '0 3px 15px 0 rgba(0, 0, 0, 0.13)',
-                    marginTop: '-40px',
+                    marginTop: '50px',
                     padding: 'clamp(15px, 3vw, 30px)',
                     zIndex: 2,
                     position: 'relative',
