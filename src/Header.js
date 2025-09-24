@@ -5,7 +5,7 @@ import { useEffect } from "react";
 import "./App.css";
 import logo from "./images/image2.png";
 
-const DropdownMenu = () => {
+const DropdownMenu = ({ isBranchPage }) => {
   const menuItems = {
     Branches: {
       Coimbatore: [
@@ -37,7 +37,9 @@ const DropdownMenu = () => {
   return (
     <div className="relative inline-block">
       <div
-        className="cursor-pointer md:!text-cyan-500 py-2"
+        className={`cursor-pointer md:!text-cyan-500 py-2 relative transition-all duration-300 hover:text-cyan-400 ${
+          isBranchPage() ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+        }`}
         onMouseEnter={() => setOpenMainMenu("Branches")}
         onMouseLeave={() => {
           setOpenMainMenu(null);
@@ -118,6 +120,32 @@ const Header = () => {
 
   const location = useLocation();
   const isHome = location.pathname === '/';
+  
+  // Check if current page is a branch page
+  const isBranchPage = () => {
+    const branchPaths = [
+      '/kochi', '/trivandrum', '/hyderabad', '/ameerpet', '/dilsukhnagar',
+      '/tirupathi', '/trichy', '/salem', '/vizag', 
+      '/Medical-Coding-Excellence-at-Hopes', '/Top-Medical-Coding-Training-Saravanampatti', 
+      '/Premier-Medical-Coding-Institute-Gandhipuram', '/Medical-Coding-Academy-Kochi',
+      '/Advanced-Medical-Coding-Tiruvandrum', '/Trusted-Medical-Coding-Ameerpet',
+      '/Professional-Medical-Coding-Dilsukhnagar', '/Expert-Medical-Coding-Tirupathi',
+      '/Career-Focused-Medical-Coding-Trichy', '/Future-Ready-Medical-Coding-Salem',
+      '/Innovative-Medical-Coding-Vizag'
+    ];
+    return branchPaths.includes(location.pathname);
+  };
+  
+  // Check if current page is a course page
+  const isCoursePage = () => {
+    const coursePaths = [
+      '/cpc', '/cic', '/coc', '/cpma', '/crc', '/cpb', '/cedc', '/cemc', 
+      '/cdeo', '/cdei', '/cppm', '/surgery', '/ed', '/em', '/radiology', 
+      '/anesthesia', '/ip-drg', '/hcc', '/ivr', '/ccs', '/ccs-p', '/rhia', 
+      '/rhit', '/ccc', '/him'
+    ];
+    return coursePaths.includes(location.pathname);
+  };
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
     window.addEventListener("resize", handleResize);
@@ -277,7 +305,14 @@ const Header = () => {
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
-                    <Link to="/" className="text-cyan-500">Home</Link>
+                    <Link 
+                      to="/" 
+                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${
+                        location.pathname === '/' ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                      }`}
+                    >
+                      Home
+                    </Link>
                   </div>
                 </li>
                 <li>
@@ -286,7 +321,14 @@ const Header = () => {
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
-                    <Link to="/about" className="text-cyan-500">About us</Link>
+                    <Link 
+                      to="/about" 
+                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${
+                        location.pathname === '/about' ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                      }`}
+                    >
+                      About us
+                    </Link>
                   </div>
                 </li>
                 <li>
@@ -299,7 +341,9 @@ const Header = () => {
                       isMobile &&
                       setSubmenuOpen(submenuOpen === "courses" ? "" : "courses")
                     }
-                    className="py-2 whitespace-nowrap text-cyan-500"
+                    className={`py-2 whitespace-nowrap text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${
+                      isCoursePage() ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                    }`}
                   >
                     Courses
                   </div>
@@ -334,7 +378,7 @@ const Header = () => {
                     style={{ fontWeight: "bold", cursor: "pointer" }}
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                   >
-                    <DropdownMenu/>
+                    <DropdownMenu isBranchPage={isBranchPage}/>
                   </div>
                 </li>
                 <li className="multiple-dropdown-sub">
@@ -350,7 +394,9 @@ const Header = () => {
                         submenuOpen === "branches" ? "" : "branches"
                       )
                     }
-                    className="py-2 text-cyan-500"
+                    className={`py-2 text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${
+                      isBranchPage() ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                    }`}
                   >
                     Branches
                   </div>
@@ -391,7 +437,14 @@ const Header = () => {
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
-                    <Link to="/ourteam" className="text-cyan-500">Our team</Link>
+                    <Link 
+                      to="/ourteam" 
+                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${
+                        location.pathname === '/ourteam' ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                      }`}
+                    >
+                      Our team
+                    </Link>
                   </div>
                 </li>
                 <li>
@@ -400,7 +453,14 @@ const Header = () => {
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
-                    <Link to="/contact" className="text-cyan-500">Contact us</Link>
+                    <Link 
+                      to="/contact" 
+                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${
+                        location.pathname === '/contact' ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                      }`}
+                    >
+                      Contact us
+                    </Link>
                   </div>
                 </li>
                 
