@@ -28,7 +28,7 @@ const Branches = () => {
       </Row>
       <Row className="branches-list text-center justify-content-center">
         <Col xs={6} sm={6} lg={2} className="mb-4">
-         <Link to="/ameerpet" style={{ textDecoration: "none", color: "inherit" }}>
+         <Link to="/Trusted-Medical-Coding-Ameerpet" style={{ textDecoration: "none", color: "inherit" }}>
           <div
             style={{
               transition: "all 0.3s ease",
@@ -47,7 +47,7 @@ const Branches = () => {
           </Link>
         </Col>
         <Col xs={6} sm={6} lg={2} className="mb-4">
-         <Link to="/dilsukhnagar" style={{ textDecoration: "none", color: "inherit" }}>
+         <Link to="/Professional-Medical-Coding-Dilsukhnagar" style={{ textDecoration: "none", color: "inherit" }}>
           <div
             style={{
               transition: "all 0.3s ease",
@@ -66,7 +66,7 @@ const Branches = () => {
           </Link>
         </Col>
         <Col xs={6} sm={6} lg={2} className="mb-4">
-         <Link to="/gandhipuram" style={{ textDecoration: "none", color: "inherit" }}>
+         <Link to="/Premier-Medical-Coding-Institute-Gandhipuram" style={{ textDecoration: "none", color: "inherit" }}>
           <div
             style={{
               transition: "all 0.3s ease",
@@ -85,7 +85,7 @@ const Branches = () => {
           </Link>
         </Col>
         <Col xs={6} sm={6} lg={2} className="mb-4">
-         <Link to="/hopes" style={{ textDecoration: "none", color: "inherit" }}>
+         <Link to="/Medical-Coding-Excellence-at-Hopes" style={{ textDecoration: "none", color: "inherit" }}>
           <div
             style={{
               transition: "all 0.3s ease",
@@ -104,7 +104,7 @@ const Branches = () => {
           </Link>
         </Col>
         <Col xs={6} sm={6} lg={2} className="mb-4">
-         <Link to="/kochi" style={{ textDecoration: "none", color: "inherit" }}>
+         <Link to="/Medical-Coding-Academy-Kochi" style={{ textDecoration: "none", color: "inherit" }}>
           <div
             style={{
               transition: "all 0.3s ease",
@@ -123,7 +123,7 @@ const Branches = () => {
           </Link>
         </Col>
         <Col xs={6} sm={6} lg={2} className="mb-4">
-         <Link to="/salem" style={{ textDecoration: "none", color: "inherit" }}>
+         <Link to="/Future-Ready-Medical-Coding-Salem" style={{ textDecoration: "none", color: "inherit" }}>
           <div
             style={{
               transition: "all 0.3s ease",
@@ -142,7 +142,7 @@ const Branches = () => {
           </Link>
         </Col>
         <Col xs={6} sm={6} lg={2} className="mb-4">
-         <Link to="/saravanampatti" style={{ textDecoration: "none", color: "inherit" }}>
+         <Link to="/Top-Medical-Coding-Training-Saravanampatti" style={{ textDecoration: "none", color: "inherit" }}>
           <div
             style={{
               transition: "all 0.3s ease",
@@ -161,7 +161,7 @@ const Branches = () => {
           </Link>
         </Col>
         <Col xs={6} sm={6} lg={2} className="mb-4">
-         <Link to="/tirupati" style={{ textDecoration: "none", color: "inherit" }}>
+         <Link to="/Expert-Medical-Coding-Tirupathi" style={{ textDecoration: "none", color: "inherit" }}>
           <div
             style={{
               transition: "all 0.3s ease",
@@ -180,7 +180,7 @@ const Branches = () => {
           </Link>
         </Col>
         <Col xs={6} sm={6} lg={2} className="mb-4">
-         <Link to="/trichy" style={{ textDecoration: "none", color: "inherit" }}>
+         <Link to="/Career-Focused-Medical-Coding-Trichy" style={{ textDecoration: "none", color: "inherit" }}>
           <div
             style={{
               transition: "all 0.3s ease",
@@ -199,7 +199,7 @@ const Branches = () => {
           </Link>
         </Col>
         <Col xs={6} sm={6} lg={2} className="mb-4">
-         <Link to="/trivandrum" style={{ textDecoration: "none", color: "inherit" }}>
+         <Link to="/Advanced-Medical-Coding-Tiruvandrum" style={{ textDecoration: "none", color: "inherit" }}>
           <div
             style={{
               transition: "all 0.3s ease",
