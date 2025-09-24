@@ -64,7 +64,20 @@ const Vision = () => {
             flexDirection: 'column',
             justifyContent: 'space-between',
             minHeight: '350px',
-            flex: '1'
+            flex: '1',
+            transition: 'all 0.3s ease',
+            cursor: 'pointer',
+            boxShadow: '0 4px 15px rgba(21, 174, 187, 0.2)'
+          }}
+          onMouseEnter={(e) => {
+            e.target.style.transform = 'translateY(-5px)';
+            e.target.style.boxShadow = '0 8px 25px rgba(21, 174, 187, 0.3)';
+            e.target.style.background = '#097D8A';
+          }}
+          onMouseLeave={(e) => {
+            e.target.style.transform = 'translateY(0)';
+            e.target.style.boxShadow = '0 4px 15px rgba(21, 174, 187, 0.2)';
+            e.target.style.background = '#15aebb';
           }}
         >
           <h3 style={{ marginTop: '20px', textAlign: 'left', fontWeight: '600' }}>
@@ -80,7 +93,24 @@ const Vision = () => {
               fontWeight: '500',
               fontSize: '16px',
               fontFamily: 'Poppins',
-              borderRadius:"20px"
+              borderRadius: "20px",
+              border: 'none',
+              padding: '10px 20px',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease',
+              boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)'
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.background = '#2FC4B2';
+              e.target.style.color = '#F1F0FE';
+              e.target.style.transform = 'translateY(-2px)';
+              e.target.style.boxShadow = '0 4px 15px rgba(47, 196, 178, 0.3)';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.background = '#F1F0FE';
+              e.target.style.color = '#2FC4B2';
+              e.target.style.transform = 'translateY(0)';
+              e.target.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
             }}
           >
             {card.buttonText}
@@ -254,11 +284,26 @@ const Vision = () => {
           <button
             onClick={() => setActivePanel(null)}
             style={{
-              // marginTop: "30px",
               margin: "20px 50%",
               fontSize: "20px",
               background: "red",
               padding: "5px 35px",
+              border: 'none',
+              borderRadius: '8px',
+              color: 'white',
+              cursor: 'pointer',
+              transition: 'all 0.3s ease',
+              boxShadow: '0 2px 8px rgba(255, 0, 0, 0.2)'
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.background = '#dc3545';
+              e.target.style.transform = 'translateY(-2px)';
+              e.target.style.boxShadow = '0 4px 15px rgba(220, 53, 69, 0.4)';
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.background = 'red';
+              e.target.style.transform = 'translateY(0)';
+              e.target.style.boxShadow = '0 2px 8px rgba(255, 0, 0, 0.2)';
             }}
           >
             Close

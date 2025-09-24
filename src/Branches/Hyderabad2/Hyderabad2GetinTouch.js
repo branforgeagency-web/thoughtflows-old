@@ -27,7 +27,38 @@ function HyderabadGetinTouch() {
             decision. Contact us today and take the first step towards a
             rewarding career in medical coding.
           </p>
-          <Link to="/contact" className="button">Contact Us</Link>
+          <Link 
+            to="/contact" 
+            className="button"
+            style={{
+              background: "linear-gradient(135deg, #097D8A 0%, #21A7D0 100%)",
+              color: "white",
+              padding: "15px 35px",
+              borderRadius: "50px",
+              textDecoration: "none",
+              fontWeight: "600",
+              fontSize: "16px",
+              display: "inline-block",
+              transition: "all 0.3s ease",
+              boxShadow: "0 4px 15px rgba(9, 125, 138, 0.3)",
+              border: "none",
+              cursor: "pointer",
+              textTransform: "uppercase",
+              letterSpacing: "1px",
+              position: "relative",
+              overflow: "hidden"
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.transform = "translateY(-2px)";
+              e.target.style.boxShadow = "0 6px 20px rgba(9, 125, 138, 0.4)";
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.transform = "translateY(0)";
+              e.target.style.boxShadow = "0 4px 15px rgba(9, 125, 138, 0.3)";
+            }}
+          >
+            📞 Contact Us Now
+          </Link>
         </div>
       </div>
     </>
