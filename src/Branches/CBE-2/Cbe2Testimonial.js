@@ -13,15 +13,16 @@ import geethasri from "../../images/Testimonials/Geethasri (Hopes).jpeg"
 import vijayakumar from "../../images/Testimonials/Vijayakumar (Hopes).jpeg"
 import gopika from "../../images/Testimonials/Gopika (Hopes).jpeg"
 import shanmugapriyan from "../../images/Testimonials/Shanmugappriyan (Hopes).jpeg"
+import mohan from "../../images/man.png"
 
 const testimonials = [
   {
-    image: `${kamale}`,
+    image: `${mohan}`,
     name: "MOHAN",
     title: "Student",
     rating: 5,
     review: "I had a great experience in thought flows accademy.They gave me a wonderful knowledge in medical Coding system and also helps to clear cpc exam with a wonderful guidance. They help candidates like how to perform in the interview and how to Crack the interview.so, finally thanks thought flows accademy and their staff.",
-    avatar: `${kamale}`
+    avatar: `${mohan}`
   },
   {
     image: `${geethasri}`,
@@ -41,7 +42,7 @@ const testimonials = [
   },
   {
     image: `${gopika}`,
-    name: "GOPIKA (HOPES)",
+    name: "GOPIKA",
     title: "Student",
     rating: 5,
     review: "I have completed my advance medical coding training at thought flow medical coding Academy in hopes.And I got job from logix health services.This institute gives excellent teaching methods, knowledgeable and supportive faculty, and a conducive learning environment.They explain complex topics clearly and are always patient with questions, ensuring everyone understands.Thank you to though flows☺️",
@@ -49,7 +50,7 @@ const testimonials = [
   },
   {
     image: `${shanmugapriyan}`,
-    name: "SHANMUGAPPRIYAN (HOPES)",
+    name: "SHANMUGAPPRIYAN",
     title: "Student",
     rating: 5,
     review: "Thoughtflow is one of the best medical coding institute. Privileged and highly skilled faculty and administions. A good organization highly recommend and supported me well by cracking my CPC exam... Especially their training,study materials, practice exam and mocks are really worth....I would like highly recommend... classes are really worth... It has been delightful. Thanks to trainer pavithra mam and HR sruthi.",
