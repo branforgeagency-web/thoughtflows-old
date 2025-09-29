@@ -285,25 +285,15 @@ const Header = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                gap: window.innerWidth <= 1024 ? "10px" : "6%",
+                gap: "6%",
                 height: "auto",
                 width: "100%",
-                maxWidth: "100%",
-                overflow: "hidden",
-                padding: window.innerWidth <= 1024 ? "0 10px" : "0"
               }}
               className={` ${isHome ? 'w-full' : 'w-full'}`}
             >
-               <div className="logo" style={{
-                maxWidth: window.innerWidth <= 1024 ? "200px" : "300px",
-                flexShrink: "0"
-              }}>
+               <div className="logo">
             <a href="/">
-              <img src={logo} alt="Website Logo" style={{
-                maxWidth: "100%",
-                height: "auto",
-                width: window.innerWidth <= 1024 ? "180px" : "300px"
-              }} />
+              <img src={logo} alt="Website Logo"  />
             </a>
           </div>
               <ul
