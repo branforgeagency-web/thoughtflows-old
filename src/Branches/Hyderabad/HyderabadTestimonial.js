@@ -5,7 +5,7 @@ import saikumar from "../../images/Testimonials/Sai Kumar renukuntla ( Ameerpet 
 import sushma from "../../images/Testimonials/Sushma Palle ( Ameerpet HYD ).jpeg"
 import ramana from "../../images/Testimonials/Ramana ( Ameerpet HYD ).jpeg"
 import abhiram from "../../images/Testimonials/Abhiram Reddy ( Ameerpet HYD ).jpeg"
-import nagalaxmi from "../../images/Testimonials/Ayisha nawf (Trivandrum).jpeg"
+import nagalaxmi from "../../images/man.png"
 
 const testimonials = [
   {

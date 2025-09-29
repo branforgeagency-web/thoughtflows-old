@@ -3,7 +3,7 @@ import { Container, Row, Col, Carousel } from 'react-bootstrap';
 import bgrev from '../../images/Group.png';
 import sushmitha from "../../images/Testimonials/Sushmitha ( TIRUPATI ).jpeg"
 import gowthami from "../../images/Testimonials/Gowthami ( TIRUPATI ).jpeg"
-import ruchitha from "../../images/Testimonials/Gowthami ( TIRUPATI ).jpeg"
+import ruchitha from "../../images/man.png"
 import hemala from "../../images/Testimonials/Hemalatha ( TIRUPATI ).jpeg"
 import shoba from "../../images/Testimonials/Shoba ( TIRUPATI ).jpeg"
 

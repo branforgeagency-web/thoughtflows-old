@@ -6,7 +6,8 @@ import yamini from "../../images/Testimonials/Yamini ( DILSUKHNAGAR HYD ).jpeg"
 import manisha from "../../images/Testimonials/MANISHA ( DILSUKHNAGAR HYD ).jpeg"
 import nemmadi1 from "../../images/Testimonials/Nemmadi Udaychinna ( DILSUKHNAGAR HYD ).jpeg"
 import madura from "../../images/Testimonials/MADHURA ( DILSUKHNAGAR HYD ).jpeg"
-import shivakrishna from "../../images/Testimonials/Dathan (Trivandrum).jpeg"
+import shivakrishna from "../../images/man.png"
+import nagalaxmi from "../../images/man.png"
 
 const testimonials = [
   {
