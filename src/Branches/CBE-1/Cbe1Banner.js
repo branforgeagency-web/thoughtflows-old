@@ -1,6 +1,6 @@
 import React from 'react'
 import bannerImage from '../../images/homebannerbg.png'
-import saravanampatti from '../../images/Branches/Pic 2.webp'
+import saravanampatti from '../../images/Branches/Pic 2 1.png'
 import { Container, Row } from 'react-bootstrap'
 import CountUp from 'react-countup';
 import { Col } from 'react-bootstrap'

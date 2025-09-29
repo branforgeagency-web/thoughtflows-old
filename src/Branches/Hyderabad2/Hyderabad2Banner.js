@@ -64,10 +64,11 @@ const HyderabadBanner = () => {
             alt='bannergif' 
             className='bannergif banner-appear'
             style={{
-              width: '884px',
-              height: '420px',
+              maxWidth: '100%',
+              width: 'auto',
+              height: 'auto',
               objectFit: 'contain',
-              marginBottom:'-135px'
+              marginBottom:'-40px'                  
             }}
           />
         </Col>
