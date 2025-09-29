@@ -65,7 +65,6 @@ const Cbe2Banner = () => {
                     width: '100%',
                     height: 'auto',
                     objectFit: 'contain',
-                    marginBottom: '-90px'
                     }}
                 />
                 </Col>

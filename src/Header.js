@@ -357,15 +357,39 @@ const Header = () => {
                           {item.courseMenu.map((course, i) => (
                             <Link
                                className="text-center text-cyan-500"
-                              style={{ color: "#06b6d4" }}
+                              style={{ 
+                                color: "#06b6d4",
+                                position: "relative",
+                                transition: "color 0.3s ease",
+                                display: "inline-block"
+                              }}
                               key={i}
                               to={course.path}
                               onClick={() => {
                                 setMobileMenuOpen(false);
                                 setSubmenuOpen("");
                               }}
+                              onMouseEnter={(e) => {
+                                e.target.style.color = "#0891b2";
+                                const underline = e.target.querySelector('.mobile-course-underline');
+                                if (underline) underline.style.width = '100%';
+                              }}
+                              onMouseLeave={(e) => {
+                                e.target.style.color = "#06b6d4";
+                                const underline = e.target.querySelector('.mobile-course-underline');
+                                if (underline) underline.style.width = '0%';
+                              }}
                             >
                               {course.label}
+                              <div className="mobile-course-underline" style={{
+                                position: 'absolute',
+                                bottom: '-2px',
+                                left: '0',
+                                width: '0%',
+                                height: '1px',
+                                backgroundColor: '#0891b2',
+                                transition: 'width 0.3s ease'
+                              }}></div>
                             </Link>
                           ))}
                         </div>
@@ -512,9 +536,31 @@ const Header = () => {
                               color: "#505050",
                               textDecoration: "none",
                               marginTop: "10px",
+                              position: "relative",
+                              transition: "color 0.3s ease",
+                              display: "inline-block"
+                            }}
+                            onMouseEnter={(e) => {
+                              e.target.style.color = "#06b6d4";
+                              const underline = e.target.querySelector('.course-underline');
+                              if (underline) underline.style.width = '100%';
+                            }}
+                            onMouseLeave={(e) => {
+                              e.target.style.color = "#505050";
+                              const underline = e.target.querySelector('.course-underline');
+                              if (underline) underline.style.width = '0%';
                             }}
                           >
                             {branch.label}
+                            <div className="course-underline" style={{
+                              position: 'absolute',
+                              bottom: '-2px',
+                              left: '0',
+                              width: '0%',
+                              height: '1px',
+                              backgroundColor: '#06b6d4',
+                              transition: 'width 0.3s ease'
+                            }}></div>
                           </Link>
                         </div>
                       ))}

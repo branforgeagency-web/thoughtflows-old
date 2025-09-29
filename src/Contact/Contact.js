@@ -326,7 +326,6 @@ function Contact() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.4 }}
         >
-          <button className="contact-button" style={{ padding: '10px 60px', fontSize: '1em', marginBottom: '20px', fontFamily:'Poppins' }}>Contact Us</button>
           <h2>How can we help?</h2>
           <p>Have a question or feedback? Fill out the form below, and we'll get back to you as soon as possible.</p>
           
