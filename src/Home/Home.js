@@ -239,29 +239,27 @@ const Home = () => {
               ×
             </button>
             {/* Left side - Image */}
-             <div style={{
-               flex: windowWidth <= 1024 ? "0 0 auto" : "1",
-               width: windowWidth <= 1024 ? "100%" : "45%",
-               display: "block",
-               order: windowWidth <= 1024 ? "1" : "1",
-             }}>
-               <img
-                 src={formimg}
-                 alt="Enquiry"
-                 style={{
-                   display: "block",
-                   width: "100%",
-                   height: windowWidth <= 1024 ? "200px" : "100%",
-                   objectFit: "cover",
-                   borderRadius: windowWidth <= 1024 ? "20px 20px 0 0" : "0",
-                 }}
-               />
-             </div>
+            <div style={{
+              flex: window.innerWidth <= 768 ? "none" : "1",
+              width: window.innerWidth <= 768 ? "100%" : "45%",
+              display: "block",
+            }}>
+              <img
+                src={formimg}
+                alt="Enquiry"
+                style={{
+                  display: "block",
+                  width: "100%",
+                  height: window.innerWidth <= 768 ? "220px" : "100%",
+                  objectFit: "cover",
+                }}
+              />
+            </div>
 
             {/* Right side - Form */}
             <div style={{ 
-              flex: windowWidth <= 1024 ? "1" : "1.2",
-              padding: windowWidth <= 1024 ? "24px 20px" : "40px",
+              flex: window.innerWidth <= 768 ? "none" : "1.2",
+              padding: window.innerWidth <= 768 ? "24px 20px" : "40px",
               width: "100%",
               order: windowWidth <= 1024 ? "2" : "2",
               display: "flex",
@@ -317,7 +315,7 @@ const Home = () => {
                 style={{
                   display: "grid",
                   gridTemplateColumns: "1fr",
-                  gap: windowWidth <= 768 ? "12px" : "14px",
+                  gap: window.innerWidth <= 768 ? "12px" : "14px",
                 }}
               >
                 {/* Input fields */}
@@ -344,10 +342,10 @@ const Home = () => {
                       placeholder={field.placeholder}
                       style={{
                         width: "100%",
-                        padding: windowWidth <= 768 ? "12px 12px 12px 40px" : "14px 14px 14px 44px",
+                        padding: window.innerWidth <= 768 ? "12px 12px 12px 40px" : "14px 14px 14px 44px",
                         borderRadius: "10px",
                         border: "2px solid #e2e8f0",
-                        fontSize: windowWidth <= 768 ? "14px" : "16px",
+                        fontSize: window.innerWidth <= 768 ? "14px" : "16px",
                         outline: "none",
                         transition: "all 0.3s ease",
                         backgroundColor: "#f8fafc",

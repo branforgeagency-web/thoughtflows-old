@@ -225,31 +225,32 @@ const Header = () => {
       {
         label: "COIMBATORE",
         courseMenu: [
-          { label: "Saravanampatti ", path: "/saravanampatti" },
-          { label: "Hopes", path: "/hopes" },
-          { label: "Gandhipuram", path: "/gandhipuram" },
+          { label: "Hopes", path: "/Medical-Coding-Excellence-at-Hopes" },
+          { label: "Saravanampatti ", path: "/Top-Medical-Coding-Training-Saravanampatti" },
+          { label: "Gandhipuram", path: "/Premier-Medical-Coding-Institute-Gandhipuram" },
         ],
       },
       {
         label: "KERALA",
         courseMenu: [
-          { label: "Kochi", path: "/kochi" },
-          { label: "Thiruvananthapuram", path: "/trivandrum" },
+          { label: "Kochi", path: "/Medical-Coding-Academy-Kochi" },
+          { label: "Thiruvananthapuram", path: "/Advanced-Medical-Coding-Tiruvandrum" },
         ],
       },
       {
         label: "HYDERABAD",
         courseMenu: [
-          { label: "Ameerpet", path: "/ameerpet" },
-          { label: "Dilsukhnagar", path: "/dilsukhnagar" },
+          { label: "Ameerpet", path: "/Trusted-Medical-Coding-Ameerpet" },
+          { label: "Dilsukhnagar", path: "/Professional-Medical-Coding-Dilsukhnagar" },
         ],
       },
       {
         label: "OTHER LOCATIONS",
         courseMenu: [
-          { label: "Tirupathi", path: "/tirupathi" },
-          { label: "Trichy", path: "/trichy" },
-          { label: "Salem", path: "/salem" },
+          { label: "Tirupathi", path: "/Expert-Medical-Coding-Tirupathi" },
+          { label: "Trichy", path: "/Career-Focused-Medical-Coding-Trichy" },
+          { label: "Salem", path: "/Future-Ready-Medical-Coding-Salem" },
+          { label: "Vizag", path: "/Innovative-Medical-Coding-Vizag" },
         ],
       },
     ],
