@@ -8,22 +8,21 @@ import Ramya from '../../images/Ramya senthilkumar.png'
 import Vidhya from '../../images/Vidhya .K.png'
 import Rino from '../../images/Rino.png'
 import muhsina from '../../images/Muhsina Surmi.png'
-import nemmadi from '../../images/Nemmadi Udaychinna.png'
-import Companies from "../../Home/Companies";
+import sai from "../../images/man.png"
 
 const HyderabadStudents = () => {
   const testimonials = [
     {
-      image: `${kamale}`,
-      name: "SAI KUMAR RENUKUNTLA (AMEERPET)",
+      image: `${sai}`,
+      name: "SAI KUMAR RENUKUNTLA",
       title: "Student",
       rating: 5,
       review: "Thank you thought flows, I recently completed my certification with good score It's one of the best institute in Hyderabad, To gain knowledge about anatomy and physiology, bala sir, pavitra mam, manoj sir, they are experienced faculty and explaining every doubts without any problem, HR's also very friendly, it's a good environment to focus on study, finally my suggestion, join in thought flows medical coding academy.",
-      avatar: `${kamale}`
+      avatar: `${sai}`
     },
     {
       image: `${SUGANYA}`,
-      name: "SUSHMA PALLE (AMEERPET)",
+      name: "SUSHMA PALLE",
       title: "Student",
       rating: 5,
       review: "I am so thankful to thought flow medical coding academy Ameerpet for their outstanding guidance and support in my CPC exam with friendly and experienced trainer. the training was well structured and covered all aspects of medical coding, I have cleared my CPC exam in First attempt and I have got placed in optum company and (special thanks to HR shinduja mam she helped me a lot thank you mam) I personally recommend thought flow medical coding academy to those who are willing to choose best medical coding coaching centre.",
@@ -31,7 +30,7 @@ const HyderabadStudents = () => {
     },
     {
       image: `${Ramya}`,
-      name: "RAMANA (AMEERPET)",
+      name: "RAMANA ",
       title: "Student",
       rating: 5,
       review: "I had an excellent experience with THOUGHT FLOWS institute. The best medical coding academy in Hyderabad. Some institutes are not teaching the subject and they simply giving important questions to clear exam but that will impact their job definitely. please don't believe false statements and don't waste your money and time. When comes to thought flows the way they teach is awesome. They won't provide any papers but by listening to the classes and by doing their assessments you can easily crack exam. A special thanks to PAVITRA(Multi talented) mam. The way she explains the topic is too good. If you want to gain good knowledge and to get good percentage in CPC or CCS blindly you can join this academy. All the staff are friendly and very polite. Thanks to thought flows for providing quality subject and making students to succeed in their life",
@@ -39,7 +38,7 @@ const HyderabadStudents = () => {
     },
     {
       image: `${Vidhya}`,
-      name: "ABHIRAM REDDY (AMEERPET)",
+      name: "ABHIRAM REDDY",
       title: "Student",
       rating: 5,
       review: "I am Abhiram reddy, Joined AMCT course at Thoughtflows Ameerpet cleared my CPC exam three days ago. Training sessions conducted at this academy is top-notch and study materials are ultimate Especially Training Manager Pavithra mam who is expertise in training has provided the best sessions and made me expert in ICD and CPT including doubt clarifications as well Am grateful to HR Vignesh sir for providing continuous support throughout my CPC journey beginning from admission till the exam completion I recommend Thoughtflows for the best coding Training with 10/10 rating",
