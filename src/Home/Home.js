@@ -21,6 +21,7 @@ const Home = () => {
   const [showPopup, setShowPopup] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -42,6 +43,16 @@ const Home = () => {
     }, 5000);
 
     return () => clearTimeout(timer); // Cleanup timer on unmount
+  }, []);
+
+  // Add resize listener for dynamic responsiveness
+  useEffect(() => {
+    const handleResize = () => {
+      setWindowWidth(window.innerWidth);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
   
   const togglePopup = () => {
@@ -169,13 +180,14 @@ const Home = () => {
               background: "linear-gradient(145deg, #ffffff 0%, #f7f9fc 100%)",
               borderRadius: "20px",
               width: "100%",
-              maxWidth: window.innerWidth <= 768 ? "500px" : "850px",
+              maxWidth: windowWidth <= 1024 ? "500px" : "850px",
               maxHeight: "90vh",
               position: "relative",
               overflow: "hidden",
               boxShadow: "0 20px 60px rgba(0,0,0,0.2)",
               display: "flex",
-              flexDirection: window.innerWidth <= 768 ? "column" : "row",
+              flexDirection: windowWidth <= 1024 ? "column" : "row",
+              alignItems: windowWidth <= 1024 ? "stretch" : "center",
             }}
           >
             {/* Premium gradient overlay */}
@@ -227,33 +239,41 @@ const Home = () => {
               ×
             </button>
             {/* Left side - Image */}
-            <div style={{
-              flex: window.innerWidth <= 768 ? "none" : "1",
-              width: window.innerWidth <= 768 ? "100%" : "45%",
-              display: "block",
-            }}>
-              <img
-                src={formimg}
-                alt="Enquiry"
-                style={{
-                  display: "block",
-                  width: "100%",
-                  height: window.innerWidth <= 768 ? "220px" : "100%",
-                  objectFit: "cover",
-                }}
-              />
-            </div>
+             <div style={{
+               flex: windowWidth <= 1024 ? "0 0 auto" : "1",
+               width: windowWidth <= 1024 ? "100%" : "45%",
+               display: "block",
+               order: windowWidth <= 1024 ? "1" : "1",
+             }}>
+               <img
+                 src={formimg}
+                 alt="Enquiry"
+                 style={{
+                   display: "block",
+                   width: "100%",
+                   height: windowWidth <= 1024 ? "200px" : "100%",
+                   objectFit: "cover",
+                   borderRadius: windowWidth <= 1024 ? "20px 20px 0 0" : "0",
+                 }}
+               />
+             </div>
 
             {/* Right side - Form */}
             <div style={{ 
-              flex: window.innerWidth <= 768 ? "none" : "1.2",
-              padding: window.innerWidth <= 768 ? "24px 20px" : "40px",
+              flex: windowWidth <= 1024 ? "1" : "1.2",
+              padding: windowWidth <= 1024 ? "24px 20px" : "40px",
               width: "100%",
+              order: windowWidth <= 1024 ? "2" : "2",
+              display: "flex",
+              flexDirection: "column",
+              justifyContent: windowWidth <= 1024 ? "flex-start" : "center",
             }}>
-              {/* Header */}
-              <div style={{ marginBottom: window.innerWidth <= 768 ? "20px" : "25px", textAlign: "center" }}>
+            
+            {/* Form Content - Shared between desktop and mobile/tablet */}
+            {/* Header */}
+              <div style={{ marginBottom: windowWidth <= 768 ? "20px" : "25px", textAlign: "center" }}>
                 <h2 style={{
-                  fontSize: window.innerWidth <= 768 ? "22px" : "28px",
+                  fontSize: windowWidth <= 768 ? "22px" : "28px",
                   fontWeight: "800",
                   background: "linear-gradient(135deg, #00BBFA 0%, #0099D6 100%)",
                   WebkitBackgroundClip: "text",
@@ -264,7 +284,7 @@ const Home = () => {
                   Book for Free Demo Class!
                 </h2>
                 <p style={{
-                  fontSize: window.innerWidth <= 768 ? "14px" : "15px",
+                  fontSize: windowWidth <= 768 ? "14px" : "15px",
                   color: "#64748b",
                   fontWeight: "500",
                 }}>
@@ -284,7 +304,7 @@ const Home = () => {
                     textAlign: "center",
                     backgroundColor: submitStatus.type === 'success' ? '#10b981' : '#ef4444',
                     color: 'white',
-                    fontSize: window.innerWidth <= 768 ? "14px" : "15px",
+                    fontSize: windowWidth <= 768 ? "14px" : "15px",
                     fontWeight: "500",
                   }}
                 >
@@ -297,7 +317,7 @@ const Home = () => {
                 style={{
                   display: "grid",
                   gridTemplateColumns: "1fr",
-                  gap: window.innerWidth <= 768 ? "12px" : "14px",
+                  gap: windowWidth <= 768 ? "12px" : "14px",
                 }}
               >
                 {/* Input fields */}
@@ -324,10 +344,10 @@ const Home = () => {
                       placeholder={field.placeholder}
                       style={{
                         width: "100%",
-                        padding: window.innerWidth <= 768 ? "12px 12px 12px 40px" : "14px 14px 14px 44px",
+                        padding: windowWidth <= 768 ? "12px 12px 12px 40px" : "14px 14px 14px 44px",
                         borderRadius: "10px",
                         border: "2px solid #e2e8f0",
-                        fontSize: window.innerWidth <= 768 ? "14px" : "16px",
+                        fontSize: windowWidth <= 768 ? "14px" : "16px",
                         outline: "none",
                         transition: "all 0.3s ease",
                         backgroundColor: "#f8fafc",
@@ -359,15 +379,15 @@ const Home = () => {
                   disabled={isSubmitting}
                   style={{
                     gridColumn: "1 / -1",
-                    padding: window.innerWidth <= 768 ? "12px 24px" : "14px 32px",
+                    padding: windowWidth <= 768 ? "12px 24px" : "14px 32px",
                     background: isSubmitting ? "#94a3b8" : "linear-gradient(135deg, #00BBFA 0%, #0099D6 100%)",
                     color: "white",
                     border: "none",
                     borderRadius: "10px",
-                    fontSize: window.innerWidth <= 768 ? "15px" : "16px",
+                    fontSize: windowWidth <= 768 ? "15px" : "16px",
                     fontWeight: "700",
                     cursor: isSubmitting ? "not-allowed" : "pointer",
-                    marginTop: window.innerWidth <= 768 ? "8px" : "12px",
+                    marginTop: windowWidth <= 768 ? "8px" : "12px",
                     boxShadow: isSubmitting ? "none" : "0 4px 15px rgba(0,187,250,0.3)",
                     position: "relative",
                     overflow: "hidden",

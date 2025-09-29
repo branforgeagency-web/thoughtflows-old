@@ -116,7 +116,7 @@ const Header = () => {
   const [open, setOpen] = useState({ submenu: "", open: false });
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(""); // Track which submenu is open
-  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
 
   const location = useLocation();
   const isHome = location.pathname === '/';
@@ -147,7 +147,7 @@ const Header = () => {
     return coursePaths.includes(location.pathname);
   };
   useEffect(() => {
-    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    const handleResize = () => setIsMobile(window.innerWidth <= 1024);
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
