@@ -226,11 +226,11 @@ const TrichyBanner = () => {
             alt='bannergif' 
             className='bannergif banner-appear'
             style={{
-              maxWidth: '700px',  
-              width: '100%',
-              height: 'auto',
-              objectFit: 'contain',
-              marginBottom:'-130px'
+            maxWidth: '100%',
+            width: 'auto',
+            height: 'auto',
+            objectFit: 'contain',
+            marginBottom:'-40px'
             }}
           />
         </Col>

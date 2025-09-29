@@ -52,7 +52,8 @@ const Cbe2Banner = () => {
                 <Col lg={7} md={8} xs={12} className='cbe1-banner-rht' style={{ 
                 display: 'flex',
                 justifyContent: 'center', 
-                alignItems: 'end',
+                alignItems: 'center',
+                flexDirection:'row',
                 paddingTop: '0',
                 
                 }}>
@@ -61,11 +62,11 @@ const Cbe2Banner = () => {
                     alt='bannergif' 
                     className='bannergif banner-appear' 
                     style={{
-                    maxWidth: '700px',
-                    width: '100%',
-                    height: 'auto',
-                    objectFit: 'contain',
-                    marginBottom: '-90px'
+                        maxWidth: '100%',
+                        width: 'auto',
+                        height: 'auto',
+                        objectFit: 'contain',
+                        marginBottom: '-30px'
                     }}
                 />
                 </Col>
