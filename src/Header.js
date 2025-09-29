@@ -263,15 +263,17 @@ const Header = () => {
           {/* Logo */}
           
 
-          {/* Hamburger Menu */}
-          <div className="hamburger-menu">
-            <div
-              className="hamburger"
-              onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-            >
-              ☰
+          {/* Hamburger Menu - Only show on mobile/tablet */}
+          {isMobile && (
+            <div className="hamburger-menu">
+              <div
+                className="hamburger"
+                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+              >
+                ☰
+              </div>
             </div>
-          </div>
+          )}
 
           {/* Navigation Menu */}
           <div
