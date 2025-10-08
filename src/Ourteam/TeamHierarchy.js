@@ -66,8 +66,8 @@ import Vignesh from "../images/Profile images/blazer pic/Vignesh - HR Executive.
 import Vishnupriya from "../images/Profile images/blazer pic/Vishnupriya - OFFICE ASSISTANT.webp"
 import group2copy63 from "../images/Profile images/Group 2 copy 63.png"
 import Mittu from "../images/Profile images/Mittu - Franchise Partner - Kerala.png"
-import BalaMurali from "../images/Profile images/founder.png"
-import Banumathy from "../images/Profile images/ceo.png"
+import BalaMurali from "../images/Profile images/blazer pic/balamurali.jpg"
+import Banumathy from "../images/Profile images/blazer pic/bhanu mathi.png"
 import Meta from '../Meta';
 import Kobika from "../images/Profile images/blazer pic/Kobika - Trainer.webp"
 import Shilpa from "../images/Profile images/Shilpa.png"
