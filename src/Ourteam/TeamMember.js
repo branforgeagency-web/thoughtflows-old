@@ -1,4 +1,4 @@
-import { Mail, Phone, Building } from "lucide-react";
+import { Phone, Building } from "lucide-react";
 import { useState } from "react";
 
 export function TeamMember({ name, role, imageUrl, phone, branch, email }) {
@@ -74,12 +74,6 @@ export function TeamMember({ name, role, imageUrl, phone, branch, email }) {
               </div>
             )}
 
-            {email && (
-              <div className="flex items-center gap-3">
-                <Mail className="text-teal-600" size={20} />
-                <span className="text-gray-700 break-all">{email}</span>
-              </div>
-            )}
           </div>
         </div>
       </div>
