@@ -353,48 +353,62 @@ const Header = () => {
                   {submenuOpen === "courses" && (
                     <div className="mobile-submenu overflow-scroll text-center border-gray-300 shadow rounded">
                       {submenu.courses.map((item, index) => (
-                        <div key={index}>
-                          <div style={{ fontWeight: 500, marginTop: "10px" }}>
+                        <div key={index} style={{ marginBottom: "20px" }}>
+                          <div style={{ 
+                            fontWeight: 600, 
+                            marginTop: "15px", 
+                            marginBottom: "10px",
+                            fontSize: "16px",
+                            color: "#1f2937"
+                          }}>
                             {item.label}
                           </div>
-                          {item.courseMenu.map((course, i) => (
-                            <Link
-                               className="text-center text-cyan-500"
-                              style={{ 
-                                color: "#06b6d4",
-                                position: "relative",
-                                transition: "color 0.3s ease",
-                                display: "inline-block"
-                              }}
-                              key={i}
-                              to={course.path}
-                              onClick={() => {
-                                setMobileMenuOpen(false);
-                                setSubmenuOpen("");
-                              }}
-                              onMouseEnter={(e) => {
-                                e.target.style.color = "#0891b2";
-                                const underline = e.target.querySelector('.mobile-course-underline');
-                                if (underline) underline.style.width = '100%';
-                              }}
-                              onMouseLeave={(e) => {
-                                e.target.style.color = "#06b6d4";
-                                const underline = e.target.querySelector('.mobile-course-underline');
-                                if (underline) underline.style.width = '0%';
-                              }}
-                            >
-                              {course.label}
-                              <div className="mobile-course-underline" style={{
-                                position: 'absolute',
-                                bottom: '-2px',
-                                left: '0',
-                                width: '0%',
-                                height: '1px',
-                                backgroundColor: '#0891b2',
-                                transition: 'width 0.3s ease'
-                              }}></div>
-                            </Link>
-                          ))}
+                          <div style={{ display: "flex", flexDirection: "column", gap: "8px", alignItems: "center" }}>
+                            {item.courseMenu.map((course, i) => (
+                              <Link
+                                className="text-center text-cyan-500"
+                                style={{ 
+                                  color: "#06b6d4",
+                                  position: "relative",
+                                  transition: "color 0.3s ease",
+                                  display: "block",
+                                  padding: "8px 12px",
+                                  textDecoration: "none",
+                                  fontSize: "14px",
+                                  fontWeight: "500",
+                                  width: "100%",
+                                  maxWidth: "200px"
+                                }}
+                                key={i}
+                                to={course.path}
+                                onClick={() => {
+                                  setMobileMenuOpen(false);
+                                  setSubmenuOpen("");
+                                }}
+                                onMouseEnter={(e) => {
+                                  e.target.style.color = "#0891b2";
+                                  const underline = e.target.querySelector('.mobile-course-underline');
+                                  if (underline) underline.style.width = '100%';
+                                }}
+                                onMouseLeave={(e) => {
+                                  e.target.style.color = "#06b6d4";
+                                  const underline = e.target.querySelector('.mobile-course-underline');
+                                  if (underline) underline.style.width = '0%';
+                                }}
+                              >
+                                {course.label}
+                                <div className="mobile-course-underline" style={{
+                                  position: 'absolute',
+                                  bottom: '-2px',
+                                  left: '0',
+                                  width: '0%',
+                                  height: '1px',
+                                  backgroundColor: '#0891b2',
+                                  transition: 'width 0.3s ease'
+                                }}></div>
+                              </Link>
+                            ))}
+                          </div>
                         </div>
                       ))}
                     </div>
@@ -511,62 +525,78 @@ const Header = () => {
                   borderTop: "1px solid #ddd",
                   boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
                   fontSize: "0.9rem",
+                  borderRadius: "0 0 8px 8px",
                 }}
               >
                 {submenu[open.submenu]?.map((item, index) => (
                   <div
                     key={index}
-                    style={{ margin: "10px", textAlign: "center" }}
+                    style={{ 
+                      margin: "10px", 
+                      textAlign: "center",
+                      minWidth: "120px"
+                    }}
                   >
                     <div
                       style={{
                         fontSize: "1rem",
                         fontWeight: "bold",
-                        marginBottom: "10px",
+                        marginBottom: "15px",
+                        color: "#1f2937",
+                        borderBottom: "2px solid #06b6d4",
+                        paddingBottom: "5px"
                       }}
                     >
                       {item.label}
                     </div>
-                    {item.courseMenu &&
-                      item.courseMenu.map((branch, i) => (
-                        <div
-                          key={i}
-                          style={{ padding: "5px 0", fontSize: "0.85rem" }}
-                        >
-                          <Link
-                            to={branch.path}
-                            style={{
-                              color: "#505050",
-                              textDecoration: "none",
-                              marginTop: "10px",
-                              position: "relative",
-                              transition: "color 0.3s ease",
-                              display: "inline-block"
-                            }}
-                            onMouseEnter={(e) => {
-                              e.target.style.color = "#06b6d4";
-                              const underline = e.target.querySelector('.course-underline');
-                              if (underline) underline.style.width = '100%';
-                            }}
-                            onMouseLeave={(e) => {
-                              e.target.style.color = "#505050";
-                              const underline = e.target.querySelector('.course-underline');
-                              if (underline) underline.style.width = '0%';
+                    <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                      {item.courseMenu &&
+                        item.courseMenu.map((branch, i) => (
+                          <div
+                            key={i}
+                            style={{ 
+                              padding: "8px 0", 
+                              fontSize: "0.85rem",
+                              borderBottom: "1px solid #f1f5f9"
                             }}
                           >
-                            {branch.label}
-                            <div className="course-underline" style={{
-                              position: 'absolute',
-                              bottom: '-2px',
-                              left: '0',
-                              width: '0%',
-                              height: '1px',
-                              backgroundColor: '#06b6d4',
-                              transition: 'width 0.3s ease'
-                            }}></div>
-                          </Link>
-                        </div>
-                      ))}
+                            <Link
+                              to={branch.path}
+                              style={{
+                                color: "#505050",
+                                textDecoration: "none",
+                                position: "relative",
+                                transition: "color 0.3s ease",
+                                display: "block",
+                                padding: "4px 8px",
+                                borderRadius: "4px",
+                                fontWeight: "500"
+                              }}
+                              onMouseEnter={(e) => {
+                                e.target.style.color = "#06b6d4";
+                                const underline = e.target.querySelector('.course-underline');
+                                if (underline) underline.style.width = '100%';
+                              }}
+                              onMouseLeave={(e) => {
+                                e.target.style.color = "#505050";
+                                const underline = e.target.querySelector('.course-underline');
+                                if (underline) underline.style.width = '0%';
+                              }}
+                            >
+                              {branch.label}
+                              <div className="course-underline" style={{
+                                position: 'absolute',
+                                bottom: '-2px',
+                                left: '0',
+                                width: '0%',
+                                height: '1px',
+                                backgroundColor: '#06b6d4',
+                                transition: 'width 0.3s ease'
+                              }}></div>
+                            </Link>
+                          </div>
+                        ))}
+                    </div>
                   </div>
                 ))}
               </div>

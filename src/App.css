@@ -99,6 +99,68 @@
   transition: background-color 0.3s ease;
 }
 
+/* Mobile Course Menu Styles */
+.mobile-submenu {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-submenu::-webkit-scrollbar {
+  width: 4px;
+}
+
+.mobile-submenu::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 2px;
+}
+
+.mobile-submenu::-webkit-scrollbar-thumb {
+  background: #06b6d4;
+  border-radius: 2px;
+}
+
+.mobile-submenu::-webkit-scrollbar-thumb:hover {
+  background: #0891b2;
+}
+
+/* Responsive course display */
+@media (max-width: 1024px) {
+  .mobile-submenu {
+    max-height: 350px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-submenu {
+    max-height: 300px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-submenu {
+    max-height: 250px;
+    padding: 8px;
+  }
+}
+
+/* Tablet specific improvements */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .mobile-submenu {
+    max-height: 400px;
+    padding: 15px;
+  }
+  
+  .mobile-submenu div[style*="maxWidth: 200px"] {
+    max-width: 180px !important;
+  }
+}
+
 .popup .close-bt:hover {
   background-color: white;
 }
@@ -1433,6 +1495,21 @@ flex-direction: row !important;
     height: 230px !important;
     width: 150px !important;
     padding: 10px;
+  }
+  
+  /* Mobile popup scrollability */
+  .popup-overlay {
+    padding: 10px;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+  
+  .popup {
+    margin: 20px 0;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    width: 100%;
+    max-width: 500px;
   }
   .multiple-dropdown {
     display: none;

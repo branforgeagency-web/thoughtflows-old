@@ -183,7 +183,7 @@ const Home = () => {
               maxWidth: windowWidth <= 1024 ? "500px" : "850px",
               maxHeight: "90vh",
               position: "relative",
-              overflow: "hidden",
+              overflow: windowWidth <= 1024 ? "auto" : "hidden",
               boxShadow: "0 20px 60px rgba(0,0,0,0.2)",
               display: "flex",
               flexDirection: windowWidth <= 1024 ? "column" : "row",
@@ -265,6 +265,8 @@ const Home = () => {
               display: "flex",
               flexDirection: "column",
               justifyContent: windowWidth <= 1024 ? "flex-start" : "center",
+              overflow: windowWidth <= 1024 ? "visible" : "visible",
+              minHeight: windowWidth <= 1024 ? "auto" : "auto",
             }}>
             
             {/* Form Content - Shared between desktop and mobile/tablet */}
