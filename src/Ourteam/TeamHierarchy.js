@@ -111,7 +111,7 @@ const profileImages = [
 ];
 
 const teamMemberData =  [
-  {"name": "Mr. BalaMurali", "role": "FOUNDER & MD", "phone": "733 875 3815", "email": "", "Branch": "","image":BalaMurali},
+  {"name": "Mr. BalaMurali", "role": "FOUNDER & MD", "phone": "", "email": "", "Branch": "","image":BalaMurali},
   {"name": "Ms. Bhanu Mathi", "role": "FOUNDER & CEO", "phone": "93845 76852", "email": "", "Branch": "","image":Banumathy},
 
 
@@ -304,7 +304,7 @@ function TeamHierarchy() {
           </h1>
           <div className="w-20 h-1 bg-white opacity-50 mx-auto mt-6"></div>
         </div>
-        <p className="text-white text-lg max-w-2xl mx-auto">Meet the talented individuals behind our success</p>
+        <p className="text-white text-lg max-w-2xl mx-auto">Meet The Talented Individuals Behind Our Success</p>
       </div>
   
       {/* Team Sections with enhanced styling */}
