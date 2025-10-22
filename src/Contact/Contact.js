@@ -99,7 +99,7 @@ function Contact() {
     {
       name: 'Dilsukhnagar',
       email: 'info@thoughtflows.in',
-      phone: '+91 8148732017 , +91 9384576852 & +91 90305 08844 ',
+      phone: '+91 90305 08844 ',
       address: 'Sai Towers H.No:-16-11-477-/6/1/A, 2nd floor Opp.pillar No:-1519, Dilshuknagar., Hyderabad, Telangana 500102',
     },
     {
