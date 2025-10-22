@@ -93,13 +93,13 @@ function Contact() {
     {
       name: 'Salem',
       email: 'info@thoughtflows.in',
-      phone: '+91 8148732017 , +91 9384576852 & +91 90305 08844 ',
+      phone: '+91 8148732017 & +91 9384576852',
       address: '1st floor, S Square Towers, Omalur Main Rd, Arthanari Nagar, Mamangam, Salem, Tamil Nadu 636302',
     },
     {
       name: 'Dilsukhnagar',
       email: 'info@thoughtflows.in',
-      phone: '+91 8148732017 & +91 9384576852',
+      phone: '+91 8148732017 , +91 9384576852 & +91 90305 08844 ',
       address: 'Sai Towers H.No:-16-11-477-/6/1/A, 2nd floor Opp.pillar No:-1519, Dilshuknagar., Hyderabad, Telangana 500102',
     },
     {
