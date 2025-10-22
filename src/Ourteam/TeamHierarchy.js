@@ -116,8 +116,8 @@ const teamMemberData =  [
 
 
   {"name": "Logeshwaran", "role": "FRANCHISE PARTNER", "phone": "81487 32017, 96553 63552", "email": "", "Branch": "Salem","image":Logeshwaran},
-  {"name": "Arun Kumar Pandey", "role": "FRANCHISE PARTNER", "phone": "", "email": "", "Branch": "DSNR","image":Arun},
-  {"name": "Ashok Uppara", "role": "FRANCHISE PARTNER", "phone": "", "email": "", "Branch": "DSNR","image":Ashok},
+  {"name": "Arun Kumar Pandey", "role": "FRANCHISE PARTNER", "phone": "+91 90305 08844", "email": "", "Branch": "DSNR","image":Arun},
+  {"name": "Ashok Uppara", "role": "FRANCHISE PARTNER", "phone": "+91 90001 88024", "email": "", "Branch": "DSNR","image":Ashok},
   {"name": "Veenadhari", "role": "FRANCHISE PARTNER", "phone": "", "email": "veenadharithoughtflows@gmail.com", "Branch": "Vizag","image":Veenadhari},
 
 

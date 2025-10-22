@@ -93,7 +93,7 @@ function Contact() {
     {
       name: 'Salem',
       email: 'info@thoughtflows.in',
-      phone: '+91 8148732017 & +91 9384576852',
+      phone: '+91 8148732017 , +91 9384576852 & +91 90305 08844 ',
       address: '1st floor, S Square Towers, Omalur Main Rd, Arthanari Nagar, Mamangam, Salem, Tamil Nadu 636302',
     },
     {
