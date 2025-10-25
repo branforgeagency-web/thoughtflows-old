@@ -115,10 +115,10 @@ const teamMemberData =  [
   {"name": "Ms. Bhanu Mathi", "role": "FOUNDER & CEO", "phone": "93845 76852", "email": "", "Branch": "","image":Banumathy},
 
 
-  {"name": "Logeshwaran", "role": "FRANCHISE PARTNER", "phone": "81487 32017, 96553 63552", "email": "", "Branch": "Salem","image":Logeshwaran},
-  {"name": "Arun Kumar Pandey", "role": "FRANCHISE PARTNER", "phone": "+91 90305 08844", "email": "", "Branch": "DSNR","image":Arun},
-  {"name": "Ashok Uppara", "role": "FRANCHISE PARTNER", "phone": "+91 90001 88024", "email": "", "Branch": "DSNR","image":Ashok},
-  {"name": "Veenadhari", "role": "FRANCHISE PARTNER", "phone": "", "email": "veenadharithoughtflows@gmail.com", "Branch": "Vizag","image":Veenadhari},
+  {"name": "Logeshwaran", "role": "BRANCH MANAGER OF SALEM", "phone": "81487 32017, 96553 63552", "email": "", "Branch": "Salem","image":Logeshwaran},
+  {"name": "Arun Kumar Pandey", "role": "BRANCH MANAGER OF DILSUKHNAGAR", "phone": "+91 90305 08844", "email": "", "Branch": "DSNR","image":Arun},
+  {"name": "Ashok Uppara", "role": "BRANCH MANAGER OF DILSUKHNAGAR", "phone": "+91 90001 88024", "email": "", "Branch": "DSNR","image":Ashok},
+  {"name": "Veenadhari", "role": "BRANCH MANAGER OF VIZAG", "phone": "8977507230", "email": "veenadharithoughtflows@gmail.com", "Branch": "Vizag","image":Veenadhari},
 
 
   {"name": "Thulasi", "role": "GENERAL MANAGER", "phone": "78936 82459", "email": "thulasick@thoughtflows.in", "Branch": "","image":thulasi},
@@ -230,7 +230,7 @@ const teamMemberData =  [
 
 const teamStructure = [
   { role: "OUR FOUNDERS", count: 2 },
-  { role: "FRANCHISE PARTNERS", count: 4 },
+  { role: "BRANCH MANAGERS", count: 4 },
   { role: "GENERAL MANAGER", count: 1 },
   { role: "INDIA HEAD - OPERATIONS &  STRATEGIC PARTNERSHIP", count: 1 },
   { role: "OPERATIONAL HEAD", count: 1},

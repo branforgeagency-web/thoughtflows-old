@@ -43,14 +43,16 @@ export function TeamMember({ name, role, imageUrl, phone, branch, email }) {
             </div>
           </div>
           <h3 className="text-xl font-semibold text-gray-800 mb-1">{name}</h3>
-          <p className="text-gray-500 mb-6">{role}</p>
+          <p className="text-gray-500 mb-6 text-center">{role}</p>
+          <p className="text-gray-700">{branch}</p>
           <div className="flex gap-4">{/* Social icons can go here */}</div>
         </div>
 
         {/* Back of card */}
         <div className="absolute w-full h-full backface-hidden bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-6 shadow-lg flex flex-col items-center justify-center rotate-y-180">
           <h3 className="text-xl font-bold text-gray-800 mb-6">{name}</h3>
-          <p className="text-gray-500 mb-6">{role}</p>
+          <p className="text-gray-500 mb-6 text-center">{role}</p>
+          <span className="text-gray-700">{branch}</span>
 
 
           <div className="space-y-4 w-full">
