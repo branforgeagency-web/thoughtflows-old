@@ -181,11 +181,11 @@ const TrichyBanner = () => {
           backgroundPosition: "center",
           overflow: "hidden",
           backgroundRepeat: "no-repeat",
-          minHeight: "95vh",
+          minHeight: "85vh",
           height: "auto",
           alignItems: "center",
-          padding: "80px 0 40px 0",
-          marginTop: "20px",
+          padding: "20px 0 40px 0",
+          marginTop: "0px",
           margin: 0
         }}
       >
