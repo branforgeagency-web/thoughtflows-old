@@ -1,8 +1,24 @@
-import { Mail, Phone, Building } from "lucide-react";
+import { Phone, Building } from "lucide-react";
 import { useState } from "react";
 
 export function TeamMember({ name, role, imageUrl, phone, branch, email }) {
   const [isFlipped, setIsFlipped] = useState(false);
+
+  // Function to format phone numbers
+  const formatPhoneNumbers = (phoneString) => {
+    if (!phoneString) return null;
+    
+    // Split by comma and clean up each number
+    const numbers = phoneString.split(',').map(num => num.trim()).filter(num => num);
+    
+    // Format each number with +91 prefix
+    return numbers.map(num => {
+      // Remove any existing +91 or 91 prefix
+      let cleanNum = num.replace(/^(\+91|91)/, '').trim();
+      // Add +91 prefix
+      return `+91 ${cleanNum}`;
+    });
+  };
 
   return (
     <div
@@ -27,14 +43,16 @@ export function TeamMember({ name, role, imageUrl, phone, branch, email }) {
             </div>
           </div>
           <h3 className="text-xl font-semibold text-gray-800 mb-1">{name}</h3>
-          <p className="text-gray-500 mb-6">{role}</p>
+          <p className="text-gray-500 mb-6 text-center">{role}</p>
+          <p className="text-gray-700">{branch}</p>
           <div className="flex gap-4">{/* Social icons can go here */}</div>
         </div>
 
         {/* Back of card */}
         <div className="absolute w-full h-full backface-hidden bg-gradient-to-br from-teal-50 to-blue-50 rounded-2xl p-6 shadow-lg flex flex-col items-center justify-center rotate-y-180">
           <h3 className="text-xl font-bold text-gray-800 mb-6">{name}</h3>
-          <p className="text-gray-500 mb-6">{role}</p>
+          <p className="text-gray-500 mb-6 text-center">{role}</p>
+          <span className="text-gray-700">{branch}</span>
 
 
           <div className="space-y-4 w-full">
@@ -46,18 +64,18 @@ export function TeamMember({ name, role, imageUrl, phone, branch, email }) {
             )}
 
             {phone && (
-              <div className="flex items-center gap-3">
-                <Phone className="text-teal-600" size={20} />
-                <span className="text-gray-700">{phone}</span>
+              <div className="flex items-start gap-3">
+                <Phone className="text-teal-600 mt-1" size={20} />
+                <div className="text-gray-700">
+                  {formatPhoneNumbers(phone)?.map((formattedNumber, index) => (
+                    <div key={index} className="block">
+                      {formattedNumber}
+                    </div>
+                  ))}
+                </div>
               </div>
             )}
 
-            {email && (
-              <div className="flex items-center gap-3">
-                <Mail className="text-teal-600" size={20} />
-                <span className="text-gray-700 break-all">{email}</span>
-              </div>
-            )}
           </div>
         </div>
       </div>

@@ -1,14 +1,12 @@
 import React from "react";
 import bannerImage from "../../images/homebannerbg.png";
-import cbe1banner from "../../images/Branches/7.png";
-import banner2 from "../../images/Branches/lapgirl.png";
 // import cbe1banner from '../../images/Branches/cbe1bannerRight.png'
 import { Container, Row } from "react-bootstrap";
 import CountUp from "react-countup";
 import { Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 // import bannerVid from "../../images/Branches/online/Comp.mp4"
-import dilsukhnagar from '../../images/Branches/7.png'
+import dilsukhnagar from '../../images/Branches/Pic 7.webp'
 
 const HyderabadBanner = () => {
   return (
@@ -30,7 +28,7 @@ const HyderabadBanner = () => {
         }}
       >
         <Col lg={1} xs={0}></Col>
-        <Col lg={3} md={4} xs={12} className='cbe1-banner-lft px-4 mb-4 mb-lg-0 d-flex flex-column justify-content-lg-start justify-content-center align-items-lg-start align-items-center'>
+        <Col lg={3} md={4} xs={12} className='cbe1-banner-lft px-4 pt-5 mb-4 mb-lg-0 d-flex flex-column justify-content-lg-start justify-content-center align-items-lg-start align-items-center'>
           <Col className='cbe1-banner-heading'>
             <h2 style={{ 
               fontSize: 'clamp(28px, 5vw, 40px)',
@@ -62,13 +60,15 @@ const HyderabadBanner = () => {
           paddingTop: '0'
         }}>
           <img 
-            src={cbe1banner} 
+            src={dilsukhnagar} 
             alt='bannergif' 
             className='bannergif banner-appear'
             style={{
-              width: '884px',
-              height: '420px',
-              objectFit: 'contain'
+              maxWidth: '100%',
+              width: 'auto',
+              height: 'auto',
+              objectFit: 'contain',
+              marginBottom:'-40px'                  
             }}
           />
         </Col>

@@ -1,8 +1,8 @@
 import React, { useState,useEffect } from 'react';
 import contact from "../images/contact/6.jpg";
-import map from "../images/contact/pinmap.png";
+import map from "../images/contact/PIN MAP UPDATED.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faArrowDown } from '@fortawesome/free-solid-svg-icons';
+import { faArrowDown, faTimes } from '@fortawesome/free-solid-svg-icons';
 import Meta from '../Meta';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
@@ -22,6 +22,8 @@ function Contact() {
   const isMobile = viewportWidth <= 768;
   const isTablet = viewportWidth > 768 && viewportWidth <= 1024;
   const [activeSection, setActiveSection] = useState(null);
+  const [showZoomPopup, setShowZoomPopup] = useState(false);
+  const [selectedLocation, setSelectedLocation] = useState(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -32,8 +34,10 @@ function Contact() {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
-  const handleSectionClick = (section) => {
-    setActiveSection(activeSection === section ? null : section);
+  
+  const handleLocationClick = (location) => {
+    setSelectedLocation(location);
+    setShowZoomPopup(true);
   };
 
 
@@ -63,7 +67,7 @@ function Contact() {
       address: '20-1-171/C1, 1st floor Upstairs MIOT Diagnostic center oppo. Sai Baba temple, Tirumala Bypass Rd, Korlagunta, Tirupati, Andhra Pradesh 517501',
     },
     {
-      name: 'Hyderabad',
+      name: 'Ameerpet',
       email: 'info@thoughtflows.in',
       phone: '+91 8790751742 & +91 98045 76852',
       address: 'No:405, 3rd Floor & No:606/A, 5th Floor, Vasavi MPM Grand Yellareddyguda, Ameerpet X Road Telangana 500073',
@@ -71,13 +75,13 @@ function Contact() {
     {
       name: 'Trivandrum',
       email: 'info@thoughtflows.in',
-      phone: '070122 47525 & +91 9384576852',
+      phone: '+91 93845 76852 ',
       address: '167, 1st Floor, Karimpanal Arcade, opp. to Padmanabhaswamy Temple, East Fort, Thiruvananthapuram, Kerala 695024',
     },
     {
       name: 'Kochi',
       email: 'info@thoughtflows.in',
-      phone: '+91 9995790525 & +91 9384576852',
+      phone: '  +91 90480 23242 , +91 93845 76852',
       address: '4 th floor, Vee Vee Tower , NH Bypass road, Near Bhima Jewels, Edappally, Kochi, Eranakulam, Kerala 682024',
     },
     {
@@ -93,10 +97,16 @@ function Contact() {
       address: '1st floor, S Square Towers, Omalur Main Rd, Arthanari Nagar, Mamangam, Salem, Tamil Nadu 636302',
     },
     {
-      name: 'Dilsuknagar',
+      name: 'Dilsukhnagar',
       email: 'info@thoughtflows.in',
-      phone: '+91 8148732017 & +91 9384576852',
+      phone: '+91 90305 08844 ',
       address: 'Sai Towers H.No:-16-11-477-/6/1/A, 2nd floor Opp.pillar No:-1519, Dilshuknagar., Hyderabad, Telangana 500102',
+    },
+    {
+      name: 'Vizag',
+      email: 'info@thoughtflows.in',
+      phone: '+91 89775 07230',
+      address: '7th Floor, Flat No #802 Grand Palace Building, D. No. 47-11-16, Lane Dwarka Nagar, Visakhapatnam- 530016',
     },
   ];
   
@@ -221,6 +231,74 @@ function Contact() {
   return (
     <>
     <Meta title="Contact Us - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+    
+    {/* Location Zoom Popup */}
+    {showZoomPopup && selectedLocation && (
+      <div 
+        className="fixed inset-0 bg-black bg-opacity-50 z-[99999] flex items-center justify-center p-4"
+        onClick={() => setShowZoomPopup(false)}
+      >
+        <motion.div 
+          className="bg-white rounded-2xl p-8 max-w-2xl w-full max-h-[90vh] overflow-y-auto"
+          initial={{ scale: 0.8, opacity: 0 }}
+          animate={{ scale: 1, opacity: 1 }}
+          exit={{ scale: 0.8, opacity: 0 }}
+          transition={{ duration: 0.3 }}
+          onClick={e => e.stopPropagation()}
+        >
+          <div className="flex justify-between items-center mb-6">
+            <h2 className="text-3xl font-bold text-[#0D8F9C]">{selectedLocation.name}</h2>
+            <button
+              onClick={() => setShowZoomPopup(false)}
+              className="w-10 h-10 rounded-full bg-gray-200 flex items-center justify-center hover:bg-gray-300 transition-colors"
+            >
+              <FontAwesomeIcon icon={faTimes} className="text-gray-600" />
+            </button>
+          </div>
+          
+          <div className="space-y-4">
+            <div className="flex items-start space-x-3">
+              <div className="w-12 h-12 bg-[#0D8F9C] rounded-full flex items-center justify-center flex-shrink-0">
+                <FontAwesomeIcon icon={faArrowDown} className="text-white" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg text-gray-800">Email</h3>
+                <p className="text-gray-600">{selectedLocation.email}</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-3">
+              <div className="w-12 h-12 bg-[#0D8F9C] rounded-full flex items-center justify-center flex-shrink-0">
+                <FontAwesomeIcon icon={faArrowDown} className="text-white" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg text-gray-800">Phone</h3>
+                <p className="text-gray-600">{selectedLocation.phone}</p>
+              </div>
+            </div>
+            
+            <div className="flex items-start space-x-3">
+              <div className="w-12 h-12 bg-[#0D8F9C] rounded-full flex items-center justify-center flex-shrink-0">
+                <FontAwesomeIcon icon={faArrowDown} className="text-white" />
+              </div>
+              <div>
+                <h3 className="font-semibold text-lg text-gray-800">Address</h3>
+                <p className="text-gray-600 leading-relaxed">{selectedLocation.address}</p>
+              </div>
+            </div>
+          </div>
+          
+          <div className="mt-8 flex justify-end">
+            <button
+              onClick={() => setShowZoomPopup(false)}
+              className="px-6 py-3 bg-[#0D8F9C] text-white rounded-lg hover:bg-[#0a848f] transition-colors"
+            >
+              Close
+            </button>
+          </div>
+        </motion.div>
+      </div>
+    )}
     <motion.div 
       className="contact-page "
       initial={{ opacity: 0 }}
@@ -234,9 +312,9 @@ function Contact() {
         animate={{ opacity: 1 }}
         transition={{ duration: 0.7, delay: 0.2 }}
       >
-        <h1 style={{ fontSize: '2.5em', paddingTop: isMobile ? '120px' : isTablet ? '160px' : '180px' }}>Get in touch</h1>
+        <h1 style={{ fontSize: '2.5em', paddingTop: isMobile ? '50px' : isTablet ? '50px' : '50px', paddingBottom: isMobile ? '0px' : '0px' }}>Get in touch</h1>
         <p style={{ fontSize: '16px', maxWidth: '700px', margin: 'auto' }}>
-          Feel free to reach out to us using the options below, and our dedicated team will respond to your inquiries promptly.
+          Feel Free To Reach Out To Us Using The Options Below, And Our Dedicated Team Will Respond To Your Inquiries Promptly.
         </p>
       </motion.div>
 
@@ -248,7 +326,6 @@ function Contact() {
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7, delay: 0.4 }}
         >
-          <button className="contact-button" style={{ padding: '10px 60px', fontSize: '1em', marginBottom: '20px', fontFamily:'Poppins' }}>Contact Us</button>
           <h2>How can we help?</h2>
           <p>Have a question or feedback? Fill out the form below, and we'll get back to you as soon as possible.</p>
           
@@ -396,21 +473,21 @@ function Contact() {
             className='Map-img' 
             alt="map" 
             style={{ 
-              width: '100%',
-              height: isMobile ? 'auto' : '100%',
+              width: isMobile ? '130px' : '100%',
+              height: isMobile ? '130px' : isTablet ? 'auto' : '100%',
               borderRadius: '0px',
-              transition: 'transform 0.3s ease-out',
-              transformStyle: 'preserve-3d'
+              transition: isMobile || isTablet ? 'none' : 'transform 0.3s ease-out',
+              transformStyle: isMobile || isTablet ? 'none' : 'preserve-3d'
             }}
-            onMouseMove={(e) => {
+            onMouseMove={isMobile || isTablet ? undefined : (e) => {
               const rect = e.currentTarget.getBoundingClientRect();
               const x = (e.clientX - rect.left) / rect.width;
               const y = (e.clientY - rect.top) / rect.height;
               const tiltX = (y - 0.5) * 30;
               const tiltY = (x - 0.5) * -30;
-              e.currentTarget.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(${isMobile ? 1.02 : 1.1})`;
+              e.currentTarget.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.1)`;
             }}
-            onMouseLeave={(e) => {
+            onMouseLeave={isMobile || isTablet ? undefined : (e) => {
               e.currentTarget.style.transform = 'none';
             }}
           />
@@ -432,46 +509,36 @@ function Contact() {
             whileInView={{ y: 0, opacity: 1 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: index * 0.1 }} 
-            onClick={() => handleSectionClick(location.name)}
+            onClick={() => handleLocationClick(location)}
             style={{
               ...sectionStyle,
-              ...(activeSection === location.name ? activeStyle : {}),
               position: 'relative',
               transition: 'all 0.4s ease',
               cursor: 'pointer',
               borderRadius: '15px',
-              border: '1px solid rgba(255,255,255,0.18)'
+              border: '1px solid rgba(255,255,255,0.18)',
+              padding: '20px',
+              textAlign: 'center'
             }}
             whileHover={{
               y: -10,
-              rotate: 1,
+              scale: 1.02,
               boxShadow: '0 15px 30px rgba(13, 143, 156, 0.3)',
               background: '#34aebb',
               borderColor: '#0D8F9C'
             }}
           >
-            <h2 style={{ textAlign: 'center', marginBottom: '10px' }}>{location.name}</h2>
-
-            {activeSection === location.name && (
-              <motion.div 
-                style={{ textAlign: 'center' }}
-                initial={{ opacity: 0 }}
-                animate={{ opacity: 1 }}
-                transition={{ duration: 0.5 }}
-              >
-                <h5>Email: {location.email}</h5>
-                <h5>Phone: {location.phone}</h5>
-                <h5>Address: {location.address}</h5>
-              </motion.div>
-            )}
+            <h2 style={{ textAlign: 'center', marginBottom: '10px', color: 'white' }}>{location.name}</h2>
+            <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '14px', marginBottom: '15px' }}>
+              Click to view full details
+            </p>
 
             <motion.button
-              onClick={() => handleSectionClick(location.name)}
+              onClick={(e) => {
+                e.stopPropagation();
+                handleLocationClick(location);
+              }}
               style={{
-                position: 'absolute',
-                right: '10px',
-                top: '20%',
-                transform: 'translateY(-50%)',
                 width: '40px',
                 height: '40px',
                 borderRadius: '50%',
@@ -481,6 +548,7 @@ function Contact() {
                 alignItems: 'center',
                 justifyContent: 'center',
                 cursor: 'pointer',
+                margin: '0 auto'
               }}
               whileHover={{ scale: 1.1, backgroundColor: '#0D8F9C' }}
               whileTap={{ scale: 0.95 }}

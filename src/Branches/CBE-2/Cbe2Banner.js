@@ -1,6 +1,6 @@
 import React from 'react'
 import bannerImage from '../../images/homebannerbg.png'
-import hopes from '../../images/Branches/5(1).png'
+import hopes from '../../images/Branches/Pic 1.webp'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 import CountUp from 'react-countup';
@@ -24,7 +24,7 @@ const Cbe2Banner = () => {
                 }}
             >
                 <Col lg={1} xs={0}></Col>
-                <Col lg={3} md={4} xs={12} className='cbe1-banner-lft px-4 mb-4 mb-lg-0 d-flex flex-column justify-content-lg-start justify-content-center align-items-lg-start align-items-center'>
+                <Col lg={3} md={4} xs={12} className='cbe1-banner-lft pt-5 px-4 mb-4 mb-lg-0 d-flex flex-column justify-content-lg-start justify-content-center align-items-lg-start align-items-center'>
                     <Col className='cbe1-banner-heading'>
                         <h2 style={{ 
                             fontSize: 'clamp(28px, 5vw, 40px)',
@@ -50,22 +50,25 @@ const Cbe2Banner = () => {
                 </Col>
 
                 <Col lg={7} md={8} xs={12} className='cbe1-banner-rht' style={{ 
-                    display: 'flex', 
-                    justifyContent: 'center', 
-                    alignItems: 'center',
-                    paddingTop: '0'
+                display: 'flex',
+                justifyContent: 'center', 
+                alignItems: 'center',
+                flexDirection:'row',
+                paddingTop: '0',
+                
                 }}>
-                    <img 
-                        src={hopes} 
-                        alt='bannergif' 
-                        className='bannergif banner-appear' 
-                        style={{
-                            maxWidth: '100%',
-                            width: 'auto',
-                            height: 'auto',
-                            objectFit: 'contain'
-                        }}
-                    />
+                <img 
+                    src={hopes} 
+                    alt='bannergif' 
+                    className='bannergif banner-appear' 
+                    style={{
+                        maxWidth: '100%',
+                        width: 'auto',
+                        height: 'auto',
+                        objectFit: 'contain',
+                        marginBottom: '-30px'
+                    }}
+                />
                 </Col>
                 <Col lg={1} xs={0}></Col>
             </Row>

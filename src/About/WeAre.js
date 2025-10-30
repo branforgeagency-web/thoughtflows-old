@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import founder2 from "../images/AboutImg/Group 1 copy.png";
-import founder1 from "../images/AboutImg/Group 1 (1).png";
+import founder2 from "../images/Profile images/blazer pic/bhanu mathi.png";
+import founder1 from "../images/Profile images/blazer pic/balamurali.jpg";
 import founderBig1 from "../images/AboutImg/A-321.png";
 import founderBig2 from "../images/AboutImg/A432.png";
 import {

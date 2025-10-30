@@ -12,7 +12,7 @@ const slidesContent = [
     { image: cpc, text: 'Certified Professional Coder', week: 3, rating: 5, chip: 'CPC', link: '/cpc' },
     { image: surgery, text: 'Surgery Department', week: 12, rating: 5, chip: 'SD', link: '/surgery' },
     { image: cic, text: 'Certified Inpatient Coder', week: 3, rating: 5, chip: 'CIC', link: '/cic' },
-    { image: anasthesia, text: 'Anaesthesia Department', week: 10, rating: 5.0, chip: 'AD', link: '/Anesesthesia' },
+    { image: anasthesia, text: 'Anesthesia Department', week: 10, rating: 5.0, chip: 'AD', link: '/Anesthesia' },
     { image: radio, text: 'Radiology Department', week: 3, rating: 5, chip: 'RD', link: '/radiology' }
 ];
 

@@ -152,7 +152,7 @@
 // export default TrivandrumBanner;
 import React from "react";
 import bannerImage from "../../images/homebannerbg.png";
-import cbe1banner from "../../images/Trivandrum/Group 2.png";
+import trivandrum from "../../images/Branches/Pic 5.webp";
 import banner2 from "../../images/Branches/lapgirl.png";
 // import cbe1banner from '../../images/Branches/cbe1bannerRight.png'
 import { Container, Row } from "react-bootstrap";
@@ -182,7 +182,7 @@ const TrivandrumBanner = () => {
         }}
       >
         <Col lg={1} xs={0}></Col>
-        <Col lg={3} md={4} xs={12} className='cbe1-banner-lft px-4 mb-4 mb-lg-0 d-flex flex-column justify-content-lg-start justify-content-center align-items-lg-start align-items-center'>
+        <Col lg={3} md={4} xs={12} className='cbe1-banner-lft pt-5 px-4 mb-4 mb-lg-0 d-flex flex-column justify-content-lg-start justify-content-center align-items-lg-start align-items-center'>
           <Col className='cbe1-banner-heading'>
             <h2 style={{ 
               fontSize: 'clamp(28px, 5vw, 40px)',
@@ -214,13 +214,15 @@ const TrivandrumBanner = () => {
           paddingTop: '0'
         }}>
           <img 
-            src={cbe1banner} 
+            src={trivandrum} 
             alt='bannergif' 
             className='bannergif banner-appear'
             style={{
-              width: '884px',
-              height: '420px',
-              objectFit: 'contain'
+            maxWidth: '100%',
+            width: 'auto',
+            height: 'auto',
+            objectFit: 'contain',
+            marginBottom:'-40px'
             }}
           />
         </Col>

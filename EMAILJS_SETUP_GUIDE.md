@@ -22,11 +22,11 @@ This guide will help you set up EmailJS to send form submissions to dhanuskumar1
 
 **Template Name:** Workshop Registration
 
-**Subject:** New Workshop Registration from {{from_name}}
+**Subject:** Enquiry from {{from_name}}
 
 **Content:**
 ```
-You have received a new workshop registration:
+
 
 Name: {{from_name}}
 Email: {{from_email}}

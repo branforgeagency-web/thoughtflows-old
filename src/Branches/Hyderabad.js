@@ -10,7 +10,7 @@ import HyderabadOnline2 from './Hyderabad/HyderabadOnline2'
 import HyderabadGetinTouch from './Hyderabad/HyderabadGetinTouch'
 import HyderabadStudents from './Hyderabad/HyderabadStudents'
 import Meta from '../Meta';
-import Cbe1Testi from './CBE-1/cbe1Testi'
+import HyderabadTestimonial from './Hyderabad/HyderabadTestimonial'
 
 function Hyderabad() {
   useEffect(() => {
@@ -29,7 +29,7 @@ function Hyderabad() {
     <HyderabadOnline2 />
     <HyderabadGetinTouch />
     {/* <HyderabadStudents /> */}
-    <Cbe1Testi/>
+    <HyderabadTestimonial />
     </>
   )
 }

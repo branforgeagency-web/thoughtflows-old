@@ -1,12 +1,13 @@
 import React from "react";
 import bannerImage from "../../images/homebannerbg.png";
-import cbe1banner from "../../images/Branches/cbe1banner (2).png";
+import vizag from "../../images/Branches/Pic 11.webp";
 import banner2 from "../../images/Branches/lapgirl.png";
 import { Container, Row } from "react-bootstrap";
-import CountUp from "react-countup";
+import CountUp from "react-countup";    
 import { Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-import vizag from '../../images/Branches/ameerpet.png'
+
+
 
 const VizagBanner = () => {
   return (
@@ -27,7 +28,7 @@ const VizagBanner = () => {
         }}
       >
         <Col lg={1} xs={0}></Col>
-        <Col lg={3} md={4} xs={12} className='cbe1-banner-lft px-4 mb-4 mb-lg-0 d-flex flex-column justify-content-lg-start justify-content-center align-items-lg-start align-items-center'>
+        <Col lg={3} md={4} xs={12} className='cbe1-banner-lft pt-5 px-4 mb-4 mb-lg-0 d-flex flex-column justify-content-lg-start justify-content-center align-items-lg-start align-items-center'>
           <Col className='cbe1-banner-heading'>
             <h2 style={{ 
               fontSize: 'clamp(28px, 5vw, 40px)',
@@ -53,20 +54,22 @@ const VizagBanner = () => {
         </Col>
 
         <Col lg={7} md={8} xs={12} className='cbe1-banner-rht' style={{ 
-          display: 'flex', 
+          display: 'flex',
           justifyContent: 'center', 
-          alignItems: 'center',
+          alignItems: 'end',
           paddingTop: '0'
+          
         }}>
           <img 
             src={vizag} 
             alt='bannergif' 
             className='bannergif banner-appear' 
             style={{
-              maxWidth: '700px',
-              width: '100%',
-              height: 'auto',
-              objectFit: 'contain'
+            maxWidth: '100%',
+            width: 'auto',
+            height: 'auto',
+            objectFit: 'contain',
+            marginBottom:'-40px'
             }}
           />
         </Col>
@@ -77,7 +80,7 @@ const VizagBanner = () => {
           background: '#fff',
           borderRadius: 'clamp(15px, 3vw, 80px)',
           boxShadow: '0 3px 15px 0 rgba(0, 0, 0, 0.13)',
-          marginTop: '-40px',
+          marginTop: '-170px',
           padding: 'clamp(15px, 3vw, 30px)',
           zIndex: 2,
           position: 'relative',

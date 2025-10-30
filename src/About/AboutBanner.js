@@ -61,30 +61,104 @@ function AboutBanner() {
       <Container fluid id="#we-are" className="abt-col p-0 justify-content-around align-items-center" style={{ height: '154px', width: "100%" }}>
         <Row className="w-100 h-100 text-center d-flex " style={{ background: "#15aebb", color: "white" }}>
           <Col className=" d-flex flex-column align-items-center col-1 front" style={{ width: '20%', justifyContent: "center" }}>
-
-            <a href="#who-we" style={{ color: "white", textDecoration: 'none', }}><h4>Who We Are</h4></a>
-            <hr className="custom-hr" />
+            <a href="#who-we" style={{ 
+              color: "white", 
+              textDecoration: 'none', 
+              width: '100%', 
+              height: '100%', 
+              display: 'flex', 
+              flexDirection: 'column', 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              cursor: 'pointer',
+              transition: 'background-color 0.3s ease'
+            }}
+            onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'}
+            onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
+            >
+              <h4>Who We Are</h4>
+              <hr className="custom-hr" />
+            </a>
           </Col>
           <Col className=" d-flex flex-column align-items-center col-1 front " style={{ width: '20%', justifyContent: "center" }}>
-
-            <a href="#empower" style={{ color: "white", textDecoration: 'none', }}><h4>We Empower</h4></a>
-            <hr className="custom-hr" />
+            <a href="#empower" style={{ 
+              color: "white", 
+              textDecoration: 'none', 
+              width: '100%', 
+              height: '100%', 
+              display: 'flex', 
+              flexDirection: 'column', 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              cursor: 'pointer',
+              transition: 'background-color 0.3s ease'
+            }}
+            onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'}
+            onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
+            >
+              <h4>We Empower</h4>
+              <hr className="custom-hr" />
+            </a>
           </Col>
           <Col className="  d-flex flex-column align-items-center col-1 front" style={{ width: '20%', justifyContent: "center" }}>
-
-            <a href="#motto" style={{ color: "white", textDecoration: 'none', }}><h4>Our Motto</h4></a>
-            <hr className="custom-hr" />
+            <a href="#motto" style={{ 
+              color: "white", 
+              textDecoration: 'none', 
+              width: '100%', 
+              height: '100%', 
+              display: 'flex', 
+              flexDirection: 'column', 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              cursor: 'pointer',
+              transition: 'background-color 0.3s ease'
+            }}
+            onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'}
+            onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
+            >
+              <h4>Our Motto</h4>
+              <hr className="custom-hr" />
+            </a>
           </Col>
           <Col className=" d-flex flex-column align-items-center col-1 front " style={{ width: '20%', justifyContent: "center" }}>
-
-            <a href="#vis" style={{ color: "white", textDecoration: 'none', }}><h4>Vision-Mission</h4></a>
-            <hr className="custom-hr" />
+            <a href="#vis" style={{ 
+              color: "white", 
+              textDecoration: 'none', 
+              width: '100%', 
+              height: '100%', 
+              display: 'flex', 
+              flexDirection: 'column', 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              cursor: 'pointer',
+              transition: 'background-color 0.3s ease'
+            }}
+            onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'}
+            onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
+            >
+              <h4>Vision-Mission</h4>
+              <hr className="custom-hr" />
+            </a>
           </Col>
           <Col className="  d-flex flex-column align-items-center col-1 front " style={{ width: '20%', justifyContent: "center" }}>
-
-            <a href="#core" style={{ color: "white", textDecoration: 'none', }} ><h4>Our Core Values</h4></a>
-
-            <hr className="custom-hr" />
+            <a href="#core" style={{ 
+              color: "white", 
+              textDecoration: 'none', 
+              width: '100%', 
+              height: '100%', 
+              display: 'flex', 
+              flexDirection: 'column', 
+              alignItems: 'center', 
+              justifyContent: 'center',
+              cursor: 'pointer',
+              transition: 'background-color 0.3s ease'
+            }}
+            onMouseEnter={(e) => e.target.style.backgroundColor = 'rgba(255, 255, 255, 0.1)'}
+            onMouseLeave={(e) => e.target.style.backgroundColor = 'transparent'}
+            >
+              <h4>Our Core Values</h4>
+              <hr className="custom-hr" />
+            </a>
           </Col>
 
         </Row>

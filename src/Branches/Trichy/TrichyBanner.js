@@ -160,7 +160,7 @@
 
 import React from "react";
 import bannerImage from "../../images/homebannerbg.png";
-import cbe1banner from "../../images/Branches/1.png";
+import trichy from "../../images/Branches/Pic 9.webp";
 import banner2 from "../../images/Branches/lapgirl.png";
 // import cbe1banner from '../../images/Branches/cbe1bannerRight.png'
 import { Container, Row } from "react-bootstrap";
@@ -190,7 +190,7 @@ const TrichyBanner = () => {
         }}
       >
         <Col lg={1} xs={0}></Col>
-        <Col lg={3} md={4} xs={12} className='cbe1-banner-lft px-4 mb-4 mb-lg-0 d-flex flex-column justify-content-lg-start justify-content-center align-items-lg-start align-items-center'>
+        <Col lg={3} md={4} xs={12} className='cbe1-banner-lft pt-5 px-4 mb-4 mb-lg-0 d-flex flex-column justify-content-lg-start justify-content-center align-items-lg-start align-items-center'>
           <Col className='cbe1-banner-heading'>
             <h2 style={{ 
               fontSize: 'clamp(28px, 5vw, 40px)',
@@ -222,14 +222,15 @@ const TrichyBanner = () => {
           paddingTop: '0'
         }}>
           <img 
-            src={cbe1banner} 
+            src={trichy} 
             alt='bannergif' 
             className='bannergif banner-appear'
             style={{
-              maxWidth: '700px',  
-              width: '100%',
-              height: 'auto',
-              objectFit: 'contain'
+            maxWidth: '100%',
+            width: 'auto',
+            height: 'auto',
+            objectFit: 'contain',
+            marginBottom:'-40px'
             }}
           />
         </Col>

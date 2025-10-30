@@ -1,5 +1,5 @@
 import React from 'react'
-import leftimg from '../images/Group710.png'
+import leftimg from '../images/thumbnail-/img1.png'
 import grp20 from '../images/Group20.png'
 import grp21 from '../images/Group21.png'
 import grp22 from '../images/Group22.png'

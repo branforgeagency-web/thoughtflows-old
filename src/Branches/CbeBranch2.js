@@ -8,7 +8,7 @@ import Exams from './CBE-2/Exams'
 import Cbe2Core from './CBE-2/Cbe2Core'
 import Cbe2Contents from './CBE-2/Cbe2Contents'
 import Meta from '../Meta';
-import Cbe1Testi from './CBE-1/cbe1Testi'
+import Cbe2Testimonial from './CBE-2/Cbe2Testimonial'
 
 const CbeBranch2 = () => {
   useEffect(() => {
@@ -25,7 +25,7 @@ const CbeBranch2 = () => {
     {/* <Cbe2Exams/> */}
     <Cbe2Core/>
     <Cbe2Contents/>
-    <Cbe1Testi/>
+    <Cbe2Testimonial/>
     </>
   )
 }

@@ -10,7 +10,7 @@ import KochiStudents from "./Kochi/KochiStudents";
 import KochiOnline from "./Kochi/KochiOnline";
 import KochiOnline2 from "./Kochi/KochiOnline2";
 import Meta from '../Meta';
-import Cbe1Testi from './CBE-1/cbe1Testi';
+import KochiTestimonial from './Kochi/KochiTestimonial';
 
 function Kochi() {
   useEffect(() => {
@@ -29,7 +29,7 @@ function Kochi() {
       <KochiOnline2 />
       <KochiOnline />
       {/* <KochiStudents /> */}
-      <Cbe1Testi/>
+      <KochiTestimonial/>
     </>
   );
 }
