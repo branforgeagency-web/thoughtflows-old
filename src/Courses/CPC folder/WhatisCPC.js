@@ -60,7 +60,7 @@ const WhatisCPC = () => {
 
                         <h2>What is CPC?</h2>
                         <p >
-                            The <strong>Certified Professional Coder (CPC)</strong> credential, issued by the <strong>AAPC (American Academy of Professional Coders)</strong>, is the gold standard in medical coding certifications. This certification validates your expertise in assigning accurate <strong>CPT (Current Procedural Terminology), ICD-10-CM (Diagnosis Codes), and HCPCS Level II</strong> codes.
+                            The Certified Professional Coder (CPC) credential, issued by the AAPC (American Academy of Professional Coders), is the gold standard in medical coding certifications. This certification validates your expertise in assigning accurate CPT (Current Procedural Terminology), ICD-10-CM (Diagnosis Codes), and HCPCS Level II codes.
                         </p>
 
 
@@ -72,9 +72,8 @@ const WhatisCPC = () => {
                     </div>
 
 
-                    <div className=' col-span-1 md:col-span-6  flex justify-center items-center'>
-                        <img src={cdeo} alt='leftimg' width={400}
-                            height={300} />
+                    <div className=' col-span-1 md:col-span-6  h-[220px] md:h-[280px] w-[500px] overflow-hidden rounded-lg shadow-md'>
+                        <img src={cdeo} alt='leftimg' className='w-[500px] h-full object-cover' />
                     </div>
                 </div>
 
@@ -84,7 +83,7 @@ const WhatisCPC = () => {
 
                 <p>
 
-                    A <strong>Certified Professional Coder</strong> translates medical documentation into standardized codes used for billing and reporting purposes. CPC-certified professionals ensure accurate coding of services, which is critical for:
+                    A <span style={{ color: 'rgb(20 174 186)' }}>Certified Professional Coder</span> translates medical documentation into standardized codes used for billing and reporting purposes. CPC-certified professionals ensure accurate coding of services, which is critical for:
                 </p>
 
 

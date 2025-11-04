@@ -1,26 +1,21 @@
 import React from 'react';
-import surgeryImage from '../../images/Courses/cpcBanner.jpg';
-import surgerybanner from '../../images/Courses/cpcBanner.jpg'
 
 
 const moduleData = [
   {
     "id": 1,
     "title": "General Anesesthesia",
-    "description": "Understand the principles and coding requirements for general anesthesia in various medical procedures.",
-    "image": surgerybanner // Replace with the appropriate image if available
+    "description": "Understand the principles and coding requirements for general anesthesia in various medical procedures."
   },
   {
     "id": 2,
     "title": "Regional Anesesthesia (e.g., epidurals)",
-    "description": "Learn the coding guidelines for regional anesthesia techniques, including epidurals and nerve blocks.",
-    "image": surgerybanner // Replace with the appropriate image if available
+    "description": "Learn the coding guidelines for regional anesthesia techniques, including epidurals and nerve blocks."
   },
   {
     "id": 3,
     "title": "Monitored Anesesthesia Care (MAC)",
-    "description": "Gain proficiency in documenting and coding for Monitored Anesthesia Care (MAC) services in diverse medical settings.",
-    "image": surgerybanner // Replace with the appropriate image if available
+    "description": "Gain proficiency in documenting and coding for Monitored Anesthesia Care (MAC) services in diverse medical settings."
   }
 ];
 
@@ -39,16 +34,11 @@ const WhatIsAnesthesia = () => {
       <div className="flex flex-wrap justify-center gap-8">
         {moduleData.map(module => (
           <div key={module.id} className="relative group w-96">
-            {/* Image and Overlay */}
-            <img
-              src={module.image}
-              alt={module.title}
-              className="w-full h-56 object-cover rounded-lg transition-all ease-in-out duration-300 group-hover:opacity-80"
-            />
-            <div className="absolute top-0 left-0 w-full h-full bg-secondaryy opacity-80 rounded-lg transition-all ease-in-out duration-300 group-hover:opacity-100" />
+            <div className="w-full h-56 rounded-lg transition-colors ease-in-out duration-300 bg-[#15AEBB] group-hover:bg-[#097D8A]" />
+            <div className="absolute top-0 left-0 w-full h-full bg-secondaryy opacity-40 rounded-lg transition-all ease-in-out duration-300 group-hover:opacity-60 pointer-events-none" />
 
             {/* Content */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white px-10 w-full">
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white px-10 w-full z-10">
               <h3 className="text-xl sm:text-2xl font-semibold">
                 {module.title}
               </h3>
@@ -56,7 +46,7 @@ const WhatIsAnesthesia = () => {
             </div>
 
             {/* Card Hover Effect (Shadow and Elevation) */}
-            <div className="absolute inset-0 bg-transparent group-hover:bg-white rounded-lg shadow-lg group-hover:shadow-2xl transition-all ease-in-out duration-300" />
+            <div className="absolute inset-0 rounded-lg shadow-lg group-hover:shadow-2xl transition-shadow ease-in-out duration-300 pointer-events-none" />
           </div>
         ))}
         <p className="text-gray-600 mt-6 text-center">

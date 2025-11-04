@@ -23,8 +23,7 @@ const WhatisRHIT = () => {
         {/* Text Section */}
         <div className="lg:w-1/2 space-y-6">
           <p className="text-gray-700 text-base lg:text-md leading-relaxed mb-0 ">
-          The Registered Health Information Technician (RHIT) certification is a credential offered by the American Health Information Management Association (AHIMA) that signifies expertise in managing and securing patient health information. RHITs are skilled in organizing, analyzing, and managing health records and data, ensuring that they are accurate, complete, and secure. This certification is highly recognized in the healthcare industry and essential for those pursuing a career in health information management.          </p>
-        </div>
+          Registered Health Information Technician(RHIT) -certified professionals work in hospitals, but are also found in other healthcare setting including office-based physician practices, nursing homes, home health agencies, mental health facilities, and public health agencies. RHITs may also be employed in any organization that uses patient data or health information, such as pharmaceutical companies, law and insurance firms, and health product vendors.</p>        </div>
       </div>
 
       {/* Bento Box Section */}

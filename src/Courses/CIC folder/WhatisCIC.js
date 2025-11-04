@@ -113,10 +113,10 @@ function WhatisCIC() {
               <div className="pl-3 flex flex-col">
                 <h2 className="mb-3">CIC Exam Overview</h2>
                 <p>
-                  <strong>Duration:</strong> 5 hour
+                  <strong>Duration:</strong> 4 hour
                 </p>
                 <p>
-                  <strong>Format:</strong> 97 MCQ
+                  <strong>Format:</strong> 100 MARKS
                 </p>
                 <p>
                   <strong>Pass Requirement:</strong> 70% or higher

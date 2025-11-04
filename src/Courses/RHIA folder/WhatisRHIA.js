@@ -23,7 +23,7 @@ const WhatisRHIA = () => {
         {/* Text Section */}
         <div className="lg:w-1/2 space-y-6">
           <p className="text-gray-700 text-base lg:text-md leading-relaxed ">
-          The Registered Health Information Administrator (RHIA) certification, offered by the American Health Information Management Association (AHIMA), is a credential that qualifies professionals to manage and oversee health information systems in various healthcare settings. RHIAs are integral to maintaining the accuracy, privacy, and security of patient data while ensuring compliance with healthcare regulations. They are trained to work with health information technologies and optimize the flow of information within healthcare organizations.
+          Registered Health Information Administrator(RHIA) -certified professionals RHIAs are a critical link between care providers, payers, and patients. The RHIA has a comprehensive knowledge of medical, administrative, ethical, and legal requirements and standards related to healthcare delivery and privacy of protected patient information. RHIAs work in multiple settings in the healthcare industry, including hospitals, multispecialty clinics and physician practices, long-term care, mental health, and other ambulatory care settings. They can also work in non-patient care settings such as managed care and insurance companies, software vendors, consulting services, government agencies, education, and pharmaceutical companies.
           </p>
         </div>
       </div>

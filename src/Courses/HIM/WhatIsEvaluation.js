@@ -24,8 +24,7 @@ What is HIM (Healthcare Information Management)?
         {/* Text Section */}
         <div className="lg:w-1/2 space-y-6">
           <p className="text-gray-700 text-base lg:text-lg leading-relaxed">
-          A HIM is a healthcare professional responsible for analyzing and converting medical information from patient records into standardized alphanumeric codes. These codes are derived from internationally recognized classification systems and are essential for various functions, including healthcare billing, insurance claims processing, healthcare analytics, and maintaining accurate medical records. CCC ensure that medical diagnoses, treatments, and procedures are accurately represented through these codes.
-
+            The Healthcare Information Management(HIM) professional applies their knowledge and skills to create, acquire, analyse and/or manage information to meet the medical, legal, ethical and/or administrative requirements of the health care system. The HIMAA Health Information Manager (HIM) Competency Standards define the knowledge and skills required of a health information management professional. A health information management professional may apply some or all of the HIMAA Health Information Manager (HIM) Competency Standards in their daily professional practice. Two examples of health information professionals are Health Information Managers (HIM) and Clinical Coders (CC).
           </p>
         </div>
         

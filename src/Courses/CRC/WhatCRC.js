@@ -148,7 +148,7 @@ const WhatCRC = () => {
 
                                 <div>
                                     <p className=' border-b-2 border-black inline-block w-fit'><strong>Duration:</strong></p>
-                                    <p><strong>Total : </strong> 45-50 days</p>
+                                    <p><strong>Total : </strong> 45 days</p>
                                     <p><strong>Class Hours: </strong>2 hours per day</p>
                                     {/* <p><strong>Flexible Schedule : </strong>Suitable for working professionals</p> */}
 
@@ -168,7 +168,7 @@ const WhatCRC = () => {
 
                         <div className="flex  flex-col md:flex-row gap-10 p-4">
                             <div className="pl-3 flex flex-col">
-                                <h2 className="mb-3">CPC Exam Overview</h2>
+                                <h2 className="mb-3">CRC Exam Overview</h2>
                                 <p>
                                     <strong>Duration:</strong> 4 hour
                                 </p>

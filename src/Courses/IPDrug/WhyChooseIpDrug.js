@@ -55,7 +55,7 @@ const WhyCPC = () => {
   return (
     <>
       <div className='px-4'>
-        <h2 className="text-center mt-3">Why Take CPC Training from Thoughtflows?</h2>
+        <h2 className="text-center mt-3">Why Take CIDC Training from Thoughtflows?</h2>
       </div>
       <Row className="why-cpc px-4" xs={1} md={3}>
         {cardData.map((card) => (

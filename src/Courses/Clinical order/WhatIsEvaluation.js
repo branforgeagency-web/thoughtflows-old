@@ -6,7 +6,7 @@ const WhatIsEvaluation = () => {
     <div className="px-6 py-10 lg:py-16 lg:px-20 bg-gray-50 flex flex-col space-y-12">
       {/* Heading Section */}
       <h2 className="text-3xl lg:text-4xl font-semibold text-secondaryy text-center">
-        What is a CCC?{" "}
+        What is a Certified Cardiology Coder(CCC)?{" "}
       </h2>
 
       {/* Main Content Section */}
@@ -23,8 +23,8 @@ const WhatIsEvaluation = () => {
         {/* Text Section */}
         <div className="lg:w-1/2 space-y-6">
           <p className="text-gray-700 text-base lg:text-lg leading-relaxed">
-          A CCC is a healthcare professional responsible for analyzing and converting medical information from patient records into standardized alphanumeric codes. These codes are derived from internationally recognized classification systems and are essential for various functions, including healthcare billing, insurance claims processing, healthcare analytics, and maintaining accurate medical records. CCC ensure that medical diagnoses, treatments, and procedures are accurately represented through these codes.
-
+            Clinical Coders Convert(CCC) clinical information from patients' medical records into alphanumeric codes according to a health classification system. These codes form part of a data collection which is used for research, funding and healthcare planning.
+            Clinical coding involves reading patient information, abstracting key information from it, using the classification system to identify the right codes and entering them into a computer system. Clinical coding can involve liaising with clinical staff to clarify what has been documented. All public and private hospitals require clinical coding to occur.
           </p>
         </div>
       </div>

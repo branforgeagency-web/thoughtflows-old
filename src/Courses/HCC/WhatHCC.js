@@ -110,7 +110,7 @@ const  WhatCRC = () => {
                     <strong>Duration:</strong>
                   </p>
                   <p>
-                    <strong>Total : </strong> 60 days
+                    <strong>Total : </strong> 30 days
                   </p>
                   <p>
                     <strong>Class Hours: </strong>2 hours per day
@@ -120,7 +120,7 @@ const  WhatCRC = () => {
               </div>
             </div>
           </div>
-          <div className=" col-span-1 md:col-span-6 my-4   bg-white rounded-lg shadow-md  ">
+          {/* <div className=" col-span-1 md:col-span-6 my-4   bg-white rounded-lg shadow-md  ">
             <div className="flex  flex-col md:flex-row gap-10 p-4">
               <div className="pl-3 flex flex-col">
                 <h2 className="mb-3">HCC Exam Overview</h2>
@@ -141,7 +141,7 @@ const  WhatCRC = () => {
                 </div>
 
                 {/* Expanded Content */}
-              </div>
+              {/* </div>
 
               <img
                 src={hcc1}
@@ -161,7 +161,7 @@ const  WhatCRC = () => {
                 </ol>
               </div>
             )}
-          </div>
+          </div>  */}
         </div>
       </section>
     </div>

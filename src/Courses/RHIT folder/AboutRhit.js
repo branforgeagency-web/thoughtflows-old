@@ -11,8 +11,7 @@ const AboutRhit = () => {
       <div className="w-full lg:w-5/12 mb-4">
         <h2 className="text-3xl font-semibold mb-4 text-primaryy">About RHIT Coders</h2>
 <p className="text-gray-700 text-base lg:text-md leading-relaxed ">
-RHIT coders play a vital role in healthcare organizations by managing and safeguarding patient information. They are responsible for assigning standardized codes to diagnoses, treatments, and procedures for use in billing, research, and statistics. Their knowledge and skills ensure that healthcare providers comply with regulations and that patient records are maintained in a secure, efficient, and standardized way.
-<br></br>RHIT coders work in a variety of healthcare settings, including hospitals, private practices, insurance companies, and health information management departments.
+Professionals in job roles that require them to ensure the quality of medical/health records by verifying their completeness, accuracy, and proper entry into computer systems should consider pursuing the RHIT certification. The RHIT certification is also a good fit for professionals that often specialize in coding diagnoses and procedures in patient records for reimbursement and research.
 
 </p>
         <div className="overflow-x-auto">

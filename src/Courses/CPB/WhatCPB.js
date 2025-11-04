@@ -16,7 +16,7 @@ const WhatCRC = () => {
     ];
     const courseDetails = [
         {
-            heading: "About Certified Medical Billers",
+            heading: "About Certified Professional Biller",
             paragraph: "A Certified Professional Biller ensures accurate processing of medical claims to optimize healthcare revenue cycles. CPB-certified professionals play a crucial role in:",
             subPoints: [
                 " Insurance Claims Processing",

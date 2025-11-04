@@ -9,7 +9,7 @@ const AboutRhia = () => {
       <div className="w-full lg:w-1/12"></div>
 
       <div className="w-full lg:w-5/12 mb-4">
-        <h2 className="text-3xl font-semibold mb-4 text-primaryy">About IPDRG Coders</h2>
+        <h2 className="text-3xl font-semibold mb-4 text-primaryy">About RHIA Coders</h2>
         <p>
         RHIA-certified professionals possess expertise in:</p>
         <div className="overflow-x-auto">
@@ -23,31 +23,31 @@ const AboutRhia = () => {
               {/* row 1 */}
               <tr>
                 <th><p>1</p></th>
-                <td><p>Health Data Management: Ensuring data accuracy, completeness, and accessibility.</p></td>
+                <td><p>Data and Information Governance (17-20%).</p></td>
 
               </tr>
               {/* row 2 */}
               <tr>
                 <th><p>2</p></th>
-                <td><p>Healthcare Compliance: Overseeing adherence to regulations like HIPAA.</p></td>
+                <td><p>Compliance with Access, Use, and Disclosure of Health Information (15-18%).</p></td>
 
               </tr>
               {/* row 3 */}
               <tr>
                 <th><p>3</p></th>
-                <td><p>Information Governance: Managing the lifecycle of patient records and data.</p></td>
+                <td><p>.Data Analytics and Informatics (23-26%).</p></td>
 
               </tr>
               {/* row 4 */}
               <tr>
                 <th><p>4</p></th>
-                <td><p>Technology Integration: Using healthcare IT systems to streamline workflows.</p></td>
+                <td><p>Revenue Cycle Management (20-23%).</p></td>
 
               </tr>
               {/* row 5 */}
               <tr>
                 <th><p>5</p></th>
-                <td><p>Management and Leadership: Supervising teams and departments handling health information.</p></td>
+                <td><p>Management and Leadership (23-26%).</p></td>
 
               </tr>
             </tbody>

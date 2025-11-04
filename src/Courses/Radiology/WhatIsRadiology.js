@@ -1,38 +1,31 @@
 import React from 'react';
-import surgeryImage from '../../images/Courses/cpcBanner.jpg';
-import surgerybanner from '../../images/Courses/cpcBanner.jpg'
 
 
 const moduleData = [
   {
     "id": 1,
     "title": "X-rays",
-    "description": "Learn coding and documentation for radiographic imaging and its applications in medical diagnostics.",
-    "image": surgerybanner // Replace with the appropriate image if available
+    "description": "Learn coding and documentation for radiographic imaging and its applications in medical diagnostics."
   },
   {
     "id": 2,
     "title": "MRIs (Magnetic Resonance Imaging)",
-    "description": "Understand the coding protocols and guidelines for MRI procedures in radiology.",
-    "image": surgerybanner // Replace with the appropriate image if available
+    "description": "Understand the coding protocols and guidelines for MRI procedures in radiology."
   },
   {
     "id": 3,
     "title": "CT Scans (Computed Tomography)",
-    "description": "Master the coding intricacies for CT scans, including diagnostic and procedural applications.",
-    "image": surgerybanner // Replace with the appropriate image if available
+    "description": "Master the coding intricacies for CT scans, including diagnostic and procedural applications."
   },
   {
     "id": 4,
     "title": "Ultrasounds",
-    "description": "Develop proficiency in coding and documentation for ultrasound imaging techniques.",
-    "image": surgerybanner // Replace with the appropriate image if available
+    "description": "Develop proficiency in coding and documentation for ultrasound imaging techniques."
   },
   {
     "id": 5,
     "title": "Interventional Radiology Procedures",
-    "description": "Gain expertise in coding for interventional radiology procedures, including diagnostic and therapeutic techniques.",
-    "image": surgerybanner // Replace with the appropriate image if available
+    "description": "Gain expertise in coding for interventional radiology procedures, including diagnostic and therapeutic techniques."
   }
 ];
 
@@ -48,16 +41,11 @@ const WhatIsRadiology = () => {
       <div className="flex flex-wrap justify-center gap-8">
         {moduleData.map(module => (
           <div key={module.id} className="relative group w-96">
-            {/* Image and Overlay */}
-            <img
-              src={module.image}
-              alt={module.title}
-              className="w-full h-56 object-cover rounded-lg transition-all ease-in-out duration-300 group-hover:opacity-80"
-            />
-            <div className="absolute top-0 left-0 w-full h-full bg-secondaryy opacity-80 rounded-lg transition-all ease-in-out duration-300 group-hover:opacity-100" />
+            <div className="w-full h-56 rounded-lg transition-colors ease-in-out duration-300 bg-[#15AEBB] group-hover:bg-[#097D8A]" />
+            <div className="absolute top-0 left-0 w-full h-full bg-secondaryy opacity-40 rounded-lg transition-all ease-in-out duration-300 group-hover:opacity-60 pointer-events-none" />
 
             {/* Content */}
-            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white px-10 w-full">
+            <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-center text-white px-10 w-full z-10">
               <h3 className="text-xl sm:text-2xl font-semibold">
                 {module.title}
               </h3>
@@ -65,7 +53,7 @@ const WhatIsRadiology = () => {
             </div>
 
             {/* Card Hover Effect (Shadow and Elevation) */}
-            <div className="absolute inset-0 bg-transparent group-hover:bg-white rounded-lg shadow-lg group-hover:shadow-2xl transition-all ease-in-out duration-300" />
+            <div className="absolute inset-0 rounded-lg shadow-lg group-hover:shadow-2xl transition-shadow ease-in-out duration-300 pointer-events-none" />
           </div>
         ))}
         <p className="text-gray-600 mt-12 text-center">

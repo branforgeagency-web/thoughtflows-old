@@ -19,7 +19,7 @@ function EMBanner() {
                     </h2>
                     <div className='mt-10 flex justify-center'>
                         <h3 className='text-center text-3xl md:text-4xl font-semibold text-white bg-gradient-to-r from-blue-500 to-teal-400 inline-block px-6 py-2 rounded-lg shadow-lg transform hover:scale-105 transition-transform duration-300'>
-                        Healthcare Information Management
+                        Healthcare Information Management(HIM)
                         </h3>
                     </div>
                 </div>
