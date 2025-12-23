@@ -4,7 +4,7 @@ import { Row, Col } from 'react-bootstrap'
 import cpc from "../../images/Course Images/CPC.jpg"
 import cpc1 from "../../images/Course Images/CPC Exam Overview.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
-import cdeo from "../../images/Course Images/CDEO.jpg"
+import cpcWebp from "../../images/courseimage/Thought flows Img 1 CPC.webp"
 
 const WhatisCPC = () => {
 
@@ -51,7 +51,7 @@ const WhatisCPC = () => {
 
             <section className=' container mx-auto mt-5 px-4'>
 
-                <div className='grid grid-cols-1 md:grid-cols-12 gap-10'>
+                <div className='grid grid-cols-1 md:grid-cols-12 gap-10 items-center justify-items-center'>
 
 
 
@@ -72,8 +72,12 @@ const WhatisCPC = () => {
                     </div>
 
 
-                    <div className=' col-span-1 md:col-span-6  h-[220px] md:h-[280px] w-[500px] overflow-hidden rounded-lg shadow-md'>
-                        <img src={cdeo} alt='leftimg' className='w-[500px] h-full object-cover' />
+                    <div className=' col-span-1 md:col-span-6 w-full flex justify-center'>
+                        <img
+                            src={cpcWebp}
+                            alt='leftimg'
+                            className='w-full h-[360px] md:h-[400px] object-contain'
+                        />
                     </div>
                 </div>
 

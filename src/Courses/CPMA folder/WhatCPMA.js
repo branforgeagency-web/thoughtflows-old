@@ -2,7 +2,7 @@
 import React, { useState } from 'react'
 import rightimg from '../../images/Group710.png'
 import { Row, Col } from 'react-bootstrap'
-import cpma from "../../images/Course Images/CPMA.jpg"
+import cpmaWebp from "../../images/courseimage/Thought flows Img 4 CPMA.webp"
 import cpma1 from "../../images/Course Images/CPMA1.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
 
@@ -51,11 +51,11 @@ const WhatCPMA = () => {
 
             <section className=' px-4 container mx-auto mt-5'>
 
-                <div className='grid grid-cols-1 md:grid-cols-12 gap-6 items-center'>
+                <div className='grid grid-cols-1 md:grid-cols-12 gap-10 items-center justify-items-center'>
 
 
 
-                    <div className=' col-span-1 md:col-span-6  '>
+                    <div className=' col-span-1 md:col-span-6 order-2 md:order-2 '>
                        
 
 
@@ -73,9 +73,12 @@ const WhatCPMA = () => {
                     </div>
 
 
-                    <div className=' col-span-1 md:col-span-6  '>
-                        <img src={cpma} alt='leftimg' width={500}
-                            height={500} />
+                    <div className=' col-span-1 md:col-span-6 w-full flex justify-center order-1 md:order-1'>
+                        <img
+                            src={cpmaWebp}
+                            alt='leftimg'
+                            className='w-full h-[360px] md:h-[400px] object-contain'
+                        />
                     </div>
                 </div>
 

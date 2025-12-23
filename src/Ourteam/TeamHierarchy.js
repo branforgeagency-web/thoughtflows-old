@@ -264,7 +264,7 @@ const teamMemberData = [
   { "name": "Sreenath Reddy", "role": "TECHNICAL AND MARKETING EXECUTIVE", "phone": "63058 39325", "email": "sreenathr@thoghtflows.in", "Branch": "", "image": Sreenath },
 
   { "name": "Manoj Kumar", "role": "MANAGEMENT INFORMATION SYSTEM EXECUTIVE", "phone": "76608 34401", "email": "manojkumar@thoughtflows.in", "Branch": "", "image": Manojs },
-  { "name": "Deva Dharshini", "role": "MANAGEMENT INFORMATION SYSTEM EXECUTIVE", "phone": "63800 99212", "email": "devadharshinis@thoughtflows.in", "Branch": "", "image": Deva },
+  // { "name": "Deva Dharshini", "role": "MANAGEMENT INFORMATION SYSTEM EXECUTIVE", "phone": "63800 99212", "email": "devadharshinis@thoughtflows.in", "Branch": "", "image": Deva },
   { "name": "Vishnupriya", "role": "MANAGEMENT INFORMATION SYSTEM EXECUTIVE", "phone": "93602 13843", "email": "vishnupriyav@thoughtflows.in", "Branch": "", "image": Vishnupriya },
 
 
@@ -291,7 +291,7 @@ const teamStructure = [
   { role: "HR EXECUTIVE", count: 29 },
   { role: "TALENT ACQUISITION EXECUTIVE", count: 5 },
   { role: "DIGITAL MARKETING EXECUTIVE", count: 9 },
-  { role: "MANAGEMENT INFORMATION SYSTEM EXECUTIVE", count: 3 },
+  { role: "MANAGEMENT INFORMATION SYSTEM EXECUTIVE", count: 2 },
   { role: "OUTDOOR MARKETING EXECUTIVE", count: 3 },
 
 ]
