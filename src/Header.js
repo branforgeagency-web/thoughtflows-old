@@ -3,7 +3,8 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import "./App.css";
-import logo from "./images/image2.png";
+// import logo from "./images/image2.png"; // Old logo
+import logo from "./images/ThoughtFlow Christmas Version 4 Revised Collection.png"; // Christmas logo
 
 const DropdownMenu = ({ isBranchPage }) => {
   const menuItems = {
@@ -37,9 +38,8 @@ const DropdownMenu = ({ isBranchPage }) => {
   return (
     <div className="relative inline-block">
       <div
-        className={`cursor-pointer md:!text-cyan-500 py-2 relative transition-all duration-300 hover:text-cyan-400 ${
-          isBranchPage() ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
-        }`}
+        className={`cursor-pointer md:!text-cyan-500 py-2 relative transition-all duration-300 hover:text-cyan-400 ${isBranchPage() ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+          }`}
         onMouseEnter={() => setOpenMainMenu("Branches")}
         onMouseLeave={() => {
           setOpenMainMenu(null);
@@ -120,13 +120,13 @@ const Header = () => {
 
   const location = useLocation();
   const isHome = location.pathname === '/';
-  
+
   // Check if current page is a branch page
   const isBranchPage = () => {
     const branchPaths = [
       '/kochi', '/trivandrum', '/hyderabad', '/ameerpet', '/dilsukhnagar',
-      '/tirupathi', '/trichy', '/salem', '/vizag', 
-      '/Medical-Coding-Excellence-at-Hopes', '/Top-Medical-Coding-Training-Saravanampatti', 
+      '/tirupathi', '/trichy', '/salem', '/vizag',
+      '/Medical-Coding-Excellence-at-Hopes', '/Top-Medical-Coding-Training-Saravanampatti',
       '/Premier-Medical-Coding-Institute-Gandhipuram', '/Medical-Coding-Academy-Kochi',
       '/Advanced-Medical-Coding-Tiruvandrum', '/Trusted-Medical-Coding-Ameerpet',
       '/Professional-Medical-Coding-Dilsukhnagar', '/Expert-Medical-Coding-Tirupathi',
@@ -135,13 +135,13 @@ const Header = () => {
     ];
     return branchPaths.includes(location.pathname);
   };
-  
+
   // Check if current page is a course page
   const isCoursePage = () => {
     const coursePaths = [
-      '/cpc', '/cic', '/coc', '/cpma', '/crc', '/cpb', '/cedc', '/cemc', 
-      '/cdeo', '/cdei', '/cppm', '/surgery', '/ed', '/em', '/radiology', 
-      '/anesthesia', '/ip-drg', '/hcc', '/ivr', '/ccs', '/ccs-p', '/rhia', 
+      '/cpc', '/cic', '/coc', '/cpma', '/crc', '/cpb', '/cedc', '/cemc',
+      '/cdeo', '/cdei', '/cppm', '/surgery', '/ed', '/em', '/radiology',
+      '/anesthesia', '/ip-drg', '/hcc', '/ivr', '/ccs', '/ccs-p', '/rhia',
       '/rhit', '/ccc', '/him'
     ];
     return coursePaths.includes(location.pathname);
@@ -255,13 +255,13 @@ const Header = () => {
       },
     ],
   };
- 
+
   return (
     <>
       <header className={` ${isHome ? 'glass-header' : 'glass-header'}`}>
         <nav className="navbar ">
           {/* Logo */}
-          
+
 
           {/* Hamburger Menu - Only show on mobile/tablet */}
           {isMobile && (
@@ -291,28 +291,26 @@ const Header = () => {
               }}
               className={` ${isHome ? 'w-full' : 'w-full'}`}
             >
-               <div className="logo">
-            <a href="/">
-              <img src={logo} alt="Website Logo"  />
-            </a>
-          </div>
+              <div className="logo">
+                <a href="/">
+                  <img src={logo} alt="Website Logo" />
+                </a>
+              </div>
               <ul
-                className={`border-gray-300  sm:shadow md:shadow-none  menu ${
-                  mobileMenuOpen ? "open" : ""
-                }`}
+                className={`border-gray-300  sm:shadow md:shadow-none  menu ${mobileMenuOpen ? "open" : ""
+                  }`}
               >
-                
+
                 <li>
                   <div
                     style={{ fontWeight: "bold", cursor: "pointer" }}
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
-                    <Link 
-                      to="/" 
-                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${
-                        location.pathname === '/' ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
-                      }`}
+                    <Link
+                      to="/"
+                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${location.pathname === '/' ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                        }`}
                     >
                       Home
                     </Link>
@@ -324,11 +322,10 @@ const Header = () => {
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
-                    <Link 
-                      to="/about" 
-                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${
-                        location.pathname === '/about' ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
-                      }`}
+                    <Link
+                      to="/about"
+                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${location.pathname === '/about' ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                        }`}
                     >
                       About us
                     </Link>
@@ -344,9 +341,8 @@ const Header = () => {
                       isMobile &&
                       setSubmenuOpen(submenuOpen === "courses" ? "" : "courses")
                     }
-                    className={`py-2 whitespace-nowrap text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${
-                      isCoursePage() ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
-                    }`}
+                    className={`py-2 whitespace-nowrap text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${isCoursePage() ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                      }`}
                   >
                     Courses
                   </div>
@@ -354,9 +350,9 @@ const Header = () => {
                     <div className="mobile-submenu overflow-scroll text-center border-gray-300 shadow rounded">
                       {submenu.courses.map((item, index) => (
                         <div key={index} style={{ marginBottom: "20px" }}>
-                          <div style={{ 
-                            fontWeight: 600, 
-                            marginTop: "15px", 
+                          <div style={{
+                            fontWeight: 600,
+                            marginTop: "15px",
                             marginBottom: "10px",
                             fontSize: "16px",
                             color: "#1f2937"
@@ -367,7 +363,7 @@ const Header = () => {
                             {item.courseMenu.map((course, i) => (
                               <Link
                                 className="text-center text-cyan-500"
-                                style={{ 
+                                style={{
                                   color: "#06b6d4",
                                   position: "relative",
                                   transition: "color 0.3s ease",
@@ -419,11 +415,11 @@ const Header = () => {
                     style={{ fontWeight: "bold", cursor: "pointer" }}
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                   >
-                    <DropdownMenu isBranchPage={isBranchPage}/>
+                    <DropdownMenu isBranchPage={isBranchPage} />
                   </div>
                 </li>
                 <li className="multiple-dropdown-sub">
-                  
+
                   <div
                     style={{ fontWeight: "bold", cursor: "pointer", }}
                     onMouseEnter={() =>
@@ -435,9 +431,8 @@ const Header = () => {
                         submenuOpen === "branches" ? "" : "branches"
                       )
                     }
-                    className={`py-2 text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${
-                      isBranchPage() ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
-                    }`}
+                    className={`py-2 text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${isBranchPage() ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                      }`}
                   >
                     Branches
                   </div>
@@ -456,7 +451,7 @@ const Header = () => {
                           </div>
                           {item.courseMenu.map((branch, i) => (
                             <Link
-                               style={{ color: "#06b6d4" }}
+                              style={{ color: "#06b6d4" }}
                               key={i}
                               to={branch.path}
                               onClick={() => {
@@ -478,11 +473,10 @@ const Header = () => {
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
-                    <Link 
-                      to="/ourteam" 
-                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${
-                        location.pathname === '/ourteam' ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
-                      }`}
+                    <Link
+                      to="/ourteam"
+                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${location.pathname === '/ourteam' ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                        }`}
                     >
                       Our team
                     </Link>
@@ -494,17 +488,16 @@ const Header = () => {
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
-                    <Link 
-                      to="/contact" 
-                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${
-                        location.pathname === '/contact' ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
-                      }`}
+                    <Link
+                      to="/contact"
+                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${location.pathname === '/contact' ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                        }`}
                     >
                       Contact us
                     </Link>
                   </div>
                 </li>
-                
+
               </ul>
             </div>
 
@@ -531,8 +524,8 @@ const Header = () => {
                 {submenu[open.submenu]?.map((item, index) => (
                   <div
                     key={index}
-                    style={{ 
-                      margin: "10px", 
+                    style={{
+                      margin: "10px",
                       textAlign: "center",
                       minWidth: "120px"
                     }}
@@ -554,8 +547,8 @@ const Header = () => {
                         item.courseMenu.map((branch, i) => (
                           <div
                             key={i}
-                            style={{ 
-                              padding: "8px 0", 
+                            style={{
+                              padding: "8px 0",
                               fontSize: "0.85rem",
                               borderBottom: "1px solid #f1f5f9"
                             }}
@@ -605,9 +598,9 @@ const Header = () => {
 
         </nav>
       </header>
-      
-        
-      
+
+
+
     </>
   );
 };

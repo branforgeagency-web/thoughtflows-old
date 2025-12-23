@@ -6,37 +6,37 @@ import cemc1 from "../../images/Course Images/CEMC1.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const WhatCRC = () => {
-    const coursePages = [
-      {
-          title: "Certified Evaluation and Management Coder (CEMC)",
-          question: "What is CEMC?",
-          answer1: "The Certified Evaluation and Management Coder (CEMC) credential, issued by the AAPC (American Academy of Professional Coders), is the gold standard in E/M coding.",
-          answer2: "This certification validates your expertise in coding for evaluation and management (E/M) services, documentation guidelines, and compliance with payer regulations. Earning the CEMC certification demonstrates proficiency in auditing and coding physician-patient encounters, ensuring accurate documentation and compliance with federal and state regulations. This certification is essential for professionals working in physician offices, hospitals, and healthcare organizations."
-      }
+  const coursePages = [
+    {
+      title: "Certified Evaluation and Management Coder (CEMC)",
+      question: "What is CEMC?",
+      answer1: "The Certified Evaluation and Management Coder (CEMC) credential, issued by the AAPC (American Academy of Professional Coders), is the gold standard in E/M coding.",
+      answer2: "This certification validates your expertise in coding for evaluation and management (E/M) services, documentation guidelines, and compliance with payer regulations. Earning the CEMC certification demonstrates proficiency in auditing and coding physician-patient encounters, ensuring accurate documentation and compliance with federal and state regulations. This certification is essential for professionals working in physician offices, hospitals, and healthcare organizations."
+    }
   ];
-    const courseDetails = [
-      {
-          heading: "About Certified Evaluation and Management Coders",
-          paragraph: "A Certified Evaluation and Management Coder ensures accurate coding of physician encounters to optimize reimbursement and compliance.",
-          subPoints: [
-              "Evaluation and Management Coding",
-              "Medical Record Auditing and Compliance",
-              "Optimizing Reimbursement through Proper Documentation"
-          ]
-      }
+  const courseDetails = [
+    {
+      heading: "About Certified Evaluation and Management Coders",
+      paragraph: "A Certified Evaluation and Management Coder ensures accurate coding of physician encounters to optimize reimbursement and compliance.",
+      subPoints: [
+        "Evaluation and Management Coding",
+        "Medical Record Auditing and Compliance",
+        "Optimizing Reimbursement through Proper Documentation"
+      ]
+    }
   ];
-  
-    const courseCategories = [
-        "TYPES OF INSURANCE",
-        "BILLING REGULATIONS",
-        "HIPAA & COMPLIANCE",
-        "REIMBURSEMENT & COLLECTIONS",
-        "BILLING",
-        "CODING",
-        "CASE ANALYSIS"
-    ];
-    
-    
+
+  const courseCategories = [
+    "TYPES OF INSURANCE",
+    "BILLING REGULATIONS",
+    "HIPAA & COMPLIANCE",
+    "REIMBURSEMENT & COLLECTIONS",
+    "BILLING",
+    "CODING",
+    "CASE ANALYSIS"
+  ];
+
+
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => {
@@ -45,7 +45,7 @@ const WhatCRC = () => {
   return (
     <div>
       <section className=" px-4 container mx-auto mt-5">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center justify-items-center">
           <div className=" col-span-1 md:col-span-6  ">
             {coursePages.map((page, index) => (
               <div key={index}>
@@ -57,8 +57,12 @@ const WhatCRC = () => {
             ))}
           </div>
 
-          <div className=" col-span-1 md:col-span-6  ">
-            <img src={cemc} alt="leftimg" width={450} height={450} />
+          <div className=' col-span-1 md:col-span-6 w-full flex justify-center'>
+            <img
+              src={cemc}
+              alt='leftimg'
+              className='w-full h-[360px] md:h-[400px] object-contain'
+            />
           </div>
         </div>
         {courseDetails.map((detail, index) => (
@@ -84,7 +88,7 @@ const WhatCRC = () => {
               <h2>Training Details</h2>
 
               <p>
-                <strong>Class Type: </strong>Online 
+                <strong>Class Type: </strong>Online
               </p>
               <div className=" flex flex-row gap-6">
                 <div>
@@ -152,9 +156,9 @@ const WhatCRC = () => {
             {isExpanded && (
               <div className=" space-y-2 list-disc pl-5 ">
                 <ol className="list-decimal">
-                    {courseCategories.map((category, index) => (
-                      <li key={index}>{category}</li>
-                    ))}
+                  {courseCategories.map((category, index) => (
+                    <li key={index}>{category}</li>
+                  ))}
                 </ol>
               </div>
             )}

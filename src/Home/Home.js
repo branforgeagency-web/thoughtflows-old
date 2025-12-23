@@ -9,7 +9,7 @@ import Coaching from "./Coaching";
 import GoogleRev from "./GoogleRev";
 import HomeBlog from "./HomeBlog";
 import Meta from "../Meta";
-import formimg from "../images/form-img.jpg";
+import formimg from "../images/Form Image 2.png";
 import FloatingIcons from "../FloatingIcons";
 import Companies from "./Companies";
 import { PopupContext } from "../context/PopupContext";
@@ -27,14 +27,14 @@ const Home = () => {
     email: '',
     phone: '',
     course: '',
-    
+
   });
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
     // Initialize EmailJS
     emailjs.init("KLhirNBaXDhIlDonK"); // You'll need to replace this with your actual EmailJS public key
-    
+
     // For production, use environment variables instead:
     // emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
 
@@ -54,7 +54,7 @@ const Home = () => {
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
-  
+
   const togglePopup = () => {
     setIsOpen(!isOpen);
     setShowPopup(false);
@@ -64,7 +64,7 @@ const Home = () => {
       email: '',
       phone: '',
       course: '',
-      
+
     });
     setSubmitStatus({ type: '', message: '' });
   };
@@ -109,7 +109,7 @@ const Home = () => {
         'template_vx3lkna', // Replace with your EmailJS template ID
         templateParams
       );
-      
+
       // For production, use environment variables:
       // const response = await emailjs.send(
       //   process.env.REACT_APP_EMAILJS_SERVICE_ID,
@@ -118,11 +118,11 @@ const Home = () => {
       // );
 
       console.log('Email sent successfully:', response);
-      setSubmitStatus({ 
-        type: 'success', 
-        message: 'Registration successful! We will contact you soon.' 
+      setSubmitStatus({
+        type: 'success',
+        message: 'Registration successful! We will contact you soon.'
       });
-      
+
       // Reset form after successful submission
       setTimeout(() => {
         togglePopup();
@@ -130,9 +130,9 @@ const Home = () => {
 
     } catch (error) {
       console.error('Failed to send email:', error);
-      setSubmitStatus({ 
-        type: 'error', 
-        message: 'Failed to submit registration. Please try again.' 
+      setSubmitStatus({
+        type: 'error',
+        message: 'Failed to submit registration. Please try again.'
       });
     } finally {
       setIsSubmitting(false);
@@ -250,14 +250,14 @@ const Home = () => {
                 style={{
                   display: "block",
                   width: "100%",
-                  height: window.innerWidth <= 768 ? "220px" : "100%",
+                  height: window.innerWidth <= 768 ? "250px" : "100%",
                   objectFit: "cover",
                 }}
               />
             </div>
 
             {/* Right side - Form */}
-            <div style={{ 
+            <div style={{
               flex: window.innerWidth <= 768 ? "none" : "1.2",
               padding: window.innerWidth <= 768 ? "24px 20px" : "40px",
               width: "100%",
@@ -268,9 +268,9 @@ const Home = () => {
               overflow: windowWidth <= 1024 ? "visible" : "visible",
               minHeight: windowWidth <= 1024 ? "auto" : "auto",
             }}>
-            
-            {/* Form Content - Shared between desktop and mobile/tablet */}
-            {/* Header */}
+
+              {/* Form Content - Shared between desktop and mobile/tablet */}
+              {/* Header */}
               <div style={{ marginBottom: windowWidth <= 768 ? "20px" : "25px", textAlign: "center" }}>
                 <h2 style={{
                   fontSize: windowWidth <= 768 ? "22px" : "28px",

@@ -5,38 +5,38 @@ import cdeo from "../../images/Course Images/CDEO.jpg"
 import cdeo1 from "../../images/Course Images/CDEO1.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const  WhatCRC = () => {
-    const coursePages = [
-      {
-          title: "CDEO - Certified Documentation Expert Outpatient",
-          question: "What is CDEO?",
-          answer1: "The Certified Documentation Expert Outpatient (CDEO) credential, issued by the AAPC (American Academy of Professional Coders), is the gold standard in outpatient clinical documentation.",
-          answer2: "This certification validates expertise in medical record review, compliance, and clinical documentation improvement (CDI) for outpatient services. It demonstrates proficiency in auditing medical records, identifying documentation gaps, ensuring compliance with federal and payer regulations, and optimizing reimbursement for outpatient services. It is essential for professionals working in physician offices, hospitals, and outpatient healthcare organizations."
-      }
-  ];
-    const courseDetails = [
-      {
-        heading: "About Certified Documentation Experts Outpatient",
-        paragraph: "A Certified Documentation Expert Outpatient ensures that medical records accurately reflect patient care, supporting medical necessity and appropriate coding.",
-        subPoints: [
-            " Outpatient Clinical Documentation Improvement (CDI)",
-            " Medical Record Auditing and Compliance",
-            " Risk Adjustment and Reimbursement Optimization"
-        ]
+const WhatCRC = () => {
+  const coursePages = [
+    {
+      title: "CDEO - Certified Documentation Expert Outpatient",
+      question: "What is CDEO?",
+      answer1: "The Certified Documentation Expert Outpatient (CDEO) credential, issued by the AAPC (American Academy of Professional Coders), is the gold standard in outpatient clinical documentation.",
+      answer2: "This certification validates expertise in medical record review, compliance, and clinical documentation improvement (CDI) for outpatient services. It demonstrates proficiency in auditing medical records, identifying documentation gaps, ensuring compliance with federal and payer regulations, and optimizing reimbursement for outpatient services. It is essential for professionals working in physician offices, hospitals, and outpatient healthcare organizations."
     }
   ];
-  
-    const courseCategories = [
-        "TYPES OF INSURANCE",
-        "BILLING REGULATIONS",
-        "HIPAA & COMPLIANCE",
-        "REIMBURSEMENT & COLLECTIONS",
-        "BILLING",
-        "CODING",
-        "CASE ANALYSIS"
-    ];
-    
-    
+  const courseDetails = [
+    {
+      heading: "About Certified Documentation Experts Outpatient",
+      paragraph: "A Certified Documentation Expert Outpatient ensures that medical records accurately reflect patient care, supporting medical necessity and appropriate coding.",
+      subPoints: [
+        " Outpatient Clinical Documentation Improvement (CDI)",
+        " Medical Record Auditing and Compliance",
+        " Risk Adjustment and Reimbursement Optimization"
+      ]
+    }
+  ];
+
+  const courseCategories = [
+    "TYPES OF INSURANCE",
+    "BILLING REGULATIONS",
+    "HIPAA & COMPLIANCE",
+    "REIMBURSEMENT & COLLECTIONS",
+    "BILLING",
+    "CODING",
+    "CASE ANALYSIS"
+  ];
+
+
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => {
@@ -45,7 +45,7 @@ const  WhatCRC = () => {
   return (
     <div>
       <section className=" px-4 container mx-auto mt-5">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center justify-items-center">
           <div className=" col-span-1 md:col-span-6  ">
             {coursePages.map((page, index) => (
               <div key={index}>
@@ -57,8 +57,12 @@ const  WhatCRC = () => {
             ))}
           </div>
 
-          <div className=" col-span-1 md:col-span-6  ">
-            <img src={cdeo} alt="leftimg" width={450} height={450} />
+          <div className=' col-span-1 md:col-span-6 w-full flex justify-center'>
+            <img
+              src={cdeo}
+              alt='leftimg'
+              className='w-full h-[360px] md:h-[400px] object-contain'
+            />
           </div>
         </div>
         {courseDetails.map((detail, index) => (
@@ -84,7 +88,7 @@ const  WhatCRC = () => {
               <h2>Training Details</h2>
 
               <p>
-                <strong>Class Type: </strong>Online 
+                <strong>Class Type: </strong>Online
               </p>
               <div className=" flex flex-row gap-6">
                 <div>
@@ -141,7 +145,7 @@ const  WhatCRC = () => {
               </div>
 
               <img
-                  src={cdeo1}
+                src={cdeo1}
                 alt="Car"
                 width={200}
                 height={200}
@@ -152,9 +156,9 @@ const  WhatCRC = () => {
             {isExpanded && (
               <div className=" space-y-2 list-disc pl-5 ">
                 <ol className="list-decimal">
-                    {courseCategories.map((category, index) => (
-                      <li key={index}>{category}</li>
-                    ))}
+                  {courseCategories.map((category, index) => (
+                    <li key={index}>{category}</li>
+                  ))}
                 </ol>
               </div>
             )}

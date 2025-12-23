@@ -6,36 +6,36 @@ import cpb1 from "../../images/Course Images/CPB1.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const WhatCRC = () => {
-    const coursePages = [
-        {
-            title: "CPB - Certified Professional Biller",
-            question: "What is CPB?",
-            answer1: "The Certified Professional Biller (CPB) credential, issued by the AAPC (American Academy of Professional Coders), is the gold standard in medical billing certifications. This certification validates your expertise in healthcare claims processing, payer policies, revenue cycle management, and compliance with federal regulations.",
-            answer2:"Earning the CPB certification demonstrates proficiency in handling insurance claims, reimbursements, billing processes, and regulatory guidelines, making it essential for working in physician offices, hospitals, and healthcare organizations.",
-        }
-    ];
-    const courseDetails = [
-        {
-            heading: "About Certified Professional Biller",
-            paragraph: "A Certified Professional Biller ensures accurate processing of medical claims to optimize healthcare revenue cycles. CPB-certified professionals play a crucial role in:",
-            subPoints: [
-                " Insurance Claims Processing",
-                "Medical Billing Compliance",
-                " Revenue Cycle Optimization"
-            ]
-        }
-    ];
-    const courseCategories = [
-        "TYPES OF INSURANCE",
-        "BILLING REGULATIONS",
-        "HIPAA & COMPLIANCE",
-        "REIMBURSEMENT & COLLECTIONS",
-        "BILLING",
-        "CODING",
-        "CASE ANALYSIS"
-    ];
-    
-    
+  const coursePages = [
+    {
+      title: "CPB - Certified Professional Biller",
+      question: "What is CPB?",
+      answer1: "The Certified Professional Biller (CPB) credential, issued by the AAPC (American Academy of Professional Coders), is the gold standard in medical billing certifications. This certification validates your expertise in healthcare claims processing, payer policies, revenue cycle management, and compliance with federal regulations.",
+      answer2: "Earning the CPB certification demonstrates proficiency in handling insurance claims, reimbursements, billing processes, and regulatory guidelines, making it essential for working in physician offices, hospitals, and healthcare organizations.",
+    }
+  ];
+  const courseDetails = [
+    {
+      heading: "About Certified Professional Biller",
+      paragraph: "A Certified Professional Biller ensures accurate processing of medical claims to optimize healthcare revenue cycles. CPB-certified professionals play a crucial role in:",
+      subPoints: [
+        " Insurance Claims Processing",
+        "Medical Billing Compliance",
+        " Revenue Cycle Optimization"
+      ]
+    }
+  ];
+  const courseCategories = [
+    "TYPES OF INSURANCE",
+    "BILLING REGULATIONS",
+    "HIPAA & COMPLIANCE",
+    "REIMBURSEMENT & COLLECTIONS",
+    "BILLING",
+    "CODING",
+    "CASE ANALYSIS"
+  ];
+
+
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => {
@@ -76,7 +76,7 @@ const WhatCRC = () => {
             </Row > */}
 
       <section className=" px-4 container mx-auto mt-5">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center justify-items-center">
           <div className=" col-span-1 md:col-span-6  ">
             {coursePages.map((page, index) => (
               <div key={index}>
@@ -88,8 +88,12 @@ const WhatCRC = () => {
             ))}
           </div>
 
-          <div className=" col-span-1 md:col-span-6  ">
-            <img src={cpb} alt="leftimg" width={450} height={400} />
+          <div className=' col-span-1 md:col-span-6 w-full flex justify-center'>
+            <img
+              src={cpb}
+              alt='leftimg'
+              className='w-full h-[360px] md:h-[400px] object-contain'
+            />
           </div>
         </div>
 
@@ -145,7 +149,7 @@ const WhatCRC = () => {
               <h2>Training Details</h2>
 
               <p>
-                <strong>Class Type: </strong>Online 
+                <strong>Class Type: </strong>Online
               </p>
               <div className=" flex flex-row gap-6">
                 <div>
@@ -213,9 +217,9 @@ const WhatCRC = () => {
             {isExpanded && (
               <div className=" space-y-2 list-disc pl-5 ">
                 <ol className="list-decimal">
-                    {courseCategories.map((category, index) => (
-                      <li key={index}>{category}</li>
-                    ))}
+                  {courseCategories.map((category, index) => (
+                    <li key={index}>{category}</li>
+                  ))}
                 </ol>
               </div>
             )}
