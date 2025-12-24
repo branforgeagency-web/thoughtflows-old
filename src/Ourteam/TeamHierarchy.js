@@ -127,7 +127,7 @@ import SathyaSriVaishnavi from "../images/Profile images/blazer pic/Sathya sree 
 import Chithra from "../images/Profile images/blazer pic/Chithra - Trainer.jpg"
 import SherlinRuth from "../images/Profile images/blazer pic/Sherlin Ruth - HR Executive.png"
 import Santhosh from "../images/Profile images/blazer pic/Santhosh - DIGITAL MARKETING EXECUTIVE.png"
-import kiruthika from "../images/Form Image 2.png"
+import kiruthika from "../images/Profile images/blazer pic/kiruthika D.png"
 const profileImages = [
   BalaMurali, Banumathy, Kalai, Kalaimathi, Kanchana, Kartheeswari, Karthik, Karthika, Keerthika, Kiruthika, Kishore, Kowsikan,
   Logeshwaran, Lokesh, Madhumitha, Manoj, Mohamed, Mounika, group2copy34, Pavithra, Peemuthannagari, group2copy37,

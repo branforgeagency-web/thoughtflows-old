@@ -1,45 +1,43 @@
 import React, { useState } from "react";
-import rightimg from "../../images/Group710.png";
-import { Row, Col } from "react-bootstrap";
-import hcc from "../../images/Course Images/What is HCC.jpg"
+import hcc from "../../images/courseimage/Hierarchical Condition Category.webp"
 import hcc1 from "../../images/Course Images/HCC Exam Overview.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const  WhatCRC = () => {
-    const coursePages = [
-      {
-          title: "HCC - Hierarchical Condition Category",
-          question: "What is HCC?",
-          answer1: "Hierarchical Condition Category (HCC) is a risk adjustment model used in healthcare to predict future healthcare costs for patients based on their medical conditions. Originally developed by the Centers for Medicare & Medicaid Services (CMS), the HCC model is widely used in value-based care programs to ensure appropriate reimbursement for providers treating high-risk patients.",
-          answer2: "HCC coding is crucial in identifying chronic and complex conditions, ensuring accurate risk adjustment calculations, and optimizing financial performance for healthcare organizations participating in Medicare Advantage, Affordable Care Act (ACA) Marketplace, and other risk-adjusted healthcare programs."
-      }
-  ];
-  
-    const courseDetails = [
-      {
-        heading: "About Hierarchical Condition Category Coding",
-        paragraph: "HCC coding plays a vital role in:",
-        subPoints: [
-            " Risk Adjustment and Reimbursement Accuracy",
-            " Compliance with Medicare and CMS Guidelines",
-            "Improving Patient Outcomes and Care Management",
-            " Revenue Optimization for Healthcare Organizations"
-        ]
+const WhatCRC = () => {
+  const coursePages = [
+    {
+      title: "HCC - Hierarchical Condition Category",
+      question: "What is HCC?",
+      answer1: "Hierarchical Condition Category (HCC) is a risk adjustment model used in healthcare to predict future healthcare costs for patients based on their medical conditions. Originally developed by the Centers for Medicare & Medicaid Services (CMS), the HCC model is widely used in value-based care programs to ensure appropriate reimbursement for providers treating high-risk patients.",
+      answer2: "HCC coding is crucial in identifying chronic and complex conditions, ensuring accurate risk adjustment calculations, and optimizing financial performance for healthcare organizations participating in Medicare Advantage, Affordable Care Act (ACA) Marketplace, and other risk-adjusted healthcare programs."
     }
-    
   ];
-  
-    const courseCategories = [
-      "HEALTH CARE BUSINESS PROCESSES",
-      "HEALTH CARE REFORM",
-      "COMPLIANCE",
-      "QUALITY IN HEALTH CARE",
-      "MEDICAL OFFICE ACCOUNTING",
-      "PHYSICIAN REIMBURSEMENT",
-      "HEALTH CARE RCM,ETC"
-    ];
-    
-    
+
+  const courseDetails = [
+    {
+      heading: "About Hierarchical Condition Category Coding",
+      paragraph: "HCC coding plays a vital role in:",
+      subPoints: [
+        " Risk Adjustment and Reimbursement Accuracy",
+        " Compliance with Medicare and CMS Guidelines",
+        "Improving Patient Outcomes and Care Management",
+        " Revenue Optimization for Healthcare Organizations"
+      ]
+    }
+
+  ];
+
+  const courseCategories = [
+    "HEALTH CARE BUSINESS PROCESSES",
+    "HEALTH CARE REFORM",
+    "COMPLIANCE",
+    "QUALITY IN HEALTH CARE",
+    "MEDICAL OFFICE ACCOUNTING",
+    "PHYSICIAN REIMBURSEMENT",
+    "HEALTH CARE RCM,ETC"
+  ];
+
+
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => {
@@ -48,7 +46,7 @@ const  WhatCRC = () => {
   return (
     <div>
       <section className=" px-4 container mx-auto mt-5">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-5 items-center justify-items-center">
           <div className=" col-span-1 md:col-span-6  ">
             {coursePages.map((page, index) => (
               <div key={index}>
@@ -60,8 +58,8 @@ const  WhatCRC = () => {
             ))}
           </div>
 
-          <div className=" col-span-1 md:col-span-6  ">
-            <img src={hcc} alt="leftimg" width={450} height={450} />
+          <div className=" col-span-1 md:col-span-6 w-full flex justify-center">
+            <img src={hcc} alt="leftimg" className='w-full h-[360px] md:h-[400px] object-contain' />
           </div>
         </div>
         {courseDetails.map((detail, index) => (
@@ -87,7 +85,7 @@ const  WhatCRC = () => {
               <h2>Training Details</h2>
 
               <p>
-                <strong>Class Type: </strong>Online 
+                <strong>Class Type: </strong>Online
               </p>
               <div className=" flex flex-row gap-6">
                 <div>
@@ -141,7 +139,7 @@ const  WhatCRC = () => {
                 </div>
 
                 {/* Expanded Content */}
-              {/* </div>
+          {/* </div>
 
               <img
                 src={hcc1}

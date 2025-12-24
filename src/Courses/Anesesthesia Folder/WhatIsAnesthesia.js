@@ -1,37 +1,47 @@
 import React from 'react';
-
+import anesthesiaImg from "../../images/courseimage/Anesesthesia.webp";
 
 const moduleData = [
   {
     "id": 1,
-    "title": "General Anesesthesia",
+    "title": "General Anesthesia",
     "description": "Understand the principles and coding requirements for general anesthesia in various medical procedures."
   },
   {
     "id": 2,
-    "title": "Regional Anesesthesia (e.g., epidurals)",
+    "title": "Regional Anesthesia (e.g., epidurals)",
     "description": "Learn the coding guidelines for regional anesthesia techniques, including epidurals and nerve blocks."
   },
   {
     "id": 3,
-    "title": "Monitored Anesesthesia Care (MAC)",
+    "title": "Monitored Anesthesia Care (MAC)",
     "description": "Gain proficiency in documenting and coding for Monitored Anesthesia Care (MAC) services in diverse medical settings."
   }
 ];
 
-
 const WhatIsAnesthesia = () => {
   return (
-    <div className="flex-col justify-center items-center px-8 sm:px-16 lg:px-32 py-10">
-      <h2 className="text-3xl font-semibold py-6 text-center text-primaryy">What is Anesesthesia Coding?</h2>
-      <p className="text-gray-600 mb-12 text-center">
-      Anesesthesia coding involves the precise assignment of CPT, ICD-10-CM, and HCPCS Level II codes to anesthesia services provided during surgical procedures, pain management, and other medical interventions. Accurate anesthesia coding is crucial for ensuring appropriate reimbursement, reducing denials, and maintaining compliance with healthcare regulations.
-      </p>
-      <p className="text-gray-600 mb-12 text-center">
-      Anesesthesia coders are responsible for documenting various types of anesthesia, including:
-      </p>
+    <div className='container mx-auto mt-5 px-4'>
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center justify-items-center">
+        <div className=" col-span-1 md:col-span-6  ">
+          <h2 className="text-3xl font-semibold py-6 text-primaryy">What is Anesthesia Coding?</h2>
+          <p className="text-gray-600 mb-6 ">
+            Anesthesia coding involves the precise assignment of CPT, ICD-10-CM, and HCPCS Level II codes to anesthesia services provided during surgical procedures, pain management, and other medical interventions. Accurate anesthesia coding is crucial for ensuring appropriate reimbursement, reducing denials, and maintaining compliance with healthcare regulations.
+          </p>
+          <p className="text-gray-600 mb-6 ">
+            Anesthesia coders are responsible for documenting various types of anesthesia, including:
+          </p>
+        </div>
+        <div className=' col-span-1 md:col-span-6 w-full flex justify-center'>
+          <img
+            src={anesthesiaImg}
+            alt='Anesthesia Coding'
+            className='w-full h-[360px] md:h-[400px] object-contain'
+          />
+        </div>
+      </div>
 
-      <div className="flex flex-wrap justify-center gap-8">
+      <div className="flex flex-wrap justify-center gap-8 py-10">
         {moduleData.map(module => (
           <div key={module.id} className="relative group w-96">
             <div className="w-full h-56 rounded-lg transition-colors ease-in-out duration-300 bg-[#15AEBB] group-hover:bg-[#097D8A]" />
@@ -49,7 +59,7 @@ const WhatIsAnesthesia = () => {
             <div className="absolute inset-0 rounded-lg shadow-lg group-hover:shadow-2xl transition-shadow ease-in-out duration-300 pointer-events-none" />
           </div>
         ))}
-        <p className="text-gray-600 mt-6 text-center">
+        <p className="text-gray-600 mt-6 text-center w-full">
           This specialization requires attention to detail, understanding anesthesia time calculations, and applying modifiers accurately.
         </p>
       </div>

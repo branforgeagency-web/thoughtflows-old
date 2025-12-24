@@ -1,21 +1,19 @@
 import React, { useState } from "react";
-import rightimg from "../../images/Group710.png";
-import { Row, Col } from "react-bootstrap";
-import ivr from "../../images/Course Images/What is IVR.jpg"
+import ivr from "../../images/courseimage/IVR-Interventional Radiology.webp"
 import ivr1 from "../../images/Course Images/IVR Exam Overview.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const  WhatCRC = () => {
-    const coursePages =[
-      {
-          title: "IVR-Interventional Radiology",
-          question: "What is IVR?",
-          answer1: "Interventional Radiology (IVR) is a specialized branch of radiology that uses minimally invasive, image-guided procedures to diagnose and treat a variety of medical conditions.",
-          answer2: "These procedures reduce the need for open surgery, lower risk, and enhance patient recovery. IVR professionals play a crucial role in performing and coding complex procedures, ensuring accurate documentation, and optimizing reimbursement.This field is essential for professionals working in hospitals, outpatient radiology centers, and medical billing organizations that require specialized knowledge in radiology coding andcompliance."
-      }
+const WhatCRC = () => {
+  const coursePages = [
+    {
+      title: "IVR-Interventional Radiology",
+      question: "What is IVR?",
+      answer1: "Interventional Radiology (IVR) is a specialized branch of radiology that uses minimally invasive, image-guided procedures to diagnose and treat a variety of medical conditions.",
+      answer2: "These procedures reduce the need for open surgery, lower risk, and enhance patient recovery. IVR professionals play a crucial role in performing and coding complex procedures, ensuring accurate documentation, and optimizing reimbursement.This field is essential for professionals working in hospitals, outpatient radiology centers, and medical billing organizations that require specialized knowledge in radiology coding andcompliance."
+    }
   ];
-  
-  
+
+
   //   const courseDetails = [
   //     {
   //       heading: "About Interventional Radiology Professionals",
@@ -27,20 +25,20 @@ const  WhatCRC = () => {
   //           " Revenue Cycle and Reimbursement Optimization"
   //       ]
   //   }
-    
+
   // ];
-  
-    const courseCategories = [
-      "Diagnostic angiography",
-      "HEALTH CARE REFORM",
-      "COMPLIANCE",
-      "QUALITY IN HEALTH CARE",
-      "MEDICAL OFFICE ACCOUNTING",
-      "PHYSICIAN REIMBURSEMENT",
-      "HEALTH CARE RCM,ETC"
-    ];
-    
-    
+
+  const courseCategories = [
+    "Diagnostic angiography",
+    "HEALTH CARE REFORM",
+    "COMPLIANCE",
+    "QUALITY IN HEALTH CARE",
+    "MEDICAL OFFICE ACCOUNTING",
+    "PHYSICIAN REIMBURSEMENT",
+    "HEALTH CARE RCM,ETC"
+  ];
+
+
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => {
@@ -49,7 +47,7 @@ const  WhatCRC = () => {
   return (
     <div>
       <section className=" px-4 container mx-auto mt-5">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center justify-items-center">
           <div className=" col-span-1 md:col-span-6  ">
             {coursePages.map((page, index) => (
               <div key={index}>
@@ -61,8 +59,8 @@ const  WhatCRC = () => {
             ))}
           </div>
 
-          <div className=" col-span-1 md:col-span-6  ">
-            <img src={ivr} alt="leftimg" width={450} height={450} />
+          <div className=" col-span-1 md:col-span-6 w-full flex justify-center">
+            <img src={ivr} alt="leftimg" className='w-full h-[360px] md:h-[400px] object-contain' />
           </div>
         </div>
         {/* {courseDetails.map((detail, index) => (
@@ -88,7 +86,7 @@ const  WhatCRC = () => {
               <h2>Training Details</h2>
 
               <p>
-                <strong>Class Type: </strong>Online 
+                <strong>Class Type: </strong>Online
               </p>
               <div className=" flex flex-row gap-6">
                 <div>

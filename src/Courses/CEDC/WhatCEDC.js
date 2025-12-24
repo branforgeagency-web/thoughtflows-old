@@ -1,41 +1,39 @@
 import React, { useState } from "react";
-import rightimg from "../../images/Group710.png";
-import { Row, Col } from "react-bootstrap";
-import cedc from "../../images/Course Images/CEDE.jpg"
-import cedc1 from "../../images/Course Images/CEDE1.jpg" 
+import cedc from "../../images/courseimage/Emergency.webp"
+import cedc1 from "../../images/Course Images/CEDE1.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
 
 const WhatCRC = () => {
-    const coursePages =  [
-      {
-          title: "Certified Emergency Department Coder (CEDC)",
-          question: "What is CEDC?",
-          answer1: "The Certified Emergency Department Coder (CEDC) credential, issued by the AAPC (American Academy of Professional Coders), is the gold standard in emergency department medical coding.",
-          answer2: "This certification validates your expertise in coding for emergency department services, including evaluation and management (E/M) coding, procedural coding, and compliance with payer regulations. Earning the CEDC certification demonstrates proficiency in handling emergency medical coding, documentation requirements, and compliance with federal and state regulations, making it essential for working in hospital emergency departments and urgent care centers."
-      }
+  const coursePages = [
+    {
+      title: "Certified Emergency Department Coder (CEDC)",
+      question: "What is CEDC?",
+      answer1: "The Certified Emergency Department Coder (CEDC) credential, issued by the AAPC (American Academy of Professional Coders), is the gold standard in emergency department medical coding.",
+      answer2: "This certification validates your expertise in coding for emergency department services, including evaluation and management (E/M) coding, procedural coding, and compliance with payer regulations. Earning the CEDC certification demonstrates proficiency in handling emergency medical coding, documentation requirements, and compliance with federal and state regulations, making it essential for working in hospital emergency departments and urgent care centers."
+    }
   ];
-    const courseDetails = [
-        {
-          heading: "About Certified Emergency Department Coders",
-          paragraph: "A Certified Emergency Department Coder ensures accurate coding of emergency department encounters to optimize reimbursement and compliance.",
-          subPoints: [
-              " Emergency Department E/M Coding",
-              " Accurate Procedure and Diagnosis Coding",
-              " Compliance with Payer Guidelines"
-            ]
-        }
-    ];
-    const courseCategories = [
-        "TYPES OF INSURANCE",
-        "BILLING REGULATIONS",
-        "HIPAA & COMPLIANCE",
-        "REIMBURSEMENT & COLLECTIONS",
-        "BILLING",
-        "CODING",
-        "CASE ANALYSIS"
-    ];
-    
-    
+  const courseDetails = [
+    {
+      heading: "About Certified Emergency Department Coders",
+      paragraph: "A Certified Emergency Department Coder ensures accurate coding of emergency department encounters to optimize reimbursement and compliance.",
+      subPoints: [
+        " Emergency Department E/M Coding",
+        " Accurate Procedure and Diagnosis Coding",
+        " Compliance with Payer Guidelines"
+      ]
+    }
+  ];
+  const courseCategories = [
+    "TYPES OF INSURANCE",
+    "BILLING REGULATIONS",
+    "HIPAA & COMPLIANCE",
+    "REIMBURSEMENT & COLLECTIONS",
+    "BILLING",
+    "CODING",
+    "CASE ANALYSIS"
+  ];
+
+
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => {
@@ -56,8 +54,8 @@ const WhatCRC = () => {
             ))}
           </div>
 
-          <div className=" col-span-1 md:col-span-6  ">
-            <img src={cedc} alt="leftimg" width={450} height={450} />
+          <div className=" col-span-1 md:col-span-6 w-full flex justify-center">
+            <img src={cedc} alt="leftimg" className='w-full h-[360px] md:h-[400px] object-contain' />
           </div>
         </div>
         {courseDetails.map((detail, index) => (
@@ -83,7 +81,7 @@ const WhatCRC = () => {
               <h2>Training Details</h2>
 
               <p>
-                <strong>Class Type: </strong>Online 
+                <strong>Class Type: </strong>Online
               </p>
               <div className=" flex flex-row gap-6">
                 <div>
@@ -151,9 +149,9 @@ const WhatCRC = () => {
             {isExpanded && (
               <div className=" space-y-2 list-disc pl-5 ">
                 <ol className="list-decimal">
-                    {courseCategories.map((category, index) => (
-                      <li key={index}>{category}</li>
-                    ))}
+                  {courseCategories.map((category, index) => (
+                    <li key={index}>{category}</li>
+                  ))}
                 </ol>
               </div>
             )}

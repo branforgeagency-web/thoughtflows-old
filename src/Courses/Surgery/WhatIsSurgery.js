@@ -1,30 +1,22 @@
 import React from 'react';
-import surgeryImage from '../../images/Courses/cpcBanner.jpg';
-import surgery from "../../images/Course Images/Surgery Coding.jpg"
+import surgery from "../../images/courseimage/Surgery.webp"
+
 const WhatIsSurgery = () => {
   return (
-    <div className="px-6 py-10 lg:py-16 lg:px-20 bg-gray-50 flex flex-col space-y-12">
-      {/* Heading Section */}
-      <h2 className="text-3xl lg:text-4xl font-semibold text-secondaryy text-center">
-        What is Surgery Coding?
-      </h2>
-
-      {/* Main Content Section */}
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center space-y-10 lg:space-y-0 gap-10 mb-4">
-        {/* Image Section */}
-        <div className="lg:w-1/2">
+    <div className='container mx-auto mt-5 px-4'>
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center justify-items-center mb-12">
+        <div className=" col-span-1 md:col-span-6  ">
+          <h2 className="text-3xl font-semibold mb-6 text-primaryy">What is Surgery Coding?</h2>
+          <p className="text-gray-600 mb-6 ">
+            Surgery coding is the process of assigning standardized medical codes to surgical procedures using classification systems like CPT (Current Procedural Terminology), ICD-10-CM (International Classification of Diseases, 10th Revision, Clinical Modification), and HCPCS Level II (Healthcare Common Procedure Coding System). These codes are essential for:
+          </p>
+        </div>
+        <div className=' col-span-1 md:col-span-6 w-full flex justify-center'>
           <img
             src={surgery}
             alt="Surgery Coding"
-            className="w-full h-60 object-cover rounded-xl shadow-md"
+            className="w-full h-[360px] md:h-[400px] object-contain"
           />
-        </div>
-
-        {/* Text Section */}
-        <div className="lg:w-1/2 space-y-6">
-          <p className="text-gray-700 text-base lg:text-lg leading-relaxed">
-            Surgery coding is the process of assigning standardized medical codes to surgical procedures using classification systems like CPT (Current Procedural Terminology), ICD-10-CM (International Classification of Diseases, 10th Revision, Clinical Modification), and HCPCS Level II (Healthcare Common Procedure Coding System). These codes are essential for:
-          </p>
         </div>
       </div>
 

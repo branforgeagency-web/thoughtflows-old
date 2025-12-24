@@ -1,4 +1,5 @@
 import React from 'react';
+import radiologyImg from "../../images/courseimage/Radiology.webp";
 
 
 const moduleData = [
@@ -32,11 +33,22 @@ const moduleData = [
 
 const WhatIsRadiology = () => {
   return (
-    <div className="flex-col justify-center items-center px-8 sm:px-16 lg:px-32 py-10">
-      <h2 className="text-3xl font-semibold py-6 text-center text-primaryy">What is Radiology Coding?</h2>
-      <p className="text-gray-600  text-center">
-        Radiology coding is the process of assigning precise CPT, ICD-10-CM, and HCPCS Level II codes to diagnostic imaging services. These services include:
-      </p>
+    <div className='container mx-auto mt-5 px-4'>
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center justify-items-center mb-12">
+        <div className=" col-span-1 md:col-span-6  ">
+          <h2 className="text-3xl font-semibold mb-6 text-primaryy">What is Radiology Coding?</h2>
+          <p className="text-gray-600 mb-6 ">
+            Radiology coding is the process of assigning precise CPT, ICD-10-CM, and HCPCS Level II codes to diagnostic imaging services. These services include:
+          </p>
+        </div>
+        <div className=' col-span-1 md:col-span-6 w-full flex justify-center'>
+          <img
+            src={radiologyImg}
+            alt='Radiology Coding'
+            className='w-full h-[360px] md:h-[400px] object-contain'
+          />
+        </div>
+      </div>
 
       <div className="flex flex-wrap justify-center gap-8">
         {moduleData.map(module => (

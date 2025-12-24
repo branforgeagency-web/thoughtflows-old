@@ -9,7 +9,7 @@ import Coaching from "./Coaching";
 import GoogleRev from "./GoogleRev";
 import HomeBlog from "./HomeBlog";
 import Meta from "../Meta";
-import formimg from "../images/Form Image 2.png";
+import formimg from "../images/courseimage/TF Image copy.webp";
 import FloatingIcons from "../FloatingIcons";
 import Companies from "./Companies";
 import { PopupContext } from "../context/PopupContext";
@@ -33,7 +33,7 @@ const Home = () => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
     // Initialize EmailJS
-    emailjs.init("KLhirNBaXDhIlDonK"); // You'll need to replace this with your actual EmailJS public key
+    // emailjs.init("KLhirNBaXDhIlDonK"); // You'll need to replace this with your actual EmailJS public key
 
     // For production, use environment variables instead:
     // emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
@@ -107,7 +107,8 @@ const Home = () => {
       const response = await emailjs.send(
         'service_2anzqj9', // Replace with your EmailJS service ID
         'template_vx3lkna', // Replace with your EmailJS template ID
-        templateParams
+        templateParams,
+        "KLhirNBaXDhIlDonK"
       );
 
       // For production, use environment variables:

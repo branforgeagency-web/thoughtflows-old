@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-import rightimg from "../../images/Group710.png";
-import { Row, Col } from "react-bootstrap";
-import cemc from "../../images/Course Images/CEMC.jpg"
+import cemc from "../../images/courseimage/Evaluation and Management.webp"
 import cemc1 from "../../images/Course Images/CEMC1.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
 
