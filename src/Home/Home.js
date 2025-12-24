@@ -241,18 +241,23 @@ const Home = () => {
             </button>
             {/* Left side - Image */}
             <div style={{
-              flex: window.innerWidth <= 768 ? "none" : "1",
-              width: window.innerWidth <= 768 ? "100%" : "45%",
-              display: "block",
+              flex: window.innerWidth <= 768 ? "none" : "1.2", // Increased flex for desktop
+              width: window.innerWidth <= 768 ? "100%" : "50%", // Increased width for desktop
+              display: window.innerWidth <= 768 ? "flex" : "block", // Flex for centering on mobile
+              justifyContent: "center",
+              alignItems: "center",
+              backgroundColor: window.innerWidth <= 768 ? "#f0f9ff" : "transparent", // Optional: slight background for mobile contrast
             }}>
               <img
                 src={formimg}
                 alt="Enquiry"
                 style={{
                   display: "block",
-                  width: "100%",
+                  width: window.innerWidth <= 768 ? "auto" : "100%", // Auto width on mobile to maintain aspect ratio
                   height: window.innerWidth <= 768 ? "250px" : "100%",
-                  objectFit: "cover",
+                  maxHeight: window.innerWidth <= 768 ? "250px" : "none",
+                  objectFit: window.innerWidth <= 768 ? "contain" : "cover", // Contain for mobile to show full image
+                  objectPosition: "center",
                 }}
               />
             </div>
