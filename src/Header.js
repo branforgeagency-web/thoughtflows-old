@@ -3,8 +3,8 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import "./App.css";
-// import logo from "./images/image2.png"; // Old logo
-import logo from "./images/ThoughtFlow Christmas Version 4 Revised Collection.png"; // Christmas logo
+// import logo from "./images/ThoughtFlow Christmas Version 4 Revised Collection.png"; // Christmas logo (temporarily removed)
+import logo from "./images/image2.png"; // Original logo (restored)
 
 const DropdownMenu = ({ isBranchPage }) => {
   const menuItems = {

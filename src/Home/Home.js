@@ -10,6 +10,7 @@ import GoogleRev from "./GoogleRev";
 import HomeBlog from "./HomeBlog";
 import Meta from "../Meta";
 import formimg from "../images/courseimage/TF Image copy.webp";
+import posterImg from "../images/poster tf.png";
 import FloatingIcons from "../FloatingIcons";
 import Companies from "./Companies";
 import { PopupContext } from "../context/PopupContext";
@@ -19,6 +20,8 @@ import emailjs from '@emailjs/browser';
 const Home = () => {
   const { isOpen, setIsOpen } = useContext(PopupContext);
   const [showPopup, setShowPopup] = useState(false);
+  const [showPosterPopup, setShowPosterPopup] = useState(false);
+  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -39,7 +42,7 @@ const Home = () => {
     // emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
 
     const timer = setTimeout(() => {
-      setShowPopup(true); // After 5 seconds, allow popup rendering
+      setShowPosterPopup(true); // After 5 seconds, show poster popup
     }, 5000);
 
     return () => clearTimeout(timer); // Cleanup timer on unmount
@@ -57,6 +60,34 @@ const Home = () => {
 
   const togglePopup = () => {
     setIsOpen(!isOpen);
+    setShowPopup(false);
+    setShowPosterPopup(false);
+    setShowRegistrationForm(false);
+    // Reset form and status when closing
+    setFormData({
+      name: '',
+      email: '',
+      phone: '',
+      course: '',
+
+    });
+    setSubmitStatus({ type: '', message: '' });
+  };
+
+  const closePosterPopup = () => {
+    setShowPosterPopup(false);
+  };
+
+  const openRegistrationForm = () => {
+    setShowPosterPopup(false);
+    setShowRegistrationForm(true);
+    setIsOpen(true);
+    setShowPopup(true);
+  };
+
+  const closeRegistrationForm = () => {
+    setShowRegistrationForm(false);
+    setIsOpen(false);
     setShowPopup(false);
     // Reset form and status when closing
     setFormData({
@@ -145,8 +176,8 @@ const Home = () => {
         title="Best Medical Coding Training Academy | Expert Coaching Institute"
         description="Get expert medical coding training at the best academy for comprehensive coaching. Start your career today!"
       />
-      {/* Popup Form */}
-      {showPopup && isOpen && (
+      {/* New Poster Popup */}
+      {showPosterPopup && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -168,7 +199,119 @@ const Home = () => {
           }}
           onClick={(e) => {
             if (e.target === e.currentTarget) {
-              togglePopup();
+              closePosterPopup();
+            }
+          }}
+        >
+          <motion.div
+            initial={{ scale: 0.9, opacity: 0 }}
+            animate={{ scale: 1, opacity: 1 }}
+            transition={{ type: "spring", stiffness: 300, damping: 25 }}
+            style={{
+              position: "relative",
+              maxWidth: windowWidth <= 768 ? "90%" : "700px",
+              width: "100%",
+            }}
+          >
+            {/* Close button */}
+            <button
+              className="close-button"
+              onClick={closePosterPopup}
+              style={{
+                position: "absolute",
+                right: "16px",
+                top: "16px",
+                background: "white",
+                border: "2px solid #f0f0f0",
+                borderRadius: "50%",
+                width: "36px",
+                height: "36px",
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "center",
+                fontSize: "18px",
+                cursor: "pointer",
+                color: "#666",
+                transition: "all 0.3s ease",
+                zIndex: 10,
+                fontWeight: "bold",
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.borderColor = "#00BBFA";
+                e.target.style.color = "#00BBFA";
+                e.target.style.transform = "rotate(90deg)";
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.borderColor = "#f0f0f0";
+                e.target.style.color = "#666";
+                e.target.style.transform = "rotate(0deg)";
+              }}
+            >
+              ×
+            </button>
+
+            {/* Poster Image */}
+            <img
+              src={posterImg}
+              alt="Poster"
+              style={{
+                width: "100%",
+                height: "auto",
+                borderRadius: "2%",
+                display: "block",
+              }}
+            />
+
+            {/* Contact Button */}
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={openRegistrationForm}
+              style={{
+                width: "100%",
+                marginTop: "20px",
+                padding: windowWidth <= 768 ? "12px 24px" : "14px 32px",
+                background: "#00BBFA",
+                color: "white",
+                border: "none",
+                borderRadius: "50px",
+                fontSize: windowWidth <= 768 ? "15px" : "16px",
+                fontWeight: "700",
+                cursor: "pointer",
+                boxShadow: "0 4px 15px rgba(0,187,250,0.3)",
+                transition: "all 0.3s ease",
+              }}
+            >
+              Contact
+            </motion.button>
+          </motion.div>
+        </motion.div>
+      )}
+
+      {/* Popup Form - TEMPORARILY COMMENTED OUT */}
+      {showRegistrationForm && showPopup && isOpen && (
+        <motion.div
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          className="popup-overlay"
+          style={{
+            position: "fixed",
+            top: 0,
+            left: 0,
+            width: "100%",
+            height: "100%",
+            backgroundColor: "rgba(0,0,0,0.85)",
+            backdropFilter: "blur(10px)",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            zIndex: 1000,
+            padding: "20px",
+          }}
+          onClick={(e) => {
+            if (e.target === e.currentTarget) {
+              closeRegistrationForm();
             }
           }}
         >
@@ -206,7 +349,7 @@ const Home = () => {
             {/* Close button */}
             <button
               className="close-button"
-              onClick={togglePopup}
+              onClick={closeRegistrationForm}
               style={{
                 position: "absolute",
                 right: "16px",
@@ -294,7 +437,7 @@ const Home = () => {
                   color: "#64748b",
                   fontWeight: "500",
                 }}>
-                  Fill in your details and we’ll reach out soon
+                  Fill in your details and we'll reach out soon
                 </p>
               </div>
 
