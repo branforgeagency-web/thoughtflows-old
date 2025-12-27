@@ -263,8 +263,9 @@ body {
 }
 
 .logo img {
-  height: 100px;
   width: 250px;
+  height: auto;
+  object-fit: contain;
 }
 
 .menu {
@@ -3480,8 +3481,9 @@ h1 {
   }
 
   .logo img {
-    height: 100%;
     width: 200px;
+    height: auto;
+    object-fit: contain;
   }
 
   .main-footer {
@@ -3650,8 +3652,9 @@ h1 {
   }
 
   .logo img {
-    height: 100%;
     width: 180px;
+    height: auto;
+    object-fit: contain;
   }
 
   .button-animation {

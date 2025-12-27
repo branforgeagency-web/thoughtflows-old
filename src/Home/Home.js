@@ -203,6 +203,46 @@ const Home = () => {
             }
           }}
         >
+          {/* Close button - positioned at top-right corner */}
+          <button
+            className="close-button"
+            onClick={closePosterPopup}
+            style={{
+              position: "absolute",
+              right: windowWidth <= 768 ? "20px" : "40px",
+              top: windowWidth <= 768 ? "20px" : "40px",
+              background: "white",
+              border: "2px solid #f0f0f0",
+              borderRadius: "50%",
+              width: windowWidth <= 768 ? "36px" : "44px",
+              height: windowWidth <= 768 ? "36px" : "44px",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              fontSize: windowWidth <= 768 ? "20px" : "24px",
+              cursor: "pointer",
+              color: "#666",
+              transition: "all 0.3s ease",
+              zIndex: 1001,
+              fontWeight: "bold",
+              boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
+            }}
+            onMouseEnter={(e) => {
+              e.target.style.borderColor = "#00BBFA";
+              e.target.style.color = "#00BBFA";
+              e.target.style.transform = "rotate(90deg) scale(1.1)";
+              e.target.style.boxShadow = "0 4px 12px rgba(0,187,250,0.3)";
+            }}
+            onMouseLeave={(e) => {
+              e.target.style.borderColor = "#f0f0f0";
+              e.target.style.color = "#666";
+              e.target.style.transform = "rotate(0deg) scale(1)";
+              e.target.style.boxShadow = "0 2px 8px rgba(0,0,0,0.15)";
+            }}
+          >
+            ×
+          </button>
+
           <motion.div
             initial={{ scale: 0.9, opacity: 0 }}
             animate={{ scale: 1, opacity: 1 }}
@@ -213,43 +253,6 @@ const Home = () => {
               width: "100%",
             }}
           >
-            {/* Close button */}
-            <button
-              className="close-button"
-              onClick={closePosterPopup}
-              style={{
-                position: "absolute",
-                right: "16px",
-                top: "16px",
-                background: "white",
-                border: "2px solid #f0f0f0",
-                borderRadius: "50%",
-                width: "36px",
-                height: "36px",
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                fontSize: "18px",
-                cursor: "pointer",
-                color: "#666",
-                transition: "all 0.3s ease",
-                zIndex: 10,
-                fontWeight: "bold",
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.borderColor = "#00BBFA";
-                e.target.style.color = "#00BBFA";
-                e.target.style.transform = "rotate(90deg)";
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.borderColor = "#f0f0f0";
-                e.target.style.color = "#666";
-                e.target.style.transform = "rotate(0deg)";
-              }}
-            >
-              ×
-            </button>
-
             {/* Poster Image */}
             <img
               src={posterImg}
