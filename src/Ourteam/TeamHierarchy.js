@@ -161,7 +161,7 @@ const teamMemberData = [
   { "name": "Mohamed Asiq", "role": "DIGITAL MARKETING HEAD", "phone": "81222 41364", "email": "", "Branch": "", "image": Mohamed },
 
 
-  { "name": "Awanth", "role": "REGIONAL HEAD OF KERALA", "phone": "90480 23242", "email": "aswanth@thoughtflows.in", "Branch": "Kerala", "image": Awanth },
+  { "name": "Aswanth", "role": "REGIONAL HEAD OF KERALA", "phone": "90480 23242", "email": "aswanth@thoughtflows.in", "Branch": "Kerala", "image": Awanth },
 
 
   { "name": "Keerthika", "role": "TRAINING MANAGER", "phone": "96006 55803", "email": "keerthisakthi03@gmail.com", "Branch": "", "image": Keerthika },
