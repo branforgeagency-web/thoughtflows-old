@@ -1,9 +1,9 @@
 import React from "react";
 import bannerImage from "../../images/homebannerbg.png";
-import vizag from "../../images/Branches/Pic 11.webp";
+import vizag from "../../images/Branches/Pic 11.png";
 import banner2 from "../../images/Branches/lapgirl.png";
 import { Container, Row } from "react-bootstrap";
-import CountUp from "react-countup";    
+import CountUp from "react-countup";
 import { Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
@@ -30,18 +30,18 @@ const VizagBanner = () => {
         <Col lg={1} xs={0}></Col>
         <Col lg={3} md={4} xs={12} className='cbe1-banner-lft pt-5 px-4 mb-4 mb-lg-0 d-flex flex-column justify-content-lg-start justify-content-center align-items-lg-start align-items-center'>
           <Col className='cbe1-banner-heading'>
-            <h2 style={{ 
+            <h2 style={{
               fontSize: 'clamp(28px, 5vw, 40px)',
               lineHeight: '1.2'
             }}>Medical Coding </h2>
-            <h2 style={{ 
+            <h2 style={{
               fontSize: 'clamp(28px, 5vw, 40px)',
               lineHeight: '1.2'
             }}>Institute in <span style={{ color: '#097D8A' }}>Vizag</span></h2>
           </Col>
           <Col>
-            <p style={{ 
-              fontSize: 'clamp(14px, 3vw, 16px)', 
+            <p style={{
+              fontSize: 'clamp(14px, 3vw, 16px)',
               marginTop: '20px',
               maxWidth: '600px'
             }}>Join the premier medical coding training institute in Vizag. Get hands-on training with industry experts and secure your future in healthcare.</p>
@@ -53,23 +53,23 @@ const VizagBanner = () => {
           </Col>
         </Col>
 
-        <Col lg={7} md={8} xs={12} className='cbe1-banner-rht' style={{ 
+        <Col lg={7} md={8} xs={12} className='cbe1-banner-rht' style={{
           display: 'flex',
-          justifyContent: 'center', 
+          justifyContent: 'center',
           alignItems: 'end',
           paddingTop: '0'
-          
+
         }}>
-          <img 
-            src={vizag} 
-            alt='bannergif' 
-            className='bannergif banner-appear' 
+          <img
+            src={vizag}
+            alt='bannergif'
+            className='bannergif banner-appear'
             style={{
-            maxWidth: '100%',
-            width: 'auto',
-            height: 'auto',
-            objectFit: 'contain',
-            marginBottom:'-40px'
+              maxWidth: '100%',
+              width: 'auto',
+              height: 'auto',
+              objectFit: 'contain',
+              marginBottom: '-40px'
             }}
           />
         </Col>
@@ -87,23 +87,23 @@ const VizagBanner = () => {
           maxWidth: '95%',
           margin: 'clamp(-30px, -4vw, -40px) auto 0'
         }}>
-       <Row className="align-items-center">
+        <Row className="align-items-center">
           <Col lg={12}>
             <Row className="gy-4 gx-3">
               <Col xs={6} sm={6} md={3} lg={3} className="text-center">
                 <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
-                  <p style={{ 
-                    color: '#FFC100', 
-                    fontWeight: '700', 
-                    fontSize: 'clamp(18px, 3.5vw, 30px)', 
+                  <p style={{
+                    color: '#FFC100',
+                    fontWeight: '700',
+                    fontSize: 'clamp(18px, 3.5vw, 30px)',
                     margin: 0,
                     lineHeight: '1.2'
                   }}>
                     <CountUp start={0} end={30000} separator="," />+
                   </p>
-                  <p style={{ 
-                    fontWeight: '500', 
-                    fontSize: 'clamp(12px, 2.5vw, 18px)', 
+                  <p style={{
+                    fontWeight: '500',
+                    fontSize: 'clamp(12px, 2.5vw, 18px)',
                     marginTop: '5px',
                     lineHeight: '1.2'
                   }}>Training</p>
@@ -111,18 +111,18 @@ const VizagBanner = () => {
               </Col>
               <Col xs={6} sm={6} md={3} lg={3} className="text-center">
                 <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
-                  <p style={{ 
-                    color: '#F15BB5', 
-                    fontWeight: '700', 
-                    fontSize: 'clamp(18px, 3.5vw, 30px)', 
+                  <p style={{
+                    color: '#F15BB5',
+                    fontWeight: '700',
+                    fontSize: 'clamp(18px, 3.5vw, 30px)',
                     margin: 0,
                     lineHeight: '1.2'
                   }}>
                     <CountUp start={0} end={25000} separator="," />+
                   </p>
-                  <p style={{ 
-                    fontWeight: '500', 
-                    fontSize: 'clamp(12px, 2.5vw, 18px)', 
+                  <p style={{
+                    fontWeight: '500',
+                    fontSize: 'clamp(12px, 2.5vw, 18px)',
                     marginTop: '5px',
                     lineHeight: '1.2'
                   }}>Placement</p>
@@ -130,18 +130,18 @@ const VizagBanner = () => {
               </Col>
               <Col xs={6} sm={6} md={3} lg={3} className="text-center">
                 <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
-                  <p style={{ 
-                    color: '#00BBFA', 
-                    fontWeight: '700', 
-                    fontSize: 'clamp(18px, 3.5vw, 30px)', 
+                  <p style={{
+                    color: '#00BBFA',
+                    fontWeight: '700',
+                    fontSize: 'clamp(18px, 3.5vw, 30px)',
                     margin: 0,
                     lineHeight: '1.2'
                   }}>
                     <CountUp start={0} end={49} separator="," />+
                   </p>
-                  <p style={{ 
-                    fontWeight: '500', 
-                    fontSize: 'clamp(12px, 2.5vw, 18px)', 
+                  <p style={{
+                    fontWeight: '500',
+                    fontSize: 'clamp(12px, 2.5vw, 18px)',
                     marginTop: '5px',
                     lineHeight: '1.2'
                   }}>Courses</p>
@@ -149,18 +149,18 @@ const VizagBanner = () => {
               </Col>
               <Col xs={6} sm={6} md={3} lg={3} className="text-center">
                 <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
-                  <p style={{ 
-                    color: '#01F6D5', 
-                    fontWeight: '700', 
-                    fontSize: 'clamp(18px, 3.5vw, 30px)', 
+                  <p style={{
+                    color: '#01F6D5',
+                    fontWeight: '700',
+                    fontSize: 'clamp(18px, 3.5vw, 30px)',
                     margin: 0,
                     lineHeight: '1.2'
                   }}>
                     <CountUp start={0} end={12} separator="," />+
                   </p>
-                  <p style={{ 
-                    fontWeight: '500', 
-                    fontSize: 'clamp(12px, 2.5vw, 18px)', 
+                  <p style={{
+                    fontWeight: '500',
+                    fontSize: 'clamp(12px, 2.5vw, 18px)',
                     marginTop: '5px',
                     lineHeight: '1.2'
                   }}>Branches</p>
