@@ -10,7 +10,7 @@ import GoogleRev from "./GoogleRev";
 import HomeBlog from "./HomeBlog";
 import Meta from "../Meta";
 import formimg from "../images/courseimage/TF Image copy.webp";
-import posterImg from "../images/poster tf.png";
+import posterImg from "../images/poster tf.jpeg";
 import FloatingIcons from "../FloatingIcons";
 import Companies from "./Companies";
 import { PopupContext } from "../context/PopupContext";
@@ -249,7 +249,7 @@ const Home = () => {
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
             style={{
               position: "relative",
-              maxWidth: windowWidth <= 768 ? "90%" : "700px",
+              maxWidth: windowWidth <= 768 ? "300px" : "450px",
               width: "100%",
             }}
           >
@@ -285,7 +285,7 @@ const Home = () => {
                 transition: "all 0.3s ease",
               }}
             >
-              Contact
+              Continue
             </motion.button>
           </motion.div>
         </motion.div>

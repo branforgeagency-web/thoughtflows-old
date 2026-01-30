@@ -10,7 +10,7 @@ const Footer = () => {
     const [showZoomPopup, setShowZoomPopup] = useState(false);
     const location = useLocation();
 
-    const excludedPaths = ['/about','/ourteam', '/contact', "/blog", "/blog1", "/blog2", "/blog3","/blog4","/blog5","/blog6","/blog7", "/cpc", "/cic", "/coc", "/cpma", "/crc", "/surgery", "/cbe-1", "/trichy", "/tirupathi", "/trivandrum", "/cbe-2", "/hyderabad", "/kochi", "/ed", "/em", "/radiology", "/anaesthesia","/ip-drug", "/ccs", "/ccsp", "/rhia", "/rhit", "/clinical-coder", "/him" ];
+    const excludedPaths = ['/about', '/ourteam', '/contact', "/blog", "/blog1", "/blog2", "/blog3", "/blog4", "/blog5", "/blog6", "/blog7", "/cpc", "/cic", "/coc", "/cpma", "/crc", "/surgery", "/cbe-1", "/trichy", "/tirupathi", "/trivandrum", "/cbe-2", "/hyderabad", "/kochi", "/ed", "/em", "/radiology", "/anaesthesia", "/ip-drug", "/ccs", "/ccsp", "/rhia", "/rhit", "/clinical-coder", "/him"];
 
     const showSmallFooter = !excludedPaths.includes(location.pathname);
 
@@ -23,7 +23,7 @@ const Footer = () => {
         <>
             {/* Zoom Popup */}
             {showZoomPopup && (
-                <div 
+                <div
                     className="fixed inset-0 bg-black bg-opacity-50 z-[99999] flex items-center justify-center"
                     onClick={() => setShowZoomPopup(false)}
                 >
@@ -64,8 +64,8 @@ const Footer = () => {
                                 <h2 className="fw-bold">Free Trial Lesson by Zoom</h2>
                             </Col>
                             <Col className="home-btn p-1" lg={2}>
-                                <a 
-                                    className=" button-animation" 
+                                <a
+                                    className=" button-animation"
                                     onClick={handleRegisterClick}
                                     style={{ cursor: 'pointer' }}
                                 >
@@ -85,7 +85,7 @@ const Footer = () => {
                             ensuring students become proficient and certified medical coders.
                         </p>
                     </Col>
-                    <Col lg={1}className="text-start mb-4 mb-lg-0">
+                    <Col lg={1} className="text-start mb-4 mb-lg-0">
                         <p className="fs-5 fw-bold">LINKS</p>
                         <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
                         <ul className="list-unstyled">
@@ -101,11 +101,11 @@ const Footer = () => {
                             <li className="mb-3">
                                 <a href="/ourteam" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Our team</a>
                             </li>
-                        
+
                             <li className="mb-3">
                                 <a href="/contact" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Contact</a>
                             </li>
-                           
+
                         </ul>
                     </Col>
                     {/* <Col lg={0.5}></Col> */}
@@ -137,7 +137,7 @@ const Footer = () => {
                             Gandhipuram,<br />
                             Coimbatore - 641012.
                         </p> */}
-                        <Col lg={1} className="text-start mb-4 mb-lg-0">
+                    <Col lg={1} className="text-start mb-4 mb-lg-0">
                         <p className="fs-5 fw-bold">AAPC</p>
                         <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
                         <ul className="list-unstyled">
@@ -174,7 +174,7 @@ const Footer = () => {
                             <li className="mb-3">
                                 <a href="/cppm" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CPPM</a>
                             </li>
-                            
+
                         </ul>
                     </Col>
 
@@ -208,7 +208,7 @@ const Footer = () => {
                             </li>
                         </ul>
                     </Col>
-                    <Col lg={1}className="text-start mb-4 mb-lg-0">
+                    <Col lg={1} className="text-start mb-4 mb-lg-0">
                         <p className="fs-5 fw-bold">AHIMA</p>
                         <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
                         <ul className="list-unstyled">
@@ -216,7 +216,7 @@ const Footer = () => {
                                 <a href="/ccs" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CCS</a>
                             </li>
                             <li className="mb-3">
-                                <a href="/ccs-p" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CCS-P</a>    
+                                <a href="/ccs-p" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CCS-P</a>
                             </li>
                             <li className="mb-3">
                                 <a href="/rhia" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">RHIA</a>
@@ -224,10 +224,10 @@ const Footer = () => {
                             <li className="mb-3">
                                 <a href="/rhit" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">RHIT</a>
                             </li>
-                           
+
                         </ul>
                     </Col>
-                    <Col lg={1}className="text-start mb-4 mb-lg-0">
+                    <Col lg={1} className="text-start mb-4 mb-lg-0">
                         <p className="fs-5 fw-bold">HIMAA</p>
                         <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
                         <ul className="list-unstyled">
@@ -237,21 +237,21 @@ const Footer = () => {
                             <li className="mb-3">
                                 <a href="/him" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">HIM</a>
                             </li>
-                    
-                        
-                           
+
+
+
                         </ul>
                     </Col>
-                   
+
                     {/* <Col lg={0.5}></Col> */}
-                    <Col lg={2}className="text-start mb-4 mb-lg-0">
+                    <Col lg={2} className="text-start mb-4 mb-lg-0">
                         <p className="fs-5 fw-bold">Contact</p>
                         <hr className="" style={{ width: '60px', borderColor: '#FFFFFF' }} />
                         <div className="d-flex align-items-center mb-2">
                             <i className="fas fa-phone text-white me-2"></i>
                             <a
                                 href="tel:+919384576852"
-                                style={{ textDecoration:'none', color: 'white' }}
+                                style={{ textDecoration: 'none', color: 'white' }}
                             >
                                 +91-9384576852
                             </a>
@@ -260,7 +260,7 @@ const Footer = () => {
                             <i className="fas fa-envelope text-white me-2"></i>
                             <a
                                 href="mailto:info@thoughtflows.in"
-                                style={{ textDecoration:'none', color: 'white' }}
+                                style={{ textDecoration: 'none', color: 'white' }}
                             >
                                 info@thoughtflows.in
                             </a>
@@ -288,7 +288,7 @@ const Footer = () => {
 
             <div className="bg-light text-center py-2">
                 <p className="mb-0" style={{ fontSize: '14px' }}>
-                    &copy; 2024 Thoughtflows. All rights reserved.
+                    &copy; 2026 Thoughtflows. All rights reserved.
                 </p>
             </div>
         </>
