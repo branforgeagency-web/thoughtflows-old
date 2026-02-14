@@ -285,9 +285,10 @@ const Header = () => {
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
-                gap: "6%",
+                gap: "0.45px",
                 height: "auto",
                 width: "100%",
+                padding: "0 2px"
               }}
               className={` ${isHome ? 'w-full' : 'w-full'}`}
             >
@@ -479,6 +480,21 @@ const Header = () => {
                         }`}
                     >
                       Our team
+                    </Link>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style={{ fontWeight: "bold", cursor: "pointer" }}
+                    onMouseEnter={() => setOpen({ submenu: "", open: false })}
+                    className="py-2 whitespace-nowrap"
+                  >
+                    <Link
+                      to="/placements"
+                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${location.pathname === '/placements' ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                        }`}
+                    >
+                      Placements
                     </Link>
                   </div>
                 </li>

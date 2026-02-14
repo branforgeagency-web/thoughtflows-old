@@ -272,11 +272,15 @@ body {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: flex !important;
+  gap: 30px !important;
+  justify-content: flex-start !important;
 }
 
 .menu li {
-  margin: 25px;
+  margin: 10 !important;
+  padding: 30 !important;
+  width: auto !important;
   color: #0b3a66;
   font-family: var(--secondary-font);
   font-weight: 400;
