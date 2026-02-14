@@ -57,70 +57,73 @@ import Salem from "./Branches/Salem"
 import TeamHierarchy from './Ourteam/TeamHierarchy';
 import { PopupProvider } from './context/PopupContext';
 import FloatingIcons from './FloatingIcons';
+import Placements from './Placements/Placements';
+
 function App() {
 
   return (
     <>
-    <PopupProvider>
-      <Router>
-        
-        <Header/>
-        <FloatingIcons/>
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path='/career' element={<Career />} />
-          <Route path='/ourteam' element={<TeamHierarchy />} />
-          <Route path="/blog" element={<Blog />} />
-          <Route path="/blog/what-is-medical-coding-complete-guide-for-beginners-thoughtflows" element={<Blog1 />} />
-          <Route path="/blog/why-medical-coding-is-the-backbone-of-the-healthcare-industry" element={<Blog2 />} />
-          <Route path="/blog/top-5-medical-coding-mistakes-and-how-to-avoid-them-for-a-successful-career" element={<Blog3 />} />
-          <Route path="/blog/how-to-prepare-for-the-cpc-exam-expert-tips-and-strategies-for-success" element={<Blog4 />} />
-          <Route path="/blog/exploring-icd10cm-key-changes-you-need-to-know-for-accurate-medical-coding" element={<Blog5 />} />
-          <Route path="/blog/the-role-of-medical-coders-in-modern-healthcare-essential-insights" element={<Blog6 />} />
-          <Route path="/blog/medical-coding-career-path-opportunities-and-growth-in-healthcare" element={<Blog7 />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/cpc" element={<CPC />} />
-          <Route path="/cic" element={<CIC />} />
-          <Route path="/coc" element={<COC />} />
-          <Route path='/cpma' element={<CPMA />} />
-          <Route path='/crc' element={<CRC />} />
-          <Route path='/surgery' element={<Surgery />} />
-          <Route path='/ed' element={<ED />} />
-          <Route path='/em' element={<EM />} />
-          <Route path='/ccc' element={<CO/>} />
-          <Route path='/him' element={<HIM />} />
-          <Route path='/radiology' element={<Radio />} />
-          <Route path='/anesesthesia' element={<Anesesthesia />} />
-          <Route path='/Top-Medical-Coding-Training-Saravanampatti' element={<CbeBranch1 />} />
-          <Route path='/Medical-Coding-Excellence-at-Hopes' element={<CbeBranch2/>}/>
-          <Route path='/Premier-Medical-Coding-Institute-Gandhipuram' element={<CbeBranch3/>}/>
-          <Route path='/Expert-Medical-Coding-Tirupathi' element={<TirupathiBranch />} />
-          <Route path='/Medical-Coding-Academy-Kochi' element={<Kochi/>}/>
-          <Route path='/Advanced-Medical-Coding-Tiruvandrum' element={<Trivandrum/>}/>
-          <Route path='/Future-Ready-Medical-Coding-Salem' element={<Salem/>}/>
-          <Route path='/Trusted-Medical-Coding-Ameerpet' element={<Hyderabad/>}/>
-          <Route path='/Professional-Medical-Coding-Dilsukhnagar' element={<Hyderabad2/>}/>
-          <Route path='/Innovative-Medical-Coding-Vizag' element={<Vizag/>}/>
-          <Route path='/Career-Focused-Medical-Coding-Trichy' element={<TrichyBranches/>}/>
-          <Route path='/ip-drg' element={<IpDrug/>}/>
-          <Route path='/ccs' element={<CCS/>}/>
-          <Route path='/ccs-p' element={<CSS/>}/>
-          <Route path='/rhia' element={<RHIA/>}/>
-          <Route path='/rhit' element={<RHIT/>}/>
-          <Route path='/cpb' element={<CPB/>}/>
-          <Route path='/cedc' element={<CEDC/>}/>
-          <Route path='/cemc' element={<CEMC/>}/>
-          <Route path='/cdeo' element={<CDEO/>}/>
-          <Route path='/cdei' element={<CDEI/>}/>
-          <Route path='/cppm' element={<CPPM/>}/>
-          <Route path='/hcc' element={<HCC/>}/>
-          <Route path='/ivr' element={<IVR/>}/>
-        </Routes>
-        {/* <ScrollToTop/> */}
-        <Footer />
-      </Router>
-    </PopupProvider>
+      <PopupProvider>
+        <Router>
+
+          <Header />
+          <FloatingIcons />
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path='/career' element={<Career />} />
+            <Route path='/ourteam' element={<TeamHierarchy />} />
+            <Route path="/blog" element={<Blog />} />
+            <Route path="/blog/what-is-medical-coding-complete-guide-for-beginners-thoughtflows" element={<Blog1 />} />
+            <Route path="/blog/why-medical-coding-is-the-backbone-of-the-healthcare-industry" element={<Blog2 />} />
+            <Route path="/blog/top-5-medical-coding-mistakes-and-how-to-avoid-them-for-a-successful-career" element={<Blog3 />} />
+            <Route path="/blog/how-to-prepare-for-the-cpc-exam-expert-tips-and-strategies-for-success" element={<Blog4 />} />
+            <Route path="/blog/exploring-icd10cm-key-changes-you-need-to-know-for-accurate-medical-coding" element={<Blog5 />} />
+            <Route path="/blog/the-role-of-medical-coders-in-modern-healthcare-essential-insights" element={<Blog6 />} />
+            <Route path="/blog/medical-coding-career-path-opportunities-and-growth-in-healthcare" element={<Blog7 />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/cpc" element={<CPC />} />
+            <Route path="/cic" element={<CIC />} />
+            <Route path="/coc" element={<COC />} />
+            <Route path='/cpma' element={<CPMA />} />
+            <Route path='/crc' element={<CRC />} />
+            <Route path='/surgery' element={<Surgery />} />
+            <Route path='/ed' element={<ED />} />
+            <Route path='/em' element={<EM />} />
+            <Route path='/ccc' element={<CO />} />
+            <Route path='/him' element={<HIM />} />
+            <Route path='/radiology' element={<Radio />} />
+            <Route path='/anesesthesia' element={<Anesesthesia />} />
+            <Route path='/Top-Medical-Coding-Training-Saravanampatti' element={<CbeBranch1 />} />
+            <Route path='/Medical-Coding-Excellence-at-Hopes' element={<CbeBranch2 />} />
+            <Route path='/Premier-Medical-Coding-Institute-Gandhipuram' element={<CbeBranch3 />} />
+            <Route path='/Expert-Medical-Coding-Tirupathi' element={<TirupathiBranch />} />
+            <Route path='/Medical-Coding-Academy-Kochi' element={<Kochi />} />
+            <Route path='/Advanced-Medical-Coding-Tiruvandrum' element={<Trivandrum />} />
+            <Route path='/Future-Ready-Medical-Coding-Salem' element={<Salem />} />
+            <Route path='/Trusted-Medical-Coding-Ameerpet' element={<Hyderabad />} />
+            <Route path='/Professional-Medical-Coding-Dilsukhnagar' element={<Hyderabad2 />} />
+            <Route path='/Innovative-Medical-Coding-Vizag' element={<Vizag />} />
+            <Route path='/Career-Focused-Medical-Coding-Trichy' element={<TrichyBranches />} />
+            <Route path='/ip-drg' element={<IpDrug />} />
+            <Route path='/ccs' element={<CCS />} />
+            <Route path='/ccs-p' element={<CSS />} />
+            <Route path='/rhia' element={<RHIA />} />
+            <Route path='/rhit' element={<RHIT />} />
+            <Route path='/cpb' element={<CPB />} />
+            <Route path='/cedc' element={<CEDC />} />
+            <Route path='/cemc' element={<CEMC />} />
+            <Route path='/cdeo' element={<CDEO />} />
+            <Route path='/cdei' element={<CDEI />} />
+            <Route path='/cppm' element={<CPPM />} />
+            <Route path='/hcc' element={<HCC />} />
+            <Route path='/ivr' element={<IVR />} />
+            <Route path="/placements" element={<Placements />} />
+          </Routes>
+          {/* <ScrollToTop/> */}
+          <Footer />
+        </Router>
+      </PopupProvider>
     </>
   );
 }

@@ -1,0 +1,179 @@
+/* Discount Banner Styles */
+.discount-banner-container {
+    padding: 0 20px 150px 20px;
+    background-color: white;
+    /* Wrapper bg can match main page or be white */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.discount-banner-wrapper {
+    display: flex;
+    background-color: #FFF3E0;
+    /* Peach bg */
+    border-radius: 20px;
+    overflow: hidden;
+    max-width: 1200px;
+    width: 100%;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    flex-wrap: wrap;
+}
+
+.discount-text-section {
+    flex: 1;
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 300px;
+}
+
+.discount-text-section h2 {
+    margin: 0;
+    line-height: 1.2;
+}
+
+.discount-highlight-orange {
+    color: #E65100;
+    /* Deep Orange */
+    font-size: 2.5rem;
+    font-weight: 800;
+}
+
+.discount-main-offer {
+    color: #333;
+    font-size: 2rem;
+    font-weight: 700;
+    margin: 15px 0;
+}
+
+.discount-subtext {
+    color: #555;
+    font-size: 1.1rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.discount-form-section {
+    flex: 1;
+    padding: 40px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 300px;
+}
+
+.discount-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 100%;
+    max-width: 350px;
+}
+
+.discount-input {
+    padding: 12px 15px;
+    border: 1px solid #FFCC80;
+    border-radius: 5px;
+    background-color: #FFFDE7;
+    /* Light Yellow */
+    font-size: 0.95rem;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+}
+
+.discount-input::placeholder {
+    color: #888;
+}
+
+.discount-input:focus {
+    border-color: #E65100;
+    background-color: white;
+}
+
+.discount-select {
+    cursor: pointer;
+    color: #555;
+}
+
+.discount-submit-btn {
+    padding: 10px 20px;
+    background-color: transparent;
+    color: #E65100;
+    border: 2px solid #E65100;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: auto;
+    min-width: 120px;
+    align-self: flex-start;
+    margin-top: 10px;
+}
+
+.discount-submit-btn:hover {
+    background-color: #E65100;
+    color: white;
+}
+
+.discount-image-section {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    /* Align image to bottom */
+    justify-content: center;
+    min-width: 300px;
+    padding-right: 0;
+    position: relative;
+}
+
+.discount-student-img {
+    width: 100%;
+    height: 100%;
+    max-height: 500px;
+    object-fit: cover;
+    display: block;
+    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .discount-banner-wrapper {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .discount-text-section,
+    .discount-form-section,
+    .discount-image-section {
+        width: 100%;
+        padding: 30px;
+        align-items: center;
+    }
+
+    .discount-form {
+        align-items: stretch;
+    }
+
+    .discount-submit-btn {
+        align-self: center;
+        width: 50%;
+    }
+
+    .discount-image-section {
+        height: 300px;
+        padding: 0;
+    }
+
+    .discount-student-img {
+        height: 100%;
+        width: auto;
+        object-position: top;
+    }
+}
