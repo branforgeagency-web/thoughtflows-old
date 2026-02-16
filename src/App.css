@@ -3455,7 +3455,7 @@ h1 {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .f-item-1 {
     flex-grow: 1;
   }
@@ -3499,7 +3499,7 @@ h1 {
   }
 
   .menu {
-    display: none;
+    display: none !important;
     flex-direction: column;
     background-color: white;
     position: absolute;
@@ -3511,7 +3511,7 @@ h1 {
   }
 
   .menu.open {
-    display: flex;
+    display: flex !important;
   }
 
   .hamburger {
