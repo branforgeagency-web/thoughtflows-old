@@ -72,7 +72,6 @@ import Mittu from "../images/Profile images/Mittu - Franchise Partner - Kerala.p
 import BalaMurali from "../images/Profile images/blazer pic/karthick revision .jpg"
 import Banumathy from "../images/Profile images/blazer pic/bhanu mathi.png"
 import Meta from '../Meta';
-import Kobika from "../images/Profile images/blazer pic/Kobika - Trainer.webp"
 import Shilpa from "../images/Profile images/Shilpa.png"
 import Sreenath from "../images/Profile images/blazer pic/Sreenath Reddy - Technical and Marketing Executive.jpeg"
 import Kamara from "../images/Profile images/blazer pic/Kammara Boya Shiva - HR Executive.webp"
@@ -182,7 +181,6 @@ const teamMemberData = [
   { "name": "Pooja Jadav", "role": "TRAINER", "phone": "93461 94108", "email": "poojajadhav@thoughtflows.in", "Branch": "", "image": Jadav },
   { "name": "Kamatam Varsha", "role": "TRAINER", "phone": "", "email": "", "Branch": "Ameerpet", "image": KamatamVarsha },
   { "name": "Sharon ", "role": "TRAINER", "phone": "88709 51112", "email": "sharonr@thoughtflows.in", "Branch": "Trichy", "image": Sharon },
-  { "name": "Kobika", "role": "TRAINER", "phone": "", "email": "", "Branch": "", "image": Kobika },
   { "name": "Aashifa", "role": "TRAINER", "phone": "", "email": "", "Branch": "", "image": Aasifa },
   { "name": "Charishma", "role": "TRAINER", "phone": "", "email": "", "Branch": "Vizag", "image": Charishma },
   { "name": "Kavya", "role": "TRAINER", "phone": "", "email": "", "Branch": "", "image": Kavya },
@@ -280,7 +278,7 @@ const teamStructure = [
   { role: "DEPARTMENT HEADS", count: 5 },
   { role: "REGIONAL HEAD", count: 1 },
   { role: "TRAINING MANAGER", count: 2 },
-  { role: "TRAINER", count: 18 },
+  { role: "TRAINER", count: 17 },
   { role: "BRANCH HEAD", count: 2 },
   { role: "TEAM LEAD", count: 11 },
   { role: "PROCESS COACH", count: 1 },
