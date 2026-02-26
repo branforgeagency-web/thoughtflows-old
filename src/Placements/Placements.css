@@ -72,6 +72,75 @@
     padding: 20px 0;
 }
 
+.relative-row {
+    position: relative;
+    width: 100%;
+}
+
+.year-badge {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.badge-right {
+    right: 20px;
+}
+
+.badge-left {
+    left: 20px;
+}
+
+.year-badge-inner {
+    width: 80px;
+    height: 80px;
+    background-color: #36b0bd;
+    border-radius: 50%;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.badge-right .year-badge-inner::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-right: 4px solid #36b0bd;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-left: 4px solid transparent;
+    opacity: 0.8;
+}
+
+.badge-left .year-badge-inner::before {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border-left: 4px solid #36b0bd;
+    border-top: 4px solid transparent;
+    border-bottom: 4px solid transparent;
+    border-right: 4px solid transparent;
+    opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+    .year-badge {
+        display: none;
+    }
+}
 
 
 .student-card {
@@ -90,7 +159,7 @@
 }
 
 .student-card-image-wrapper {
-    height: 200px;
+    height: 350px;
     overflow: hidden;
     background-color: #f0f0f0;
 }

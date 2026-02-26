@@ -36,17 +36,15 @@ const Placements = () => {
                 <div className="students-marquee-container">
 
                     {/* Row 1 - Left Direction */}
-                    <div className="students-marquee-row" style={{ marginBottom: '10px' }}>
+                    <div className="students-marquee-row relative-row" style={{ marginBottom: '30px' }}>
+                        <div className="year-badge badge-right">
+                            <div className="year-badge-inner">2026</div>
+                        </div>
                         <Marquee gradient={true} speed={70} direction="left" gradientColor={[255, 255, 255]}>
                             {firstRowStudents.map((student, index) => (
                                 <div className="student-card" key={`row1-${student.id}-${index}`} style={{ margin: '0 10px' }}>
                                     <div className="student-card-image-wrapper">
-                                        <img src={student.image} alt={student.name} className="student-card-image" />
-                                    </div>
-                                    <div className="student-card-info">
-                                        <h3 className="student-name">{student.name}</h3>
-                                        <p className="student-designation">{student.designation}</p>
-                                        <p className="student-company">{student.company}</p>
+                                        <img src={student.image} alt="Placement" className="student-card-image" />
                                     </div>
                                 </div>
                             ))}
@@ -54,17 +52,15 @@ const Placements = () => {
                     </div>
 
                     {/* Row 2 - Right Direction */}
-                    <div className="students-marquee-row">
+                    <div className="students-marquee-row relative-row">
+                        <div className="year-badge badge-left">
+                            <div className="year-badge-inner">2026</div>
+                        </div>
                         <Marquee gradient={true} speed={70} direction="right" gradientColor={[255, 255, 255]}>
                             {secondRowStudents.map((student, index) => (
                                 <div className="student-card" key={`row2-${student.id}-${index}`} style={{ margin: '0 10px' }}>
                                     <div className="student-card-image-wrapper">
-                                        <img src={student.image} alt={student.name} className="student-card-image" />
-                                    </div>
-                                    <div className="student-card-info">
-                                        <h3 className="student-name">{student.name}</h3>
-                                        <p className="student-designation">{student.designation}</p>
-                                        <p className="student-company">{student.company}</p>
+                                        <img src={student.image} alt="Placement" className="student-card-image" />
                                     </div>
                                 </div>
                             ))}
