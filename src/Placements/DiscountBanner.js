@@ -97,10 +97,8 @@ const DiscountBanner = () => {
 
                 {/* Left Side - Text */}
                 <div className="discount-text-section">
-                    <h2 className="discount-highlight-orange">Wait!</h2>
-                    <h2 className="discount-highlight-orange">Before you go,</h2>
-                    <h2 className="discount-main-offer">Here is a 30% <br /> Discount.</h2>
-                    <p className="discount-subtext">In your Course Fee</p>
+                    <h2 className="discount-main-offer">Join our Medical Coding training</h2>
+                    <p className="discount-subtext">with placement support and career guidance.</p>
                 </div>
 
                 {/* Center - Form */}
