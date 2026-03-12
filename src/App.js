@@ -58,6 +58,7 @@ import TeamHierarchy from './Ourteam/TeamHierarchy';
 import { PopupProvider } from './context/PopupContext';
 import FloatingIcons from './FloatingIcons';
 import Placements from './Placements/Placements';
+import YearlyPlacementList from './Placements/YearlyPlacementList';
 
 function App() {
 
@@ -119,6 +120,7 @@ function App() {
             <Route path='/hcc' element={<HCC />} />
             <Route path='/ivr' element={<IVR />} />
             <Route path="/placements" element={<Placements />} />
+            <Route path="/placements/:year" element={<YearlyPlacementList />} />
           </Routes>
           {/* <ScrollToTop/> */}
           <Footer />

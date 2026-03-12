@@ -122,11 +122,12 @@ import Student2025_100 from '../images/placement/2025/_T.Hari Naga Swetha - Clar
 
 export const placementData = {
     banner: {
-        title: "Placement Success at ThoughtFlows",
-        subtitle: "Success Stories of Students Placed in Top Companies in 2026 & 2025"
+        title: "Placement Success",
+        subtitle: ""
     },
     introduction: {
-        text: "At ThoughtFlows, we don’t just train—we help students build real careers. Our strong placement support, practical guidance, and continuous interview preparation have helped thousands of students start their careers in top healthcare companies across India. With a dedicated placement team and trusted hiring partners, we have successfully placed 25,000+ students, and many more success stories are being created every day."
+        title: "Success Stories of Students Placed in Top Companies",
+        text: "At ThoughtFlows, we don’t just train—we help students build real careers. Our strong placement support, practical guidance, and continuous interview preparation have helped thousands of students start their careers in top healthcare companies across India. With a dedicated placement team and trusted hiring partners, we have successfully placed 35,000+ students, and many more success stories are being created every day."
     },
     students2026: [
         { id: 1, image: Student1 },

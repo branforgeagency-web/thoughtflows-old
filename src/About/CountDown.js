@@ -8,8 +8,8 @@ function CountDown() {
   const [count3, setCount3] = useState(0);
   const [count4, setCount4] = useState(0);
   const [isHovered, setIsHovered] = useState({ box1: false, box2: false, box3: false, box4: false });
-  const target1 = 30000;
-  const target2 = 25000;
+  const target1 = 35000;
+  const target2 = 35000;
   const target3 = 49;
   const target4 = 12;
   const duration = 3000;

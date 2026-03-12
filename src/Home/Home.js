@@ -17,6 +17,16 @@ import { PopupContext } from "../context/PopupContext";
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser';
 
+const inputStyle = {
+  width: "100%",
+  padding: "12px 15px",
+  borderRadius: "8px",
+  border: "1px solid #ccc",
+  fontSize: "15px",
+  outline: "none",
+  transition: "border-color 0.3s ease",
+};
+
 const Home = () => {
   const { isOpen, setIsOpen } = useContext(PopupContext);
   const [showPopup, setShowPopup] = useState(false);
@@ -29,8 +39,10 @@ const Home = () => {
     name: '',
     email: '',
     phone: '',
+    age: '',
+    qualification: '',
+    location: '',
     course: '',
-
   });
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
@@ -41,11 +53,11 @@ const Home = () => {
     // For production, use environment variables instead:
     // emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
 
-    const timer = setTimeout(() => {
-      setShowPosterPopup(true); // After 5 seconds, show poster popup
-    }, 5000);
+    // const timer = setTimeout(() => {
+    //   setShowPosterPopup(true); // After 5 seconds, show poster popup
+    // }, 5000);
 
-    return () => clearTimeout(timer); // Cleanup timer on unmount
+    // return () => clearTimeout(timer); // Cleanup timer on unmount
   }, []);
 
   // Add resize listener for dynamic responsiveness
@@ -59,17 +71,18 @@ const Home = () => {
   }, []);
 
   const togglePopup = () => {
-    setIsOpen(!isOpen);
-    setShowPopup(false);
-    setShowPosterPopup(false);
     setShowRegistrationForm(false);
+    setIsOpen(false);
+    setShowPosterPopup(false);
     // Reset form and status when closing
     setFormData({
       name: '',
       email: '',
       phone: '',
+      age: '',
+      qualification: '',
+      location: '',
       course: '',
-
     });
     setSubmitStatus({ type: '', message: '' });
   };
@@ -94,8 +107,10 @@ const Home = () => {
       name: '',
       email: '',
       phone: '',
+      age: '',
+      qualification: '',
+      location: '',
       course: '',
-
     });
     setSubmitStatus({ type: '', message: '' });
   };
@@ -118,36 +133,33 @@ const Home = () => {
     try {
       // EmailJS template parameters
       const templateParams = {
-        to_email: 'info@thoughtflows.in', // Corrected email address
+        to_email: 'info@thoughtflows.in',
         from_name: formData.name,
         from_email: formData.email,
         phone: formData.phone,
+        age: formData.age,
+        qualification: formData.qualification,
+        location: formData.location,
         course: formData.course,
         message: `
-          New Workshop Registration:
+          New Unified Form Registration:
           
           Name: ${formData.name}
           Email: ${formData.email}
           Phone: ${formData.phone}
+          Age: ${formData.age}
+          Qualification: ${formData.qualification}
+          Location: ${formData.location}
           Course: ${formData.course}
         `
       };
 
-      // Send email using EmailJS
-      // You'll need to replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID' with actual values
       const response = await emailjs.send(
-        'service_2anzqj9', // Replace with your EmailJS service ID
-        'template_vx3lkna', // Replace with your EmailJS template ID
+        'service_2anzqj9',
+        'template_vx3lkna',
         templateParams,
         "KLhirNBaXDhIlDonK"
       );
-
-      // For production, use environment variables:
-      // const response = await emailjs.send(
-      //   process.env.REACT_APP_EMAILJS_SERVICE_ID,
-      //   process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
-      //   templateParams
-      // );
 
       console.log('Email sent successfully:', response);
       setSubmitStatus({
@@ -176,123 +188,8 @@ const Home = () => {
         title="Best Medical Coding Training Academy | Expert Coaching Institute"
         description="Get expert medical coding training at the best academy for comprehensive coaching. Start your career today!"
       />
-      {/* New Poster Popup */}
-      {showPosterPopup && (
-        <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
-          exit={{ opacity: 0 }}
-          className="popup-overlay"
-          style={{
-            position: "fixed",
-            top: 0,
-            left: 0,
-            width: "100%",
-            height: "100%",
-            backgroundColor: "rgba(0,0,0,0.85)",
-            backdropFilter: "blur(10px)",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            zIndex: 1000,
-            padding: "20px",
-          }}
-          onClick={(e) => {
-            if (e.target === e.currentTarget) {
-              closePosterPopup();
-            }
-          }}
-        >
-          {/* Close button - positioned at top-right corner */}
-          <button
-            className="close-button"
-            onClick={closePosterPopup}
-            style={{
-              position: "absolute",
-              right: windowWidth <= 768 ? "20px" : "40px",
-              top: windowWidth <= 768 ? "20px" : "40px",
-              background: "white",
-              border: "2px solid #f0f0f0",
-              borderRadius: "50%",
-              width: windowWidth <= 768 ? "36px" : "44px",
-              height: windowWidth <= 768 ? "36px" : "44px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: windowWidth <= 768 ? "20px" : "24px",
-              cursor: "pointer",
-              color: "#666",
-              transition: "all 0.3s ease",
-              zIndex: 1001,
-              fontWeight: "bold",
-              boxShadow: "0 2px 8px rgba(0,0,0,0.15)",
-            }}
-            onMouseEnter={(e) => {
-              e.target.style.borderColor = "#00BBFA";
-              e.target.style.color = "#00BBFA";
-              e.target.style.transform = "rotate(90deg) scale(1.1)";
-              e.target.style.boxShadow = "0 4px 12px rgba(0,187,250,0.3)";
-            }}
-            onMouseLeave={(e) => {
-              e.target.style.borderColor = "#f0f0f0";
-              e.target.style.color = "#666";
-              e.target.style.transform = "rotate(0deg) scale(1)";
-              e.target.style.boxShadow = "0 2px 8px rgba(0,0,0,0.15)";
-            }}
-          >
-            ×
-          </button>
-
-          <motion.div
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            transition={{ type: "spring", stiffness: 300, damping: 25 }}
-            style={{
-              position: "relative",
-              maxWidth: windowWidth <= 768 ? "300px" : "450px",
-              width: "100%",
-            }}
-          >
-            {/* Poster Image */}
-            <img
-              src={posterImg}
-              alt="Poster"
-              style={{
-                width: "100%",
-                height: "auto",
-                borderRadius: "2%",
-                display: "block",
-              }}
-            />
-
-            {/* Contact Button */}
-            <motion.button
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-              onClick={openRegistrationForm}
-              style={{
-                width: "100%",
-                marginTop: "20px",
-                padding: windowWidth <= 768 ? "12px 24px" : "14px 32px",
-                background: "#00BBFA",
-                color: "white",
-                border: "none",
-                borderRadius: "50px",
-                fontSize: windowWidth <= 768 ? "15px" : "16px",
-                fontWeight: "700",
-                cursor: "pointer",
-                boxShadow: "0 4px 15px rgba(0,187,250,0.3)",
-                transition: "all 0.3s ease",
-              }}
-            >
-              Continue
-            </motion.button>
-          </motion.div>
-        </motion.div>
-      )}
-
-      {/* Popup Form - TEMPORARILY COMMENTED OUT */}
-      {showRegistrationForm && showPopup && isOpen && (
+      {/* Unified Poster & Registration Modal */}
+      {(showRegistrationForm || showPosterPopup) && (
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
@@ -324,32 +221,32 @@ const Home = () => {
             transition={{ type: "spring", stiffness: 300, damping: 25 }}
             className="popup"
             style={{
-              background: "linear-gradient(145deg, #ffffff 0%, #f7f9fc 100%)",
-              borderRadius: "20px",
+              background: "#ffffff",
+              borderRadius: "24px",
               width: "100%",
-              maxWidth: windowWidth <= 1024 ? "500px" : "850px",
-              maxHeight: "90vh",
+              maxWidth: "800px",
+              maxHeight: "95vh",
               position: "relative",
-              overflow: windowWidth <= 1024 ? "auto" : "hidden",
-              boxShadow: "0 20px 60px rgba(0,0,0,0.2)",
+              overflowY: "auto",
+              boxShadow: "0 25px 50px -12px rgba(0, 0, 0, 0.5)",
               display: "flex",
-              flexDirection: windowWidth <= 1024 ? "column" : "row",
-              alignItems: windowWidth <= 1024 ? "stretch" : "center",
+              flexDirection: "column",
             }}
           >
-            {/* Premium gradient overlay */}
-            <div
-              style={{
-                position: "absolute",
-                top: 0,
-                left: 0,
-                right: 0,
-                height: "4px",
-                background: "linear-gradient(90deg, #00BBFA 0%, #0099D6 50%, #00BBFA 100%)",
-              }}
-            />
-
-            {/* Close button */}
+            {/* Poster Header - COMMENTED OUT */}
+            {/* <div style={{ position: "relative", width: "100%" }}>
+              <img
+                src={posterImg}
+                alt="Promotion"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  borderTopLeftRadius: "24px",
+                  borderTopRightRadius: "24px",
+                  display: "block",
+                }}
+              />
+            </div> */}
             <button
               className="close-button"
               onClick={closeRegistrationForm}
@@ -358,211 +255,179 @@ const Home = () => {
                 right: "16px",
                 top: "16px",
                 background: "white",
-                border: "2px solid #f0f0f0",
+                border: "none",
                 borderRadius: "50%",
-                width: "36px",
-                height: "36px",
+                width: "32px",
+                height: "32px",
                 display: "flex",
                 alignItems: "center",
                 justifyContent: "center",
-                fontSize: "18px",
+                fontSize: "20px",
                 cursor: "pointer",
-                color: "#666",
-                transition: "all 0.3s ease",
-                zIndex: 10,
+                color: "#e67e22",
                 fontWeight: "bold",
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.borderColor = "#00BBFA";
-                e.target.style.color = "#00BBFA";
-                e.target.style.transform = "rotate(90deg)";
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.borderColor = "#f0f0f0";
-                e.target.style.color = "#666";
-                e.target.style.transform = "rotate(0deg)";
+                boxShadow: "0 2px 8px rgba(0,0,0,0.2)",
+                zIndex: 10,
               }}
             >
               ×
             </button>
-            {/* Left side - Image */}
-            <div style={{
-              flex: window.innerWidth <= 768 ? "none" : "1.2", // Increased flex for desktop
-              width: window.innerWidth <= 768 ? "100%" : "50%", // Increased width for desktop
-              display: window.innerWidth <= 768 ? "flex" : "block", // Flex for centering on mobile
-              justifyContent: "center",
-              alignItems: "center",
-              backgroundColor: window.innerWidth <= 768 ? "#f0f9ff" : "transparent", // Optional: slight background for mobile contrast
-            }}>
-              <img
-                src={formimg}
-                alt="Enquiry"
-                style={{
-                  display: "block",
-                  width: window.innerWidth <= 768 ? "auto" : "100%", // Auto width on mobile to maintain aspect ratio
-                  height: window.innerWidth <= 768 ? "250px" : "100%",
-                  maxHeight: window.innerWidth <= 768 ? "250px" : "none",
-                  objectFit: window.innerWidth <= 768 ? "contain" : "cover", // Contain for mobile to show full image
-                  objectPosition: "center",
-                }}
-              />
-            </div>
 
-            {/* Right side - Form */}
-            <div style={{
-              flex: window.innerWidth <= 768 ? "none" : "1.2",
-              padding: window.innerWidth <= 768 ? "24px 20px" : "40px",
-              width: "100%",
-              order: windowWidth <= 1024 ? "2" : "2",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: windowWidth <= 1024 ? "flex-start" : "center",
-              overflow: windowWidth <= 1024 ? "visible" : "visible",
-              minHeight: windowWidth <= 1024 ? "auto" : "auto",
-            }}>
-
-              {/* Form Content - Shared between desktop and mobile/tablet */}
-              {/* Header */}
-              <div style={{ marginBottom: windowWidth <= 768 ? "20px" : "25px", textAlign: "center" }}>
+            {/* Form Content */}
+            <div style={{ padding: windowWidth <= 768 ? "20px" : "30px" }}>
+              <div style={{ textAlign: "center", marginBottom: "25px" }}>
                 <h2 style={{
-                  fontSize: windowWidth <= 768 ? "22px" : "28px",
-                  fontWeight: "800",
-                  background: "linear-gradient(135deg, #00BBFA 0%, #0099D6 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                  marginBottom: "8px",
+                  fontSize: windowWidth <= 768 ? "20px" : "28px",
+                  fontWeight: "700",
+                  color: "#333",
+                  marginBottom: "5px",
                 }}>
-                  Book for Free Demo Class!
+                  Receive a Scholarship Discount Upto 100%
                 </h2>
-                <p style={{
-                  fontSize: windowWidth <= 768 ? "14px" : "15px",
-                  color: "#64748b",
-                  fontWeight: "500",
-                }}>
-                  Fill in your details and we'll reach out soon
-                </p>
               </div>
 
-              {/* Status Messages */}
               {submitStatus.message && (
-                <motion.div
-                  initial={{ opacity: 0, y: -10 }}
-                  animate={{ opacity: 1, y: 0 }}
+                <div
                   style={{
-                    padding: "12px 16px",
+                    padding: "12px",
                     borderRadius: "8px",
                     marginBottom: "20px",
                     textAlign: "center",
                     backgroundColor: submitStatus.type === 'success' ? '#10b981' : '#ef4444',
                     color: 'white',
-                    fontSize: windowWidth <= 768 ? "14px" : "15px",
                     fontWeight: "500",
                   }}
                 >
                   {submitStatus.message}
-                </motion.div>
+                </div>
               )}
 
-              <form
-                onSubmit={handleSubmit}
-                style={{
+              <form onSubmit={handleSubmit} style={{ display: "flex", flexDirection: "column", gap: "15px" }}>
+                <div style={{
                   display: "grid",
-                  gridTemplateColumns: "1fr",
-                  gap: window.innerWidth <= 768 ? "12px" : "14px",
-                }}
-              >
-                {/* Input fields */}
-                {[
-                  { name: "name", type: "text", placeholder: "Full Name", icon: "👤" },
-                  { name: "phone", type: "tel", placeholder: "Phone Number", icon: "📱" },
-                  { name: "email", type: "email", placeholder: "Email Address", icon: "✉️" },
-                  { name: "course", type: "text", placeholder: "Course", icon: "🎓" },
-                ].map((field, index) => (
-                  <div key={index} style={{ position: "relative" }}>
-                    <div style={{
-                      position: "absolute",
-                      left: "12px",
-                      top: "50%",
-                      transform: "translateY(-50%)",
-                      fontSize: "16px",
-                      opacity: "0.7",
-                    }}>
-                      {field.icon}
-                    </div>
-                    <input
-                      type={field.type}
-                      required
-                      placeholder={field.placeholder}
-                      style={{
-                        width: "100%",
-                        padding: window.innerWidth <= 768 ? "12px 12px 12px 40px" : "14px 14px 14px 44px",
-                        borderRadius: "10px",
-                        border: "2px solid #e2e8f0",
-                        fontSize: window.innerWidth <= 768 ? "14px" : "16px",
-                        outline: "none",
-                        transition: "all 0.3s ease",
-                        backgroundColor: "#f8fafc",
-                        fontWeight: "500",
-                      }}
-                      onFocus={(e) => {
-                        e.target.style.borderColor = "#00BBFA";
-                        e.target.style.backgroundColor = "#ffffff";
-                        e.target.style.transform = "translateY(-1px)";
-                        e.target.style.boxShadow = "0 4px 12px rgba(0,187,250,0.15)";
-                      }}
-                      onBlur={(e) => {
-                        e.target.style.borderColor = "#e2e8f0";
-                        e.target.style.backgroundColor = "#f8fafc";
-                        e.target.style.transform = "translateY(0)";
-                        e.target.style.boxShadow = "none";
-                      }}
-                      name={field.name}
-                      value={formData[field.name]}
-                      onChange={handleInputChange}
-                    />
-                  </div>
-                ))}
-                {/* Submit Button */}
-                <motion.button
+                  gridTemplateColumns: windowWidth <= 640 ? "1fr" : "1fr 1fr",
+                  gap: "15px",
+                }}>
+                  <input
+                    type="text"
+                    name="name"
+                    placeholder="Name"
+                    required
+                    value={formData.name}
+                    onChange={handleInputChange}
+                    style={inputStyle}
+                  />
+                  <input
+                    type="email"
+                    name="email"
+                    placeholder="Email"
+                    required
+                    value={formData.email}
+                    onChange={handleInputChange}
+                    style={inputStyle}
+                  />
+                  <input
+                    type="tel"
+                    name="phone"
+                    placeholder="Phone Number"
+                    required
+                    value={formData.phone}
+                    onChange={handleInputChange}
+                    style={inputStyle}
+                  />
+                  <input
+                    type="text"
+                    name="age"
+                    placeholder="Age"
+                    value={formData.age}
+                    onChange={handleInputChange}
+                    style={inputStyle}
+                  />
+                  <input
+                    type="text"
+                    name="qualification"
+                    placeholder="Qualification"
+                    value={formData.qualification}
+                    onChange={handleInputChange}
+                    style={inputStyle}
+                  />
+                  <input
+                    type="text"
+                    name="location"
+                    placeholder="Location"
+                    value={formData.location}
+                    onChange={handleInputChange}
+                    style={inputStyle}
+                  />
+                </div>
+
+                <select
+                  name="course"
+                  required
+                  value={formData.course}
+                  onChange={handleInputChange}
+                  style={{ ...inputStyle, width: "100%" }}
+                >
+                  <option value="">Select Course</option>
+                  <optgroup label="AAPC Courses">
+                    <option value="CPC">CPC (Certified Professional Coder)</option>
+                    <option value="CIC">CIC (Certified Inpatient Coder)</option>
+                    <option value="COC">COC (Certified Outpatient Coder)</option>
+                    <option value="CPMA">CPMA (Certified Professional Medical Auditor)</option>
+                    <option value="CRC">CRC (Certified Risk Adjustment Coder)</option>
+                    <option value="CPB">CPB (Certified Professional Biller)</option>
+                    <option value="CEDC">CEDC (Certified Emergency Department Coder)</option>
+                    <option value="CEMC">CEMC (Certified Evaluation and Management Coder)</option>
+                    <option value="CDEO">CDEO (Certified Documentation Expert — Outpatient)</option>
+                    <option value="CDEI">CDEI (Certified Documentation Expert — Inpatient)</option>
+                    <option value="CPPM">CPPM (Certified Physician Practice Manager)</option>
+                  </optgroup>
+                  <optgroup label="Specialty Training">
+                    <option value="SURGERY">SURGERY</option>
+                    <option value="ED">ED (Emergency Department)</option>
+                    <option value="EM">EM (Evaluation and Management)</option>
+                    <option value="RADIOLOGY">RADIOLOGY</option>
+                    <option value="ANESESTHESIA">ANESESTHESIA</option>
+                    <option value="IP-DRG">IP DRG</option>
+                    <option value="HCC">HCC (Hierarchical Condition Category)</option>
+                    <option value="IVR">IVR (Interventional Radiology)</option>
+                  </optgroup>
+                  <optgroup label="AHIMA Courses">
+                    <option value="CCS">CCS (Certified Coding Specialist)</option>
+                    <option value="CCS-P">CCS-P (Certified Coding Specialist – Physician-based)</option>
+                    <option value="RHIA">RHIA (Registered Health Information Administrator)</option>
+                    <option value="RHIT">RHIT (Registered Health Information Technician)</option>
+                  </optgroup>
+                  <optgroup label="HIMAA Courses">
+                    <option value="CCC">CCC</option>
+                    <option value="HIM">HIM (Healthcare Information Management)</option>
+                  </optgroup>
+                  <option value="OTHER">Other Courses</option>
+                </select>
+
+                <button
                   type="submit"
-                  whileHover={{ scale: isSubmitting ? 1 : 1.02 }}
-                  whileTap={{ scale: isSubmitting ? 1 : 0.98 }}
                   disabled={isSubmitting}
                   style={{
-                    gridColumn: "1 / -1",
-                    padding: windowWidth <= 768 ? "12px 24px" : "14px 32px",
-                    background: isSubmitting ? "#94a3b8" : "linear-gradient(135deg, #00BBFA 0%, #0099D6 100%)",
-                    color: "white",
+                    backgroundColor: isSubmitting ? "#ccc" : "#f1c40f",
+                    color: "#000",
                     border: "none",
-                    borderRadius: "10px",
-                    fontSize: windowWidth <= 768 ? "15px" : "16px",
+                    borderRadius: "50px",
+                    padding: "15px 30px",
+                    fontSize: "18px",
                     fontWeight: "700",
                     cursor: isSubmitting ? "not-allowed" : "pointer",
-                    marginTop: windowWidth <= 768 ? "8px" : "12px",
-                    boxShadow: isSubmitting ? "none" : "0 4px 15px rgba(0,187,250,0.3)",
-                    position: "relative",
-                    overflow: "hidden",
-                    opacity: isSubmitting ? 0.7 : 1,
+                    marginTop: "20px",
+                    alignSelf: "center",
+                    boxShadow: "0 4px 14px rgba(241, 196, 15, 0.4)",
+                    width: windowWidth <= 640 ? "100%" : "auto",
                     transition: "all 0.3s ease",
                   }}
                 >
-                  <span style={{ position: "relative", zIndex: 1 }}>
-                    {isSubmitting ? (
-                      <>
-                        <span style={{ display: "inline-block", marginRight: "8px" }}>
-                          ⏳
-                        </span>
-                        Submitting...
-                      </>
-                    ) : (
-                      'Register Now '
-                    )}
-                  </span>
-                </motion.button>
+                  {isSubmitting ? "Submitting..." : "Book a Free Demo Class!"}
+                </button>
               </form>
             </div>
-            {/* No right visual panel in new design */}
           </motion.div>
         </motion.div>
       )}

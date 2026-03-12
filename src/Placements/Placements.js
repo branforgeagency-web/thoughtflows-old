@@ -5,6 +5,7 @@ import { placementData } from './placementData';
 import PlacementsCompanies from './PlacementsCompanies';
 import DiscountBanner from './DiscountBanner';
 import Marquee from 'react-fast-marquee';
+import { Link } from 'react-router-dom';
 
 const Placements = () => {
     // Split 2026 students
@@ -23,7 +24,7 @@ const Placements = () => {
             <section className="placements-banner">
                 <div className="placements-banner-content">
                     <h1 className="placements-banner-title">{placementData.banner.title}</h1>
-                    <p className="placements-banner-subtitle">{placementData.banner.subtitle}</p>
+                    {placementData.banner.subtitle && <p className="placements-banner-subtitle">{placementData.banner.subtitle}</p>}
                 </div>
                 <div className="placements-banner-overlay"></div>
             </section>
@@ -31,6 +32,7 @@ const Placements = () => {
             {/* Introduction Section */}
             <section className="placements-intro">
                 <div className="container">
+                    <h2 className="placements-intro-title">{placementData.introduction.title}</h2>
                     <p className="placements-intro-text">{placementData.introduction.text}</p>
                 </div>
             </section>
@@ -104,6 +106,28 @@ const Placements = () => {
                         </Marquee>
                     </div>
 
+                </div>
+            </section>
+
+            {/* Yearly Records Navigation Section */}
+            <section className="yearly-records-nav">
+                <div className="container text-center">
+                    <h2 className="section-title">Previous Year Placements</h2>
+                    <p className="yearly-nav-subtitle">Explore our success stories from previous years</p>
+                    <div className="yearly-links-container">
+                        <Link to="/placements/2024" className="yearly-link-card">
+                            <span className="year-value">2024</span>
+                            <span className="record-count">500+ Placed</span>
+                        </Link>
+                        <Link to="/placements/2023" className="yearly-link-card">
+                            <span className="year-value">2023</span>
+                            <span className="record-count">500+ Placed</span>
+                        </Link>
+                        <Link to="/placements/2022" className="yearly-link-card">
+                            <span className="year-value">2022</span>
+                            <span className="record-count">Success Stories</span>
+                        </Link>
+                    </div>
                 </div>
             </section>
 

@@ -7,9 +7,12 @@
 /* Banner Section */
 .placements-banner {
     position: relative;
-    height: 60vh;
-    min-height: 400px;
-    background-image: linear-gradient(135deg, #0b3a66 0%, #06b6d4 100%);
+    height: 50vh;
+    min-height: 350px;
+    background-image: url('../images/homebannerbg.png');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -37,17 +40,27 @@
 
 /* Introduction Section */
 .placements-intro {
-    padding: 80px 20px;
+    padding: 60px 20px;
     text-align: center;
-    background-color: #f9f9f9;
+    background-color: #ffffff;
+}
+
+.placements-intro-title {
+    font-size: 2.2rem;
+    color: #10aeb8;
+    font-weight: 700;
+    margin-bottom: 25px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .placements-intro-text {
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
-    font-size: 1.2rem;
+    font-size: 1.15rem;
     line-height: 1.8;
-    color: #555;
+    color: #444;
 }
 
 /* Placed Students Section - Marquee */
@@ -315,3 +328,173 @@
         width: 260px;
     }
 }
+
+/* Yearly Records Navigation */
+.yearly-records-nav {
+    padding: 60px 0;
+    background-color: #f8f9fa;
+}
+
+.yearly-nav-subtitle {
+    color: #666;
+    margin-bottom: 40px;
+    font-size: 1.1rem;
+}
+
+.yearly-links-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.yearly-link-card {
+    background: white;
+    padding: 30px 50px;
+    border-radius: 15px;
+    text-decoration: none;
+    color: #333;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 200px;
+    border: 1px solid #eee;
+}
+
+.yearly-link-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 40px rgba(44, 62, 80, 0.15);
+    border-color: #2c3e50;
+    color: #2c3e50;
+}
+
+.year-value {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 5px;
+    color: #2c3e50;
+}
+
+.record-count {
+    font-size: 0.9rem;
+    color: #27ae60;
+    font-weight: 600;
+}
+
+/* Yearly Placement List Page */
+.yearly-placements-page {
+    padding: 100px 0 60px;
+    background-color: #fff;
+    min-height: 80vh;
+}
+
+.btn-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: #2c3e50;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 30px;
+    transition: color 0.3s;
+}
+
+.btn-back:hover {
+    color: #3498db;
+}
+
+.btn-back i {
+    font-size: 0.9rem;
+}
+
+.year-title {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    font-weight: 800;
+    margin-bottom: 40px;
+    text-align: center;
+}
+
+.table-responsive {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.placement-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 40px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    background: white;
+}
+
+.placement-table th {
+    background-color: #2c3e50;
+    color: white;
+    padding: 18px 20px;
+    text-align: left;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    letter-spacing: 1px;
+}
+
+.placement-table td {
+    padding: 15px 20px;
+    border-bottom: 1px solid #eee;
+    color: #444;
+}
+
+.placement-table tr:last-child td {
+    border-bottom: none;
+}
+
+.placement-table tr:hover {
+    background-color: #f9fbff;
+}
+
+.no-data {
+    text-align: center;
+    padding: 50px;
+    color: #888;
+    font-style: italic;
+    background: #f8f9fa;
+    border-radius: 15px;
+}
+
+@media (max-width: 991px) {
+    .yearly-link-card {
+        padding: 25px 40px;
+        min-width: 180px;
+    }
+}
+
+@media (max-width: 768px) {
+    .yearly-placements-page {
+        padding: 80px 0 40px;
+    }
+
+    .yearly-link-card {
+        width: 100%;
+        padding: 20px;
+    }
+    
+    .year-value {
+        font-size: 2rem;
+    }
+
+    .year-title {
+        font-size: 1.8rem;
+        margin-bottom: 30px;
+    }
+
+    .placement-table th, .placement-table td {
+        padding: 12px 15px;
+        font-size: 0.85rem;
+    }
+}

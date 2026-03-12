@@ -61,14 +61,14 @@
 //                     <Col xs={12} md={3} className="text-center">
 //                         {/* <img src={counter1img} alt="Training Icon" className="mb-3" /> */}
 //                         <p style={{ color: '#FFC100', fontWeight: '700', fontSize: '30px', margin: 0 }}>
-//                             <CountUp start={0} end={30000} separator="," />+
+//                             <CountUp start={0} end={35000} separator="," />+
 //                         </p>
 //                         <p style={{ fontWeight: '500', fontSize: '20px', marginTop: 0 }}>Training</p>
 //                     </Col>
 //                     <Col xs={12} md={3} className="text-center">
 //                         {/* <img src={counter2img} alt="Placement Icon" className="mb-3" /> */}
 //                         <p style={{ color: '#F15BB5', fontWeight: '700', fontSize: '30px', margin: 0 }}>
-//                             <CountUp start={0} end={25000} separator="," />+
+//                             <CountUp start={0} end={35000} separator="," />+
 //                         </p>
 //                         <p style={{ fontWeight: '500', fontSize: '20px', marginTop: 0 }}>Placement</p>
 //                     </Col>
@@ -198,7 +198,7 @@ const TirupathiBanner = () => {
                     margin: 0,
                     lineHeight: '1.2'
                   }}>
-                    <CountUp start={0} end={30000} separator="," />+
+                    <CountUp start={0} end={35000} separator="," />+
                   </p>
                   <p style={{ 
                     fontWeight: '500', 
@@ -217,7 +217,7 @@ const TirupathiBanner = () => {
                     margin: 0,
                     lineHeight: '1.2'
                   }}>
-                    <CountUp start={0} end={25000} separator="," />+
+                    <CountUp start={0} end={35000} separator="," />+
                   </p>
                   <p style={{ 
                     fontWeight: '500', 

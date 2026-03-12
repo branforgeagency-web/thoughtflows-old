@@ -93,7 +93,7 @@ import kathleen from "../images/Profile images/blazer pic/kathleen - HR Executiv
 import PriyadharshiniR from "../images/Profile images/blazer pic/Priyadharshini - HR Executive.webp"
 import SangaviP from "../images/Profile images/blazer pic/Sangavi - HR Executive.webp"
 import Megha from "../images/Profile images/blazer pic/Megha-TALENT ACQUISITION EXECUTIVE.png"
-import Karthick from "../images/Profile images/blazer pic/Karthick - DM Executive.webp"
+
 import Pranav from "../images/Profile images/blazer pic/Pranav - DM Executive.webp"
 import Chandu from "../images/Profile images/blazer pic/Chandu-ODM Executive.png"
 import Sharon from "../images/Profile images/blazer pic/Sharon Roopavathy - Trainer.webp"
@@ -251,7 +251,7 @@ const teamMemberData = [
   { "name": "Kowsikan", "role": "DIGITAL MARKETING EXECUTIVE", "phone": "", "email": "", "Branch": "", "image": Kowsikan },
   { "name": "Kiruthika", "role": "DIGITAL MARKETING EXECUTIVE", "phone": "", "email": "", "Branch": "", "image": Kiruthika },
   { "name": "Ram Kumar", "role": "DIGITAL MARKETING EXECUTIVE", "phone": "", "email": "", "Branch": "", "image": kumar },
-  { "name": "Karthick ", "role": "DIGITAL MARKETING EXECUTIVE", "phone": "", "email": "", "Branch": "", "image": Karthick },
+
   { "name": "Deepak Kumar Pujari", "role": "DIGITAL MARKETING EXECUTIVE", "phone": "", "email": "", "Branch": "", "image": DeepkKumarPujari },
   { "name": "Santhosh", "role": "DIGITAL MARKETING EXECUTIVE", "phone": "", "email": "", "Branch": "", "image": Santhosh },
   { "name": "Sreenath Reddy", "role": "TECHNICAL AND MARKETING EXECUTIVE", "phone": "63058 39325", "email": "sreenathr@thoghtflows.in", "Branch": "", "image": Sreenath },
@@ -285,7 +285,7 @@ const teamStructure = [
   { role: "FINANCE MANAGER", count: 1 },
   { role: "HR EXECUTIVE", count: 24 },
   { role: "TALENT ACQUISITION EXECUTIVE", count: 4 },
-  { role: "DIGITAL MARKETING EXECUTIVE", count: 8 },
+  { role: "DIGITAL MARKETING EXECUTIVE", count: 7 },
   { role: "MANAGEMENT INFORMATION SYSTEM EXECUTIVE", count: 3 },
   { role: "OUTDOOR MARKETING EXECUTIVE", count: 3 },
 

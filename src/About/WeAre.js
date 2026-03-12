@@ -39,7 +39,7 @@ function WeAre() {
             Thought Flows has witnessed remarkable growth over the years.
             Today, we proudly operate Twelve branches across India, catering to
             the needs of aspiring medical coders nationwide. With a proven
-            track record of success, we have trained over 30,000+ individuals,
+            track record of success, we have trained over 35,000+ individuals,
             empowering them with the knowledge and skills required to thrive
             in this competitive field.
           </p>
