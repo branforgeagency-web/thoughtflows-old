@@ -1,53 +1,181 @@
-import React from 'react'
-import { Form } from 'react-bootstrap'
+import React, { useState, useContext } from 'react';
+import { PopupContext } from '../context/PopupContext';
+import emailjs from '@emailjs/browser';
+import './RegisterPopup.css';
+import { coursesList } from '../coursesList';
 
 const RegisterPopupForm = () => {
+    const { isOpen, setIsOpen } = useContext(PopupContext);
+    const [isSubmitting, setIsSubmitting] = useState(false);
+    const [isSuccess, setIsSuccess] = useState(false);
+    const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        phone: '',
+        age: '',
+        qualification: '',
+        location: '',
+        course: '',
+        message: ''
+    });
+
+    if (!isOpen) return null;
+
+    const handleClose = (e) => {
+        if (e) e.preventDefault();
+        setIsOpen(false);
+        setTimeout(() => {
+            setIsSuccess(false);
+            setFormData({ 
+                name: '', email: '', phone: '', age: '', 
+                qualification: '', location: '', course: '', message: '' 
+            });
+        }, 500);
+    };
+
+    const handleInputChange = (e) => {
+        const { name, value } = e.target;
+        setFormData(prev => ({ ...prev, [name]: value }));
+    };
+
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        try {
+            const templateParams = {
+                to_email: 'info@thoughtflows.in',
+                from_name: formData.name,
+                from_email: formData.email,
+                phone: formData.phone,
+                age: formData.age,
+                qualification: formData.qualification,
+                location: formData.location,
+                course: formData.course,
+                message: formData.message,
+                subject: `Registration from Website Popup - ${formData.name}`,
+                full_message: `
+                    New Registration from Website Popup:
+                    
+                    Name: ${formData.name}
+                    Email: ${formData.email}
+                    Phone: ${formData.phone}
+                    Age: ${formData.age}
+                    Qualification: ${formData.qualification}
+                    Location: ${formData.location}
+                    Course: ${formData.course}
+                    Message: ${formData.message}
+                `
+            };
+
+            await emailjs.send(
+                'service_2anzqj9',
+                'template_vx3lkna',
+                templateParams,
+                "KLhirNBaXDhIlDonK"
+            );
+
+            setIsSuccess(true);
+            setTimeout(() => {
+                handleClose();
+            }, 3000);
+        } catch (error) {
+            console.error('Failed to send email:', error);
+            alert('Something went wrong. Please try again.');
+        } finally {
+            setIsSubmitting(false);
+        }
+    };
+
     return (
-        <>
-            <div class="cd-popup contact" role="alert">
-                <Form name="contactform" id="contactform" class="contact-form">
-                    <div class="cd-popup-container" style="">
-                        <p style="">
-                            <a href="" class="cd-popup-close cd-close-button">
-                                <i class="fa fa-times" style="pointer-events:none;"></i>
-                            </a>
-                        </p>
+        <div className="register-popup-overlay" onClick={handleClose}>
+            <div className="register-popup-container" onClick={e => e.stopPropagation()}>
+                <button className="popup-close-btn" onClick={handleClose}>
+                    <i className="fa fa-times"></i>
+                </button>
 
-                        <div class="name">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" />
-                        </div>
-                        <div class="email">
-                            <label for="email">Email</label>
-                            <input type="text" id="email" name="email" />
-                        </div>
-                        <div class="message">
-                            <label for="message">Message</label>
-                            <textarea name="message" id="message"></textarea>
+                {!isSuccess ? (
+                    <>
+                        <div className="popup-header">
+                            <h2>Get a Free Demo Class</h2>
+                            <p>Register now to receive a scholarship discount up to 100%!</p>
                         </div>
 
-                        <div style="text-align:left">
-                            <input type="checkbox" id="human" name="human" />
-                            <label for="human">I am a human and not a robot.</label>
-                        </div>
+                        <form className="popup-form" onSubmit={handleSubmit}>
+                            <div className="row g-3">
+                                <div className="col-md-6">
+                                    <div className="input-group">
+                                        <label>Full Name</label>
+                                        <input type="text" name="name" value={formData.name} onChange={handleInputChange} required placeholder="Name" />
+                                    </div>
+                                </div>
+                                <div className="col-md-6">
+                                    <div className="input-group">
+                                        <label>Email Address</label>
+                                        <input type="email" name="email" value={formData.email} onChange={handleInputChange} required placeholder="Email" />
+                                    </div>
+                                </div>
+                                <div className="col-md-6">
+                                    <div className="input-group">
+                                        <label>Phone Number</label>
+                                        <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} required placeholder="Phone" />
+                                    </div>
+                                </div>
+                                <div className="col-md-6">
+                                    <div className="input-group">
+                                        <label>Age</label>
+                                        <input type="text" name="age" value={formData.age} onChange={handleInputChange} placeholder="Age" />
+                                    </div>
+                                </div>
+                                <div className="col-md-6">
+                                    <div className="input-group">
+                                        <label>Qualification</label>
+                                        <input type="text" name="qualification" value={formData.qualification} onChange={handleInputChange} placeholder="Qualification" />
+                                    </div>
+                                </div>
+                                <div className="col-md-6">
+                                    <div className="input-group">
+                                        <label>Location</label>
+                                        <input type="text" name="location" value={formData.location} onChange={handleInputChange} placeholder="Your City" />
+                                    </div>
+                                </div>
+                            </div>
 
-                        <div class="submit">
-                            <p class="user-message" id="contactblurb"> Questions, suggestions, and general comments are all welcome!</p>
-                            <input type="submit" name="submit" id="submit" value="Send" />
+                            <div className="input-group">
+                                <label>Interested Course</label>
+                                <select name="course" value={formData.course} onChange={handleInputChange} required>
+                                    <option value="">Select Course</option>
+                                    {coursesList.map((group) => (
+                                        <optgroup key={group.category} label={group.category}>
+                                            {group.courses.map(course => (
+                                                <option key={course} value={course}>{course}</option>
+                                            ))}
+                                        </optgroup>
+                                    ))}
+                                    <option value="OTHER">Other</option>
+                                </select>
+                            </div>
+
+                            <button type="submit" className="submit-btn" disabled={isSubmitting}>
+                                {isSubmitting ? 'Submitting...' : 'Book Free Demo Now'}
+                            </button>
+                        </form>
+                    </>
+                ) : (
+                    <div className="success-content">
+                        <div className="success-icon">
+                            <i className="fa fa-check"></i>
                         </div>
+                        <h2>Submission Successful!</h2>
+                        <p>We've received your request. Our team will contact you shortly to schedule your free demo class.</p>
+                        <button className="submit-btn w-100 mt-4" onClick={handleClose}>
+                            Awesome!
+                        </button>
                     </div>
-                </Form>
+                )}
             </div>
-            <div class="cd-popup notification" role="alert">
-                <div class="cd-popup-container">
-                    <a href="" class="cd-popup-close cd-close-button"><i class="fa fa-times" style="pointer-events:none;"></i></a>
-                    <p>
-                        <h3 id="notification-text">Thanks for getting in touch!</h3>
-                    </p>
-                </div>
-            </div>
-        </>
-    )
-}
+        </div>
+    );
+};
 
-export default RegisterPopupForm
+export default RegisterPopupForm;

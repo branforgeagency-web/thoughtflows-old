@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './DiscountBanner.css';
 import studentImage from '../images/form-img.jpg'; // Adjust path if needed
 import emailjs from '@emailjs/browser';
+import { coursesList } from '../coursesList';
 
 const DiscountBanner = () => {
     const [formData, setFormData] = useState({
@@ -72,7 +73,7 @@ const DiscountBanner = () => {
             console.log('Email sent successfully:', response);
             setSubmitStatus({
                 type: 'success',
-                message: 'Offer claimed! Check your email/phone for details.'
+                message: 'Offer Claimed!'
             });
             setFormData({ name: '', ph: '', email: '', interestedCourse: '', preferredBranch: '' });
 
@@ -115,57 +116,82 @@ const DiscountBanner = () => {
                                 {submitStatus.message}
                             </div>
                         )}
-                        <form className="discount-form" onSubmit={handleSubmit}>
-                            <input
-                                type="text"
-                                name="name"
-                                value={formData.name}
-                                onChange={handleInputChange}
-                                placeholder="Enter Your Name"
-                                className="discount-input"
-                                required
-                            />
-                            <input
-                                type="tel"
-                                name="ph"
-                                value={formData.ph}
-                                onChange={handleInputChange}
-                                placeholder="Enter Mobile Number"
-                                className="discount-input"
-                                required
-                            />
-                            <input
-                                type="email"
-                                name="email"
-                                value={formData.email}
-                                onChange={handleInputChange}
-                                placeholder="Enter Your Email Id"
-                                className="discount-input"
-                                required
-                            />
-                            <input
-                                type="text"
-                                name="interestedCourse"
-                                value={formData.interestedCourse}
-                                onChange={handleInputChange}
-                                placeholder="Enter your Interested Course"
-                                className="discount-input"
-                            />
-                            <select
-                                name="preferredBranch"
-                                value={formData.preferredBranch}
-                                onChange={handleInputChange}
-                                className="discount-input discount-select"
-                            >
-                                <option value="" disabled>Preferred Branch</option>
-                                {branches.map((branch, index) => (
-                                    <option key={index} value={branch}>{branch}</option>
-                                ))}
-                            </select>
-                            <button type="submit" className="discount-submit-btn" disabled={isSubmitting}>
-                                {isSubmitting ? 'Submitting...' : 'Submit'}
-                            </button>
-                        </form>
+                        {submitStatus.type === 'success' ? (
+                            <div className="offer-claimed-success">
+                                <div className="success-circle">
+                                    <i className="fa fa-check"></i>
+                                </div>
+                                <h3 className="claimed-text">OFFER CLAIMED!</h3>
+                                <p className="claimed-subtext">Our team will contact you shortly to process your discount.</p>
+                                <button 
+                                    className="reset-form-btn" 
+                                    onClick={() => setSubmitStatus({ type: '', message: '' })}
+                                >
+                                    Submit Another Inquiry
+                                </button>
+                            </div>
+                        ) : (
+                            <form className="discount-form" onSubmit={handleSubmit}>
+                                <input
+                                    type="text"
+                                    name="name"
+                                    value={formData.name}
+                                    onChange={handleInputChange}
+                                    placeholder="Enter Your Name"
+                                    className="discount-input"
+                                    required
+                                />
+                                <input
+                                    type="tel"
+                                    name="ph"
+                                    value={formData.ph}
+                                    onChange={handleInputChange}
+                                    placeholder="Enter Mobile Number"
+                                    className="discount-input"
+                                    required
+                                />
+                                <input
+                                    type="email"
+                                    name="email"
+                                    value={formData.email}
+                                    onChange={handleInputChange}
+                                    placeholder="Enter Your Email Id"
+                                    className="discount-input"
+                                    required
+                                />
+                                <select
+                                    name="interestedCourse"
+                                    value={formData.interestedCourse}
+                                    onChange={handleInputChange}
+                                    className="discount-input discount-select"
+                                    required
+                                >
+                                    <option value="" disabled>Interested Course</option>
+                                    {coursesList.map((group) => (
+                                        <optgroup key={group.category} label={group.category}>
+                                            {group.courses.map(course => (
+                                                <option key={course} value={course}>{course}</option>
+                                            ))}
+                                        </optgroup>
+                                    ))}
+                                    <option value="OTHER">Other</option>
+                                </select>
+                                <select
+                                    name="preferredBranch"
+                                    value={formData.preferredBranch}
+                                    onChange={handleInputChange}
+                                    className="discount-input discount-select"
+                                >
+                                    <option value="" disabled>Preferred Branch</option>
+                                    {branches.map((branch, index) => (
+                                        <option key={index} value={branch}>{branch}</option>
+                                    ))}
+                                </select>
+                                <button type="submit" className="discount-submit-btn" disabled={isSubmitting}>
+                                    {isSubmitting ? 'Submitting...' : 'Claim Offer Now'}
+                                </button>
+                            </form>
+                        )}
                     </div>
                 </div>
 

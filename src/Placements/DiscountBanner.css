@@ -177,3 +177,59 @@
         object-position: top;
     }
 }
+
+/* Success State Styles */
+.offer-claimed-success {
+    text-align: center;
+    padding: 20px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.success-circle {
+    width: 60px;
+    height: 60px;
+    background-color: #E65100;
+    color: white;
+    border-radius: 50%;
+    margin: 0 auto 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    box-shadow: 0 4px 15px rgba(230, 81, 0, 0.3);
+}
+
+.claimed-text {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #E65100;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.claimed-subtext {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+.reset-form-btn {
+    padding: 8px 20px;
+    background-color: transparent;
+    border: 1px solid #ccc;
+    color: #777;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 0.85rem;
+}
+
+.reset-form-btn:hover {
+    background-color: #eee;
+    color: #333;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

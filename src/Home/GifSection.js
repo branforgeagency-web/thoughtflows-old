@@ -18,7 +18,7 @@ const GifSection = () => {
             </Col>
             <Col lg={4} md={12} className='section-1 justify-content-center'>
                 <img src={gif3} alt='gif3' className='gif3' />
-                <p>8+ Years of Experience</p>
+                <p>9+ Years of Experience</p>
             </Col>
         </Row>
 

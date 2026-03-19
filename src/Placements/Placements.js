@@ -24,8 +24,21 @@ const Placements = () => {
             <section className="placements-banner">
                 <div className="placements-banner-content">
                     <h1 className="placements-banner-title">{placementData.banner.title}</h1>
-                    {placementData.banner.subtitle && <p className="placements-banner-subtitle">{placementData.banner.subtitle}</p>}
+                    <p className="placements-banner-subtitle">{placementData.banner.subtitle}</p>
+                    
+                    <div className="banner-stats-grid">
+                        {placementData.stats.map((stat, index) => (
+                            <div key={index} className="banner-stat-item">
+                                <span className="stat-value">{stat.value}</span>
+                                <span className="stat-label">{stat.label}</span>
+                            </div>
+                        ))}
+                    </div>
                 </div>
+                
+                {/* Decorative floating students icons could go here */}
+                <div className="banner-decor-blob blob-1"></div>
+                <div className="banner-decor-blob blob-2"></div>
                 <div className="placements-banner-overlay"></div>
             </section>
 
@@ -117,11 +130,11 @@ const Placements = () => {
                     <div className="yearly-links-container">
                         <Link to="/placements/2024" className="yearly-link-card">
                             <span className="year-value">2024</span>
-                            <span className="record-count">500+ Placed</span>
+                            <span className="record-count">Success Stories</span>
                         </Link>
                         <Link to="/placements/2023" className="yearly-link-card">
                             <span className="year-value">2023</span>
-                            <span className="record-count">500+ Placed</span>
+                            <span className="record-count">Success Stories</span>
                         </Link>
                         <Link to="/placements/2022" className="yearly-link-card">
                             <span className="year-value">2022</span>

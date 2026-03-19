@@ -1,6 +1,6 @@
 import React from "react";
 import bannerImage from "../../images/homebannerbg.png";
-import kochi from "../../images/Branches/Pic 4.webp";
+import kochi from "../../images/Branches/updated/Kochi.png";
 import banner2 from "../../images/Branches/lapgirl.png";
 // import cbe1banner from '../../images/Branches/cbe1bannerRight.png'
 import { Container, Row } from "react-bootstrap";
@@ -119,7 +119,7 @@ const KochiBanner = () => {
                     margin: 0,
                     lineHeight: '1.2'
                   }}>
-                    <CountUp start={0} end={35000} separator="," />+
+                    <CountUp start={0} end={25000} separator="," />+
                   </p>
                   <p style={{ 
                     fontWeight: '500', 

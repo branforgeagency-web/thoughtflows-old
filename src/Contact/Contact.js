@@ -57,7 +57,7 @@ function Contact() {
     {
       name: 'Gandhipuram',
       email: 'info@thoughtflows.in',
-      phone: '+91 9384576852',
+      phone: '+91 9655079784, +91 9384576852',
       address: 'Jay Enclave, 1084, 3rd Street, Cross Cut Road, Gandhipuram, Tamil Nadu 641012',
     },
     {
@@ -87,13 +87,13 @@ function Contact() {
     {
       name: 'Trichy',
       email: 'info@thoughtflows.in',
-      phone: '+91 9384576852',
+      phone: '+91 8438974736, +91 9384576852',
       address: '25 ,C-40,first floor ,AMIL towers, 3rd cross, Thillai nagar east, Trichy, Tamil Nadu 620018',
     },
     {
       name: 'Salem',
       email: 'info@thoughtflows.in',
-      phone: '+91 9384576852',
+      phone: '+91 8148732017',
       address: '1st floor, S Square Towers, Omalur Main Rd, Arthanari Nagar, Mamangam, Salem, Tamil Nadu 636302',
     },
     {
