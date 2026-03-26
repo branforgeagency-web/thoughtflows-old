@@ -16,6 +16,7 @@ import Companies from "./Companies";
 import { PopupContext } from "../context/PopupContext";
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser';
+import RegisterPopupForm from "../Forms/RegisterPopupForm";
 
 const inputStyle = {
   width: "100%",
@@ -53,11 +54,11 @@ const Home = () => {
     // For production, use environment variables instead:
     // emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
 
-    // const timer = setTimeout(() => {
-    //   setShowPosterPopup(true); // After 5 seconds, show poster popup
-    // }, 5000);
-
-    // return () => clearTimeout(timer); // Cleanup timer on unmount
+    const timer = setTimeout(() => {
+      setIsOpen(true);
+    }, 4000); // After 4 seconds, show registration popup
+    
+    return () => clearTimeout(timer); // Cleanup timer on unmount
   }, []);
 
   // Add resize listener for dynamic responsiveness
@@ -269,6 +270,7 @@ const Home = () => {
           <GoogleRev />
         </motion.div>
       </div>
+      <RegisterPopupForm />
       {/* <FloatingIcons/> */}
     </>
   );

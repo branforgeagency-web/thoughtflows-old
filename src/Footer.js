@@ -12,7 +12,7 @@ const Footer = () => {
 
     const excludedPaths = ['/about', '/ourteam', '/contact', "/blog", "/blog1", "/blog2", "/blog3", "/blog4", "/blog5", "/blog6", "/blog7", "/cpc", "/cic", "/coc", "/cpma", "/crc", "/surgery", "/cbe-1", "/trichy", "/tirupathi", "/trivandrum", "/cbe-2", "/hyderabad", "/kochi", "/ed", "/em", "/radiology", "/anaesthesia", "/ip-drug", "/ccs", "/ccsp", "/rhia", "/rhit", "/clinical-coder", "/him"];
 
-    const showSmallFooter = !excludedPaths.includes(location.pathname);
+    const showSmallFooter = location.pathname === '/' || location.pathname === '/home';
 
     const handleRegisterClick = (e) => {
         e.preventDefault();

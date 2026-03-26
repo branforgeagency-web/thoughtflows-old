@@ -1,6 +1,6 @@
 import React from "react";
 import bannerImage from "../../images/homebannerbg.png";
-import kochi from "../../images/Branches/updated/Kochi.png";
+import kochi from "../../images/Branches/kochi branch.png";
 import banner2 from "../../images/Branches/lapgirl.png";
 // import cbe1banner from '../../images/Branches/cbe1bannerRight.png'
 import { Container, Row } from "react-bootstrap";

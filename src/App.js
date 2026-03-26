@@ -59,7 +59,7 @@ import { PopupProvider } from './context/PopupContext';
 import FloatingIcons from './FloatingIcons';
 import Placements from './Placements/Placements';
 import YearlyPlacementList from './Placements/YearlyPlacementList';
-import RegisterPopupForm from './Forms/RegisterPopupForm';
+
 
 function App() {
 
@@ -70,7 +70,6 @@ function App() {
 
           <Header />
           <FloatingIcons />
-          <RegisterPopupForm />
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<About />} />
