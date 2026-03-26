@@ -4,6 +4,8 @@ import emailjs from '@emailjs/browser';
 import './RegisterPopup.css';
 import { coursesList } from '../coursesList';
 
+import RegisterBanner from '../images/register - top banner.jpeg';
+
 const RegisterPopupForm = () => {
     const { isOpen, setIsOpen } = useContext(PopupContext);
     const [isSubmitting, setIsSubmitting] = useState(false);
@@ -96,70 +98,68 @@ const RegisterPopupForm = () => {
 
                 {!isSuccess ? (
                     <>
-                        <div className="popup-header">
-                            <h2>Get a Free Demo Class</h2>
-                            <p>Register now to receive a scholarship discount up to 100%!</p>
+                        <div className="popup-banner">
+                            <img src={RegisterBanner} alt="Register Banner" className="img-fluid" />
                         </div>
 
-                        <form className="popup-form" onSubmit={handleSubmit}>
-                            <div className="row g-3">
-                                <div className="col-md-6">
-                                    <div className="input-group">
-                                        <label>Full Name</label>
-                                        <input type="text" name="name" value={formData.name} onChange={handleInputChange} required placeholder="Name" />
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="input-group">
-                                        <label>Email Address</label>
-                                        <input type="email" name="email" value={formData.email} onChange={handleInputChange} required placeholder="Email" />
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="input-group">
-                                        <label>Phone Number</label>
-                                        <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} required placeholder="Phone" />
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="input-group">
-                                        <label>Age</label>
-                                        <input type="text" name="age" value={formData.age} onChange={handleInputChange} placeholder="Age" />
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="input-group">
-                                        <label>Qualification</label>
-                                        <input type="text" name="qualification" value={formData.qualification} onChange={handleInputChange} placeholder="Qualification" />
-                                    </div>
-                                </div>
-                                <div className="col-md-6">
-                                    <div className="input-group">
-                                        <label>Location</label>
-                                        <input type="text" name="location" value={formData.location} onChange={handleInputChange} placeholder="Your City" />
-                                    </div>
-                                </div>
+                        <div className="popup-content-wrapper">
+                            <div className="popup-header">
+                                <h2>Receive a Scholarship Discount Upto 100%</h2>
                             </div>
 
-                            <div className="input-group">
-                                <label>Interested Course</label>
-                                <select name="course" value={formData.course} onChange={handleInputChange} required>
-                                    <option value="">Select Course</option>
-                                    {coursesList.map((group) => (
-                                        <optgroup key={group.category} label={group.category}>
-                                            {group.courses.map(course => (
-                                                <option key={course} value={course}>{course}</option>
-                                            ))}
-                                        </optgroup>
-                                    ))}
-                                    <option value="OTHER">Other</option>
-                                </select>
-                            </div>
+                            <form className="popup-form" onSubmit={handleSubmit}>
+                                <div className="row g-3">
+                                    <div className="col-md-6">
+                                        <div className="input-group">
+                                            <input type="text" name="name" value={formData.name} onChange={handleInputChange} required placeholder="Name" />
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <div className="input-group">
+                                            <input type="email" name="email" value={formData.email} onChange={handleInputChange} required placeholder="Email" />
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <div className="input-group">
+                                            <input type="tel" name="phone" value={formData.phone} onChange={handleInputChange} required placeholder="Phone Number" />
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <div className="input-group">
+                                            <input type="text" name="age" value={formData.age} onChange={handleInputChange} placeholder="Age" />
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <div className="input-group">
+                                            <input type="text" name="qualification" value={formData.qualification} onChange={handleInputChange} placeholder="Qualification" />
+                                        </div>
+                                    </div>
+                                    <div className="col-md-6">
+                                        <div className="input-group">
+                                            <input type="text" name="location" value={formData.location} onChange={handleInputChange} placeholder="Location" />
+                                        </div>
+                                    </div>
+                                </div>
 
-                            <button type="submit" className="submit-btn" disabled={isSubmitting}>
-                                {isSubmitting ? 'Submitting...' : 'Book Free Demo Now'}
-                            </button>
-                        </form>
+                                <div className="input-group">
+                                    <select name="course" value={formData.course} onChange={handleInputChange} required>
+                                        <option value="">Select Course</option>
+                                        {coursesList.map((group) => (
+                                            <optgroup key={group.category} label={group.category}>
+                                                {group.courses.map(course => (
+                                                    <option key={course} value={course}>{course}</option>
+                                                ))}
+                                            </optgroup>
+                                        ))}
+                                        <option value="OTHER">Other</option>
+                                    </select>
+                                </div>
+
+                                <button type="submit" className="submit-btn" disabled={isSubmitting}>
+                                    {isSubmitting ? 'Submitting...' : 'Book a Free Demo Class!'}
+                                </button>
+                            </form>
+                        </div>
                     </>
                 ) : (
                     <div className="success-content">
