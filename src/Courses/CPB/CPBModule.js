@@ -56,92 +56,92 @@ const CRCModule = () => {
   ];
   const courseModules = [
     {
-        heading: "Medical Terminology & Anatomy",
-        para: "Understanding medical terminology and human anatomy is the foundation of medical billing. This module covers:",
-        points: [
-            "Medical Word Roots, Prefixes, and Suffixes",
-            "Body Systems and Organs (e.g., cardiovascular, musculoskeletal, nervous systems)",
-            "Anatomical Positions, Directions, and Planes",
-            "Pathological Conditions and Procedures",
-            "Medical Abbreviations and Acronyms"
-        ],
-        subpara: "This knowledge is crucial for accurately interpreting medical records and assigning the correct codes."
+      heading: "Medical Terminology & Anatomy",
+      para: "Understanding medical terminology and human anatomy is the foundation of medical billing. This module covers:",
+      points: [
+        "Medical Word Roots, Prefixes, and Suffixes",
+        "Body Systems and Organs (e.g., cardiovascular, musculoskeletal, nervous systems)",
+        "Anatomical Positions, Directions, and Planes",
+        "Pathological Conditions and Procedures",
+        "Medical Abbreviations and Acronyms"
+      ],
+      subpara: "This knowledge is crucial for accurately interpreting medical records and assigning the correct codes."
     },
     {
-        heading: "Insurance and Billing Guidelines",
-        para: "This module focuses on understanding different insurance policies and the billing process:",
-        points: [
-            "Types of Insurance Plans (e.g., Medicare, Medicaid, Commercial, Workers' Compensation)",
-            "Billing and Reimbursement Processes",
-            "CMS-1500 Claim Form Completion",
-            "Coordination of Benefits and Third-Party Payers",
-            "Medical Necessity and Prior Authorizations"
-        ],
-        subpara: "You’ll learn how to submit clean claims and ensure proper reimbursement."
+      heading: "Insurance and Billing Guidelines",
+      para: "This module focuses on understanding different insurance policies and the billing process:",
+      points: [
+        "Types of Insurance Plans (e.g., Medicare, Medicaid, Commercial, Workers' Compensation)",
+        "Billing and Reimbursement Processes",
+        "CMS-1500 Claim Form Completion",
+        "Coordination of Benefits and Third-Party Payers",
+        "Medical Necessity and Prior Authorizations"
+      ],
+      subpara: "You’ll learn how to submit clean claims and ensure proper reimbursement."
     },
     {
-        heading: "CPT Coding for Procedures & Services",
-        para: "Master billing for procedures using the CPT (Current Procedural Terminology) system:",
-        points: [
-            "Evaluation and Management (E/M) Codes",
-            "Surgical Procedures Coding",
-            "Anesthesia, Radiology, and Pathology Coding",
-            "Modifiers and Their Appropriate Usage",
-            "CPT Guidelines and Category I, II, III Codes"
-        ],
-        subpara: "This ensures you can accurately bill physician services and procedures."
+      heading: "CPT Coding for Procedures & Services",
+      para: "Master billing for procedures using the CPT (Current Procedural Terminology) system:",
+      points: [
+        "Evaluation and Management (E/M) Codes",
+        "Surgical Procedures Coding",
+        "Anesthesia, Radiology, and Pathology Coding",
+        "Modifiers and Their Appropriate Usage",
+        "CPT Guidelines and Category I, II, III Codes"
+      ],
+      subpara: "This ensures you can accurately bill physician services and procedures."
     },
     {
-        heading: "HCPCS Level II Coding",
-        para: "Learn the Healthcare Common Procedure Coding System (HCPCS) Level II, used for supplies, durable medical equipment (DME), and other services not covered by CPT:",
-        points: [
-            "Structure and Format of HCPCS Codes",
-            "Coding for Supplies, Medications, and Equipment",
-            "Modifiers for HCPCS Codes",
-            "Compliance and Documentation Requirements"
-        ],
-        subpara: "This module complements CPT coding for complete outpatient billing expertise."
+      heading: "HCPCS Level II Coding",
+      para: "Learn the Healthcare Common Procedure Coding System (HCPCS) Level II, used for supplies, durable medical equipment (DME), and other services not covered by CPT:",
+      points: [
+        "Structure and Format of HCPCS Codes",
+        "Coding for Supplies, Medications, and Equipment",
+        "Modifiers for HCPCS Codes",
+        "Compliance and Documentation Requirements"
+      ],
+      subpara: "This module complements CPT coding for complete outpatient billing expertise."
     },
     {
-        heading: "Medical Billing Regulations & Compliance",
-        para: "Learn ethical practices and legal requirements in medical billing:",
-        points: [
-            "HIPAA (Health Insurance Portability and Accountability Act)",
-            "Fraud, Abuse, and Upcoding Risks",
-            "Medicare and Medicaid Regulations",
-            "Coding Ethics and Professionalism"
-        ],
-        subpara: "You’ll learn how to avoid compliance pitfalls and maintain integrity in billing practices."
+      heading: "Medical Billing Regulations & Compliance",
+      para: "Learn ethical practices and legal requirements in medical billing:",
+      points: [
+        "HIPAA (Health Insurance Portability and Accountability Act)",
+        "Fraud, Abuse, and Upcoding Risks",
+        "Medicare and Medicaid Regulations",
+        "Coding Ethics and Professionalism"
+      ],
+      subpara: "You’ll learn how to avoid compliance pitfalls and maintain integrity in billing practices."
     },
     {
-        heading: "Case Studies and Real-World Applications",
-        para: "Practical experience enhances confidence and prepares you for real-life billing challenges:",
-        points: [
-            "Hands-On Billing Exercises",
-            "Real-World Medical Claims Processing",
-            "Case Studies in Various Specialties (e.g., cardiology, orthopedics, pediatrics)",
-            "Billing Scenarios with Detailed Feedback"
-        ],
-        subpara: "Practical experience enhances confidence and prepares you for real-life billing challenges."
+      heading: "Case Studies and Real-World Applications",
+      para: "Practical experience enhances confidence and prepares you for real-life billing challenges:",
+      points: [
+        "Hands-On Billing Exercises",
+        "Real-World Medical Claims Processing",
+        "Case Studies in Various Specialties (e.g., cardiology, orthopedics, pediatrics)",
+        "Billing Scenarios with Detailed Feedback"
+      ],
+      subpara: "Practical experience enhances confidence and prepares you for real-life billing challenges."
     },
     {
-        heading: "Mock Tests",
-        para: "Mock tests are crucial for assessing your knowledge and ensuring you’re fully prepared for CPB certification:",
-        points: [
-            "Full-Length Practice Exams that simulate the actual CPB exam",
-            "Chapter-Wise Tests to reinforce learning for each module",
-            "Detailed Performance Analysis to identify strengths and weaknesses",
-            "Timed Assessments to build exam readiness and improve time management"
-        ]
+      heading: "Mock Tests",
+      para: "Mock tests are crucial for assessing your knowledge and ensuring you’re fully prepared for CPB certification:",
+      points: [
+        "Full-Length Practice Exams that simulate the actual CPB exam",
+        "Chapter-Wise Tests to reinforce learning for each module",
+        "Detailed Performance Analysis to identify strengths and weaknesses",
+        "Timed Assessments to build exam readiness and improve time management"
+      ]
     }
-];
+  ];
 
 
   return (
     <div className="container mx-auto py-10 px-4 mb-12">
-      <h1 className="text-3xl font-bold text-center my-8">
+      <h2 className="text-3xl font-bold text-center my-8">
         CPB Training Modules
-      </h1>
+      </h2>
       <div className="grid grid-cols-1 gap-6">
         {courseModules.map((module, index) => (
           <div
@@ -169,7 +169,7 @@ const CRCModule = () => {
       </div>
     </div>
 
-    
+
     // <div className=" container mx-auto  py-10 px-4 mb-12">
     //   <h1 className="text-3xl font-bold text-center my-8">
     //     CRC Training Modules
@@ -204,7 +204,7 @@ const CRCModule = () => {
     //     ))}
     //   </div>
     // </div>
-    
+
   );
 };
 

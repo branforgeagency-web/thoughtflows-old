@@ -11,11 +11,11 @@ import BlogRef1 from "./BlogRef1";
 
 function Blogs() {
   return (
-   
-      <Routes>
-        <Route path="/" element={<BlogList />} />
-        <Route path="/blog/:id" element={<BlogRef1 />} />
-      </Routes>
+
+    <Routes>
+      <Route path="/" element={<BlogList />} />
+      <Route path="/blog/:id" element={<BlogRef1 />} />
+    </Routes>
 
   );
 }
@@ -50,7 +50,7 @@ function BlogList() {
               <p>September 27, 2022 </p>
               <p>Comments 0</p>
             </div>
-            <h1 style={{ margin: "20px 0px 10px 0px" }}>16 Tips to clear your CPC exam?</h1>
+            <h2 style={{ margin: "20px 0px 10px 0px" }}>16 Tips to clear your CPC exam?</h2>
             <p style={{ margin: "20px 0px 10px 0px" }}>
               CPC Exam The CPC exam is a type of exam conducted by the AAPC for the candidates...
             </p>
@@ -61,7 +61,7 @@ function BlogList() {
         </div>
       </div>
 
-      
+
       <div
         id="blog2"
         style={{
@@ -89,7 +89,7 @@ function BlogList() {
               <p>January 2, 2023 </p>
               <p>Comments 0</p>
             </div>
-            <h1 style={{ margin: "20px 0px 10px 0px" }}>What's CPC Exam?</h1>
+            <h2 style={{ margin: "20px 0px 10px 0px" }}>What's CPC Exam?</h2>
             <p style={{ margin: "20px 0px 10px 0px" }}>
               Certified Professional Coder (CPC) For anyone who doesn’t know what CPC...
             </p>

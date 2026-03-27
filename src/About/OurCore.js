@@ -47,9 +47,9 @@ const styles = {
 function OurCore() {
   return (
     <Container className="core-value py-5" id="core" style={{ height: "auto", padding: "30px" }}>
-      <h1 style={{ textAlign: "center", fontSize: "40px",fontWeight: "bold" }}>
+      <h2 style={{ textAlign: "center", fontSize: "40px", fontWeight: "bold" }}>
         Our Core Values
-      </h1>
+      </h2>
       <Row className="mt-3">
         <Col lg={2}>
           <img src={core1} style={styles.imageAnimation} alt="core1" />
@@ -61,7 +61,7 @@ function OurCore() {
               marginTop: "20px",
               marginBottom: "20px",
               fontSize: "35px",
-              textAlign:"left"
+              textAlign: "left"
             }}
           >
             Passion
@@ -88,7 +88,7 @@ function OurCore() {
               marginTop: "20px",
               marginBottom: "20px",
               fontSize: "35px",
-              textAlign:"left"
+              textAlign: "left"
             }}
           >
             Loyalty
@@ -115,7 +115,7 @@ function OurCore() {
               marginTop: "20px",
               marginBottom: "20px",
               fontSize: "35px",
-              textAlign:"left"
+              textAlign: "left"
             }}
           >
             Commitment
@@ -142,7 +142,7 @@ function OurCore() {
               marginTop: "20px",
               marginBottom: "20px",
               fontSize: "35px",
-              textAlign:"left"
+              textAlign: "left"
             }}
           >
             Responsibility
@@ -169,7 +169,7 @@ function OurCore() {
               marginTop: "20px",
               marginBottom: "20px",
               fontSize: "35px",
-              textAlign:"left"
+              textAlign: "left"
             }}
           >
             Consistency
@@ -180,7 +180,7 @@ function OurCore() {
               marginBottom: "20px",
             }}
           >
-           Our commitment to quality and continuous improvement ensures we maintain the trust of our students and industry partners, year after year.
+            Our commitment to quality and continuous improvement ensures we maintain the trust of our students and industry partners, year after year.
           </p>
         </Col>
       </Row>
@@ -196,7 +196,7 @@ function OurCore() {
               marginTop: "20px",
               marginBottom: "20px",
               fontSize: "35px",
-              textAlign:"left"
+              textAlign: "left"
             }}
           >
             Creativity

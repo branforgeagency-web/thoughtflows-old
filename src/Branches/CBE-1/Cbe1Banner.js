@@ -28,18 +28,14 @@ const Cbe1Banner = () => {
                 <Col lg={1} xs={0}></Col>
                 <Col lg={3} md={4} xs={12} className='cbe1-banner-lft pt-5 px-4 mb-4 mb-lg-0 d-flex flex-column justify-content-lg-start justify-content-center align-items-lg-start align-items-center'>
                     <Col className='cbe1-banner-heading'>
-                        <h2 style={{ 
+                        <h1 style={{
                             fontSize: 'clamp(28px, 5vw, 40px)',
                             lineHeight: '1.2'
-                        }}>Medical Coding </h2>
-                        <h2 style={{ 
-                            fontSize: 'clamp(28px, 5vw, 40px)',
-                            lineHeight: '1.2'
-                        }}>Institute in <span style={{ color: '#097D8A' }}>Saravanampatti</span></h2>
+                        }}>Medical Coding <br /> Institute in <span style={{ color: '#097D8A' }}>Saravanampatti</span></h1>
                     </Col>
                     <Col>
-                        <p style={{ 
-                            fontSize: 'clamp(14px, 3vw, 16px)', 
+                        <p style={{
+                            fontSize: 'clamp(14px, 3vw, 16px)',
                             marginTop: '20px',
                             maxWidth: '600px'
                         }}>Chart your path to success in the world of medical coding with Coimbatore's leading training institute. Transform your future now!</p>
@@ -51,9 +47,9 @@ const Cbe1Banner = () => {
                     </Col>
                 </Col>
 
-                <Col lg={7} md={8} xs={12} className='cbe1-banner-rht' style={{ 
-                    display: 'flex', 
-                    justifyContent: 'center', 
+                <Col lg={7} md={8} xs={12} className='cbe1-banner-rht' style={{
+                    display: 'flex',
+                    justifyContent: 'center',
                     alignItems: 'center',
                     paddingTop: '0'
                 }}>
@@ -84,18 +80,18 @@ const Cbe1Banner = () => {
                         <Row className="gy-4 gx-3">
                             <Col xs={6} sm={6} md={3} lg={3} className="text-center">
                                 <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
-                                    <p style={{ 
-                                        color: '#FFC100', 
-                                        fontWeight: '700', 
-                                        fontSize: 'clamp(18px, 3.5vw, 30px)', 
+                                    <p style={{
+                                        color: '#FFC100',
+                                        fontWeight: '700',
+                                        fontSize: 'clamp(18px, 3.5vw, 30px)',
                                         margin: 0,
                                         lineHeight: '1.2'
                                     }}>
                                         <CountUp start={0} end={35000} separator="," />+
                                     </p>
-                                    <p style={{ 
-                                        fontWeight: '500', 
-                                        fontSize: 'clamp(12px, 2.5vw, 18px)', 
+                                    <p style={{
+                                        fontWeight: '500',
+                                        fontSize: 'clamp(12px, 2.5vw, 18px)',
                                         marginTop: '5px',
                                         lineHeight: '1.2'
                                     }}>Training</p>
@@ -103,18 +99,18 @@ const Cbe1Banner = () => {
                             </Col>
                             <Col xs={6} sm={6} md={3} lg={3} className="text-center">
                                 <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
-                                    <p style={{ 
-                                        color: '#F15BB5', 
-                                        fontWeight: '700', 
-                                        fontSize: 'clamp(18px, 3.5vw, 30px)', 
+                                    <p style={{
+                                        color: '#F15BB5',
+                                        fontWeight: '700',
+                                        fontSize: 'clamp(18px, 3.5vw, 30px)',
                                         margin: 0,
                                         lineHeight: '1.2'
                                     }}>
                                         <CountUp start={0} end={25000} separator="," />+
                                     </p>
-                                    <p style={{ 
-                                        fontWeight: '500', 
-                                        fontSize: 'clamp(12px, 2.5vw, 18px)', 
+                                    <p style={{
+                                        fontWeight: '500',
+                                        fontSize: 'clamp(12px, 2.5vw, 18px)',
                                         marginTop: '5px',
                                         lineHeight: '1.2'
                                     }}>Placement</p>
@@ -122,18 +118,18 @@ const Cbe1Banner = () => {
                             </Col>
                             <Col xs={6} sm={6} md={3} lg={3} className="text-center">
                                 <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
-                                    <p style={{ 
-                                        color: '#00BBFA', 
-                                        fontWeight: '700', 
-                                        fontSize: 'clamp(18px, 3.5vw, 30px)', 
+                                    <p style={{
+                                        color: '#00BBFA',
+                                        fontWeight: '700',
+                                        fontSize: 'clamp(18px, 3.5vw, 30px)',
                                         margin: 0,
                                         lineHeight: '1.2'
                                     }}>
                                         <CountUp start={0} end={49} separator="," />+
                                     </p>
-                                    <p style={{ 
-                                        fontWeight: '500', 
-                                        fontSize: 'clamp(12px, 2.5vw, 18px)', 
+                                    <p style={{
+                                        fontWeight: '500',
+                                        fontSize: 'clamp(12px, 2.5vw, 18px)',
                                         marginTop: '5px',
                                         lineHeight: '1.2'
                                     }}>Courses</p>
@@ -141,18 +137,18 @@ const Cbe1Banner = () => {
                             </Col>
                             <Col xs={6} sm={6} md={3} lg={3} className="text-center">
                                 <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
-                                    <p style={{ 
-                                        color: '#01F6D5', 
-                                        fontWeight: '700', 
-                                        fontSize: 'clamp(18px, 3.5vw, 30px)', 
+                                    <p style={{
+                                        color: '#01F6D5',
+                                        fontWeight: '700',
+                                        fontSize: 'clamp(18px, 3.5vw, 30px)',
                                         margin: 0,
                                         lineHeight: '1.2'
                                     }}>
                                         <CountUp start={0} end={12} separator="," />+
                                     </p>
-                                    <p style={{ 
-                                        fontWeight: '500', 
-                                        fontSize: 'clamp(12px, 2.5vw, 18px)', 
+                                    <p style={{
+                                        fontWeight: '500',
+                                        fontSize: 'clamp(12px, 2.5vw, 18px)',
                                         marginTop: '5px',
                                         lineHeight: '1.2'
                                     }}>Branches</p>

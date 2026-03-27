@@ -79,12 +79,12 @@ export default function ZoomSignupForm({ onClose }) {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
           <div>
-            <h1 className="text-3xl md:text-4xl font-medium" style={{ color: "#003366" }}>
+            <h2 className="text-3xl md:text-4xl font-medium" style={{ color: "#003366" }}>
               Sign Up For a
               <span className="block text-4xl md:text-5xl font-bold mt-1">
                 Free Trial lesson by zoom
               </span>
-            </h1>
+            </h2>
 
             {isSuccess ? (
               <div className="mt-8 p-4 bg-green-100 text-green-800 rounded-lg">
@@ -160,7 +160,7 @@ export default function ZoomSignupForm({ onClose }) {
                   {isSubmitting ? "Submitting..." : "Submit"}
                 </button>
               </form>
-            ) }
+            )}
           </div>
         </div>
       </div>

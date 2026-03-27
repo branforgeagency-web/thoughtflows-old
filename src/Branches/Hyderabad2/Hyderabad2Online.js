@@ -97,11 +97,11 @@ const HyderabadOnline = () => {
   };
 
   return (
-    <div style={{ margin: "20px", marginTop:"50px",marginLeft: "40px", paddingBottom: "35px"}}>
-      <h3 style={{ textAlign: "center", color:"#16ADBB" }}>Test Yourself</h3>
-      <h1 style={{ textAlign: "center", marginTop: "20px", marginBottom: "30px" }}>
+    <div style={{ margin: "20px", marginTop: "50px", marginLeft: "40px", paddingBottom: "35px" }}>
+      <h3 style={{ textAlign: "center", color: "#16ADBB" }}>Test Yourself</h3>
+      <h2 style={{ textAlign: "center", marginTop: "20px", marginBottom: "30px" }}>
         Online Exams
-      </h1>
+      </h2>
       <Slider {...settings}>
         {images.map((img, index) => (
           <div key={index} style={{ position: "relative", overflow: "hidden" }}>
@@ -114,7 +114,7 @@ const HyderabadOnline = () => {
                 objectFit: "cover",
                 margin: "0 20px",
                 borderRadius: "15px",
-                zIndex: 1, 
+                zIndex: 1,
               }}
             />
           </div>

@@ -27,7 +27,7 @@ const Vision = () => {
       buttonText: 'Read More'
     }
   ];
-  
+
 
   return (
     <div
@@ -35,89 +35,89 @@ const Vision = () => {
       style={{ padding: '30px' }}
     >
       {/* <div className="vision-mission" > */}
-      <h1 style={{ fontSize: "40px", fontWeight: "bold", textAlign: "center" }}>Vision - Mission - Facilities</h1>
+      <h2 style={{ fontSize: "40px", fontWeight: "bold", textAlign: "center" }}>Vision - Mission - Facilities</h2>
       <Row
-      style={{
-        justifyContent: 'space-around',
-        alignItems: 'stretch',
-        display: 'flex',
-        gap: '30px',
-        flexWrap: 'wrap',
-        paddingInline:"30px"
-      }}
-    >
-      {cardData.map((card) => (
-        <Col
-          key={card.id}
-          lg={3}
-          xs={12}
-          md={12}
-          className="vis-card"
-          style={{
-            marginTop: '30px',
-            background: '#15aebb',
-            padding: '50px',
-            borderRadius: '10px',
-            color: '#fff',
-            width: '30%',
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-between',
-            minHeight: '350px',
-            flex: '1',
-            transition: 'all 0.3s ease',
-            cursor: 'pointer',
-            boxShadow: '0 4px 15px rgba(21, 174, 187, 0.2)'
-          }}
-          onMouseEnter={(e) => {
-            e.target.style.transform = 'translateY(-5px)';
-            e.target.style.boxShadow = '0 8px 25px rgba(21, 174, 187, 0.3)';
-            e.target.style.background = '#097D8A';
-          }}
-          onMouseLeave={(e) => {
-            e.target.style.transform = 'translateY(0)';
-            e.target.style.boxShadow = '0 4px 15px rgba(21, 174, 187, 0.2)';
-            e.target.style.background = '#15aebb';
-          }}
-        >
-          <h3 style={{ marginTop: '20px', textAlign: 'left', fontWeight: '600' }}>
-            {card.title}
-          </h3>
-          <p style={{ marginTop: '20px', textAlign: 'left' }}>{card.description}</p>
-          <button
-            onClick={() => handleShowPanel(card.id)}
+        style={{
+          justifyContent: 'space-around',
+          alignItems: 'stretch',
+          display: 'flex',
+          gap: '30px',
+          flexWrap: 'wrap',
+          paddingInline: "30px"
+        }}
+      >
+        {cardData.map((card) => (
+          <Col
+            key={card.id}
+            lg={3}
+            xs={12}
+            md={12}
+            className="vis-card"
             style={{
-              marginTop: 'auto',
-              color: '#2FC4B2',
-              background: '#F1F0FE',
-              fontWeight: '500',
-              fontSize: '16px',
-              fontFamily: 'Poppins',
-              borderRadius: "20px",
-              border: 'none',
-              padding: '10px 20px',
-              cursor: 'pointer',
+              marginTop: '30px',
+              background: '#15aebb',
+              padding: '50px',
+              borderRadius: '10px',
+              color: '#fff',
+              width: '30%',
+              display: 'flex',
+              flexDirection: 'column',
+              justifyContent: 'space-between',
+              minHeight: '350px',
+              flex: '1',
               transition: 'all 0.3s ease',
-              boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)'
+              cursor: 'pointer',
+              boxShadow: '0 4px 15px rgba(21, 174, 187, 0.2)'
             }}
             onMouseEnter={(e) => {
-              e.target.style.background = '#2FC4B2';
-              e.target.style.color = '#F1F0FE';
-              e.target.style.transform = 'translateY(-2px)';
-              e.target.style.boxShadow = '0 4px 15px rgba(47, 196, 178, 0.3)';
+              e.target.style.transform = 'translateY(-5px)';
+              e.target.style.boxShadow = '0 8px 25px rgba(21, 174, 187, 0.3)';
+              e.target.style.background = '#097D8A';
             }}
             onMouseLeave={(e) => {
-              e.target.style.background = '#F1F0FE';
-              e.target.style.color = '#2FC4B2';
               e.target.style.transform = 'translateY(0)';
-              e.target.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
+              e.target.style.boxShadow = '0 4px 15px rgba(21, 174, 187, 0.2)';
+              e.target.style.background = '#15aebb';
             }}
           >
-            {card.buttonText}
-          </button>
-        </Col>
-      ))}
-    </Row>
+            <h3 style={{ marginTop: '20px', textAlign: 'left', fontWeight: '600' }}>
+              {card.title}
+            </h3>
+            <p style={{ marginTop: '20px', textAlign: 'left' }}>{card.description}</p>
+            <button
+              onClick={() => handleShowPanel(card.id)}
+              style={{
+                marginTop: 'auto',
+                color: '#2FC4B2',
+                background: '#F1F0FE',
+                fontWeight: '500',
+                fontSize: '16px',
+                fontFamily: 'Poppins',
+                borderRadius: "20px",
+                border: 'none',
+                padding: '10px 20px',
+                cursor: 'pointer',
+                transition: 'all 0.3s ease',
+                boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)'
+              }}
+              onMouseEnter={(e) => {
+                e.target.style.background = '#2FC4B2';
+                e.target.style.color = '#F1F0FE';
+                e.target.style.transform = 'translateY(-2px)';
+                e.target.style.boxShadow = '0 4px 15px rgba(47, 196, 178, 0.3)';
+              }}
+              onMouseLeave={(e) => {
+                e.target.style.background = '#F1F0FE';
+                e.target.style.color = '#2FC4B2';
+                e.target.style.transform = 'translateY(0)';
+                e.target.style.boxShadow = '0 2px 8px rgba(0, 0, 0, 0.1)';
+              }}
+            >
+              {card.buttonText}
+            </button>
+          </Col>
+        ))}
+      </Row>
 
       {/* </div> */}
 
@@ -134,26 +134,26 @@ const Vision = () => {
         >
           {activePanel === "vision" && (
             <>
-              <h1
+              <h2
                 className="highlightss"
                 style={{ textAlign: "center", marginTop: "10px" }}
               >
                 Our Vision
-              </h1>
+              </h2>
               <p className="mission-c" style={{ margin: "20px 20px", fontSize: "17px", wordSpacing: "10px" }}>
-              To be Asia's leading institution in medical coding education, transforming the future of healthcare by empowering individuals with the knowledge, skills, and certifications needed to excel. We aim to cultivate a community of highly skilled, sought-after medical coders who play a pivotal role in ensuring the accuracy, efficiency, and innovation of healthcare systems, ultimately contributing to improved patient care and streamlined processes across the globe.
+                To be Asia's leading institution in medical coding education, transforming the future of healthcare by empowering individuals with the knowledge, skills, and certifications needed to excel. We aim to cultivate a community of highly skilled, sought-after medical coders who play a pivotal role in ensuring the accuracy, efficiency, and innovation of healthcare systems, ultimately contributing to improved patient care and streamlined processes across the globe.
               </p>
             </>
           )}
 
           {activePanel === "mission" && (
             <>
-              <h1
+              <h2
                 className="highlightss"
                 style={{ textAlign: "center", marginTop: "10px" }}
               >
                 Our Mission
-              </h1>
+              </h2>
               <ol style={{ margin: "20px 20px", }}>
                 <li>
                   <p className="mission-c" style={{ fontSize: "17px", wordSpacing: "10px" }}>
@@ -196,12 +196,12 @@ const Vision = () => {
 
           {activePanel === "facilities" && (
             <>
-              <h1
+              <h2
                 className="highlightss"
                 style={{ textAlign: "center", marginTop: "10px" }}
               >
                 Our Facilities
-              </h1>
+              </h2>
               <div className="d-flex justify-content-evenly">
                 <ul style={{ margin: "20px 20px" }}>
                   <li>

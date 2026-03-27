@@ -21,7 +21,7 @@ const WhatCPMA = () => {
                 <Col lg={1}></Col>
 
                 <Col lg={5}>
-                    <h1>Certified Professional Coder (CPC)</h1>
+                    <h2>Certified Professional Coder (CPC)</h2>
                     <h2>What is CPC?</h2>
                     <p style={{ color: '#505050' }}>
                         The
@@ -56,7 +56,7 @@ const WhatCPMA = () => {
 
 
                     <div className=' col-span-1 md:col-span-6 order-2 md:order-2 '>
-                       
+
 
 
 

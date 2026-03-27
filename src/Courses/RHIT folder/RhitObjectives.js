@@ -5,26 +5,26 @@ const RhitObjectives = () => {
         {
             "title": "ICD-10-CM Coding Manual",
             "description": "Official coding reference for diagnosis codes."
-          },
-          {
+        },
+        {
             "title": "CPT® Coding Manual",
             "description": "Official guide for procedure codes used in medical billing."
-          },
-          {
+        },
+        {
             "title": "HCPCS Level II Coding Manual",
             "description": "Codes for non-physician services such as medical supplies and outpatient procedures."
-          },
-          {
+        },
+        {
             "title": "Health Information Management Textbooks",
             "description": "Guides on health data management, privacy, and security standards."
-          }
+        }
     ];
 
     return (
         <div className=" container mx-auto  py-5 px-4 ">
-            <h1 className="text-3xl font-semibold mb-4  text-primaryy text-center">
-            Books Used
-            </h1>
+            <h2 className="text-3xl font-semibold mb-4  text-primaryy text-center">
+                Books Used
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6 ">
                 {modules.map((module, index) => (
                     <div

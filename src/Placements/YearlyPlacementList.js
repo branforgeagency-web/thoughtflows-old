@@ -19,9 +19,9 @@ const YearlyPlacementList = () => {
                         <i className="fas fa-arrow-left"></i> Back to Placements
                     </Link>
                 </div>
-                
-                <h1 className="year-title">{year} Placement Success Stories</h1>
-                
+
+                <h2 className="year-title">{year} Placement Success Stories</h2>
+
                 {data.length > 0 ? (
                     <div className="table-responsive">
                         <table className="placement-table">

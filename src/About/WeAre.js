@@ -24,7 +24,7 @@ function WeAre() {
         <Col lg={1}></Col>
         <Col lg={5}>
           <h4 style={{ color: "#FF544C", fontSize: "30px", margin: "0px 0px 25px 0px" }}>NO 1 MEDICAL CODING ACADEMY</h4>
-          <h1 style={{ fontSize: "40px", margin: "0px 0px 25px 0px", fontWeight: "bold", }}> Who We Are</h1>
+          <h2 style={{ fontSize: "40px", margin: "0px 0px 25px 0px", fontWeight: "bold", }}> Who We Are</h2>
           <p style={{ fontSize: "15px", margin: "10px 0px 0px 0px", wordSpacing: "1px", textAlign: "left", lineHeight: "30px" }}>
             Founded in 2016 by Mr. Balamurali and Ms. Banumathy, Thought Flows is
             the result of the vision and dedication of two enterprising and
@@ -157,7 +157,7 @@ function WeAre() {
             alt="Off-canvas Content"
             className="off-canvas-image"
           />
-          <h1>{founderName || ""}</h1>
+          <h2>{founderName || ""}</h2>
 
           <button onClick={() => setShowContent(false)}>Close</button>
         </div>

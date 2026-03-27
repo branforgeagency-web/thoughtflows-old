@@ -22,7 +22,7 @@ const WhatCRC = () => {
                 <Col lg={1}></Col>
 
                 <Col lg={5}>
-                    <h1>Certified Professional Coder (CPC)</h1>
+                    <h2>Certified Professional Coder (CPC)</h2>
                     <h2>What is CPC?</h2>
                     <p style={{ color: '#505050' }}>
                         The
@@ -213,7 +213,7 @@ const WhatCRC = () => {
                                 <p>
                                     2. <strong>ICD-10-CM Coding:</strong>Accurate diagnosis coding for chronic conditions and comorbidities.
                                 </p>
-                              
+
 
                                 <p>
                                     3. <strong>Medical Documentation Guidelines:</strong>Ensuring documentation supports the codes assigned.

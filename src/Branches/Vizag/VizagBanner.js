@@ -30,14 +30,10 @@ const VizagBanner = () => {
         <Col lg={1} xs={0}></Col>
         <Col lg={3} md={4} xs={12} className='cbe1-banner-lft pt-5 px-4 mb-4 mb-lg-0 d-flex flex-column justify-content-lg-start justify-content-center align-items-lg-start align-items-center'>
           <Col className='cbe1-banner-heading'>
-            <h2 style={{
+            <h1 style={{
               fontSize: 'clamp(28px, 5vw, 40px)',
               lineHeight: '1.2'
-            }}>Medical Coding </h2>
-            <h2 style={{
-              fontSize: 'clamp(28px, 5vw, 40px)',
-              lineHeight: '1.2'
-            }}>Institute in <span style={{ color: '#097D8A' }}>Vizag</span></h2>
+            }}>Medical Coding <br /> Institute in <span style={{ color: '#097D8A' }}>Vizag</span></h1>
           </Col>
           <Col>
             <p style={{
