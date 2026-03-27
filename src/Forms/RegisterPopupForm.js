@@ -104,7 +104,7 @@ const RegisterPopupForm = () => {
 
                         <div className="popup-content-wrapper">
                             <div className="popup-header">
-                                <h2>Receive a Scholarship Discount Upto 100% instead of Start Your Medical Coding Career Today</h2>
+                                <h2>Start Your Medical Coding Career Today</h2>
                             </div>
 
                             <form className="popup-form" onSubmit={handleSubmit}>

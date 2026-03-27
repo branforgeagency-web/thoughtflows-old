@@ -66,13 +66,11 @@ const KochiBanner = () => {
             alt='bannergif' 
             className='bannergif banner-appear'
             style={{
-              width: "125%",
-              maxWidth: "none",
+              maxWidth: "100%",
+              width: "auto",
               height: "auto",
               objectFit: "contain",
-              marginBottom: "-70px",
-              transform: "scale(1.3)",
-              transformOrigin: "bottom center"
+              marginBottom: "-40px"
             }}
           />
         </Col>

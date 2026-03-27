@@ -3591,7 +3591,7 @@ h1 {
   .navbar {
     justify-content: flex-center !important;
     /* push menu to the right */
-    padding: 20px 40px;
+    padding: 5px 40px;
     position: relative;
   }
 
@@ -3601,7 +3601,7 @@ h1 {
     position: absolute;
     left: 100px;
     /* three-finger padding from left */
-    padding: 25px;
+    padding: 10px;
   }
 
   .logo img {
@@ -3617,7 +3617,7 @@ h1 {
 
   /* Remove large per-li margins; rely on gap above */
   .menu li {
-    margin: 15px;
+    margin: 5px;
     font-size: 23PX;
   }
 }
