@@ -32,7 +32,7 @@ const CPC = () => {
 
   return (
     <div style={{ fontFamily: "'Montserrat', sans-serif" }}>
-      <Meta title="CPC - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="CPC Course Training | ThoughtFlows Medical Coding Academy" description="Enroll in CPC course at ThoughtFlows with expert trainers, practical coding sessions, exam guidance, and placement support to start your medical coding career." canonical="https://thoughtflows.in/cpc" />
 
       <CPCBanner />
 

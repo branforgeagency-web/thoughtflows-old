@@ -1,4 +1,4 @@
-import React,{useEffect}from 'react'
+import React, { useEffect } from 'react'
 import Meta from '../Meta';
 
 import TrichyBanner from './Trichy/TrichyBanner'
@@ -20,11 +20,11 @@ import TrichyEmpower from './Trichy/TrichyEmpower'
 
 function TrichyBranches() {
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
- },[])
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [])
   return (
     <>
-     <Meta title="Trichy - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="Medical Coding Course in Trichy | ThoughtFlows Institute" description="Advance your career with ThoughtFlows Medical Coding Academy in Trichy — leading medical coding course, practical learning, and placement assistance." canonical="https://thoughtflows.in/Career-Focused-Medical-Coding-Trichy" />
 
       <TrichyBanner />
       <TrichyAbout />

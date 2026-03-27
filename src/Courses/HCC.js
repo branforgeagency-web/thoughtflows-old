@@ -11,12 +11,12 @@ import HCCFAQ from './HCC/HCCFAQ'
 import Meta from '../Meta';
 
 const HCC = () => {
-    useEffect(() => {
-      window.scrollTo({ top: 0, behavior: 'auto' });
-    }, [])
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, [])
   return (
     <>
-          <Meta title="HCC - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="Hierarchical Condition Category Course | ThoughtFlows" description="Join the Hierarchical Condition Category course at ThoughtFlows with expert training in HCC coding, risk adjustment models, and career support." canonical="https://thoughtflows.in/hcc" />
 
       <HCCBanner />
       <WhatHCC />

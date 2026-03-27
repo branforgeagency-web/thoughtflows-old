@@ -12,12 +12,12 @@ import Meta from '../Meta';
 
 const COC = () => {
 
-    useEffect(() => {
-      window.scrollTo({ top: 0, behavior: 'auto' });
-    }, [])
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, [])
   return (
     <>
-      <Meta title="COC - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="COC Training | ThoughtFlows Medical Coding Academy" description="Enroll in COC training at ThoughtFlows with expert trainers, outpatient coding practice, exam guidance, and placement support." canonical="https://thoughtflows.in/coc" />
 
       <COCBanner />
       <WhatisCOC />

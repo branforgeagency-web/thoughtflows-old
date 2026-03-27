@@ -11,12 +11,12 @@ import CPBFAQ from './CPB/CPBFAQ'
 import Meta from '../Meta';
 
 const CPB = () => {
-    useEffect(() => {
-      window.scrollTo({ top: 0, behavior: 'auto' });
-    }, [])
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, [])
   return (
     <>
-          <Meta title="CPB - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="CPB Training | Certified Medical Biller Course – ThoughtFlows" description="Join CPB training at ThoughtFlows for certified medical biller training with expert instruction, real practice, and career support for billing excellence." canonical="https://thoughtflows.in/cpb" />
 
       <CPBBanner />
       <WhatCPB />

@@ -57,7 +57,7 @@ const Home = () => {
     const timer = setTimeout(() => {
       setIsOpen(true);
     }, 4000); // After 4 seconds, show registration popup
-    
+
     return () => clearTimeout(timer); // Cleanup timer on unmount
   }, []);
 
@@ -186,8 +186,9 @@ const Home = () => {
   return (
     <>
       <Meta
-        title="Best Medical Coding Training Academy | Expert Coaching Institute"
-        description="Get expert medical coding training at the best academy for comprehensive coaching. Start your career today!"
+        title="Medical Coding Course & Training | ThoughtFlows Academy"
+        description="ThoughtFlows Medical Coding Academy offers a medical coding course with CPC training, expert faculty, and placement support for a successful career."
+        canonical="https://www.thoughtflows.in/"
       />
       <div style={{ overflow: "hidden" }}>
         <motion.div

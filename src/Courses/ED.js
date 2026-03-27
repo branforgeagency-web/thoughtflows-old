@@ -9,16 +9,16 @@ import WhyChoose from './ED folder/WhyChoose'
 import EdEligible from './ED folder/EdEligible'
 import EdBook from './ED folder/EdBook'
 import EdDream from './ED folder/EdDream'
-import React,{useEffect}from 'react'
+import React, { useEffect } from 'react'
 import Meta from '../Meta';
 
 function ED() {
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
- },[])
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [])
   return (
     <>
-          <Meta title="ED - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="ED Course Training | ThoughtFlows Medical Coding Academy" description="Enroll in the ED course at ThoughtFlows to learn emergency department coding with expert training, real-case practice, and career support." canonical="https://thoughtflows.in/ed" />
 
       <EdBanner />
       <WhatIsEmergency />

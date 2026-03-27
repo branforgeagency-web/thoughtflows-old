@@ -1,7 +1,7 @@
-import React,{useEffect}from 'react'
+import React, { useEffect } from 'react'
 
 import HyderabadBanner from './Hyderabad2/Hyderabad2Banner'
-import HyderabadAbout from './Hyderabad2/Hyderabad2About'  
+import HyderabadAbout from './Hyderabad2/Hyderabad2About'
 import HyderabadFlex from './Hyderabad2/Hyderaba2dFlex'
 import HyderabadCore from './Hyderabad2/Hyderabad2Core'
 import HyderabadSticky from './Hyderabad2/Hyderabad2Sticky'
@@ -14,22 +14,22 @@ import Hyderabad2Testimonial from './Hyderabad2/Hyderabad2Testimonial'
 
 function Hyderabad() {
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
- },[])
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [])
   return (
     <>
-                      <Meta title="Dilsukhnagar - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="Medical Coding Institute in Hyderabad | ThoughtFlows Academy" description="Get certified at ThoughtFlows Medical Coding Academy in Hyderabad — top medical coding institute with real practice, expert training, and career support." canonical="https://thoughtflows.in/Professional-Medical-Coding-Dilsukhnagar" />
 
-    <HyderabadBanner />
-    <HyderabadAbout />
-    <HyderabadFlex />
-    <HyderabadCore />
-    <HyderabadSticky />
-    <HyderabadOnline />
-    <HyderabadOnline2 />
-    <HyderabadGetinTouch />
-    {/* <HyderabadStudents /> */}
-    <Hyderabad2Testimonial />
+      <HyderabadBanner />
+      <HyderabadAbout />
+      <HyderabadFlex />
+      <HyderabadCore />
+      <HyderabadSticky />
+      <HyderabadOnline />
+      <HyderabadOnline2 />
+      <HyderabadGetinTouch />
+      {/* <HyderabadStudents /> */}
+      <Hyderabad2Testimonial />
     </>
   )
 }

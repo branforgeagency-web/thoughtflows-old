@@ -1,4 +1,4 @@
-import React,{useEffect}from 'react'
+import React, { useEffect } from 'react'
 
 import Meta from '../Meta';
 import IpdrugBanner from './IPDrug/IpdrugBanner';
@@ -13,20 +13,20 @@ import IPdrugDream from './IPDrug/IPdrugDream';
 
 const IpDrug = () => {
     useEffect(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
-     },[])
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }, [])
     return (
         <>
-            <Meta title="IPDRG Training | Speciality Course | Thoughtflows Academy" description="Take your medical coding career to the next level with Thoughtflows Academy's speciality course in IPDRG training." />
-            <IpdrugBanner /> 
-            <WhatisIpDrug/>
-            <AboutIpDrug/>
-            <IpDrugCoders/>
-            <IpDrugObjective/>
-            <WhyChooseIpDrug/>
-            <IpDrugModules/>
-            <IPdrugDream/>
-            <IpDrugFAQ/>
+            <Meta title="Certified Inpatient DRG Coder Course | ThoughtFlows" description="Enroll in the Certified Inpatient DRG Coder course at ThoughtFlows with expert training, IP-DRG case practice, and career-focused guidance." canonical="https://thoughtflows.in/ip-drg" />
+            <IpdrugBanner />
+            <WhatisIpDrug />
+            <AboutIpDrug />
+            <IpDrugCoders />
+            <IpDrugObjective />
+            <WhyChooseIpDrug />
+            <IpDrugModules />
+            <IPdrugDream />
+            <IpDrugFAQ />
         </>
     )
 }

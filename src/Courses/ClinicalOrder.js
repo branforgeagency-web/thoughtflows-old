@@ -1,4 +1,4 @@
-import React,{useEffect}from 'react'
+import React, { useEffect } from 'react'
 
 import COBanner from './Clinical order/COBanner'
 import AboutCO from './Clinical order/AboutCO'
@@ -21,11 +21,11 @@ import Meta from '../Meta';
 
 function CO() {
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
- },[])
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [])
   return (
     <>
-                      <Meta title="CCC - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="Certified Cardiology Coder Training Course" description="Enroll in the Certified Cardiology Coder training course at ThoughtFlows with expert instruction, cardiology coding practice, and career support." canonical="https://thoughtflows.in/ccc" />
 
       <COBanner />
       <WhatIsEvaluation />
@@ -33,16 +33,16 @@ function CO() {
       <COEligible />
       <COTypes />
       <COBenefits />
-      <COeli/>
+      <COeli />
       <COPurse />
       <COBook />
-      <COcert /> 
+      <COcert />
       {/* <COFeatures /> */}
       <WhyChoose />
       <COObjectives />
       <CODream />
       <COWho />
-      <COcert /> 
+      <COcert />
       <COFAQ />
     </>
   )

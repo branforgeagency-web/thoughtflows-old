@@ -232,7 +232,7 @@ function Contact() {
 
   return (
     <>
-      <Meta title="Contact Us - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="Contact ThoughtFlows | Medical Coding Support & Queries" description="Reach out to ThoughtFlows for inquiries about medical coding training, courses, admissions, and support. We’re here to help you grow your career." canonical="https://thoughtflows.in/contact" />
 
       {/* Location Zoom Popup */}
       {showZoomPopup && selectedLocation && (

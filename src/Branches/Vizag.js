@@ -1,4 +1,4 @@
-import React,{useEffect}from 'react'
+import React, { useEffect } from 'react'
 
 import VizagBanner from './Vizag/VizagBanner'
 import VizagAbout from './Vizag/VizagAbout'
@@ -13,22 +13,22 @@ import Meta from '../Meta';
 
 function Vizag() {
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
- },[])
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [])
   return (
     <>
-                      <Meta title="Vizag Medical Coding Training Institute - Thoughtflows Academy" description="Join the premier medical coding training institute in Vizag. Expert faculty, hands-on training, 95% placement rate, and flexible batch timings. Start your healthcare career today!" />
+      <Meta title="Medical Coding Course in Vizag | ThoughtFlows Institute" description="ThoughtFlows Medical Coding Academy offers the best medical coding course in Vizag with practical training and career-focused guidance" canonical="https://thoughtflows.in/Innovative-Medical-Coding-Vizag" />
 
-    <VizagBanner />
-    <VizagAbout />
-    <VizagFlex />
-    <VizagCore />
-    <VizagSticky />
-    <VizagOnline />
-    <VizagOnline2 />
-    <VizagGetinTouch />
-   
-    <VizagStudents />
+      <VizagBanner />
+      <VizagAbout />
+      <VizagFlex />
+      <VizagCore />
+      <VizagSticky />
+      <VizagOnline />
+      <VizagOnline2 />
+      <VizagGetinTouch />
+
+      <VizagStudents />
     </>
   )
 }

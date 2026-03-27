@@ -1,4 +1,4 @@
-import React,{useEffect}from 'react'
+import React, { useEffect } from 'react'
 
 import HyderabadBanner from './Hyderabad/HyderabadBanner'
 import HyderabadAbout from './Hyderabad/HyderabadAbout'
@@ -14,22 +14,22 @@ import HyderabadTestimonial from './Hyderabad/HyderabadTestimonial'
 
 function Hyderabad() {
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
- },[])
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [])
   return (
     <>
-                      <Meta title="Ameerpet - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="Medical Coding Training in Ameerpet | ThoughtFlows Institute" description="Advance your career with ThoughtFlows Medical Coding Academy — professional medical coding training Ameerpet with practical learning and placement support." canonical="https://thoughtflows.in/Trusted-Medical-Coding-Ameerpet" />
 
-    <HyderabadBanner />
-    <HyderabadAbout />
-    <HyderabadFlex />
-    <HyderabadCore />
-    <HyderabadSticky />
-    <HyderabadOnline />
-    <HyderabadOnline2 />
-    <HyderabadGetinTouch />
-    {/* <HyderabadStudents /> */}
-    <HyderabadTestimonial />
+      <HyderabadBanner />
+      <HyderabadAbout />
+      <HyderabadFlex />
+      <HyderabadCore />
+      <HyderabadSticky />
+      <HyderabadOnline />
+      <HyderabadOnline2 />
+      <HyderabadGetinTouch />
+      {/* <HyderabadStudents /> */}
+      <HyderabadTestimonial />
     </>
   )
 }

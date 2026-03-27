@@ -11,12 +11,12 @@ import IVRFAQ from './IVR/IVRFAQ'
 import Meta from '../Meta';
 
 const IVR = () => {
-    useEffect(() => {
-      window.scrollTo({ top: 0, behavior: 'auto' });
-    }, [])
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, [])
   return (
     <>
-          <Meta title="IVR - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="Interventional Radiology Course | ThoughtFlows" description="Enroll in the Interventional Radiology course at ThoughtFlows with expert training, procedure-based coding practice, and career support." canonical="https://thoughtflows.in/ivr" />
 
       <IVRBanner />
       <WhatIVR />

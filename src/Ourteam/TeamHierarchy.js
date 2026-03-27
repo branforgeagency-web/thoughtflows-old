@@ -303,7 +303,7 @@ function TeamHierarchy() {
 
   return (
     <>
-      <Meta title="Our team - Thoughtflows Medical Coding Training Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="Meet the ThoughtFlows Team | Experts in Medical Coding" description="Get to know the dedicated team at ThoughtFlows — expert trainers and professionals shaping the future of medical coding education." canonical="https://thoughtflows.in/ourteam" />
       <div className=" min-h-screen bg-gradient-to-br from-[#36b0bd] via-[#2a8b96] to-[#1e666e] py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Enhanced premium decorative elements */}
         <div className="absolute inset-0 overflow-hidden">

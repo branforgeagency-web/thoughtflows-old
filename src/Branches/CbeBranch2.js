@@ -1,4 +1,4 @@
-import React,{useEffect}from 'react'
+import React, { useEffect } from 'react'
 
 import Cbe2Banner from './CBE-2/Cbe2Banner'
 import Cbe2About from './CBE-2/Cbe2About'
@@ -12,20 +12,20 @@ import Cbe2Testimonial from './CBE-2/Cbe2Testimonial'
 
 const CbeBranch2 = () => {
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
- },[])
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [])
   return (
     <>
-                      <Meta title="Hopes - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="Medical Coding Classes in Coimbatore | ThoughtFlows" description="Join top medical coding classes in Coimbatore at ThoughtFlows. Expert trainers, practical learning & 100% placement support for your career growth." canonical="https://thoughtflows.in/Medical-Coding-Excellence-at-Hopes" />
 
-    <Cbe2Banner/>
-    <Cbe2About/>
-    <Cbe2Transform/>
-    <Exams/>
-    {/* <Cbe2Exams/> */}
-    <Cbe2Core/>
-    <Cbe2Contents/>
-    <Cbe2Testimonial/>
+      <Cbe2Banner />
+      <Cbe2About />
+      <Cbe2Transform />
+      <Exams />
+      {/* <Cbe2Exams/> */}
+      <Cbe2Core />
+      <Cbe2Contents />
+      <Cbe2Testimonial />
     </>
   )
 }
