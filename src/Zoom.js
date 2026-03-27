@@ -1,5 +1,7 @@
 import { useState } from "react"
 import { useForm } from "react-hook-form"
+import emailjs from '@emailjs/browser'
+import { coursesList } from "./coursesList"
 
 export default function ZoomSignupForm({ onClose }) {
   const [isSubmitting, setIsSubmitting] = useState(false)
@@ -10,25 +12,52 @@ export default function ZoomSignupForm({ onClose }) {
       name: "",
       email: "",
       phone: "",
-      subject: "",
+      course: "",
     }
   })
 
   async function onSubmit(values) {
     setIsSubmitting(true)
 
-    // Simulate API call
-    await new Promise((resolve) => setTimeout(resolve, 1000))
+    try {
+      const templateParams = {
+        to_email: 'info@thoughtflows.in',
+        from_name: values.name,
+        from_email: values.email,
+        phone: values.phone,
+        course: values.course,
+        subject: `Free Zoom Trial Registration - ${values.name}`,
+        full_message: `
+          New Free Zoom Trial Registration:
+          
+          Name: ${values.name}
+          Email: ${values.email}
+          Phone: ${values.phone}
+          Course: ${values.course}
+        `
+      };
 
-    console.log(values)
-    setIsSubmitting(false)
-    setIsSuccess(true)
+      await emailjs.send(
+        'service_2anzqj9',
+        'template_vx3lkna',
+        templateParams,
+        "KLhirNBaXDhIlDonK"
+      );
 
-    // Reset form after successful submission
-    setTimeout(() => {
-      reset()
-      setIsSuccess(false)
-    }, 3000)
+      setIsSuccess(true)
+      // Reset form after successful submission
+      setTimeout(() => {
+        reset()
+        setIsSuccess(false)
+        onClose()
+      }, 3000)
+
+    } catch (error) {
+      console.error('Failed to send email:', error);
+      alert('Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false)
+    }
   }
 
   return (
@@ -105,12 +134,21 @@ export default function ZoomSignupForm({ onClose }) {
                 </div>
 
                 <div>
-                  <input
-                    {...register("subject", { required: "Subject is required" })}
-                    placeholder="Subject"
+                  <select
+                    {...register("course", { required: "Please select a course" })}
                     className="w-full h-14 rounded-md bg-white px-4 border border-gray-300"
-                  />
-                  {errors.subject && <p className="text-red-500 text-sm mt-1">{errors.subject.message}</p>}
+                  >
+                    <option value="">Select Course</option>
+                    {coursesList.map((group) => (
+                      <optgroup key={group.category} label={group.category}>
+                        {group.courses.map(course => (
+                          <option key={course} value={course}>{course}</option>
+                        ))}
+                      </optgroup>
+                    ))}
+                    <option value="OTHER">Other</option>
+                  </select>
+                  {errors.course && <p className="text-red-500 text-sm mt-1">{errors.course.message}</p>}
                 </div>
 
                 <button
@@ -122,10 +160,8 @@ export default function ZoomSignupForm({ onClose }) {
                   {isSubmitting ? "Submitting..." : "Submit"}
                 </button>
               </form>
-            )}
+            ) }
           </div>
-
-
         </div>
       </div>
     </div>
