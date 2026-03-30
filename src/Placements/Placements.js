@@ -26,14 +26,7 @@ const Placements = () => {
                     <h1 className="placements-banner-title">{placementData.banner.title}</h1>
                     <p className="placements-banner-subtitle">{placementData.banner.subtitle}</p>
                     
-                    <div className="banner-stats-grid">
-                        {placementData.stats.map((stat, index) => (
-                            <div key={index} className="banner-stat-item">
-                                <span className="stat-value">{stat.value}</span>
-                                <span className="stat-label">{stat.label}</span>
-                            </div>
-                        ))}
-                    </div>
+
                 </div>
                 
                 {/* Decorative floating students icons could go here */}
