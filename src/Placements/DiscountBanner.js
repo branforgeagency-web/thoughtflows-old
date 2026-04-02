@@ -73,7 +73,7 @@ const DiscountBanner = () => {
             console.log('Email sent successfully:', response);
             setSubmitStatus({
                 type: 'success',
-                message: 'Offer Claimed!'
+                message: 'Thank you for registering!'
             });
             setFormData({ name: '', ph: '', email: '', interestedCourse: '', preferredBranch: '' });
 
@@ -121,8 +121,8 @@ const DiscountBanner = () => {
                                 <div className="success-circle">
                                     <i className="fa fa-check"></i>
                                 </div>
-                                <h3 className="claimed-text">OFFER CLAIMED!</h3>
-                                <p className="claimed-subtext">Our team will contact you shortly to process your discount.</p>
+                                <h3 className="claimed-text">Thank you for registering!</h3>
+                                <p className="claimed-subtext">Our team will contact you shortly.</p>
                                 <button 
                                     className="reset-form-btn" 
                                     onClick={() => setSubmitStatus({ type: '', message: '' })}
