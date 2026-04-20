@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import contact from "../images/contact/6.jpg";
-import map from "../images/contact/PIN MAP UPDATED.png";
+import map from "../images/svg/Group 1171282084.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faTimes } from '@fortawesome/free-solid-svg-icons';
 import Meta from '../Meta';
@@ -25,6 +25,7 @@ function Contact() {
   const [activeSection, setActiveSection] = useState(null);
   const [showZoomPopup, setShowZoomPopup] = useState(false);
   const [selectedLocation, setSelectedLocation] = useState(null);
+  const [hoveredPin, setHoveredPin] = useState(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -45,66 +46,77 @@ function Contact() {
   const locations = [
     {
       name: 'Saravanampatti',
+      top: '68.13%', left: '34.43%',
       email: 'info@thoughtflows.in',
       phone: '+91 88075 10359 & +91 93845 76852 ',
       address: 'No-171/2A, 1st, Promenade Tower, Sathy Road, Saravanampatti, Coimbatore, Tamil Nadu 641035',
     },
     {
       name: 'Hopes',
+      top: '70.47%', left: '36.06%',
       email: 'info@thoughtflows.in',
       phone: '+91 9791974560 & +91 9384576852',
       address: 'Door No.62 E/F , 1st Floor South Wing, Lalitha Towers Gandhi Street, Avinashi Rd, Coimbatore, Tamil Nadu 641004',
     },
     {
       name: 'Gandhipuram',
+      top: '70.47%', left: '32.80%',
       email: 'info@thoughtflows.in',
       phone: '+91 9655079784, +91 9384576852',
       address: 'Jay Enclave, 1084, 3rd Street, Cross Cut Road, Gandhipuram, Tamil Nadu 641012',
     },
     {
       name: 'Tirupati',
+      top: '44.72%', left: '48.43%',
       email: 'info@thoughtflows.in',
       phone: '+91 8790424835 & +91 9384576852',
       address: '20-1-171/C1, 1st floor Upstairs MIOT Diagnostic center oppo. Sai Baba temple, Tirumala Bypass Rd, Korlagunta, Tirupati, Andhra Pradesh 517501',
     },
     {
       name: 'Ameerpet',
+      top: '16.63%', left: '45.18%',
       email: 'info@thoughtflows.in',
       phone: '+91 8790751742 & +91 98045 76852',
       address: 'No:405, 3rd Floor & No:606/A, 5th Floor, Vasavi MPM Grand Yellareddyguda, Ameerpet X Road Telangana 500073',
     },
     {
       name: 'Trivandrum',
+      top: '80.51%', left: '26.93%',
       email: 'info@thoughtflows.in',
       phone: '+91 93845 76852 ',
       address: '167, 1st Floor, Karimpanal Arcade, opp. to Padmanabhaswamy Temple, East Fort, Thiruvananthapuram, Kerala 695024',
     },
     {
       name: 'Kochi',
+      top: '70.14%', left: '22.70%',
       email: 'info@thoughtflows.in',
       phone: '  +91 90480 23242 , +91 93845 76852',
       address: '4 th floor, Vee Vee Tower , NH Bypass road, Near Bhima Jewels, Edappally, Kochi, Eranakulam, Kerala 682024',
     },
     {
       name: 'Trichy',
+      top: '71.14%', left: '41.92%',
       email: 'info@thoughtflows.in',
       phone: '+91 8438974736, +91 9384576852',
       address: '25 ,C-40,first floor ,AMIL towers, 3rd cross, Thillai nagar east, Trichy, Tamil Nadu 620018',
     },
     {
       name: 'Salem',
+      top: '63.79%', left: '40.29%',
       email: 'info@thoughtflows.in',
       phone: '+91 8148732017',
       address: '1st floor, S Square Towers, Omalur Main Rd, Arthanari Nagar, Mamangam, Salem, Tamil Nadu 636302',
     },
     {
       name: 'Dilsukhnagar',
+      top: '18.64%', left: '48.43%',
       email: 'info@thoughtflows.in',
       phone: '+91 90305 08844 ',
       address: 'Sai Towers H.No:-16-11-477-/6/1/A, 2nd floor Opp.pillar No:-1519, Dilshuknagar., Hyderabad, Telangana 500102',
     },
     {
       name: 'Vizag',
+      top: '15.29%', left: '80.36%',
       email: 'info@thoughtflows.in',
       phone: '+91 89775 07230',
       address: '7th Floor, Flat No #802 Grand Palace Building, D. No. 47-11-16, Lane Dwarka Nagar, Visakhapatnam- 530016',
@@ -474,20 +486,16 @@ function Contact() {
             maxWidth: isMobile ? '360px' : '450px',
             height: isMobile ? 'auto' : '400px',
             perspective: '1000px',
-            overflow: 'hidden',
             padding: isMobile ? '10px' : '25px',
             margin: isMobile ? '0 auto' : '0'
           }}>
-            <img
-              src={map}
-              className='Map-img'
-              alt="map"
+            <div
               style={{
-                width: isMobile ? '130px' : '100%',
-                height: isMobile ? '130px' : isTablet ? 'auto' : '100%',
-                borderRadius: '0px',
-                transition: isMobile || isTablet ? 'none' : 'transform 0.3s ease-out',
-                transformStyle: isMobile || isTablet ? 'none' : 'preserve-3d'
+                position: 'relative',
+                width: '100%',
+                height: '100%',
+                transformStyle: isMobile || isTablet ? 'none' : 'preserve-3d',
+                transition: isMobile || isTablet ? 'none' : 'transform 0.3s ease-out'
               }}
               onMouseMove={isMobile || isTablet ? undefined : (e) => {
                 const rect = e.currentTarget.getBoundingClientRect();
@@ -500,7 +508,61 @@ function Contact() {
               onMouseLeave={isMobile || isTablet ? undefined : (e) => {
                 e.currentTarget.style.transform = 'none';
               }}
-            />
+            >
+              <img
+                src={map}
+                className='Map-img'
+                alt="map"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain',
+                  borderRadius: '0px',
+                  pointerEvents: 'none'
+                }}
+              />
+              
+              {/* Overlay hover pins */}
+              {locations.map((loc) => (
+                <div
+                  key={loc.name}
+                  style={{
+                    position: 'absolute',
+                    top: loc.top,
+                    left: loc.left,
+                    width: '30px',
+                    height: '30px',
+                    transform: 'translate(-50%, -100%)',
+                    cursor: 'pointer',
+                    zIndex: 10
+                  }}
+                  onMouseEnter={() => setHoveredPin(loc.name)}
+                  onMouseLeave={() => setHoveredPin(null)}
+                  onClick={() => handleLocationClick(loc)}
+                >
+                  {hoveredPin === loc.name && (
+                    <div style={{
+                      position: 'absolute',
+                      bottom: '100%',
+                      left: '50%',
+                      transform: 'translateX(-50%)',
+                      backgroundColor: 'rgba(13, 143, 156, 0.9)',
+                      color: 'white',
+                      padding: '6px 12px',
+                      borderRadius: '6px',
+                      fontSize: '14px',
+                      fontWeight: '600',
+                      whiteSpace: 'nowrap',
+                      pointerEvents: 'none',
+                      marginBottom: '2px',
+                      boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
+                    }}>
+                      {loc.name}
+                    </div>
+                  )}
+                </div>
+              ))}
+            </div>
           </div>
         </motion.div>
 

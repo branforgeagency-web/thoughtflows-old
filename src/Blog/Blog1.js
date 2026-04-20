@@ -1016,7 +1016,7 @@ export default function Blog1() {
                         </ul>
                       )}
                   </div>
-                  <button className="faq-toggle">
+                  <button className="faq-toggle" type="button" aria-label="Toggle frequently asked question answer" title="Expand or collapse this answer">
                     <i className="fa-solid fa-chevron-down"></i>
                     <i className="fa-solid fa-times"></i>
                   </button>
