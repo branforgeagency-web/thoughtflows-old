@@ -203,7 +203,7 @@ const teamMemberData = [
   { "name": "Punitha", "role": "HR TEAM LEAD", "phone": "+91 78458 28547", "email": "punithac@thoughtflows.in", "Branch": "", "image": Punitha },
   { "name": "Guruvigneshwar", "role": "HR-TEAM LEAD", "phone": "81221 02581", "email": "", "Branch": "", "image": Guruvigneshwaran },
   { "name": "Priyadharshini R", "role": "HR-TEAM LEAD", "phone": "80157 69049", "email": "Priyar@thoughtflows.in", "Branch": "", "image": PriyadharshiniR },
-  { "name": "Sindhu Thakaiya", "role": "PROCESS COACH", "phone": "88077 65495", "email": "sindhus@thoughtflows.in", "Branch": "", "image": Sindhu },
+  { "name": "Sindhu Thakaiya", "role": "BRANCH HEAD & PROCESS COACH", "phone": "88077 65495", "email": "sindhus@thoughtflows.in", "Branch": "", "image": Sindhu },
   // {"name": "Karthika", "role": "TEAM LEAD", "phone": "", "email": "", "Branch": "HR - Team Lead","image":Karthika},
 
   { "name": "Kiruthika D", "role": "SENIOR FINANCE MANAGER", "phone": "", "email": "", "Branch": "", "image": kiruthika },
