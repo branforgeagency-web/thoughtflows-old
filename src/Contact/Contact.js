@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import contact from "../images/contact/6.jpg";
-import map from "../images/svg/Group 1171282084.svg";
+import map from "../images/svg/map.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faTimes } from '@fortawesome/free-solid-svg-icons';
 import Meta from '../Meta';
@@ -46,21 +46,21 @@ function Contact() {
   const locations = [
     {
       name: 'Saravanampatti',
-      top: '68.13%', left: '34.43%',
+      top: '64.0%', left: '35.0%', // Adjusted for distance
       email: 'info@thoughtflows.in',
       phone: '+91 88075 10359 & +91 93845 76852 ',
       address: 'No-171/2A, 1st, Promenade Tower, Sathy Road, Saravanampatti, Coimbatore, Tamil Nadu 641035',
     },
     {
       name: 'Hopes',
-      top: '70.47%', left: '36.06%',
+      top: '72.0%', left: '36.5%', // Adjusted for distance
       email: 'info@thoughtflows.in',
       phone: '+91 9791974560 & +91 9384576852',
       address: 'Door No.62 E/F , 1st Floor South Wing, Lalitha Towers Gandhi Street, Avinashi Rd, Coimbatore, Tamil Nadu 641004',
     },
     {
       name: 'Gandhipuram',
-      top: '70.47%', left: '32.80%',
+      top: '71.5%', left: '32.0%', // Adjusted for distance
       email: 'info@thoughtflows.in',
       phone: '+91 9655079784, +91 9384576852',
       address: 'Jay Enclave, 1084, 3rd Street, Cross Cut Road, Gandhipuram, Tamil Nadu 641012',
@@ -95,14 +95,14 @@ function Contact() {
     },
     {
       name: 'Trichy',
-      top: '71.14%', left: '41.92%',
+      top: '72.5%', left: '42.5%', // Adjusted for distance
       email: 'info@thoughtflows.in',
       phone: '+91 8438974736, +91 9384576852',
       address: '25 ,C-40,first floor ,AMIL towers, 3rd cross, Thillai nagar east, Trichy, Tamil Nadu 620018',
     },
     {
       name: 'Salem',
-      top: '63.79%', left: '40.29%',
+      top: '62.5%', left: '39.8%', // Adjusted for distance
       email: 'info@thoughtflows.in',
       phone: '+91 8148732017',
       address: '1st floor, S Square Towers, Omalur Main Rd, Arthanari Nagar, Mamangam, Salem, Tamil Nadu 636302',
@@ -482,8 +482,8 @@ function Contact() {
             <h2 style={{ marginTop: "20px", paddingLeft: isMobile ? '0px' : '20px', textAlign: isMobile ? 'center' : 'left' }}>All Over South India Zone</h2>
           </div>
           <div style={{
-            width: isMobile ? '100%' : '450px',
-            maxWidth: isMobile ? '360px' : '450px',
+            width: isMobile ? '100%' : '410px',
+            maxWidth: isMobile ? '360px' : '410px',
             height: isMobile ? 'auto' : '400px',
             perspective: '1000px',
             padding: isMobile ? '10px' : '25px',
@@ -532,7 +532,8 @@ function Contact() {
                     left: loc.left,
                     width: '30px',
                     height: '30px',
-                    transform: 'translate(-50%, -100%)',
+                    backgroundColor: 'transparent', // Removed visual red dot
+                    transform: 'translate(-50%, -50%)',
                     cursor: 'pointer',
                     zIndex: 10
                   }}
