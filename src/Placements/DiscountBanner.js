@@ -188,7 +188,7 @@ const DiscountBanner = () => {
                                     ))}
                                 </select>
                                 <button type="submit" className="discount-submit-btn" disabled={isSubmitting}>
-                                    {isSubmitting ? 'Submitting...' : 'Claim Offer Now'}
+                                    {isSubmitting ? 'Submitting...' : 'Submit Now'}
                                 </button>
                             </form>
                         )}
