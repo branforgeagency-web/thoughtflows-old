@@ -235,6 +235,7 @@ const teamMemberData = [
   // {"name": "Manasa Bulle", "role": "HR EXECUTIVE", "phone": "7675922965", "email": "", "Branch": "","image":Manasa},
   // {"name": "Sobika", "role": "HR EXECUTIVE", "phone": "8807141379", "email": "sobikac@thoughtflows.in", "Branch": "","image":Sobika},
 
+  /*
   { "name": "Sanjay", "role": "TALENT ACQUISITION EXECUTIVE", "phone": "81229 20938", "email": "sanjayp@thoughtflows.in", "Branch": "", "image": Sanjay },
   { "name": "Tejaswini", "role": "TALENT ACQUISITION EXECUTIVE", "phone": "89397 61685", "email": "arputhakumara@thoughtflows.in", "Branch": "", "image": Tejaswini },
   { "name": "Megha", "role": "TALENT ACQUISITION EXECUTIVE", "phone": "81222 60271", "email": "", "Branch": "", "image": Megha },
@@ -249,6 +250,7 @@ const teamMemberData = [
   { "name": "Santhosh", "role": "DIGITAL MARKETING EXECUTIVE", "phone": "", "email": "", "Branch": "", "image": Santhosh },
   { "name": "Sreenath Reddy", "role": "TECHNICAL AND MARKETING EXECUTIVE", "phone": "63058 39325", "email": "sreenathr@thoghtflows.in", "Branch": "", "image": Sreenath },
   { "name": "Jeron", "role": "Graphic Designer", "phone": "", "email": "", "Branch": "", "image": Jeron },
+  */
 
   { "name": "Manoj Kumar", "role": "MANAGEMENT INFORMATION SYSTEM EXECUTIVE", "phone": "76608 34401", "email": "manojkumar@thoughtflows.in", "Branch": "", "image": Manojs },
   // { "name": "Deva Dharshini", "role": "MANAGEMENT INFORMATION SYSTEM EXECUTIVE", "phone": "63800 99212", "email": "devadharshinis@thoughtflows.in", "Branch": "", "image": Deva },
@@ -276,8 +278,8 @@ const teamStructure = [
   { role: "PROCESS COACH", count: 1 },
   { role: "FINANCE MANAGER", count: 1 },
   { role: "HR EXECUTIVE", count: 21 },
-  { role: "TALENT ACQUISITION EXECUTIVE", count: 4 },
-  { role: "DIGITAL MARKETING EXECUTIVE", count: 7 },
+  // { role: "TALENT ACQUISITION EXECUTIVE", count: 4 },
+  // { role: "DIGITAL MARKETING EXECUTIVE", count: 7 },
   { role: "MANAGEMENT INFORMATION SYSTEM EXECUTIVE", count: 2 },
   { role: "OUTDOOR MARKETING EXECUTIVE", count: 3 },
 
