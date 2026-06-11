@@ -18,6 +18,7 @@ import CPC from './Courses/CPC';
 import Blog1 from "../src/Blog/Blog1"
 import Blog2 from "../src/Blog/Blog2"
 import Blog3 from "../src/Blog/Blog3"
+import Blog8 from "../src/Blog/Blog8"
 import CIC from './Courses/CIC';
 import COC from './Courses/COC';
 import CPMA from './Courses/CPMA';
@@ -52,6 +53,7 @@ import CDEI from './Courses/CDEI';
 import CPPM from './Courses/CPPM';
 import HCC from './Courses/HCC';
 import IVR from './Courses/IVR';
+import CDI from './Courses/CDI';
 import Hyderabad2 from './Branches/Hyderabad2';
 import Salem from "./Branches/Salem"
 import TeamHierarchy from './Ourteam/TeamHierarchy';
@@ -83,6 +85,7 @@ function App() {
             <Route path="/blog/exploring-icd10cm-key-changes-you-need-to-know-for-accurate-medical-coding" element={<Blog5 />} />
             <Route path="/blog/the-role-of-medical-coders-in-modern-healthcare-essential-insights" element={<Blog6 />} />
             <Route path="/blog/medical-coding-career-path-opportunities-and-growth-in-healthcare" element={<Blog7 />} />
+            <Route path="/blog/vetri-108-free-medical-coding-scholarships" element={<Blog8 />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cpc" element={<CPC />} />
             <Route path="/cic" element={<CIC />} />
@@ -120,6 +123,7 @@ function App() {
             <Route path='/cppm' element={<CPPM />} />
             <Route path='/hcc' element={<HCC />} />
             <Route path='/ivr' element={<IVR />} />
+            <Route path='/cdi' element={<CDI />} />
             <Route path="/placements" element={<Placements />} />
             <Route path="/placements/:year" element={<YearlyPlacementList />} />
           </Routes>

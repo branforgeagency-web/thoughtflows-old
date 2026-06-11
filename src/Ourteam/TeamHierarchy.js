@@ -1,4 +1,4 @@
-
+ 
 
 
 import { useEffect } from "react"
@@ -148,7 +148,7 @@ const teamMemberData = [
   { "name": "Veenadhari", "role": "BRANCH MANAGER OF VIZAG", "phone": "89775 07230", "email": "veenadharithoughtflows@gmail.com", "Branch": "Vizag", "image": Veenadhari },
 
 
-  { "name": "Thulasi", "role": "GENERAL MANAGER", "phone": "78936 82459", "email": "thulasick@thoughtflows.in", "Branch": "", "image": thulasi },
+
 
 
   { "name": "Nilanjan Basu", "role": "INDIA HEAD - OPERATIONS & STRATEGIC PARTNERSHIP", "phone": "81213 45855", "email": "", "Branch": "", "image": basu },
@@ -159,7 +159,7 @@ const teamMemberData = [
   { "name": "Vidya", "role": "TALENT ACQUISITION HEAD", "phone": "97919 74560", "email": "vidya@thoughtflows.in", "Branch": "", "image": Vidya },
   { "name": "Manoj", "role": "TRAINING DEPARTMENT HEAD", "phone": "96294 17645", "email": "manojs@thoughtflows.in", "Branch": "", "image": Manoj },
   { "name": "Lokesh Babu", "role": "HR DEPARTMENT HEAD (AP/TS)", "phone": "87904 24835", "email": "lokesh@thoughtflows.in", "Branch": "", "image": Lokesh },
-  { "name": "Mohamed Asiq", "role": "DIGITAL MARKETING HEAD", "phone": "81222 41364", "email": "", "Branch": "", "image": Mohamed },
+
 
 
   { "name": "Aswanth", "role": "REGIONAL HEAD OF KERALA", "phone": "90480 23242", "email": "aswanth@thoughtflows.in", "Branch": "Kerala", "image": Awanth },
@@ -171,7 +171,7 @@ const teamMemberData = [
 
   { "name": "Prasanna", "role": "TRAINER", "phone": "96182 26640", "email": "prasannan@thoughtflows.in", "Branch": "", "image": Prasanna },
   { "name": "Ram Balaji", "role": "TRAINER", "phone": "", "email": "rambalaji@thoughtflows.in", "Branch": "", "image": Ram },
-  { "name": "Santhiya", "role": "TRAINER", "phone": "", "email": "", "Branch": "", "image": Santhiya },
+
   { "name": "Jenny Wilson", "role": "TRAINER", "phone": "", "email": "", "Branch": "Hopes", "image": Jenny },
   { "name": "Aleena Susan JG", "role": "TRAINER", "phone": "85902 18123", "email": "aleenasusanJ@thoughtflows.in", "Branch": "", "image": Aleena },
   { "name": "Mounika", "role": "TRAINER", "phone": "70752 63848", "email": "mounikav@thoughtflows.in", "Branch": "", "image": Mounika },
@@ -181,25 +181,17 @@ const teamMemberData = [
   { "name": "Aashifa", "role": "TRAINER", "phone": "", "email": "", "Branch": "", "image": Aasifa },
   { "name": "Charishma", "role": "TRAINER", "phone": "", "email": "", "Branch": "Vizag", "image": Charishma },
   { "name": "Kavya", "role": "TRAINER", "phone": "", "email": "", "Branch": "", "image": Kavya },
-  { "name": "Sabiha Sulthana", "role": "TRAINER", "phone": "", "email": "", "Branch": "Tirupati", "image": SabihaSulthana },
   { "name": "Chithra", "role": "TRAINER", "phone": "", "email": "", "Branch": "", "image": Chithra },
-  { "name": "Badawath Kavitha", "role": "TRAINER", "phone": "99518 76125", "email": "", "Branch": "", "image": BadawathKavitha },
   { "name": "Priya", "role": "TRAINER", "phone": "", "email": "priya5thoughtflows@gmail.com", "Branch": "", "image": Priya },
 
 
   // {"name": "Elilarasi", "role": "TRAINER", "phone": "", "email": "", "Branch": "","image":Elilarasi},
   { "name": "Gayathri", "role": "BRANCH HEAD", "phone": "88075 10359", "email": "gayathrib@thoughtflows.in", "Branch": "", "image": Gayatri },
   { "name": "Sruthi", "role": "BRANCH HEAD", "phone": "84389 74736", "email": "sruthig@thoughtflows.in", "Branch": "", "image": Sruthi },
-  { "name": "Swetha", "role": "TA-TEAM LEAD", "phone": "84389 39806", "email": "swethac@thoughtflows.in", "Branch": "TA - Team Lead", "image": Swetha },
-  { "name": "Madhumitha", "role": "Inhouse Placement - Team Lead", "phone": "8754561316", "email": "madhumitham@thoughtflows.in", "Branch": "", "image": Madhumitha },
   { "name": "Anakha Suresh", "role": "HR - Team Lead", "phone": "73063 88099", "email": "anakhas@thoughtflows.in", "Branch": "HR - Team Lead", "image": Anakha },
-  { "name": "Srujana Erothu", "role": "HR - Team Lead", "phone": "80747 29024", "email": "srujanaerothu@thoughtflows.in", "Branch": "", "image": Srujana },
   { "name": "Sindhuja", "role": "HR - Team Lead", "phone": "+91 91336 85810", "email": "", "Branch": "HR - Team Lead", "image": Sindhuja },
   { "name": "Kalai Selvi", "role": "HR - Team Lead", "phone": "81228 54228", "email": "kalaiselvic@thoughtflows.in", "Branch": "HR - Team Lead", "image": Kalai },
-  { "name": "Karthick", "role": "DM - Team Lead", "phone": "", "email": "", "Branch": "", "image": Karthik },
   { "name": "Vaishna", "role": "Trainer - Team Lead", "phone": "77364 69198", "email": "vaishnas@thoughtflows.in", "Branch": "Trainer - Team Lead", "image": Vaishna },
-  { "name": "Kishore Senthil", "role": "HR-TEAM LEAD", "phone": "73975 74599", "email": "kishoresenthil@thoughtflows.in", "Branch": "", "image": Kishore },
-  { "name": "Ajai Suriya", "role": "PROJECT LEAD & TALENT ACQUISITION", "phone": "90421 49163", "email": "ajaisuriya@thoughtflows.in", "Branch": "", "image": Ajai },
   { "name": "Punitha", "role": "HR TEAM LEAD", "phone": "+91 78458 28547", "email": "punithac@thoughtflows.in", "Branch": "", "image": Punitha },
   { "name": "Guruvigneshwar", "role": "HR-TEAM LEAD", "phone": "81221 02581", "email": "", "Branch": "", "image": Guruvigneshwaran },
   { "name": "Priyadharshini R", "role": "HR-TEAM LEAD", "phone": "80157 69049", "email": "Priyar@thoughtflows.in", "Branch": "", "image": PriyadharshiniR },
@@ -210,7 +202,7 @@ const teamMemberData = [
 
 
 
-  { "name": "Reshma Jenifar", "role": "HR EXECUTIVE", "phone": "72006 03257", "email": "reshmaj@thoughtflows.in", "Branch": "", "image": Reshma },
+
   { "name": "Peemuthannagari Supraja", "role": "HR EXECUTIVE", "phone": "80151 08186", "email": "suprajap@thoughtflows.in", "Branch": "", "image": Peemuthannagari },
   { "name": "Sreelekha ", "role": "HR EXECUTIVE", "phone": "89437 44055", "email": "sreelekhapc@thoughtflows.in", "Branch": "", "image": Sreelekha },
   { "name": "Dharshini", "role": "SENIOR HR EXECUTIVE", "phone": "99444 84356", "email": "dharshinis@thoughtflows.in", "Branch": "", "image": Dharshini },
@@ -219,13 +211,13 @@ const teamMemberData = [
   { "name": "Pavithra N", "role": "HR EXECUTIVE", "phone": "63856 18301", "email": "pavithran@thoughtflows.in", "Branch": "", "image": PavithraN },
   { "name": "Gayathri", "role": "HR EXECUTIVE", "phone": "63745 82079", "email": "ugayathri@thoughtflows.in", "Branch": "", "image": Gayathri },
   { "name": "Kanchana", "role": "HR EXECUTIVE", "phone": "73395 64314", "email": "kanchana@thoughtflows.in", "Branch": "", "image": Kanchana },
-  { "name": "Subiksha", "role": "HR EXECUTIVE", "phone": "78459 86967", "email": "subiksham@thoughtflows.in", "Branch": "", "image": Subiksha },
+
   { "name": "Julie", "role": "HR EXECUTIVE", "phone": "80156 93629", "email": "julie@thoughtflows.in", "Branch": "", "image": Julie },
   { "name": "Sangavi.P", "role": "HR EXECUTIVE", "phone": "81222 42136", "email": "sangavipthoughtflows.in", "Branch": "", "image": SangaviP },
   { "name": "Kannan", "role": "HR EXECUTIVE", "phone": "75581 19016", "email": "kannans@thoughtflows.in", "Branch": "", "image": Kannan },
   { "name": "Deepthi", "role": "HR EXECUTIVE", "phone": "81222 60415", "email": "", "Branch": "", "image": Deepthi },
   { "name": "Dhivya", "role": "HR EXECUTIVE", "phone": "81222 60498", "email": "", "Branch": "", "image": Dhivya },
-  { "name": "Manjula", "role": "HR EXECUTIVE", "phone": "72070 19815", "email": "", "Branch": "", "image": Manjula },
+
   { "name": "G.VishnuPriya", "role": "HR EXECUTIVE", "phone": "93983 02884", "email": "", "Branch": "", "image": GVishnupriya },
   { "name": "k.Divya", "role": "HR EXECUTIVE", "phone": "83742 15861", "email": "", "Branch": "", "image": KDivya },
   { "name": "Aryasree A", "role": "HR EXECUTIVE", "phone": "89436 44055", "email": "", "Branch": "", "image": Aryasree },
@@ -259,29 +251,28 @@ const teamMemberData = [
 
   { "name": "Babu", "role": "OUTDOOR MARKETING EXECUTIVE", "phone": "89785 93885", "email": "", "Branch": "", "image": Babu },
   { "name": "Pradheesh", "role": "OUTDOOR MARKETING EXECUTIVE", "phone": "70947 02901", "email": "pradheeshthoughtflow@gmail.com", "Branch": "", "image": Pradheesh },
-  { "name": "Chandu", "role": "OUTDOOR MARKETING EXECUTIVE", "phone": "", "email": "", "Branch": "", "image": Chandu },
+
 ]
 
 
 const teamStructure = [
   { role: "OUR FOUNDERS", count: 2 },
   { role: "BRANCH MANAGERS", count: 4 },
-  { role: "GENERAL MANAGER", count: 1 },
   { role: "INDIA HEAD - OPERATIONS &  STRATEGIC PARTNERSHIP", count: 1 },
   { role: "OPERATIONAL HEAD", count: 1 },
-  { role: "DEPARTMENT HEADS", count: 5 },
+  { role: "DEPARTMENT HEADS", count: 4 },
   { role: "REGIONAL HEAD", count: 1 },
   { role: "TRAINING MANAGER", count: 2 },
-  { role: "TRAINER", count: 16 },
+  { role: "TRAINER", count: 13 },
   { role: "BRANCH HEAD", count: 2 },
-  { role: "TEAM LEAD", count: 13 },
+  { role: "TEAM LEAD", count: 7 },
   { role: "PROCESS COACH", count: 1 },
   { role: "FINANCE MANAGER", count: 1 },
-  { role: "HR EXECUTIVE", count: 21 },
+  { role: "HR EXECUTIVE", count: 18 },
   // { role: "TALENT ACQUISITION EXECUTIVE", count: 4 },
   // { role: "DIGITAL MARKETING EXECUTIVE", count: 7 },
   { role: "MANAGEMENT INFORMATION SYSTEM EXECUTIVE", count: 2 },
-  { role: "OUTDOOR MARKETING EXECUTIVE", count: 3 },
+  { role: "OUTDOOR MARKETING EXECUTIVE", count: 2 },
 
 ]
 

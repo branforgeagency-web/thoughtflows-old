@@ -7,9 +7,9 @@
 :root {
   --primary-blue: #097D8A !important;
   --darkblue: #073766 !important;
-  --primary-font: 'League Spartan' !important;
-  --secondary-font: 'Reem Kufi' !important;
-  --para-font: "Poppins" !important;
+  --primary-font: 'Outfit', sans-serif !important;
+  --secondary-font: 'Outfit', sans-serif !important;
+  --para-font: 'Outfit', sans-serif !important;
   --btn-bg: #15AEBB !important;
   --nt-btn-color: #fff;
   --accent-color: #15AEBB;

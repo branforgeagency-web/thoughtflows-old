@@ -48,7 +48,7 @@ const DropdownMenu = ({ isBranchPage }) => {
       >
         Branches
         {openMainMenu === "Branches" && (
-          <div className="absolute left-0 mt-2 w-64 bg-white shadow-lg rounded-md">
+          <div className="absolute left-0 mt-2 w-64 shadow-lg rounded-md" style={{ backgroundColor: "#ffffff", backgroundImage: "linear-gradient(135deg, #dbeafe 0%, #ede9fe 50%, #fce7f3 100%)" }}>
             {Object.keys(menuItems.Branches).map((branch) => {
               const isNoDropdown = noDropdown.includes(branch);
 
@@ -81,7 +81,7 @@ const DropdownMenu = ({ isBranchPage }) => {
                       </div>
 
                       {openSubMenu === branch && (
-                        <div className="absolute left-full top-0 w-64 bg-white shadow-lg rounded-md">
+                        <div className="absolute left-full top-0 w-64 shadow-lg rounded-md" style={{ backgroundColor: "#ffffff", backgroundImage: "linear-gradient(135deg, #dbeafe 0%, #ede9fe 50%, #fce7f3 100%)" }}>
                           {menuItems.Branches[branch].map((subBranch) => (
                             <Link
                               key={subBranch.name}
@@ -142,7 +142,7 @@ const Header = () => {
       '/cpc', '/cic', '/coc', '/cpma', '/crc', '/cpb', '/cedc', '/cemc',
       '/cdeo', '/cdei', '/cppm', '/surgery', '/ed', '/em', '/radiology',
       '/anesthesia', '/ip-drg', '/hcc', '/ivr', '/ccs', '/ccs-p', '/rhia',
-      '/rhit', '/ccc', '/him'
+      '/rhit', '/ccc', '/him', '/cdi'
     ];
     return coursePaths.includes(location.pathname);
   };
@@ -202,6 +202,7 @@ const Header = () => {
           { label: "IP DRG", path: "/ip-drg" },
           { label: "HCC", path: "/hcc" },
           { label: "IVR", path: "/ivr" },
+          { label: "CDI", path: "/cdi" },
         ],
       },
       {
@@ -304,7 +305,7 @@ const Header = () => {
 
                 <li>
                   <div
-                    style={{ fontWeight: "bold", cursor: "pointer" }}
+                    style={{ fontWeight: "500", cursor: "pointer" }}
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
@@ -319,7 +320,7 @@ const Header = () => {
                 </li>
                 <li>
                   <div
-                    style={{ fontWeight: "bold", cursor: "pointer" }}
+                    style={{ fontWeight: "500", cursor: "pointer" }}
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
@@ -334,7 +335,7 @@ const Header = () => {
                 </li>
                 <li>
                   <div
-                    style={{ fontWeight: "bold", cursor: "pointer" }}
+                    style={{ fontWeight: "500", cursor: "pointer" }}
                     onMouseEnter={() =>
                       !isMobile && setOpen({ submenu: "courses", open: true })
                     }
@@ -413,7 +414,7 @@ const Header = () => {
                 </li>
                 <li className="multiple-dropdown">
                   <div
-                    style={{ fontWeight: "bold", cursor: "pointer" }}
+                    style={{ fontWeight: "500", cursor: "pointer" }}
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                   >
                     <DropdownMenu isBranchPage={isBranchPage} />
@@ -422,7 +423,7 @@ const Header = () => {
                 <li className="multiple-dropdown-sub">
 
                   <div
-                    style={{ fontWeight: "bold", cursor: "pointer", }}
+                    style={{ fontWeight: "500", cursor: "pointer", }}
                     onMouseEnter={() =>
                       !isMobile && setOpen({ submenu: "branches", open: true })
                     }
@@ -470,7 +471,7 @@ const Header = () => {
                 </li>
                 <li>
                   <div
-                    style={{ fontWeight: "bold", cursor: "pointer" }}
+                    style={{ fontWeight: "500", cursor: "pointer" }}
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
@@ -485,7 +486,7 @@ const Header = () => {
                 </li>
                 <li>
                   <div
-                    style={{ fontWeight: "bold", cursor: "pointer" }}
+                    style={{ fontWeight: "500", cursor: "pointer" }}
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
@@ -500,7 +501,7 @@ const Header = () => {
                 </li>
                 <li>
                   <div
-                    style={{ fontWeight: "bold", cursor: "pointer" }}
+                    style={{ fontWeight: "500", cursor: "pointer" }}
                     onMouseEnter={() => setOpen({ submenu: "", open: false })}
                     className="py-2 whitespace-nowrap"
                   >
@@ -526,7 +527,8 @@ const Header = () => {
                   left: "auto",
                   display: "flex",
                   justifyContent: "center",
-                  backgroundColor: "#fff",
+                  backgroundColor: "#ffffff",
+                  backgroundImage: "linear-gradient(135deg, #dbeafe 0%, #ede9fe 50%, #fce7f3 100%)",
                   color: "black",
                   width: open.submenu === "branches" ? "50%" : "50%",
                   gap: "10%",
@@ -549,7 +551,7 @@ const Header = () => {
                     <div
                       style={{
                         fontSize: "1rem",
-                        fontWeight: "bold",
+                        fontWeight: "500",
                         marginBottom: "15px",
                         color: "#1f2937",
                         borderBottom: "2px solid #06b6d4",

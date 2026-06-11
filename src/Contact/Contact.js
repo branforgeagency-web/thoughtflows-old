@@ -31,6 +31,7 @@ function Contact() {
     email: '',
     ph: '',
     course: '',
+    location: '',
     message: '',
   });
   const [errors, setErrors] = useState({});
@@ -171,6 +172,7 @@ function Contact() {
       newErrors.ph = 'Phone number is invalid';
     }
     if (!formData.course) newErrors.course = 'Please select a course';
+    if (!formData.location) newErrors.location = 'Location is required';
     if (formData.message.length < 10) {
       newErrors.message = 'Message must be at least 10 characters long';
     }
@@ -193,6 +195,7 @@ function Contact() {
           from_email: formData.email,
           phone: formData.ph,
           course: formData.course,
+          location: formData.location,
           message: formData.message,
           subject: `Contact Form Submission from ${formData.name} (${formData.email})`,
           full_message: `
@@ -202,6 +205,7 @@ function Contact() {
             Email: ${formData.email}  
             Phone: ${formData.ph}
             Course: ${formData.course}
+            Location: ${formData.location}
             Message: ${formData.message}
           `
         };
@@ -221,7 +225,7 @@ function Contact() {
         });
 
         // Reset form after successful submission
-        setFormData({ name: '', email: '', message: '', ph: "", course: "" });
+        setFormData({ name: '', email: '', message: '', ph: "", course: "", location: "" });
         setErrors({});
 
         // Clear success message after 5 seconds
@@ -424,6 +428,18 @@ function Contact() {
                   <option value="OTHER">Other</option>
                 </select>
                 {errors.course && <span style={{ color: 'red', fontSize: '0.8em' }}>{errors.course}</span>}
+              </div>
+              <div style={{ marginBottom: '10px' }}>
+                <input
+                  type="text"
+                  name="location"
+                  placeholder="Location"
+                  required
+                  style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }}
+                  value={formData.location}
+                  onChange={handleInputChange}
+                />
+                {errors.location && <span style={{ color: 'red', fontSize: '0.8em' }}>{errors.location}</span>}
               </div>
               <div style={{ marginBottom: '10px' }}>
                 <textarea

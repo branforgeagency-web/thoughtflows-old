@@ -181,6 +181,7 @@ const DiscountBanner = () => {
                                     value={formData.preferredBranch}
                                     onChange={handleInputChange}
                                     className="discount-input discount-select"
+                                    required
                                 >
                                     <option value="" disabled>Preferred Branch</option>
                                     {branches.map((branch, index) => (

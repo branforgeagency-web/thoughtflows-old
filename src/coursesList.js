@@ -26,7 +26,8 @@ export const coursesList = [
             "ANESESTHESIA",
             "IP DRG",
             "HCC (Hierarchical Condition Category)",
-            "IVR (Interventional Radiology)"
+            "IVR (Interventional Radiology)",
+            "CDI (Clinical Documentation Improvement)"
         ]
     },
     {

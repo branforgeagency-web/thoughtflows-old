@@ -7,6 +7,7 @@ import postImage4 from '../images/Blog/medium-shot-smiley-woman-holding-clipboar
 import postImage5 from '../images/Blog/stomatolog-nurse-tooth-clinic-checking-patient-appointment-looking-computer-monitor-stomatology-assistant-teeth-doctor-discussing-reception-dental-office.jpg';
 import postImage6 from '../images/Blog/manager-preparing-store-reopening.jpg';
 import postImage7 from '../images/Blog/three-business-people-discussing-graph-points.jpg';
+import postImage8 from '../images/Blog/vetri108/Ram Blog Banner (25).png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
@@ -79,6 +80,14 @@ function BlogRef1() {
       image: postImage7,
       id: createSlug("Medical Coding Career Path: Opportunities and Growth in Healthcare"),
     },
+    {
+      date: "July 05, 2026",
+      title: "108 Free Scholarships for Future Medical Coders by ThoughtFlows",
+      Comments: "0",
+      info: `VETRI 108 by ThoughtFlows offers free Medical Coding scholarships, training, and placement support for graduates, freshers, and job seekers across Tamil Nadu.`,
+      image: postImage8,
+      id: "vetri-108-free-medical-coding-scholarships",
+    },
   ];
 
 
@@ -111,7 +120,7 @@ const PostCard = ({ post }) => {
 
 return (
   <div className="p-10 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-    {postData.map((post) => (
+    {postData.slice().reverse().map((post) => (
       <PostCard key={post.id} post={post} />
     ))}
   </div>

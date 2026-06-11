@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 import './RegisterPopup.css';
 import { coursesList } from '../coursesList';
 
-import RegisterBanner from '../images/forms/PHOTO-2026-05-18-14-56-19.jpg';
+import RegisterBanner from '../images/forms/vetri_108.jpg__3__720.jpg';
 
 const RegisterPopupForm = () => {
     const { isOpen, setIsOpen } = useContext(PopupContext);
@@ -136,7 +136,7 @@ const RegisterPopupForm = () => {
                                     </div>
                                     <div className="col-md-6">
                                         <div className="input-group">
-                                            <input type="text" name="location" value={formData.location} onChange={handleInputChange} placeholder="Location" />
+                                            <input type="text" name="location" value={formData.location} onChange={handleInputChange} placeholder="Location" required />
                                         </div>
                                     </div>
                                 </div>
