@@ -275,9 +275,6 @@ const Footer = () => {
                             <a href="https://www.facebook.com/Thoughtflowsacademy/" target="_blank" rel="noopener noreferrer" className="text-light">
                                 <i className="fab fa-facebook fa-lg"></i>
                             </a>
-                            <a href="https://x.com/thouhtflows" target="_blank" rel="noopener noreferrer" className="text-light">
-                                <i className="fab fa-twitter fa-lg"></i>
-                            </a>
                             <a href="https://linkedin.com/company/thoughtflows-medical-coding-academy" target="_blank" rel="noopener noreferrer" className="text-light">
                                 <i className="fab fa-linkedin fa-lg"></i>
                             </a>

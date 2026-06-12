@@ -129,6 +129,8 @@ import Kavitha from "../images/Profile images/blazer pic/Kavitha.png"
 import BadawathKavitha from "../images/Profile images/blazer pic/Badawath Kavitha.png"
 import Keerthiga from "../images/Profile images/blazer pic/Keerthiga.png"
 import Priya from "../images/Profile images/blazer pic/Priya.png"
+import LakshmiPavani from "../images/Profile images/Lakshmi Pavani - HR Executive.jpeg"
+import Likitha from "../images/Profile images/PHOTO-2026-06-11-17-28-32.jpg"
 const profileImages = [
   BalaMurali, Banumathy, Kalai, Kalaimathi, Kanchana, Kartheeswari, Karthik, Karthika, Keerthika, Kiruthika, Kishore, Kowsikan,
   Logeshwaran, Lokesh, Madhumitha, Manoj, Mohamed, Mounika, group2copy34, Pavithra, Peemuthannagari, group2copy37,
@@ -162,7 +164,9 @@ const teamMemberData = [
 
 
 
-  { "name": "Aswanth", "role": "REGIONAL HEAD OF KERALA", "phone": "90480 23242", "email": "aswanth@thoughtflows.in", "Branch": "Kerala", "image": Awanth },
+  { "name": "Aswanth", "role": "REGIONAL MANAGER OF KERALA", "phone": "90480 23242", "email": "aswanth@thoughtflows.in", "Branch": "Kerala", "image": Awanth },
+  { "name": "Gayathri", "role": "REGIONAL MANAGER", "phone": "88075 10359", "email": "gayathrib@thoughtflows.in", "Branch": "", "image": Gayatri },
+  { "name": "Sruthi", "role": "REGIONAL MANAGER", "phone": "84389 74736", "email": "sruthig@thoughtflows.in", "Branch": "", "image": Sruthi },
 
 
   { "name": "Keerthika", "role": "TRAINING MANAGER", "phone": "96006 55803", "email": "keerthisakthi03@gmail.com", "Branch": "", "image": Keerthika },
@@ -186,8 +190,9 @@ const teamMemberData = [
 
 
   // {"name": "Elilarasi", "role": "TRAINER", "phone": "", "email": "", "Branch": "","image":Elilarasi},
-  { "name": "Gayathri", "role": "BRANCH HEAD", "phone": "88075 10359", "email": "gayathrib@thoughtflows.in", "Branch": "", "image": Gayatri },
-  { "name": "Sruthi", "role": "BRANCH HEAD", "phone": "84389 74736", "email": "sruthig@thoughtflows.in", "Branch": "", "image": Sruthi },
+  // { "name": "Gayathri", "role": "BRANCH HEAD", "phone": "88075 10359", "email": "gayathrib@thoughtflows.in", "Branch": "", "image": Gayatri },
+  // { "name": "Sruthi", "role": "BRANCH HEAD", "phone": "84389 74736", "email": "sruthig@thoughtflows.in", "Branch": "", "image": Sruthi },
+  { "name": "Sindhu Thakaiya", "role": "BRANCH HEAD & PROCESS COACH", "phone": "88077 65495", "email": "sindhus@thoughtflows.in", "Branch": "", "image": Sindhu },
   { "name": "Anakha Suresh", "role": "HR - Team Lead", "phone": "73063 88099", "email": "anakhas@thoughtflows.in", "Branch": "HR - Team Lead", "image": Anakha },
   { "name": "Sindhuja", "role": "HR - Team Lead", "phone": "+91 91336 85810", "email": "", "Branch": "HR - Team Lead", "image": Sindhuja },
   { "name": "Kalai Selvi", "role": "HR - Team Lead", "phone": "81228 54228", "email": "kalaiselvic@thoughtflows.in", "Branch": "HR - Team Lead", "image": Kalai },
@@ -195,7 +200,7 @@ const teamMemberData = [
   { "name": "Punitha", "role": "HR TEAM LEAD", "phone": "+91 78458 28547", "email": "punithac@thoughtflows.in", "Branch": "", "image": Punitha },
   { "name": "Guruvigneshwar", "role": "HR-TEAM LEAD", "phone": "81221 02581", "email": "", "Branch": "", "image": Guruvigneshwaran },
   { "name": "Priyadharshini R", "role": "HR-TEAM LEAD", "phone": "80157 69049", "email": "Priyar@thoughtflows.in", "Branch": "", "image": PriyadharshiniR },
-  { "name": "Sindhu Thakaiya", "role": "BRANCH HEAD & PROCESS COACH", "phone": "88077 65495", "email": "sindhus@thoughtflows.in", "Branch": "", "image": Sindhu },
+  // { "name": "Sindhu Thakaiya", "role": "BRANCH HEAD & PROCESS COACH", "phone": "88077 65495", "email": "sindhus@thoughtflows.in", "Branch": "", "image": Sindhu },
   // {"name": "Karthika", "role": "TEAM LEAD", "phone": "", "email": "", "Branch": "HR - Team Lead","image":Karthika},
 
   { "name": "Kiruthika D", "role": "SENIOR FINANCE MANAGER", "phone": "", "email": "", "Branch": "", "image": kiruthika },
@@ -223,6 +228,8 @@ const teamMemberData = [
   { "name": "Aryasree A", "role": "HR EXECUTIVE", "phone": "89436 44055", "email": "", "Branch": "", "image": Aryasree },
   { "name": "Rahul", "role": "HR EXECUTIVE", "phone": "93914 59921", "email": "", "Branch": "", "image": Rahul },
   { "name": "M.Keerthiga", "role": "HR EXECUTIVE", "phone": "9940279031", "email": "keerthigathoughtflows@gmail.com", "Branch": "", "image": Keerthiga },
+  { "name": "R.Lakshmi Pavani", "role": "HR EXECUTIVE", "phone": "", "email": "", "Branch": "", "image": LakshmiPavani },
+  { "name": "B. Likitha", "role": "HR EXECUTIVE", "phone": "7396213531", "email": "", "Branch": "", "image": Likitha },
 
   // {"name": "Manasa Bulle", "role": "HR EXECUTIVE", "phone": "7675922965", "email": "", "Branch": "","image":Manasa},
   // {"name": "Sobika", "role": "HR EXECUTIVE", "phone": "8807141379", "email": "sobikac@thoughtflows.in", "Branch": "","image":Sobika},
@@ -248,10 +255,9 @@ const teamMemberData = [
   // { "name": "Deva Dharshini", "role": "MANAGEMENT INFORMATION SYSTEM EXECUTIVE", "phone": "63800 99212", "email": "devadharshinis@thoughtflows.in", "Branch": "", "image": Deva },
   { "name": "Kavitha", "role": "MANAGEMENT INFORMATION SYSTEM EXECUTIVE", "phone": "63800 99212", "email": "", "Branch": "", "image": Kavitha },
 
-
+    { "name": "Mohammed Azeesdeen J", "role": "Digital Marketing Executive", "phone": "", "email": "", "Branch": "", "image": null },
   { "name": "Babu", "role": "OUTDOOR MARKETING EXECUTIVE", "phone": "89785 93885", "email": "", "Branch": "", "image": Babu },
   { "name": "Pradheesh", "role": "OUTDOOR MARKETING EXECUTIVE", "phone": "70947 02901", "email": "pradheeshthoughtflow@gmail.com", "Branch": "", "image": Pradheesh },
-
 ]
 
 
@@ -261,18 +267,18 @@ const teamStructure = [
   { role: "INDIA HEAD - OPERATIONS &  STRATEGIC PARTNERSHIP", count: 1 },
   { role: "OPERATIONAL HEAD", count: 1 },
   { role: "DEPARTMENT HEADS", count: 4 },
-  { role: "REGIONAL HEAD", count: 1 },
+  { role: "REGIONAL MANAGER", count: 3 },
   { role: "TRAINING MANAGER", count: 2 },
   { role: "TRAINER", count: 13 },
-  { role: "BRANCH HEAD", count: 2 },
+  { role: "BRANCH HEAD", count: 1 },
   { role: "TEAM LEAD", count: 7 },
-  { role: "PROCESS COACH", count: 1 },
+  // { role: "PROCESS COACH", count: 1 },
   { role: "FINANCE MANAGER", count: 1 },
-  { role: "HR EXECUTIVE", count: 18 },
+  { role: "HR EXECUTIVE", count: 20 },
   // { role: "TALENT ACQUISITION EXECUTIVE", count: 4 },
   // { role: "DIGITAL MARKETING EXECUTIVE", count: 7 },
   { role: "MANAGEMENT INFORMATION SYSTEM EXECUTIVE", count: 2 },
-  { role: "OUTDOOR MARKETING EXECUTIVE", count: 2 },
+  { role: "MARKETING TEAM", count: 3 },
 
 ]
 

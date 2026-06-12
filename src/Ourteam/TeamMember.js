@@ -1,4 +1,4 @@
-import { Phone, Building } from "lucide-react";
+import { Phone, Building, User } from "lucide-react";
 import { useState } from "react";
 
 export function TeamMember({ name, role, imageUrl, phone, branch, email }) {
@@ -34,12 +34,16 @@ export function TeamMember({ name, role, imageUrl, phone, branch, email }) {
         {/* Front of card */}
         <div className="absolute w-full h-full backface-hidden bg-white rounded-2xl p-6 shadow-lg flex flex-col items-center">
           <div className="relative mb-4 group">
-            <div className="w-32 h-32 rounded-full overflow-hidden ring-4 ring-transparent hover:ring-teal-400 transition-all duration-300">
-              <img
-                src={imageUrl || "/api/placeholder/200/200"}
-                alt={name}
-                className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
-              />
+            <div className="w-32 h-32 rounded-full overflow-hidden ring-4 ring-transparent hover:ring-teal-400 transition-all duration-300 bg-gray-100 flex items-center justify-center">
+              {imageUrl ? (
+                <img
+                  src={imageUrl}
+                  alt={name}
+                  className="w-full h-full object-cover transform transition-transform duration-300 group-hover:scale-110"
+                />
+              ) : (
+                <User className="w-16 h-16 text-gray-400" />
+              )}
             </div>
           </div>
           <h3 className="text-xl font-semibold text-gray-800 mb-1">{name}</h3>
