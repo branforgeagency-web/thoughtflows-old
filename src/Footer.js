@@ -209,6 +209,9 @@ const Footer = () => {
                             <li className="mb-3">
                                 <a href="/ivr" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">IVR</a>
                             </li>
+                            <li className="mb-3">
+                                <a href="/cdi" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CDI</a>
+                            </li>
                         </ul>
                     </Col>
                     <Col lg={1} className="text-start mb-4 mb-lg-0">

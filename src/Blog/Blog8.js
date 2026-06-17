@@ -1,6 +1,9 @@
 import React, { useEffect } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import postImage8 from '../images/Blog/vetri108/Ram Blog Banner (25).png';
+import postImage1 from '../images/Blog/vetri108/Ram Blog Banner (22).png';
+import postImage2 from '../images/Blog/vetri108/Ram Blog Banner (23).png';
+import postImage3 from '../images/Blog/vetri108/ChatGPT Image Jun 10, 2026, 03_22_34 PM.png';
+import postImage4 from '../images/Blog/vetri108/Ram Blog Banner (25).png';
 import { Helmet } from "react-helmet";
 
 export default function Blog8() {
@@ -115,7 +118,7 @@ export default function Blog8() {
             <h2 style={{ color: "#1d4971" }} className="text-3xl md:text-4xl font-bold text-center line-height-1 -pt-10 mt-20 text-gray-900 mb-6">
               Launching VETRI 108
             </h2>
-            <img src={postImage8} alt="VETRI 108 Medical Coding Scholarships" className="mx-auto block w-full rounded-lg mb-8 shadow-md" />
+            <img src={postImage1} alt="VETRI 108 Medical Coding Scholarships" className="mx-auto block w-full rounded-lg mb-8 shadow-md" />
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
               ThoughtFlows Medical Coding Academy proudly introduces VETRI 108, a scholarship program created to support 1,008 aspiring Medical Coding professionals across Tamil Nadu.
             </p>
@@ -146,6 +149,7 @@ export default function Blog8() {
             <h2 style={{ color: "#1d4971" }} className="text-3xl md:text-4xl font-bold text-center mt-20 text-gray-900 mb-6">
               What Makes VETRI 108 Special?
             </h2>
+            <img src={postImage2} alt="What Makes VETRI 108 Special" className="mx-auto block w-full rounded-lg mb-8 shadow-md" />
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
               VETRI 108 has been created to help aspiring Medical Coders gain access to professional training and career-oriented opportunities.
             </p>
@@ -185,6 +189,7 @@ export default function Blog8() {
             <h2 style={{ color: "#1d4971" }} className="text-3xl md:text-4xl font-bold text-center mt-20 text-gray-900 mb-6">
               Scholarship Opportunities Under VETRI 108
             </h2>
+            <img src={postImage3} alt="Scholarship Opportunities" className="mx-auto block w-full rounded-lg mb-8 shadow-md" />
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
               VETRI 108 has been created to support 1,008 aspiring Medical Coding professionals across Tamil Nadu through different levels of scholarship opportunities.
             </p>
@@ -247,6 +252,7 @@ export default function Blog8() {
             <h2 style={{ color: "#1d4971" }} className="text-3xl md:text-4xl font-bold text-center mt-20 text-gray-900 mb-6">
               Proudly Presented by ThoughtFlows
             </h2>
+            <img src={postImage4} alt="Proudly Presented by ThoughtFlows" className="mx-auto block w-full rounded-lg mb-8 shadow-md" />
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
               ThoughtFlows Medical Coding Academy continues to create meaningful opportunities for graduates, freshers, and aspiring healthcare professionals through skill-based learning and career-focused training initiatives.
             </p>

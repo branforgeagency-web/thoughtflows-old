@@ -129,8 +129,8 @@ import Kavitha from "../images/Profile images/blazer pic/Kavitha.png"
 import BadawathKavitha from "../images/Profile images/blazer pic/Badawath Kavitha.png"
 import Keerthiga from "../images/Profile images/blazer pic/Keerthiga.png"
 import Priya from "../images/Profile images/blazer pic/Priya.png"
-import LakshmiPavani from "../images/Profile images/Lakshmi Pavani - HR Executive.jpeg"
-import Likitha from "../images/Profile images/PHOTO-2026-06-11-17-28-32.jpg"
+import LakshmiPavani from "../images/Profile images/Group 1000002151.png"
+import Likitha from "../images/Profile images/Group 1000002152.png"
 const profileImages = [
   BalaMurali, Banumathy, Kalai, Kalaimathi, Kanchana, Kartheeswari, Karthik, Karthika, Keerthika, Kiruthika, Kishore, Kowsikan,
   Logeshwaran, Lokesh, Madhumitha, Manoj, Mohamed, Mounika, group2copy34, Pavithra, Peemuthannagari, group2copy37,
@@ -255,7 +255,7 @@ const teamMemberData = [
   // { "name": "Deva Dharshini", "role": "MANAGEMENT INFORMATION SYSTEM EXECUTIVE", "phone": "63800 99212", "email": "devadharshinis@thoughtflows.in", "Branch": "", "image": Deva },
   { "name": "Kavitha", "role": "MANAGEMENT INFORMATION SYSTEM EXECUTIVE", "phone": "63800 99212", "email": "", "Branch": "", "image": Kavitha },
 
-    { "name": "Mohammed Azeesdeen J", "role": "Digital Marketing Executive", "phone": "", "email": "", "Branch": "", "image": null },
+    { "name": "Mohammed Azeesdeen", "role": "Digital Marketing Executive", "phone": "", "email": "", "Branch": "", "image": null },
   { "name": "Babu", "role": "OUTDOOR MARKETING EXECUTIVE", "phone": "89785 93885", "email": "", "Branch": "", "image": Babu },
   { "name": "Pradheesh", "role": "OUTDOOR MARKETING EXECUTIVE", "phone": "70947 02901", "email": "pradheeshthoughtflow@gmail.com", "Branch": "", "image": Pradheesh },
 ]

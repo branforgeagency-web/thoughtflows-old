@@ -7,7 +7,7 @@ import postImage4 from '../images/Blog/medium-shot-smiley-woman-holding-clipboar
 import postImage5 from '../images/Blog/stomatolog-nurse-tooth-clinic-checking-patient-appointment-looking-computer-monitor-stomatology-assistant-teeth-doctor-discussing-reception-dental-office.jpg';
 import postImage6 from '../images/Blog/manager-preparing-store-reopening.jpg';
 import postImage7 from '../images/Blog/three-business-people-discussing-graph-points.jpg';
-import postImage8 from '../images/Blog/vetri108/Ram Blog Banner (25).png';
+import postImage8 from '../images/Blog/vetri108/Ram Blog Banner (22).png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
