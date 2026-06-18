@@ -11,6 +11,7 @@ import HyderabadGetinTouch from './Hyderabad/HyderabadGetinTouch'
 import HyderabadStudents from './Hyderabad/HyderabadStudents'
 import Meta from '../Meta';
 import HyderabadTestimonial from './Hyderabad/HyderabadTestimonial'
+import HyderabadFAQ from './Hyderabad/HyderabadFAQ'
 
 function Hyderabad() {
   useEffect(() => {
@@ -29,6 +30,7 @@ function Hyderabad() {
       <HyderabadOnline2 />
       <HyderabadGetinTouch />
       {/* <HyderabadStudents /> */}
+      <HyderabadFAQ />
       <HyderabadTestimonial />
     </>
   )

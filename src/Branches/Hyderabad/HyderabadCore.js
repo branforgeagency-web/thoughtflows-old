@@ -12,14 +12,14 @@ const HyderabadCore = () => {
             <h2 className='m-3'>Our Core Values</h2>
             <div className="features-grid">
                 <div style={{paddingTop:""}}>
-                    <h4 style={{color:"#073766"}}>Degree categoris</h4>
-                    <h2>Successfully Complete A Course at Thoughtflow Academy</h2>
+                    <h4 style={{color:"#073766"}}>What We Stand For</h4>
+                    <h2>Behind every great result is a set of values we live by — the principles that shape how we train, support, and stand by every student who walks through our doors.</h2>
                 </div>
                 <div className="feature-card purple">
                     <img src={passion} alt='passion'/>
                     <h3>Passion</h3>
                     <p>
-                        Our passion towards training makes us to provide quality training in Healthcare industry. It make us to prove as an No. 1 Academy in Medical Coding.
+                        We love what we do, and it shows in our training. That same passion is what's helped us become one of the most trusted medical coding institutes in Hyderabad.
                     </p>
 
                 </div>
@@ -27,7 +27,7 @@ const HyderabadCore = () => {
                     <img src={loyalty} alt='loyalty'/>
                     <h3>Loyalty</h3>
                     <p>
-                        The loyalty of Thought Flows, is the answer you will get from our trainees.
+                        Our students stay with us — and speak for us. The best proof of our loyalty is the trust our trainees place in us, long after their course ends.
                     </p>
 
                 </div>
@@ -35,7 +35,7 @@ const HyderabadCore = () => {
                     <img src={commitment} alt='commitment'/>
                     <h3>Commitment</h3>
                     <p>
-                        Our commitment towards training is the result of our success
+                        We don't stop until you're ready. Our commitment to every learner is the real reason behind our success.
                     </p>
 
                 </div>
@@ -43,7 +43,7 @@ const HyderabadCore = () => {
                     <img src={responsibility} alt='responsibility'/>
                     <h3>Responsibility</h3>
                     <p>
-                        We are responsible for our commitment, innovation and technology excellence, We are responsible for our trainees and their Career growth.
+                        Your career growth is our responsibility. We take ownership of our teaching, our innovation, and the future of every student we train.
                     </p>
 
                 </div>
@@ -51,7 +51,7 @@ const HyderabadCore = () => {
                     <img src={consistency} alt='consistency'/>
                     <h3>Consistency</h3>
                     <p>
-                        We adhere to the policies, Quality, and innovation from years that makes us to build trust in our customers.
+                        Quality isn't a one-time effort. We've held to the same high standards, year after year — and that consistency is what earns our students' trust.
                     </p>
 
                 </div>

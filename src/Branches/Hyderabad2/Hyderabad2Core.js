@@ -8,54 +8,53 @@ import creativity from '../../images/Branches/solution.png'
 
 const HyderabadCore = () => {
     return (
-        <div className="cbe1-features-container" style={{paddingTop:"40px"}}>
+        <div className="cbe1-features-container" style={{ paddingTop: "40px" }}>
             <h2 className='m-3'>Our Core Values</h2>
             <div className="features-grid">
-                <div style={{paddingTop:""}}>
-                    <h4 style={{color:"#073766"}}>Degree categoris</h4>
-                    <h2>Successfully Complete A Course at Thoughtflow Academy</h2>
+                <div style={{ paddingTop: "" }}>
+                    <h2>Behind the training is a set of values that guide how we work with every student who joins us.</h2>
                 </div>
                 <div className="feature-card purple">
-                    <img src={passion} alt='passion'/>
+                    <img src={passion} alt='passion' />
                     <h3>Passion</h3>
                     <p>
-                        Our passion towards training makes us to provide quality training in Healthcare industry. It make us to prove as an No. 1 Academy in Medical Coding.
+                        We genuinely enjoy what we teach, and students feel it. That energy is a big part of the reputation we've earned as a medical coding institute in Dilsukhnagar.
                     </p>
 
                 </div>
                 <div className="feature-card dark">
-                    <img src={loyalty} alt='loyalty'/>
+                    <img src={loyalty} alt='loyalty' />
                     <h3>Loyalty</h3>
                     <p>
-                        The loyalty of Thought Flows, is the answer you will get from our trainees.
+                        Loyalty is earned, not claimed. Ask our past trainees — many stay in touch, refer their friends, and speak for us long after their course ends.
                     </p>
 
                 </div>
                 <div className="feature-card purple">
-                    <img src={commitment} alt='commitment'/>
+                    <img src={commitment} alt='commitment' />
                     <h3>Commitment</h3>
                     <p>
-                        Our commitment towards training is the result of our success
+                        We measure ourselves by your progress. Our trainers stay with you until the concepts truly click and you're ready to work.
                     </p>
 
                 </div>
                 <div className="feature-card dark">
-                    <img src={responsibility} alt='responsibility'/>
+                    <img src={responsibility} alt='responsibility' />
                     <h3>Responsibility</h3>
                     <p>
-                        We are responsible for our commitment, innovation and technology excellence, We are responsible for our trainees and their Career growth.
+                        We take your career seriously. From the quality of our teaching to keeping our methods current, we hold ourselves accountable for where you end up.
                     </p>
 
                 </div>
                 <div className="feature-card purple">
-                    <img src={consistency} alt='consistency'/>
+                    <img src={consistency} alt='consistency' />
                     <h3>Consistency</h3>
                     <p>
-                        We adhere to the policies, Quality, and innovation from years that makes us to build trust in our customers.
+                        The standards we set years ago are the ones we still hold today. That steadiness is what's built lasting trust with our students.
                     </p>
 
                 </div>
-               
+
             </div>
         </div>
     );
