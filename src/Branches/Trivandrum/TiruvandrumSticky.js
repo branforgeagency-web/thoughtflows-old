@@ -17,30 +17,84 @@ function TiruvandrumSticky() {
             {/* Section 1 */}
             <div id="static-1">
               <h2 className="text-3xl lg:text-4xl font-bold text-secondaryy">
-                Cutting-Edge Infrastructure and Top-Notch Facilities
+                CPC Certification Guidance
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                Modern facilities are used at Thoughtflows academy in Trivandrum to provide a dynamic and interesting learning environment. Students get practical experience in real-world coding scenarios in our classrooms, which are furnished with industry-specific tools and contemporary technology. In Trivandrum and elsewhere, this cutting-edge infrastructure supports the practical abilities required for success in medical coding positions.
+                The Certified Professional Coder (CPC) credential is one of the most recognized Medical Coding certifications in the healthcare industry. CPC certification validates coding knowledge and demonstrates professional competency in medical coding practices.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                ThoughtFlows provides CPC focused training designed to help students understand coding concepts, medical documentation, coding guidelines, and exam oriented preparation. With expert guidance and structured learning, students can strengthen their coding knowledge and prepare confidently for certification goals.
               </p>
             </div>
 
             {/* Section 2 */}
             <div id="static-2">
-              <h2 className="text-3xl lg:text-4xl font-bold text-secondaryy">
-                Securing Your Future After Training
+              <h2 className="text-3xl lg:text-4xl font-bold text-secondaryy mb-8">
+                Career Path Roadmap
               </h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Our goal is to bridge the gap between training and employment. By utilizing solid relationships with top healthcare providers, our medical coding training center in Trivandrum offers complete job placement assistance. We provide our students with the tools they need to confidently pursue medical coding careers in Trivandrum and beyond, including career advice, resume preparation, and interview coaching. Our emphasis on employability guarantees a seamless transfer into a fulfilling profession.
-              </p>
+              <div className="relative pl-8 border-l-4 border-teal-500 space-y-8 mt-4">
+                <div className="relative">
+                  <div className="absolute -left-10 mt-1.5 w-4 h-4 rounded-full bg-teal-500 border-4 border-white shadow"></div>
+                  <h3 className="text-xl font-bold text-gray-800">Medical Coding Training</h3>
+                </div>
+                
+                <div className="relative">
+                  <div className="absolute -left-10 mt-1.5 w-4 h-4 rounded-full bg-teal-500 border-4 border-white shadow"></div>
+                  <h3 className="text-xl font-bold text-gray-800">CPC Certification Preparation</h3>
+                </div>
+
+                <div className="relative bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                  <div className="absolute -left-[42px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-pink-500 border-4 border-white shadow"></div>
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <h3 className="text-xl font-bold text-gray-800 m-0">Medical Coder</h3>
+                    <span className="inline-block px-4 py-1.5 bg-pink-100 text-pink-700 font-semibold rounded-full text-sm">₹2.5–4.5 LPA</span>
+                  </div>
+                </div>
+
+                <div className="relative bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                  <div className="absolute -left-[42px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-purple-500 border-4 border-white shadow"></div>
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <h3 className="text-xl font-bold text-gray-800 m-0">Senior Medical Coder</h3>
+                    <span className="inline-block px-4 py-1.5 bg-purple-100 text-purple-700 font-semibold rounded-full text-sm">₹4–7 LPA</span>
+                  </div>
+                </div>
+
+                <div className="relative bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                  <div className="absolute -left-[42px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-blue-500 border-4 border-white shadow"></div>
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <h3 className="text-xl font-bold text-gray-800 m-0">Quality Analyst</h3>
+                    <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 font-semibold rounded-full text-sm">₹6–10 LPA</span>
+                  </div>
+                </div>
+
+                <div className="relative bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                  <div className="absolute -left-[42px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-yellow-500 border-4 border-white shadow"></div>
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <h3 className="text-xl font-bold text-gray-800 m-0">Team Lead</h3>
+                    <span className="inline-block px-4 py-1.5 bg-yellow-100 text-yellow-700 font-semibold rounded-full text-sm">₹8–15 LPA</span>
+                  </div>
+                </div>
+
+                <div className="relative bg-white p-4 rounded-lg shadow-sm border border-gray-100">
+                  <div className="absolute -left-[42px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-green-500 border-4 border-white shadow"></div>
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <h3 className="text-xl font-bold text-gray-800 m-0">Coding Manager</h3>
+                    <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 font-semibold rounded-full text-sm">₹12–25+ LPA</span>
+                  </div>
+                </div>
+              </div>
             </div>
 
             {/* Section 3 */}
             <div id="static-3">
               <h2 className="text-3xl lg:text-4xl font-bold text-secondaryy">
-                Affordable Fees and Flexible Batch Schedules
+                Placement Support & Career Growth Opportunities
               </h2>
               <p className="text-lg text-gray-700 leading-relaxed">
-                All people should be able to obtain high-quality education. Students from a variety of backgrounds might benefit from our affordably priced medical coding classes in Trivandrum. To accommodate students' and working professionals' schedules, we also provide variable batch times. Contact us right now to find out more about our medical coding fees in Trivandrum.
+                With 35,000+ students trained and 25,000+ career placements and transitions supported, ThoughtFlows has helped aspiring healthcare professionals build successful careers in the Medical Coding industry.
+              </p>
+              <p className="text-lg text-gray-700 leading-relaxed">
+                Our dedicated placement support team assists students with resume building, interview preparation, mock interviews, HR guidance, career counseling, and job referral support. Medical Coding professionals can explore opportunities in hospitals, healthcare BPOs, revenue cycle management (RCM) companies, medical coding organizations, healthcare technology companies, insurance support services, and health information management organizations across India and global healthcare markets.
               </p>
             </div>
           </div>

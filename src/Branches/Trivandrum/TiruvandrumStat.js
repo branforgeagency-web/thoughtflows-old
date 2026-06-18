@@ -1,53 +1,97 @@
 import React from "react";
 import wow from "../../images/Branches/online/wow1.png";
+import { GraduationCap, Briefcase, Globe, Award, TrendingUp, CheckCircle2 } from 'lucide-react';
+
+import CountUp from "react-countup";
+
+const AudienceCard = ({ title, icon: Icon, color }) => (
+  <div className="bg-white rounded-xl p-4 shadow border-l-4 hover:shadow-md transition-all flex flex-col items-center text-center" style={{ borderLeftColor: color }}>
+    <div className="p-3 rounded-full mb-3" style={{ backgroundColor: `${color}15` }}>
+      <Icon size={24} color={color} />
+    </div>
+    <h3 className="text-base font-semibold text-gray-800">{title}</h3>
+  </div>
+);
 
 function TiruvandrumStat() {
+  const audiences = [
+    { title: "B.Sc Life Science", icon: GraduationCap, color: "#9B5DE6" },
+    { title: "B.Pharm Graduates", icon: GraduationCap, color: "#F15BB5" },
+    { title: "D.Pharm Graduates", icon: GraduationCap, color: "#00BBFA" },
+    { title: "Nursing Graduates", icon: GraduationCap, color: "#01F6D5" },
+    { title: "BDS Graduates", icon: GraduationCap, color: "#097D8A" },
+    { title: "BHMS Graduates", icon: GraduationCap, color: "#9B5DE6" },
+    { title: "Physiotherapy", icon: GraduationCap, color: "#F15BB5" },
+  ];
+
+  const benefits = [
+    { text: "Healthcare industry career", icon: Briefcase },
+    { text: "Work with multinational companies", icon: Globe },
+    { text: "Attractive starting salaries", icon: TrendingUp },
+    { text: "Opportunities in India and abroad", icon: Globe },
+    { text: "Career growth through certifications", icon: Award },
+    { text: "Suitable for various life science graduates", icon: GraduationCap },
+  ];
+
   return (
-
     <>
-      <div className="py-12 px-6 my-10">
-        <div className="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-12 items-start">
-          {/* Image Section */}
-          <div className="relative col-span-1 h-full">
-            <img
-              src={wow}
-              alt="Medical Coding"
-              className="w-full h-full object-cover rounded-lg shadow-xl"
-            />
-            <div className="absolute inset-0 bg-gradient-to-b from-transparent to-gray-900 rounded-lg"></div>
-          </div>
+      <div className="py-16 px-6 bg-gray-50">
+        <div className="max-w-7xl mx-auto">
+          {/* Middle Stats Section Removed as per user request */}
 
-          {/* Introduction Section */}
-          <div className="space-y-8 col-span-1">
-            <h2 className="text-4xl font-bold text-primaryy leading-tight">
-              Inspiring Journeys <span className="text-gray-800">of Our Medical Coding Graduates</span>
-            </h2>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Our academy takes immense pride in the success stories of our past students who have excelled in their medical coding careers after training with us.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Their achievements reflect the effectiveness of our training programs and the impact of our academy in shaping successful coding professionals.
-            </p>
-            <p className="text-lg text-gray-700 leading-relaxed">
-              Through testimonials and case studies, we celebrate their accomplishments and showcase the diverse career paths that open up to our graduates upon completion of their training.
-            </p>
-          </div>
+          <div className="flex flex-col gap-16 items-center">
+            {/* Why Choose Medical Coding as a Career? */}
+            <div className="space-y-8 w-full max-w-4xl mx-auto">
+              <div className="text-center">
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-4">
+                  Why Choose Medical Coding <span style={{color: '#097D8A'}}>as a Career?</span>
+                </h2>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  Medical Coding is one of the fastest growing healthcare careers.
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+                {benefits.map((benefit, index) => {
+                  const Icon = benefit.icon;
+                  return (
+                    <div key={index} className="flex flex-col items-center text-center gap-3 p-6 bg-white rounded-xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                      <div className="p-3 rounded-full" style={{ backgroundColor: '#097D8A15' }}>
+                        <Icon size={28} style={{ color: '#097D8A' }} />
+                      </div>
+                      <span className="text-gray-700 font-semibold">{benefit.text}</span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
 
-          {/* Enrollment Section */}
-          <div className="space-y-6 col-span-1">
-            <div className="bg-third p-6 rounded-lg shadow-md">
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">Contact Us for Medical Coding Training</h3>
-              <p className="text-secondaryy leading-relaxed mb-4">
-                Are you ready to embark on an exciting journey in medical coding? Reach out to Thoughtflows Medical Coding Academy today to enroll in our esteemed medical coding training program.
-              </p>
-              <p className="text-secondaryy leading-relaxed mb-4">
-                Whether you are a recent graduate, a healthcare professional seeking a career change, or an individual looking to enhance your coding skills, our academy is the ideal platform to kickstart your medical coding career.
-              </p>
+            {/* Who Can Join This Course? */}
+            <div className="space-y-8 bg-white p-8 md:p-12 rounded-3xl shadow-xl border-t-4 w-full max-w-5xl mx-auto" style={{ borderColor: '#F15BB5' }}>
+              <div className="text-center">
+                <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 leading-tight mb-4">
+                  Who Can Join This Course?
+                </h2>
+                <p className="text-lg text-gray-600 leading-relaxed">
+                  This course is suitable for:
+                </p>
+              </div>
+              
+              <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+                {audiences.map((aud, idx) => (
+                  <AudienceCard key={idx} title={aud.title} icon={aud.icon} color={aud.color} />
+                ))}
+              </div>
+              
+              <div className="mt-10 p-6 rounded-xl" style={{ backgroundColor: '#F15BB515' }}>
+                <p className="text-xl font-bold text-center m-0" style={{ color: '#F15BB5' }}>
+                  Fresh Graduates interested in Healthcare Careers. No prior coding experience required.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
     </>
   );
 }

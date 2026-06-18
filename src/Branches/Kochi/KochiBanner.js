@@ -35,18 +35,18 @@ const KochiBanner = () => {
             <h1 style={{
               fontSize: 'clamp(28px, 5vw, 40px)',
               lineHeight: '1.2'
-            }}>Medical Coding <br /> Training Institute in <span style={{ color: '#097D8A' }}>Kochi</span></h1>
+            }}>Medical Coding Course in <br /> <span style={{ color: '#097D8A' }}>Kochi</span> with Placement Support</h1>
           </Col>
           <Col>
             <p style={{
               fontSize: 'clamp(14px, 3vw, 16px)',
               marginTop: '20px',
               maxWidth: '600px'
-            }}>Discover excellence and seize opportunities with Thoughtflows Medical Coding Academy in Kochi.</p>
+            }}>Learn Medical Coding through Practical Training, CPC Certification Guidance, and Placement Support for Freshers, Professionals, and Career Switchers.</p>
           </Col>
           <Col className='cbe1-btn '>
             <Link to="/contact" className=" button-animation d">
-              Register Now
+              Book Free Demo Class
             </Link>
           </Col>
         </Col>

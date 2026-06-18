@@ -15,40 +15,37 @@ function KochiStick() {
         <div className="static-trichy" style={{ marginLeft: "100px" }}>
           <div id="static-1" style={{paddingTop:"40px"}}>
             <h2 className="highh">
-              Ensuring Affordability and Flexibility in Education
+              CPC Certification Guidance
             </h2>
             <p>
-              We recognize the importance of affordability and flexibility in
-              education, especially for students from diverse backgrounds and
-              those with other commitments. At Thoughtflows Medical Coding
-              Academy, we aim to make quality education accessible to all
-              aspiring medical coders. Our course fees are structured to be
-              affordable, ensuring that cost does not become a barrier to
-              pursuing a career in medical coding. We provide transparent fee
-              structures, enabling students to plan their education without any
-              hidden costs.
+              Professional certification is an important milestone for many aspiring Medical Coders.
             </p>
             <p>
-              In addition to affordability, we also offer flexible batch timings
-              to accommodate the needs of working professionals and students
-              with other commitments. Our academy provides options for both
-              weekday and weekend classes, allowing students to choose a
-              schedule that aligns with their lifestyle and commitments. The
-              combination of affordability and flexibility ensures that students
-              can pursue their passion for medical coding without financial
-              constraints and without compromising on their other commitments.
+              Our CPC certification guidance is designed to help students prepare effectively through structured learning, coding practice sessions, mock assessments, exam preparation support, and mentor guidance.
+            </p>
+            <p>
+              Certification preparation helps learners strengthen their coding knowledge and improve their confidence as they pursue career opportunities in the Medical Coding field.
             </p>
           </div>
           <div id="static-1">
             <h2 className="highh">
-            Advancing Learning with State-of-the-Art Infrastructure
+              Placement Support to Help You Start Your Career
             </h2>
             <p>
-            Thoughtflows Medical Coding Academy is equipped with state-of-the-art infrastructure, creating a modern and conducive learning environment for our students. We understand the importance of providing access to the latest technology and resources to enhance the learning experience.
+              For many students, enrolling in a Medical Coding course is ultimately about building a successful career. Along with training, ThoughtFlows provides placement support designed to help students prepare for employment opportunities within the healthcare industry.
             </p>
-            <p>Our classrooms are equipped with multimedia capabilities, enabling interactive and engaging lectures. Students have access to industry-standard coding software and tools, allowing them to gain hands-on experience with real-world coding scenarios. Our academy also houses a well-stocked library with reference materials and resources to support independent learning and research.</p>
-         <p>In addition to physical infrastructure, Thoughtflows Medical Coding Academy also utilizes online learning platforms to supplement classroom learning. Through virtual classrooms and e-learning modules, students can access course materials and resources at their convenience, facilitating flexible and self-paced learning.</p>
-         <p>The combination of state-of-the-art physical infrastructure and online learning resources ensures that our students have access to a diverse range of resources that support their educational journey at Thoughtflows Medical Coding Academy</p>
+            <p>Our support includes:</p>
+            <ul style={{fontSize: "16px", lineHeight: "26px", marginLeft: "20px"}}>
+              <li>Resume Preparation Guidance</li>
+              <li>Interview Readiness Sessions</li>
+              <li>Industry Awareness Training</li>
+              <li>Communication Skill Development</li>
+              <li>Career Guidance Support</li>
+              <li>Recruitment Opportunity Updates</li>
+            </ul>
+            <p>
+              Our goal is to help students become professionally prepared and confident when pursuing career opportunities.
+            </p>
           </div>
           
         </div>
