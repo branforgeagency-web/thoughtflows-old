@@ -150,7 +150,6 @@ const RegisterPopupForm = () => {
                                                 <option value="Trivandrum">Trivandrum</option>
                                                 <option value="Vizag">Vizag</option>
                                                 <option value="Online">Online</option>
-                                                <option value="Other">Other</option>
                                             </select>
                                         </div>
                                     </div>

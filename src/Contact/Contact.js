@@ -450,7 +450,6 @@ function Contact() {
                   <option value="Trivandrum">Trivandrum</option>
                   <option value="Vizag">Vizag</option>
                   <option value="Online">Online</option>
-                  <option value="Other">Other</option>
                 </select>
                 {errors.location && <span style={{ color: 'red', fontSize: '0.8em' }}>{errors.location}</span>}
               </div>
