@@ -83,10 +83,13 @@ function TiruvandrumStat() {
                 ))}
               </div>
               
-              <div className="mt-10 p-6 rounded-xl" style={{ backgroundColor: '#F15BB515' }}>
-                <p className="text-xl font-bold text-center m-0" style={{ color: '#F15BB5' }}>
-                  Fresh Graduates interested in Healthcare Careers. No prior coding experience required.
+              <div className="mt-10 p-6 rounded-xl text-center" style={{ backgroundColor: '#F15BB515' }}>
+                <p className="text-lg text-gray-700 leading-relaxed mb-4">
+                  Students from non-life science backgrounds may also explore Medical Coding opportunities based on their learning ability, career goals, and program requirements.
                 </p>
+                <div className="inline-block bg-pink-50 text-pink-600 px-6 py-3 rounded-full font-semibold text-lg">
+                  No prior Medical Coding experience is required to begin learning.
+                </div>
               </div>
             </div>
           </div>

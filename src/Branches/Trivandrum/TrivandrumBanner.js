@@ -208,7 +208,7 @@ const TrivandrumBanner = () => {
           <img
             src={trivandrum}
             alt='bannergif'
-            className='bannergif banner-appear'
+            className='bannergif banner-appear trivandrum-banner-img'
             style={{
               maxWidth: '100%',
               width: 'auto',
@@ -220,6 +220,13 @@ const TrivandrumBanner = () => {
         </Col>
         <Col lg={1} xs={0}></Col>
       </Row>
+      <style>{`
+        @media (max-width: 768px) {
+          .trivandrum-banner-img {
+            margin-bottom: 0px !important;
+          }
+        }
+      `}</style>
       
       <Container fluid className='cbe1-counter px-3'
         style={{
