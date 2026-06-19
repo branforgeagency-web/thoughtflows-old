@@ -17,7 +17,7 @@ const CPPM = () => {
   }, [])
   return (
     <>
-      <Meta title="CPPM Course Training | ThoughtFlows Medical Coding Academy" description="Enroll in the CPPM course at ThoughtFlows to learn professional practice management with expert training, real-world scenarios, and career support." canonical="https://thoughtflows.in/cppm" />
+      <Meta title="CPPM Course Training | ThoughtFlows Medical Coding Academy" description="Enroll in the CPPM course at ThoughtFlows to learn professional practice management with expert training, real-world scenarios, and career support." canonical="https://www.thoughtflows.in/cppm" />
 
       <CPPMBanner />
       <WhatCPPM />

@@ -17,7 +17,7 @@ function Radio() {
   }, [])
   return (
     <>
-      <Meta title="Certified Radiology Coder Course | ThoughtFlows Academy" description="Enroll in the Certified Radiology Coder course at ThoughtFlows with expert training, radiology coding practice, and career-focused support." canonical="https://thoughtflows.in/radiology" />
+      <Meta title="Certified Radiology Coder Course | ThoughtFlows Academy" description="Enroll in the Certified Radiology Coder course at ThoughtFlows with expert training, radiology coding practice, and career-focused support." canonical="https://www.thoughtflows.in/radiology" />
 
       <RadioBanner />
       <WhatIsRadiology />

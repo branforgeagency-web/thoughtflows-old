@@ -19,7 +19,7 @@ function Kochi() {
   }, [])
   return (
     <>
-      <Meta title="Medical Coding Course in Kochi | ThoughtFlows Academy" description="ThoughtFlows Medical Coding Academy in Kochi — expert-led medical coding course in Kochi with practical training and placement assistance." canonical="https://thoughtflows.in/Medical-Coding-Academy-Kochi" />
+      <Meta title="Medical Coding Course in Kochi | ThoughtFlows Academy" description="ThoughtFlows Medical Coding Academy in Kochi — expert-led medical coding course in Kochi with practical training and placement assistance." canonical="https://www.thoughtflows.in/Medical-Coding-Academy-Kochi" />
 
       <KochiBanner />
       <KochiAbout />

@@ -294,7 +294,7 @@ function TeamHierarchy() {
 
   return (
     <>
-      <Meta title="Meet the ThoughtFlows Team | Experts in Medical Coding" description="Get to know the dedicated team at ThoughtFlows — expert trainers and professionals shaping the future of medical coding education." canonical="https://thoughtflows.in/ourteam" />
+      <Meta title="Meet the ThoughtFlows Team | Experts in Medical Coding" description="Get to know the dedicated team at ThoughtFlows — expert trainers and professionals shaping the future of medical coding education." canonical="https://www.thoughtflows.in/ourteam" />
       <div className=" min-h-screen bg-gradient-to-br from-[#36b0bd] via-[#2a8b96] to-[#1e666e] py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Enhanced premium decorative elements */}
         <div className="absolute inset-0 overflow-hidden">

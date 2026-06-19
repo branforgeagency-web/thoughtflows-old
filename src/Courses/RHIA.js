@@ -21,7 +21,7 @@ const RHIA = () => {
     return (
         <>
 
-            <Meta title="RHIA Certification Classes for Health Information Careers" description="Enroll in RHIA certification classes at ThoughtFlows with expert instruction, health information management practice, and career support." canonical="https://thoughtflows.in/rhia" />
+            <Meta title="RHIA Certification Classes for Health Information Careers" description="Enroll in RHIA certification classes at ThoughtFlows with expert instruction, health information management practice, and career support." canonical="https://www.thoughtflows.in/rhia" />
             <RhiaBanner />
             <WhatisRHIA />
             <AboutRhia />

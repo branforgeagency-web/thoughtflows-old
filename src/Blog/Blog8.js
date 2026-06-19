@@ -27,7 +27,7 @@ export default function Blog8() {
       <Helmet>
         <title>VETRI 108 Free Medical Coding Scholarships | ThoughtFlows</title>
         <meta name="description" content="VETRI 108 by ThoughtFlows offers free Medical Coding scholarships, training, and placement support for graduates, freshers, and job seekers across Tamil Nadu." />
-        <link rel="canonical" href="https://thoughtflows.in/blog/vetri-108-free-medical-coding-scholarships" />
+        <link rel="canonical" href="https://www.thoughtflows.in/blog/vetri-108-free-medical-coding-scholarships" />
       </Helmet>
       
       <div

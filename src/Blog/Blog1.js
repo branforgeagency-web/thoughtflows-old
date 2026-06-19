@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import image from "./medic.jpg";
 import postImage1 from '../images/Blog/medical-banner-with-doctor-working-laptop.jpg';
+import Meta from "../Meta";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { FaCircle } from "react-icons/fa";
@@ -184,6 +185,11 @@ export default function Blog1() {
 
   return (
     <>
+      <Meta
+        title="What is Medical Coding? Complete Guide for Beginners | ThoughtFlows"
+        description="Discover what medical coding is, why it matters, and how to start your career. ThoughtFlows' complete beginner's guide covers ICD-10, CPT, certifications, and more."
+        canonical="https://www.thoughtflows.in/blog/what-is-medical-coding-complete-guide-for-beginners-thoughtflows"
+      />
       <div
         style={{
           width: "auto",

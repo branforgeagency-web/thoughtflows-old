@@ -16,7 +16,7 @@ const IVR = () => {
   }, [])
   return (
     <>
-      <Meta title="Interventional Radiology Course | ThoughtFlows" description="Enroll in the Interventional Radiology course at ThoughtFlows with expert training, procedure-based coding practice, and career support." canonical="https://thoughtflows.in/ivr" />
+      <Meta title="Interventional Radiology Course | ThoughtFlows" description="Enroll in the Interventional Radiology course at ThoughtFlows with expert training, procedure-based coding practice, and career support." canonical="https://www.thoughtflows.in/ivr" />
 
       <IVRBanner />
       <WhatIVR />

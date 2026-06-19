@@ -248,7 +248,7 @@ function Contact() {
 
   return (
     <>
-      <Meta title="Contact ThoughtFlows | Medical Coding Support & Queries" description="Reach out to ThoughtFlows for inquiries about medical coding training, courses, admissions, and support. We’re here to help you grow your career." canonical="https://thoughtflows.in/contact" />
+      <Meta title="Contact ThoughtFlows | Medical Coding Support & Queries" description="Reach out to ThoughtFlows for inquiries about medical coding training, courses, admissions, and support. We’re here to help you grow your career." canonical="https://www.thoughtflows.in/contact" />
 
       {/* Location Zoom Popup */}
       {showZoomPopup && selectedLocation && (
@@ -430,15 +430,28 @@ function Contact() {
                 {errors.course && <span style={{ color: 'red', fontSize: '0.8em' }}>{errors.course}</span>}
               </div>
               <div style={{ marginBottom: '10px' }}>
-                <input
-                  type="text"
+                <select
                   name="location"
-                  placeholder="Location"
                   required
-                  style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }}
+                  style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ccc', backgroundColor: '#fff', color: formData.location ? '#000' : '#757575' }}
                   value={formData.location}
                   onChange={handleInputChange}
-                />
+                >
+                  <option value="" disabled>Select Location</option>
+                  <option value="Saravanampatti, Coimbatore">Saravanampatti, Coimbatore</option>
+                  <option value="Hopes, Coimbatore">Hopes, Coimbatore</option>
+                  <option value="Gandhipuram, Coimbatore">Gandhipuram, Coimbatore</option>
+                  <option value="Salem">Salem</option>
+                  <option value="Trichy">Trichy</option>
+                  <option value="Tirupati">Tirupati</option>
+                  <option value="Ameerpet, Hyderabad">Ameerpet, Hyderabad</option>
+                  <option value="Dilsukhnagar, Hyderabad">Dilsukhnagar, Hyderabad</option>
+                  <option value="Kochi">Kochi</option>
+                  <option value="Trivandrum">Trivandrum</option>
+                  <option value="Vizag">Vizag</option>
+                  <option value="Online">Online</option>
+                  <option value="Other">Other</option>
+                </select>
                 {errors.location && <span style={{ color: 'red', fontSize: '0.8em' }}>{errors.location}</span>}
               </div>
               <div style={{ marginBottom: '10px' }}>

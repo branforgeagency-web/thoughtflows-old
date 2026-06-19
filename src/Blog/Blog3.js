@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import image from "./medic.jpg";
+import Meta from "../Meta";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import postImage3 from '../images/Blog/health-wellness-digital-tablet-concept.jpg';
 
@@ -31,6 +32,11 @@ export default function Blog3() {
   ];
   return (
     <>
+      <Meta
+        title="Top 5 Medical Coding Mistakes and How to Avoid Them | ThoughtFlows"
+        description="Learn the top 5 medical coding mistakes — from incorrect codes to compliance issues — and get expert tips to avoid them for a successful coding career."
+        canonical="https://www.thoughtflows.in/blog/top-5-medical-coding-mistakes-and-how-to-avoid-them-for-a-successful-career"
+      />
       <div
         style={{
           width: "auto",

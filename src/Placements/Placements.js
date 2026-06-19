@@ -6,6 +6,7 @@ import PlacementsCompanies from './PlacementsCompanies';
 import DiscountBanner from './DiscountBanner';
 import Marquee from 'react-fast-marquee';
 import { Link } from 'react-router-dom';
+import Meta from '../Meta';
 
 const Placements = () => {
     // Split 2026 students
@@ -20,6 +21,11 @@ const Placements = () => {
 
     return (
         <div className="placements-page">
+            <Meta
+                title="Medical Coding Placements | ThoughtFlows Academy"
+                description="Explore ThoughtFlows placement success stories. Our medical coding graduates are placed in top hospitals and healthcare companies across India."
+                canonical="https://www.thoughtflows.in/placements"
+            />
             {/* Banner Section */}
             <section className="placements-banner">
                 <div className="placements-banner-content">

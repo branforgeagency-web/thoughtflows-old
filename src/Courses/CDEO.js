@@ -16,7 +16,7 @@ const CDEO = () => {
   }, [])
   return (
     <>
-      <Meta title="CDEO Course Training | ThoughtFlows Medical Coding Academy" description="Enroll in the CDEO course at ThoughtFlows with expert trainers, practical coding training, exam guidance, and career support." canonical="https://thoughtflows.in/cdeo" />
+      <Meta title="CDEO Course Training | ThoughtFlows Medical Coding Academy" description="Enroll in the CDEO course at ThoughtFlows with expert trainers, practical coding training, exam guidance, and career support." canonical="https://www.thoughtflows.in/cdeo" />
       <CDEOBanner />
       <WhatCDEO />
       <WHYCDEO />

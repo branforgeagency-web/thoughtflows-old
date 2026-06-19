@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
 import { previousYearsData } from './previousYearsData';
 import './Placements.css';
+import Meta from '../Meta';
 
 const YearlyPlacementList = () => {
     const { year } = useParams();
@@ -13,6 +14,11 @@ const YearlyPlacementList = () => {
 
     return (
         <div className="yearly-placements-page">
+            <Meta
+                title={`${year} Medical Coding Placements | ThoughtFlows Academy`}
+                description={`View ${year} placement success stories from ThoughtFlows Medical Coding Academy. Our graduates are placed in top healthcare companies across India.`}
+                canonical={`https://www.thoughtflows.in/placements/${year}`}
+            />
             <div className="container">
                 <div className="back-link">
                     <Link to="/placements" className="btn-back">

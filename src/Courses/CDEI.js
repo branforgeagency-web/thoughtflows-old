@@ -16,7 +16,7 @@ const CDEI = () => {
   }, [])
   return (
     <>
-      <Meta title="CDEI Course Training | ThoughtFlows Medical Coding Academy" description="Join the CDEI course at ThoughtFlows to master inpatient documentation with expert guidance, practical learning, and career support." canonical="https://thoughtflows.in/cdei" />
+      <Meta title="CDEI Course Training | ThoughtFlows Medical Coding Academy" description="Join the CDEI course at ThoughtFlows to master inpatient documentation with expert guidance, practical learning, and career support." canonical="https://www.thoughtflows.in/cdei" />
 
       <CDEIBanner />
       <WhatCDEI />

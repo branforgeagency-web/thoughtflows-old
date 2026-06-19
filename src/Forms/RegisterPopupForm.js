@@ -136,7 +136,22 @@ const RegisterPopupForm = () => {
                                     </div>
                                     <div className="col-md-6">
                                         <div className="input-group">
-                                            <input type="text" name="location" value={formData.location} onChange={handleInputChange} placeholder="Location" required />
+                                            <select name="location" value={formData.location} onChange={handleInputChange} required>
+                                                <option value="" disabled>Select Location</option>
+                                                <option value="Saravanampatti, Coimbatore">Saravanampatti, Coimbatore</option>
+                                                <option value="Hopes, Coimbatore">Hopes, Coimbatore</option>
+                                                <option value="Gandhipuram, Coimbatore">Gandhipuram, Coimbatore</option>
+                                                <option value="Salem">Salem</option>
+                                                <option value="Trichy">Trichy</option>
+                                                <option value="Tirupati">Tirupati</option>
+                                                <option value="Ameerpet, Hyderabad">Ameerpet, Hyderabad</option>
+                                                <option value="Dilsukhnagar, Hyderabad">Dilsukhnagar, Hyderabad</option>
+                                                <option value="Kochi">Kochi</option>
+                                                <option value="Trivandrum">Trivandrum</option>
+                                                <option value="Vizag">Vizag</option>
+                                                <option value="Online">Online</option>
+                                                <option value="Other">Other</option>
+                                            </select>
                                         </div>
                                     </div>
                                 </div>

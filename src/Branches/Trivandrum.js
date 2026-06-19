@@ -22,7 +22,7 @@ function Trivandrum() {
   }, [])
   return (
     <>
-      <Meta title="Medical Coding Course in Trivandrum | ThoughtFlows Institute" description="Build your career at ThoughtFlows Medical Coding Academy — best medical coding course in Trivandrum with practical sessions and placement guidance." canonical="https://thoughtflows.in/Advanced-Medical-Coding-Tiruvandrum" />
+      <Meta title="Medical Coding Course in Trivandrum | ThoughtFlows Institute" description="Build your career at ThoughtFlows Medical Coding Academy — best medical coding course in Trivandrum with practical sessions and placement guidance." canonical="https://www.thoughtflows.in/Advanced-Medical-Coding-Tiruvandrum" />
 
       <TrivandrumBanner />
       <TrivandrumAbout />

@@ -20,7 +20,7 @@ const RHIT = () => {
     }, [])
     return (
         <>
-            <Meta title="RHIT Course Training for Health Information Careers" description="Join RHIT course training at ThoughtFlows with expert instruction, health information technology practice, and career support." canonical="https://thoughtflows.in/rhit" />
+            <Meta title="RHIT Course Training for Health Information Careers" description="Join RHIT course training at ThoughtFlows with expert instruction, health information technology practice, and career support." canonical="https://www.thoughtflows.in/rhit" />
             < RhitBanner />
             <WhatisRHIT />
             <AboutRhit />

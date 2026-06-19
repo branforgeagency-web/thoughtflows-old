@@ -16,7 +16,7 @@ const CEDC = () => {
   }, [])
   return (
     <>
-      <Meta title="CEDC Course Training | ThoughtFlows Medical Coding Academy" description="Enroll in CEDC course at ThoughtFlows with expert trainers, practical documentation training, exam guidance, and career support." canonical="https://thoughtflows.in/cedc" />
+      <Meta title="CEDC Course Training | ThoughtFlows Medical Coding Academy" description="Enroll in CEDC course at ThoughtFlows with expert trainers, practical documentation training, exam guidance, and career support." canonical="https://www.thoughtflows.in/cedc" />
 
       <CEDCBanner />
       <WhatCEDC />
