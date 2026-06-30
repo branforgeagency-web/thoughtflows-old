@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 import './RegisterPopup.css';
 import { coursesList } from '../coursesList';
 
-import RegisterBanner from '../images/forms/vetri_108.jpg__3__720.jpg';
+import RegisterBanner from '../images/forms/WhatsApp Image 2026-06-30 at 4.32.18 PM.jpeg';
 
 const RegisterPopupForm = () => {
     const { isOpen, setIsOpen } = useContext(PopupContext);

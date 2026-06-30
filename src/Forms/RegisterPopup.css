@@ -15,7 +15,7 @@
 }
 
 .register-popup-container {
-    background: linear-gradient(135deg, #e33e1a 0%, #ffb703 100%);
+    background: linear-gradient(135deg, #5c0612 0%, #8c0c1e 100%);
     width: 95%;
     max-width: 800px;
     border-radius: 28px;
@@ -107,8 +107,8 @@
 .input-group select {
     padding: 14px 18px;
     border-radius: 12px;
-    border: 1px solid rgba(255, 227, 89, 0.25); /* Sunshine yellow with opacity */
-    background: rgba(45, 17, 4, 0.35); /* Translucent dark cocoa */
+    border: 1px solid rgba(255, 208, 0, 0.25); /* Translucent gold border */
+    background: rgba(30, 2, 6, 0.45); /* Translucent dark burgundy */
     color: #ffffff;
     transition: all 0.3s ease;
     font-size: 0.95rem;
@@ -119,12 +119,12 @@
 /* For dropdown options visibility in dark background select lists */
 .input-group select option,
 .input-group select optgroup {
-    background: #5a2a06; /* solid deep bronze for readability */
+    background: #42050e; /* solid dark wine for readability */
     color: #ffffff;
 }
 
 .input-group input::placeholder {
-    color: #e2c2a4; /* Sand/Beige placeholder color for excellent premium contrast */
+    color: #ffdcb3; /* Light gold/amber placeholder color for excellent premium contrast */
     opacity: 0.75;
 }
 
@@ -132,14 +132,14 @@
 .input-group textarea:focus,
 .input-group select:focus {
     outline: none;
-    border-color: #ffe359;
-    background: rgba(45, 17, 4, 0.60);
-    box-shadow: 0 0 0 3px rgba(255, 227, 89, 0.25);
+    border-color: #ffd000;
+    background: rgba(30, 2, 6, 0.65);
+    box-shadow: 0 0 0 3px rgba(255, 208, 0, 0.25);
 }
 
 .submit-btn {
-    background: linear-gradient(90deg, #ffe359 0%, #ffb703 100%);
-    color: #2d1104; /* Deep Cocoa for maximum readability/contrast */
+    background: linear-gradient(90deg, #ffd000 0%, #ffa600 100%);
+    color: #3b0007; /* Dark wine/burgundy for maximum readability/contrast */
     padding: 16px 32px;
     border-radius: 50px; /* Pill shape */
     border: none;
@@ -152,14 +152,14 @@
     max-width: 450px;
     align-self: center;
     text-align: center;
-    box-shadow: 0 6px 20px rgba(255, 183, 3, 0.35);
+    box-shadow: 0 6px 20px rgba(255, 166, 0, 0.35);
     letter-spacing: 0.5px;
 }
 
 .submit-btn:hover {
-    background: linear-gradient(90deg, #ffffff 0%, #ffe359 100%);
+    background: linear-gradient(90deg, #ffffff 0%, #ffd000 100%);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 227, 89, 0.5);
+    box-shadow: 0 8px 25px rgba(255, 208, 0, 0.5);
 }
 
 .submit-btn:active {
@@ -171,7 +171,7 @@
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
-    background: #ffb703;
+    background: #ffa600;
 }
 
 .form-features {
@@ -195,7 +195,7 @@
 .success-content {
     text-align: center;
     padding: 50px 40px;
-    background: rgba(90, 42, 6, 0.45);
+    background: rgba(45, 3, 10, 0.45);
     backdrop-filter: blur(8px);
     border-radius: 20px;
     margin: 35px;
@@ -206,16 +206,16 @@
 .success-icon {
     width: 70px;
     height: 70px;
-    background: rgba(255, 227, 89, 0.2);
-    color: #ffe359;
-    border: 2px solid #ffe359;
+    background: rgba(255, 208, 0, 0.2);
+    color: #ffd000;
+    border: 2px solid #ffd000;
     border-radius: 50%;
     margin: 0 auto 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2.2rem;
-    box-shadow: 0 0 15px rgba(255, 227, 89, 0.3);
+    box-shadow: 0 0 15px rgba(255, 208, 0, 0.3);
 }
 
 .success-content h2 {
