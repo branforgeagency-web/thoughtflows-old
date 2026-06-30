@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import image from "./medic.jpg";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import postImage4 from '../images/Blog/medium-shot-smiley-woman-holding-clipboard.jpg';
+import Meta from "../Meta";
 
 import { FaCircle } from "react-icons/fa";
 export default function Blog4() {
@@ -26,6 +27,11 @@ export default function Blog4() {
 
   return (
     <>
+      <Meta
+        title="How to Prepare for the CPC Exam: Expert Tips and Strategies | ThoughtFlows"
+        description="Ace the CPC exam with expert preparation tips from ThoughtFlows — covering study plans, key topics, practice exams, and time management strategies."
+        canonical="https://www.thoughtflows.in/blog/how-to-prepare-for-the-cpc-exam-expert-tips-and-strategies-for-success"
+      />
       <div
         style={{
           width: "auto",

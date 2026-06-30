@@ -18,7 +18,7 @@ function EM() {
  },[])
   return (
     <>
-      <Meta title="EM - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="Evaluation and Management (E&M) Coding Course | ThoughtFlows" description="Master E&M coding with ThoughtFlows Academy — expert training, real-case practice, exam guidance, and placement support for a successful medical coding career." canonical="https://www.thoughtflows.in/em" />
 
       <EMBanner />
       <WhatIsEvaluation />

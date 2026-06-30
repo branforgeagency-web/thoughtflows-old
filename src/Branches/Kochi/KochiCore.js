@@ -1,51 +1,95 @@
-import React from 'react'
-import branch from "../../images/Branches/image7 copy.png"
-import KochiChoice from './KochiChoice'
+import React from 'react';
+import branch from "../../images/Branches/image7 copy.png";
+import labImage from "../../images/Branches/online/lab.jpg";
+import { CheckCircle2, ChevronDown } from 'lucide-react';
 
 function KochiCore() {
+  const journeySteps = [
+    "Attend Free Career Guidance Session",
+    "Enroll in the Training Program",
+    "Learn Medical Coding Fundamentals",
+    "Practice Real Coding Scenarios",
+    "Prepare for CPC Certification",
+    "Attend Interview Preparation Sessions",
+    "Access Placement Support"
+  ];
+
+  const curriculumHighlights = [
+    "Medical Terminology",
+    "Human Anatomy and Physiology",
+    "Disease Processes",
+    "Healthcare Documentation",
+    "ICD Coding Concepts",
+    "CPT Coding Concepts",
+    "Coding Guidelines",
+    "Reimbursement Concepts",
+    "Certification Preparation",
+    "Practical Coding Exercises"
+  ];
+
   return (
-    <>
-    <div style={{paddingBottom:"50px"}}>
+    <div className="bg-white py-16">
       
-    <div style={{background:"white",height:"", display:"",justifyContent:"space-between"}} className='flex flex-col justify-between md:flex-row'>
+      {/* Journey Timeline Section */}
+      <div className="max-w-7xl mx-auto px-6 mb-20">
+        <div className="flex flex-col lg:flex-row gap-12 items-center">
+          <div className="lg:w-1/2">
+            <img src={labImage} alt="Learning Journey" className="w-full rounded-2xl shadow-xl object-cover h-[500px]" />
+          </div>
+          <div className="lg:w-1/2">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Your Medical Coding <span style={{ color: '#097D8A' }}>Learning Journey</span>
+            </h2>
+            <p className="text-lg text-gray-600 mb-8">
+              We have streamlined our training to ensure you take the most direct path to professional certification and your first job in the healthcare industry.
+            </p>
+            
+            <div className="space-y-4">
+              {journeySteps.map((step, index) => (
+                <div key={index} className="flex items-start">
+                  <div className="flex flex-col items-center mr-4">
+                    <div className="w-8 h-8 rounded-full bg-teal-100 flex items-center justify-center text-teal-600 font-bold z-10" style={{ backgroundColor: '#097D8A20', color: '#097D8A' }}>
+                      {index + 1}
+                    </div>
+                    {index !== journeySteps.length - 1 && (
+                      <div className="w-0.5 h-10 bg-gray-200 my-1"></div>
+                    )}
+                  </div>
+                  <div className="pt-1">
+                    <p className="text-lg font-medium text-gray-800">{step}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
 
-<div style={{background:"#9B5DE6",width:"",padding:"70px 70px"}} className='flex-1'>
-   
-   <h2 style={{color:"white"}}>Dive into Our Extensive Medical Coding Curriculum</h2>
-   <p  style={{color:"white", marginTop:"20px",textAlign:"justify"}}>The curriculum at Thoughtflows Medical Coding Academy is meticulously designed to provide students with a comprehensive understanding of medical coding principles, practices, and industry-specific knowledge. Our training program covers a wide range of topics that are essential for medical coding professionals to excel in their roles.</p>
-   <img src={branch} style={{width:"100px"}} alt='branch'/> 
-
-</div>
-<div style={{width:""}} className='flex-1'>
-<p style={{padding:"50px", textAlign:"justify",wordSpacing:"4px", lineHeight:"26px"}}>
-The curriculum begins with an introduction to medical terminology, anatomy, and physiology, providing a foundational understanding of the human body and its systems.Students then progress to the study of medical coding systems, such as ICD-10 and CPT coding, which are essential for accurately documenting medical procedures and diagnoses.As students advance through the program, they gain knowledge of coding guidelines and regulations, ensuring compliance with industry standards and legal requirements. Our curriculum also includes training on medical billing processes, preparing students to work in collaboration with billing and insurance departments in healthcare facilities.
-Throughout the training program, students are exposed to real-world coding scenarios and case studies, enabling them to apply their knowledge and skills in practical settings. This hands-on approach ensures that our students are well-prepared to handle the complexities of medical coding in their professional roles.
-</p>
-
-</div>
-
-</div>
-<div style={{background:"white",height:"", display:"",justifyContent:"" }}  className='flex flex-col-reverse justify-between md:flex-row align-start' >
-<div style={{width:""}} className='flex-1'>
-<p style={{padding:"50px", textAlign:"justify",wordSpacing:"4px", lineHeight:"28px",margin:"0"}}>
-Our faculty members are not only subject matter experts but also passionate educators dedicated to the success of their students. They understand the unique challenges and requirements of the medical coding profession and tailor their teaching approaches to address those needs. Through interactive lectures, discussions, and one-on-one mentoring, our faculty members ensure that each student receives personalized attention and guidance throughout their learning journey.Faculty members bring real-world experience to the classroom, providing practical insights and guidance to students.
-</p>
-</div>
-<div style={{background:"#9B5DE6",width:"",padding:"70px" , marginTop:""}} className='flex-1'>
-   <h2 style={{color:"white"}}>Shaping Future Medical Coding Professionals</h2>
-   <p  style={{color:"white", marginTop:"20px", textAlign:"justify"}}>At Thoughtflows Medical Coding Academy, we believe that the quality of education is heavily dependent on the expertise of our faculty. Our esteemed team of faculty members consists of experienced professionals who have in-depth knowledge of the medical coding domain. </p>
-  <img src={branch} style={{width:"100px"}} alt='branch'/> 
-  
-
-</div>
-
-
-</div>
+      {/* Industry-Oriented Training Section */}
+      <div className="bg-gray-50 py-16">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="max-w-5xl mx-auto text-center">
+            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Industry-Oriented Training Designed Around <span style={{ color: '#9B5DE6' }}>Real Healthcare Processes</span>
+            </h2>
+            <p className="text-lg text-gray-600 mb-12">
+              At ThoughtFlows, training goes beyond theoretical concepts. Our programs are designed to help learners understand how Medical Coding functions within real healthcare workflows. The objective is to help learners build strong foundational knowledge while understanding the practical expectations of the healthcare industry.
+            </p>
+            
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 text-left">
+              {curriculumHighlights.map((item, index) => (
+                <div key={index} className="flex items-center space-x-3 bg-white p-4 rounded-lg shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+                  <CheckCircle2 className="text-purple-500 flex-shrink-0" size={24} style={{ color: '#9B5DE6' }} />
+                  <span className="text-gray-700 font-medium">{item}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+      
     </div>
-   
-    
-    </>
   )
 }
 
-export default KochiCore
+export default KochiCore;

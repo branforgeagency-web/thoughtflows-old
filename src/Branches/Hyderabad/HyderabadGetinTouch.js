@@ -4,28 +4,10 @@ function HyderabadGetinTouch() {
   return (
     <>
       <div className="get">
-        <div className="get-1">
-          <h2 style={{ marginBottom: "20px" }}>
-            Affordable Fees and Easy Payment Options
-          </h2>
-          <p>
-            We understand that investing in your education is a significant
-            decision. Our training program offers affordable fees and easy
-            payment options to make it accessible for aspiring medical coders.
-            We strive to provide high-quality training at an affordable price,
-            ensuring that finances are not a barrier to your career advancement
-            in the medical coding field.
-          </p>
-        </div>
-        <div className="get-2">
-          <h2 style={{ marginBottom: "20px" }}>Get in Touch with Us</h2>
-          <p>
-            If you have any questions or inquiries about our medical coding
-            training program in Hyderabad, we encourage you to get in touch with
-            us. Our friendly and knowledgeable staff are ready to assist you and
-            provide you with all the information you need to make an informed
-            decision. Contact us today and take the first step towards a
-            rewarding career in medical coding.
+        <div className="get-1" style={{ width: "100%", textAlign: "center" }}>
+          <h2 style={{ marginBottom: "20px" }}>Have Questions? Let's Talk</h2>
+          <p style={{ maxWidth: "800px", margin: "0 auto 30px", fontSize: "16px", lineHeight: "26px" }}>
+            Choosing the right course is a big decision, and you shouldn't have to make it alone. As a trusted medical coding institute in Ameerpet, we're happy to answer your questions honestly — about the course, fees, batches, certifications, or placements. Our team will give you straight answers and the guidance you need to decide what's right for you. Reach out today and take the first step toward a rewarding career in medical coding.
           </p>
           <Link 
             to="/contact" 

@@ -154,13 +154,9 @@ import React from "react";
 import bannerImage from "../../images/homebannerbg.png";
 import trivandrum from "../../images/Branches/Pic 5.webp";
 import banner2 from "../../images/Branches/lapgirl.png";
-// import cbe1banner from '../../images/Branches/cbe1bannerRight.png'
-import { Container, Row } from "react-bootstrap";
-import CountUp from "react-countup";
-import { Col } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { Link } from "react-router-dom";
-// import bannerVid from "../../images/Branches/online/Comp.mp4"
-
+import { CheckCircle2 } from 'lucide-react';
 
 const TrivandrumBanner = () => {
   return (
@@ -187,18 +183,18 @@ const TrivandrumBanner = () => {
             <h1 style={{
               fontSize: 'clamp(28px, 5vw, 40px)',
               lineHeight: '1.2'
-            }}>Medical Coding <br /> Training Institute in <span style={{ color: '#097D8A' }}>Tiruvandrum</span></h1>
+            }}>Medical Coding Course in <br /> <span style={{ color: '#097D8A' }}>Trivandrum</span> with Placement Support</h1>
           </Col>
           <Col>
             <p style={{
               fontSize: 'clamp(14px, 3vw, 16px)',
               marginTop: '20px',
               maxWidth: '600px'
-            }}>Discover excellence and seize opportunities with Thoughtflows Medical Coding Academy in Trivandrum..</p>
+            }}>Become a Certified Medical Coder with Expert Training, CPC Certification Guidance, Practical Coding Experience, and Career Support from ThoughtFlows Medical Coding Academy.</p>
           </Col>
           <Col className='cbe1-btn '>
             <Link to="/contact" className=" button-animation d">
-              Register Now
+              Book Free Demo Class
             </Link>
           </Col>
         </Col>
@@ -212,7 +208,7 @@ const TrivandrumBanner = () => {
           <img
             src={trivandrum}
             alt='bannergif'
-            className='bannergif banner-appear'
+            className='bannergif banner-appear trivandrum-banner-img'
             style={{
               maxWidth: '100%',
               width: 'auto',
@@ -224,6 +220,14 @@ const TrivandrumBanner = () => {
         </Col>
         <Col lg={1} xs={0}></Col>
       </Row>
+      <style>{`
+        @media (max-width: 768px) {
+          .trivandrum-banner-img {
+            margin-bottom: 0px !important;
+          }
+        }
+      `}</style>
+      
       <Container fluid className='cbe1-counter px-3'
         style={{
           background: '#fff',
@@ -236,86 +240,30 @@ const TrivandrumBanner = () => {
           maxWidth: '95%',
           margin: 'clamp(-30px, -4vw, -40px) auto 0'
         }}>
-        <Row className="align-items-center">
+        <Row className="align-items-center justify-content-center">
           <Col lg={12}>
-            <Row className="gy-4 gx-3">
-              <Col xs={6} sm={6} md={3} lg={3} className="text-center">
-                <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
-                  <p style={{
-                    color: '#FFC100',
-                    fontWeight: '700',
-                    fontSize: 'clamp(18px, 3.5vw, 30px)',
-                    margin: 0,
-                    lineHeight: '1.2'
-                  }}>
-                    <CountUp start={0} end={35000} separator="," />+
-                  </p>
-                  <p style={{
-                    fontWeight: '500',
-                    fontSize: 'clamp(12px, 2.5vw, 18px)',
-                    marginTop: '5px',
-                    lineHeight: '1.2'
-                  }}>Training</p>
-                </div>
-              </Col>
-              <Col xs={6} sm={6} md={3} lg={3} className="text-center">
-                <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
-                  <p style={{
-                    color: '#F15BB5',
-                    fontWeight: '700',
-                    fontSize: 'clamp(18px, 3.5vw, 30px)',
-                    margin: 0,
-                    lineHeight: '1.2'
-                  }}>
-                    <CountUp start={0} end={25000} separator="," />+
-                  </p>
-                  <p style={{
-                    fontWeight: '500',
-                    fontSize: 'clamp(12px, 2.5vw, 18px)',
-                    marginTop: '5px',
-                    lineHeight: '1.2'
-                  }}>Placement</p>
-                </div>
-              </Col>
-              <Col xs={6} sm={6} md={3} lg={3} className="text-center">
-                <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
-                  <p style={{
-                    color: '#00BBFA',
-                    fontWeight: '700',
-                    fontSize: 'clamp(18px, 3.5vw, 30px)',
-                    margin: 0,
-                    lineHeight: '1.2'
-                  }}>
-                    <CountUp start={0} end={49} separator="," />+
-                  </p>
-                  <p style={{
-                    fontWeight: '500',
-                    fontSize: 'clamp(12px, 2.5vw, 18px)',
-                    marginTop: '5px',
-                    lineHeight: '1.2'
-                  }}>Courses</p>
-                </div>
-              </Col>
-              <Col xs={6} sm={6} md={3} lg={3} className="text-center">
-                <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
-                  <p style={{
-                    color: '#01F6D5',
-                    fontWeight: '700',
-                    fontSize: 'clamp(18px, 3.5vw, 30px)',
-                    margin: 0,
-                    lineHeight: '1.2'
-                  }}>
-                    <CountUp start={0} end={12} separator="," />+
-                  </p>
-                  <p style={{
-                    fontWeight: '500',
-                    fontSize: 'clamp(12px, 2.5vw, 18px)',
-                    marginTop: '5px',
-                    lineHeight: '1.2'
-                  }}>Branches</p>
-                </div>
-              </Col>
-            </Row>
+            <div className="d-flex flex-wrap justify-content-center gap-3 gap-md-4">
+              <div className="d-flex align-items-center gap-2 px-2 py-1">
+                <CheckCircle2 className="text-teal-500" size={24} style={{color: '#097D8A'}} />
+                <span style={{fontWeight: '600', fontSize: 'clamp(14px, 2vw, 16px)', color: '#333'}}>35,000+ Students Trained</span>
+              </div>
+              <div className="d-flex align-items-center gap-2 px-2 py-1">
+                <CheckCircle2 className="text-pink-500" size={24} style={{color: '#F15BB5'}} />
+                <span style={{fontWeight: '600', fontSize: 'clamp(14px, 2vw, 16px)', color: '#333'}}>25,000+ Placements Assisted</span>
+              </div>
+              <div className="d-flex align-items-center gap-2 px-2 py-1">
+                <CheckCircle2 className="text-blue-500" size={24} style={{color: '#00BBFA'}} />
+                <span style={{fontWeight: '600', fontSize: 'clamp(14px, 2vw, 16px)', color: '#333'}}>Online & Classroom Training</span>
+              </div>
+              <div className="d-flex align-items-center gap-2 px-2 py-1">
+                <CheckCircle2 className="text-purple-500" size={24} style={{color: '#9B5DE6'}} />
+                <span style={{fontWeight: '600', fontSize: 'clamp(14px, 2vw, 16px)', color: '#333'}}>CPC Certification Guidance</span>
+              </div>
+              <div className="d-flex align-items-center gap-2 px-2 py-1">
+                <CheckCircle2 className="text-yellow-500" size={24} style={{color: '#FFC100'}} />
+                <span style={{fontWeight: '600', fontSize: 'clamp(14px, 2vw, 16px)', color: '#333'}}>Interview Preparation & Placement Support</span>
+              </div>
+            </div>
           </Col>
         </Row>
       </Container>

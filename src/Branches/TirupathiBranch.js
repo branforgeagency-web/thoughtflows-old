@@ -15,7 +15,7 @@ const TirupathiBranch = () => {
   }, [])
   return (
     <>
-      <Meta title="Medical Coding Training in Tirupathi | ThoughtFlows Academy" description="Upgrade your skills at ThoughtFlows Medical Coding Academy in Tirupathi — leading medical coding training with hands-on practice and placement guidance." canonical="https://thoughtflows.in/Expert-Medical-Coding-Tirupathi" />
+      <Meta title="Medical Coding Training in Tirupathi | ThoughtFlows Academy" description="Upgrade your skills at ThoughtFlows Medical Coding Academy in Tirupathi — leading medical coding training with hands-on practice and placement guidance." canonical="https://www.thoughtflows.in/Expert-Medical-Coding-Tirupathi" />
 
       <TirupathiBanner />
       <TirupathiContent />

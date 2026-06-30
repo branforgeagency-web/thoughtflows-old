@@ -1,7 +1,5 @@
 import React from "react";
 import labi from "../../images/Branches/online/hydera1.jpg";
-import branch from "../../images/Branches/image7 copy.png";
-// import bannerVid from ""
 
 function HyderabadAbout() {
   return (
@@ -14,13 +12,7 @@ function HyderabadAbout() {
         <div className="trivandrum-abt-1">
           <div>
             <p style={{ fontSize: "18px", textAlign: "justify" }}>
-              When it comes to medical coding training in Hyderabad, we stand
-              out for several reasons. Our academy offers a comprehensive
-              curriculum, expert faculty, excellent infrastructure, job
-              placement assistance, affordable fees, and flexible batch timings.
-              We are dedicated to providing the best training experience to our
-              students, equipping them with the skills and knowledge needed for
-              a successful career in medical coding.
+              Choosing the right place to train makes all the difference. As a trusted medical coding institute in Hyderabad, we've built everything around one goal — your success. From a job-focused curriculum and experienced CPC faculty to modern infrastructure, dedicated placement assistance, affordable fees, and flexible weekday and weekend batches, every detail is designed to take you from beginner to confident, certified, and career-ready.
             </p>
           </div>
           <img src={labi} style={{ width: "250px" }} alt="hyderabadAbout" />
@@ -29,48 +21,31 @@ function HyderabadAbout() {
 
       <div style={{ padding: "50px 0px 20px 0px" }}>
         <h2 style={{ textAlign: "center" }}>
-          Advanced Infrastructure for Seamless Learning
+          Train the Way You'll Actually Work — in the Heart of Hyderabad
         </h2>
         <p style={{ padding: "20px 50px", textAlign: "justify" }}>
-          To facilitate effective learning, we have invested in infrastructure
-          and modern facilities at our medical coding training center in
-          Hyderabad. Our classrooms are equipped with the latest technology and
-          resources to support an immersive learning experience. We provide a
-          conducive environment for students to enhance their skills and excel
-          in their training.
+          Learning sticks when the environment is right. As a leading medical coding institute in Hyderabad, we've built our center for hands-on practice, not just theory — smart digital classrooms, current coding software, and the latest ICD-10, CPT, and HCPCS references all within reach. With focused batch sizes and real coding scenarios to work through, you don't just study medical coding — you practise it the way you'll do it on the job.
         </p>
       </div>
 
       <div className="flexitem hyderabad-flex">
         <div className="f-item-2">
           <img src={labi} alt='cbe1About' className='cbe1About' />
-
         </div>
         <div className="f-item-1">
-          <h2>Explore the Extensive Module</h2>
+          <h2>Explore a Curriculum That Covers It All</h2>
           <p style={{ textAlign: "justify" }}>
-            Our medical coding training module covers a wide range of topics,
-            ensuring that students receive a comprehensive education in medical
-            coding. From coding systems and guidelines to healthcare
-            documentation and reimbursement methodologies, we provide an
-            extensive curriculum that equips students with the necessary skills
-            and knowledge to excel in their careers.
+            Our medical coding course is built to give you the full picture — not just bits and pieces. Through our hands-on medical coding training in Ameerpet, you'll work through everything that matters: coding systems and guidelines, healthcare documentation, and reimbursement methodologies. By the end, you won't just know the theory — you'll have the practical skills and confidence to handle real coding work and grow in your career.
           </p >
-          <h2 style={{ marginTop: "45px" }}>Meet Our Experienced Faculty Members</h2>
+          <h2 style={{ marginTop: "45px" }}>Learn From Faculty Who've Done the Job</h2>
           <p style={{ textAlign: "justify" }}>
-            Our faculty members are experienced professionals who bring a wealth
-            of knowledge and expertise to the classroom. They have years of
-            practical experience in the field of medical coding and are
-            committed to providing high-quality instruction and guidance to our
-            students. With their industry insights and mentorship, students
-            receive a well-rounded education that prepares them for real-world
-            coding challenges.
+            The people teaching you make all the difference. Our trainers aren't just instructors — they're experienced medical coding professionals who've spent years doing this work in the real world. They bring genuine industry insight, patient mentorship, and practical guidance to every class, so you learn how coding actually works on the job — not just what's in the textbook.
           </p>
-
-          <h2 style={{ marginTop: "45px" }}>Advanced Infrastructure for Seamless Learning</h2>
-          <p style={{ textAlign: "justify" }}>To facilitate effective learning, we have invested in infrastructure and modern facilities at our medical coding training center in Hyderabad. Our classrooms are equipped with the latest technology and resources to support an immersive learning experience. We provide a conducive environment for students to enhance their skills and excel in their training.</p>
+          <h2 style={{ marginTop: "45px" }}>A Learning Environment Built Around You</h2>
+          <p style={{ textAlign: "justify" }}>
+            Great training needs the right setting. As a trusted medical coding institute in Hyderabad, we've invested in classrooms equipped with current technology and coding resources, all within a focused, supportive environment. It's a space designed to help you concentrate, practise, and build real skills — so you can learn faster and train with confidence.
+          </p>
         </div>
-
       </div>
     </>
   );

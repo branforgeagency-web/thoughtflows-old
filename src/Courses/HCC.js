@@ -16,7 +16,7 @@ const HCC = () => {
   }, [])
   return (
     <>
-      <Meta title="Hierarchical Condition Category Course | ThoughtFlows" description="Join the Hierarchical Condition Category course at ThoughtFlows with expert training in HCC coding, risk adjustment models, and career support." canonical="https://thoughtflows.in/hcc" />
+      <Meta title="Hierarchical Condition Category Course | ThoughtFlows" description="Join the Hierarchical Condition Category course at ThoughtFlows with expert training in HCC coding, risk adjustment models, and career support." canonical="https://www.thoughtflows.in/hcc" />
 
       <HCCBanner />
       <WhatHCC />

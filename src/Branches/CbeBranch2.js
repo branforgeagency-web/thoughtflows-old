@@ -16,7 +16,7 @@ const CbeBranch2 = () => {
   }, [])
   return (
     <>
-      <Meta title="Medical Coding Classes in Coimbatore | ThoughtFlows" description="Join top medical coding classes in Coimbatore at ThoughtFlows. Expert trainers, practical learning & 100% placement support for your career growth." canonical="https://thoughtflows.in/Medical-Coding-Excellence-at-Hopes" />
+      <Meta title="Medical Coding Classes in Coimbatore | ThoughtFlows" description="Join top medical coding classes in Coimbatore at ThoughtFlows. Expert trainers, practical learning & 100% placement support for your career growth." canonical="https://www.thoughtflows.in/Medical-Coding-Excellence-at-Hopes" />
 
       <Cbe2Banner />
       <Cbe2About />

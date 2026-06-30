@@ -16,7 +16,7 @@ const CPB = () => {
   }, [])
   return (
     <>
-      <Meta title="CPB Training | Certified Medical Biller Course – ThoughtFlows" description="Join CPB training at ThoughtFlows for certified medical biller training with expert instruction, real practice, and career support for billing excellence." canonical="https://thoughtflows.in/cpb" />
+      <Meta title="CPB Training | Certified Medical Biller Course – ThoughtFlows" description="Join CPB training at ThoughtFlows for certified medical biller training with expert instruction, real practice, and career support for billing excellence." canonical="https://www.thoughtflows.in/cpb" />
 
       <CPBBanner />
       <WhatCPB />

@@ -25,7 +25,7 @@ function CSS() {
   }, [])
   return (
     <>
-      <Meta title="Certified Coding Specialist Physician Course | ThoughtFlows" description="Join the Certified Coding Specialist Physician course at ThoughtFlows with expert training, practical coding practice, and certification guidance." canonical="https://thoughtflows.in/ccs-p" />
+      <Meta title="Certified Coding Specialist Physician Course | ThoughtFlows" description="Join the Certified Coding Specialist Physician course at ThoughtFlows with expert training, practical coding practice, and certification guidance." canonical="https://www.thoughtflows.in/ccs-p" />
 
       <CSSBanner />
       <WhatIsEvaluation />

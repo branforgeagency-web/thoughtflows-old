@@ -16,7 +16,7 @@ const CEMC = () => {
   }, [])
   return (
     <>
-      <Meta title="CEMC Course Training | ThoughtFlows Medical Coding Academy" description="Join the CEMC course at ThoughtFlows with expert trainers, practical medical coding training, exam guidance, and career support." canonical="https://thoughtflows.in/cemc" />
+      <Meta title="CEMC Course Training | ThoughtFlows Medical Coding Academy" description="Join the CEMC course at ThoughtFlows with expert trainers, practical medical coding training, exam guidance, and career support." canonical="https://www.thoughtflows.in/cemc" />
 
       <CEMCBanner />
       <WhatCEMC />

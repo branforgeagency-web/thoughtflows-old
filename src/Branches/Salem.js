@@ -16,7 +16,7 @@ const SalemBranch = () => {
   }, [])
   return (
     <>
-      <Meta title="Medical Coding Course in Salem | ThoughtFlows Academy" description="Learn at ThoughtFlows Medical Coding Academy in Salem — expert trainers, hands-on medical coding course, and placement assistance." canonical="https://thoughtflows.in/Future-Ready-Medical-Coding-Salem" />
+      <Meta title="Medical Coding Course in Salem | ThoughtFlows Academy" description="Learn at ThoughtFlows Medical Coding Academy in Salem — expert trainers, hands-on medical coding course, and placement assistance." canonical="https://www.thoughtflows.in/Future-Ready-Medical-Coding-Salem" />
 
       <SalemBanner />
       <SalemContent />

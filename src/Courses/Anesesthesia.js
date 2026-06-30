@@ -18,9 +18,10 @@ function Anesesthesia() {
   }, [])
   return (
     <>
-      <Meta title="Certified Anesthesia Coder Course | ThoughtFlows Academy" description="Join the Certified Anesthesia Coder course at ThoughtFlows with expert-led training, anesthesia coding practice, and career support." canonical="https://thoughtflows.in/Anesesthesia" />
+      <Meta title="Certified Anesthesia Coder Course | ThoughtFlows Academy" description="Join the Certified Anesthesia Coder course at ThoughtFlows with expert-led training, anesthesia coding practice, and career support." canonical="https://www.thoughtflows.in/anesesthesia" />
 
       <AnesesthesiaBanner />
+
       <WhatIsAnesthesia />
       <AnaesthesiaBook />
       <AboutanAesthesia />

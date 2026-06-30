@@ -21,11 +21,11 @@ function TrivandrumOnline2() {
               <div className="flex items-center space-x-2">
                 {/* <FaCircle className="text-primaryy text-2xl" /> */}
                 <h2 className="font-bold sm:text-2xl lg:text-3xl text-secondaryy leading-tight">
-                  Practical Training Method: Developing In-Demand Skills
+                  Practical Learning Environment
                 </h2>
               </div>
               <p className="text-lg text-gray-700 leading-relaxed tracking-wide">
-                Our hands-on teaching method connects theory and practice. Our medical coding coaching center equips students with industry-relevant skills through practical experience, real-world simulations, and coding assignments.
+                Students gain practical exposure to medical coding concepts through hands-on learning, real world coding scenarios, and industry relevant training methodologies. This practical approach helps learners develop the skills and confidence required for a successful healthcare career.
               </p>
             </div>
 
@@ -34,14 +34,11 @@ function TrivandrumOnline2() {
               <div className="flex items-center space-x-2">
                 {/* <FaCircle className="text-secondaryy text-2xl" /> */}
                 <h2 className="font-bold sm:text-2xl lg:text-3xl text-secondaryy leading-tight">
-                  Online Training Option
+                  Flexible Learning Options
                 </h2>
               </div>
               <p className="text-lg text-gray-700 leading-relaxed tracking-wide">
-                We provide online medical coding classes and medical coding certificate programs for those who are unable to attend in person. These options maintain the high standards of our medical coding education while offering flexible learning alternatives.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed tracking-wide">
-                With an emphasis on certifications, job placement, and hands-on learning, Thoughtflows is a leading provider of medical coding training in Trivandrum. Join us to realize your full potential and start a successful career in healthcare!
+                Online and classroom training options are available to support different learning preferences. Flexible batch schedules help students, fresh graduates, and working professionals pursue Medical Coding training while balancing their academic or professional commitments.
               </p>
             </div>
           </div>

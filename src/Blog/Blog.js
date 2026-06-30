@@ -11,7 +11,7 @@ const Blog = () => {
   return (
 
     <>
-      <Meta title="ThoughtFlows Blog | Medical Coding Tips & Insights" description="Explore the ThoughtFlows blog for expert tips, industry insights, career guidance, and updates on medical coding and healthcare documentation." canonical="https://thoughtflows.in/blog" />
+      <Meta title="ThoughtFlows Blog | Medical Coding Tips & Insights" description="Explore the ThoughtFlows blog for expert tips, industry insights, career guidance, and updates on medical coding and healthcare documentation." canonical="https://www.thoughtflows.in/blog" />
       <BlogBanner />
       <BlogRef1 />
 

@@ -24,7 +24,7 @@ function TrichyBranches() {
   }, [])
   return (
     <>
-      <Meta title="Medical Coding Course in Trichy | ThoughtFlows Institute" description="Advance your career with ThoughtFlows Medical Coding Academy in Trichy — leading medical coding course, practical learning, and placement assistance." canonical="https://thoughtflows.in/Career-Focused-Medical-Coding-Trichy" />
+      <Meta title="Medical Coding Course in Trichy | ThoughtFlows Institute" description="Advance your career with ThoughtFlows Medical Coding Academy in Trichy — leading medical coding course, practical learning, and placement assistance." canonical="https://www.thoughtflows.in/Career-Focused-Medical-Coding-Trichy" />
 
       <TrichyBanner />
       <TrichyAbout />

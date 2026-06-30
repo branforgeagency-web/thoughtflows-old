@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import image from "./medic.jpg";
 import postImage5 from '../images/Blog/stomatolog-nurse-tooth-clinic-checking-patient-appointment-looking-computer-monitor-stomatology-assistant-teeth-doctor-discussing-reception-dental-office.jpg';
+import Meta from "../Meta";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { FaCircle } from "react-icons/fa";
@@ -23,6 +24,11 @@ export default function Blog5() {
 
   return (
     <>
+      <Meta
+        title="Exploring ICD-10-CM: Key Changes You Need to Know | ThoughtFlows"
+        description="Stay updated on the latest ICD-10-CM changes. ThoughtFlows breaks down key updates, new codes, and how they impact medical coding accuracy and compliance."
+        canonical="https://www.thoughtflows.in/blog/exploring-icd10cm-key-changes-you-need-to-know-for-accurate-medical-coding"
+      />
       <div
         style={{
           width: "auto",

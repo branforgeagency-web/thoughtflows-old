@@ -16,7 +16,7 @@ const About = () => {
   }, [])
   return (
     <>
-      <Meta title="Medical Coding Academy – About ThoughtFlows" description="Learn about ThoughtFlows, a leading medical coding academy in India offering expert training, certification support, and career growth for aspiring coders." canonical="https://thoughtflows.in/about" />
+      <Meta title="Medical Coding Academy – About ThoughtFlows" description="Learn about ThoughtFlows, a leading medical coding academy in India offering expert training, certification support, and career growth for aspiring coders." canonical="https://www.thoughtflows.in/about" />
 
       <div style={{ overflow: 'hidden' }}>
         <motion.div

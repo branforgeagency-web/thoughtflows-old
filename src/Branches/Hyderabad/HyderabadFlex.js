@@ -15,14 +15,17 @@ function HyderabadFlex() {
           height: "", 
         }}
       >
-        <h2 style={{ textAlign: "center"}}>Flexible Batch Timings</h2>
+        <h2 style={{ textAlign: "center"}}>Batch Timings That Fit Your Life</h2>
         <p style={{ textAlign:"center", fontWeight:"800px", marginTop:"30px", lineHeight:"28px"}}>
-          We believe that quality education should be accessible to all. Our
-          medical coding training program in Hyderabad offers affordable fees
-          and flexible batch timings to accommodate the needs of our students.
-          We understand that many individuals have work or personal commitments,
-          and we strive to provide convenient options that allow them to pursue
-          their education without disruptions..
+          Not everyone can study at the same time, and that shouldn't hold you back from a career in medical coding. Whether you're a fresh graduate, a working professional, or managing other commitments, we have a batch that fits:
+        </p>
+        <ul style={{ listStyleType: "none", padding: 0, textAlign: "center", fontWeight: "bold", marginTop: "15px", lineHeight: "28px" }}>
+          <li>Morning batches — for full-time learners</li>
+          <li>Evening batches — for working professionals</li>
+          <li>Weekend batches — for busy weekday schedules</li>
+        </ul>
+        <p style={{ textAlign:"center", fontWeight:"800px", marginTop:"15px", lineHeight:"28px"}}>
+          With affordable fees and EMI options, quality training stays within your reach. Just tell us your availability, and we'll help you pick the right batch.
         </p>
       </div>
     </>

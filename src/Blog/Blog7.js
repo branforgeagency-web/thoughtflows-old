@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import image from "./medic.jpg";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import postImage7 from '../images/Blog/three-business-people-discussing-graph-points.jpg';
+import Meta from "../Meta";
 
 import { FaCircle } from "react-icons/fa";
 export default function Blog6() {
@@ -23,6 +24,11 @@ export default function Blog6() {
 
   return (
     <>
+      <Meta
+        title="Medical Coding Career Path: Opportunities and Growth | ThoughtFlows"
+        description="Explore the medical coding career path — from entry-level roles to specializations and advancement. ThoughtFlows guides you through every stage of growth."
+        canonical="https://www.thoughtflows.in/blog/medical-coding-career-path-opportunities-and-growth-in-healthcare"
+      />
       <div
         style={{
           width: "auto",

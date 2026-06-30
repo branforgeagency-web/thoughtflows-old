@@ -33,14 +33,14 @@ const HyderabadBanner = () => {
             <h1 style={{
               fontSize: 'clamp(28px, 5vw, 40px)',
               lineHeight: '1.2'
-            }}>Medical Coding <br /> Training Institute in <span style={{ color: '#097D8A' }}>Dilsukhnagar</span></h1>
+            }}>Build a career in medical coding in <span style={{ color: '#097D8A' }}>Dilsukhnagar</span></h1>
           </Col>
           <Col>
             <p style={{
               fontSize: 'clamp(14px, 3vw, 16px)',
               marginTop: '20px',
               maxWidth: '600px'
-            }}>Experience world-class education at our leading training institute in Dilsukhnagar, specializing in medical coding.</p>
+            }}>Learn ICD-10, CPT & HCPCS, prepare for the CPC exam, and get full placement support every step of the way</p>
           </Col>
           <Col className='cbe1-btn '>
             <Link to="/contact" className=" button-animation d">

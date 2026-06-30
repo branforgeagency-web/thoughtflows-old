@@ -11,6 +11,7 @@ import HyderabadGetinTouch from './Hyderabad2/Hyderabad2GetinTouch'
 import HyderabadStudents from './Hyderabad2/Hyderabad2Students'
 import Meta from '../Meta';
 import Hyderabad2Testimonial from './Hyderabad2/Hyderabad2Testimonial'
+import Hyderabad2FAQ from './Hyderabad2/Hyderabad2FAQ'
 
 function Hyderabad() {
   useEffect(() => {
@@ -18,7 +19,7 @@ function Hyderabad() {
   }, [])
   return (
     <>
-      <Meta title="Medical Coding Institute in Hyderabad | ThoughtFlows Academy" description="Get certified at ThoughtFlows Medical Coding Academy in Hyderabad — top medical coding institute with real practice, expert training, and career support." canonical="https://thoughtflows.in/Professional-Medical-Coding-Dilsukhnagar" />
+      <Meta title="Medical Coding Institute in Hyderabad | ThoughtFlows Academy" description="Get certified at ThoughtFlows Medical Coding Academy in Hyderabad — top medical coding institute with real practice, expert training, and career support." canonical="https://www.thoughtflows.in/Professional-Medical-Coding-Dilsukhnagar" />
 
       <HyderabadBanner />
       <HyderabadAbout />
@@ -29,6 +30,7 @@ function Hyderabad() {
       <HyderabadOnline2 />
       <HyderabadGetinTouch />
       {/* <HyderabadStudents /> */}
+      <Hyderabad2FAQ />
       <Hyderabad2Testimonial />
     </>
   )

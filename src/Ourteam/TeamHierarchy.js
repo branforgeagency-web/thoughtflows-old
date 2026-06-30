@@ -120,7 +120,6 @@ import ByreddyVinayAnandAkashReddy from "../images/Profile images/blazer pic/Byr
 import Shreelakshmi from "../images/Profile images/blazer pic/Sree lakshmi-DM Executive.png"
 import DeepkKumarPujari from "../images/Profile images/blazer pic/Depak kumar pujar-DM Executive.png"
 import SathyaSriVaishnavi from "../images/Profile images/blazer pic/Sathya sree vaishnavi-MIS Executive.png"
-import Chithra from "../images/Profile images/blazer pic/Chithra - Trainer.jpg"
 import SherlinRuth from "../images/Profile images/blazer pic/Sherlin Ruth - HR Executive.png"
 import Santhosh from "../images/Profile images/blazer pic/Santhosh_dm.jpg"
 import Jeron from "../images/Profile images/blazer pic/JERON.jpg"
@@ -185,7 +184,6 @@ const teamMemberData = [
   { "name": "Aashifa", "role": "TRAINER", "phone": "", "email": "", "Branch": "", "image": Aasifa },
   { "name": "Charishma", "role": "TRAINER", "phone": "", "email": "", "Branch": "Vizag", "image": Charishma },
   { "name": "Kavya", "role": "TRAINER", "phone": "", "email": "", "Branch": "", "image": Kavya },
-  { "name": "Chithra", "role": "TRAINER", "phone": "", "email": "", "Branch": "", "image": Chithra },
   { "name": "Priya", "role": "TRAINER", "phone": "", "email": "priya5thoughtflows@gmail.com", "Branch": "", "image": Priya },
 
 
@@ -269,7 +267,7 @@ const teamStructure = [
   { role: "DEPARTMENT HEADS", count: 4 },
   { role: "REGIONAL MANAGER", count: 3 },
   { role: "TRAINING MANAGER", count: 2 },
-  { role: "TRAINER", count: 13 },
+  { role: "TRAINER", count: 12 },
   { role: "BRANCH HEAD", count: 1 },
   { role: "TEAM LEAD", count: 7 },
   // { role: "PROCESS COACH", count: 1 },
@@ -294,7 +292,7 @@ function TeamHierarchy() {
 
   return (
     <>
-      <Meta title="Meet the ThoughtFlows Team | Experts in Medical Coding" description="Get to know the dedicated team at ThoughtFlows — expert trainers and professionals shaping the future of medical coding education." canonical="https://thoughtflows.in/ourteam" />
+      <Meta title="Meet the ThoughtFlows Team | Experts in Medical Coding" description="Get to know the dedicated team at ThoughtFlows — expert trainers and professionals shaping the future of medical coding education." canonical="https://www.thoughtflows.in/ourteam" />
       <div className=" min-h-screen bg-gradient-to-br from-[#36b0bd] via-[#2a8b96] to-[#1e666e] py-12 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
         {/* Enhanced premium decorative elements */}
         <div className="absolute inset-0 overflow-hidden">

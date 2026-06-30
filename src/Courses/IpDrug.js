@@ -17,7 +17,7 @@ const IpDrug = () => {
     }, [])
     return (
         <>
-            <Meta title="Certified Inpatient DRG Coder Course | ThoughtFlows" description="Enroll in the Certified Inpatient DRG Coder course at ThoughtFlows with expert training, IP-DRG case practice, and career-focused guidance." canonical="https://thoughtflows.in/ip-drg" />
+            <Meta title="Certified Inpatient DRG Coder Course | ThoughtFlows" description="Enroll in the Certified Inpatient DRG Coder course at ThoughtFlows with expert training, IP-DRG case practice, and career-focused guidance." canonical="https://www.thoughtflows.in/ip-drg" />
             <IpdrugBanner />
             <WhatisIpDrug />
             <AboutIpDrug />

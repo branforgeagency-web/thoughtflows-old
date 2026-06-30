@@ -17,7 +17,7 @@ function Vizag() {
   }, [])
   return (
     <>
-      <Meta title="Medical Coding Course in Vizag | ThoughtFlows Institute" description="ThoughtFlows Medical Coding Academy offers the best medical coding course in Vizag with practical training and career-focused guidance" canonical="https://thoughtflows.in/Innovative-Medical-Coding-Vizag" />
+      <Meta title="Medical Coding Course in Vizag | ThoughtFlows Institute" description="ThoughtFlows Medical Coding Academy offers the best medical coding course in Vizag with practical training and career-focused guidance" canonical="https://www.thoughtflows.in/Innovative-Medical-Coding-Vizag" />
 
       <VizagBanner />
       <VizagAbout />

@@ -17,7 +17,7 @@ const COC = () => {
   }, [])
   return (
     <>
-      <Meta title="COC Training | ThoughtFlows Medical Coding Academy" description="Enroll in COC training at ThoughtFlows with expert trainers, outpatient coding practice, exam guidance, and placement support." canonical="https://thoughtflows.in/coc" />
+      <Meta title="COC Training | ThoughtFlows Medical Coding Academy" description="Enroll in COC training at ThoughtFlows with expert trainers, outpatient coding practice, exam guidance, and placement support." canonical="https://www.thoughtflows.in/coc" />
 
       <COCBanner />
       <WhatisCOC />

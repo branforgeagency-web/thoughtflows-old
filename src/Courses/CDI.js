@@ -17,7 +17,7 @@ const CDI = () => {
             <Meta
                 title="CDI Course Training | ThoughtFlows Medical Coding Academy"
                 description="Join the CDI course at ThoughtFlows to master clinical documentation, coding accuracy, and healthcare compliance with expert training, practical learning, and career support."
-                canonical="https://thoughtflows.in/cdi"
+                canonical="https://www.thoughtflows.in/cdi"
             />
 
             <CDIBanner />

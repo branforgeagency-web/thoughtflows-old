@@ -18,7 +18,7 @@ const CPMA = () => {
   }, [])
   return (
     <>
-      <Meta title="CPMA Course Training | ThoughtFlows Medical Coding Academy" description="Join CPMA course at ThoughtFlows for certified professional medical auditor training with expert guidance, audit practice, and career support." canonical="https://thoughtflows.in/cpma" />
+      <Meta title="CPMA Course Training | ThoughtFlows Medical Coding Academy" description="Join CPMA course at ThoughtFlows for certified professional medical auditor training with expert guidance, audit practice, and career support." canonical="https://www.thoughtflows.in/cpma" />
 
       <CPMABanner />
       <WhatCPMA />

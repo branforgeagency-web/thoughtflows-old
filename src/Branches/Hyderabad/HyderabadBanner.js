@@ -33,18 +33,18 @@ const HyderabadBanner = () => {
             <h1 style={{
               fontSize: 'clamp(28px, 5vw, 40px)',
               lineHeight: '1.2'
-            }}>Medical Coding <br /> Institute in <span style={{ color: '#097D8A' }}>Ameerpet</span></h1>
+            }}>Medical Coding Institute in <span style={{ color: '#097D8A' }}>Ameerpet</span> <br /> From Beginner to Certified</h1>
           </Col>
           <Col>
             <p style={{
               fontSize: 'clamp(14px, 3vw, 16px)',
               marginTop: '20px',
               maxWidth: '600px'
-            }}>Experience world-class education at our leading training institute in Ameerpet, specializing in medical coding.</p>
+            }}>Expert CPC faculty, real exam prep, and placement assistance — everything you need to launch your medical coding career in Hyderabad.</p>
           </Col>
           <Col className='cbe1-btn '>
             <Link to="/contact" className=" button-animation d">
-              Register Now
+              Book a Free Demo Class
             </Link>
           </Col>
         </Col>

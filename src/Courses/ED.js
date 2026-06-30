@@ -18,7 +18,7 @@ function ED() {
   }, [])
   return (
     <>
-      <Meta title="ED Course Training | ThoughtFlows Medical Coding Academy" description="Enroll in the ED course at ThoughtFlows to learn emergency department coding with expert training, real-case practice, and career support." canonical="https://thoughtflows.in/ed" />
+      <Meta title="ED Course Training | ThoughtFlows Medical Coding Academy" description="Enroll in the ED course at ThoughtFlows to learn emergency department coding with expert training, real-case practice, and career support." canonical="https://www.thoughtflows.in/ed" />
 
       <EdBanner />
       <WhatIsEmergency />

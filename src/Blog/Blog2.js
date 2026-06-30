@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import image from "./medic.jpg";
 import postImage2 from '../images/Blog/medical-banner-with-doctor-wearing-goggles.jpg';
+import Meta from "../Meta";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { FaCircle } from "react-icons/fa";
@@ -134,6 +135,11 @@ export default function Blog2() {
 
   return (
     <>
+      <Meta
+        title="Why Medical Coding is the Backbone of the Healthcare Industry | ThoughtFlows"
+        description="Explore why medical coding is essential to healthcare — from billing accuracy to compliance, patient care, and research. Learn how ThoughtFlows trains future coders."
+        canonical="https://www.thoughtflows.in/blog/why-medical-coding-is-the-backbone-of-the-healthcare-industry"
+      />
       <div
         style={{
           width: "auto",

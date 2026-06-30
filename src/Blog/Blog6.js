@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import image from "./medic.jpg";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import postImage6 from '../images/Blog/manager-preparing-store-reopening.jpg';
+import Meta from "../Meta";
 
 import { FaCircle } from "react-icons/fa";
 export default function Blog6() {
@@ -30,6 +31,11 @@ export default function Blog6() {
 
   return (
     <>
+      <Meta
+        title="The Role of Medical Coders in Modern Healthcare | ThoughtFlows"
+        description="Discover the essential role of medical coders in modern healthcare — from billing and compliance to patient care and data reporting. ThoughtFlows explains it all."
+        canonical="https://www.thoughtflows.in/blog/the-role-of-medical-coders-in-modern-healthcare-essential-insights"
+      />
       <div
         style={{
           width: "auto",
