@@ -17,6 +17,7 @@ import { PopupContext } from "../context/PopupContext";
 import { motion } from "framer-motion";
 import emailjs from '@emailjs/browser';
 import RegisterPopupForm from "../Forms/RegisterPopupForm";
+import AdvancedOfferPopup from "../Forms/AdvancedOfferPopup";
 
 const inputStyle = {
   width: "100%",
@@ -272,6 +273,7 @@ const Home = () => {
         </motion.div>
       </div>
       <RegisterPopupForm />
+      <AdvancedOfferPopup />
       {/* <FloatingIcons/> */}
     </>
   );
