@@ -5,8 +5,8 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.75);
-    backdrop-filter: blur(8px);
+    background: rgba(18, 5, 2, 0.85); /* Deep warm black overlay */
+    backdrop-filter: blur(10px);
     z-index: 9999;
     display: flex;
     justify-content: center;
@@ -15,18 +15,20 @@
 }
 
 .register-popup-container {
-    background: rgba(255, 255, 255, 1);
+    background: linear-gradient(135deg, #e33e1a 0%, #ffb703 100%);
     width: 95%;
     max-width: 800px;
-    border-radius: 24px;
+    border-radius: 28px;
     position: relative;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.55);
     overflow: hidden;
     animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
 .popup-banner {
     width: 100%;
+    position: relative;
 }
 
 .popup-banner img {
@@ -36,50 +38,62 @@
 }
 
 .popup-content-wrapper {
-    padding: 30px 40px 40px;
+    border-radius: 20px;
+    margin: 0 35px 35px 35px;
+    padding: 30px 35px;
 }
 
 .popup-close-btn {
     position: absolute;
-    top: 15px;
-    right: 15px;
-    width: 32px;
-    height: 32px;
+    top: 20px;
+    right: 20px;
+    width: 36px;
+    height: 36px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.9);
-    border: none;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    transition: all 0.2s;
-    color: #ef4444;
+    transition: all 0.25s ease;
+    color: #ffffff;
     z-index: 10;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
 }
 
 .popup-close-btn:hover {
-    background: #ef4444;
-    color: white;
-    transform: rotate(90deg);
+    background: rgba(255, 255, 255, 0.4);
+    color: #ffffff;
+    transform: scale(1.1) rotate(90deg);
 }
 
 .popup-header {
     text-align: center;
-    margin-bottom: 25px;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
 .popup-header h2 {
-    font-size: 1.8rem;
-    color: #334155;
-    font-weight: 700;
+    font-size: 1.7rem;
+    color: #ffffff;
+    font-weight: 800;
+    margin-bottom: 6px;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 4px rgba(45, 17, 4, 0.4);
+}
+
+.popup-subtitle {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 500;
+    margin: 0;
+    text-shadow: 0 1px 2px rgba(45, 17, 4, 0.3);
 }
 
 .popup-form {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 16px;
 }
 
 .input-group {
@@ -88,77 +102,134 @@
     gap: 8px;
 }
 
-.input-group label {
-    font-weight: 600;
-    font-size: 0.9rem;
-    color: #1e293b;
-    margin-left: 4px;
-}
-
 .input-group input, 
 .input-group textarea,
 .input-group select {
-    padding: 12px 16px;
+    padding: 14px 18px;
     border-radius: 12px;
-    border: 1px solid #e2e8f0;
-    background: #f8fafc;
-    transition: all 0.3s;
-    font-size: 1rem;
+    border: 1px solid rgba(255, 227, 89, 0.25); /* Sunshine yellow with opacity */
+    background: rgba(45, 17, 4, 0.35); /* Translucent dark cocoa */
+    color: #ffffff;
+    transition: all 0.3s ease;
+    font-size: 0.95rem;
+    width: 100%;
+    box-shadow: none;
+}
+
+/* For dropdown options visibility in dark background select lists */
+.input-group select option,
+.input-group select optgroup {
+    background: #5a2a06; /* solid deep bronze for readability */
+    color: #ffffff;
+}
+
+.input-group input::placeholder {
+    color: #e2c2a4; /* Sand/Beige placeholder color for excellent premium contrast */
+    opacity: 0.75;
 }
 
 .input-group input:focus, 
-.input-group textarea:focus {
+.input-group textarea:focus,
+.input-group select:focus {
     outline: none;
-    border-color: #0d8f9c;
-    background: white;
-    box-shadow: 0 0 0 4px rgba(13, 143, 156, 0.1);
+    border-color: #ffe359;
+    background: rgba(45, 17, 4, 0.60);
+    box-shadow: 0 0 0 3px rgba(255, 227, 89, 0.25);
 }
 
 .submit-btn {
-    background: #ffb703; /* A bright yellow/orange to match the image */
-    color: #000;
-    padding: 16px;
-    border-radius: 50px; /* Rounded pill shape like the image */
+    background: linear-gradient(90deg, #ffe359 0%, #ffb703 100%);
+    color: #2d1104; /* Deep Cocoa for maximum readability/contrast */
+    padding: 16px 32px;
+    border-radius: 50px; /* Pill shape */
     border: none;
     font-weight: 800;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
     cursor: pointer;
-    margin-top: 20px;
-    transition: all 0.3s;
-    width: fit-content;
+    margin-top: 15px;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    width: 100%;
+    max-width: 450px;
     align-self: center;
-    min-width: 300px;
-    box-shadow: 0 4px 12px rgba(255, 183, 3, 0.3);
+    text-align: center;
+    box-shadow: 0 6px 20px rgba(255, 183, 3, 0.35);
+    letter-spacing: 0.5px;
 }
 
 .submit-btn:hover {
-    background: #fb8500;
+    background: linear-gradient(90deg, #ffffff 0%, #ffe359 100%);
     transform: translateY(-2px);
-    box-shadow: 0 8px 16px rgba(251, 133, 0, 0.4);
+    box-shadow: 0 8px 25px rgba(255, 227, 89, 0.5);
+}
+
+.submit-btn:active {
+    transform: translateY(0);
 }
 
 .submit-btn:disabled {
-    opacity: 0.7;
+    opacity: 0.6;
     cursor: not-allowed;
     transform: none;
+    box-shadow: none;
+    background: #ffb703;
+}
+
+.form-features {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin-top: 15px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.95);
+}
+
+.form-features span {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    text-shadow: 0 1px 2px rgba(45, 17, 4, 0.35);
 }
 
 .success-content {
     text-align: center;
-    padding: 20px 0;
+    padding: 50px 40px;
+    background: rgba(90, 42, 6, 0.45);
+    backdrop-filter: blur(8px);
+    border-radius: 20px;
+    margin: 35px;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff;
 }
 
 .success-icon {
-    width: 60px;
-    height: 60px;
-    background: #dcfce7;
-    color: #15803d;
+    width: 70px;
+    height: 70px;
+    background: rgba(255, 227, 89, 0.2);
+    color: #ffe359;
+    border: 2px solid #ffe359;
     border-radius: 50%;
-    margin: 0 auto 20px;
+    margin: 0 auto 25px;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 2.2rem;
+    box-shadow: 0 0 15px rgba(255, 227, 89, 0.3);
+}
+
+.success-content h2 {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #ffffff;
+    margin-bottom: 12px;
+    text-shadow: 0 2px 4px rgba(45, 17, 4, 0.4);
+}
+
+.success-content p {
+    font-size: 1rem;
+    color: rgba(255, 255, 255, 0.85);
+    line-height: 1.5;
 }
 
 .success-content .submit-btn {
@@ -178,14 +249,25 @@
 
 @media (max-width: 768px) {
     .register-popup-container {
-        width: 95%;
-        margin: 10px;
+        width: 92%;
+        margin: 15px auto;
+        max-height: 90vh;
+        overflow-y: auto;
     }
     .popup-content-wrapper {
-        padding: 20px;
+        margin: 0 15px 20px 15px;
+        padding: 20px 15px;
     }
     .popup-header h2 {
-        font-size: 1.4rem;
+        font-size: 1.35rem;
+    }
+    .form-features {
+        gap: 10px;
+        font-size: 0.75rem;
+    }
+    .success-content {
+        margin: 20px 15px;
+        padding: 30px 20px;
     }
     .submit-btn {
         min-width: 100%;

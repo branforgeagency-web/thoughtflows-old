@@ -105,6 +105,7 @@ const RegisterPopupForm = () => {
                         <div className="popup-content-wrapper">
                             <div className="popup-header">
                                 <h2>Start Your Medical Coding Career Today</h2>
+                                <p className="popup-subtitle">Book your free demo class — seats are limited.</p>
                             </div>
 
                             <form className="popup-form" onSubmit={handleSubmit}>
@@ -139,25 +140,32 @@ const RegisterPopupForm = () => {
                                             <input type="text" name="location" value={formData.location} onChange={handleInputChange} placeholder="Location" required />
                                         </div>
                                     </div>
-                                </div>
-
-                                <div className="input-group">
-                                    <select name="course" value={formData.course} onChange={handleInputChange} required>
-                                        <option value="">Select Course</option>
-                                        {coursesList.map((group) => (
-                                            <optgroup key={group.category} label={group.category}>
-                                                {group.courses.map(course => (
-                                                    <option key={course} value={course}>{course}</option>
+                                    <div className="col-12">
+                                        <div className="input-group">
+                                            <select name="course" value={formData.course} onChange={handleInputChange} required>
+                                                <option value="">Select Course</option>
+                                                {coursesList.map((group) => (
+                                                    <optgroup key={group.category} label={group.category}>
+                                                        {group.courses.map(course => (
+                                                            <option key={course} value={course}>{course}</option>
+                                                        ))}
+                                                    </optgroup>
                                                 ))}
-                                            </optgroup>
-                                        ))}
-                                        <option value="OTHER">Other</option>
-                                    </select>
+                                                <option value="OTHER">Other</option>
+                                            </select>
+                                        </div>
+                                    </div>
                                 </div>
 
                                 <button type="submit" className="submit-btn" disabled={isSubmitting}>
                                     {isSubmitting ? 'Submitting...' : 'Book a Free Demo Class!'}
                                 </button>
+
+                                <div className="form-features">
+                                    <span>● 100% Free Training</span>
+                                    <span>● Placement Support</span>
+                                    <span>● Limited Seats</span>
+                                </div>
                             </form>
                         </div>
                     </>
