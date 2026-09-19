@@ -43,13 +43,17 @@ const DiscountBanner = () => {
         setSubmitStatus({ type: '', message: '' });
 
         try {
+            const fullDetails = `Interested Course: ${formData.interestedCourse}
+Preferred Branch: ${formData.preferredBranch}
+Discount Offer: 30%`;
+
             const templateParams = {
                 to_email: 'info@thoughtflows.in',
                 from_name: formData.name,
                 from_email: formData.email,
                 phone: formData.ph,
-                qualification: formData.interestedCourse,
-                message: `Preferred Branch: ${formData.preferredBranch}`,
+                qualification: fullDetails, // Send full details in qualification template field
+                message: fullDetails, // Send full details in message template field
                 subject: `Discount Banner Inquiry from ${formData.name}`,
                 full_message: `
           New Discount Banner Submission:

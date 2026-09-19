@@ -62,11 +62,14 @@ import FloatingIcons from './FloatingIcons';
 import Placements from './Placements/Placements';
 import YearlyPlacementList from './Placements/YearlyPlacementList';
 import Vetri108 from './Vetri108/Vetri108';
+import AIMedicalCoding from './AIMedicalCoding/AIMedicalCoding';
 
 
 function AppContent() {
   const location = useLocation();
-  const hideHeaderFooter = location.pathname === '/vetri-108';
+  const hideHeaderFooter = location.pathname === '/vetri-108' ||
+    location.pathname === '/ai-medical-coding' ||
+    location.pathname === '/ai-powered-medical-coding';
 
   return (
     <>
@@ -127,6 +130,8 @@ function AppContent() {
         <Route path="/placements" element={<Placements />} />
         <Route path="/placements/:year" element={<YearlyPlacementList />} />
         <Route path="/vetri-108" element={<Vetri108 />} />
+        <Route path="/ai-medical-coding" element={<AIMedicalCoding />} />
+        <Route path="/ai-powered-medical-coding" element={<AIMedicalCoding />} />
       </Routes>
       {!hideHeaderFooter && <Footer />}
     </>

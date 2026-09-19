@@ -5,7 +5,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(18, 5, 2, 0.85); /* Deep warm black overlay */
+    background: rgba(15, 23, 42, 0.65); /* Soft slate blue overlay */
     backdrop-filter: blur(10px);
     z-index: 9999;
     display: flex;
@@ -15,15 +15,15 @@
 }
 
 .register-popup-container {
-    background: linear-gradient(135deg, #000000 0%, #5c0612 100%);
+    background: #ffffff;
     width: 95%;
     max-width: 800px;
     border-radius: 28px;
     position: relative;
-    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.55);
+    box-shadow: 0 25px 60px -15px rgba(2, 132, 199, 0.25), 0 10px 30px rgba(0, 0, 0, 0.12);
     overflow: hidden;
     animation: slideUp 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border: 1px solid #bae6fd;
 }
 
 .popup-banner {
@@ -41,6 +41,7 @@
     border-radius: 20px;
     margin: 0 35px 35px 35px;
     padding: 30px 35px;
+    background: #ffffff;
 }
 
 .popup-close-btn {
@@ -50,20 +51,21 @@
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(255, 255, 255, 0.85);
     backdrop-filter: blur(4px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid rgba(2, 132, 199, 0.3);
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
     transition: all 0.25s ease;
-    color: #ffffff;
+    color: #0369a1;
     z-index: 10;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
 .popup-close-btn:hover {
-    background: rgba(255, 255, 255, 0.4);
+    background: #0284c7;
     color: #ffffff;
     transform: scale(1.1) rotate(90deg);
 }
@@ -75,19 +77,19 @@
 
 .popup-header h2 {
     font-size: 1.7rem;
-    color: #ffffff;
+    color: #0f172a;
     font-weight: 800;
     margin-bottom: 6px;
     letter-spacing: -0.5px;
-    text-shadow: 0 2px 4px rgba(45, 17, 4, 0.4);
+    text-shadow: none;
 }
 
 .popup-subtitle {
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: #475569;
     font-weight: 500;
     margin: 0;
-    text-shadow: 0 1px 2px rgba(45, 17, 4, 0.3);
+    text-shadow: none;
 }
 
 .popup-form {
@@ -107,39 +109,40 @@
 .input-group select {
     padding: 14px 18px;
     border-radius: 12px;
-    border: 1px solid rgba(255, 208, 0, 0.25); /* Translucent gold border */
-    background: rgba(30, 2, 6, 0.45); /* Translucent dark burgundy */
-    color: #ffffff;
-    transition: all 0.3s ease;
+    border: 1.5px solid #cbd5e1;
+    background: #f8fafc;
+    color: #0f172a;
+    transition: all 0.25s ease;
     font-size: 0.95rem;
     width: 100%;
     box-shadow: none;
 }
 
-/* For dropdown options visibility in dark background select lists */
+/* For dropdown options visibility in select lists */
 .input-group select option,
 .input-group select optgroup {
-    background: #42050e; /* solid dark wine for readability */
-    color: #ffffff;
+    background: #ffffff;
+    color: #0f172a;
 }
 
-.input-group input::placeholder {
-    color: #ffdcb3; /* Light gold/amber placeholder color for excellent premium contrast */
-    opacity: 0.75;
+.input-group input::placeholder,
+.input-group textarea::placeholder {
+    color: #94a3b8;
+    opacity: 1;
 }
 
 .input-group input:focus, 
 .input-group textarea:focus,
 .input-group select:focus {
     outline: none;
-    border-color: #ffd000;
-    background: rgba(30, 2, 6, 0.65);
-    box-shadow: 0 0 0 3px rgba(255, 208, 0, 0.25);
+    border-color: #0284c7;
+    background: #ffffff;
+    box-shadow: 0 0 0 4px rgba(2, 132, 199, 0.15);
 }
 
 .submit-btn {
-    background: linear-gradient(90deg, #ffd000 0%, #ffa600 100%);
-    color: #3b0007; /* Dark wine/burgundy for maximum readability/contrast */
+    background: linear-gradient(90deg, #0284c7 0%, #00b4d8 100%);
+    color: #ffffff;
     padding: 16px 32px;
     border-radius: 50px; /* Pill shape */
     border: none;
@@ -152,14 +155,14 @@
     max-width: 450px;
     align-self: center;
     text-align: center;
-    box-shadow: 0 6px 20px rgba(255, 166, 0, 0.35);
+    box-shadow: 0 6px 20px rgba(2, 132, 199, 0.35);
     letter-spacing: 0.5px;
 }
 
 .submit-btn:hover {
-    background: linear-gradient(90deg, #ffffff 0%, #ffd000 100%);
+    background: linear-gradient(90deg, #0369a1 0%, #0284c7 100%);
     transform: translateY(-2px);
-    box-shadow: 0 8px 25px rgba(255, 208, 0, 0.5);
+    box-shadow: 0 8px 25px rgba(2, 132, 199, 0.5);
 }
 
 .submit-btn:active {
@@ -171,7 +174,7 @@
     cursor: not-allowed;
     transform: none;
     box-shadow: none;
-    background: #ffa600;
+    background: #94a3b8;
 }
 
 .form-features {
@@ -182,53 +185,54 @@
     margin-top: 15px;
     font-size: 0.85rem;
     font-weight: 600;
-    color: rgba(255, 255, 255, 0.95);
+    color: #334155;
 }
 
 .form-features span {
     display: flex;
     align-items: center;
     gap: 5px;
-    text-shadow: 0 1px 2px rgba(45, 17, 4, 0.35);
+    color: #475569;
+    text-shadow: none;
 }
 
 .success-content {
     text-align: center;
     padding: 50px 40px;
-    background: rgba(45, 3, 10, 0.45);
+    background: #f0f9ff;
     backdrop-filter: blur(8px);
     border-radius: 20px;
     margin: 35px;
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    color: #ffffff;
+    border: 1.5px solid #bae6fd;
+    color: #0f172a;
 }
 
 .success-icon {
     width: 70px;
     height: 70px;
-    background: rgba(255, 208, 0, 0.2);
-    color: #ffd000;
-    border: 2px solid #ffd000;
+    background: rgba(2, 132, 199, 0.12);
+    color: #0284c7;
+    border: 2px solid #0284c7;
     border-radius: 50%;
     margin: 0 auto 25px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 2.2rem;
-    box-shadow: 0 0 15px rgba(255, 208, 0, 0.3);
+    box-shadow: 0 0 15px rgba(2, 132, 199, 0.2);
 }
 
 .success-content h2 {
     font-size: 1.8rem;
     font-weight: 800;
-    color: #ffffff;
+    color: #0f172a;
     margin-bottom: 12px;
-    text-shadow: 0 2px 4px rgba(45, 17, 4, 0.4);
+    text-shadow: none;
 }
 
 .success-content p {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.85);
+    color: #475569;
     line-height: 1.5;
 }
 

@@ -133,6 +133,11 @@ const Home = () => {
     setSubmitStatus({ type: '', message: '' });
 
     try {
+      const fullDetails = `Course: ${formData.course}
+Location: ${formData.location}
+Age: ${formData.age || 'N/A'}
+Qualification: ${formData.qualification || 'N/A'}`;
+
       // EmailJS template parameters
       const templateParams = {
         to_email: 'info@thoughtflows.in',
@@ -142,7 +147,7 @@ const Home = () => {
         age: formData.age,
         qualification: formData.qualification,
         location: formData.location,
-        course: formData.course,
+        course: fullDetails,
         message: `
           New Unified Form Registration:
           

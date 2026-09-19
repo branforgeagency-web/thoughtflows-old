@@ -4,7 +4,7 @@ import emailjs from '@emailjs/browser';
 import './RegisterPopup.css';
 import { coursesList } from '../coursesList';
 
-import RegisterBanner from '../images/forms/WhatsApp Image 2026-06-30 at 4.32.18 PM.jpeg';
+import RegisterBanner from '../images/ai-medical-coding-banner.png';
 
 const RegisterPopupForm = () => {
     const { isOpen, setIsOpen } = useContext(PopupContext);
@@ -45,6 +45,12 @@ const RegisterPopupForm = () => {
         setIsSubmitting(true);
 
         try {
+            const fullDetails = `Course: ${formData.course}
+Location: ${formData.location}
+Age: ${formData.age || 'N/A'}
+Qualification: ${formData.qualification || 'N/A'}
+Message: ${formData.message || 'N/A'}`;
+
             const templateParams = {
                 to_email: 'info@thoughtflows.in',
                 from_name: formData.name,
@@ -53,8 +59,8 @@ const RegisterPopupForm = () => {
                 age: formData.age,
                 qualification: formData.qualification,
                 location: formData.location,
-                course: formData.course,
-                message: formData.message,
+                course: fullDetails,
+                message: fullDetails,
                 subject: `Registration from Website Popup - ${formData.name}`,
                 full_message: `
                     New Registration from Website Popup:

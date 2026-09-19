@@ -195,8 +195,13 @@ function Contact() {
           from_email: formData.email,
           phone: formData.ph,
           course: formData.course,
+          qualification: formData.course, // Map course to qualification template variable
           location: formData.location,
-          message: formData.message,
+          message: `Course: ${formData.course}
+Location: ${formData.location}
+
+Message:
+${formData.message}`,
           subject: `Contact Form Submission from ${formData.name} (${formData.email})`,
           full_message: `
             New Contact Form Submission:
