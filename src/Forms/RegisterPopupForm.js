@@ -98,7 +98,7 @@ Message: ${formData.message || 'N/A'}`;
     return (
         <div className="register-popup-overlay" onClick={handleClose}>
             <div className="register-popup-container" onClick={e => e.stopPropagation()}>
-                <button className="popup-close-btn" onClick={handleClose}>
+                <button className="popup-close-btn" onClick={handleClose} type="button" aria-label="Close modal">
                     <i className="fa fa-times"></i>
                 </button>
 
