@@ -1,71 +1,98 @@
 import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 
 const AffordableLearning = () => {
+    const features = [
+        {
+            title: "Transparent Medical Coding Course Fees",
+            description: "Our course fees are clear and transparent, ensuring there are no hidden costs, giving you complete clarity.",
+            icon: "💰"
+        },
+        {
+            title: "Flexible Batch Timings",
+            description: "We offer flexible batch timings that cater to both working professionals and students, ensuring convenience for all.",
+            icon: "⏰"
+        },
+        {
+            title: "Medical Coding Online Courses",
+            description: "Our online courses make learning convenient and accessible for remote learners across the globe.",
+            icon: "💻"
+        }
+    ];
+
     return (
-        <div className="bg-gradient-to-r from-primaryy to-secondaryy py-16 px-4 sm:px-6 lg:px-8">
-            <div className="max-w-4xl mx-auto text-left text-white">
-                <h2 className="text-3xl sm:text-4xl font-extrabold">
-                    Affordable Medical Coding Fees and Flexible Learning
-                </h2>
-                <p className="mt-4 text-lg sm:text-xl">
-                    We believe quality medical coding training should be accessible to all. At Thoughtflows Medical Coding Coaching Centre, we offer:
-                </p>
+        <Container fluid className="py-5 my-5" style={{ 
+            background: 'linear-gradient(135deg, #097D8A 0%, #21A7D0 100%)',
+            color: 'white'
+        }}>
+            <Row className="justify-content-center">
+                <Col lg={10} md={12}>
+                    <div className="text-center mb-5">
+                        <h2 style={{ 
+                            fontSize: 'clamp(28px, 4vw, 42px)', 
+                            fontWeight: '700',
+                            marginBottom: '1.5rem'
+                        }}>
+                            Affordable Medical Coding Fees and Flexible Learning
+                        </h2>
+                        <p style={{ 
+                            fontSize: 'clamp(16px, 2.5vw, 18px)', 
+                            lineHeight: '1.6',
+                            opacity: '0.9'
+                        }}>
+                            We believe quality medical coding training should be accessible to all. At Thoughtflows Medical Coding Coaching Centre, we offer:
+                        </p>
+                    </div>
 
-                {/* List of Features */}
-                <div className="mt-8">
-                    <ul className="space-y-6">
-                        {/* List Item */}
-                        {[
-                            {
-                                title: "Transparent Medical Coding Course Fees",
-                                description:
-                                    "Our course fees are clear and transparent, ensuring there are no hidden costs, giving you complete clarity.",
-                                icon: (
-                                    <path d="M17 11l4-4m0 0l-4-4m4 4H3m14 6l4 4m0 0l-4 4m4-4H3" />
-                                ),
-                            },
-                            {
-                                title: "Flexible Batch Timings",
-                                description:
-                                    "We offer flexible batch timings that cater to both working professionals and students, ensuring convenience for all.",
-                                icon: <path d="M12 3v18m9-9H3" />,
-                            },
-                            {
-                                title: "Medical Coding Online Courses",
-                                description:
-                                    "Our online courses make learning convenient and accessible for remote learners across the globe.",
-                                icon: <path d="M22 12l-20 7 8-7-8-7z" />,
-                            },
-                        ].map((item, index) => (
-                            <li key={index} className="flex items-start">
-                                <div className="flex-shrink-0 bg-secondaryy p-4 rounded-full">
-                                    <svg
-                                        xmlns="http://www.w3.org/2000/svg"
-                                        className="w-6 h-6 text-white"
-                                        viewBox="0 0 24 24"
-                                        fill="none"
-                                        stroke="currentColor"
-                                        strokeWidth="2"
-                                        strokeLinecap="round"
-                                        strokeLinejoin="round"
-                                    >
+                    <Row className="g-4 mb-5">
+                        {features.map((item, index) => (
+                            <Col lg={4} md={6} key={index}>
+                                <div className="d-flex align-items-start gap-3 p-4" style={{ 
+                                    backgroundColor: 'rgba(255, 255, 255, 0.1)',
+                                    borderRadius: '12px',
+                                    backdropFilter: 'blur(10px)'
+                                }}>
+                                    <div style={{ 
+                                        fontSize: '2rem',
+                                        flexShrink: 0
+                                    }}>
                                         {item.icon}
-                                    </svg>
+                                    </div>
+                                    <div>
+                                        <h4 style={{ 
+                                            fontSize: '18px',
+                                            fontWeight: '600',
+                                            marginBottom: '0.5rem'
+                                        }}>
+                                            {item.title}
+                                        </h4>
+                                        <p style={{ 
+                                            fontSize: '14px',
+                                            lineHeight: '1.5',
+                                            opacity: '0.9',
+                                            margin: 0
+                                        }}>
+                                            {item.description}
+                                        </p>
+                                    </div>
                                 </div>
-                                <div className="ml-6">
-                                    <h3 className="text-xl font-semibold">{item.title}</h3>
-                                    <p className="mt-2 text-gray-200">{item.description}</p>
-                                </div>
-                            </li>
+                            </Col>
                         ))}
-                    </ul>
-                </div>
+                    </Row>
 
-                <p className="mt-8 text-gray-200">
-                    With a focus on inclusivity and support, we aim to make medical coding education available to everyone, regardless of their schedule or financial constraints.
-                </p>
-            </div>
-        </div>
+                    <div className="text-center">
+                        <p style={{ 
+                            fontSize: '16px',
+                            lineHeight: '1.6',
+                            opacity: '0.9',
+                            margin: 0
+                        }}>
+                            With a focus on inclusivity and support, we aim to make medical coding education available to everyone, regardless of their schedule or financial constraints.
+                        </p>
+                    </div>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 

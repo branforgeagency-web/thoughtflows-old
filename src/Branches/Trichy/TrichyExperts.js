@@ -1,35 +1,67 @@
 import React from 'react';
+import { Container, Row, Col } from 'react-bootstrap';
 import { FaCircle } from 'react-icons/fa';
 
 const TrichyExperts = () => {
     return (
-        <div className="bg-third mx-3 mb-20 lg:px-5 sm:px-2 py-10 rounded-xl shadow-md">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:px-20 px-10">
-                {/* Left Column: Heading */}
-                <div className="flex items-center justify-center sm:justify-start">
-                    <h2 className="font-bold text-3xl sm:text-4xl lg:text-5xl text-primaryy leading-tight">
-                        Meet the Experts Behind Your Success
-                    </h2>
-                </div>
+        <Container fluid className="py-5 my-5" style={{ backgroundColor: '#e8f4f8' }}>
+            <Row className="justify-content-center">
+                <Col lg={10} md={12}>
+                    <Row className="align-items-center g-4">
+                        {/* Left Column: Heading */}
+                        <Col lg={6} md={12}>
+                            <h2 className="text-center text-lg-start" style={{ 
+                                fontSize: 'clamp(28px, 4vw, 42px)', 
+                                fontWeight: '700', 
+                                color: '#097D8A',
+                                lineHeight: '1.2'
+                            }}>
+                                Meet the Experts Behind Your Success
+                            </h2>
+                        </Col>
 
-                {/* Right Column: Content in two paragraphs */}
-                <div className="flex flex-col justify-center space-y-4">
-                    <div className="flex items-start space-x-2">
-                        <FaCircle className="text-primaryy text-2xl" />
-                        <p className="text-lg text-gray-700 leading-relaxed tracking-wide">
-                            At Thoughtflows Medical Coding Training Institute, our experienced trainers are dedicated mentors who bring real-world expertise to the classroom. Our faculty consists of industry professionals with deep insights into medical coding jobs and the unique demands of the profession.
-                        </p>
-                    </div>
+                        {/* Right Column: Content */}
+                        <Col lg={6} md={12}>
+                            <div className="d-flex flex-column gap-4">
+                                <div className="d-flex align-items-start gap-3">
+                                    <FaCircle style={{ 
+                                        color: '#097D8A', 
+                                        fontSize: '1.2rem',
+                                        marginTop: '0.3rem',
+                                        flexShrink: 0
+                                    }} />
+                                    <p style={{ 
+                                        fontSize: '16px', 
+                                        lineHeight: '1.6',
+                                        color: '#333',
+                                        margin: 0
+                                    }}>
+                                        At Thoughtflows Medical Coding Training Institute, our experienced trainers are dedicated mentors who bring real-world expertise to the classroom. Our faculty consists of industry professionals with deep insights into medical coding jobs and the unique demands of the profession.
+                                    </p>
+                                </div>
 
-                    <div className="flex items-start space-x-2">
-                        <FaCircle className="text-primaryy text-2xl" />
-                        <p className="text-lg text-gray-700 leading-relaxed tracking-wide">
-                            They provide interactive sessions, personalized mentoring, and real-world examples to bridge the gap between theory and practice. Our trainers ensure every student receives individual attention and the support needed to excel in medical coding courses.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
+                                <div className="d-flex align-items-start gap-3">
+                                    <FaCircle style={{ 
+                                        color: '#097D8A', 
+                                        fontSize: '1.2rem',
+                                        marginTop: '0.3rem',
+                                        flexShrink: 0
+                                    }} />
+                                    <p style={{ 
+                                        fontSize: '16px', 
+                                        lineHeight: '1.6',
+                                        color: '#333',
+                                        margin: 0
+                                    }}>
+                                        They provide interactive sessions, personalized mentoring, and real-world examples to bridge the gap between theory and practice. Our trainers ensure every student receives individual attention and the support needed to excel in medical coding courses.
+                                    </p>
+                                </div>
+                            </div>
+                        </Col>
+                    </Row>
+                </Col>
+            </Row>
+        </Container>
     );
 };
 

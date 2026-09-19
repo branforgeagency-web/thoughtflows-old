@@ -1,4 +1,4 @@
-import React,{useEffect}from 'react'
+import React, { useEffect } from 'react'
 
 import TrivandrumBanner from './Trivandrum/TrivandrumBanner'
 import TrivandrumAbout from './Trivandrum/TrivandrumAbout'
@@ -13,15 +13,16 @@ import TrivandrumCard from './Trivandrum/TrivandrumCard'
 import TrivandrumCertifications from './Trivandrum/TrivandrumCertifications'
 import TrivandrumCompanies from './Trivandrum/TrivandrumCompanies'
 import Meta from '../Meta';
-import Cbe1Testi from './CBE-1/cbe1Testi'
+import TrivandrumTestimonial from './Trivandrum/TrivandrumTestimonial'
+import TrivandrumFAQ from './Trivandrum/TrivandrumFAQ'
 
 function Trivandrum() {
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
- },[])
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [])
   return (
     <>
-                          <Meta title="Trivandrum - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="Medical Coding Course in Trivandrum | ThoughtFlows Institute" description="Build your career at ThoughtFlows Medical Coding Academy — best medical coding course in Trivandrum with practical sessions and placement guidance." canonical="https://www.thoughtflows.in/Advanced-Medical-Coding-Tiruvandrum" />
 
       <TrivandrumBanner />
       <TrivandrumAbout />
@@ -33,7 +34,8 @@ function Trivandrum() {
       <TiruvandrumStat />
       <TrivandrumOnline />
       <TrivandrumOnline2 />
-      <Cbe1Testi/>
+      <TrivandrumFAQ />
+      <TrivandrumTestimonial />
       {/* <TrivandrumStudent /> */}
       {/* <TrivandrumCompanies /> */}
     </>

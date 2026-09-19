@@ -12,7 +12,7 @@ function Motto() {
 
   const contentData = {
     Quality: {
-      title: "Top Quality Training" ,
+      title: "Top Quality Training",
       text: "We are committed to delivering top-quality training that combines theoretical knowledge with practical hands-on experience. Our curriculum is meticulously designed by industry experts, ensuring that our trainees are equipped with the latest industry practices and coding techniques. With modern facilities and a team of highly qualified instructors, we offer a dynamic learning environment designed to nurture growth, expertise, and success in the medical coding field.",
       image: study1,
     },
@@ -36,21 +36,21 @@ function Motto() {
   return (
     <>
       <Container
-      id="motto"
+        id="motto"
         fluid
         className="who mb-[180px] sm:mb-0 d-flex  justify-content-around align-items-start"
-        style={{ height: "250px", width: "100%", background: "white"}}
+        style={{ height: "250px", width: "100%", background: "white" }}
       >
-        <Row className="justify-content-center"> 
+        <Row className="justify-content-center">
           <Col xs={12} >
-            <h1 className="motto" style={{ textAlign: "center", fontSize: "40px",fontWeight: "bold" }}>Our Motto</h1>
+            <h2 className="motto" style={{ textAlign: "center", fontSize: "40px", fontWeight: "bold" }}>Our Motto</h2>
             <button
               className="btn-1"
               onClick={() => setSelectedContent("Quality")}
             >
               Quality
             </button>
-            
+
             <button
               className="btn-3"
               onClick={() => setSelectedContent("Connections")}
@@ -87,7 +87,7 @@ function Motto() {
       >
         <Row style={{ width: "100%" }}>
           <Col
-          xs={12} sm={12} md={4}
+            xs={12} sm={12} md={4}
             style={{
               borderRadius: "50px",
               padding: "0",
@@ -96,7 +96,7 @@ function Motto() {
             }}
           >
             <img
-            className="mb-16 mx-4  md:mb-0 abt-img"
+              className="mb-16 mx-4  md:mb-0 abt-img"
               src={contentData[selectedContent].image}
               style={{
                 width: "80%",
@@ -111,7 +111,7 @@ function Motto() {
             />
           </Col>
           <Col
-          xs={12}
+            xs={12}
             md={7} className="tab-motto"
             style={{
               padding: " 50px 50px 20px 120px",
@@ -125,7 +125,7 @@ function Motto() {
             <h2 className="highlights" style={{ margin: "15px 0px 15px 10px" }}>
               {contentData[selectedContent].title}
             </h2>
-            <p style={{fontSize:"15px",wordSpacing:"6px", marginTop:'15px', lineHeight:'30px', color:'#1e1c1b',paddingInline:"15px"}}>{contentData[selectedContent].text}</p>
+            <p style={{ fontSize: "15px", wordSpacing: "6px", marginTop: '15px', lineHeight: '30px', color: '#1e1c1b', paddingInline: "15px" }}>{contentData[selectedContent].text}</p>
           </Col>
         </Row>
       </Container>

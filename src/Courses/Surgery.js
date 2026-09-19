@@ -1,4 +1,4 @@
-import React,{useEffect}from 'react'
+import React, { useEffect } from 'react'
 
 import SurgeryBanner from "../Courses/Surgery/SurgeryBanner"
 import AboutSurgery from './Surgery/AboutSurgery'
@@ -13,11 +13,11 @@ import Meta from '../Meta';
 
 const Surgery = () => {
     useEffect(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
-     },[])
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }, [])
     return (
         <>
-            <Meta title="Surgery Coding Training | Speciality Course | Thoughtflows" description="Enhance your skills in surgery coding with Thoughtflows Academy, offering expert-led training for a successful career in healthcare." />
+            <Meta title="Certified Surgery Coder Course | ThoughtFlows Academy" description="Join the Certified Surgery Coder course at ThoughtFlows with expert-led training, surgical coding practice, and career-focused guidance." canonical="https://www.thoughtflows.in/surgery" />
             <SurgeryBanner />
             <WhatIsSurgery />
             <AboutSurgery />

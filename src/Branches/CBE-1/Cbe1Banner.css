@@ -1,15 +1,23 @@
+
 .cbe1-banner {
-    padding: 40px 0;
+    padding: 0 0 40px 0 !important;
+    margin-top: -20px !important;  /* Added negative margin to pull banner up */
+    margin-bottom: 0 !important;
 }
+
 
 .cbe1-banner-lft {
     padding: 20px;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
 }
+
 
 .banner-title {
     font-size: 40px;
     margin-bottom: 10px;
 }
+
 
 .banner-description {
     font-size: 16px;
@@ -17,9 +25,11 @@
     line-height: 1.6;
 }
 
+
 .cbe1-btn {
     margin-top: 30px;
 }
+
 
 .box__link.button-animation {
     display: inline-block;
@@ -31,27 +41,34 @@
     transition: all 0.3s ease;
 }
 
+
 .box__link.button-animation:hover {
     background-color: #065c66;
     color: black;
     transform: translateY(-2px);
 }
 
+
 .cbe1-banner-rht {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 20px;
+    padding-top: 0 !important;
+    margin-top: 0 !important;
 }
+
 
 .bannergif {
     max-width: 100%;
     height: auto;
 }
 
+
 .cbe1-counter {
     margin-top: -80px;
 }
+
 
 .counter-number {
     font-weight: 700;
@@ -59,56 +76,70 @@
     margin: 0;
 }
 
+
 .counter-label {
     font-weight: 500;
     font-size: 20px;
     margin-top: 0;
 }
 
+
 /* Responsive styles */
 @media (max-width: 991px) {
     .cbe1-banner {
         height: auto !important;
         min-height: 100vh;
+        padding-top: 0 !important;
+        margin-top: -20px !important;  /* Negative margin for tablets */
     }
+
 
     .banner-title {
         font-size: 32px;
     }
 
+
     .cbe1-banner-heading h2 {
         font-size: 32px !important;
     }
+
 
     .cbe1-counter {
         margin-top: -40px;
         border-radius: 40px !important;
     }
 
+
     .cbe1-banner-rht {
-        padding-top: 20px !important;
+        padding-top: 0 !important;
     }
 }
 
+
 @media (max-width: 767px) {
     .cbe1-banner {
-        padding: 20px 0;
+        padding: 0 0 20px 0 !important;
         text-align: center;
         height: auto !important;
         min-height: auto;
+        margin-top: -15px !important;  /* Negative margin for mobile */
     }
+
 
     .cbe1-banner-heading h2 {
         font-size: 28px !important;
     }
 
+
     .banner-title {
         font-size: 28px;
     }
 
+
     .banner-description {
         font-size: 14px;
     }
+
 
     .cbe1-counter {
         margin-top: -30px;
@@ -117,13 +148,16 @@
         margin-right: 15px;
     }
 
+
     .counter-number {
         font-size: 24px;
     }
 
+
     .counter-label {
         font-size: 16px;
     }
+
 
     .cbe1-banner-rht {
         order: -1;
@@ -131,23 +165,29 @@
         padding-bottom: 20px;
     }
 
+
     .bannergif {
         max-width: 80%;
     }
 }
 
+
 @media (max-width: 575px) {
     .cbe1-banner {
-        padding: 15px 0;
+        padding: 0 0 15px 0 !important;
+        margin-top: -10px !important;  /* Negative margin for small mobile */
     }
+
 
     .cbe1-banner-heading h2 {
         font-size: 24px !important;
     }
 
+
     .banner-title {
         font-size: 24px;
     }
+
 
     .cbe1-counter {
         margin-top: -20px;
@@ -155,24 +195,29 @@
         padding: 15px !important;
     }
 
+
     .counter-item {
         margin-bottom: 15px;
     }
+
 
     .counter-number {
         font-size: 20px;
     }
 
+
     .counter-label {
         font-size: 14px;
     }
+
 
     .box__link.button-animation {
         padding: 10px 25px;
         font-size: 14px;
     }
 
+
     .bannergif {
         max-width: 90%;
     }
-} 
+}

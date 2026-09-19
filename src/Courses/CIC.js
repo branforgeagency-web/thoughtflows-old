@@ -16,7 +16,7 @@ function CIC() {
   }, [])
   return (
     <>
-      <Meta title=" CIC - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="CIC Course Training | ThoughtFlows Medical Coding Academy" description="Join the CIC course at ThoughtFlows with expert trainers, practical inpatient coding sessions, exam support, and placement guidance." canonical="https://www.thoughtflows.in/cic" />
 
       <CICBanner />
       <WhatisCIC />

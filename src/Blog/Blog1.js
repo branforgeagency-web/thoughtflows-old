@@ -1,12 +1,13 @@
 import { useEffect } from "react";
 import image from "./medic.jpg";
 import postImage1 from '../images/Blog/medical-banner-with-doctor-working-laptop.jpg';
+import Meta from "../Meta";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { FaCircle } from "react-icons/fa";
 export default function Blog1() {
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });    
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 
     const toggles = document.querySelectorAll(".faq-toggle");
 
@@ -184,7 +185,12 @@ export default function Blog1() {
 
   return (
     <>
-    <div
+      <Meta
+        title="What is Medical Coding? Complete Guide for Beginners | ThoughtFlows"
+        description="Discover what medical coding is, why it matters, and how to start your career. ThoughtFlows' complete beginner's guide covers ICD-10, CPT, certifications, and more."
+        canonical="https://www.thoughtflows.in/blog/what-is-medical-coding-complete-guide-for-beginners-thoughtflows"
+      />
+      <div
         style={{
           width: "auto",
           background: "linear-gradient(90deg,  #2E2C48 50%, #2E2C48 50%)",
@@ -194,16 +200,16 @@ export default function Blog1() {
         }}
         className="  lg:hidden "
       >
-        <h1
+        <h2
           style={{
             padding: "50px",
             color: "white",
             fontSize: "35px",
-            textAlign:"center"
+            textAlign: "center"
           }}
         >
           What is Medical Coding? A Beginner's Guide to Success
-        </h1>
+        </h2>
         <div
           style={{
             background: "white",
@@ -296,9 +302,9 @@ export default function Blog1() {
         <div className="w-full lg:w-3/4  bg-gray-100 p-4">
           <section id="introduction" className="max-w-4xl mx-auto md:px-6 py-12 -mb-24">
             {/* Heading */}
-            <h1 className="text-3xl md:text-4xl font-bold text-center line-height-1 -pt-10 mt-20 text-gray-900 mb-6" style={{color:"#1d4971"}}>
+            <h2 className="text-3xl md:text-4xl font-bold text-center line-height-1 -pt-10 mt-20 text-gray-900 mb-6" style={{ color: "#1d4971" }}>
               What is Medical Coding?
-            </h1>
+            </h2>
             <img src={postImage1} alt="postImage1" className="mx-auto block" />
             {/* Introductory Paragraph */}
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
@@ -320,8 +326,8 @@ export default function Blog1() {
             </p>
             <ul className="text-lg text-gray-700 list-disc leading-relaxed text-justify mb-6">
               <li >
-               <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">The doctor diagnoses the patient with a common viral fever and
-               prescribes medication.</p> 
+                <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">The doctor diagnoses the patient with a common viral fever and
+                  prescribes medication.</p>
               </li>
 
               <li>
@@ -329,7 +335,7 @@ export default function Blog1() {
                 <ul className="list-disc">
                   <li ><p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">ICD-10 Code: R50.9 (Fever, unspecified)</p></li>
                   <li>
-                   <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6" >CPT Code: 99213 (Office visit for an established patient)</p> 
+                    <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6" >CPT Code: 99213 (Office visit for an established patient)</p>
                   </li>
                 </ul>
               </li>
@@ -342,9 +348,9 @@ export default function Blog1() {
           </section>
           <section id="importance" className="max-w-4xl mx-auto md:px-6 py-12 -mb-24 ">
             {/* Heading */}
-            <h1 className="text-3xl md:text-4xl font-bold text-center mt-20 text-gray-900 mb-6  "  style={{color:"#1d4971"}}>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mt-20 text-gray-900 mb-6  " style={{ color: "#1d4971" }}>
               Why is Medical Coding Essential in Healthcare?
-            </h1>
+            </h2>
             {/* Introductory Paragraph */}
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
               Medical coding is the backbone of healthcare operations. Without
@@ -400,9 +406,9 @@ export default function Blog1() {
           </section>
           <section id="how-it-works" className="max-w-4xl mx-auto md:px-6 py-12 -mb-24 ">
             {/* Heading */}
-            <h1 className="text-3xl md:text-4xl font-bold text-center mt-20 text-gray-900 mb-6" style={{color:"#1d4971"}}>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mt-20 text-gray-900 mb-6" style={{ color: "#1d4971" }}>
               How Does Medical Coding Work? A Step-by-Step Guide
-            </h1>
+            </h2>
             {/* Introductory Paragraph */}
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
               Here’s how medical coding fits into the healthcare system:
@@ -464,9 +470,9 @@ export default function Blog1() {
           </section>
           <section id="types" className="max-w-4xl mx-auto md:px-6 py-12 -mb-24  ">
             {/* Heading */}
-            <h1 className="text-3xl md:text-4xl font-bold text-center mt-20 text-gray-900 mb-6" style={{color:"#1d4971"}}>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mt-20 text-gray-900 mb-6" style={{ color: "#1d4971" }}>
               Types of Medical Coding Systems Explained
-            </h1>
+            </h2>
             {/* Introductory Paragraph */}
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
               Medical coding relies on standardized systems. Let’s break them
@@ -551,9 +557,9 @@ export default function Blog1() {
           </section>
           <section id="skills" className="max-w-4xl mx-auto md:px-6 py-12 -mb-24  ">
             {/* Heading */}
-            <h1 className="text-3xl md:text-4xl font-bold text-center mt-20 text-gray-900 mb-6" style={{color:"#1d4971"}}>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mt-20 text-gray-900 mb-6" style={{ color: "#1d4971" }}>
               Who Can Become a Medical Coder? Key Skills Needed
-            </h1>
+            </h2>
             {/* Introductory Paragraph */}
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
               Medical coding is open to anyone with an interest in healthcare
@@ -624,9 +630,9 @@ export default function Blog1() {
           </section>
           <section id="careers" className="max-w-4xl mx-auto md:px-6 py-12 -mb-24  ">
             {/* Heading */}
-            <h1 className="text-3xl md:text-4xl mt-20 font-bold text-center text-gray-900 mb-6" style={{color:"#1d4971"}}>
+            <h2 className="text-3xl md:text-4xl mt-20 font-bold text-center text-gray-900 mb-6" style={{ color: "#1d4971" }}>
               Career Opportunities in Medical Coding
-            </h1>
+            </h2>
             <ol className="list-decimal">
               <li>
                 <b className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
@@ -720,9 +726,9 @@ export default function Blog1() {
           </section>
           <section id="certifications" className="max-w-4xl mx-auto md:px-6 py-12 -mb-24 ">
             {/* Heading */}
-            <h1 className="text-3xl md:text-4xl font-bold text-center mt-20 text-gray-900 mb-6" style={{color:"#1d4971"}}>
+            <h2 className="text-3xl md:text-4xl font-bold text-center mt-20 text-gray-900 mb-6" style={{ color: "#1d4971" }}>
               Certifications You Need to Succeed in Medical Coding
-            </h1>
+            </h2>
             {/* Introductory Paragraph */}
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
               Certifications validate your skills and make you stand out. Here
@@ -818,9 +824,9 @@ export default function Blog1() {
           </section>
           <section id="who-needs" className="max-w-4xl mx-auto md:px-6 py-12 -mb-24 ">
             {/* Heading */}
-            <h1 className="text-3xl md:text-4xl font-bold mt-20 text-center text-gray-900 mb-6" style={{color:"#1d4971"}}>
+            <h2 className="text-3xl md:text-4xl font-bold mt-20 text-center text-gray-900 mb-6" style={{ color: "#1d4971" }}>
               Who Needs Medical Coding?{" "}
-            </h1>
+            </h2>
             {/* Introductory Paragraph */}
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
               Medical coding is required across the entire healthcare system.
@@ -874,9 +880,9 @@ export default function Blog1() {
           </section>
           <section id="how-to-become" className="max-w-4xl mx-auto md:px-6 py-12 -mb-24 ">
             {/* Heading */}
-            <h1 className="text-3xl md:text-4xl font-bold mt-20 text-center text-gray-900 mb-6" style={{color:"#1d4971"}}>
+            <h2 className="text-3xl md:text-4xl font-bold mt-20 text-center text-gray-900 mb-6" style={{ color: "#1d4971" }}>
               How to Become a Medical Coder?{" "}
-            </h1>
+            </h2>
             {/* Introductory Paragraph */}
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
               Medical coding is an exciting and growing career, with a high
@@ -939,9 +945,9 @@ export default function Blog1() {
           </section>
           <section id="conclusion" className="max-w-4xl mx-auto md:px-6 py-12 -mb-24  ">
             {/* Heading */}
-            <h1 className="text-3xl md:text-4xl font-bold mt-20 text-center text-gray-900 mb-6" style={{color:"#1d4971"}}>
+            <h2 className="text-3xl md:text-4xl font-bold mt-20 text-center text-gray-900 mb-6" style={{ color: "#1d4971" }}>
               Conclusion: Your Future in Medical Coding{" "}
-            </h1>
+            </h2>
             {/* Introductory Paragraph */}
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
               Medical coding is a career with unlimited potential. Whether
@@ -988,7 +994,7 @@ export default function Blog1() {
           </section>
           <section id="faq" className=" px-0 max-w-4xl mx-auto md:px-6 py-12 ">
             <div className="faq-container p-0 ">
-              <h1 className="text-3xl md:text-4xl font-bold text-center line-height-1 -pt-10 mt-20 text-gray-900 mb-6" style={{color:"#1d4971"}}>Frequently Asked Questions</h1>
+              <h2 className="text-3xl md:text-4xl font-bold text-center line-height-1 -pt-10 mt-20 text-gray-900 mb-6" style={{ color: "#1d4971" }}>Frequently Asked Questions</h2>
               {faqData.map((faq) => (
                 <div key={faq.id} className="faq">
                   <h5 className="faq-title">{faq.ques}</h5>
@@ -1016,7 +1022,7 @@ export default function Blog1() {
                         </ul>
                       )}
                   </div>
-                  <button className="faq-toggle">
+                  <button className="faq-toggle" type="button" aria-label="Toggle frequently asked question answer" title="Expand or collapse this answer">
                     <i className="fa-solid fa-chevron-down"></i>
                     <i className="fa-solid fa-times"></i>
                   </button>
@@ -1027,12 +1033,12 @@ export default function Blog1() {
         </div>
         {/* Right Container - 25% Width (Sticky) */}
         <div className=" sm:w-full  lg:w-1/4  bg-white p-4 shadow-lg h-fit px-5   lg:sticky lg:top-[115px] ">
-          <h2 className="text-lg font-semibold" style={{color:"#1d4971"}} >Table of contents</h2>
+          <h2 className="text-lg font-semibold" style={{ color: "#1d4971" }} >Table of contents</h2>
           <ol className="list-decimal pl-5 space-y-2">
             {topics.map((topic) => (
               <li key={topic.id}>
                 <a
-                  href={`#${topic.id}`} style={{color:"#15aeb8"}}
+                  href={`#${topic.id}`} style={{ color: "#15aeb8" }}
                   className="text-blue-600 no-underline hover:underline"
                 >
                   {topic.title}

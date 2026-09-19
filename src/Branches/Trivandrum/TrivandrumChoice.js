@@ -1,63 +1,26 @@
 import React from 'react';
-import passion from '../../images/Branches/motivation.png'
-import loyalty from '../../images/Branches/customer-loyalty.png'
-import commitment from '../../images/Branches/deal.png'
-import responsibility from '../../images/Branches/norms.png'
-import consistency from '../../images/Branches/consistency.png'
-import creativity from '../../images/Branches/solution.png'
+import { Row, Col } from 'react-bootstrap';
 
-const TiruvandrumChoice= () => {
+const TiruvandrumChoice = () => {
     return (
-        <div className="cbe1-features-container" style={{paddingTop:"80px " , paddingBottom:"120px"}}>
-            <h2>Our Core Values</h2>
-            <div className="features-grid">
-                <div className="feature-card purple">
-                    <img src={passion} alt='passion' />
-                    <h3>Passion</h3>
+        <div className="bg-gray-50" style={{paddingTop:"60px", paddingBottom:"80px"}}>
+            <div className="max-w-7xl mx-auto px-6">
+                <h2 className="text-3xl lg:text-4xl font-bold text-center mb-10 text-primaryy">
+                    Medical Coding Training in Trivandrum
+                </h2>
+                <div className="space-y-6 text-lg text-gray-700 leading-relaxed text-justify">
                     <p>
-                        Our passion towards training makes us to provide quality training in Healthcare industry. It make us to prove as an No. 1 Academy in Medical Coding.
+                        Medical Coding has become one of the most sought after healthcare careers for Life Science, Pharmacy, Nursing, and Allied Health graduates. As healthcare services continue to expand across Kerala and India, the demand for trained Medical Coding professionals continues to grow.
                     </p>
-
-                </div>
-                <div className="feature-card dark">
-                    <img src={loyalty} alt='loyalty'/>
-                    <h3>Loyalty</h3>
                     <p>
-                        The loyalty of Thought Flows, is the answer you will get from our trainees.
+                        Students looking for a Medical Coding Course in Trivandrum often seek industry focused training, certification guidance, and career support. Our training program covers medical terminology, anatomy, physiology, ICD-10-CM, CPT, HCPCS, and CPC exam preparation to help learners develop industry-relevant skills.
                     </p>
-
-                </div>
-                <div className="feature-card purple">
-                    <img src={commitment} alt='commitment'/>
-                    <h3>Commitment</h3>
                     <p>
-                        Our commitment towards training is the result of our success
+                        Many aspiring healthcare professionals across Kerala choose Medical Coding as a career because of its growing demand and long term career opportunities.
                     </p>
-
-                </div>
-                <div className="feature-card dark">
-                    <img src={responsibility} alt='responsibility'/>
-                    <h3>Responsibility</h3>
                     <p>
-                        We are responsible for our commitment, innovation and technology excellence, We are responsible for our trainees and their Career growth.
+                        Students searching for a Medical Coding Course in Kerala often look for practical learning, certification focused preparation, and career development support. Through structured training and hands on learning, learners can prepare for opportunities in hospitals, healthcare BPOs, revenue cycle management companies, healthcare technology organizations, and global healthcare markets.
                     </p>
-
-                </div>
-                <div className="feature-card purple">
-                    <img src={consistency} alt='consistency'/>
-                    <h3>Consistency</h3>
-                    <p>
-                        We adhere to the policies, Quality, and innovation from years that makes us to build trust in our customers.
-                    </p>
-
-                </div>
-                <div className="feature-card dark">
-                    <img src={creativity} alt='creativity'/>
-                    <h3>Creativity</h3>
-                    <p>
-                        Our creative modules and ideas make our trainees every time to feel ease in understanding and remembering the concepts. We believe in Creativity to serve always with new things in THOUGHT FLOWS.
-                    </p>
-
                 </div>
             </div>
         </div>

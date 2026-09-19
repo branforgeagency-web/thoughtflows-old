@@ -4,7 +4,7 @@ import { Row, Col } from 'react-bootstrap'
 import cpc from "../../images/Course Images/CPC.jpg"
 import cpc1 from "../../images/Course Images/CPC Exam Overview.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
-import cdeo from "../../images/Course Images/CDEO.jpg"
+import cpcWebp from "../../images/courseimage/Thought flows Img 1 CPC.webp"
 
 const WhatisCPC = () => {
 
@@ -21,7 +21,7 @@ const WhatisCPC = () => {
                 <Col lg={1}></Col>
 
                 <Col lg={5}>
-                    <h1>Certified Professional Coder (CPC)</h1>
+                    <h2>Certified Professional Coder (CPC)</h2>
                     <h2>What is CPC?</h2>
                     <p style={{ color: '#505050' }}>
                         The
@@ -51,7 +51,7 @@ const WhatisCPC = () => {
 
             <section className=' container mx-auto mt-5 px-4'>
 
-                <div className='grid grid-cols-1 md:grid-cols-12 gap-10'>
+                <div className='grid grid-cols-1 md:grid-cols-12 gap-10 items-center justify-items-center'>
 
 
 
@@ -60,7 +60,7 @@ const WhatisCPC = () => {
 
                         <h2>What is CPC?</h2>
                         <p >
-                            The <strong>Certified Professional Coder (CPC)</strong> credential, issued by the <strong>AAPC (American Academy of Professional Coders)</strong>, is the gold standard in medical coding certifications. This certification validates your expertise in assigning accurate <strong>CPT (Current Procedural Terminology), ICD-10-CM (Diagnosis Codes), and HCPCS Level II</strong> codes.
+                            The Certified Professional Coder (CPC) credential, issued by the AAPC (American Academy of Professional Coders), is the gold standard in medical coding certifications. This certification validates your expertise in assigning accurate CPT (Current Procedural Terminology), ICD-10-CM (Diagnosis Codes), and HCPCS Level II codes.
                         </p>
 
 
@@ -72,9 +72,12 @@ const WhatisCPC = () => {
                     </div>
 
 
-                    <div className=' col-span-1 md:col-span-6  flex justify-center items-center'>
-                        <img src={cdeo} alt='leftimg' width={400}
-                            height={300} />
+                    <div className=' col-span-1 md:col-span-6 w-full flex justify-center'>
+                        <img
+                            src={cpcWebp}
+                            alt='leftimg'
+                            className='w-full h-[360px] md:h-[400px] object-contain'
+                        />
                     </div>
                 </div>
 
@@ -84,7 +87,7 @@ const WhatisCPC = () => {
 
                 <p>
 
-                    A <strong>Certified Professional Coder</strong> translates medical documentation into standardized codes used for billing and reporting purposes. CPC-certified professionals ensure accurate coding of services, which is critical for:
+                    A <span style={{ color: 'rgb(20 174 186)' }}>Certified Professional Coder</span> translates medical documentation into standardized codes used for billing and reporting purposes. CPC-certified professionals ensure accurate coding of services, which is critical for:
                 </p>
 
 

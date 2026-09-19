@@ -1,58 +1,30 @@
 import React from 'react';
-import surgeryImage from '../../images/Courses/cpcBanner.jpg';
-import rhia from "../../images/Course Images/What is RHIA Certification.jpg"
+import rhia from "../../images/courseimage/Health Information Administrator.webp"
+
 const WhatisRHIA = () => {
   return (
-    <div className="px-6 py-5 lg:py-10 lg:px-20 bg-gray-50 flex flex-col space-y-12">
-      {/* Heading Section */}
-      <h2 className="text-3xl lg:text-4xl font-semibold text-secondaryy text-center">
-      What is RHIA Certification?
-      </h2>
+    <section className="px-4 container mx-auto mt-5">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center justify-items-center">
+        {/* Text Section */}
+        <div className="col-span-1 md:col-span-6">
+          <h2 className="text-3xl lg:text-4xl font-semibold text-secondaryy mb-6">
+            What is RHIA Certification?
+          </h2>
+          <p className="text-gray-700 text-base lg:text-lg leading-relaxed">
+            Registered Health Information Administrator(RHIA) -certified professionals RHIAs are a critical link between care providers, payers, and patients. The RHIA has a comprehensive knowledge of medical, administrative, ethical, and legal requirements and standards related to healthcare delivery and privacy of protected patient information. RHIAs work in multiple settings in the healthcare industry, including hospitals, multispecialty clinics and physician practices, long-term care, mental health, and other ambulatory care settings. They can also work in non-patient care settings such as managed care and insurance companies, software vendors, consulting services, government agencies, education, and pharmaceutical companies.
+          </p>
+        </div>
 
-      {/* Main Content Section */}
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center space-y-10 lg:space-y-0 gap-10 mb-4">
         {/* Image Section */}
-        <div className="lg:w-1/2">
+        <div className="col-span-1 md:col-span-6 w-full flex justify-center">
           <img
             src={rhia}
-            alt="Surgery Coding"
-            className="w-full h-60 object-cover rounded-xl shadow-md"
+            alt="RHIA Certification"
+            className="w-full h-[360px] md:h-[400px] object-contain"
           />
         </div>
-
-        {/* Text Section */}
-        <div className="lg:w-1/2 space-y-6">
-          <p className="text-gray-700 text-base lg:text-md leading-relaxed ">
-          The Registered Health Information Administrator (RHIA) certification, offered by the American Health Information Management Association (AHIMA), is a credential that qualifies professionals to manage and oversee health information systems in various healthcare settings. RHIAs are integral to maintaining the accuracy, privacy, and security of patient data while ensuring compliance with healthcare regulations. They are trained to work with health information technologies and optimize the flow of information within healthcare organizations.
-          </p>
-        </div>
       </div>
-
-      {/* Bento Box Section */}
-      {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div className="bg-primaryy rounded-lg shadow-md p-6">
-          <h3 className="text-2xl font-semibold text-white mb-4">Medical Billing</h3>
-          <p className="text-white text-base leading-relaxed">
-            Ensuring accurate reimbursement from insurance providers.
-          </p>
-        </div>
-
-        <div className="bg-primaryy rounded-lg shadow-md p-6">
-          <h3 className="text-2xl font-semibold text-white mb-4">Compliance</h3>
-          <p className="text-white text-base leading-relaxed">
-            Meeting federal regulations and payer requirements.
-          </p>
-        </div>
-
-        <div className="bg-primaryy rounded-lg shadow-md p-6">
-          <h3 className="text-2xl font-semibold text-white mb-4">Data Reporting</h3>
-          <p className="text-white text-base leading-relaxed">
-            Contributing to accurate health data for research and quality improvement.
-          </p>
-        </div>
-      </div> */}
-
-    </div>
+    </section>
   );
 };
 

@@ -1,4 +1,4 @@
-import React,{useEffect}from 'react'
+import React, { useEffect } from 'react'
 
 import Cbe1Banner from './CBE-1/Cbe1Banner'
 import Cbe1About from './CBE-1/Cbe1About'
@@ -11,16 +11,16 @@ import Meta from '../Meta';
 
 const CbeBranch1 = () => {
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
- },[])
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [])
   return (
     <>
-                      <Meta title="Saravanampatti - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="Medical Coding Course in Coimbatore | ThoughtFlows" description="Enroll in the best medical coding course in Coimbatore at ThoughtFlows — expert trainers, real projects, and placement support for certified career success." canonical="https://www.thoughtflows.in/Top-Medical-Coding-Training-Saravanampatti" />
 
       <Cbe1Banner />
       <Cbe1About />
       <Cbe1Core />
-      <Cbe1Contents/>
+      <Cbe1Contents />
       <Cbe1JoinTf />
       <Cbe1Carousel />
       <Cbe1Testi />

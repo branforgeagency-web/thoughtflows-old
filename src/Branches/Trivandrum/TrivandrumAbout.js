@@ -13,9 +13,14 @@ function TrivandrumAbout() {
 
       <Col lg={1}></Col>
       <Col lg={5} className="tirupathi-text-content">
-        <h2 className="tirupathi-title my-5">About Us</h2>
+        <h2 className="tirupathi-title my-5" style={{lineHeight: "1.3"}}>Why Choose ThoughtFlows Medical Coding Academy in Trivandrum?</h2>
         <div className="tirupathi-list">
-          <p> Thoughtflows Medical Coding Academy, situated in the vibrant city of Trivandrum, stands as a beacon of excellence in medical coding education. Our academy is dedicated to nurturing the next generation of skilled and knowledgeable medical coding professionals. With a unique blend of cutting-edge training methodologies, experienced faculty, and state-of-the-art facilities, we are committed to providing an exceptional learning experience to our students.</p>
+          <p style={{fontSize: "16px", lineHeight: "28px", textAlign: "justify", marginBottom: "15px"}}>
+            ThoughtFlows is committed to helping students build successful careers in the healthcare industry through industry focused training and career development support. With 35,000+ students trained and 25,000+ career placements and transitions supported, the academy has established itself as a trusted name in Medical Coding education.
+          </p>
+          <p style={{fontSize: "16px", lineHeight: "28px", textAlign: "justify"}}>
+            Students benefit from experienced trainers, practical coding sessions, CPC certification guidance, interview preparation, flexible learning options, and placement focused training. Many students looking for Medical Coding Training in Kerala choose ThoughtFlows because of its structured learning approach, career focused support, and commitment to student success. Our training methodology helps learners develop the knowledge and confidence required to pursue opportunities in the healthcare industry.
+          </p>
         </div>
       </Col>
       <Col lg={1}></Col>

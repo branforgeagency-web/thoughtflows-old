@@ -1,4 +1,4 @@
-import React,{useEffect}from 'react'
+import React, { useEffect } from 'react'
 
 import Meta from '../Meta';
 import RhiaBanner from './RHIA folder/RhiaBanner';
@@ -16,23 +16,23 @@ import RhiaPrepareExam from './RHIA folder/RhiaPrepareExam';
 
 const RHIA = () => {
     useEffect(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
-     },[])
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }, [])
     return (
         <>
 
-            <Meta title="RHIA Training | Medical Coding Course | Thoughtflows Academy" description="Our RHIA training course provides you with in-depth knowledge and expert support to successfully achieve certification in health information management." />
+            <Meta title="RHIA Certification Classes for Health Information Careers" description="Enroll in RHIA certification classes at ThoughtFlows with expert instruction, health information management practice, and career support." canonical="https://www.thoughtflows.in/rhia" />
             <RhiaBanner />
             <WhatisRHIA />
             <AboutRhia />
             <RHIAWork />
-            <RHIABenefits/>
-            <RhiaSkills/>
-            <RhiaPursue/>
-            <RhiaObjectives/>
+            <RHIABenefits />
+            <RhiaSkills />
+            <RhiaPursue />
+            <RhiaObjectives />
             <RhiaOutline />
-            <RhiaPrepareExam/>
-            <RhiaFAQ/>
+            <RhiaPrepareExam />
+            <RhiaFAQ />
         </>
     )
 }

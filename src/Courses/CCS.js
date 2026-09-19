@@ -1,4 +1,4 @@
-import React,{useEffect}from 'react'
+import React, { useEffect } from 'react'
 import CCSBanner from './CCS/CCSBanner'
 import Meta from '../Meta';
 import WhatisCCS from './CCS/WhatisCCS';
@@ -8,11 +8,11 @@ import CcsSpecialist from './CCS/CcsSpecialist';
 
 const CCS = () => {
     useEffect(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
-     },[])
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }, [])
     return (
         <>
-            <Meta title="CCS Training | Medical Coding Course | Thoughtflows Academy" description="Our CCS training course includes everything you need to know to become a certified medical coder from expert instructors." />
+            <Meta title="Certified Coding Specialist (CCS) Course Training | ThoughtFlows" description="Certified Coding Specialist (CCS) training at ThoughtFlows with expert guidance, real coding practice, exam preparation, and career support." canonical="https://www.thoughtflows.in/ccs" />
             <CCSBanner />
             <WhatisCCS />
             <CCSObjective />

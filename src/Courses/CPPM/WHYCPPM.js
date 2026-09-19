@@ -65,7 +65,7 @@ const cardData = [
 const WHYCRC = () => {
     return (
         <>
-            <div><h2 className=" px-4 text-center mt-3">Roles of a CDEI</h2></div>
+            <div><h2 className=" px-4 text-center mt-3">Roles of a CPPM</h2></div>
 
             <Row className="why-cpc px-4" xs={1} md={3}>
                 {cardData.map((card) => (

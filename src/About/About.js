@@ -1,5 +1,5 @@
 // About.js
-import React,{useEffect}from 'react'
+import React, { useEffect } from 'react'
 import AboutBanner from './AboutBanner';
 import WeAre from './WeAre';
 import WeEmpower from './WeEmpower';
@@ -12,12 +12,12 @@ import Meta from '../Meta';
 import { motion } from 'framer-motion';
 const About = () => {
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
- },[])
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [])
   return (
     <>
-      <Meta title="About Us - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
-      
+      <Meta title="Medical Coding Academy – About ThoughtFlows" description="Learn about ThoughtFlows, a leading medical coding academy in India offering expert training, certification support, and career growth for aspiring coders." canonical="https://www.thoughtflows.in/about" />
+
       <div style={{ overflow: 'hidden' }}>
         <motion.div
           initial={{ opacity: 0 }}
@@ -27,12 +27,12 @@ const About = () => {
           <AboutBanner />
         </motion.div>
 
-        <motion.section 
+        <motion.section
           id="we-are"
           initial={{ x: -50, opacity: 0 }}
           whileInView={{ x: 0, opacity: 1 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ 
+          transition={{
             duration: 0.7,
             ease: "easeOut"
           }}

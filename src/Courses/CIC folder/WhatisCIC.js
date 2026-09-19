@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import rightimg from '../../images/Group710.png'
 import { Row, Col } from 'react-bootstrap'
 import { FaArrowRightLong } from "react-icons/fa6";
-import cic from "../../images/Course Images/CIC.jpg"
+import cicWebp from "../../images/courseimage/Thought flows Img 2 CIC.webp"
 import cic1 from "../../images/Course Images/CIC Exam Overview.jpg"
 function WhatisCIC() {
 
@@ -34,7 +34,7 @@ function WhatisCIC() {
 
       <section className=' container mx-auto px-4 mt-5'>
 
-        <div className='grid grid-cols-1 md:grid-cols-12 gap-10 items-center '>
+        <div className='grid grid-cols-1 md:grid-cols-12 gap-10 items-center justify-items-center '>
 
 
 
@@ -56,9 +56,12 @@ function WhatisCIC() {
           </div>
 
 
-          <div className=' col-span-1 md:col-span-6  '>
-            <img src={cic} alt='leftimg' width={500}
-              height={400} />
+          <div className=' col-span-1 md:col-span-6 w-full flex justify-center'>
+            <img
+              src={cicWebp}
+              alt='leftimg'
+              className='w-full h-[360px] md:h-[400px] object-contain'
+            />
           </div>
         </div>
 
@@ -113,10 +116,10 @@ function WhatisCIC() {
               <div className="pl-3 flex flex-col">
                 <h2 className="mb-3">CIC Exam Overview</h2>
                 <p>
-                  <strong>Duration:</strong> 5 hour
+                  <strong>Duration:</strong> 4 hour
                 </p>
                 <p>
-                  <strong>Format:</strong> 97 MCQ
+                  <strong>Format:</strong> 100 MARKS
                 </p>
                 <p>
                   <strong>Pass Requirement:</strong> 70% or higher

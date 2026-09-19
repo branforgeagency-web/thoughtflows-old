@@ -1,4 +1,4 @@
-import React,{useEffect}from 'react'
+import React, { useEffect } from 'react'
 
 import RadioBanner from './Radiology/RadioBanner'
 import AboutRadiology from './Radiology/AboutRadiology'
@@ -13,11 +13,11 @@ import Meta from '../Meta';
 
 function Radio() {
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
- },[])
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [])
   return (
     <>
-          <Meta title="Radiology - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="Certified Radiology Coder Course | ThoughtFlows Academy" description="Enroll in the Certified Radiology Coder course at ThoughtFlows with expert training, radiology coding practice, and career-focused support." canonical="https://www.thoughtflows.in/radiology" />
 
       <RadioBanner />
       <WhatIsRadiology />

@@ -1,4 +1,4 @@
-import React,{useEffect}from 'react'
+import React, { useEffect } from 'react'
 
 import Meta from '../Meta';
 import RhitBanner from './RHIT folder/RhitBanner';
@@ -16,22 +16,22 @@ import RhitPrepareExam from './RHIT folder/RhitPrepareExam';
 
 const RHIT = () => {
     useEffect(() => {
-        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
-     },[])
+        window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+    }, [])
     return (
         <>
-            <Meta title="RHIT Training | Medical Coding Course | Thoughtflows Academy" description="Our RHIA training course provides you with in-depth knowledge and expert support to successfully achieve certification in health information management." />
-           < RhitBanner/>
+            <Meta title="RHIT Course Training for Health Information Careers" description="Join RHIT course training at ThoughtFlows with expert instruction, health information technology practice, and career support." canonical="https://www.thoughtflows.in/rhit" />
+            < RhitBanner />
             <WhatisRHIT />
             <AboutRhit />
             <RHITWork />
-            <RHITBenefits/>
-            <RhitSkills/>
-            <RhitPursue/>
+            <RHITBenefits />
+            <RhitSkills />
+            <RhitPursue />
             <RhitOutline />
-            <RhitObjectives/>
-            <RhitPrepareExam/>
-            <RhitFAQ/>
+            <RhitObjectives />
+            <RhitPrepareExam />
+            <RhitFAQ />
         </>
     )
 }

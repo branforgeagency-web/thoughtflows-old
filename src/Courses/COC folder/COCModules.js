@@ -57,9 +57,9 @@ const COCModules = () => {
 
     return (
         <div className=" container mx-auto  py-10 px-4 mb-12">
-            <h1 className="text-3xl font-bold text-center my-8">
-                CIC Training Modules
-            </h1>
+            <h2 className="text-3xl font-bold text-center my-8">
+                COC Training Modules
+            </h2>
             <div className="grid grid-cols-1  sm:grid-cols-1 lg:grid-cols-2 gap-6 ">
                 {modules.map((module, index) => (
                     <div

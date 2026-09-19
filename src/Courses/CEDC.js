@@ -11,12 +11,12 @@ import CEDCFAQ from './CEDC/CEDCFAQ'
 import Meta from '../Meta';
 
 const CEDC = () => {
-    useEffect(() => {
-      window.scrollTo({ top: 0, behavior: 'auto' });
-    }, [])
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, [])
   return (
     <>
-          <Meta title="CEDC - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="CEDC Course Training | ThoughtFlows Medical Coding Academy" description="Enroll in CEDC course at ThoughtFlows with expert trainers, practical documentation training, exam guidance, and career support." canonical="https://www.thoughtflows.in/cedc" />
 
       <CEDCBanner />
       <WhatCEDC />

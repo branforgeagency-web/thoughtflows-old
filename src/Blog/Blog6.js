@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import image from "./medic.jpg";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import postImage6 from '../images/Blog/manager-preparing-store-reopening.jpg';
+import Meta from "../Meta";
 
 import { FaCircle } from "react-icons/fa";
 export default function Blog6() {
@@ -30,6 +31,11 @@ export default function Blog6() {
 
   return (
     <>
+      <Meta
+        title="The Role of Medical Coders in Modern Healthcare | ThoughtFlows"
+        description="Discover the essential role of medical coders in modern healthcare — from billing and compliance to patient care and data reporting. ThoughtFlows explains it all."
+        canonical="https://www.thoughtflows.in/blog/the-role-of-medical-coders-in-modern-healthcare-essential-insights"
+      />
       <div
         style={{
           width: "auto",
@@ -40,7 +46,7 @@ export default function Blog6() {
         }}
         className="  lg:hidden "
       >
-        <h1
+        <h2
           style={{
             padding: "50px",
             color: "white",
@@ -49,7 +55,7 @@ export default function Blog6() {
           }}
         >
           The Role of Medical Coders in Modern Healthcare
-        </h1>
+        </h2>
         <div
           style={{
             background: "white",
@@ -143,12 +149,12 @@ export default function Blog6() {
             className="max-w-4xl mx-auto md:px-6 py-12 -mb-24"
           >
             {/* Heading */}
-            <h1
+            <h2
               style={{ color: "#1d4971" }}
               className="text-3xl md:text-4xl font-bold text-center line-height-1 -pt-10 mt-20 text-gray-900 mb-6"
             >
               Introduction to Medical Coding{" "}
-            </h1>
+            </h2>
             <img src={postImage6} alt="postImage6" className="mx-auto block" />
             {/* Introductory Paragraph */}
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
@@ -176,12 +182,12 @@ export default function Blog6() {
             className="max-w-4xl mx-auto md:px-6 py-12 -mb-24 "
           >
             {/* Heading */}
-            <h1
+            <h2
               style={{ color: "#1d4971" }}
               className="text-3xl md:text-4xl font-bold text-center mt-20 text-gray-900 mb-6"
             >
               The Responsibilities of Medical Coders{" "}
-            </h1>
+            </h2>
             {/* Introductory Paragraph */}
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
               Medical coders are responsible for a range of tasks that are
@@ -260,12 +266,12 @@ export default function Blog6() {
             className="max-w-4xl mx-auto md:px-6 py-12 -mb-24 "
           >
             {/* Heading */}
-            <h1
+            <h2
               style={{ color: "#1d4971" }}
               className="text-3xl md:text-4xl font-bold text-center mt-20 text-gray-900 mb-6"
             >
               The Skills and Training Required for Medical Coders{" "}
-            </h1>
+            </h2>
             {/* Introductory Paragraph */}
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
               Becoming a medical coder requires a unique set of skills and
@@ -367,12 +373,12 @@ export default function Blog6() {
             className="max-w-4xl mx-auto md:px-6 py-12 -mb-24  "
           >
             {/* Heading */}
-            <h1
+            <h2
               style={{ color: "#1d4971" }}
               className="text-3xl md:text-4xl font-bold text-center mt-20 text-gray-900 mb-6"
             >
               Impact of Medical Coders on Healthcare Systems{" "}
-            </h1>
+            </h2>
             {/* Introductory Paragraph */}
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
               Medical coders play a pivotal role in various aspects of
@@ -435,12 +441,12 @@ export default function Blog6() {
             className="max-w-4xl mx-auto md:px-6 py-12 -mb-24  "
           >
             {/* Heading */}
-            <h1
+            <h2
               style={{ color: "#1d4971" }}
               className="text-3xl md:text-4xl font-bold text-center mt-20 text-gray-900 mb-6"
             >
               The Evolving Role of Medical Coders{" "}
-            </h1>
+            </h2>
             {/* Introductory Paragraph */}
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
               The role of medical coders has evolved significantly over the past
@@ -493,12 +499,12 @@ export default function Blog6() {
             className="max-w-4xl mx-auto md:px-6 py-12 -mb-24  "
           >
             {/* Heading */}
-            <h1
+            <h2
               style={{ color: "#1d4971" }}
               className="text-3xl md:text-4xl mt-20 font-bold text-center text-gray-900 mb-6"
             >
               How Medical Coders Contribute to Patient Care{" "}
-            </h1>
+            </h2>
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
               Although medical coders do not directly interact with patients,
               their work has a significant impact on patient care. Here’s how:
@@ -543,12 +549,12 @@ export default function Blog6() {
             className="max-w-4xl mx-auto md:px-6 py-12 -mb-24  "
           >
             {/* Heading */}
-            <h1
+            <h2
               style={{ color: "#1d4971" }}
               className="text-3xl md:text-4xl mt-20 font-bold text-center text-gray-900 mb-6"
             >
               The Future of Medical Coding in Healthcare
-            </h1>
+            </h2>
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
               The future of medical coding is tied to several trends, including:{" "}
             </p>
@@ -590,12 +596,12 @@ export default function Blog6() {
             className="max-w-4xl mx-auto md:px-6 py-12   "
           >
             {/* Heading */}
-            <h1
+            <h2
               style={{ color: "#1d4971" }}
               className="text-3xl md:text-4xl font-bold mt-20 text-center text-gray-900 mb-6"
             >
               Conclusion{" "}
-            </h1>
+            </h2>
             {/* Introductory Paragraph */}
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
               Medical coders are an integral part of the healthcare system. They

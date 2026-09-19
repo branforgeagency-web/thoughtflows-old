@@ -12,12 +12,12 @@ import Meta from '../Meta';
 
 
 const CPPM = () => {
-    useEffect(() => {
-      window.scrollTo({ top: 0, behavior: 'auto' });
-    }, [])
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, [])
   return (
     <>
-          <Meta title="CPPM - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="CPPM Course Training | ThoughtFlows Medical Coding Academy" description="Enroll in the CPPM course at ThoughtFlows to learn professional practice management with expert training, real-world scenarios, and career support." canonical="https://www.thoughtflows.in/cppm" />
 
       <CPPMBanner />
       <WhatCPPM />

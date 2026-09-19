@@ -11,12 +11,12 @@ import CDEIFAQ from './CDEI/CDEIFAQ'
 import Meta from '../Meta';
 
 const CDEI = () => {
-    useEffect(() => {
-      window.scrollTo({ top: 0, behavior: 'auto' });
-    }, [])
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, [])
   return (
     <>
-          <Meta title="CDEI - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="CDEI Course Training | ThoughtFlows Medical Coding Academy" description="Join the CDEI course at ThoughtFlows to master inpatient documentation with expert guidance, practical learning, and career support." canonical="https://www.thoughtflows.in/cdei" />
 
       <CDEIBanner />
       <WhatCDEI />

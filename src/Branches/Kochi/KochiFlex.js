@@ -7,16 +7,9 @@ function KochiFlex() {
     
     <div className="parallax-container">
       <div className="content-kochi" >
-        <h2>
-        Journey of Our Medical Coding Students
-        </h2>
-        <p >At Thoughtflows Medical Coding Academy, we take immense pride in the achievements of our students. The success stories of our past students are a testament to the effectiveness of our training programs and the impact of Thoughtflows Medical Coding Academy in shaping successful medical coding professionals.
-        </p>
-        <p>Through student testimonials and success stories, we celebrate the accomplishments of our alumni and showcase the diverse career paths that open up to them upon completion of their training. Their inspiring journeys serve as a source of motivation and encouragement for aspiring medical coders, highlighting the rewarding and fulfilling career prospects in the healthcare industry.
-        </p>
-        <p>
-        The success stories of our students reflect the transformative power of our education and the opportunities that await our graduates. From overcoming challenges to achieving milestones, our alumni serve as role models, inspiring the next generation of medical coding professionals.
-        </p>
+        <h2>Why ThoughtFlows is Considered Among the Best Medical Coding Institutes in Kerala</h2>
+        <p>Students searching for the best Medical Coding institute in Kerala often compare factors such as training quality, certification guidance, practical learning opportunities, trainer expertise, and career support before making their decision.</p>
+        <p>At ThoughtFlows, we focus on helping students build strong Medical Coding knowledge through structured learning, practical exposure, CPC certification guidance, and placement-focused support. Our goal is not just to provide training, but to help learners develop the skills and confidence needed for long-term career growth in the healthcare industry.</p>
      </div>
     </div>
     

@@ -1,4 +1,4 @@
-import React,{useEffect}from 'react'
+import React, { useEffect } from 'react'
 
 import KochiBanner from "./Kochi/KochiBanner";
 import KochiAbout from "./Kochi/KochiAbout";
@@ -10,15 +10,16 @@ import KochiStudents from "./Kochi/KochiStudents";
 import KochiOnline from "./Kochi/KochiOnline";
 import KochiOnline2 from "./Kochi/KochiOnline2";
 import Meta from '../Meta';
-import Cbe1Testi from './CBE-1/cbe1Testi';
+import KochiTestimonial from './Kochi/KochiTestimonial';
+import KochiFAQ from './Kochi/KochiFAQ';
 
 function Kochi() {
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
- },[])
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [])
   return (
     <>
-                      <Meta title="Kochi - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="Medical Coding Course in Kochi | ThoughtFlows Academy" description="ThoughtFlows Medical Coding Academy in Kochi — expert-led medical coding course in Kochi with practical training and placement assistance." canonical="https://www.thoughtflows.in/Medical-Coding-Academy-Kochi" />
 
       <KochiBanner />
       <KochiAbout />
@@ -29,7 +30,8 @@ function Kochi() {
       <KochiOnline2 />
       <KochiOnline />
       {/* <KochiStudents /> */}
-      <Cbe1Testi/>
+      <KochiFAQ />
+      <KochiTestimonial />
     </>
   );
 }

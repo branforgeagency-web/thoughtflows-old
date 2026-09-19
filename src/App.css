@@ -7,9 +7,9 @@
 :root {
   --primary-blue: #097D8A !important;
   --darkblue: #073766 !important;
-  --primary-font: 'League Spartan' !important;
-  --secondary-font: 'Reem Kufi' !important;
-  --para-font: "Poppins" !important;
+  --primary-font: 'Outfit', sans-serif !important;
+  --secondary-font: 'Outfit', sans-serif !important;
+  --para-font: 'Outfit', sans-serif !important;
   --btn-bg: #15AEBB !important;
   --nt-btn-color: #fff;
   --accent-color: #15AEBB;
@@ -18,13 +18,16 @@
     0 0 100px #15AEBB;
   --small-heading: #097D8A;
 }
+
 /* .carousel-control-next-icon {
   background-image: url("./images/chevron.png") !important;
 } */
 .star {
   display: inline-block;
-  font-size: 30px; /* Adjust the size as needed */
-  color: #ffcc00; /* Gold color for the star */
+  font-size: 30px;
+  /* Adjust the size as needed */
+  color: #ffcc00;
+  /* Gold color for the star */
   animation: glowing 1.5s infinite alternate;
 }
 
@@ -35,15 +38,18 @@
     text-shadow: 0 0 0px #ffcc00, 0 0 4px #ffcc00, 0 0 6px #ffcc00, 0 0 8px #ffcc00;
     opacity: 0.8;
   }
+
   50% {
     text-shadow: 0 0 4px #ffcc00, 0 0 6px #ffcc00, 0 0 7px #ffcc00, 0 0 9px #ffcc00;
     opacity: 1;
   }
+
   100% {
     text-shadow: 0 0 0px #ffcc00, 0 0 4px #ffcc00, 0 0 6px #ffcc00, 0 0 8px #ffcc00;
     opacity: 0.8;
   }
 }
+
 /* App.css */
 
 .popup-overlay {
@@ -52,7 +58,8 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Dark background */
+  background-color: rgba(0, 0, 0, 0.5);
+  /* Dark background */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -97,6 +104,68 @@
   cursor: pointer;
   border-radius: 5px;
   transition: background-color 0.3s ease;
+}
+
+/* Mobile Course Menu Styles */
+.mobile-submenu {
+  max-height: 400px;
+  overflow-y: auto;
+  padding: 15px;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-submenu::-webkit-scrollbar {
+  width: 4px;
+}
+
+.mobile-submenu::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 2px;
+}
+
+.mobile-submenu::-webkit-scrollbar-thumb {
+  background: #06b6d4;
+  border-radius: 2px;
+}
+
+.mobile-submenu::-webkit-scrollbar-thumb:hover {
+  background: #0891b2;
+}
+
+/* Responsive course display */
+@media (max-width: 1024px) {
+  .mobile-submenu {
+    max-height: 350px;
+    padding: 12px;
+  }
+}
+
+@media (max-width: 768px) {
+  .mobile-submenu {
+    max-height: 300px;
+    padding: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .mobile-submenu {
+    max-height: 250px;
+    padding: 8px;
+  }
+}
+
+/* Tablet specific improvements */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .mobile-submenu {
+    max-height: 400px;
+    padding: 15px;
+  }
+
+  .mobile-submenu div[style*="maxWidth: 200px"] {
+    max-width: 180px !important;
+  }
 }
 
 .popup .close-bt:hover {
@@ -149,6 +218,23 @@ body {
   overflow-x: hidden;
 }
 
+/* Prevent horizontal scrolling without affecting mobile menu */
+@media (max-width: 1024px) {
+  body {
+    overflow-x: hidden;
+    max-width: 100vw;
+  }
+
+  /* Only apply to main content containers, not navigation */
+  .container,
+  .get,
+  .get-1,
+  .get-2 {
+    max-width: 100vw;
+    overflow-x: hidden;
+  }
+}
+
 .menu {
   display: flex;
   list-style: none;
@@ -173,23 +259,28 @@ body {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: center  !important;
+  justify-content: center !important;
 }
 
 .logo img {
-  height: 70px;
-  width: 300px;
+  width: 250px;
+  height: auto;
+  object-fit: contain;
 }
 
 .menu {
   list-style: none;
   margin: 0;
   padding: 0;
-  display: flex;
+  display: flex !important;
+  gap: 30px !important;
+  justify-content: flex-start !important;
 }
 
 .menu li {
-  margin: 25px;
+  margin: 10 !important;
+  padding: 30 !important;
+  width: auto !important;
   color: #0b3a66;
   font-family: var(--secondary-font);
   font-weight: 400;
@@ -197,18 +288,23 @@ body {
 }
 
 .menu li a {
-  color: #A8A8A8;
+  color: #06b6d4;
+  /* cyan-500 */
   text-decoration: none;
   display: block;
-  color: #0b3a66;
+
 }
 
-.menu li a:hover {
-  color: #093769;
+.menu li>div {
+  color: #06b6d4;
+  /* ensure non-link menu items like Branches are cyan */
 }
 
+.menu li>div:hover,
+.menu li a:hover,
 .menu li a:active {
-  color: #093769;
+  color: #06b6d4;
+  /* keep cyan-500 on hover/active */
 }
 
 .contact-info p {
@@ -468,9 +564,11 @@ body {
 
 .slideshowDot.active {
   background-color: #6a0dad;
-};lj9n m
+}
 
-.small-column {
+;
+
+lj9n m .small-column {
   background-color: #FDE441;
   padding: 8px 10px 8px 25px;
   border-radius: 47px;
@@ -1382,55 +1480,82 @@ body {
 }
 
 /* Mobile adjustments */
-@media screen and (min-width: 1024px)   {
+@media screen and (min-width: 1024px) {
   .on-kochi {
-flex-direction: row !important;
+    flex-direction: row !important;
   }
+
   .trivandrum-abt-1 {
     flex-direction: row !important;
     flex-wrap: nowrap !important;
   }
 }
-@media screen and (min-width: 768px)   {
+
+@media screen and (min-width: 768px) {
   .stick-k {
     flex-direction: row !important;
   }
+
   .brand-tri {
     margin-left: 80px !important;
   }
-  .li-hide{
+
+  .li-hide {
     display: none;
   }
+
   .multiple-dropdown-sub {
     display: none;
   }
-  
+
 }
+
 @media screen and (max-width: 768px) {
   .navbar {
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    justify-content: space-around  !important;
+    justify-content: space-around !important;
   }
+
   .Map-img {
     height: 230px !important;
     width: 150px !important;
     padding: 10px;
   }
+
+  /* Mobile popup scrollability */
+  .popup-overlay {
+    padding: 10px;
+    align-items: flex-start;
+    overflow-y: auto;
+  }
+
+  .popup {
+    margin: 20px 0;
+    max-height: calc(100vh - 40px);
+    overflow-y: auto;
+    width: 100%;
+    max-width: 500px;
+  }
+
   .multiple-dropdown {
     display: none;
   }
+
   .brand-tri {
     margin-left: 30px !important;
   }
+
   .slide p {
     padding: 0;
   }
+
   ul.menu.open {
     overflow-y: scroll !important;
-    
+
   }
+
   .nav-btn {
     display: none;
   }
@@ -1759,7 +1884,7 @@ flex-direction: row !important;
 }
 
 /* .interTirupathiT1 { */
-  /* width: 350px;
+/* width: 350px;
   margin-left: 50px; */
 /* } */
 
@@ -2893,13 +3018,14 @@ h1 {
   margin-top: -45px;
 }
 
-.hyderabad-flex{
+.hyderabad-flex {
   flex-wrap: wrap;
 }
+
 .trivandrum-abt-1 {
   background-color: white;
   display: flex;
-  flex-direction: column-reverse ;
+  flex-direction: column-reverse;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
@@ -3213,11 +3339,11 @@ h1 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   text-align: center;
   margin-bottom: 30px;
-  color:#fff;
+  color: #fff;
 }
 
 .benefits-section {
-  padding:0px 0px 70px 0px;
+  padding: 0px 0px 70px 0px;
   text-align: center;
 }
 
@@ -3230,7 +3356,7 @@ h1 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 20px;
- 
+
 }
 
 .benefit-item {
@@ -3253,29 +3379,34 @@ h1 {
 
 
 @media (max-width: 768px) {
-  
+
   .enroll1-hyd {
     flex-direction: column;
     align-items: center;
   }
-  .hyderimglap{
+
+  .hyderimglap {
     width: 250px !important;
     height: 200px !important;
   }
+
   .col-md-4 {
     flex: 0 0 100%;
     max-width: 100%;
   }
+
   .stick-hyd {
     flex-direction: column;
-}
-.static-trichy{
-  width: 100%;
-  margin: 0 !important;
-}
-.hyderimg {
-  margin: 0 !important;
-}
+  }
+
+  .static-trichy {
+    width: 100%;
+    margin: 0 !important;
+  }
+
+  .hyderimg {
+    margin: 0 !important;
+  }
 }
 
 
@@ -3284,10 +3415,12 @@ h1 {
     flex: 0 0 100%;
     max-width: 100%;
   }
+
   .get {
     flex-direction: column;
-    padding: 30px !important ;
+    padding: 30px !important;
   }
+
   .get-1 {
     padding: 10px !important;
   }
@@ -3322,19 +3455,23 @@ h1 {
   }
 }
 
-@media (max-width: 767px) {
+@media (max-width: 1024px) {
   .f-item-1 {
     flex-grow: 1;
   }
+
   .container {
     max-width: 100%;
   }
-  .popup{
+
+  .popup {
     width: 80%;
   }
-  .btn-hide{
+
+  .btn-hide {
     display: none;
   }
+
   header {
     width: 100% !important;
   }
@@ -3348,8 +3485,9 @@ h1 {
   }
 
   .logo img {
-    height: 100%;
-    width: 300px;
+    width: 200px;
+    height: auto;
+    object-fit: contain;
   }
 
   .main-footer {
@@ -3361,7 +3499,7 @@ h1 {
   }
 
   .menu {
-    display: none;
+    display: none !important;
     flex-direction: column;
     background-color: white;
     position: absolute;
@@ -3373,7 +3511,7 @@ h1 {
   }
 
   .menu.open {
-    display: flex;
+    display: flex !important;
   }
 
   .hamburger {
@@ -3391,7 +3529,7 @@ h1 {
     background-color: white;
     border-bottom: 1px solid #ddd;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
-    overflow-y: auto; 
+    overflow-y: auto;
   }
 
   .submenu-item {
@@ -3451,8 +3589,9 @@ h1 {
 /* Desktop-only header layout adjustments */
 @media (min-width: 1024px) {
   .navbar {
-    justify-content: flex-center !important; /* push menu to the right */
-    padding: 20px 40px;
+    justify-content: flex-center !important;
+    /* push menu to the right */
+    padding: 5px 40px;
     position: relative;
   }
 
@@ -3460,8 +3599,9 @@ h1 {
     display: flex;
     align-items: center;
     position: absolute;
-    left: 100px; /* three-finger padding from left */
-    padding: 25px;
+    left: 100px;
+    /* three-finger padding from left */
+    padding: 10px;
   }
 
   .logo img {
@@ -3470,30 +3610,34 @@ h1 {
 
   /* Add spacing between menu items on desktop only */
   .menu {
-    gap: 3rem; /* 64px */
+    gap: 3rem;
+    /* 64px */
     margin-left: 350px;
   }
 
   /* Remove large per-li margins; rely on gap above */
   .menu li {
-    margin: 15px;
+    margin: 5px;
     font-size: 23PX;
   }
 }
 
 
 @media (max-width: 480px) {
- 
+
   body {
     overflow-x: hidden;
   }
+
   .abt-img {
     width: 90% !important;
     border-radius: 5px !important;
   }
+
   .trichycont {
     margin-top: -7px !important;
   }
+
   .trichybanner {
     width: 200px;
     margin-left: 155px;
@@ -3512,8 +3656,9 @@ h1 {
   }
 
   .logo img {
-    height: 100%;
-    width: 250px;
+    width: 180px;
+    height: auto;
+    object-fit: contain;
   }
 
   .button-animation {
@@ -3627,21 +3772,25 @@ h1 {
   font-size: 16px;
   font-weight: 100;
 }
+
 /* .row {
   margin-right: 0 !important;
   margin-left:0 !important;
   overflow-x: hidden !important;
 } */
-.row{
+.row {
   margin: 0 !important;
   max-width: 100% !important;
 }
+
 div.slide {
   margin: 0 !important;
 }
+
 .arrow-btn.right-arrow {
-right: -8px !important;
+  right: -8px !important;
 }
+
 ul.menu.open {
   /* overflow-y: scroll !important; */
   width: 100%;
@@ -3651,30 +3800,34 @@ ul.menu.open {
 @keyframes starGlow {
   0% {
     transform: scale(1) rotate(-5deg) translateZ(0);
-    text-shadow: 
+    text-shadow:
       0 0 4px rgba(255, 204, 0, 0.8),
       0 0 8px rgba(255, 204, 0, 0.6),
       0 0 12px rgba(255, 204, 0, 0.4);
     filter: brightness(1.1) drop-shadow(0 0 3px rgba(255, 255, 0, 0.7));
   }
+
   25% {
     transform: scale(1.05) rotate(-2deg) translateZ(0);
   }
+
   50% {
     transform: scale(1.1) rotate(0deg) translateZ(0);
-    text-shadow: 
+    text-shadow:
       0 0 5px rgba(255, 204, 0, 0.9),
       0 0 10px rgba(255, 204, 0, 0.7),
       0 0 15px rgba(255, 204, 0, 0.5),
       0 0 20px rgba(255, 170, 0, 0.4);
     filter: brightness(1.3) drop-shadow(0 0 5px rgba(255, 255, 0, 0.9));
   }
+
   75% {
     transform: scale(1.05) rotate(2deg) translateZ(0);
   }
+
   100% {
     transform: scale(1) rotate(5deg) translateZ(0);
-    text-shadow: 
+    text-shadow:
       0 0 4px rgba(255, 204, 0, 0.8),
       0 0 8px rgba(255, 204, 0, 0.6),
       0 0 12px rgba(255, 204, 0, 0.4);
@@ -3684,19 +3837,14 @@ ul.menu.open {
 
 
 .glass-header {
-  background: rgba(255, 255, 255, ); /* Semi-transparent */
-  /* border-radius: 16px; */
-  /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);  */
-  /* backdrop-filter: blur(3px); */
-  /* -webkit-backdrop-filter: blur(9px);  */
-  /* border: 1px solid rgba(255, 255, 255, 0.3); */
+  background: rgba(255, 255, 255, 0.35);
+  backdrop-filter: saturate(180%) blur(12px);
+  -webkit-backdrop-filter: saturate(180%) blur(12px);
   position: -webkit-sticky;
   position: sticky;
   top: 0;
   z-index: 1000;
-  /* width: 100%; */
-  /* padding: 10px 20px; */
-  margin-bottom: -180px;
+  width: 100%;
 }
 
 /* globals.css or index.css */
@@ -3716,3 +3864,39 @@ ul.menu.open {
   transform: rotateY(180deg);
 }
 
+@keyframes bannerEnter {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.98);
+    filter: blur(6px);
+  }
+
+  60% {
+    opacity: 1;
+    transform: translateY(-4px) scale(1.01);
+    filter: blur(0);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.banner-appear {
+  animation: bannerEnter 900ms cubic-bezier(0.22, 0.61, 0.36, 1) 0.1s both;
+  will-change: transform, opacity, filter;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .banner-appear {
+    animation: none;
+  }
+}
+
+/* Global tweak: reduce excessive top space on branch banners */
+.cbe1-banner {
+  padding-top: 20px !important;
+  min-height: 75vh !important;
+  margin-top: 0 !important;
+}

@@ -47,9 +47,9 @@ const RhiaObjectives = () => {
 
     return (
         <div className=" container mx-auto  py-5 px-4 ">
-            <h1 className="text-3xl font-semibold mb-4  text-primaryy text-center">
-            Course Objectives
-            </h1>
+            <h2 className="text-3xl font-semibold mb-4  text-primaryy text-center">
+                Course Objectives
+            </h2>
             <div className="grid grid-cols-1 sm:grid-cols-1 lg:grid-cols-2 gap-6 ">
                 {modules.map((module, index) => (
                     <div

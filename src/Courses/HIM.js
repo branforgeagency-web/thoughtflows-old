@@ -23,7 +23,7 @@ function HIM() {
   }, [])
   return (
     <>
-      <Meta title="HIM - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="Healthcare Information Management Course Training" description="Join the Healthcare Information Management course at ThoughtFlows with expert instruction, HIM system practice, and career-focused support." canonical="https://www.thoughtflows.in/him" />
 
       <HIMBanner />
       <WhatIsEvaluation />

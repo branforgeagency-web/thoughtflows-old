@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import rightimg from '../../images/Group710.png'
 import { Row, Col } from 'react-bootstrap'
-import coc from "../../images/Course Images/COC.jpg"
+import cocWebp from "../../images/courseimage/Thought flows Img 3 COC.webp"
 import coc1 from "../../images/Course Images/CIC Exam Overview-2.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
 
@@ -20,13 +20,16 @@ const WhatisCOC = () => {
 
       <section className=' px-4 container mx-auto my-12'>
 
-        <div className='grid grid-cols-1 md:grid-cols-12 gap-10 items-center'>
+        <div className='grid grid-cols-1 md:grid-cols-12 gap-10 items-center justify-items-center '>
 
 
 
-          <div className=' col-span-1 md:col-span-6  '>
-            <img src={coc} alt='leftimg' width={500}
-              height={400} />
+          <div className=' col-span-1 md:col-span-6 w-full flex justify-center'>
+            <img
+              src={cocWebp}
+              alt='leftimg'
+              className='w-full h-[360px] md:h-[400px] object-contain'
+            />
           </div>
 
 
@@ -107,10 +110,10 @@ const WhatisCOC = () => {
               <div className="pl-3 flex flex-col">
                 <h2 className="mb-3">COC Exam Overview</h2>
                 <p>
-                  <strong>Duration:</strong> 5 hour
+                  <strong>Duration:</strong> 4 hours
                 </p>
                 <p>
-                  <strong>Format:</strong> 100 MCQ
+                  <strong>Format:</strong> 100 MARKS
                 </p>
                 <p>
                   <strong>Pass Requirement:</strong> 70% or higher
@@ -153,16 +156,7 @@ const WhatisCOC = () => {
             )}
           </div>
 
-
-
-
         </div>
-
-
-
-
-
-
       </section>
 
 

@@ -60,7 +60,18 @@ const COCFaq = () => {
 
         const toggleFaq = (event) => {
             const faqElement = event.currentTarget.closest('.faq');
-            faqElement.classList.toggle("active");
+            const isActive = faqElement.classList.contains('active');
+            
+            // Close all other FAQs first
+            const allFaqs = document.querySelectorAll('.faq');
+            allFaqs.forEach(faq => {
+                faq.classList.remove('active');
+            });
+            
+            // If the clicked FAQ was not active, open it
+            if (!isActive) {
+                faqElement.classList.add('active');
+            }
         };
 
         toggles.forEach((toggle) => {
@@ -88,7 +99,7 @@ const COCFaq = () => {
                                 <li key={index}>{point}</li>
                             ))}
                         </ul>
-                        <button className="faq-toggle">
+                        <button className="faq-toggle" type="button" aria-label="Toggle frequently asked question answer" title="Expand or collapse this answer">
                             <i className="fa-solid fa-chevron-down"></i>
                             <i className="fa-solid fa-times"></i>
                         </button>

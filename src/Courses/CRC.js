@@ -11,12 +11,12 @@ import CRCFAQ from './CRC/CRCFAQ'
 import Meta from '../Meta';
 
 const CRC = () => {
-    useEffect(() => {
-      window.scrollTo({ top: 0, behavior: 'auto' });
-    }, [])
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'auto' });
+  }, [])
   return (
     <>
-          <Meta title="CRC - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="CRC Classes | Certified Risk Adjustment Coder Training" description="Join CRC classes at ThoughtFlows for certified risk adjustment coder training with expert instruction, hands-on practice, and job support." canonical="https://www.thoughtflows.in/crc" />
 
       <CRCBanner />
       <WhatCRC />

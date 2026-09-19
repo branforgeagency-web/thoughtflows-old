@@ -5,40 +5,40 @@ import cdei from "../../images/Course Images/CDEI.jpg"
 import cdei1 from "../../images/Course Images/CDEI1.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
 
-const  WhatCRC = () => {
-    const coursePages = [
-      {
-          title: "CDEI - Certified Documentation Expert Inpatient",
-          question: "What is CDEI?",
-          answer1: "The Certified Documentation Expert Inpatient (CDEI) credential, issued by the AAPC (American Academy of Professional Coders), is the gold standard in inpatient clinical documentation.",
-          answer2: "This certification validates expertise in medical record review, compliance, and clinical documentation improvement (CDI) for hospital inpatient services. Earning the CDEI certification demonstrates proficiency in auditing inpatient medical records, identifying documentation gaps, ensuring compliance with federal and payer regulations, and optimizing reimbursement for hospital-based services. This certification is essential for professionals working in hospitals, long-term care facilities, and other inpatient healthcare organizations."
-      }
+const WhatCRC = () => {
+  const coursePages = [
+    {
+      title: "CDEI - Certified Documentation Expert Inpatient",
+      question: "What is CDEI?",
+      answer1: "The Certified Documentation Expert Inpatient (CDEI) credential, issued by the AAPC (American Academy of Professional Coders), is the gold standard in inpatient clinical documentation.",
+      answer2: "This certification validates expertise in medical record review, compliance, and clinical documentation improvement (CDI) for hospital inpatient services. Earning the CDEI certification demonstrates proficiency in auditing inpatient medical records, identifying documentation gaps, ensuring compliance with federal and payer regulations, and optimizing reimbursement for hospital-based services. This certification is essential for professionals working in hospitals, long-term care facilities, and other inpatient healthcare organizations."
+    }
   ];
-  
-    const courseDetails = [
-      {
-          heading: "About Certified Documentation Experts Inpatient",
-          paragraph: "A Certified Documentation Expert Inpatient ensures that medical records accurately reflect patient care, supporting medical necessity and appropriate coding. CDEI-certified professionals play a crucial role in:",
-          subPoints: [
-              " Inpatient Clinical Documentation Improvement (CDI)",
-              " Medical Record Auditing and Compliance",
-              " Risk Adjustment and Reimbursement Optimization"
-          ]
-      }
+
+  const courseDetails = [
+    {
+      heading: "About Certified Documentation Experts Inpatient",
+      paragraph: "A Certified Documentation Expert Inpatient ensures that medical records accurately reflect patient care, supporting medical necessity and appropriate coding. CDEI-certified professionals play a crucial role in:",
+      subPoints: [
+        " Inpatient Clinical Documentation Improvement (CDI)",
+        " Medical Record Auditing and Compliance",
+        " Risk Adjustment and Reimbursement Optimization"
+      ]
+    }
   ];
-  
-    const courseCategories = [
-      "PURPOSE OF CDI",
-      "PROVIDER COMMUNICATION AND COMPLIANCE",
-      "DOCUMENTATION REQUIREMENT",
-      "PAYMENT MODELS",
-      "DIAGNOSIS CODING",
-      "QUALITY MEASURES",
-      "PROCEDURE CODING",
-      "CLINICAL CONDITIONS"
-    ];
-    
-    
+
+  const courseCategories = [
+    "PURPOSE OF CDI",
+    "PROVIDER COMMUNICATION AND COMPLIANCE",
+    "DOCUMENTATION REQUIREMENT",
+    "PAYMENT MODELS",
+    "DIAGNOSIS CODING",
+    "QUALITY MEASURES",
+    "PROCEDURE CODING",
+    "CLINICAL CONDITIONS"
+  ];
+
+
   const [isExpanded, setIsExpanded] = useState(false);
 
   const toggleExpand = () => {
@@ -47,7 +47,7 @@ const  WhatCRC = () => {
   return (
     <div>
       <section className=" px-4 container mx-auto mt-5">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-5">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-10 items-center justify-items-center">
           <div className=" col-span-1 md:col-span-6  ">
             {coursePages.map((page, index) => (
               <div key={index}>
@@ -59,8 +59,12 @@ const  WhatCRC = () => {
             ))}
           </div>
 
-          <div className=" col-span-1 md:col-span-6  ">
-            <img src={cdei} alt="leftimg" width={450} height={450} />
+          <div className=' col-span-1 md:col-span-6 w-full flex justify-center'>
+            <img
+              src={cdei}
+              alt='leftimg'
+              className='w-full h-[360px] md:h-[400px] object-contain'
+            />
           </div>
         </div>
         {courseDetails.map((detail, index) => (
@@ -86,7 +90,7 @@ const  WhatCRC = () => {
               <h2>Training Details</h2>
 
               <p>
-                <strong>Class Type: </strong>Online 
+                <strong>Class Type: </strong>Online
               </p>
               <div className=" flex flex-row gap-6">
                 <div>
@@ -154,9 +158,9 @@ const  WhatCRC = () => {
             {isExpanded && (
               <div className=" space-y-2 list-disc pl-5 ">
                 <ol className="list-decimal">
-                    {courseCategories.map((category, index) => (
-                      <li key={index}>{category}</li>
-                    ))}
+                  {courseCategories.map((category, index) => (
+                    <li key={index}>{category}</li>
+                  ))}
                 </ol>
               </div>
             )}

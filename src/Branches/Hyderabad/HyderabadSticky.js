@@ -8,16 +8,16 @@ function HyderabadSticky() {
     <div className='stick-hyd'>
     <div className='static-trichy' style={{marginLeft:"100px"}}>
             <div id='static-1'>
-            <h2 className='highh' >Develop In-Demand Skills with Our Practical Training Approach</h2>
-            <p>Our training program in Hyderabad follows a practical training approach to develop in-demand skills. We believe in hands-on practice and real-life coding scenarios to reinforce your understanding and sharpen your coding abilities. Through coding exercises, case studies, and practical projects, you'll gain the practical skills and experience necessary to succeed as a medical coder.</p>
+            <h2 className='highh' >Learn by Doing, Not Just Watching</h2>
+            <p>You don't become a great coder by memorising theory — you become one by coding. Our medical coding coaching in Hyderabad is built around hands-on practice and real-life scenarios, so what you learn actually sticks. Through coding exercises, case studies, and practical projects, you'll build the in-demand skills and real confidence you need to step into a medical coding job ready to perform from day one.</p>
             </div>
             <div id='static-1'>
-           <h2 className='highh'>Industry-Recognized Certifications for Medical Coders</h2>
-           <p>Earning industry-recognized certifications can significantly enhance your career prospects as a medical coder. Our training program prepares you for certifications such as Certified Professional Coder (CPC) and Certified Coding Specialist (CCS). We provide targeted instruction and practice exams to ensure you are well-prepared to pass the certification exams and stand out in the job market.</p>
+           <h2 className='highh'>Get Certified, Get Noticed</h2>
+           <p>In medical coding, the right certification opens doors. That's why our training prepares you thoroughly for the credentials that employers look for — including the Certified Professional Coder (CPC) and Certified Coding Specialist (CCS). With focused coaching and plenty of practice exams, you'll walk into your certification exam prepared, confident, and ready to stand out in the job market.</p>
             </div>
             <div id='static-1'>
-                <h2 className='highh'>Job Placement Assistance After Training</h2>
-                <p>We understand the importance of securing employment after completing medical coding training. That's why we offer comprehensive job placement assistance to our students. We have established strong industry connections and partnerships with healthcare organizations, enabling us to provide valuable networking opportunities and access to job openings. Our dedicated career services team provides guidance in resume preparation, interview skills, and job search strategies to help students kickstart their careers.</p>
+                <h2 className='highh'>We Don't Stop at Training — We Help You Get Hired</h2>
+                <p>Finishing your course is just the start; getting placed is the real goal. As a trusted medical coding institute in Ameerpet, we back our students with dedicated placement support. Through our strong connections with healthcare organisations and coding companies, we open doors to real job openings and networking opportunities. And our career team works with you one-on-one on your resume, interview skills, and job search — so you don't just complete the course, you launch a career.</p>
             </div>
         </div>
         <div className='sticky-hyder'>

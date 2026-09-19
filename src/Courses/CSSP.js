@@ -1,4 +1,4 @@
-import React,{useEffect}from 'react'
+import React, { useEffect } from 'react'
 
 import CSSBanner from './CCSP/CSSBanner'
 import AboutCSS from './CCSP/AboutCSS'
@@ -21,15 +21,15 @@ import Meta from '../Meta';
 
 function CSS() {
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
- },[])
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [])
   return (
     <>
-              <Meta title="CCS-P  | Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="Certified Coding Specialist Physician Course | ThoughtFlows" description="Join the Certified Coding Specialist Physician course at ThoughtFlows with expert training, practical coding practice, and certification guidance." canonical="https://www.thoughtflows.in/ccs-p" />
 
       <CSSBanner />
       <WhatIsEvaluation />
-      <CSScert /> 
+      <CSScert />
       <CSSEligible />
       <CSSBenefits />
       {/* <CSSeli/> */}

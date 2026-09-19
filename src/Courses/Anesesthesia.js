@@ -1,4 +1,4 @@
-import React,{useEffect}from 'react'
+import React, { useEffect } from 'react'
 
 import AnesesthesiaBanner from './Anesesthesia Folder/AnesesthesiaBanner'
 import AboutanAesthesia from './Anesesthesia Folder/AboutanAesthesia'
@@ -14,13 +14,14 @@ import Meta from '../Meta';
 
 function Anesesthesia() {
   useEffect(() => {
-    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });   
- },[])
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [])
   return (
     <>
-          <Meta title="Anesesthesia - Thoughtflows Medical Coding Training  Academy" description="Thoughtflows Medical Coding Academy offers the highest quality education to help you succeed in your career, visit us today to learn more." />
+      <Meta title="Certified Anesthesia Coder Course | ThoughtFlows Academy" description="Join the Certified Anesthesia Coder course at ThoughtFlows with expert-led training, anesthesia coding practice, and career support." canonical="https://www.thoughtflows.in/anesesthesia" />
 
       <AnesesthesiaBanner />
+
       <WhatIsAnesthesia />
       <AnaesthesiaBook />
       <AboutanAesthesia />
