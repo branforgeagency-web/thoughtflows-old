@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import BlogBanner from './BlogBanner'
-import Blogs from './Blogs'
 import BlogRef1 from './BlogRef1'
 import Meta from '../Meta'
 

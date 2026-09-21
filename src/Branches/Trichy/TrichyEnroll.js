@@ -47,7 +47,7 @@ function TrichyEnroll() {
               </p>
             </div>
 
-            <a href="#">
+            <a href="/contact">
               <button className="mt-6 bg-primaryy text-white py-3 px-8 rounded-lg shadow-lg hover:bg-gray-700 transition-all font-bold">
                 Contact Us
               </button>

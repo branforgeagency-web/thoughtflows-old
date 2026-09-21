@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { isValidPhone, normalizePhone, PHONE_ERROR } from '../utils/phone';
 import './DiscountBanner.css';
 import studentImage from '../images/form-img.jpg'; // Adjust path if needed
 import emailjs from '@emailjs/browser';
@@ -39,6 +40,10 @@ const DiscountBanner = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (!isValidPhone(formData.ph)) {
+            setSubmitStatus({ type: 'error', message: PHONE_ERROR });
+            return;
+        }
         setIsSubmitting(true);
         setSubmitStatus({ type: '', message: '' });
 
@@ -51,7 +56,7 @@ Discount Offer: 30%`;
                 to_email: 'info@thoughtflows.in',
                 from_name: formData.name,
                 from_email: formData.email,
-                phone: formData.ph,
+                phone: normalizePhone(formData.ph),
                 qualification: fullDetails, // Send full details in qualification template field
                 message: fullDetails, // Send full details in message template field
                 subject: `Discount Banner Inquiry from ${formData.name}`,

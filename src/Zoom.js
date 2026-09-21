@@ -2,10 +2,12 @@ import { useState } from "react"
 import { useForm } from "react-hook-form"
 import emailjs from '@emailjs/browser'
 import { coursesList } from "./coursesList"
+import { isValidPhone, normalizePhone, PHONE_ERROR } from "./utils/phone"
 
 export default function ZoomSignupForm({ onClose }) {
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSuccess, setIsSuccess] = useState(false)
+  const [submitError, setSubmitError] = useState('')
 
   const { register, handleSubmit, reset, formState: { errors } } = useForm({
     defaultValues: {
@@ -17,6 +19,7 @@ export default function ZoomSignupForm({ onClose }) {
   })
 
   async function onSubmit(values) {
+    setSubmitError('')
     setIsSubmitting(true)
 
     try {
@@ -24,7 +27,7 @@ export default function ZoomSignupForm({ onClose }) {
         to_email: 'info@thoughtflows.in',
         from_name: values.name,
         from_email: values.email,
-        phone: values.phone,
+        phone: normalizePhone(values.phone),
         course: values.course,
         subject: `Free Zoom Trial Registration - ${values.name}`,
         full_message: `
@@ -54,7 +57,7 @@ export default function ZoomSignupForm({ onClose }) {
 
     } catch (error) {
       console.error('Failed to send email:', error);
-      alert('Something went wrong. Please try again.');
+      setSubmitError('Something went wrong. Please try again or call us on +91 93845 76852.');
     } finally {
       setIsSubmitting(false)
     }
@@ -121,10 +124,7 @@ export default function ZoomSignupForm({ onClose }) {
                   <input
                     {...register("phone", {
                       required: "Phone number is required",
-                      minLength: {
-                        value: 10,
-                        message: "Phone number must be at least 10 digits"
-                      }
+                      validate: (v) => isValidPhone(v) || PHONE_ERROR
                     })}
                     placeholder="Phone number"
                     type="tel"
@@ -151,6 +151,7 @@ export default function ZoomSignupForm({ onClose }) {
                   {errors.course && <p className="text-red-500 text-sm mt-1">{errors.course.message}</p>}
                 </div>
 
+                {submitError && <p role="alert" className="text-red-500 text-sm">{submitError}</p>}
                 <button
                   type="submit"
                   className="w-32 h-14 rounded-full text-white font-medium"

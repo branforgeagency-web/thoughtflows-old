@@ -10,7 +10,6 @@ const Footer = () => {
     const [showZoomPopup, setShowZoomPopup] = useState(false);
     const location = useLocation();
 
-    const excludedPaths = ['/about', '/ourteam', '/contact', "/blog", "/blog1", "/blog2", "/blog3", "/blog4", "/blog5", "/blog6", "/blog7", "/cpc", "/cic", "/coc", "/cpma", "/crc", "/surgery", "/cbe-1", "/trichy", "/tirupathi", "/trivandrum", "/cbe-2", "/hyderabad", "/kochi", "/ed", "/em", "/radiology", "/anaesthesia", "/ip-drug", "/ccs", "/ccsp", "/rhia", "/rhit", "/clinical-coder", "/him"];
 
     const showSmallFooter = location.pathname === '/' || location.pathname === '/home';
 
@@ -65,6 +64,8 @@ const Footer = () => {
                             </Col>
                             <Col className="home-btn p-1" lg={2}>
                                 <a
+                                    href="/#register"
+                                    role="button"
                                     className=" button-animation"
                                     onClick={handleRegisterClick}
                                     style={{ cursor: 'pointer' }}
@@ -90,23 +91,23 @@ const Footer = () => {
                         <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
                         <ul className="list-unstyled">
                             <li className="mb-3">
-                                <a href="/home" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Home</a>
+                                <Link to="/" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Home</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/about" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">About us</a>
+                                <Link to="/about" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">About us</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/blog" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Blog</a>
+                                <Link to="/blog" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Blog</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/ourteam" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Our team</a>
+                                <Link to="/ourteam" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Our team</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/placements" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Placements</a>
+                                <Link to="/placements" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Placements</Link>
                             </li>
 
                             <li className="mb-3">
-                                <a href="/contact" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Contact</a>
+                                <Link to="/contact" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Contact</Link>
                             </li>
 
                         </ul>
@@ -117,16 +118,16 @@ const Footer = () => {
                         <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
                         <ul className="list-unstyled">
                             <li className="mb-3">
-                                <a href="/home" className="text-decoration-none text-light">Home</a>
+                                <Link to="/" className="text-decoration-none text-light">Home</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/about" className="text-decoration-none text-light">About</a>
+                                <Link to="/about" className="text-decoration-none text-light">About</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/blog" className="text-decoration-none text-light">Blog</a>
+                                <Link to="/blog" className="text-decoration-none text-light">Blog</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/contact" className="text-decoration-none text-light">Contact</a>
+                                <Link to="/contact" className="text-decoration-none text-light">Contact</Link>
                             </li>
                         </ul>
                     </Col> 
@@ -145,37 +146,37 @@ const Footer = () => {
                         <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
                         <ul className="list-unstyled">
                             <li className="mb-3">
-                                <a href="/cpc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CPC</a>
+                                <Link to="/cpc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CPC</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/cic" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CIC</a>
+                                <Link to="/cic" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CIC</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/cpma" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CPMA</a>
+                                <Link to="/cpma" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CPMA</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/coc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">COC</a>
+                                <Link to="/coc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">COC</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/crc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CRC</a>
+                                <Link to="/crc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CRC</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/cpb" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CPB</a>
+                                <Link to="/cpb" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CPB</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/cedc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CEDC</a>
+                                <Link to="/cedc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CEDC</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/cemc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CEMC</a>
+                                <Link to="/cemc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CEMC</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/cdeo" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CDEO</a>
+                                <Link to="/cdeo" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CDEO</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/cdei" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CDEI</a>
+                                <Link to="/cdei" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CDEI</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/cppm" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CPPM</a>
+                                <Link to="/cppm" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CPPM</Link>
                             </li>
 
                         </ul>
@@ -186,31 +187,31 @@ const Footer = () => {
                         <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
                         <ul className="list-unstyled">
                             <li className="mb-3">
-                                <a href="/surgery" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Surgery</a>
+                                <Link to="/surgery" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Surgery</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/ed" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">ED</a>
+                                <Link to="/ed" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">ED</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/em" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">EM</a>
+                                <Link to="/em" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">EM</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/radiology" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Radiology</a>
+                                <Link to="/radiology" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Radiology</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/anesthesia" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Anesthesia</a>
+                                <Link to="/anesesthesia" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Anesthesia</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/ip-drg" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">IP DRG</a>
+                                <Link to="/ip-drg" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">IP DRG</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/hcc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">HCC</a>
+                                <Link to="/hcc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">HCC</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/ivr" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">IVR</a>
+                                <Link to="/ivr" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">IVR</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/cdi" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CDI</a>
+                                <Link to="/cdi" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CDI</Link>
                             </li>
                         </ul>
                     </Col>
@@ -219,16 +220,16 @@ const Footer = () => {
                         <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
                         <ul className="list-unstyled">
                             <li className="mb-3">
-                                <a href="/ccs" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CCS</a>
+                                <Link to="/ccs" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CCS</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/ccs-p" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CCS-P</a>
+                                <Link to="/ccs-p" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CCS-P</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/rhia" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">RHIA</a>
+                                <Link to="/rhia" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">RHIA</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/rhit" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">RHIT</a>
+                                <Link to="/rhit" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">RHIT</Link>
                             </li>
 
                         </ul>
@@ -238,10 +239,10 @@ const Footer = () => {
                         <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
                         <ul className="list-unstyled">
                             <li className="mb-3">
-                                <a href="/ccc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CCC</a>
+                                <Link to="/ccc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CCC</Link>
                             </li>
                             <li className="mb-3">
-                                <a href="/him" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">HIM</a>
+                                <Link to="/him" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">HIM</Link>
                             </li>
 
 
@@ -272,16 +273,16 @@ const Footer = () => {
                             </a>
                         </div>
                         <div className="d-flex gap-3 mt-4">
-                            <a href=" https://www.instagram.com/thought_flows/" target="_blank" rel="noopener noreferrer" className="text-light">
+                            <a href="https://www.instagram.com/thought_flows/" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="text-light">
                                 <i className="fab fa-instagram fa-lg"></i>
                             </a>
-                            <a href="https://www.facebook.com/Thoughtflowsacademy/" target="_blank" rel="noopener noreferrer" className="text-light">
+                            <a href="https://www.facebook.com/Thoughtflowsacademy/" aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="text-light">
                                 <i className="fab fa-facebook fa-lg"></i>
                             </a>
-                            <a href="https://linkedin.com/company/thoughtflows-medical-coding-academy" target="_blank" rel="noopener noreferrer" className="text-light">
+                            <a href="https://linkedin.com/company/thoughtflows-medical-coding-academy" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="text-light">
                                 <i className="fab fa-linkedin fa-lg"></i>
                             </a>
-                            <a href=" https://youtube.com/@thoughtflowsmedicalcodinga6330?si=9LqFshNCyUW0jAUR" target="_blank" rel="noopener noreferrer" className="text-light">
+                            <a href="https://youtube.com/@thoughtflowsmedicalcodinga6330" aria-label="YouTube" target="_blank" rel="noopener noreferrer" className="text-light">
                                 <i className="fab fa-youtube fa-lg"></i>
                             </a>
                         </div>

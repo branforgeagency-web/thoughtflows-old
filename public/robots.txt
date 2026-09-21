@@ -2,4 +2,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://thoughtflows.in/sitemap.xml
+Sitemap: https://www.thoughtflows.in/sitemap.xml

@@ -13,32 +13,32 @@ export default function Header1() {
           <div className="rounded-lg bg-black/30 px-6 py-3 backdrop-blur-sm">
             <ul className="flex space-x-10">
               <li>
-                <Link href="/" className="text-white hover:text-gray-300 transition-colors">
+                <Link to="/" className="text-white hover:text-gray-300 transition-colors">
                   Home
                 </Link>
               </li>
               <li>
-                <Link href="/about" className="text-white hover:text-gray-300 transition-colors">
+                <Link to="/about" className="text-white hover:text-gray-300 transition-colors">
                   About Us
                 </Link>
               </li>
               <li>
-                <Link href="/services" className="text-white hover:text-gray-300 transition-colors">
+                <Link to="/services" className="text-white hover:text-gray-300 transition-colors">
                   Services
                 </Link>
               </li>
               <li>
-                <Link href="/projects" className="text-white hover:text-gray-300 transition-colors">
+                <Link to="/projects" className="text-white hover:text-gray-300 transition-colors">
                   Projects
                 </Link>
               </li>
               <li>
-                <Link href="/solutions" className="text-white hover:text-gray-300 transition-colors">
+                <Link to="/solutions" className="text-white hover:text-gray-300 transition-colors">
                   Solutions
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-white hover:text-gray-300 transition-colors">
+                <Link to="/contact" className="text-white hover:text-gray-300 transition-colors">
                   Contact
                 </Link>
               </li>

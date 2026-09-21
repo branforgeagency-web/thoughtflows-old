@@ -11,7 +11,7 @@ const WelcomSection = () => {
   return (
     <Row className='welcome-section'>
       <Col lg={6} style={{ textAlign: 'center' }}>
-        <a href='https://youtu.be/Ph1XztrKgms?si=hHUCdVWwRHZKzoqa' target='_blank'><img src={leftimg} alt='leftimg' className='leftimg' /></a>
+        <a href='https://youtu.be/Ph1XztrKgms?si=hHUCdVWwRHZKzoqa' target='_blank' rel='noopener noreferrer'><img src={leftimg} alt='leftimg' className='leftimg' /></a>
       </Col>
       <Col lg={6}>
         <h5>No.1 MEDICAL CODING TRAINING</h5>
