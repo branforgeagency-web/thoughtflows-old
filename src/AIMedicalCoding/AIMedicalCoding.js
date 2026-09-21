@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './AIMedicalCoding.css';
 import Meta from '../Meta';
+import { isValidPhone, normalizePhone, PHONE_ERROR } from '../utils/phone';
 import aiBanner from './ai-medical-coding-banner.png';
 
 /* ── animated counter hook ── */
@@ -74,11 +75,25 @@ function CountCard({ count, label, pct, feature }) {
   );
 }
 
+const MARQUEE_ITEMS = [
+  ["AI-Powered Training", true],
+  ["Placement Support", false],
+  ["AI-Enabled Learning", true],
+  ["ICD-10 & CPT", false],
+  ["Industry Curriculum", true],
+  ["Experienced Trainers", false],
+  ["Career Guidance", true],
+  ["Fresher Friendly", false],
+  ["Coimbatore Intake Open", true],
+  ["Easy Online Registration", false],
+];
+
 /* ── Main Component ── */
 const AIMedicalCoding = () => {
   const [navScrolled, setNavScrolled] = useState(false);
   const [form, setForm] = useState({ name: '', mobile: '', email: '', city: '', qual: '', year: '', msg: '' });
   const [submitting, setSubmitting] = useState(false);
+  const [formError, setFormError] = useState('');
   const [success, setSuccess] = useState(false);
 
   // Nav scroll
@@ -87,15 +102,6 @@ const AIMedicalCoding = () => {
     window.addEventListener('scroll', onScroll, { passive: true });
     window.scrollTo({ top: 0, behavior: 'smooth' });
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  // Marquee duplicate
-  useEffect(() => {
-    const marq = document.getElementById('aimcMarq');
-    if (marq && !marq.dataset.duplicated) {
-      marq.innerHTML += marq.innerHTML;
-      marq.dataset.duplicated = 'true';
-    }
   }, []);
 
   // Counters
@@ -112,11 +118,16 @@ const AIMedicalCoding = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setFormError('');
+    if (!isValidPhone(form.mobile)) {
+      setFormError(PHONE_ERROR);
+      return;
+    }
     setSubmitting(true);
     try {
       const data = new FormData();
       data.append('Full Name', form.name);
-      data.append('Mobile Number', form.mobile);
+      data.append('Mobile Number', normalizePhone(form.mobile));
       data.append('Email Address', form.email);
       data.append('City', form.city);
       data.append('Highest Qualification', form.qual);
@@ -133,10 +144,10 @@ const AIMedicalCoding = () => {
       if (res.ok) {
         setSuccess(true);
       } else {
-        alert('Submission failed. Please call us at +91 96550 79784 or try again.');
+        setFormError('Submission failed. Please call us at +91 96550 79784 or try again.');
       }
     } catch {
-      alert('Something went wrong. Please call us at +91 96550 79784 or try again.');
+      setFormError('Something went wrong. Please call us at +91 96550 79784 or try again.');
     } finally {
       setSubmitting(false);
     }
@@ -257,12 +268,12 @@ const AIMedicalCoding = () => {
 
       {/* MARQUEE STRIP */}
       <div className="aimc-strip" aria-hidden="true">
-        <div className="aimc-row" id="aimcMarq">
-          <span className="aimc-item"><b>AI-Powered Training</b></span><span className="aimc-item">Placement Support</span>
-          <span className="aimc-item"><b>AI-Enabled Learning</b></span><span className="aimc-item">ICD-10 & CPT</span>
-          <span className="aimc-item"><b>Industry Curriculum</b></span><span className="aimc-item">Experienced Trainers</span>
-          <span className="aimc-item"><b>Career Guidance</b></span><span className="aimc-item">Fresher Friendly</span>
-          <span className="aimc-item"><b>Coimbatore Intake Open</b></span><span className="aimc-item">Easy Online Registration</span>
+        <div className="aimc-row">
+          {[0, 1].map((copy) =>
+            MARQUEE_ITEMS.map(([label, bold]) => (
+              <span className="aimc-item" key={`${copy}-${label}`}>{bold ? <b>{label}</b> : label}</span>
+            ))
+          )}
         </div>
       </div>
 
@@ -331,6 +342,7 @@ const AIMedicalCoding = () => {
                     <label>Message (Optional)</label>
                     <textarea name="msg" value={form.msg} onChange={handleInput} placeholder="Anything you'd like our admissions team to know?" rows={3}></textarea>
                   </div>
+                  {formError && <p role="alert" className="aimc-full" style={{ color: "#ff8a80", margin: 0 }}>{formError}</p>}
                   <div className="aimc-form-foot">
                     <button type="submit" className="aimc-btn aimc-btn-primary aimc-btn-lg" disabled={submitting}>
                       {submitting ? 'Submitting...' : 'Submit Application →'}

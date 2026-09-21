@@ -159,7 +159,6 @@ const styles = {
     color: '#fff',
   },
   label: {
-    fontSize: '22px',
     color: '#fff',
     marginTop: "25px",
     fontWeight: "bold",

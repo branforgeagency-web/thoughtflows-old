@@ -133,7 +133,7 @@ const Header = () => {
       '/Career-Focused-Medical-Coding-Trichy', '/Future-Ready-Medical-Coding-Salem',
       '/Innovative-Medical-Coding-Vizag'
     ];
-    return branchPaths.includes(location.pathname);
+    return branchPaths.some((p) => p.toLowerCase() === location.pathname.toLowerCase());
   };
 
   // Check if current page is a course page
@@ -141,10 +141,10 @@ const Header = () => {
     const coursePaths = [
       '/cpc', '/cic', '/coc', '/cpma', '/crc', '/cpb', '/cedc', '/cemc',
       '/cdeo', '/cdei', '/cppm', '/surgery', '/ed', '/em', '/radiology',
-      '/anesthesia', '/ip-drg', '/hcc', '/ivr', '/ccs', '/ccs-p', '/rhia',
+      '/anesesthesia', '/ip-drg', '/hcc', '/ivr', '/ccs', '/ccs-p', '/rhia',
       '/rhit', '/ccc', '/him', '/cdi'
     ];
-    return coursePaths.includes(location.pathname);
+    return coursePaths.includes(location.pathname.toLowerCase());
   };
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth <= 1024);
@@ -198,7 +198,7 @@ const Header = () => {
           { label: "ED", path: "/ed" },
           { label: "EM", path: "/em" },
           { label: "RADIOLOGY", path: "/radiology" },
-          { label: "ANESESTHESIA", path: "/Anesesthesia" },
+          { label: "ANESTHESIA", path: "/anesesthesia" },
           { label: "IP DRG", path: "/ip-drg" },
           { label: "HCC", path: "/hcc" },
           { label: "IVR", path: "/ivr" },
@@ -269,7 +269,17 @@ const Header = () => {
             <div className="hamburger-menu">
               <div
                 className="hamburger"
+                role="button"
+                tabIndex={0}
+                aria-label="Toggle menu"
+                aria-expanded={mobileMenuOpen}
                 onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    setMobileMenuOpen(!mobileMenuOpen);
+                  }
+                }}
               >
                 ☰
               </div>

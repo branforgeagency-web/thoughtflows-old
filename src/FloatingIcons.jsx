@@ -5,7 +5,7 @@ const FloatingIcons = () => {
     <div className="fixed bottom-5 right-5 flex flex-col gap-3 z-50">
       {/* WhatsApp Icon */}
       <a
-        href="https://wa.me/9384576852" // Replace with your WhatsApp number
+        href="https://wa.me/919384576852" aria-label="Chat on WhatsApp"
         target="_blank"
         rel="noopener noreferrer"
         className="bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-all"
@@ -15,7 +15,7 @@ const FloatingIcons = () => {
 
       {/* Call Icon */}
       <a
-        href="tel:+919384576852" // Replace with your phone number
+        href="tel:+919384576852" aria-label="Call ThoughtFlows"
         className="text-white p-3 rounded-full shadow-lg transition-all"
         style={{
           background: 'linear-gradient(135deg, #8B5CF6, #A855F7)',
@@ -34,7 +34,7 @@ const FloatingIcons = () => {
 
       {/* LinkedIn Icon */}
       <a
-        href=" https://www.linkedin.com/company/14710865/admin/dashboard/" // Replace with your LinkedIn URL
+        href="https://linkedin.com/company/thoughtflows-medical-coding-academy" aria-label="LinkedIn"
         target="_blank"
         rel="noopener noreferrer"
         className="text-white p-3 rounded-full shadow-lg transition-all"
@@ -53,7 +53,7 @@ const FloatingIcons = () => {
 
       {/* Instagram Icon */}
       <a
-        href="https://www.instagram.com/thought_flows?igsh=a2xlYW43eG45dmt6" // Replace with your Instagram URL
+        href="https://www.instagram.com/thought_flows/" aria-label="Instagram"
         target="_blank"
         rel="noopener noreferrer"
         className="text-white p-3 rounded-full shadow-lg transition-all"

@@ -42,7 +42,7 @@ const AboutCRC = () => {
                         </div>
                     </div>
                     <Col className='home-btn mt-4' style={{width:'170px'}}>
-                        <a class="button-animation" href="#">
+                        <a class="button-animation" href="/contact">
                             Enroll Now
                         </a>
                     </Col>

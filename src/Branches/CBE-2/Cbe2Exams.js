@@ -63,7 +63,7 @@ const Cbe2Exams = () => {
                             className="tirupathi-exams-card-image"
                         />
                         <div className="tirupathi-exams-card-label">
-                            <a href='https://thoughtflows.onlinetestpanel.com/' target='_blank'><p>{property.label}</p></a>
+                            <a href='https://thoughtflows.onlinetestpanel.com/' target='_blank' rel='noopener noreferrer'><p>{property.label}</p></a>
                         </div>
                     </div>
                 ))}

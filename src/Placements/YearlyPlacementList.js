@@ -18,6 +18,7 @@ const YearlyPlacementList = () => {
                 title={`${year} Medical Coding Placements | ThoughtFlows Academy`}
                 description={`View ${year} placement success stories from ThoughtFlows Medical Coding Academy. Our graduates are placed in top healthcare companies across India.`}
                 canonical={`https://www.thoughtflows.in/placements/${year}`}
+                noindex={data.length === 0}
             />
             <div className="container">
                 <div className="back-link">

@@ -4,6 +4,7 @@ import map from "../images/svg/map.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faTimes } from '@fortawesome/free-solid-svg-icons';
 import Meta from '../Meta';
+import { isValidPhone, normalizePhone } from '../utils/phone';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { coursesList } from '../coursesList';
@@ -167,10 +168,7 @@ function Contact() {
       newErrors.email = 'Email address is invalid';
     }
     if (!formData.ph) newErrors.ph = 'Phone number is required';
-    const phonePattern = /^[0-9]{10}$/;
-    if (formData.ph && !phonePattern.test(formData.ph)) {
-      newErrors.ph = 'Phone number is invalid';
-    }
+    else if (!isValidPhone(formData.ph)) newErrors.ph = 'Phone number is invalid';
     if (!formData.course) newErrors.course = 'Please select a course';
     if (!formData.location) newErrors.location = 'Location is required';
     if (formData.message.length < 10) {
@@ -193,9 +191,9 @@ function Contact() {
           to_email: 'info@thoughtflows.in', // Same recipient as Home.js
           from_name: formData.name,
           from_email: formData.email,
-          phone: formData.ph,
+          phone: normalizePhone(formData.ph),
           course: formData.course,
-          qualification: formData.course, // Map course to qualification template variable
+          qualification: 'N/A',
           location: formData.location,
           message: `Course: ${formData.course}
 Location: ${formData.location}

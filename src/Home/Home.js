@@ -1,4 +1,4 @@
-import React, { useEffect, useContext, useState } from "react";
+import React, { useEffect, useContext } from "react";
 import HomeBanner from "./HomeBanner";
 import GifSection from "./GifSection";
 import WelcomSection from "./WelcomSection";
@@ -7,188 +7,42 @@ import Branches from "./Branches";
 import Counters from "./Counters";
 import Coaching from "./Coaching";
 import GoogleRev from "./GoogleRev";
-import HomeBlog from "./HomeBlog";
 import Meta from "../Meta";
-import formimg from "../images/courseimage/TF Image copy.webp";
-import posterImg from "../images/poster tf.jpeg";
-import FloatingIcons from "../FloatingIcons";
 import Companies from "./Companies";
 import { PopupContext } from "../context/PopupContext";
 import { motion } from "framer-motion";
-import emailjs from '@emailjs/browser';
 import RegisterPopupForm from "../Forms/RegisterPopupForm";
 import AdvancedOfferPopup from "../Forms/AdvancedOfferPopup";
 
-const inputStyle = {
-  width: "100%",
-  padding: "12px 15px",
-  borderRadius: "8px",
-  border: "1px solid #ccc",
-  fontSize: "15px",
-  outline: "none",
-  transition: "border-color 0.3s ease",
-};
+const POPUP_SEEN_KEY = "tf_register_popup_seen";
 
 const Home = () => {
-  const { isOpen, setIsOpen } = useContext(PopupContext);
-  const [showPopup, setShowPopup] = useState(false);
-  const [showPosterPopup, setShowPosterPopup] = useState(false);
-  const [showRegistrationForm, setShowRegistrationForm] = useState(false);
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
-  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    phone: '',
-    age: '',
-    qualification: '',
-    location: '',
-    course: '',
-  });
+  const { setIsOpen } = useContext(PopupContext);
+
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
-    // Initialize EmailJS
-    // emailjs.init("KLhirNBaXDhIlDonK"); // You'll need to replace this with your actual EmailJS public key
-
-    // For production, use environment variables instead:
-    // emailjs.init(process.env.REACT_APP_EMAILJS_PUBLIC_KEY);
+    // Show the registration popup once per browser session, after 4 seconds
+    let alreadySeen = false;
+    try {
+      alreadySeen = sessionStorage.getItem(POPUP_SEEN_KEY) === "1";
+    } catch (e) {
+      /* storage unavailable - fall through and show popup */
+    }
+    if (alreadySeen) return undefined;
 
     const timer = setTimeout(() => {
       setIsOpen(true);
-    }, 4000); // After 4 seconds, show registration popup
+      try {
+        sessionStorage.setItem(POPUP_SEEN_KEY, "1");
+      } catch (e) {
+        /* ignore */
+      }
+    }, 4000);
 
-    return () => clearTimeout(timer); // Cleanup timer on unmount
-  }, []);
+    return () => clearTimeout(timer);
+  }, [setIsOpen]);
 
-  // Add resize listener for dynamic responsiveness
-  useEffect(() => {
-    const handleResize = () => {
-      setWindowWidth(window.innerWidth);
-    };
-
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  const togglePopup = () => {
-    setShowRegistrationForm(false);
-    setIsOpen(false);
-    setShowPosterPopup(false);
-    // Reset form and status when closing
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      age: '',
-      qualification: '',
-      location: '',
-      course: '',
-    });
-    setSubmitStatus({ type: '', message: '' });
-  };
-
-  const closePosterPopup = () => {
-    setShowPosterPopup(false);
-  };
-
-  const openRegistrationForm = () => {
-    setShowPosterPopup(false);
-    setShowRegistrationForm(true);
-    setIsOpen(true);
-    setShowPopup(true);
-  };
-
-  const closeRegistrationForm = () => {
-    setShowRegistrationForm(false);
-    setIsOpen(false);
-    setShowPopup(false);
-    // Reset form and status when closing
-    setFormData({
-      name: '',
-      email: '',
-      phone: '',
-      age: '',
-      qualification: '',
-      location: '',
-      course: '',
-    });
-    setSubmitStatus({ type: '', message: '' });
-  };
-
-  // Handle input changes
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prevData => ({
-      ...prevData,
-      [name]: value
-    }));
-  };
-
-  // Handle form submission
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    setSubmitStatus({ type: '', message: '' });
-
-    try {
-      const fullDetails = `Course: ${formData.course}
-Location: ${formData.location}
-Age: ${formData.age || 'N/A'}
-Qualification: ${formData.qualification || 'N/A'}`;
-
-      // EmailJS template parameters
-      const templateParams = {
-        to_email: 'info@thoughtflows.in',
-        from_name: formData.name,
-        from_email: formData.email,
-        phone: formData.phone,
-        age: formData.age,
-        qualification: formData.qualification,
-        location: formData.location,
-        course: fullDetails,
-        message: `
-          New Unified Form Registration:
-          
-          Name: ${formData.name}
-          Email: ${formData.email}
-          Phone: ${formData.phone}
-          Age: ${formData.age}
-          Qualification: ${formData.qualification}
-          Location: ${formData.location}
-          Course: ${formData.course}
-        `
-      };
-
-      const response = await emailjs.send(
-        'service_2anzqj9',
-        'template_vx3lkna',
-        templateParams,
-        "KLhirNBaXDhIlDonK"
-      );
-
-      console.log('Email sent successfully:', response);
-      setSubmitStatus({
-        type: 'success',
-        message: 'Registration successful! We will contact you soon.'
-      });
-
-      // Reset form after successful submission
-      setTimeout(() => {
-        togglePopup();
-      }, 3000);
-
-    } catch (error) {
-      console.error('Failed to send email:', error);
-      setSubmitStatus({
-        type: 'error',
-        message: 'Failed to submit registration. Please try again.'
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
   return (
     <>
       <Meta
@@ -279,7 +133,6 @@ Qualification: ${formData.qualification || 'N/A'}`;
       </div>
       <RegisterPopupForm />
       <AdvancedOfferPopup />
-      {/* <FloatingIcons/> */}
     </>
   );
 };

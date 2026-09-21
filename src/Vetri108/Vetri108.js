@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import './Vetri108.css';
 import Meta from '../Meta';
+import { isValidPhone, normalizePhone, PHONE_ERROR } from '../utils/phone';
 
 /* ── animated counter hook ── */
 function useCounter(target, duration = 1600) {
@@ -73,11 +74,23 @@ function CountCard({ count, label, pct, feature }) {
   );
 }
 
+const MARQUEE_ITEMS = [
+  ["Free Training", true],
+  ["Placement Support", false],
+  ["Industry Curriculum", true],
+  ["Experienced Trainers", false],
+  ["Career Guidance", true],
+  ["Fresher Friendly", false],
+  ["Coimbatore Intake Open", true],
+  ["Easy Online Registration", false],
+];
+
 /* ── Main Component ── */
 const Vetri108 = () => {
   const [navScrolled, setNavScrolled] = useState(false);
   const [form, setForm] = useState({ name: '', mobile: '', email: '', city: '', qual: '', year: '', msg: '' });
   const [submitting, setSubmitting] = useState(false);
+  const [formError, setFormError] = useState('');
   const [success, setSuccess] = useState(false);
 
   // Nav scroll
@@ -86,12 +99,6 @@ const Vetri108 = () => {
     window.addEventListener('scroll', onScroll, { passive: true });
     window.scrollTo({ top: 0, behavior: 'smooth' });
     return () => window.removeEventListener('scroll', onScroll);
-  }, []);
-
-  // Marquee duplicate
-  useEffect(() => {
-    const marq = document.getElementById('v108Marq');
-    if (marq) marq.innerHTML += marq.innerHTML;
   }, []);
 
   // Counters
@@ -108,11 +115,16 @@ const Vetri108 = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setFormError('');
+    if (!isValidPhone(form.mobile)) {
+      setFormError(PHONE_ERROR);
+      return;
+    }
     setSubmitting(true);
     try {
       const data = new FormData();
       data.append('Full Name', form.name);
-      data.append('Mobile Number', form.mobile);
+      data.append('Mobile Number', normalizePhone(form.mobile));
       data.append('Email Address', form.email);
       data.append('City', form.city);
       data.append('Highest Qualification', form.qual);
@@ -129,10 +141,10 @@ const Vetri108 = () => {
       if (res.ok) {
         setSuccess(true);
       } else {
-        alert('Submission failed. Please call us at +91 96550 79784 or try again.');
+        setFormError('Submission failed. Please call us at +91 96550 79784 or try again.');
       }
     } catch {
-      alert('Something went wrong. Please call us at +91 96550 79784 or try again.');
+      setFormError('Something went wrong. Please call us at +91 96550 79784 or try again.');
     } finally {
       setSubmitting(false);
     }
@@ -242,11 +254,12 @@ const Vetri108 = () => {
 
       {/* MARQUEE STRIP */}
       <div className="v108-strip" aria-hidden="true">
-        <div className="v108-row" id="v108Marq">
-          <span className="v108-item"><b>Free Training</b></span><span className="v108-item">Placement Support</span>
-          <span className="v108-item"><b>Industry Curriculum</b></span><span className="v108-item">Experienced Trainers</span>
-          <span className="v108-item"><b>Career Guidance</b></span><span className="v108-item">Fresher Friendly</span>
-          <span className="v108-item"><b>Coimbatore Intake Open</b></span><span className="v108-item">Easy Online Registration</span>
+        <div className="v108-row">
+          {[0, 1].map((copy) =>
+            MARQUEE_ITEMS.map(([label, bold]) => (
+              <span className="v108-item" key={`${copy}-${label}`}>{bold ? <b>{label}</b> : label}</span>
+            ))
+          )}
         </div>
       </div>
 
@@ -315,6 +328,7 @@ const Vetri108 = () => {
                     <label>Message (Optional)</label>
                     <textarea name="msg" value={form.msg} onChange={handleInput} placeholder="Anything you'd like our admissions team to know?" rows={3}></textarea>
                   </div>
+                  {formError && <p role="alert" className="v108-full" style={{ color: "#ff8a80", margin: 0 }}>{formError}</p>}
                   <div className="v108-form-foot">
                     <button type="submit" className="v108-btn v108-btn-primary v108-btn-lg" disabled={submitting}>
                       {submitting ? 'Submitting...' : 'Submit Application →'}

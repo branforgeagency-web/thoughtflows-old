@@ -4,7 +4,7 @@ import postImage1 from '../images/Blog/vetri108/Ram Blog Banner (22).png';
 import postImage2 from '../images/Blog/vetri108/Ram Blog Banner (23).png';
 import postImage3 from '../images/Blog/vetri108/ChatGPT Image Jun 10, 2026, 03_22_34 PM.png';
 import postImage4 from '../images/Blog/vetri108/Ram Blog Banner (25).png';
-import { Helmet } from "react-helmet";
+import { Helmet } from "react-helmet-async";
 
 export default function Blog8() {
   useEffect(() => {

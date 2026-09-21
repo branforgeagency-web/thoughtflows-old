@@ -2,8 +2,8 @@ import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Header from './Header';
 // import Header1 from './header1';
-import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom';
-import { Helmet } from "react-helmet";
+import { useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Home from './Home/Home';
 import About from './About/About';
 import Blog from './Blog/Blog';
@@ -38,7 +38,7 @@ import Trivandrum from './Branches/Trivandrum';
 import Hyderabad from './Branches/Hyderabad';
 import Vizag from './Branches/Vizag';
 import TrichyBranches from './Branches/TrichyBranches';
-import ScrollToTop from './ScrollToTop';
+import NotFound from './NotFound';
 import IpDrug from './Courses/IpDrug';
 import CCS from './Courses/CCS';
 import RHIA from './Courses/RHIA';
@@ -71,6 +71,11 @@ function AppContent() {
     location.pathname === '/ai-medical-coding' ||
     location.pathname === '/ai-powered-medical-coding';
 
+  // Reset scroll on route change (SPA navigation keeps the previous scroll position otherwise)
+  useEffect(() => {
+    if (!location.hash) window.scrollTo(0, 0);
+  }, [location.pathname, location.hash]);
+
   return (
     <>
       {!hideHeaderFooter && <Header />}
@@ -102,6 +107,8 @@ function AppContent() {
         <Route path='/him' element={<HIM />} />
         <Route path='/radiology' element={<Radio />} />
         <Route path='/anesesthesia' element={<Anesesthesia />} />
+        <Route path='/anesthesia' element={<Navigate to="/anesesthesia" replace />} />
+        <Route path='/home' element={<Navigate to="/" replace />} />
         <Route path='/Top-Medical-Coding-Training-Saravanampatti' element={<CbeBranch1 />} />
         <Route path='/Medical-Coding-Excellence-at-Hopes' element={<CbeBranch2 />} />
         <Route path='/Premier-Medical-Coding-Institute-Gandhipuram' element={<CbeBranch3 />} />
@@ -132,6 +139,7 @@ function AppContent() {
         <Route path="/vetri-108" element={<Vetri108 />} />
         <Route path="/ai-medical-coding" element={<AIMedicalCoding />} />
         <Route path="/ai-powered-medical-coding" element={<AIMedicalCoding />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
       {!hideHeaderFooter && <Footer />}
     </>

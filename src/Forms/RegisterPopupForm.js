@@ -3,6 +3,7 @@ import { PopupContext } from '../context/PopupContext';
 import emailjs from '@emailjs/browser';
 import './RegisterPopup.css';
 import { coursesList } from '../coursesList';
+import { isValidPhone, normalizePhone, PHONE_ERROR } from '../utils/phone';
 
 import RegisterBanner from '../images/ai-medical-coding-banner.png';
 
@@ -10,6 +11,7 @@ const RegisterPopupForm = () => {
     const { isOpen, setIsOpen } = useContext(PopupContext);
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [isSuccess, setIsSuccess] = useState(false);
+    const [errorMsg, setErrorMsg] = useState('');
     const [formData, setFormData] = useState({
         name: '',
         email: '',
@@ -42,6 +44,11 @@ const RegisterPopupForm = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        setErrorMsg('');
+        if (!isValidPhone(formData.phone)) {
+            setErrorMsg(PHONE_ERROR);
+            return;
+        }
         setIsSubmitting(true);
 
         try {
@@ -55,7 +62,7 @@ Message: ${formData.message || 'N/A'}`;
                 to_email: 'info@thoughtflows.in',
                 from_name: formData.name,
                 from_email: formData.email,
-                phone: formData.phone,
+                phone: normalizePhone(formData.phone),
                 age: formData.age,
                 qualification: formData.qualification,
                 location: formData.location,
@@ -89,7 +96,7 @@ Message: ${formData.message || 'N/A'}`;
             }, 3000);
         } catch (error) {
             console.error('Failed to send email:', error);
-            alert('Something went wrong. Please try again.');
+            setErrorMsg('Something went wrong. Please try again or call us on +91 93845 76852.');
         } finally {
             setIsSubmitting(false);
         }
@@ -177,6 +184,7 @@ Message: ${formData.message || 'N/A'}`;
                                     </div>
                                 </div>
 
+                                {errorMsg && <p role="alert" style={{ color: '#d93025', fontSize: 14, margin: '8px 0 0' }}>{errorMsg}</p>}
                                 <button type="submit" className="submit-btn" disabled={isSubmitting}>
                                     {isSubmitting ? 'Submitting...' : 'Book a Free Demo Class!'}
                                 </button>
