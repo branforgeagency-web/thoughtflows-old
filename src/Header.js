@@ -22,10 +22,10 @@ const DropdownMenu = ({ isBranchPage }) => {
         { name: "Ameerpet", path: "/Trusted-Medical-Coding-Ameerpet" },
         { name: "Dilsukhnagar", path: "/Professional-Medical-Coding-Dilsukhnagar" },
       ],
-      Tirupati: [{ name: "Tirupati", path: "/Expert-Medical-Coding-Tirupathi" }],
       Trichy: [{ name: "Trichy", path: "/Career-Focused-Medical-Coding-Trichy" }],
       Salem: [{ name: "Salem", path: "/Future-Ready-Medical-Coding-Salem" }],
       Vizag: [{ name: "Vizag", path: "/Innovative-Medical-Coding-Vizag" }],
+      Tirupati: [{ name: "Tirupati", path: "/Expert-Medical-Coding-Tirupathi" }],
     },
   };
 
@@ -290,16 +290,19 @@ const Header = () => {
           <div
             className="App"
             onMouseLeave={() => setOpen({ submenu: "", open: false })}
+            style={{ width: "100%", display: "flex" }}
           >
             <div
               style={{
-                display: "flex",
-                justifyContent: "center",
+                display: "grid",
+                gridTemplateColumns: "1fr auto 1fr",
                 alignItems: "center",
-                gap: "0.45px",
                 height: "auto",
                 width: "100%",
-                padding: "0 2px"
+                maxWidth: "1400px",
+                margin: "0 auto",
+                padding: "0 24px",
+                boxSizing: "border-box"
               }}
               className={` ${isHome ? 'w-full' : 'w-full'}`}
             >

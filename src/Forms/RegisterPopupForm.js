@@ -1,6 +1,7 @@
 import React, { useState, useContext } from 'react';
 import { PopupContext } from '../context/PopupContext';
 import emailjs from '@emailjs/browser';
+import { logEnquiry } from '../utils/enquiryLog';
 import './RegisterPopup.css';
 import { coursesList } from '../coursesList';
 import { isValidPhone, normalizePhone, PHONE_ERROR } from '../utils/phone';
@@ -82,6 +83,19 @@ Message: ${formData.message || 'N/A'}`;
                     Message: ${formData.message}
                 `
             };
+
+            // Log this enquiry to the Google Sheet (admin report). Fire-and-forget:
+            // this never throws, so it can't block or break the email send below.
+            logEnquiry('Register Popup', {
+                name: formData.name,
+                email: formData.email,
+                phone: formData.phone,
+                course: formData.course,
+                location: formData.location,
+                age: formData.age,
+                qualification: formData.qualification,
+                message: formData.message,
+            });
 
             await emailjs.send(
                 'service_2anzqj9',

@@ -259,13 +259,22 @@ body {
 .navbar {
   display: flex;
   align-items: center;
-  justify-content: center !important;
+  justify-content: space-between !important;
+  width: 100%;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  justify-self: start;
 }
 
 .logo img {
-  width: 250px;
+  width: 190px;
   height: auto;
   object-fit: contain;
+  display: block;
 }
 
 .menu {
@@ -274,17 +283,19 @@ body {
   padding: 0;
   display: flex !important;
   gap: 30px !important;
-  justify-content: flex-start !important;
+  justify-content: center !important;
+  justify-self: center;
 }
 
 .menu li {
-  margin: 10 !important;
-  padding: 30 !important;
+  margin: 0 !important;
+  padding: 0 !important;
   width: auto !important;
   color: #0b3a66;
   font-family: var(--secondary-font);
-  font-weight: 400;
-  font-size: 19px;
+  font-weight: 600;
+  font-size: 16px;
+  letter-spacing: 0.01em;
 }
 
 .menu li a {
@@ -3589,36 +3600,17 @@ h1 {
 /* Desktop-only header layout adjustments */
 @media (min-width: 1024px) {
   .navbar {
-    justify-content: flex-center !important;
-    /* push menu to the right */
-    padding: 5px 40px;
+    padding: 14px 48px;
     position: relative;
-  }
-
-  .logo {
-    display: flex;
-    align-items: center;
-    position: absolute;
-    left: 100px;
-    /* three-finger padding from left */
-    padding: 10px;
   }
 
   .logo img {
     margin-left: 0;
   }
 
-  /* Add spacing between menu items on desktop only */
-  .menu {
-    gap: 3rem;
-    /* 64px */
-    margin-left: 350px;
-  }
-
-  /* Remove large per-li margins; rely on gap above */
   .menu li {
-    margin: 5px;
-    font-size: 23PX;
+    margin: 0 !important;
+    font-size: 16px;
   }
 }
 
@@ -3837,9 +3829,11 @@ ul.menu.open {
 
 
 .glass-header {
-  background: rgba(255, 255, 255, 0.35);
+  background: rgba(255, 255, 255, 0.75);
   backdrop-filter: saturate(180%) blur(12px);
   -webkit-backdrop-filter: saturate(180%) blur(12px);
+  border-bottom: 1px solid rgba(15, 23, 42, 0.06);
+  box-shadow: 0 2px 12px rgba(15, 23, 42, 0.04);
   position: -webkit-sticky;
   position: sticky;
   top: 0;

@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Luxury Floating Contact Widget</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --gold: #cfa855;
+    --gold-bright: #e8c887;
+    --ink: #0b0b0d;
+    --ink-2: #16161a;
+    --cream: #f4efe6;
+    --wa: #25D366;
+    --li: #0A66C2;
+    --ig1: #f58529;
+    --ig2: #dd2a7b;
+    --ig3: #8134af;
+    --ph: var(--gold);
+  }
+
+  *{ box-sizing: border-box; }
+
+  body{
+    margin:0;
+    min-height:100vh;
+    font-family:'Inter', sans-serif;
+    background:
+      radial-gradient(1200px 600px at 80% 10%, rgba(207,168,85,0.08), transparent 60%),
+      linear-gradient(160deg, #0d0d10 0%, #17171b 55%, #0d0d10 100%);
+    color:var(--cream);
+    overflow-x:hidden;
+  }
+
+  .demo-page{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    padding:8vh 8vw;
+  }
+
+  .demo-content{
+    max-width:640px;
+    text-align:center;
+  }
+
+  .demo-content .eyebrow{
+    font-size:12px;
+    letter-spacing:.28em;
+    text-transform:uppercase;
+    color:var(--gold);
+    margin-bottom:18px;
+  }
+
+  .demo-content h1{
+    font-family:'Playfair Display', serif;
+    font-weight:700;
+    font-size:clamp(32px, 5vw, 52px);
+    line-height:1.15;
+    margin:0 0 18px;
+    background:linear-gradient(100deg, var(--cream), var(--gold-bright) 45%, var(--cream));
+    -webkit-background-clip:text;
+    background-clip:text;
+    color:transparent;
+  }
+
+  .demo-content p{
+    color:rgba(244,239,230,0.6);
+    font-size:15.5px;
+    line-height:1.7;
+    margin:0 auto;
+    max-width:480px;
+  }
+
+  /* ================= WIDGET ================= */
+
+  .luxury-contact-widget{
+    position:fixed;
+    top:50%;
+    right:28px;
+    transform:translateY(-50%);
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:14px;
+    z-index:999;
+  }
+
+  .widget-stack{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    gap:12px;
+    order:1;
+  }
+
+  .widget-item{
+    --delay: calc(var(--i) * 55ms);
+    position:relative;
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background:linear-gradient(155deg, #1c1c20, #0e0e10);
+    border:1px solid rgba(207,168,85,0.35);
+    box-shadow:0 6px 18px rgba(0,0,0,0.45), inset 0 0 0 1px rgba(255,255,255,0.02);
+    text-decoration:none;
+    cursor:pointer;
+
+    opacity:0;
+    transform:translateX(28px) scale(0.6);
+    pointer-events:none;
+    transition:
+      opacity 320ms cubic-bezier(.2,.9,.3,1.3),
+      transform 380ms cubic-bezier(.2,.9,.3,1.3),
+      border-color 220ms ease,
+      box-shadow 220ms ease,
+      background 220ms ease;
+    transition-delay: 0ms;
+  }
+
+  .luxury-contact-widget.open .widget-item{
+    opacity:1;
+    transform:translateX(0) scale(1);
+    pointer-events:auto;
+    transition-delay: var(--delay);
+  }
+
+  .widget-item svg{
+    width:20px;
+    height:20px;
+    position:relative;
+    z-index:2;
+  }
+
+  .widget-item .ring{
+    position:absolute;
+    inset:-1px;
+    border-radius:50%;
+    opacity:0;
+    transition:opacity 260ms ease;
+    z-index:0;
+    filter:blur(6px);
+  }
+
+  .widget-item:hover{
+    transform:translateX(0) scale(1.08) !important;
+    border-color:rgba(207,168,85,0.7);
+  }
+  .luxury-contact-widget.open .widget-item:hover{
+    transform:translateX(-2px) scale(1.08) !important;
+  }
+  .widget-item:hover .ring{ opacity:.55; }
+
+  .item-wa .ring{ background:var(--wa); }
+  .item-ph .ring{ background:var(--ph); }
+  .item-li .ring{ background:var(--li); }
+  .item-ig .ring{ background:radial-gradient(circle at 30% 110%, var(--ig1), var(--ig2) 45%, var(--ig3)); }
+
+  .item-wa svg{ color:var(--wa); }
+  .item-ph svg{ color:var(--gold-bright); }
+  .item-li svg{ color:var(--li); }
+  .item-ig svg{ color:var(--ig2); }
+
+  /* tooltip label */
+  .widget-item::before{
+    content:attr(data-label);
+    position:absolute;
+    right:64px;
+    top:50%;
+    transform:translateY(-50%) translateX(6px);
+    background:var(--ink-2);
+    border:1px solid rgba(207,168,85,0.3);
+    color:var(--cream);
+    font-size:12.5px;
+    font-weight:500;
+    letter-spacing:.02em;
+    padding:6px 12px;
+    border-radius:6px;
+    white-space:nowrap;
+    opacity:0;
+    pointer-events:none;
+    transition:opacity 200ms ease, transform 200ms ease;
+    box-shadow:0 6px 16px rgba(0,0,0,0.4);
+  }
+  .widget-item:hover::before{
+    opacity:1;
+    transform:translateY(-50%) translateX(0);
+  }
+
+  /* toggle button */
+  .widget-toggle{
+    order:2;
+    width:58px;
+    height:58px;
+    border-radius:50%;
+    border:1px solid rgba(207,168,85,0.55);
+    background:linear-gradient(155deg, var(--gold-bright), var(--gold) 55%, #a6813a);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    cursor:pointer;
+    position:relative;
+    box-shadow:
+      0 10px 26px rgba(0,0,0,0.5),
+      0 0 0 0 rgba(207,168,85,0.55);
+    transition:transform 260ms cubic-bezier(.2,.9,.3,1.3), box-shadow 260ms ease;
+    animation: luxPulse 2.8s ease-out infinite;
+  }
+
+  .widget-toggle:hover{ transform:scale(1.07); }
+  .widget-toggle:active{ transform:scale(0.95); }
+
+  @keyframes luxPulse{
+    0%   { box-shadow:0 10px 26px rgba(0,0,0,0.5), 0 0 0 0 rgba(207,168,85,0.45); }
+    70%  { box-shadow:0 10px 26px rgba(0,0,0,0.5), 0 0 0 14px rgba(207,168,85,0); }
+    100% { box-shadow:0 10px 26px rgba(0,0,0,0.5), 0 0 0 0 rgba(207,168,85,0); }
+  }
+
+  .luxury-contact-widget.open .widget-toggle{
+    animation:none;
+  }
+
+  .widget-toggle svg{
+    position:absolute;
+    width:22px;
+    height:22px;
+    color:#1a1408;
+    transition:opacity 220ms ease, transform 320ms cubic-bezier(.2,.9,.3,1.3);
+  }
+
+  .toggle-icon-open{ opacity:1; transform:rotate(0deg) scale(1); }
+  .toggle-icon-close{ opacity:0; transform:rotate(-90deg) scale(.6); }
+
+  .luxury-contact-widget.open .toggle-icon-open{ opacity:0; transform:rotate(90deg) scale(.6); }
+  .luxury-contact-widget.open .toggle-icon-close{ opacity:1; transform:rotate(0deg) scale(1); }
+
+  @media (max-width:560px){
+    .luxury-contact-widget{ right:16px; gap:10px; }
+    .widget-item{ width:44px; height:44px; }
+    .widget-toggle{ width:52px; height:52px; }
+    .widget-item::before{ right:56px; font-size:12px; padding:5px 10px; }
+  }
+</style>
+</head>
+<body>
+
+  <div class="demo-page">
+    <div class="demo-content">
+      <div class="eyebrow">Preview</div>
+      <h1>A Quieter Kind of Luxury</h1>
+      <p>This page stands in for your site. The widget on the right sits collapsed until a visitor calls for it &mdash; a single gold mark that opens into your contact channels, and folds away again with one tap.</p>
+    </div>
+  </div>
+
+  <div class="luxury-contact-widget" id="contactWidget">
+    <div class="widget-stack" id="widgetStack">
+
+      <a href="#" class="widget-item item-wa" data-label="WhatsApp" style="--i:3" aria-label="WhatsApp">
+        <span class="ring"></span>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.01 2C6.48 2 2 6.48 2 12c0 1.86.5 3.6 1.38 5.1L2 22l5.06-1.33A9.94 9.94 0 0012.01 22C17.53 22 22 17.52 22 12S17.53 2 12.01 2zm5.5 14.14c-.23.65-1.34 1.24-1.85 1.3-.5.06-1.02.28-3.43-.72-2.9-1.2-4.77-4.15-4.92-4.35-.14-.2-1.17-1.56-1.17-2.98 0-1.42.75-2.11 1.01-2.4.27-.29.58-.36.78-.36.2 0 .39.002.56.01.18.008.42-.07.66.5.24.58.82 2 .89 2.15.07.15.12.32.02.52-.1.2-.15.32-.3.5-.14.17-.3.38-.43.51-.14.14-.29.29-.13.57.16.29.7 1.16 1.5 1.88 1.03.92 1.9 1.2 2.19 1.34.29.14.46.12.63-.07.17-.19.72-.83.91-1.12.19-.29.38-.24.63-.14.26.1 1.63.77 1.91.91.28.14.47.21.54.33.07.12.07.68-.16 1.33z"/></svg>
+      </a>
+
+      <a href="#" class="widget-item item-ph" data-label="Call Us" style="--i:2" aria-label="Call">
+        <span class="ring"></span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      </a>
+
+      <a href="#" class="widget-item item-li" data-label="LinkedIn" style="--i:1" aria-label="LinkedIn">
+        <span class="ring"></span>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.55v-5.57c0-1.33-.03-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12zM7.12 20.45H3.56V9h3.56v11.45z"/></svg>
+      </a>
+
+      <a href="#" class="widget-item item-ig" data-label="Instagram" style="--i:0" aria-label="Instagram">
+        <span class="ring"></span>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1" fill="currentColor" stroke="none"/></svg>
+      </a>
+
+    </div>
+
+    <button class="widget-toggle" id="widgetToggle" aria-label="Toggle contact options">
+      <svg class="toggle-icon-open" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M12 5v14M5 12h14"/></svg>
+      <svg class="toggle-icon-close" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+  </div>
+
+<script>
+  const widget = document.getElementById('contactWidget');
+  const toggle = document.getElementById('widgetToggle');
+
+  toggle.addEventListener('click', () => {
+    widget.classList.toggle('open');
+  });
+
+  // close on outside click
+  document.addEventListener('click', (e) => {
+    if (!widget.contains(e.target)) widget.classList.remove('open');
+  });
+
+  // close on Escape
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') widget.classList.remove('open');
+  });
+</script>
+
+</body>
+</html>

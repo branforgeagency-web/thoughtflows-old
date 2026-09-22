@@ -7,6 +7,7 @@ import Meta from '../Meta';
 import { isValidPhone, normalizePhone } from '../utils/phone';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
+import { logEnquiry } from '../utils/enquiryLog';
 import { coursesList } from '../coursesList';
 function Contact() {
   useEffect(() => {
@@ -212,6 +213,17 @@ ${formData.message}`,
             Message: ${formData.message}
           `
         };
+
+        // Log this enquiry to the Google Sheet (admin report). Fire-and-forget:
+        // this never throws, so it can't block or break the email send below.
+        logEnquiry('Contact', {
+          name: formData.name,
+          email: formData.email,
+          phone: formData.ph,
+          course: formData.course,
+          location: formData.location,
+          message: formData.message,
+        });
 
         // Send email using the same EmailJS credentials as Home.js
         const response = await emailjs.send(

@@ -31,6 +31,7 @@ import Radio from './Courses/Radio';
 import Anesesthesia from './Courses/Anesesthesia';
 import CbeBranch1 from './Branches/CbeBranch1';
 import TirupathiBranch from './Branches/TirupathiBranch';
+import Admin from './Admin/Admin';
 import CbeBranch2 from './Branches/CbeBranch2';
 import CbeBranch3 from './Branches/CbeBranch3';
 import Kochi from './Branches/Kochi';
@@ -113,6 +114,7 @@ function AppContent() {
         <Route path='/Medical-Coding-Excellence-at-Hopes' element={<CbeBranch2 />} />
         <Route path='/Premier-Medical-Coding-Institute-Gandhipuram' element={<CbeBranch3 />} />
         <Route path='/Expert-Medical-Coding-Tirupathi' element={<TirupathiBranch />} />
+        <Route path='/admin' element={<Admin />} />
         <Route path='/Medical-Coding-Academy-Kochi' element={<Kochi />} />
         <Route path='/Advanced-Medical-Coding-Tiruvandrum' element={<Trivandrum />} />
         <Route path='/Future-Ready-Medical-Coding-Salem' element={<Salem />} />
