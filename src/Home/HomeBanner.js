@@ -5,7 +5,7 @@ import bannersmall from '../images/Group11.png'
 import { Row } from 'react-bootstrap'
 import { Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
-import homevideo from '../images/new.webm'
+import homevideo from '../images/hero-video.mp4'
 
 const HomeBanner = () => {
     return (
