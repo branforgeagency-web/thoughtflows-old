@@ -177,6 +177,8 @@ Message: ${formData.message || 'N/A'}`;
                                                 <option value="Kochi">Kochi</option>
                                                 <option value="Trivandrum">Trivandrum</option>
                                                 <option value="Vizag">Vizag</option>
+                                                <option value="Pune, Maharashtra">Pune, Maharashtra</option>
+                                                <option value="Kolhapur, Maharashtra">Kolhapur, Maharashtra</option>
                                                 <option value="Online">Online</option>
                                             </select>
                                         </div>

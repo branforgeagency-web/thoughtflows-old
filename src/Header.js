@@ -22,6 +22,10 @@ const DropdownMenu = ({ isBranchPage }) => {
         { name: "Ameerpet", path: "/Trusted-Medical-Coding-Ameerpet" },
         { name: "Dilsukhnagar", path: "/Professional-Medical-Coding-Dilsukhnagar" },
       ],
+      Maharashtra: [
+        { name: "Pune", path: "/Advanced-Medical-Coding-Pune" },
+        { name: "Kolhapur", path: "/Medical-Coding-Training-Kolhapur" },
+      ],
       Trichy: [{ name: "Trichy", path: "/Career-Focused-Medical-Coding-Trichy" }],
       Salem: [{ name: "Salem", path: "/Future-Ready-Medical-Coding-Salem" }],
       Vizag: [{ name: "Vizag", path: "/Innovative-Medical-Coding-Vizag" }],
@@ -131,7 +135,8 @@ const Header = () => {
       '/Advanced-Medical-Coding-Tiruvandrum', '/Trusted-Medical-Coding-Ameerpet',
       '/Professional-Medical-Coding-Dilsukhnagar', '/Expert-Medical-Coding-Tirupathi',
       '/Career-Focused-Medical-Coding-Trichy', '/Future-Ready-Medical-Coding-Salem',
-      '/Innovative-Medical-Coding-Vizag'
+      '/Innovative-Medical-Coding-Vizag', '/Medical-Coding-Training-Kolhapur',
+      '/kolhapur', '/Advanced-Medical-Coding-Pune', '/pune'
     ];
     return branchPaths.some((p) => p.toLowerCase() === location.pathname.toLowerCase());
   };
@@ -243,6 +248,13 @@ const Header = () => {
         courseMenu: [
           { label: "Ameerpet", path: "/Trusted-Medical-Coding-Ameerpet" },
           { label: "Dilsukhnagar", path: "/Professional-Medical-Coding-Dilsukhnagar" },
+        ],
+      },
+      {
+        label: "MAHARASHTRA",
+        courseMenu: [
+          { label: "Pune", path: "/Advanced-Medical-Coding-Pune" },
+          { label: "Kolhapur", path: "/Medical-Coding-Training-Kolhapur" },
         ],
       },
       {

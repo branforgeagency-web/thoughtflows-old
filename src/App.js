@@ -56,7 +56,9 @@ import HCC from './Courses/HCC';
 import IVR from './Courses/IVR';
 import CDI from './Courses/CDI';
 import Hyderabad2 from './Branches/Hyderabad2';
-import Salem from "./Branches/Salem"
+import Salem from "./Branches/Salem";
+import Kolhapur from './Branches/Kolhapur';
+import Pune from './Branches/Pune';
 import TeamHierarchy from './Ourteam/TeamHierarchy';
 import { PopupProvider } from './context/PopupContext';
 import FloatingIcons from './FloatingIcons';
@@ -122,6 +124,10 @@ function AppContent() {
         <Route path='/Professional-Medical-Coding-Dilsukhnagar' element={<Hyderabad2 />} />
         <Route path='/Innovative-Medical-Coding-Vizag' element={<Vizag />} />
         <Route path='/Career-Focused-Medical-Coding-Trichy' element={<TrichyBranches />} />
+        <Route path='/Medical-Coding-Training-Kolhapur' element={<Kolhapur />} />
+        <Route path='/kolhapur' element={<Navigate to="/Medical-Coding-Training-Kolhapur" replace />} />
+        <Route path='/Advanced-Medical-Coding-Pune' element={<Pune />} />
+        <Route path='/pune' element={<Navigate to="/Advanced-Medical-Coding-Pune" replace />} />
         <Route path='/ip-drg' element={<IpDrug />} />
         <Route path='/ccs' element={<CCS />} />
         <Route path='/ccs-p' element={<CSS />} />
