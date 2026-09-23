@@ -27,7 +27,9 @@ const DiscountBanner = () => {
         "Tirupati",
         "Trichy",
         "Salem",
-        "Vizag"
+        "Vizag",
+        "Maharashtra - Pune",
+        "Maharashtra - Kolhapur"
     ];
 
     const handleInputChange = (e) => {

@@ -13,6 +13,8 @@ import tirupatiImg from "../images/Branches/clean/Tirupati.png";
 import trichyImg from "../images/Branches/clean/Trichy.png";
 import trivandrumImg from "../images/Branches/clean/Trivandrum.png";
 import vizagImg from "../images/Branches/clean/Vizag.png";
+import puneImg from "../images/Branches/clean/Pune.png";
+import kolhapurImg from "../images/Branches/clean/Kolhapur.png";
 
 const branchList = [
   { name: "Ameerpet", region: "Telangana", img: ameerpetImg, path: "/Trusted-Medical-Coding-Ameerpet" },
@@ -26,6 +28,8 @@ const branchList = [
   { name: "Trichy", region: "Tamil Nadu", img: trichyImg, path: "/Career-Focused-Medical-Coding-Trichy" },
   { name: "Tirupati", region: "Andhra Pradesh", img: tirupatiImg, path: "/Expert-Medical-Coding-Tirupathi" },
   { name: "Vizag", region: "Andhra Pradesh", img: vizagImg, path: "/Innovative-Medical-Coding-Vizag" },
+  { name: "Pune", region: "Maharashtra", img: puneImg, path: "/Advanced-Medical-Coding-Pune" },
+  { name: "Kolhapur", region: "Maharashtra", img: kolhapurImg, path: "/Medical-Coding-Training-Kolhapur" },
 ];
 
 const Branches = () => {
@@ -35,11 +39,11 @@ const Branches = () => {
         <div className="branches-lux-header">
           <span className="branches-eyebrow">Our Presence</span>
           <h2 className="branches-lux-heading">
-            Eleven campuses, <em>one standard</em> of excellence
+            Thirteen campuses, <em>one standard</em> of excellence
           </h2>
           <p className="branches-lux-subheading">
-            From Hyderabad to Kochi, Thoughtflows brings the same premium medical
-            coding training experience to every campus across South India.
+            From Pune and Kolhapur to Hyderabad and Kochi, Thoughtflows brings the
+            same premium medical coding training experience to every campus across India.
           </p>
         </div>
 

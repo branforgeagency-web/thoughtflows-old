@@ -124,6 +124,20 @@ function Contact() {
       phone: '+91 89775 07230',
       address: '7th Floor, Flat No #802 Grand Palace Building, D. No. 47-11-16, Lane Dwarka Nagar, Visakhapatnam- 530016',
     },
+    {
+      name: 'Pune',
+      top: '12.0%', left: '26.0%',
+      email: 'info@thoughtflows.in',
+      phone: '+91 93845 76852',
+      address: 'ThoughtFlows Academy, Commercial Complex, FC Road / Shivaji Nagar, Pune, Maharashtra 411005',
+    },
+    {
+      name: 'Kolhapur',
+      top: '25.0%', left: '23.0%',
+      email: 'info@thoughtflows.in',
+      phone: '+91 93845 76852',
+      address: 'ThoughtFlows Academy, Business Hub, Station Road, New Shahupuri, Kolhapur, Maharashtra 416001',
+    },
   ];
 
 
@@ -464,6 +478,8 @@ ${formData.message}`,
                   <option value="Kochi">Kochi</option>
                   <option value="Trivandrum">Trivandrum</option>
                   <option value="Vizag">Vizag</option>
+                  <option value="Pune, Maharashtra">Pune, Maharashtra</option>
+                  <option value="Kolhapur, Maharashtra">Kolhapur, Maharashtra</option>
                   <option value="Online">Online</option>
                 </select>
                 {errors.location && <span style={{ color: 'red', fontSize: '0.8em' }}>{errors.location}</span>}
@@ -522,7 +538,7 @@ ${formData.message}`,
         >
           <div>
             <h2 className='highligh' style={{ color: "#0a848f", paddingLeft: isMobile ? '0px' : '20px', fontSize: isMobile ? '32px' : '50px', marginTop: isMobile ? '10px' : '55px', textAlign: isMobile ? 'center' : 'left' }}>OUR BRANCHES</h2>
-            <h2 style={{ marginTop: "20px", paddingLeft: isMobile ? '0px' : '20px', textAlign: isMobile ? 'center' : 'left' }}>All Over South India Zone</h2>
+            <h2 style={{ marginTop: "20px", paddingLeft: isMobile ? '0px' : '20px', textAlign: isMobile ? 'center' : 'left' }}>Across South India & Maharashtra</h2>
           </div>
           <div style={{
             width: isMobile ? '100%' : '410px',
