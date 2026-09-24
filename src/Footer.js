@@ -5,11 +5,14 @@ import { Col, Container, Row } from 'react-bootstrap';
 import footerSmall from '../src/images/Bgsmallfooter.png';
 import { Link, useLocation } from 'react-router-dom';
 import ZoomSignupForm from './Zoom';
+import { getBranchInfoByPath, defaultBranchDetails } from './data/branchDetails';
 
 const Footer = () => {
     const [showZoomPopup, setShowZoomPopup] = useState(false);
     const location = useLocation();
 
+    const branch = getBranchInfoByPath(location.pathname);
+    const currentBranch = branch || defaultBranchDetails;
 
     const showSmallFooter = location.pathname === '/' || location.pathname === '/home';
 
@@ -78,7 +81,7 @@ const Footer = () => {
                 )}
 
                 <Container className="justify-content-between mt-5 main-footer">
-                    <Col lg={4} className="text-left mb-4 mb-lg-0">
+                    <Col lg={3} className="text-left mb-4 mb-lg-0">
                         <img src={footerlogo} alt="footer logo" className="footerlogo mb-3" />
                         <p className="fw-light text-start">
                             Enroll at Thoughtflows Medical Coding Academy for top-notch medical coding training.
@@ -112,35 +115,6 @@ const Footer = () => {
 
                         </ul>
                     </Col>
-                    {/* <Col lg={0.5}></Col> */}
-                    {/* <Col lg={2} md={6} className="text-left mb-4 mb-lg-0">
-                        <p className="fs-5 fw-bold">Quick Links</p>
-                        <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
-                        <ul className="list-unstyled">
-                            <li className="mb-3">
-                                <Link to="/" className="text-decoration-none text-light">Home</Link>
-                            </li>
-                            <li className="mb-3">
-                                <Link to="/about" className="text-decoration-none text-light">About</Link>
-                            </li>
-                            <li className="mb-3">
-                                <Link to="/blog" className="text-decoration-none text-light">Blog</Link>
-                            </li>
-                            <li className="mb-3">
-                                <Link to="/contact" className="text-decoration-none text-light">Contact</Link>
-                            </li>
-                        </ul>
-                    </Col> 
-
-                    <Col lg={1} className="text-start mb-4 mb-lg-0">
-                        {/* <p className="fs-5 fw-bold">Address</p>
-                        <hr className="" style={{ width: '60px', borderColor: '#FFFFFF' }} />
-                        <p className="text-start fw-light mt-3">
-                            9/2, 2nd floor, Doctors colony,<br />
-                            Dr.Radhakrishnan road,<br />
-                            Gandhipuram,<br />
-                            Coimbatore - 641012.
-                        </p> */}
                     <Col lg={1} className="text-start mb-4 mb-lg-0">
                         <p className="fs-5 fw-bold">AAPC</p>
                         <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
@@ -250,35 +224,67 @@ const Footer = () => {
                         </ul>
                     </Col>
 
-                    {/* <Col lg={0.5}></Col> */}
-                    <Col lg={2} className="text-start mb-4 mb-lg-0">
-                        <p className="fs-5 fw-bold">Contact</p>
-                        <hr className="" style={{ width: '60px', borderColor: '#FFFFFF' }} />
-                        <div className="d-flex align-items-center mb-2">
-                            <i className="fas fa-phone text-white me-2"></i>
-                            <a
-                                href="tel:+919384576852"
-                                style={{ textDecoration: 'none', color: 'white' }}
-                            >
-                                +91-9384576852
-                            </a>
-                        </div>
-                        <div className="d-flex align-items-center">
-                            <i className="fas fa-envelope text-white me-2"></i>
-                            <a
-                                href="mailto:info@thoughtflows.in"
-                                style={{ textDecoration: 'none', color: 'white' }}
-                            >
-                                info@thoughtflows.in
-                            </a>
-                        </div>
+                    <Col lg={3} className="text-start mb-4 mb-lg-0">
+                        <p className="fs-5 fw-bold">{currentBranch.displayName || (branch ? `${branch.name} Branch` : 'Contact')}</p>
+                        <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
+                        {currentBranch.address && (
+                            <div className="d-flex align-items-start mb-2">
+                                <i className="fas fa-map-marker-alt text-white me-2 mt-1 flex-shrink-0"></i>
+                                <span style={{ fontSize: '13px', lineHeight: '1.45' }}>
+                                    {currentBranch.address}
+                                </span>
+                            </div>
+                        )}
+                        {currentBranch.phone && (
+                            <div className="d-flex align-items-center mb-2">
+                                <i className="fas fa-phone text-white me-2 flex-shrink-0"></i>
+                                <a
+                                    href={`tel:${currentBranch.phoneClean || currentBranch.phone}`}
+                                    style={{ textDecoration: 'none', color: 'white', fontSize: '14px' }}
+                                >
+                                    {currentBranch.phone}
+                                </a>
+                            </div>
+                        )}
+                        {currentBranch.email && (
+                            <div className="d-flex align-items-center mb-2">
+                                <i className="fas fa-envelope text-white me-2 flex-shrink-0"></i>
+                                <a
+                                    href={`mailto:${currentBranch.email}`}
+                                    style={{ textDecoration: 'none', color: 'white', fontSize: '14px' }}
+                                >
+                                    {currentBranch.email}
+                                </a>
+                            </div>
+                        )}
+                        {!currentBranch.address && !currentBranch.phone && !currentBranch.email && (
+                            <p className="text-light fst-italic mb-3" style={{ fontSize: '13px', opacity: 0.85 }}>
+                                Branch contact details coming soon.
+                            </p>
+                        )}
                         <div className="d-flex gap-3 mt-4">
-                            <a href="https://www.instagram.com/thought_flows/" aria-label="Instagram" target="_blank" rel="noopener noreferrer" className="text-light">
-                                <i className="fab fa-instagram fa-lg"></i>
-                            </a>
-                            <a href="https://www.facebook.com/Thoughtflowsacademy/" aria-label="Facebook" target="_blank" rel="noopener noreferrer" className="text-light">
-                                <i className="fab fa-facebook fa-lg"></i>
-                            </a>
+                            {currentBranch.instagram && (
+                                <a
+                                    href={currentBranch.instagram}
+                                    aria-label={`${currentBranch.name || 'ThoughtFlows'} Instagram`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-light"
+                                >
+                                    <i className="fab fa-instagram fa-lg"></i>
+                                </a>
+                            )}
+                            {currentBranch.facebook && (
+                                <a
+                                    href={currentBranch.facebook}
+                                    aria-label={`${currentBranch.name || 'ThoughtFlows'} Facebook`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-light"
+                                >
+                                    <i className="fab fa-facebook fa-lg"></i>
+                                </a>
+                            )}
                             <a href="https://linkedin.com/company/thoughtflows-medical-coding-academy" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="text-light">
                                 <i className="fab fa-linkedin fa-lg"></i>
                             </a>

@@ -51,92 +51,118 @@ function Contact() {
       name: 'Saravanampatti',
       top: '64.0%', left: '35.0%', // Adjusted for distance
       email: 'info@thoughtflows.in',
-      phone: '+91 88075 10359 & +91 93845 76852 ',
-      address: 'No-171/2A, 1st, Promenade Tower, Sathy Road, Saravanampatti, Coimbatore, Tamil Nadu 641035',
+      phone: '+91 93845 76852',
+      address: 'No-171/2A, 1st, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu 641035',
+      instagram: 'https://www.instagram.com/thought_flows?stkn=a2xlYW43eG45dmt6',
+      facebook: 'https://www.facebook.com/Thoughtflowsacademy/',
     },
     {
       name: 'Hopes',
       top: '72.0%', left: '36.5%', // Adjusted for distance
       email: 'info@thoughtflows.in',
-      phone: '+91 9791974560 & +91 9384576852',
+      phone: '+91 93845 76852',
       address: 'Door No.62 E/F , 1st Floor South Wing, Lalitha Towers Gandhi Street, Avinashi Rd, Coimbatore, Tamil Nadu 641004',
+      instagram: 'https://www.instagram.com/thought_flows?stkn=a2xlYW43eG45dmt6',
+      facebook: 'https://www.facebook.com/thoughtflowscoimbatore/',
     },
     {
       name: 'Gandhipuram',
       top: '71.5%', left: '32.0%', // Adjusted for distance
       email: 'info@thoughtflows.in',
-      phone: '+91 9655079784, +91 9384576852',
-      address: 'Jay Enclave, 1084, 3rd Street, Cross Cut Road, Gandhipuram, Tamil Nadu 641012',
+      phone: '+91 93845 76852',
+      address: 'Jay Enclave, 1084, 3rd St, Cross Cut Road, Gandhipuram, Coimbatore, Tamil Nadu 641012',
+      instagram: 'https://www.instagram.com/thought_flows?stkn=a2xlYW43eG45dmt6',
+      facebook: 'https://www.facebook.com/people/Thoughtflows-Medical-Coding-Academy-Gandhipuram-Coimbatore/61562789837696/',
     },
     {
       name: 'Tirupati',
       top: '44.72%', left: '48.43%',
       email: 'info@thoughtflows.in',
-      phone: '+91 8790424835 & +91 9384576852',
-      address: '20-1-171/C1, 1st floor Upstairs MIOT Diagnostic center oppo. Sai Baba temple, Tirumala Bypass Rd, Korlagunta, Tirupati, Andhra Pradesh 517501',
+      phone: '+91 87904 24835',
+      address: '20-1-171/C1 ,1st floor Upstairs MIOT Diagnostic center oppo.Sai Baba temple, Tirumala Bypass Rd, Korlagunta, Tirupati, Andhra Pradesh 517501',
+      instagram: 'https://www.instagram.com/medicalcoding_thoughtflowstpt?stkn=MTZvZHkzNWhwN3B0dg%3D%3D',
+      facebook: 'https://www.facebook.com/Thoughtflowsmedicalcodingacademytirupati',
     },
     {
       name: 'Ameerpet',
       top: '16.63%', left: '45.18%',
       email: 'info@thoughtflows.in',
-      phone: '+91 8790751742 & +91 98045 76852',
-      address: 'No:405, 3rd Floor & No:606/A, 5th Floor, Vasavi MPM Grand Yellareddyguda, Ameerpet X Road Telangana 500073',
+      phone: '+91 87907 51742',
+      address: 'Level 6(5th Floor, Vasavi Mpm Grand, No: 606/A, Ameerpet X Road, Yella Reddy Guda, Hyderabad, Telangana 500073',
+      instagram: 'https://www.instagram.com/thoughtflowshyderabad?stkn=MTRtY2Z2bnNxNzZ1cQ%3D%3D',
+      facebook: 'https://www.facebook.com/Thoughtflowshyderabad/',
     },
     {
       name: 'Trivandrum',
       top: '80.51%', left: '26.93%',
       email: 'info@thoughtflows.in',
-      phone: '+91 93845 76852 ',
-      address: '167, 1st Floor, Karimpanal Arcade, opp. to Padmanabhaswamy Temple, East Fort, Thiruvananthapuram, Kerala 695024',
+      phone: '+91 90480 23242',
+      address: '167, 1st Floor, Karimpanal Arcade, opp. to Padmanabhaswamy Temple, Fort, East Fort, Pazhavangadi, Thiruvananthapuram, Keralam 695023',
+      instagram: 'https://www.instagram.com/thoughtflowskerala?stkn=ZG9ybTE2aGZ6cDVn',
+      facebook: 'https://www.facebook.com/Thoughtflowskerala/',
     },
     {
       name: 'Kochi',
       top: '70.14%', left: '22.70%',
       email: 'info@thoughtflows.in',
-      phone: '  +91 90480 23242 , +91 93845 76852',
-      address: '4 th floor, Vee Vee Tower , NH Bypass road, Near Bhima Jewels, Edappally, Kochi, Eranakulam, Kerala 682024',
+      phone: '+91 90480 23242',
+      address: '4 th floor, Vee Vee Tower, road, near Bhima Jewels, NH Bye Pass, Edappally, Kochi, Ernakulam, Keralam 682024',
+      instagram: 'https://www.instagram.com/thoughtflows_kochi?stkn=M2tndXF5ZHc0dWZi',
+      facebook: 'https://www.facebook.com/thoughtflowsacademykochi/',
     },
     {
       name: 'Trichy',
       top: '72.5%', left: '42.5%', // Adjusted for distance
       email: 'info@thoughtflows.in',
-      phone: '+91 8438974736, +91 9384576852',
-      address: '25 ,C-40,first floor ,AMIL towers, 3rd cross, Thillai nagar east, Trichy, Tamil Nadu 620018',
+      phone: '+91 93845 76852',
+      address: 'first floor, AMIL towers, 25, C-40, 3rd Cross Rd, Thillai Nagar, Tiruchirappalli, Tamil Nadu 620018',
+      instagram: 'https://www.instagram.com/thoughtflows_trichy?stkn=MzJlemxjcjM1MWg4',
+      facebook: 'https://www.facebook.com/Thoughtflowstrichy/',
     },
     {
       name: 'Salem',
       top: '62.5%', left: '39.8%', // Adjusted for distance
       email: 'info@thoughtflows.in',
-      phone: '+91 8148732017',
+      phone: '+91 81487 32017',
       address: '1st floor, S Square Towers, Omalur Main Rd, Arthanari Nagar, Mamangam, Salem, Tamil Nadu 636302',
+      instagram: 'https://www.instagram.com/thoughtflowssalem?stkn=amU3YnowZmowOThq',
+      facebook: 'https://www.facebook.com/profile.php?id=61557903507460',
     },
     {
       name: 'Dilsukhnagar',
       top: '18.64%', left: '48.43%',
       email: 'info@thoughtflows.in',
-      phone: '+91 90305 08844 ',
-      address: 'Sai Towers H.No:-16-11-477-/6/1/A, 2nd floor Opp.pillar No:-1519, Dilshuknagar., Hyderabad, Telangana 500102',
+      phone: '+91 90305 08844',
+      address: 'H.No:-16, Sai Towers, 11-477-/6/1/A 2nd floor, opp. pillar No:-1519, Indira Nagar, Dilsukhnagar, Hyderabad, Telangana 500102',
+      instagram: 'https://www.instagram.com/thoughtflowsdilsukhnagar?stkn=MW10NTZqd3Z3NWhnZw==',
+      facebook: 'https://www.facebook.com/profile.php?id=61592324790661',
     },
     {
       name: 'Vizag',
       top: '15.29%', left: '80.36%',
       email: 'info@thoughtflows.in',
       phone: '+91 89775 07230',
-      address: '7th Floor, Flat No #802 Grand Palace Building, D. No. 47-11-16, Lane Dwarka Nagar, Visakhapatnam- 530016',
+      address: '7th floor, IT Grand Palace, 701/A, 1st Ln, Dwaraka Nagar, Visakhapatnam, Andhra Pradesh 530016',
+      instagram: 'https://www.instagram.com/thoughtflows_vizag?stkn=cTRqZmV3cGcwcHBq',
+      facebook: 'https://www.facebook.com/profile.php?id=61577112877261',
     },
     {
       name: 'Pune',
       top: '12.0%', left: '26.0%',
-      email: 'info@thoughtflows.in',
-      phone: '+91 93845 76852',
-      address: 'ThoughtFlows Academy, Commercial Complex, FC Road / Shivaji Nagar, Pune, Maharashtra 411005',
+      email: '',
+      phone: '',
+      address: '',
+      instagram: '',
+      facebook: '',
     },
     {
       name: 'Kolhapur',
       top: '25.0%', left: '23.0%',
-      email: 'info@thoughtflows.in',
-      phone: '+91 93845 76852',
-      address: 'ThoughtFlows Academy, Business Hub, Station Road, New Shahupuri, Kolhapur, Maharashtra 416001',
+      email: '',
+      phone: '',
+      address: '',
+      instagram: '',
+      facebook: '',
     },
   ];
 
@@ -304,35 +330,83 @@ ${formData.message}`,
             </div>
 
             <div className="space-y-4">
-              <div className="flex items-start space-x-3">
-                <div className="w-12 h-12 bg-[#0D8F9C] rounded-full flex items-center justify-center flex-shrink-0">
-                  <FontAwesomeIcon icon={faArrowDown} className="text-white" />
+              {selectedLocation.email && (
+                <div className="flex items-start space-x-3">
+                  <div className="w-12 h-12 bg-[#0D8F9C] rounded-full flex items-center justify-center flex-shrink-0">
+                    <FontAwesomeIcon icon={faArrowDown} className="text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg text-gray-800">Email</h3>
+                    <p className="text-gray-600">{selectedLocation.email}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-lg text-gray-800">Email</h3>
-                  <p className="text-gray-600">{selectedLocation.email}</p>
-                </div>
-              </div>
+              )}
 
-              <div className="flex items-start space-x-3">
-                <div className="w-12 h-12 bg-[#0D8F9C] rounded-full flex items-center justify-center flex-shrink-0">
-                  <FontAwesomeIcon icon={faArrowDown} className="text-white" />
+              {selectedLocation.phone && (
+                <div className="flex items-start space-x-3">
+                  <div className="w-12 h-12 bg-[#0D8F9C] rounded-full flex items-center justify-center flex-shrink-0">
+                    <FontAwesomeIcon icon={faArrowDown} className="text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg text-gray-800">Phone</h3>
+                    <a
+                      href={`tel:${selectedLocation.phone.replace(/[^0-9+]/g, '')}`}
+                      className="text-gray-600 hover:text-[#0D8F9C] transition-colors"
+                    >
+                      {selectedLocation.phone}
+                    </a>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-lg text-gray-800">Phone</h3>
-                  <p className="text-gray-600">{selectedLocation.phone}</p>
-                </div>
-              </div>
+              )}
 
-              <div className="flex items-start space-x-3">
-                <div className="w-12 h-12 bg-[#0D8F9C] rounded-full flex items-center justify-center flex-shrink-0">
-                  <FontAwesomeIcon icon={faArrowDown} className="text-white" />
+              {selectedLocation.address && (
+                <div className="flex items-start space-x-3">
+                  <div className="w-12 h-12 bg-[#0D8F9C] rounded-full flex items-center justify-center flex-shrink-0">
+                    <FontAwesomeIcon icon={faArrowDown} className="text-white" />
+                  </div>
+                  <div>
+                    <h3 className="font-semibold text-lg text-gray-800">Address</h3>
+                    <p className="text-gray-600 leading-relaxed">{selectedLocation.address}</p>
+                  </div>
                 </div>
-                <div>
-                  <h3 className="font-semibold text-lg text-gray-800">Address</h3>
-                  <p className="text-gray-600 leading-relaxed">{selectedLocation.address}</p>
+              )}
+
+              {!selectedLocation.phone && !selectedLocation.address && !selectedLocation.email && (
+                <p className="text-gray-500 italic py-3 text-center">
+                  Branch contact details coming soon.
+                </p>
+              )}
+
+              {(selectedLocation.instagram || selectedLocation.facebook) && (
+                <div className="flex items-center gap-3 pt-3">
+                  {selectedLocation.instagram && (
+                    <a
+                      href={selectedLocation.instagram}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-white font-medium shadow-sm hover:opacity-90 transition-all text-sm"
+                      style={{
+                        background: 'linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5)'
+                      }}
+                    >
+                      <i className="fab fa-instagram"></i>
+                      <span>Instagram</span>
+                    </a>
+                  )}
+                  {selectedLocation.facebook && (
+                    <a
+                      href={selectedLocation.facebook}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-white font-medium shadow-sm hover:opacity-90 transition-all text-sm"
+                      style={{ backgroundColor: '#1877F2' }}
+                    >
+                      <i className="fab fa-facebook"></i>
+                      <span>Facebook</span>
+                    </a>
+                  )}
                 </div>
-              </div>
+              )}
             </div>
 
             <div className="mt-8 flex justify-end">

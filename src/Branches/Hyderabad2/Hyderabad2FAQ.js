@@ -54,7 +54,7 @@ const Hyderabad2FAQ = () => {
   const faqs = [
     {
       question: "Where is the ThoughtFlows Dilsukhnagar center?",
-      answer: "We're located in the heart of Dilsukhnagar, easy to reach via metro and local transport: Flat No: 201, 2nd Floor, Mega Residency, Chaitanyapuri, Dilsukhnagar, Hyderabad, 500060. Call ahead to schedule a visit or demo."
+      answer: "We're located in the heart of Dilsukhnagar, easy to reach via metro and local transport: H.No:-16, Sai Towers, 11-477-/6/1/A 2nd floor, opp. pillar No:-1519, Indira Nagar, Dilsukhnagar, Hyderabad, Telangana 500102. Call +91 90305 08844 to schedule a visit or demo."
     },
     {
       question: "What does the medical coding course cover?",
