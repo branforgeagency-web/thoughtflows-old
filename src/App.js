@@ -126,8 +126,9 @@ function AppContent() {
         <Route path='/Career-Focused-Medical-Coding-Trichy' element={<TrichyBranches />} />
         <Route path='/Medical-Coding-Training-Kolhapur' element={<Kolhapur />} />
         <Route path='/kolhapur' element={<Navigate to="/Medical-Coding-Training-Kolhapur" replace />} />
-        <Route path='/Advanced-Medical-Coding-Pune' element={<Pune />} />
-        <Route path='/pune' element={<Navigate to="/Advanced-Medical-Coding-Pune" replace />} />
+        <Route path='/medical-coding-course-pune' element={<Pune />} />
+        <Route path='/Advanced-Medical-Coding-Pune' element={<Navigate to="/medical-coding-course-pune/" replace />} />
+        <Route path='/pune' element={<Navigate to="/medical-coding-course-pune/" replace />} />
         <Route path='/ip-drg' element={<IpDrug />} />
         <Route path='/ccs' element={<CCS />} />
         <Route path='/ccs-p' element={<CSS />} />

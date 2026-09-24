@@ -23,7 +23,7 @@ const DropdownMenu = ({ isBranchPage }) => {
         { name: "Dilsukhnagar", path: "/Professional-Medical-Coding-Dilsukhnagar" },
       ],
       Maharashtra: [
-        { name: "Pune", path: "/Advanced-Medical-Coding-Pune" },
+        { name: "Pune", path: "/medical-coding-course-pune/" },
         { name: "Kolhapur", path: "/Medical-Coding-Training-Kolhapur" },
       ],
       Trichy: [{ name: "Trichy", path: "/Career-Focused-Medical-Coding-Trichy" }],
@@ -136,7 +136,8 @@ const Header = () => {
       '/Professional-Medical-Coding-Dilsukhnagar', '/Expert-Medical-Coding-Tirupathi',
       '/Career-Focused-Medical-Coding-Trichy', '/Future-Ready-Medical-Coding-Salem',
       '/Innovative-Medical-Coding-Vizag', '/Medical-Coding-Training-Kolhapur',
-      '/kolhapur', '/Advanced-Medical-Coding-Pune', '/pune'
+      '/kolhapur', '/Advanced-Medical-Coding-Pune', '/pune',
+      '/medical-coding-course-pune', '/medical-coding-course-pune/'
     ];
     return branchPaths.some((p) => p.toLowerCase() === location.pathname.toLowerCase());
   };
@@ -253,7 +254,7 @@ const Header = () => {
       {
         label: "MAHARASHTRA",
         courseMenu: [
-          { label: "Pune", path: "/Advanced-Medical-Coding-Pune" },
+          { label: "Pune", path: "/medical-coding-course-pune/" },
           { label: "Kolhapur", path: "/Medical-Coding-Training-Kolhapur" },
         ],
       },

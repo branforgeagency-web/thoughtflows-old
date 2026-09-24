@@ -153,7 +153,7 @@ export const branchDetails = {
     email: '',
     instagram: '',
     facebook: '',
-    routes: ['/advanced-medical-coding-pune', '/pune']
+    routes: ['/medical-coding-course-pune', '/medical-coding-course-pune/', '/advanced-medical-coding-pune', '/pune']
   },
   kolhapur: {
     key: 'kolhapur',

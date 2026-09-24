@@ -3,14 +3,10 @@ import Meta from '../Meta';
 
 import PuneBanner from './Pune/PuneBanner';
 import PuneAbout from './Pune/PuneAbout';
-import PuneFlex from './Pune/PuneFlex';
+import PuneTransform from './Pune/PuneTransform';
 import PuneCore from './Pune/PuneCore';
-import PuneSticky from './Pune/PuneSticky';
-import PuneOnline from './Pune/PuneOnline';
-import PuneOnline2 from './Pune/PuneOnline2';
-import PuneGetinTouch from './Pune/PuneGetinTouch';
+import PuneContents from './Pune/PuneContents';
 import PuneFAQ from './Pune/PuneFAQ';
-import PuneTestimonial from './Pune/PuneTestimonial';
 
 function Pune() {
   useEffect(() => {
@@ -20,21 +16,17 @@ function Pune() {
   return (
     <>
       <Meta
-        title="Medical Coding Course in Pune | ThoughtFlows Academy"
-        description="Advance your healthcare career with ThoughtFlows Medical Coding Academy in Pune — expert AAPC certified trainers, practical case studies, and 100% placement support."
-        canonical="https://www.thoughtflows.in/Advanced-Medical-Coding-Pune"
+        title="Medical Coding Course in Pune | CPC Training | Thoughtflows"
+        description="Join medical coding classes in Pune at Thoughtflows. Learn ICD-10-CM, CPT & HCPCS from certified coders with CPC prep, real charts & flexible batches."
+        canonical="https://www.thoughtflows.in/medical-coding-course-pune/"
       />
 
       <PuneBanner />
       <PuneAbout />
-      <PuneFlex />
+      <PuneTransform />
       <PuneCore />
-      <PuneSticky />
-      <PuneOnline />
-      <PuneOnline2 />
-      <PuneGetinTouch />
+      <PuneContents />
       <PuneFAQ />
-      <PuneTestimonial />
     </>
   );
 }

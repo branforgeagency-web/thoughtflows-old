@@ -95,7 +95,7 @@ test('getBranchInfoByPath resolves correct branch data for each branch route', (
   expect(tirupati.address).toContain('MIOT Diagnostic center');
 
   // Pune and Kolhapur (left empty for future update)
-  const pune = getBranchInfoByPath('/Advanced-Medical-Coding-Pune');
+  const pune = getBranchInfoByPath('/medical-coding-course-pune/');
   expect(pune).not.toBeNull();
   expect(pune.phone).toBe('');
   expect(pune.address).toBe('');

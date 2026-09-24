@@ -53,32 +53,32 @@ const PuneFAQ = () => {
 
   const faqs = [
     {
-      question: "Where is ThoughtFlows Medical Coding Academy located in Pune?",
-      answer: "Our Pune branch is located in an easily accessible tech and academic corridor in Pune with excellent bus, metro, and suburban train connectivity. Connect with our student advisors to schedule a campus tour or attend an orientation session."
+      question: "What is the length of the medical coding course at Thoughtflows, Pune?",
+      answer: "Our medical coding course in Pune takes place over [x] months, teaching students ICD-10-CM and CPT codes, HCPCS, medical terminology and anatomy, and prepares students to take the CPC exam. The course takes place on weekdays and weekends, allowing students to juggle other commitments."
     },
     {
-      question: "What qualifications are required to enroll in the Pune center?",
-      answer: "Graduates and post-graduates in Life Sciences, B.Pharmacy, M.Pharmacy, Pharm.D, Nursing (B.Sc / GNM), Physiotherapy (BPT), Biotechnology, and related biological science disciplines are eligible. Freshers and career changers are welcome."
+      question: "Who all can apply for the medical coding course at Pune?",
+      answer: "Graduates of courses related to nursing, pharmacy, and other allied health services are eligible for this course. Although this is not mandatory, working and intending healthcare professionals are also welcome to the course as we cover topics in a structured manner."
     },
     {
-      question: "How does ThoughtFlows guarantee placement assistance in Pune?",
-      answer: "We partner with over 150+ healthcare IT, medical coding, and RCM firms operating in Pune, Mumbai, Bangalore, and across India. We provide resume building, technical mock interview sessions, HR grooming, and arrange direct recruitment interviews until you receive an offer."
+      question: "Do you offer training and help in the CPC certification?",
+      answer: "Yes, our course covers all aspects of AAPC's CPC certification exam, and prepares students through teaching and learning strategies developed by certified personnel. Additionally, we assist students to prepare for AHIMA's CCS exam."
     },
     {
-      question: "Which certifications can I prepare for at the Pune branch?",
-      answer: "We offer comprehensive preparation for AAPC's Certified Professional Coder (CPC), Certified Inpatient Coder (CIC), Certified Outpatient Coder (COC), and AHIMA's Certified Coding Specialist (CCS)."
+      question: "Can I expect placement after taking the course?",
+      answer: "Yes, as part of the course, students learn to code using the assessment and coding test provided by companies. We help students prepare their resumes and cover letters and conduct mock interviews. Our team helps eligible students find employment in healthcare RCM and medical coding companies."
     },
     {
-      question: "Are online and hybrid class options available in Pune?",
-      answer: "Yes, in addition to regular classroom coaching in Pune, we offer live interactive online batches with recorded sessions, digital assignments, and doubt-clearing hours for working professionals."
+      question: "What is the cost of the medical coding course in Pune?",
+      answer: "We do not charge any additional fees on top of the medical coding course cost. We provide several instalment payment options. The course fee is non-negotiable and transparent. For more information on the course fees and upcoming courses, contact us."
     }
   ];
 
   return (
     <div style={{ maxWidth: '900px', margin: '60px auto', padding: '0 20px' }}>
       <div style={{ textAlign: 'center', marginBottom: '40px' }}>
-        <h4 style={{ color: '#097D8A', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '600' }}>Common Inquiries</h4>
-        <h2 style={{ fontSize: '32px', color: '#0f172a', marginTop: '10px' }}>Frequently Asked Questions — Pune</h2>
+        <h4 style={{ color: '#097D8A', textTransform: 'uppercase', letterSpacing: '1px', fontWeight: '600' }}>FAQ</h4>
+        <h2 style={{ fontSize: '32px', color: '#0f172a', marginTop: '10px' }}>Frequently Asked Questions</h2>
       </div>
       <div>
         {faqs.map((faq, index) => (
