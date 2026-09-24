@@ -28,7 +28,7 @@ const branchList = [
   { name: "Trichy", region: "Tamil Nadu", img: trichyImg, path: "/Career-Focused-Medical-Coding-Trichy" },
   { name: "Tirupati", region: "Andhra Pradesh", img: tirupatiImg, path: "/Expert-Medical-Coding-Tirupathi" },
   { name: "Vizag", region: "Andhra Pradesh", img: vizagImg, path: "/Innovative-Medical-Coding-Vizag" },
-  { name: "Pune", region: "Maharashtra", img: puneImg, path: "/Advanced-Medical-Coding-Pune" },
+  { name: "Pune", region: "Maharashtra", img: puneImg, path: "/medical-coding-course-pune/" },
   { name: "Kolhapur", region: "Maharashtra", img: kolhapurImg, path: "/Medical-Coding-Training-Kolhapur" },
 ];
 
