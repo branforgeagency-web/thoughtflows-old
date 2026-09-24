@@ -54,7 +54,7 @@ const HyderabadFAQ = () => {
   const faqs = [
     {
       question: "Where exactly is your Ameerpet branch located?",
-      answer: "You'll find us right opposite Ameerpet Metro Station, easy to reach from anywhere in Hyderabad — Vasavi MPM Grand Building, Flat 606/A, 5th Floor, Ameerpet X Road, Hyderabad – 500016. Walk-ins are welcome; just call ahead and we'll keep some time for you."
+      answer: "You'll find us right opposite Ameerpet Metro Station, easy to reach from anywhere in Hyderabad — Level 6 (5th Floor), Vasavi MPM Grand, No: 606/A, Ameerpet X Road, Yella Reddy Guda, Hyderabad, Telangana 500073. Walk-ins are welcome; call +91 87907 51742 and we'll keep some time for you."
     },
     {
       question: "How long does the medical coding course take?",

@@ -1,11 +1,17 @@
+import { useLocation } from "react-router-dom";
 import { FaWhatsapp, FaPhoneAlt, FaLinkedin, FaInstagram } from "react-icons/fa";
+import { getBranchInfoByPath, defaultBranchDetails } from "./data/branchDetails";
 
 const FloatingIcons = () => {
+  const location = useLocation();
+  const currentBranch = getBranchInfoByPath(location.pathname) || defaultBranchDetails;
+
   return (
     <div className="fixed bottom-5 right-5 flex flex-col gap-3 z-50">
       {/* WhatsApp Icon */}
       <a
-        href="https://wa.me/919384576852" aria-label="Chat on WhatsApp"
+        href={`https://wa.me/91${currentBranch.phoneRaw || '9384576852'}`}
+        aria-label={`Chat on WhatsApp - ${currentBranch.name || 'ThoughtFlows'}`}
         target="_blank"
         rel="noopener noreferrer"
         className="bg-green-500 text-white p-3 rounded-full shadow-lg hover:bg-green-600 transition-all"
@@ -15,7 +21,8 @@ const FloatingIcons = () => {
 
       {/* Call Icon */}
       <a
-        href="tel:+919384576852" aria-label="Call ThoughtFlows"
+        href={`tel:${currentBranch.phoneClean || '+919384576852'}`}
+        aria-label={`Call ${currentBranch.name || 'ThoughtFlows'}`}
         className="text-white p-3 rounded-full shadow-lg transition-all"
         style={{
           background: 'linear-gradient(135deg, #8B5CF6, #A855F7)',
@@ -53,7 +60,8 @@ const FloatingIcons = () => {
 
       {/* Instagram Icon */}
       <a
-        href="https://www.instagram.com/thought_flows/" aria-label="Instagram"
+        href={currentBranch.instagram || "https://www.instagram.com/thought_flows/"}
+        aria-label={`Instagram - ${currentBranch.name || 'ThoughtFlows'}`}
         target="_blank"
         rel="noopener noreferrer"
         className="text-white p-3 rounded-full shadow-lg transition-all"
