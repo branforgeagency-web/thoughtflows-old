@@ -59,6 +59,7 @@ import Hyderabad2 from './Branches/Hyderabad2';
 import Salem from "./Branches/Salem";
 import Kolhapur from './Branches/Kolhapur';
 import Pune from './Branches/Pune';
+import Theni from './Branches/Theni';
 import TeamHierarchy from './Ourteam/TeamHierarchy';
 import { PopupProvider } from './context/PopupContext';
 import FloatingIcons from './FloatingIcons';
@@ -129,6 +130,8 @@ function AppContent() {
         <Route path='/medical-coding-course-pune' element={<Pune />} />
         <Route path='/Advanced-Medical-Coding-Pune' element={<Navigate to="/medical-coding-course-pune/" replace />} />
         <Route path='/pune' element={<Navigate to="/medical-coding-course-pune/" replace />} />
+        <Route path='/medical-coding-course-theni' element={<Theni />} />
+        <Route path='/theni' element={<Navigate to="/medical-coding-course-theni" replace />} />
         <Route path='/ip-drg' element={<IpDrug />} />
         <Route path='/ccs' element={<CCS />} />
         <Route path='/ccs-p' element={<CSS />} />

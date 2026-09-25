@@ -1,0 +1,149 @@
+/* ===== Theni landing page – light theme ===== */
+.theni-page { --tn-teal: #097D8A; --tn-teal-dark: #0b5e68; --tn-mint: #e8f7f8; --tn-ink: #0f172a; --tn-text: #475569; --tn-line: #e2e8f0; background: #fff; overflow-x: hidden; }
+.theni-page h2 { font-size: clamp(24px, 3.5vw, 34px); color: var(--tn-ink); margin-bottom: 16px; font-weight: 700; }
+.theni-page h3 { font-size: 19px; color: var(--tn-ink); margin-bottom: 8px; font-weight: 600; }
+.theni-page p { color: var(--tn-text); font-size: 16px; line-height: 1.75; }
+.theni-accent { color: var(--tn-teal); }
+.theni-eyebrow { display: inline-block; background: var(--tn-mint); color: var(--tn-teal); font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; padding: 6px 14px; border-radius: 30px; margin-bottom: 14px; }
+
+.theni-section { padding: 80px 20px; position: relative; }
+.theni-section.alt { background: linear-gradient(180deg, #f5fbfc 0%, #ffffff 100%); }
+.theni-wrap { max-width: 1180px; margin: 0 auto; position: relative; z-index: 1; }
+.theni-center { text-align: center; max-width: 760px; margin: 0 auto 10px; }
+
+/* Hero */
+.theni-hero { box-sizing: border-box; position: relative; width: 100vw; max-width: 100vw; margin-left: calc(50% - 50vw); margin-right: calc(50% - 50vw); margin-bottom: 0; background: linear-gradient(135deg, #eefafb 0%, #ffffff 45%, #f3f7ff 100%); padding: 60px 5vw 0; overflow: hidden; }
+.theni-hero .theni-wrap { max-width: 1440px; width: 100%; }
+/* Hero fills the first screen (viewport minus site header) */
+.theni-hero { min-height: calc(100vh - 75px); min-height: calc(100svh - 75px); display: flex; align-items: stretch; }
+.theni-hero .theni-hero-grid { align-items: stretch; }
+.theni-hero-copy { display: flex; flex-direction: column; justify-content: center; align-items: flex-start; }
+.theni-hero-actions { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
+.theni-hero-actions .theni-btn.ghost { margin-left: 0; }
+.theni-hero-img { align-items: flex-end; }
+.theni-hero + .theni-section { padding-top: 40px; }
+.theni-blob { position: absolute; border-radius: 50%; filter: blur(60px); opacity: .55; z-index: 0; }
+.theni-blob.b1 { width: 380px; height: 380px; background: #bdecef; top: -80px; left: -100px; }
+.theni-blob.b2 { width: 320px; height: 320px; background: #dbe7ff; bottom: -60px; right: 10%; }
+.theni-blob.b3 { width: 200px; height: 200px; background: #fde7c7; top: 30%; right: -40px; }
+.theni-hero-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 30px; align-items: end; }
+.theni-hero h1 { font-size: clamp(30px, 5vw, 50px); line-height: 1.15; color: var(--tn-ink); font-weight: 800; margin-bottom: 18px; }
+.theni-hero h1 .sub { display: block; font-size: .5em; font-weight: 600; color: var(--tn-text); margin-top: 12px; }
+.theni-hero-copy { padding-bottom: 60px; }
+.theni-hero-img img { display: block; margin-bottom: 0; }
+.theni-hero-img { position: relative; display: flex; justify-content: center; }
+.theni-hero-img .ring { position: absolute; bottom: 0; width: 88%; aspect-ratio: 1; border-radius: 50%; background: radial-gradient(circle, #c9f0f3 0%, #e6f8f9 60%, transparent 70%); }
+.theni-hero-img img { position: relative; max-height: min(680px, calc(100vh - 150px)); width: auto; max-width: 100%; z-index: 1; }
+.theni-chip { position: absolute; z-index: 2; background: #fff; border: 1px solid var(--tn-line); border-radius: 14px; padding: 10px 14px; box-shadow: 0 10px 30px rgba(15,23,42,.08); display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 600; color: var(--tn-ink); white-space: nowrap; }
+.theni-chip svg { color: var(--tn-teal); }
+.theni-chip.c1 { top: 18%; left: 0; } .theni-chip.c2 { top: 45%; right: 0; } .theni-chip.c3 { bottom: 14%; left: 4%; }
+.theni-hero-tags { display: flex; flex-wrap: wrap; gap: 10px; margin: 22px 0 28px; }
+.theni-hero-tags span { background: #fff; border: 1px solid var(--tn-line); border-radius: 30px; padding: 7px 14px; font-size: 14px; color: var(--tn-ink); display: inline-flex; gap: 6px; align-items: center; }
+.theni-hero-tags svg { color: var(--tn-teal); }
+
+/* Buttons */
+.theni-btn { display: inline-flex; align-items: center; gap: 8px; padding: 13px 30px; border-radius: 40px; background: var(--tn-teal); color: #fff !important; font-weight: 600; text-decoration: none; box-shadow: 0 10px 24px rgba(9,125,138,.28); transition: transform .25s ease, box-shadow .25s ease, background .25s ease; }
+.theni-btn:hover { transform: translateY(-3px); background: var(--tn-teal-dark); box-shadow: 0 14px 30px rgba(9,125,138,.35); }
+.theni-btn.light { background: #fff; color: var(--tn-teal) !important; box-shadow: 0 10px 24px rgba(0,0,0,.12); }
+.theni-btn.ghost { background: transparent; color: var(--tn-teal) !important; border: 2px solid var(--tn-teal); box-shadow: none; margin-left: 12px; }
+
+/* Split layout */
+.theni-split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
+.theni-split.rev > :first-child { order: 2; }
+.theni-photo { position: relative; }
+.theni-photo img { width: 100%; height: 420px; object-fit: cover; border-radius: 22px; box-shadow: 0 24px 50px rgba(15,23,42,.12); position: relative; z-index: 1; }
+.theni-photo::before { content: ""; position: absolute; inset: 22px -18px -18px 22px; border-radius: 22px; background: var(--tn-mint); z-index: 0; }
+.theni-photo .badge { position: absolute; z-index: 2; bottom: 24px; left: -20px; background: #fff; border-radius: 16px; padding: 14px 18px; box-shadow: 0 14px 34px rgba(15,23,42,.14); display: flex; gap: 12px; align-items: center; }
+.theni-photo .badge .ic { width: 42px; height: 42px; border-radius: 12px; background: var(--tn-mint); color: var(--tn-teal); display: flex; align-items: center; justify-content: center; }
+.theni-photo .badge strong { display: block; color: var(--tn-ink); font-size: 15px; }
+.theni-photo .badge small { color: var(--tn-text); }
+
+/* Lists */
+.theni-list { list-style: none; padding: 0; margin: 16px 0; }
+.theni-list li { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 12px; color: #334155; line-height: 1.6; }
+.theni-list li svg { color: var(--tn-teal); flex-shrink: 0; margin-top: 3px; }
+.theni-pills { display: flex; flex-wrap: wrap; gap: 12px; margin: 18px 0; padding: 0; list-style: none; }
+.theni-pills li { background: #fff; border: 1px solid var(--tn-line); border-radius: 14px; padding: 12px 16px; display: flex; gap: 10px; align-items: center; color: var(--tn-ink); font-weight: 500; transition: all .25s ease; }
+.theni-pills li:hover { border-color: var(--tn-teal); transform: translateY(-3px); box-shadow: 0 10px 20px rgba(9,125,138,.1); }
+.theni-pills li svg { color: var(--tn-teal); }
+
+/* Grids + cards */
+.theni-grid { display: grid; gap: 26px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); margin-top: 36px; }
+.theni-card { background: #fff; border: 1px solid var(--tn-line); border-radius: 18px; padding: 26px; box-shadow: 0 6px 20px rgba(15,23,42,.05); transition: transform .3s ease, box-shadow .3s ease, border-color .3s ease; }
+.theni-card:hover { transform: translateY(-6px); box-shadow: 0 18px 40px rgba(9,125,138,.12); border-color: #b9e3e7; }
+.theni-card p { margin: 0; }
+.theni-icon { width: 52px; height: 52px; border-radius: 14px; background: linear-gradient(135deg, #e3f6f7, #cdeef1); color: var(--tn-teal); display: flex; align-items: center; justify-content: center; margin-bottom: 16px; transition: transform .3s ease; }
+.theni-card:hover .theni-icon { transform: rotate(-8deg) scale(1.08); }
+
+/* Equal-height cards inside animated grid items */
+.theni-grid > * { display: flex; flex-direction: column; }
+.theni-grid > * > .theni-card, .theni-grid > * > .theni-imgcard, .theni-grid > * > .theni-mode { flex: 1 1 auto; }
+
+/* Image cards (What you'll learn) */
+.theni-imgcard { background: #fff; border-radius: 18px; overflow: hidden; border: 1px solid var(--tn-line); box-shadow: 0 6px 20px rgba(15,23,42,.05); transition: transform .3s ease, box-shadow .3s ease; }
+.theni-imgcard:hover { transform: translateY(-6px); box-shadow: 0 20px 40px rgba(9,125,138,.14); }
+.theni-imgcard .thumb { height: 190px; overflow: hidden; position: relative; }
+.theni-imgcard .thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.theni-imgcard:hover .thumb img { transform: scale(1.08); }
+.theni-imgcard .thumb .tag { position: absolute; top: 14px; left: 14px; background: rgba(255,255,255,.92); color: var(--tn-teal); font-weight: 700; font-size: 12px; padding: 5px 10px; border-radius: 20px; }
+.theni-imgcard .body { padding: 22px; }
+.theni-imgcard .body p { margin: 0; font-size: 15px; }
+
+/* Mode cards */
+.theni-mode { border-radius: 22px; overflow: hidden; background: #fff; border: 1px solid var(--tn-line); box-shadow: 0 10px 30px rgba(15,23,42,.06); }
+.theni-mode .thumb { height: 230px; overflow: hidden; }
+.theni-mode .thumb img { width: 100%; height: 100%; object-fit: cover; transition: transform .6s ease; }
+.theni-mode:hover .thumb img { transform: scale(1.06); }
+.theni-mode .body { padding: 28px; }
+
+.theni-note { background: #fffaf0; border-left: 4px solid #f59e0b; padding: 12px 16px; border-radius: 8px; color: #7c2d12; font-size: 15px; margin-top: 16px; }
+
+/* Journey timeline */
+.theni-steps { display: grid; grid-template-columns: repeat(6, 1fr); gap: 16px; list-style: none; padding: 0; margin: 44px 0 20px; position: relative; }
+.theni-steps::before { content: ""; position: absolute; top: 28px; left: 8%; right: 8%; height: 3px; background: linear-gradient(90deg, #bfe7ea, var(--tn-teal)); z-index: 0; }
+.theni-steps li { text-align: center; position: relative; z-index: 1; font-weight: 600; color: var(--tn-ink); font-size: 15px; }
+.theni-steps .num { width: 58px; height: 58px; margin: 0 auto 14px; border-radius: 50%; background: #fff; border: 3px solid var(--tn-teal); color: var(--tn-teal); display: flex; align-items: center; justify-content: center; box-shadow: 0 8px 20px rgba(9,125,138,.18); transition: all .3s ease; }
+.theni-steps li:hover .num { background: var(--tn-teal); color: #fff; transform: scale(1.1); }
+
+/* Branch */
+.theni-branch { display: grid; grid-template-columns: 1fr 1.2fr; gap: 30px; margin-top: 30px; align-items: stretch; }
+.theni-branch-info { display: grid; gap: 18px; }
+.theni-branch-info .theni-card { display: flex; gap: 16px; align-items: flex-start; }
+.theni-branch-info .theni-icon { margin-bottom: 0; flex-shrink: 0; }
+.theni-branch-info h3 { font-size: 15px; color: var(--tn-teal); text-transform: uppercase; letter-spacing: .6px; }
+.theni-map { border-radius: 20px; overflow: hidden; border: 1px solid var(--tn-line); box-shadow: 0 10px 30px rgba(15,23,42,.08); min-height: 360px; }
+.theni-map iframe { width: 100%; height: 100%; min-height: 360px; border: 0; display: block; }
+
+/* CTA */
+.theni-cta { position: relative; overflow: hidden; background: linear-gradient(135deg, #0a8f9e 0%, #097D8A 50%, #0b5e68 100%); text-align: center; border-radius: 26px; padding: 60px 24px; margin-top: 60px; }
+.theni-cta::before, .theni-cta::after { content: ""; position: absolute; border-radius: 50%; background: rgba(255,255,255,.08); }
+.theni-cta::before { width: 280px; height: 280px; top: -120px; left: -80px; }
+.theni-cta::after { width: 220px; height: 220px; bottom: -110px; right: -60px; }
+.theni-cta h2, .theni-cta p { color: #fff; position: relative; }
+.theni-cta p { opacity: .92; max-width: 640px; margin: 0 auto 10px; }
+
+/* FAQ wrapper */
+.theni-faq { background: linear-gradient(180deg, #ffffff 0%, #f5fbfc 100%); padding: 20px 0 60px; }
+
+@media (max-width: 991px) {
+  .theni-hero-grid, .theni-split, .theni-branch { grid-template-columns: 1fr; }
+  .theni-split.rev > :first-child { order: 0; }
+  .theni-hero-copy { padding-bottom: 10px; text-align: center; }
+  .theni-hero-tags { justify-content: center; }
+  .theni-steps { grid-template-columns: repeat(3, 1fr); row-gap: 30px; }
+  .theni-steps::before { display: none; }
+  .theni-photo .badge { left: 12px; }
+}
+@media (max-width: 576px) {
+  .theni-section { padding: 56px 16px; }
+  .theni-steps { grid-template-columns: repeat(2, 1fr); }
+  .theni-photo img { height: 300px; }
+  .theni-chip { font-size: 12px; padding: 8px 10px; }
+  .theni-btn.ghost { margin: 12px 0 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .theni-page * { transition: none !important; animation: none !important; }
+}
+
+/* Hero on tablets/phones: natural height */
+@media (max-width: 991px) { .theni-hero { min-height: auto; } .theni-hero-copy { align-items: center; } .theni-hero-actions { justify-content: center; } .theni-hero-img img { max-height: 460px; } }
