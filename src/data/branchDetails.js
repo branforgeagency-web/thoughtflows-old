@@ -167,6 +167,19 @@ export const branchDetails = {
     instagram: '',
     facebook: '',
     routes: ['/medical-coding-training-kolhapur', '/kolhapur']
+  },
+  theni: {
+    key: 'theni',
+    name: 'Theni',
+    displayName: 'Theni Branch',
+    phone: '',
+    phoneRaw: '',
+    phoneClean: '',
+    address: '5A/22, Forest Road, Shivaji Nagar, NRT Nagar, Theni, Tamil Nadu 625531',
+    email: 'info@thoughtflows.in',
+    instagram: '',
+    facebook: '',
+    routes: ['/medical-coding-course-theni', '/theni']
   }
 };
 

@@ -15,6 +15,7 @@ import trivandrumImg from "../images/Branches/clean/Trivandrum.png";
 import vizagImg from "../images/Branches/clean/Vizag.png";
 import puneImg from "../images/Branches/clean/Pune.png";
 import kolhapurImg from "../images/Branches/clean/Kolhapur.png";
+import theniImg from "../images/Branches/theni-teaching.jpg";
 
 const branchList = [
   { name: "Ameerpet", region: "Telangana", img: ameerpetImg, path: "/Trusted-Medical-Coding-Ameerpet" },
@@ -26,6 +27,7 @@ const branchList = [
   { name: "Trivandrum", region: "Kerala", img: trivandrumImg, path: "/Advanced-Medical-Coding-Tiruvandrum" },
   { name: "Salem", region: "Tamil Nadu", img: salemImg, path: "/Future-Ready-Medical-Coding-Salem" },
   { name: "Trichy", region: "Tamil Nadu", img: trichyImg, path: "/Career-Focused-Medical-Coding-Trichy" },
+  { name: "Theni", region: "Tamil Nadu", img: theniImg, path: "/medical-coding-course-theni" },
   { name: "Tirupati", region: "Andhra Pradesh", img: tirupatiImg, path: "/Expert-Medical-Coding-Tirupathi" },
   { name: "Vizag", region: "Andhra Pradesh", img: vizagImg, path: "/Innovative-Medical-Coding-Vizag" },
   { name: "Pune", region: "Maharashtra", img: puneImg, path: "/medical-coding-course-pune/" },
@@ -39,7 +41,7 @@ const Branches = () => {
         <div className="branches-lux-header">
           <span className="branches-eyebrow">Our Presence</span>
           <h2 className="branches-lux-heading">
-            Thirteen campuses, <em>one standard</em> of excellence
+            Fourteen campuses, <em>one standard</em> of excellence
           </h2>
           <p className="branches-lux-subheading">
             From Pune and Kolhapur to Hyderabad and Kochi, Thoughtflows brings the

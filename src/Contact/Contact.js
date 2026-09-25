@@ -164,6 +164,15 @@ function Contact() {
       instagram: '',
       facebook: '',
     },
+    {
+      name: 'Theni',
+      top: '74.0%', left: '36.0%',
+      email: 'info@thoughtflows.in',
+      phone: '',
+      address: '5A/22, Forest Road, Shivaji Nagar, NRT Nagar, Theni, Tamil Nadu 625531',
+      instagram: '',
+      facebook: '',
+    },
   ];
 
 
@@ -554,6 +563,7 @@ ${formData.message}`,
                   <option value="Vizag">Vizag</option>
                   <option value="Pune, Maharashtra">Pune, Maharashtra</option>
                   <option value="Kolhapur, Maharashtra">Kolhapur, Maharashtra</option>
+                  <option value="Theni">Theni</option>
                   <option value="Online">Online</option>
                 </select>
                 {errors.location && <span style={{ color: 'red', fontSize: '0.8em' }}>{errors.location}</span>}
