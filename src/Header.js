@@ -28,6 +28,7 @@ const DropdownMenu = ({ isBranchPage }) => {
       ],
       Trichy: [{ name: "Trichy", path: "/Career-Focused-Medical-Coding-Trichy" }],
       Salem: [{ name: "Salem", path: "/Future-Ready-Medical-Coding-Salem" }],
+      Theni: [{ name: "Theni", path: "/medical-coding-course-theni" }],
       Vizag: [{ name: "Vizag", path: "/Innovative-Medical-Coding-Vizag" }],
       Tirupati: [{ name: "Tirupati", path: "/Expert-Medical-Coding-Tirupathi" }],
     },
@@ -37,7 +38,7 @@ const DropdownMenu = ({ isBranchPage }) => {
   const [openSubMenu, setOpenSubMenu] = useState(null);
 
   // Branches with no dropdown
-  const noDropdown = ["Trichy", "Salem", "Vizag", "Tirupati"];
+  const noDropdown = ["Trichy", "Salem", "Theni", "Vizag", "Tirupati"];
 
   return (
     <div className="relative inline-block">
@@ -137,7 +138,8 @@ const Header = () => {
       '/Career-Focused-Medical-Coding-Trichy', '/Future-Ready-Medical-Coding-Salem',
       '/Innovative-Medical-Coding-Vizag', '/Medical-Coding-Training-Kolhapur',
       '/kolhapur', '/Advanced-Medical-Coding-Pune', '/pune',
-      '/medical-coding-course-pune', '/medical-coding-course-pune/'
+      '/medical-coding-course-pune', '/medical-coding-course-pune/',
+      '/medical-coding-course-theni', '/theni'
     ];
     return branchPaths.some((p) => p.toLowerCase() === location.pathname.toLowerCase());
   };
@@ -264,6 +266,7 @@ const Header = () => {
           { label: "Tirupathi", path: "/Expert-Medical-Coding-Tirupathi" },
           { label: "Trichy", path: "/Career-Focused-Medical-Coding-Trichy" },
           { label: "Salem", path: "/Future-Ready-Medical-Coding-Salem" },
+          { label: "Theni", path: "/medical-coding-course-theni" },
           { label: "Vizag", path: "/Innovative-Medical-Coding-Vizag" },
         ],
       },
