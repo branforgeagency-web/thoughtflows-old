@@ -105,6 +105,11 @@ test('getBranchInfoByPath resolves correct branch data for each branch route', (
   expect(kolhapur.phone).toBe('');
   expect(kolhapur.address).toBe('');
 
+  // Theni
+  const theni = getBranchInfoByPath('/medical-coding-course-theni');
+  expect(theni).not.toBeNull();
+  expect(theni.address).toContain('Forest Road');
+
   // Non-branch page returns null
   expect(getBranchInfoByPath('/about')).toBeNull();
   expect(getBranchInfoByPath('/')).toBeNull();
