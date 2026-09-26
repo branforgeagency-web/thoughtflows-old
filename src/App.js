@@ -19,6 +19,7 @@ import Blog1 from "../src/Blog/Blog1"
 import Blog2 from "../src/Blog/Blog2"
 import Blog3 from "../src/Blog/Blog3"
 import Blog8 from "../src/Blog/Blog8"
+import Blog9 from "./Blog/Blog9";
 import CIC from './Courses/CIC';
 import COC from './Courses/COC';
 import CPMA from './Courses/CPMA';
@@ -98,6 +99,7 @@ function AppContent() {
         <Route path="/blog/the-role-of-medical-coders-in-modern-healthcare-essential-insights" element={<Blog6 />} />
         <Route path="/blog/medical-coding-career-path-opportunities-and-growth-in-healthcare" element={<Blog7 />} />
         <Route path="/blog/vetri-108-free-medical-coding-scholarships" element={<Blog8 />} />
+        <Route path="/blog/artificial-intelligence-in-medical-coding-a-beginners-guide" element={<Blog9 />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cpc" element={<CPC />} />
         <Route path="/cic" element={<CIC />} />
