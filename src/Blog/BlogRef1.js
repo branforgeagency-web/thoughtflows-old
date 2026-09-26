@@ -8,6 +8,7 @@ import postImage5 from '../images/Blog/stomatolog-nurse-tooth-clinic-checking-pa
 import postImage6 from '../images/Blog/manager-preparing-store-reopening.jpg';
 import postImage7 from '../images/Blog/three-business-people-discussing-graph-points.jpg';
 import postImage8 from '../images/Blog/vetri108/Ram Blog Banner (22).png';
+import postImage9 from '../images/Blog/ai-coding/hero-banner.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
@@ -87,6 +88,14 @@ function BlogRef1() {
       info: `VETRI 108 by ThoughtFlows offers free Medical Coding scholarships, training, and placement support for graduates, freshers, and job seekers across Tamil Nadu.`,
       image: postImage8,
       id: "vetri-108-free-medical-coding-scholarships",
+    },
+    {
+      date: "September 26, 2026",
+      title: "Artificial Intelligence in Medical Coding: A Beginner's Guide",
+      Comments: "0",
+      info: `Explore how Artificial Intelligence (AI) is transforming Medical Coding. Learn about AI benefits, computer-assisted coding tools, human-AI collaboration, and how to prepare for an AI-empowered career.`,
+      image: postImage9,
+      id: createSlug("Artificial Intelligence in Medical Coding: A Beginner's Guide"),
     },
   ];
 
