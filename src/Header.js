@@ -34,6 +34,13 @@ const DropdownMenu = ({ isBranchPage }) => {
     },
   };
 
+  const branchHubPaths = {
+    Coimbatore: "/coimbatore",
+    Kerala: "/kerala",
+    Hyderabad: "/hyderabad",
+    Maharashtra: "/maharashtra",
+  };
+
   const [openMainMenu, setOpenMainMenu] = useState(null);
   const [openSubMenu, setOpenSubMenu] = useState(null);
 
@@ -81,8 +88,24 @@ const DropdownMenu = ({ isBranchPage }) => {
                   ) : (
                     <>
                       <div className="flex justify-between items-center">
-                        {branch}
-                        <span className="ml-2">{">"}</span>
+                        <Link
+                          to={branchHubPaths[branch] || "#"}
+                          className="flex-1 text-black hover:text-cyan-600 transition-colors"
+                          style={{ color: "#000", fontWeight: "500", textDecoration: "none" }}
+                          onClick={() => {
+                            setOpenMainMenu(null);
+                            setOpenSubMenu(null);
+                          }}
+                        >
+                          {branch}
+                        </Link>
+                        <span 
+                          className="ml-2 cursor-pointer text-gray-500 font-bold px-1 hover:text-cyan-600"
+                          onClick={() => setOpenSubMenu(openSubMenu === branch ? null : branch)}
+                          title={`View ${branch} locations`}
+                        >
+                          {">"}
+                        </span>
                       </div>
 
                       {openSubMenu === branch && (
@@ -129,7 +152,8 @@ const Header = () => {
   // Check if current page is a branch page
   const isBranchPage = () => {
     const branchPaths = [
-      '/kochi', '/trivandrum', '/hyderabad', '/ameerpet', '/dilsukhnagar',
+      '/coimbatore', '/kerala', '/hyderabad', '/maharashtra',
+      '/kochi', '/trivandrum', '/ameerpet', '/dilsukhnagar',
       '/tirupathi', '/trichy', '/salem', '/vizag',
       '/Medical-Coding-Excellence-at-Hopes', '/Top-Medical-Coding-Training-Saravanampatti',
       '/Premier-Medical-Coding-Institute-Gandhipuram', '/Medical-Coding-Academy-Kochi',
@@ -233,14 +257,16 @@ const Header = () => {
     branches: [
       {
         label: "COIMBATORE",
+        hubPath: "/coimbatore",
         courseMenu: [
           { label: "Hopes", path: "/Medical-Coding-Excellence-at-Hopes" },
-          { label: "Saravanampatti ", path: "/Top-Medical-Coding-Training-Saravanampatti" },
+          { label: "Saravanampatti", path: "/Top-Medical-Coding-Training-Saravanampatti" },
           { label: "Gandhipuram", path: "/Premier-Medical-Coding-Institute-Gandhipuram" },
         ],
       },
       {
         label: "KERALA",
+        hubPath: "/kerala",
         courseMenu: [
           { label: "Kochi", path: "/Medical-Coding-Academy-Kochi" },
           { label: "Thiruvananthapuram", path: "/Advanced-Medical-Coding-Tiruvandrum" },
@@ -248,6 +274,7 @@ const Header = () => {
       },
       {
         label: "HYDERABAD",
+        hubPath: "/hyderabad",
         courseMenu: [
           { label: "Ameerpet", path: "/Trusted-Medical-Coding-Ameerpet" },
           { label: "Dilsukhnagar", path: "/Professional-Medical-Coding-Dilsukhnagar" },
@@ -255,6 +282,7 @@ const Header = () => {
       },
       {
         label: "MAHARASHTRA",
+        hubPath: "/maharashtra",
         courseMenu: [
           { label: "Pune", path: "/medical-coding-course-pune/" },
           { label: "Kolhapur", path: "/Medical-Coding-Training-Kolhapur" },
@@ -471,15 +499,38 @@ const Header = () => {
                     <div className="mobile-submenu text-center border-gray-300 shadow rounded">
                       {submenu.branches.map((item, index) => (
                         <div key={index}>
-                          <div
-                            style={{
-                              fontWeight: 500,
-                              marginTop: "10px",
-                              color: "#000",
-                            }}
-                          >
-                            {item.label}
-                          </div>
+                          {item.hubPath ? (
+                            <Link
+                              to={item.hubPath}
+                              style={{
+                                display: "inline-block",
+                                fontWeight: 700,
+                                marginTop: "14px",
+                                marginBottom: "4px",
+                                color: "#097D8A",
+                                fontSize: "15px",
+                                textDecoration: "none"
+                              }}
+                              onClick={() => {
+                                setMobileMenuOpen(false);
+                                setSubmenuOpen("");
+                              }}
+                            >
+                              {item.label} &rarr;
+                            </Link>
+                          ) : (
+                            <div
+                              style={{
+                                fontWeight: 600,
+                                marginTop: "14px",
+                                marginBottom: "4px",
+                                color: "#000",
+                                fontSize: "15px"
+                              }}
+                            >
+                              {item.label}
+                            </div>
+                          )}
                           {item.courseMenu.map((branch, i) => (
                             <Link
                               style={{ color: "#06b6d4" }}
