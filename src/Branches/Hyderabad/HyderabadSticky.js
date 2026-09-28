@@ -9,7 +9,7 @@ function HyderabadSticky() {
     <div className='static-trichy' style={{marginLeft:"100px"}}>
             <div id='static-1'>
             <h2 className='highh' >Learn by Doing, Not Just Watching</h2>
-            <p>You don't become a great coder by memorising theory — you become one by coding. Our medical coding coaching in Hyderabad is built around hands-on practice and real-life scenarios, so what you learn actually sticks. Through coding exercises, case studies, and practical projects, you'll build the in-demand skills and real confidence you need to step into a medical coding job ready to perform from day one.</p>
+            <p>You don't become a great coder by memorising theory — you become one by coding. Our medical coding coaching in Ameerpet is built around hands-on practice and real-life scenarios, so what you learn actually sticks. Through coding exercises, case studies, and practical projects, you'll build the in-demand skills and real confidence you need to step into a medical coding job ready to perform from day one.</p>
             </div>
             <div id='static-1'>
            <h2 className='highh'>Get Certified, Get Noticed</h2>

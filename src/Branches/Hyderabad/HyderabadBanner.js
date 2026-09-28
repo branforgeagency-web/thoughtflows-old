@@ -49,7 +49,7 @@ const HyderabadBanner = () => {
               lineHeight: '1.6',
               color: '#475569'
             }}>
-              Expert CPC faculty, real exam prep, and placement assistance — everything you need to launch your medical coding career in Hyderabad.
+              Expert CPC faculty, real exam prep, and placement assistance — everything you need to launch your medical coding career in Ameerpet.
             </p>
           </div>
           <div className='cbe1-btn mt-3'>
