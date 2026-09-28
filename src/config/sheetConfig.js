@@ -7,9 +7,9 @@
 // 2. Paste that URL and the same token below.
 // 3. Change ADMIN_PASSWORD to something only your team knows.
 
-export const SHEET_WEB_APP_URL = "PASTE_YOUR_APPS_SCRIPT_WEB_APP_URL_HERE";
+export const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwhJdgLJoKSiJ9w4tQzCCn3nMaBFP_jZxnI27-6PQE-Ebs784wd_oWhPQU_iIlq1iBzrQ/exec";
 
-export const SHEET_ACCESS_TOKEN = "PASTE_THE_SAME_TOKEN_YOU_SET_IN_CODE_GS";
+export const SHEET_ACCESS_TOKEN = "ThoughtFlows@Enquiry2026!SecureKey";
 
 // Basic gate for the /admin page. This is a static site with no server, so
 // this is a deterrent (keeps casual visitors out), not real security -

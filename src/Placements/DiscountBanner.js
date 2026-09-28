@@ -4,6 +4,7 @@ import './DiscountBanner.css';
 import studentImage from '../images/form-img.jpg'; // Adjust path if needed
 import emailjs from '@emailjs/browser';
 import { coursesList } from '../coursesList';
+import { logEnquiry } from '../utils/enquiryLog';
 
 const DiscountBanner = () => {
     const [formData, setFormData] = useState({
@@ -74,6 +75,15 @@ Discount Offer: 30%`;
           Discount Offer: 30%
         `
             };
+
+            logEnquiry('Discount Banner', {
+                name: formData.name,
+                phone: formData.ph,
+                email: formData.email,
+                course: formData.interestedCourse,
+                location: formData.preferredBranch,
+                message: 'Discount Offer: 30%'
+            });
 
             const response = await emailjs.send(
                 'service_2anzqj9',

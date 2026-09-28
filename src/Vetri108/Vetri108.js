@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './Vetri108.css';
 import Meta from '../Meta';
 import { isValidPhone, normalizePhone, PHONE_ERROR } from '../utils/phone';
+import { logEnquiry } from '../utils/enquiryLog';
 
 /* ── animated counter hook ── */
 function useCounter(target, duration = 1600) {
@@ -132,6 +133,16 @@ const Vetri108 = () => {
       data.append('Interested Course', 'Medical Coding');
       data.append('Message', form.msg);
       data.append('_subject', 'New Vetri 108 Scholarship Application');
+
+      logEnquiry('Vetri 108 Scholarship', {
+        name: form.name,
+        phone: normalizePhone(form.mobile),
+        email: form.email,
+        location: form.city,
+        qualification: form.qual,
+        course: 'Medical Coding',
+        message: form.msg
+      });
 
       const res = await fetch('https://formspree.io/f/mrevbwbo', {
         method: 'POST',
