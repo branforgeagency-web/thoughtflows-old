@@ -9,12 +9,17 @@ export function logEnquiry(source, data) {
     if (!SHEET_WEB_APP_URL || SHEET_WEB_APP_URL.indexOf("PASTE_") === 0) {
       return;
     }
+    let phone = String(data.phone || data.ph || data.mobile || "").trim();
+    if (phone && (phone.startsWith("+") || phone.startsWith("="))) {
+      phone = "'" + phone;
+    }
+
     const payload = {
       token: SHEET_ACCESS_TOKEN,
       source,
       name: data.name || "",
       email: data.email || "",
-      phone: data.phone || data.ph || "",
+      phone: phone,
       course: data.course || "",
       location: data.location || "",
       age: data.age || "",

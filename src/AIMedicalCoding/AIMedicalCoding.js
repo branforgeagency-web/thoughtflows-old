@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import './AIMedicalCoding.css';
 import Meta from '../Meta';
 import { isValidPhone, normalizePhone, PHONE_ERROR } from '../utils/phone';
+import { logEnquiry } from '../utils/enquiryLog';
 import aiBanner from './ai-medical-coding-banner.png';
 
 /* ── animated counter hook ── */
@@ -135,6 +136,16 @@ const AIMedicalCoding = () => {
       data.append('Interested Course', 'AI-Powered Medical Coding');
       data.append('Message', form.msg);
       data.append('_subject', 'New AI-Powered Medical Coding Application');
+
+      logEnquiry('AI Medical Coding Application', {
+        name: form.name,
+        phone: normalizePhone(form.mobile),
+        email: form.email,
+        location: form.city,
+        qualification: form.qual,
+        course: 'AI-Powered Medical Coding',
+        message: form.msg
+      });
 
       const res = await fetch('https://formspree.io/f/mrevbwbo', {
         method: 'POST',
