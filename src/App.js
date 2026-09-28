@@ -61,6 +61,10 @@ import Salem from "./Branches/Salem";
 import Kolhapur from './Branches/Kolhapur';
 import Pune from './Branches/Pune';
 import Theni from './Branches/Theni';
+import CoimbatoreLanding from './Branches/CoimbatoreLanding';
+import KeralaLanding from './Branches/KeralaLanding';
+import HyderabadLanding from './Branches/HyderabadLanding';
+import MaharashtraLanding from './Branches/MaharashtraLanding';
 import TeamHierarchy from './Ourteam/TeamHierarchy';
 import { PopupProvider } from './context/PopupContext';
 import FloatingIcons from './FloatingIcons';
@@ -115,6 +119,14 @@ function AppContent() {
         <Route path='/anesesthesia' element={<Anesesthesia />} />
         <Route path='/anesthesia' element={<Navigate to="/anesesthesia" replace />} />
         <Route path='/home' element={<Navigate to="/" replace />} />
+        <Route path='/coimbatore' element={<CoimbatoreLanding />} />
+        <Route path='/medical-coding-course-coimbatore' element={<Navigate to="/coimbatore" replace />} />
+        <Route path='/kerala' element={<KeralaLanding />} />
+        <Route path='/medical-coding-course-kerala' element={<Navigate to="/kerala" replace />} />
+        <Route path='/hyderabad' element={<HyderabadLanding />} />
+        <Route path='/medical-coding-course-hyderabad' element={<Navigate to="/hyderabad" replace />} />
+        <Route path='/maharashtra' element={<MaharashtraLanding />} />
+        <Route path='/medical-coding-course-maharashtra' element={<Navigate to="/maharashtra" replace />} />
         <Route path='/Top-Medical-Coding-Training-Saravanampatti' element={<CbeBranch1 />} />
         <Route path='/Medical-Coding-Excellence-at-Hopes' element={<CbeBranch2 />} />
         <Route path='/Premier-Medical-Coding-Institute-Gandhipuram' element={<CbeBranch3 />} />
@@ -130,6 +142,7 @@ function AppContent() {
         <Route path='/Medical-Coding-Training-Kolhapur' element={<Kolhapur />} />
         <Route path='/kolhapur' element={<Navigate to="/Medical-Coding-Training-Kolhapur" replace />} />
         <Route path='/medical-coding-course-pune' element={<Pune />} />
+        <Route path='/medical-coding-course-pune/' element={<Pune />} />
         <Route path='/Advanced-Medical-Coding-Pune' element={<Navigate to="/medical-coding-course-pune/" replace />} />
         <Route path='/pune' element={<Navigate to="/medical-coding-course-pune/" replace />} />
         <Route path='/medical-coding-course-theni' element={<Theni />} />

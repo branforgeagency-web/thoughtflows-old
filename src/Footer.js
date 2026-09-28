@@ -5,12 +5,13 @@ import { Col, Container, Row } from 'react-bootstrap';
 import footerSmall from '../src/images/Bgsmallfooter.png';
 import { Link, useLocation } from 'react-router-dom';
 import ZoomSignupForm from './Zoom';
-import { getBranchInfoByPath, defaultBranchDetails } from './data/branchDetails';
+import { getBranchInfoByPath, defaultBranchDetails, getRegionBranchesByPath } from './data/branchDetails';
 
 const Footer = () => {
     const [showZoomPopup, setShowZoomPopup] = useState(false);
     const location = useLocation();
 
+    const regionInfo = getRegionBranchesByPath(location.pathname);
     const branch = getBranchInfoByPath(location.pathname);
     const currentBranch = branch || defaultBranchDetails;
 
@@ -225,42 +226,87 @@ const Footer = () => {
                     </Col>
 
                     <Col lg={3} className="text-start mb-4 mb-lg-0">
-                        <p className="fs-5 fw-bold">{currentBranch.displayName || (branch ? `${branch.name} Branch` : 'Contact')}</p>
+                        <p className="fs-5 fw-bold">{regionInfo ? regionInfo.displayName.toUpperCase() : (currentBranch.displayName || (branch ? `${branch.name} Branch` : 'Contact')).toUpperCase()}</p>
                         <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
-                        {currentBranch.address && (
-                            <div className="d-flex align-items-start mb-2">
-                                <i className="fas fa-map-marker-alt text-white me-2 mt-1 flex-shrink-0"></i>
-                                <span style={{ fontSize: '13px', lineHeight: '1.45' }}>
-                                    {currentBranch.address}
-                                </span>
+
+                        {regionInfo ? (
+                            <div className="d-flex flex-column gap-3 mb-2">
+                                {regionInfo.branches.map((b, idx) => (
+                                    <div key={idx} className="mb-2">
+                                        <div className="d-flex align-items-center mb-1">
+                                            <i className="fas fa-map-marker-alt text-white me-2 flex-shrink-0"></i>
+                                            <span style={{ fontSize: '13px', fontWeight: '700', color: '#ffffff' }}>
+                                                {b.name}
+                                            </span>
+                                        </div>
+                                        <div style={{ fontSize: '12.5px', lineHeight: '1.45', opacity: 0.85, paddingLeft: '22px', marginBottom: '4px' }}>
+                                            {b.address}
+                                        </div>
+                                        <div className="d-flex flex-wrap gap-3 align-items-center" style={{ fontSize: '13px', paddingLeft: '22px' }}>
+                                            {b.phone && (
+                                                <div className="d-flex align-items-center">
+                                                    <i className="fas fa-phone text-white me-1.5 flex-shrink-0" style={{ fontSize: '11px' }}></i>
+                                                    <a
+                                                        href={`tel:${b.phoneClean || b.phone}`}
+                                                        style={{ textDecoration: 'none', color: 'white', fontSize: '13px' }}
+                                                    >
+                                                        {b.phone}
+                                                    </a>
+                                                </div>
+                                            )}
+                                            {b.email && (
+                                                <div className="d-flex align-items-center">
+                                                    <i className="fas fa-envelope text-white me-1.5 flex-shrink-0" style={{ fontSize: '11px' }}></i>
+                                                    <a
+                                                        href={`mailto:${b.email}`}
+                                                        style={{ textDecoration: 'none', color: 'white', fontSize: '13px' }}
+                                                    >
+                                                        {b.email}
+                                                    </a>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                ))}
                             </div>
-                        )}
-                        {currentBranch.phone && (
-                            <div className="d-flex align-items-center mb-2">
-                                <i className="fas fa-phone text-white me-2 flex-shrink-0"></i>
-                                <a
-                                    href={`tel:${currentBranch.phoneClean || currentBranch.phone}`}
-                                    style={{ textDecoration: 'none', color: 'white', fontSize: '14px' }}
-                                >
-                                    {currentBranch.phone}
-                                </a>
-                            </div>
-                        )}
-                        {currentBranch.email && (
-                            <div className="d-flex align-items-center mb-2">
-                                <i className="fas fa-envelope text-white me-2 flex-shrink-0"></i>
-                                <a
-                                    href={`mailto:${currentBranch.email}`}
-                                    style={{ textDecoration: 'none', color: 'white', fontSize: '14px' }}
-                                >
-                                    {currentBranch.email}
-                                </a>
-                            </div>
-                        )}
-                        {!currentBranch.address && !currentBranch.phone && !currentBranch.email && (
-                            <p className="text-light fst-italic mb-3" style={{ fontSize: '13px', opacity: 0.85 }}>
-                                Branch contact details coming soon.
-                            </p>
+                        ) : (
+                            <>
+                                {currentBranch.address && (
+                                    <div className="d-flex align-items-start mb-2">
+                                        <i className="fas fa-map-marker-alt text-white me-2 mt-1 flex-shrink-0"></i>
+                                        <span style={{ fontSize: '13px', lineHeight: '1.45' }}>
+                                            {currentBranch.address}
+                                        </span>
+                                    </div>
+                                )}
+                                {currentBranch.phone && (
+                                    <div className="d-flex align-items-center mb-2">
+                                        <i className="fas fa-phone text-white me-2 flex-shrink-0"></i>
+                                        <a
+                                            href={`tel:${currentBranch.phoneClean || currentBranch.phone}`}
+                                            style={{ textDecoration: 'none', color: 'white', fontSize: '14px' }}
+                                        >
+                                            {currentBranch.phone}
+                                        </a>
+                                    </div>
+                                )}
+                                {currentBranch.email && (
+                                    <div className="d-flex align-items-center mb-2">
+                                        <i className="fas fa-envelope text-white me-2 flex-shrink-0"></i>
+                                        <a
+                                            href={`mailto:${currentBranch.email}`}
+                                            style={{ textDecoration: 'none', color: 'white', fontSize: '14px' }}
+                                        >
+                                            {currentBranch.email}
+                                        </a>
+                                    </div>
+                                )}
+                                {!currentBranch.address && !currentBranch.phone && !currentBranch.email && (
+                                    <p className="text-light fst-italic mb-3" style={{ fontSize: '13px', opacity: 0.85 }}>
+                                        Branch contact details coming soon.
+                                    </p>
+                                )}
+                            </>
                         )}
                         <div className="d-flex gap-3 mt-4">
                             {currentBranch.instagram && (

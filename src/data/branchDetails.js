@@ -146,39 +146,39 @@ export const branchDetails = {
     key: 'pune',
     name: 'Pune',
     displayName: 'Pune Branch',
-    phone: '',
-    phoneRaw: '',
-    phoneClean: '',
-    address: '',
-    email: '',
-    instagram: '',
-    facebook: '',
+    phone: '+91 93845 76852',
+    phoneRaw: '9384576852',
+    phoneClean: '+919384576852',
+    address: 'Near IT Corridor, Kharadi & Shivajinagar Connectivity, Pune, Maharashtra - 411014',
+    email: 'info@thoughtflows.in',
+    instagram: 'https://www.instagram.com/thought_flows/',
+    facebook: 'https://www.facebook.com/Thoughtflowsacademy/',
     routes: ['/medical-coding-course-pune', '/medical-coding-course-pune/', '/advanced-medical-coding-pune', '/pune']
   },
   kolhapur: {
     key: 'kolhapur',
     name: 'Kolhapur',
     displayName: 'Kolhapur Branch',
-    phone: '',
-    phoneRaw: '',
-    phoneClean: '',
-    address: '',
-    email: '',
-    instagram: '',
-    facebook: '',
+    phone: '+91 93845 76852',
+    phoneRaw: '9384576852',
+    phoneClean: '+919384576852',
+    address: 'Central Location, Shahupuri & Railway Station Hub, Kolhapur, Maharashtra - 416001',
+    email: 'info@thoughtflows.in',
+    instagram: 'https://www.instagram.com/thought_flows/',
+    facebook: 'https://www.facebook.com/Thoughtflowsacademy/',
     routes: ['/medical-coding-training-kolhapur', '/kolhapur']
   },
   theni: {
     key: 'theni',
     name: 'Theni',
     displayName: 'Theni Branch',
-    phone: '',
-    phoneRaw: '',
-    phoneClean: '',
-    address: '5A/22, Forest Road, Shivaji Nagar, NRT Nagar, Theni, Tamil Nadu 625531',
+    phone: '+91 93845 76852',
+    phoneRaw: '9384576852',
+    phoneClean: '+919384576852',
+    address: '5A/22, Forest Road, Shivaji Nagar, NRT Nagar, Theni, Tamil Nadu - 625531',
     email: 'info@thoughtflows.in',
-    instagram: '',
-    facebook: '',
+    instagram: 'https://www.instagram.com/thought_flows/',
+    facebook: 'https://www.facebook.com/Thoughtflowsacademy/',
     routes: ['/medical-coding-course-theni', '/theni']
   }
 };
@@ -187,7 +187,7 @@ export const defaultBranchDetails = {
   key: 'head-office',
   name: 'Head Office',
   displayName: 'Head Office',
-  phone: '+91-9384576852',
+  phone: '+91 93845 76852',
   phoneRaw: '9384576852',
   phoneClean: '+919384576852',
   address: 'Jay Enclave, 1084, 3rd St, Cross Cut Road, Gandhipuram, Coimbatore, Tamil Nadu 641012',
@@ -195,6 +195,155 @@ export const defaultBranchDetails = {
   instagram: 'https://www.instagram.com/thought_flows/',
   facebook: 'https://www.facebook.com/Thoughtflowsacademy/',
   routes: []
+};
+
+export const regionBranches = {
+  hyderabad: {
+    regionKey: 'hyderabad',
+    regionName: 'Hyderabad',
+    displayName: 'Hyderabad Campuses',
+    routes: [
+      '/hyderabad', '/medical-coding-course-hyderabad',
+      '/trusted-medical-coding-ameerpet', '/ameerpet',
+      '/professional-medical-coding-dilsukhnagar', '/dilsukhnagar'
+    ],
+    branches: [
+      {
+        name: 'Ameerpet Branch',
+        locality: 'Ameerpet X Road',
+        address: 'Level 6 (5th Floor), Vasavi MPM Grand, No: 606/A, Ameerpet X Road, Yella Reddy Guda, Hyderabad, Telangana - 500073',
+        phone: '+91 87907 51742',
+        phoneClean: '+918790751742',
+        email: 'info@thoughtflows.in',
+        path: '/Trusted-Medical-Coding-Ameerpet'
+      },
+      {
+        name: 'Dilsukhnagar Branch',
+        locality: 'Opp. Metro Pillar 1519',
+        address: 'H.No: 16, Sai Towers, 11-477/6/1/A, 2nd Floor, opp. Pillar No: 1519, Indira Nagar, Dilsukhnagar, Hyderabad, Telangana - 500102',
+        phone: '+91 90305 08844',
+        phoneClean: '+919030508844',
+        email: 'info@thoughtflows.in',
+        path: '/Professional-Medical-Coding-Dilsukhnagar'
+      }
+    ]
+  },
+  coimbatore: {
+    regionKey: 'coimbatore',
+    regionName: 'Coimbatore',
+    displayName: 'Coimbatore Campuses',
+    routes: [
+      '/coimbatore', '/medical-coding-course-coimbatore',
+      '/medical-coding-excellence-at-hopes', '/hopes',
+      '/top-medical-coding-training-saravanampatti', '/saravanampatti',
+      '/premier-medical-coding-institute-gandhipuram', '/gandhipuram'
+    ],
+    branches: [
+      {
+        name: 'Hopes Branch',
+        locality: 'Avinashi Road',
+        address: 'Door No.62 E/F, 1st Floor South Wing, Lalitha Towers, Gandhi Street, Avinashi Rd, Coimbatore, Tamil Nadu - 641004',
+        phone: '+91 93845 76852',
+        phoneClean: '+919384576852',
+        email: 'info@thoughtflows.in',
+        path: '/Medical-Coding-Excellence-at-Hopes'
+      },
+      {
+        name: 'Saravanampatti Branch',
+        locality: 'IT Corridor, Sathy Road',
+        address: 'No-171/2A, 1st Floor, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu - 641035',
+        phone: '+91 93845 76852',
+        phoneClean: '+919384576852',
+        email: 'info@thoughtflows.in',
+        path: '/Top-Medical-Coding-Training-Saravanampatti'
+      },
+      {
+        name: 'Gandhipuram Branch',
+        locality: 'Cross Cut Road',
+        address: 'Jay Enclave, 1084, 3rd St, Cross Cut Road, Gandhipuram, Coimbatore, Tamil Nadu - 641012',
+        phone: '+91 93845 76852',
+        phoneClean: '+919384576852',
+        email: 'info@thoughtflows.in',
+        path: '/Premier-Medical-Coding-Institute-Gandhipuram'
+      }
+    ]
+  },
+  kerala: {
+    regionKey: 'kerala',
+    regionName: 'Kerala',
+    displayName: 'Kerala Campuses',
+    routes: [
+      '/kerala', '/medical-coding-course-kerala',
+      '/medical-coding-academy-kochi', '/kochi',
+      '/advanced-medical-coding-tiruvandrum', '/trivandrum', '/tiruvandrum'
+    ],
+    branches: [
+      {
+        name: 'Kochi Branch',
+        locality: 'Edappally, NH Bypass',
+        address: '4th Floor, Vee Vee Tower, Near Bhima Jewels, NH Bypass, Edappally, Kochi, Ernakulam, Kerala - 682024',
+        phone: '+91 90480 23242',
+        phoneClean: '+919048023242',
+        email: 'info@thoughtflows.in',
+        path: '/Medical-Coding-Academy-Kochi'
+      },
+      {
+        name: 'Trivandrum Branch',
+        locality: 'East Fort',
+        address: '167, 1st Floor, Karimpanal Arcade, opp. Padmanabhaswamy Temple, East Fort, Thiruvananthapuram, Kerala - 695023',
+        phone: '+91 90480 23242',
+        phoneClean: '+919048023242',
+        email: 'info@thoughtflows.in',
+        path: '/Advanced-Medical-Coding-Tiruvandrum'
+      }
+    ]
+  },
+  maharashtra: {
+    regionKey: 'maharashtra',
+    regionName: 'Maharashtra',
+    displayName: 'Maharashtra Campuses',
+    routes: [
+      '/maharashtra', '/medical-coding-course-maharashtra',
+      '/medical-coding-course-pune', '/medical-coding-course-pune/', '/advanced-medical-coding-pune', '/pune',
+      '/medical-coding-training-kolhapur', '/kolhapur'
+    ],
+    branches: [
+      {
+        name: 'Pune Branch',
+        locality: 'Near IT Corridor',
+        address: 'Near IT Corridor, Kharadi & Shivajinagar Connectivity, Pune, Maharashtra - 411014',
+        phone: '+91 93845 76852',
+        phoneClean: '+919384576852',
+        email: 'info@thoughtflows.in',
+        path: '/medical-coding-course-pune/'
+      },
+      {
+        name: 'Kolhapur Branch',
+        locality: 'Shahupuri & Station Road',
+        address: 'Central Location, Shahupuri & Railway Station Hub, Kolhapur, Maharashtra - 416001',
+        phone: '+91 93845 76852',
+        phoneClean: '+919384576852',
+        email: 'info@thoughtflows.in',
+        path: '/Medical-Coding-Training-Kolhapur'
+      }
+    ]
+  }
+};
+
+/**
+ * Returns region branches matching the given pathname if the path is in a multi-campus region.
+ * @param {string} pathname
+ * @returns {object|null}
+ */
+export const getRegionBranchesByPath = (pathname) => {
+  if (!pathname) return null;
+  const path = pathname.toLowerCase().trim();
+  for (const region of Object.values(regionBranches)) {
+    if (region.routes.some((r) => r.toLowerCase() === path)) {
+      return region;
+    }
+  }
+  return null;
 };
 
 /**
