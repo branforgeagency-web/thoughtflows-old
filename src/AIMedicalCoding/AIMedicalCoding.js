@@ -189,7 +189,7 @@ const AIMedicalCoding = () => {
           <span className="aimc-badge">AI-Powered Intake · Admissions Open</span>
           <div className="aimc-grp">
             <a href="tel:+919655079784" aria-label="Call us">📞 +91 96550 79784</a>
-            <a href="mailto:info@thoughtflows.in" aria-label="Email us">✉️ info@thoughtflows.in</a>
+            <a href="mailto:thoughtflowsinfo@gmail.com" aria-label="Email us">✉️ thoughtflowsinfo@gmail.com</a>
           </div>
         </div>
       </div>
@@ -439,7 +439,7 @@ const AIMedicalCoding = () => {
             <p>Our admissions team is ready to assist you with eligibility, course details and the registration process.</p>
             <div className="aimc-contact-meta">
               <a href="tel:+919655079784">📞 +91 96550 79784</a>
-              <a href="mailto:info@thoughtflows.in">✉️ info@thoughtflows.in</a>
+              <a href="mailto:thoughtflowsinfo@gmail.com">✉️ thoughtflowsinfo@gmail.com</a>
             </div>
             <div className="aimc-contact-btns">
               <a href="tel:+919655079784" className="aimc-btn aimc-btn-cyan aimc-btn-lg">📞 Call Now</a>
@@ -481,7 +481,7 @@ const AIMedicalCoding = () => {
             <div className="aimc-foot-col">
               <h5>Reach Us</h5>
               <a href="tel:+919655079784">📞 +91 96550 79784</a>
-              <a href="mailto:info@thoughtflows.in">✉️ info@thoughtflows.in</a>
+              <a href="mailto:thoughtflowsinfo@gmail.com">✉️ thoughtflowsinfo@gmail.com</a>
               <span>📍 Coimbatore – Admissions Open</span>
             </div>
           </div>

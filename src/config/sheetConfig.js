@@ -7,7 +7,7 @@
 // 2. Paste that URL and the same token below.
 // 3. Change ADMIN_PASSWORD to something only your team knows.
 
-export const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbwhJdgLJoKSiJ9w4tQzCCn3nMaBFP_jZxnI27-6PQE-Ebs784wd_oWhPQU_iIlq1iBzrQ/exec";
+export const SHEET_WEB_APP_URL = "https://script.google.com/macros/s/AKfycbxKl_FmzVajimjxvH_2FyyAbS2aQWH7hdKgT0ei2xo4hvQqUU0XdJBKjna2qOePAB7T/exec";
 
 export const SHEET_ACCESS_TOKEN = "ThoughtFlows@Enquiry2026!SecureKey";
 

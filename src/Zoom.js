@@ -24,7 +24,7 @@ export default function ZoomSignupForm({ onClose }) {
 
     try {
       const templateParams = {
-        to_email: 'info@thoughtflows.in',
+        to_email: 'thoughtflowsinfo@gmail.com',
         from_name: values.name,
         from_email: values.email,
         phone: normalizePhone(values.phone),

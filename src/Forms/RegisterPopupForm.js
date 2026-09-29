@@ -60,7 +60,7 @@ Qualification: ${formData.qualification || 'N/A'}
 Message: ${formData.message || 'N/A'}`;
 
             const templateParams = {
-                to_email: 'info@thoughtflows.in',
+                to_email: 'thoughtflowsinfo@gmail.com',
                 from_name: formData.name,
                 from_email: formData.email,
                 phone: normalizePhone(formData.phone),
