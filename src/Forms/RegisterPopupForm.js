@@ -53,35 +53,38 @@ const RegisterPopupForm = () => {
         setIsSubmitting(true);
 
         try {
-            const fullDetails = `Course: ${formData.course}
-Location: ${formData.location}
+            const fullDetails = `Name: ${formData.name}
+Email: ${formData.email}
+Mobile / Phone: ${formData.phone}
 Age: ${formData.age || 'N/A'}
 Qualification: ${formData.qualification || 'N/A'}
-Message: ${formData.message || 'N/A'}`;
+Course: ${formData.course || 'N/A'}
+Location: ${formData.location || 'N/A'}
+
+Message:
+${formData.message || 'N/A'}`;
 
             const templateParams = {
                 to_email: 'thoughtflowsinfo@gmail.com',
+                name: formData.name,
                 from_name: formData.name,
+                user_name: formData.name,
+                email: formData.email,
                 from_email: formData.email,
+                user_email: formData.email,
+                reply_to: formData.email,
                 phone: normalizePhone(formData.phone),
-                age: formData.age,
-                qualification: formData.qualification,
-                location: formData.location,
-                course: fullDetails,
+                mobile: normalizePhone(formData.phone),
+                ph: normalizePhone(formData.phone),
+                user_phone: normalizePhone(formData.phone),
+                age: formData.age || 'N/A',
+                qualification: formData.qualification || 'N/A',
+                location: formData.location || 'N/A',
+                course: formData.course || 'N/A',
                 message: fullDetails,
+                user_message: formData.message || 'N/A',
                 subject: `Registration from Website Popup - ${formData.name}`,
-                full_message: `
-                    New Registration from Website Popup:
-                    
-                    Name: ${formData.name}
-                    Email: ${formData.email}
-                    Phone: ${formData.phone}
-                    Age: ${formData.age}
-                    Qualification: ${formData.qualification}
-                    Location: ${formData.location}
-                    Course: ${formData.course}
-                    Message: ${formData.message}
-                `
+                full_message: fullDetails
             };
 
             // Log this enquiry to the Google Sheet (admin report). Fire-and-forget:
@@ -98,10 +101,10 @@ Message: ${formData.message || 'N/A'}`;
             });
 
             await emailjs.send(
-                'service_2anzqj9',
-                'template_vx3lkna',
+                'service_psbuu6o',
+                'template_65u7qqm',
                 templateParams,
-                "KLhirNBaXDhIlDonK"
+                "Bu4k9osIvSGQZvMvy"
             );
 
             setIsSuccess(true);

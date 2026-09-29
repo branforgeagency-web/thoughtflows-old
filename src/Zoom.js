@@ -23,28 +23,35 @@ export default function ZoomSignupForm({ onClose }) {
     setIsSubmitting(true)
 
     try {
+      const fullDetails = `Name: ${values.name}
+Email: ${values.email}
+Mobile / Phone: ${values.phone}
+Course: ${values.course || 'Free Zoom Trial'}`;
+
       const templateParams = {
         to_email: 'thoughtflowsinfo@gmail.com',
+        name: values.name,
         from_name: values.name,
+        user_name: values.name,
+        email: values.email,
         from_email: values.email,
+        user_email: values.email,
+        reply_to: values.email,
         phone: normalizePhone(values.phone),
-        course: values.course,
+        mobile: normalizePhone(values.phone),
+        ph: normalizePhone(values.phone),
+        user_phone: normalizePhone(values.phone),
+        course: values.course || 'Free Zoom Trial',
+        message: fullDetails,
         subject: `Free Zoom Trial Registration - ${values.name}`,
-        full_message: `
-          New Free Zoom Trial Registration:
-          
-          Name: ${values.name}
-          Email: ${values.email}
-          Phone: ${values.phone}
-          Course: ${values.course}
-        `
+        full_message: fullDetails
       };
 
       await emailjs.send(
-        'service_2anzqj9',
-        'template_vx3lkna',
+        'service_psbuu6o',
+        'template_65u7qqm',
         templateParams,
-        "KLhirNBaXDhIlDonK"
+        "Bu4k9osIvSGQZvMvy"
       );
 
       setIsSuccess(true)
