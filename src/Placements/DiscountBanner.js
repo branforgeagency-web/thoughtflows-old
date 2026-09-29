@@ -52,28 +52,33 @@ const DiscountBanner = () => {
         setSubmitStatus({ type: '', message: '' });
 
         try {
-            const fullDetails = `Interested Course: ${formData.interestedCourse}
-Preferred Branch: ${formData.preferredBranch}
+            const fullDetails = `Name: ${formData.name}
+Email: ${formData.email}
+Mobile / Phone: ${formData.ph}
+Interested Course: ${formData.interestedCourse || 'N/A'}
+Preferred Branch: ${formData.preferredBranch || 'N/A'}
 Discount Offer: 30%`;
 
             const templateParams = {
                 to_email: 'thoughtflowsinfo@gmail.com',
+                name: formData.name,
                 from_name: formData.name,
+                user_name: formData.name,
+                email: formData.email,
                 from_email: formData.email,
+                user_email: formData.email,
+                reply_to: formData.email,
                 phone: normalizePhone(formData.ph),
-                qualification: fullDetails, // Send full details in qualification template field
-                message: fullDetails, // Send full details in message template field
+                mobile: normalizePhone(formData.ph),
+                ph: normalizePhone(formData.ph),
+                user_phone: normalizePhone(formData.ph),
+                course: formData.interestedCourse || 'N/A',
+                location: formData.preferredBranch || 'N/A',
+                qualification: fullDetails,
+                message: fullDetails,
+                user_message: 'Discount Offer: 30%',
                 subject: `Discount Banner Inquiry from ${formData.name}`,
-                full_message: `
-          New Discount Banner Submission:
-          
-          Name: ${formData.name}
-          Mobile: ${formData.ph}
-          Email: ${formData.email}
-          Interested Course: ${formData.interestedCourse}
-          Preferred Branch: ${formData.preferredBranch}
-          Discount Offer: 30%
-        `
+                full_message: fullDetails
             };
 
             logEnquiry('Discount Banner', {
@@ -86,10 +91,10 @@ Discount Offer: 30%`;
             });
 
             const response = await emailjs.send(
-                'service_2anzqj9',
-                'template_y72j1ke',
+                'service_psbuu6o',
+                'template_65u7qqm',
                 templateParams,
-                "KLhirNBaXDhIlDonK"
+                "Bu4k9osIvSGQZvMvy"
             );
 
             console.log('Email sent successfully:', response);

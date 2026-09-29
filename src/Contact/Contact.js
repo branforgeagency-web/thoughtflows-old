@@ -14,7 +14,7 @@ function Contact() {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
 
     // Initialize EmailJS with the same key from Home.js
-    // emailjs.init("KLhirNBaXDhIlDonK");
+    // emailjs.init("Bu4k9osIvSGQZvMvy");
   }, [])
   const [viewportWidth, setViewportWidth] = useState(window.innerWidth);
   useEffect(() => {
@@ -236,31 +236,36 @@ function Contact() {
       setSubmitStatus({ type: '', message: '' });
 
       try {
-        // EmailJS template parameters
-        const templateParams = {
-          to_email: 'thoughtflowsinfo@gmail.com', // Same recipient as Home.js
-          from_name: formData.name,
-          from_email: formData.email,
-          phone: normalizePhone(formData.ph),
-          course: formData.course,
-          qualification: 'N/A',
-          location: formData.location,
-          message: `Course: ${formData.course}
-Location: ${formData.location}
+        const fullDetails = `Name: ${formData.name}
+Email: ${formData.email}
+Mobile / Phone: ${formData.ph}
+Course: ${formData.course || 'N/A'}
+Location: ${formData.location || 'N/A'}
 
 Message:
-${formData.message}`,
+${formData.message || 'N/A'}`;
+
+        // EmailJS template parameters
+        const templateParams = {
+          to_email: 'thoughtflowsinfo@gmail.com',
+          name: formData.name,
+          from_name: formData.name,
+          user_name: formData.name,
+          email: formData.email,
+          from_email: formData.email,
+          user_email: formData.email,
+          reply_to: formData.email,
+          phone: normalizePhone(formData.ph),
+          mobile: normalizePhone(formData.ph),
+          ph: normalizePhone(formData.ph),
+          user_phone: normalizePhone(formData.ph),
+          course: formData.course || '',
+          qualification: 'N/A',
+          location: formData.location || '',
+          message: fullDetails,
+          user_message: formData.message || '',
           subject: `Contact Form Submission from ${formData.name} (${formData.email})`,
-          full_message: `
-            New Contact Form Submission:
-            
-            Name: ${formData.name}
-            Email: ${formData.email}  
-            Phone: ${formData.ph}
-            Course: ${formData.course}
-            Location: ${formData.location}
-            Message: ${formData.message}
-          `
+          full_message: fullDetails
         };
 
         // Log this enquiry to the Google Sheet (admin report). Fire-and-forget:
@@ -276,10 +281,10 @@ ${formData.message}`,
 
         // Send email using the same EmailJS credentials as Home.js
         const response = await emailjs.send(
-          'service_2anzqj9', // Same service ID as Home.js67
-          'template_y72j1ke', // Same template ID as Home.js
+          'service_psbuu6o',
+          'template_65u7qqm',
           templateParams,
-          "KLhirNBaXDhIlDonK"
+          "Bu4k9osIvSGQZvMvy"
         );
 
         console.log('Email sent successfully:', response);

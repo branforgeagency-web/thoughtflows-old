@@ -8,7 +8,7 @@ The Contact form in `src/Contact/Contact.js` has been updated to send emails usi
 ### 1. EmailJS Credentials (Same as Home.js)
 - **Public Key**: `0J_1VFdtt2A1E5DL5`
 - **Service ID**: `service_k1hktqq`
-- **Template ID**: `template_pldhwhc`
+- **Template ID**: `template_65u7qqm`
 - **Recipient Email**: `dhanuskumar18@gmail.com`
 
 ### 2. What Was Added
@@ -201,7 +201,7 @@ The template uses these EmailJS variables:
 4. Name it "Contact Form Template"
 5. Copy and paste the above HTML
 6. Save the template
-7. Note the template ID and update it in the code if different from `template_pldhwhc`
+7. Note the template ID and update it in the code if different from `template_65u7qqm`
 
 The template includes:
 - Responsive design

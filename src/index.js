@@ -6,7 +6,7 @@ import reportWebVitals from './reportWebVitals';
 import { HelmetProvider } from 'react-helmet-async';
 import emailjs from '@emailjs/browser';
 
-emailjs.init("KLhirNBaXDhIlDonK");
+emailjs.init("Bu4k9osIvSGQZvMvy");
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
