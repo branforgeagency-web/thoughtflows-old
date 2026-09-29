@@ -19,7 +19,7 @@ const HyderabadCore = () => {
                     <img src={passion} alt='passion'/>
                     <h3>Passion</h3>
                     <p>
-                        We love what we do, and it shows in our training. That same passion is what's helped us become one of the most trusted medical coding institutes in Hyderabad.
+                        We love what we do, and it shows in our training. That same passion is what's helped us become one of the most trusted medical coding institutes in Ameerpet.
                     </p>
 
                 </div>
