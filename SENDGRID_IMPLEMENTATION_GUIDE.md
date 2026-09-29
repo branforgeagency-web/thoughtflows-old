@@ -67,7 +67,7 @@ function Contact() {
       try {
         // SendGrid email configuration
         const msg = {
-          to: 'info@thoughtflows.in', // Your business email
+          to: 'thoughtflowsinfo@gmail.com', // Your business email
           from: {
             email: formData.email, // User's email as sender
             name: formData.name    // User's name

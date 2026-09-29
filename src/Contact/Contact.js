@@ -50,7 +50,7 @@ function Contact() {
     {
       name: 'Saravanampatti',
       top: '64.0%', left: '35.0%', // Adjusted for distance
-      email: 'info@thoughtflows.in',
+      email: 'thoughtflowsinfo@gmail.com',
       phone: '+91 93845 76852',
       address: 'No-171/2A, 1st, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu 641035',
       instagram: 'https://www.instagram.com/thought_flows?stkn=a2xlYW43eG45dmt6',
@@ -59,7 +59,7 @@ function Contact() {
     {
       name: 'Hopes',
       top: '72.0%', left: '36.5%', // Adjusted for distance
-      email: 'info@thoughtflows.in',
+      email: 'thoughtflowsinfo@gmail.com',
       phone: '+91 93845 76852',
       address: 'Door No.62 E/F , 1st Floor South Wing, Lalitha Towers Gandhi Street, Avinashi Rd, Coimbatore, Tamil Nadu 641004',
       instagram: 'https://www.instagram.com/thought_flows?stkn=a2xlYW43eG45dmt6',
@@ -68,7 +68,7 @@ function Contact() {
     {
       name: 'Gandhipuram',
       top: '71.5%', left: '32.0%', // Adjusted for distance
-      email: 'info@thoughtflows.in',
+      email: 'thoughtflowsinfo@gmail.com',
       phone: '+91 93845 76852',
       address: 'Jay Enclave, 1084, 3rd St, Cross Cut Road, Gandhipuram, Coimbatore, Tamil Nadu 641012',
       instagram: 'https://www.instagram.com/thought_flows?stkn=a2xlYW43eG45dmt6',
@@ -77,7 +77,7 @@ function Contact() {
     {
       name: 'Tirupati',
       top: '44.72%', left: '48.43%',
-      email: 'info@thoughtflows.in',
+      email: 'thoughtflowsinfo@gmail.com',
       phone: '+91 87904 24835',
       address: '20-1-171/C1 ,1st floor Upstairs MIOT Diagnostic center oppo.Sai Baba temple, Tirumala Bypass Rd, Korlagunta, Tirupati, Andhra Pradesh 517501',
       instagram: 'https://www.instagram.com/medicalcoding_thoughtflowstpt?stkn=MTZvZHkzNWhwN3B0dg%3D%3D',
@@ -86,7 +86,7 @@ function Contact() {
     {
       name: 'Ameerpet',
       top: '16.63%', left: '45.18%',
-      email: 'info@thoughtflows.in',
+      email: 'thoughtflowsinfo@gmail.com',
       phone: '+91 87907 51742',
       address: 'Level 6(5th Floor, Vasavi Mpm Grand, No: 606/A, Ameerpet X Road, Yella Reddy Guda, Hyderabad, Telangana 500073',
       instagram: 'https://www.instagram.com/thoughtflowshyderabad?stkn=MTRtY2Z2bnNxNzZ1cQ%3D%3D',
@@ -95,7 +95,7 @@ function Contact() {
     {
       name: 'Trivandrum',
       top: '80.51%', left: '26.93%',
-      email: 'info@thoughtflows.in',
+      email: 'thoughtflowsinfo@gmail.com',
       phone: '+91 90480 23242',
       address: '167, 1st Floor, Karimpanal Arcade, opp. to Padmanabhaswamy Temple, Fort, East Fort, Pazhavangadi, Thiruvananthapuram, Keralam 695023',
       instagram: 'https://www.instagram.com/thoughtflowskerala?stkn=ZG9ybTE2aGZ6cDVn',
@@ -104,7 +104,7 @@ function Contact() {
     {
       name: 'Kochi',
       top: '70.14%', left: '22.70%',
-      email: 'info@thoughtflows.in',
+      email: 'thoughtflowsinfo@gmail.com',
       phone: '+91 90480 23242',
       address: '4 th floor, Vee Vee Tower, road, near Bhima Jewels, NH Bye Pass, Edappally, Kochi, Ernakulam, Keralam 682024',
       instagram: 'https://www.instagram.com/thoughtflows_kochi?stkn=M2tndXF5ZHc0dWZi',
@@ -113,7 +113,7 @@ function Contact() {
     {
       name: 'Trichy',
       top: '72.5%', left: '42.5%', // Adjusted for distance
-      email: 'info@thoughtflows.in',
+      email: 'thoughtflowsinfo@gmail.com',
       phone: '+91 93845 76852',
       address: 'first floor, AMIL towers, 25, C-40, 3rd Cross Rd, Thillai Nagar, Tiruchirappalli, Tamil Nadu 620018',
       instagram: 'https://www.instagram.com/thoughtflows_trichy?stkn=MzJlemxjcjM1MWg4',
@@ -122,7 +122,7 @@ function Contact() {
     {
       name: 'Salem',
       top: '62.5%', left: '39.8%', // Adjusted for distance
-      email: 'info@thoughtflows.in',
+      email: 'thoughtflowsinfo@gmail.com',
       phone: '+91 81487 32017',
       address: '1st floor, S Square Towers, Omalur Main Rd, Arthanari Nagar, Mamangam, Salem, Tamil Nadu 636302',
       instagram: 'https://www.instagram.com/thoughtflowssalem?stkn=amU3YnowZmowOThq',
@@ -131,7 +131,7 @@ function Contact() {
     {
       name: 'Dilsukhnagar',
       top: '18.64%', left: '48.43%',
-      email: 'info@thoughtflows.in',
+      email: 'thoughtflowsinfo@gmail.com',
       phone: '+91 90305 08844',
       address: 'H.No:-16, Sai Towers, 11-477-/6/1/A 2nd floor, opp. pillar No:-1519, Indira Nagar, Dilsukhnagar, Hyderabad, Telangana 500102',
       instagram: 'https://www.instagram.com/thoughtflowsdilsukhnagar?stkn=MW10NTZqd3Z3NWhnZw==',
@@ -140,7 +140,7 @@ function Contact() {
     {
       name: 'Vizag',
       top: '15.29%', left: '80.36%',
-      email: 'info@thoughtflows.in',
+      email: 'thoughtflowsinfo@gmail.com',
       phone: '+91 89775 07230',
       address: '7th floor, IT Grand Palace, 701/A, 1st Ln, Dwaraka Nagar, Visakhapatnam, Andhra Pradesh 530016',
       instagram: 'https://www.instagram.com/thoughtflows_vizag?stkn=cTRqZmV3cGcwcHBq',
@@ -167,7 +167,7 @@ function Contact() {
     {
       name: 'Theni',
       top: '74.0%', left: '36.0%',
-      email: 'info@thoughtflows.in',
+      email: 'thoughtflowsinfo@gmail.com',
       phone: '',
       address: '5A/22, Forest Road, Shivaji Nagar, NRT Nagar, Theni, Tamil Nadu 625531',
       instagram: '',
@@ -238,7 +238,7 @@ function Contact() {
       try {
         // EmailJS template parameters
         const templateParams = {
-          to_email: 'info@thoughtflows.in', // Same recipient as Home.js
+          to_email: 'thoughtflowsinfo@gmail.com', // Same recipient as Home.js
           from_name: formData.name,
           from_email: formData.email,
           phone: normalizePhone(formData.ph),

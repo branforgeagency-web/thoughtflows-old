@@ -7,7 +7,7 @@ export const branchDetails = {
     phoneRaw: '9384576852',
     phoneClean: '+919384576852',
     address: 'Jay Enclave, 1084, 3rd St, Cross Cut Road, Gandhipuram, Coimbatore, Tamil Nadu 641012',
-    email: 'info@thoughtflows.in',
+    email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thought_flows?stkn=a2xlYW43eG45dmt6',
     facebook: 'https://www.facebook.com/people/Thoughtflows-Medical-Coding-Academy-Gandhipuram-Coimbatore/61562789837696/',
     routes: ['/premier-medical-coding-institute-gandhipuram', '/gandhipuram']
@@ -20,7 +20,7 @@ export const branchDetails = {
     phoneRaw: '9384576852',
     phoneClean: '+919384576852',
     address: 'Door No.62 E/F , 1st Floor South Wing, Lalitha Towers Gandhi Street, Avinashi Rd, Coimbatore, Tamil Nadu 641004',
-    email: 'info@thoughtflows.in',
+    email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thought_flows?stkn=a2xlYW43eG45dmt6',
     facebook: 'https://www.facebook.com/thoughtflowscoimbatore/',
     routes: ['/medical-coding-excellence-at-hopes', '/hopes']
@@ -33,7 +33,7 @@ export const branchDetails = {
     phoneRaw: '9384576852',
     phoneClean: '+919384576852',
     address: 'No-171/2A, 1st, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu 641035',
-    email: 'info@thoughtflows.in',
+    email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thought_flows?stkn=a2xlYW43eG45dmt6',
     facebook: 'https://www.facebook.com/Thoughtflowsacademy/',
     routes: ['/top-medical-coding-training-saravanampatti', '/saravanampatti']
@@ -46,7 +46,7 @@ export const branchDetails = {
     phoneRaw: '9384576852',
     phoneClean: '+919384576852',
     address: 'First floor, AMIL towers, 25, C-40, 3rd Cross Rd, Thillai Nagar, Tiruchirappalli, Tamil Nadu 620018',
-    email: 'info@thoughtflows.in',
+    email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thoughtflows_trichy?stkn=MzJlemxjcjM1MWg4',
     facebook: 'https://www.facebook.com/Thoughtflowstrichy/',
     routes: ['/career-focused-medical-coding-trichy', '/trichy']
@@ -59,7 +59,7 @@ export const branchDetails = {
     phoneRaw: '8148732017',
     phoneClean: '+918148732017',
     address: '1st floor, S Square Towers, Omalur Main Rd, Arthanari Nagar, Mamangam, Salem, Tamil Nadu 636302',
-    email: 'info@thoughtflows.in',
+    email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thoughtflowssalem?stkn=amU3YnowZmowOThq',
     facebook: 'https://www.facebook.com/profile.php?id=61557903507460',
     routes: ['/future-ready-medical-coding-salem', '/salem']
@@ -72,7 +72,7 @@ export const branchDetails = {
     phoneRaw: '9048023242',
     phoneClean: '+919048023242',
     address: '4 th floor, Vee Vee Tower, road, near Bhima Jewels, NH Bye Pass, Edappally, Kochi, Ernakulam, Keralam 682024',
-    email: 'info@thoughtflows.in',
+    email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thoughtflows_kochi?stkn=M2tndXF5ZHc0dWZi',
     facebook: 'https://www.facebook.com/thoughtflowsacademykochi/',
     routes: ['/medical-coding-academy-kochi', '/kochi']
@@ -85,7 +85,7 @@ export const branchDetails = {
     phoneRaw: '9048023242',
     phoneClean: '+919048023242',
     address: '167, 1st Floor, Karimpanal Arcade, opp. to Padmanabhaswamy Temple, Fort, East Fort, Pazhavangadi, Thiruvananthapuram, Keralam 695023',
-    email: 'info@thoughtflows.in',
+    email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thoughtflowskerala?stkn=ZG9ybTE2aGZ6cDVn',
     facebook: 'https://www.facebook.com/Thoughtflowskerala/',
     routes: ['/advanced-medical-coding-tiruvandrum', '/trivandrum', '/tiruvandrum']
@@ -98,7 +98,7 @@ export const branchDetails = {
     phoneRaw: '8790751742',
     phoneClean: '+918790751742',
     address: 'Level 6(5th Floor, Vasavi Mpm Grand, No: 606/A, Ameerpet X Road, Yella Reddy Guda, Hyderabad, Telangana 500073',
-    email: 'info@thoughtflows.in',
+    email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thoughtflowshyderabad?stkn=MTRtY2Z2bnNxNzZ1cQ%3D%3D',
     facebook: 'https://www.facebook.com/Thoughtflowshyderabad/',
     routes: ['/trusted-medical-coding-ameerpet', '/ameerpet', '/hyderabad']
@@ -111,7 +111,7 @@ export const branchDetails = {
     phoneRaw: '9030508844',
     phoneClean: '+919030508844',
     address: 'H.No:-16, Sai Towers, 11-477-/6/1/A 2nd floor, opp. pillar No:-1519, Indira Nagar, Dilsukhnagar, Hyderabad, Telangana 500102',
-    email: 'info@thoughtflows.in',
+    email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thoughtflowsdilsukhnagar?stkn=MW10NTZqd3Z3NWhnZw==',
     facebook: 'https://www.facebook.com/profile.php?id=61592324790661',
     routes: ['/professional-medical-coding-dilsukhnagar', '/dilsukhnagar']
@@ -124,7 +124,7 @@ export const branchDetails = {
     phoneRaw: '8977507230',
     phoneClean: '+918977507230',
     address: '7th floor, IT Grand Palace, 701/A, 1st Ln, Dwaraka Nagar, Visakhapatnam, Andhra Pradesh 530016',
-    email: 'info@thoughtflows.in',
+    email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thoughtflows_vizag?stkn=cTRqZmV3cGcwcHBq',
     facebook: 'https://www.facebook.com/profile.php?id=61577112877261',
     routes: ['/innovative-medical-coding-vizag', '/vizag']
@@ -137,7 +137,7 @@ export const branchDetails = {
     phoneRaw: '8790424835',
     phoneClean: '+918790424835',
     address: '20-1-171/C1 ,1st floor Upstairs MIOT Diagnostic center oppo.Sai Baba temple, Tirumala Bypass Rd, Korlagunta, Tirupati, Andhra Pradesh 517501',
-    email: 'info@thoughtflows.in',
+    email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/medicalcoding_thoughtflowstpt?stkn=MTZvZHkzNWhwN3B0dg%3D%3D',
     facebook: 'https://www.facebook.com/Thoughtflowsmedicalcodingacademytirupati',
     routes: ['/expert-medical-coding-tirupathi', '/tirupathi', '/tirupati']
@@ -150,7 +150,7 @@ export const branchDetails = {
     phoneRaw: '9384576852',
     phoneClean: '+919384576852',
     address: 'Near IT Corridor, Kharadi & Shivajinagar Connectivity, Pune, Maharashtra - 411014',
-    email: 'info@thoughtflows.in',
+    email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thought_flows/',
     facebook: 'https://www.facebook.com/Thoughtflowsacademy/',
     routes: ['/medical-coding-course-pune', '/medical-coding-course-pune/', '/advanced-medical-coding-pune', '/pune']
@@ -163,7 +163,7 @@ export const branchDetails = {
     phoneRaw: '9384576852',
     phoneClean: '+919384576852',
     address: 'Central Location, Shahupuri & Railway Station Hub, Kolhapur, Maharashtra - 416001',
-    email: 'info@thoughtflows.in',
+    email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thought_flows/',
     facebook: 'https://www.facebook.com/Thoughtflowsacademy/',
     routes: ['/medical-coding-training-kolhapur', '/kolhapur']
@@ -176,7 +176,7 @@ export const branchDetails = {
     phoneRaw: '9384576852',
     phoneClean: '+919384576852',
     address: '5A/22, Forest Road, Shivaji Nagar, NRT Nagar, Theni, Tamil Nadu - 625531',
-    email: 'info@thoughtflows.in',
+    email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thought_flows/',
     facebook: 'https://www.facebook.com/Thoughtflowsacademy/',
     routes: ['/medical-coding-course-theni', '/theni']
@@ -191,7 +191,7 @@ export const defaultBranchDetails = {
   phoneRaw: '9384576852',
   phoneClean: '+919384576852',
   address: 'Jay Enclave, 1084, 3rd St, Cross Cut Road, Gandhipuram, Coimbatore, Tamil Nadu 641012',
-  email: 'info@thoughtflows.in',
+  email: 'thoughtflowsinfo@gmail.com',
   instagram: 'https://www.instagram.com/thought_flows/',
   facebook: 'https://www.facebook.com/Thoughtflowsacademy/',
   routes: []
@@ -214,7 +214,7 @@ export const regionBranches = {
         address: 'Level 6 (5th Floor), Vasavi MPM Grand, No: 606/A, Ameerpet X Road, Yella Reddy Guda, Hyderabad, Telangana - 500073',
         phone: '+91 87907 51742',
         phoneClean: '+918790751742',
-        email: 'info@thoughtflows.in',
+        email: 'thoughtflowsinfo@gmail.com',
         path: '/Trusted-Medical-Coding-Ameerpet'
       },
       {
@@ -223,7 +223,7 @@ export const regionBranches = {
         address: 'H.No: 16, Sai Towers, 11-477/6/1/A, 2nd Floor, opp. Pillar No: 1519, Indira Nagar, Dilsukhnagar, Hyderabad, Telangana - 500102',
         phone: '+91 90305 08844',
         phoneClean: '+919030508844',
-        email: 'info@thoughtflows.in',
+        email: 'thoughtflowsinfo@gmail.com',
         path: '/Professional-Medical-Coding-Dilsukhnagar'
       }
     ]
@@ -245,7 +245,7 @@ export const regionBranches = {
         address: 'Door No.62 E/F, 1st Floor South Wing, Lalitha Towers, Gandhi Street, Avinashi Rd, Coimbatore, Tamil Nadu - 641004',
         phone: '+91 93845 76852',
         phoneClean: '+919384576852',
-        email: 'info@thoughtflows.in',
+        email: 'thoughtflowsinfo@gmail.com',
         path: '/Medical-Coding-Excellence-at-Hopes'
       },
       {
@@ -254,7 +254,7 @@ export const regionBranches = {
         address: 'No-171/2A, 1st Floor, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu - 641035',
         phone: '+91 93845 76852',
         phoneClean: '+919384576852',
-        email: 'info@thoughtflows.in',
+        email: 'thoughtflowsinfo@gmail.com',
         path: '/Top-Medical-Coding-Training-Saravanampatti'
       },
       {
@@ -263,7 +263,7 @@ export const regionBranches = {
         address: 'Jay Enclave, 1084, 3rd St, Cross Cut Road, Gandhipuram, Coimbatore, Tamil Nadu - 641012',
         phone: '+91 93845 76852',
         phoneClean: '+919384576852',
-        email: 'info@thoughtflows.in',
+        email: 'thoughtflowsinfo@gmail.com',
         path: '/Premier-Medical-Coding-Institute-Gandhipuram'
       }
     ]
@@ -284,7 +284,7 @@ export const regionBranches = {
         address: '4th Floor, Vee Vee Tower, Near Bhima Jewels, NH Bypass, Edappally, Kochi, Ernakulam, Kerala - 682024',
         phone: '+91 90480 23242',
         phoneClean: '+919048023242',
-        email: 'info@thoughtflows.in',
+        email: 'thoughtflowsinfo@gmail.com',
         path: '/Medical-Coding-Academy-Kochi'
       },
       {
@@ -293,7 +293,7 @@ export const regionBranches = {
         address: '167, 1st Floor, Karimpanal Arcade, opp. Padmanabhaswamy Temple, East Fort, Thiruvananthapuram, Kerala - 695023',
         phone: '+91 90480 23242',
         phoneClean: '+919048023242',
-        email: 'info@thoughtflows.in',
+        email: 'thoughtflowsinfo@gmail.com',
         path: '/Advanced-Medical-Coding-Tiruvandrum'
       }
     ]
@@ -314,7 +314,7 @@ export const regionBranches = {
         address: 'Near IT Corridor, Kharadi & Shivajinagar Connectivity, Pune, Maharashtra - 411014',
         phone: '+91 93845 76852',
         phoneClean: '+919384576852',
-        email: 'info@thoughtflows.in',
+        email: 'thoughtflowsinfo@gmail.com',
         path: '/medical-coding-course-pune/'
       },
       {
@@ -323,7 +323,7 @@ export const regionBranches = {
         address: 'Central Location, Shahupuri & Railway Station Hub, Kolhapur, Maharashtra - 416001',
         phone: '+91 93845 76852',
         phoneClean: '+919384576852',
-        email: 'info@thoughtflows.in',
+        email: 'thoughtflowsinfo@gmail.com',
         path: '/Medical-Coding-Training-Kolhapur'
       }
     ]

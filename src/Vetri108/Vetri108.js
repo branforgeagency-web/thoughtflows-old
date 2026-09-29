@@ -186,7 +186,7 @@ const Vetri108 = () => {
           <span className="v108-badge">Coimbatore Admissions Open</span>
           <div className="v108-grp">
             <a href="tel:+919655079784" aria-label="Call us">📞 +91 96550 79784</a>
-            <a href="mailto:info@thoughtflows.in" aria-label="Email us">✉️ info@thoughtflows.in</a>
+            <a href="mailto:thoughtflowsinfo@gmail.com" aria-label="Email us">✉️ thoughtflowsinfo@gmail.com</a>
           </div>
         </div>
       </div>
@@ -425,7 +425,7 @@ const Vetri108 = () => {
             <p>Our admissions team is ready to assist you with eligibility, course details and the registration process.</p>
             <div className="v108-contact-meta">
               <a href="tel:+919655079784">📞 +91 96550 79784</a>
-              <a href="mailto:info@thoughtflows.in">✉️ info@thoughtflows.in</a>
+              <a href="mailto:thoughtflowsinfo@gmail.com">✉️ thoughtflowsinfo@gmail.com</a>
             </div>
             <div className="v108-contact-btns">
               <a href="tel:+919655079784" className="v108-btn v108-btn-gold v108-btn-lg">📞 Call Now</a>
@@ -467,7 +467,7 @@ const Vetri108 = () => {
             <div className="v108-foot-col">
               <h5>Reach Us</h5>
               <a href="tel:+919655079784">📞 +91 96550 79784</a>
-              <a href="mailto:info@thoughtflows.in">✉️ info@thoughtflows.in</a>
+              <a href="mailto:thoughtflowsinfo@gmail.com">✉️ thoughtflowsinfo@gmail.com</a>
               <span>📍 Coimbatore – Admissions Open</span>
             </div>
           </div>

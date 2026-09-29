@@ -57,7 +57,7 @@ Preferred Branch: ${formData.preferredBranch}
 Discount Offer: 30%`;
 
             const templateParams = {
-                to_email: 'info@thoughtflows.in',
+                to_email: 'thoughtflowsinfo@gmail.com',
                 from_name: formData.name,
                 from_email: formData.email,
                 phone: normalizePhone(formData.ph),
