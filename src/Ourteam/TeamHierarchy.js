@@ -164,8 +164,6 @@ const teamMemberData = [
 
 
   { "name": "Aswanth", "role": "REGIONAL MANAGER OF KERALA", "phone": "90480 23242", "email": "aswanth@thoughtflows.in", "Branch": "Kerala", "image": Awanth },
-  // { "name": "Gayathri", "role": "REGIONAL MANAGER", "phone": "88075 10359", "email": "gayathrib@thoughtflows.in", "Branch": "", "image": Gayatri },
-  // { "name": "Sruthi", "role": "REGIONAL MANAGER", "phone": "84389 74736", "email": "sruthig@thoughtflows.in", "Branch": "", "image": Sruthi },
 
 
   { "name": "Keerthika", "role": "TRAINING MANAGER", "phone": "96006 55803", "email": "keerthisakthi03@gmail.com", "Branch": "", "image": Keerthika },
@@ -265,10 +263,10 @@ const teamStructure = [
   { role: "INDIA HEAD - OPERATIONS &  STRATEGIC PARTNERSHIP", count: 1 },
   { role: "OPERATIONAL HEAD", count: 1 },
   { role: "DEPARTMENT HEADS", count: 4 },
-  { role: "REGIONAL MANAGER", count: 3 },
+  { role: "REGIONAL MANAGER", count: 1 },
   { role: "TRAINING MANAGER", count: 2 },
   { role: "TRAINER", count: 12 },
-  { role: "BRANCH HEAD", count: 1 },
+  { role: "BRANCH HEAD", count: 3 },
   { role: "TEAM LEAD", count: 7 },
   // { role: "PROCESS COACH", count: 1 },
   { role: "FINANCE MANAGER", count: 1 },
