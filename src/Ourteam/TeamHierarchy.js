@@ -164,8 +164,8 @@ const teamMemberData = [
 
 
   { "name": "Aswanth", "role": "REGIONAL MANAGER OF KERALA", "phone": "90480 23242", "email": "aswanth@thoughtflows.in", "Branch": "Kerala", "image": Awanth },
-  { "name": "Gayathri", "role": "REGIONAL MANAGER", "phone": "88075 10359", "email": "gayathrib@thoughtflows.in", "Branch": "", "image": Gayatri },
-  { "name": "Sruthi", "role": "REGIONAL MANAGER", "phone": "84389 74736", "email": "sruthig@thoughtflows.in", "Branch": "", "image": Sruthi },
+  // { "name": "Gayathri", "role": "REGIONAL MANAGER", "phone": "88075 10359", "email": "gayathrib@thoughtflows.in", "Branch": "", "image": Gayatri },
+  // { "name": "Sruthi", "role": "REGIONAL MANAGER", "phone": "84389 74736", "email": "sruthig@thoughtflows.in", "Branch": "", "image": Sruthi },
 
 
   { "name": "Keerthika", "role": "TRAINING MANAGER", "phone": "96006 55803", "email": "keerthisakthi03@gmail.com", "Branch": "", "image": Keerthika },
@@ -188,8 +188,8 @@ const teamMemberData = [
 
 
   // {"name": "Elilarasi", "role": "TRAINER", "phone": "", "email": "", "Branch": "","image":Elilarasi},
-  // { "name": "Gayathri", "role": "BRANCH HEAD", "phone": "88075 10359", "email": "gayathrib@thoughtflows.in", "Branch": "", "image": Gayatri },
-  // { "name": "Sruthi", "role": "BRANCH HEAD", "phone": "84389 74736", "email": "sruthig@thoughtflows.in", "Branch": "", "image": Sruthi },
+  { "name": "Gayathri", "role": "BRANCH HEAD", "phone": "88075 10359", "email": "gayathrib@thoughtflows.in", "Branch": "", "image": Gayatri },
+  { "name": "Sruthi", "role": "BRANCH HEAD", "phone": "84389 74736", "email": "sruthig@thoughtflows.in", "Branch": "", "image": Sruthi },
   { "name": "Sindhu Thakaiya", "role": "BRANCH HEAD & PROCESS COACH", "phone": "88077 65495", "email": "sindhus@thoughtflows.in", "Branch": "", "image": Sindhu },
   { "name": "Anakha Suresh", "role": "HR - Team Lead", "phone": "73063 88099", "email": "anakhas@thoughtflows.in", "Branch": "HR - Team Lead", "image": Anakha },
   { "name": "Sindhuja", "role": "HR - Team Lead", "phone": "+91 91336 85810", "email": "", "Branch": "HR - Team Lead", "image": Sindhuja },
