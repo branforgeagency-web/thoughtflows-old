@@ -114,7 +114,7 @@ const VizagBanner = () => {
                     margin: 0,
                     lineHeight: '1.2'
                   }}>
-                    <CountUp start={0} end={25000} separator="," />+
+                    <CountUp start={0} end={30000} separator="," />+
                   </p>
                   <p style={{
                     fontWeight: '500',
@@ -152,7 +152,7 @@ const VizagBanner = () => {
                     margin: 0,
                     lineHeight: '1.2'
                   }}>
-                    <CountUp start={0} end={12} separator="," />+
+                    <CountUp start={0} end={14} separator="," />+
                   </p>
                   <p style={{
                     fontWeight: '500',
