@@ -9,6 +9,7 @@ import postImage6 from '../images/Blog/manager-preparing-store-reopening.jpg';
 import postImage7 from '../images/Blog/three-business-people-discussing-graph-points.jpg';
 import postImage8 from '../images/Blog/vetri108/Ram Blog Banner (22).png';
 import postImage9 from '../images/Blog/ai-coding/hero-banner.jpg';
+import postImage10 from '../images/Blog/certified-ai-coder/hero-banner.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
@@ -97,6 +98,14 @@ function BlogRef1() {
       image: postImage9,
       id: createSlug("Artificial Intelligence in Medical Coding: A Beginner's Guide"),
     },
+    {
+      date: "October 02, 2026",
+      title: "Certified AI Medical Coder: Why Your Next Interview Won't Ask a Single ICD-10 Question",
+      Comments: "0",
+      info: `Learn what a Certified AI Medical Coder needs to know, why ICD-10-CM still matters, and how to prepare for AI-focused medical coding interviews.`,
+      image: postImage10,
+      id: "certified-ai-medical-coder",
+    },
   ];
 
 
@@ -110,7 +119,7 @@ function BlogRef1() {
 const PostCard = ({ post }) => {
   return (
     <div className="bg-white m-3 shadow-lg rounded-lg overflow-hidden max-w-sm mx-auto md:max-w-md lg:max-w-md">
-      <img src={post.image} alt={post.title} className="w-full h-48 object-cover" />
+      <img src={post.image} alt={post.title} className="w-full aspect-video object-cover object-top bg-gray-100" />
       <div className="p-4">
         {/* <p className="text-gray-500 text-sm">{post.date}</p> */}
         <h2 className="text-lg font-semibold mt-1">{post.title}</h2>
