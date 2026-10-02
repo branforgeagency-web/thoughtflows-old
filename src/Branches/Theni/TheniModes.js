@@ -39,14 +39,18 @@ const TheniModes = () => {
                 <div className="theni-icon"><MonitorSmartphone size={26} /></div>
                 <h3>Online Medical Coding Training</h3>
                 <p>
-                  The online program provides a convenient way to study for students who work. This
-                  program gives students structured sessions and the opportunity to work closely with
+                  The online program provides a convenient way to study for students who work.
+                </p>
+                <p style={{ marginTop: 8 }}>
+                  This program gives students structured sessions and the opportunity to work closely with
                   the teacher to learn the materials, perform lab activities, and get answers to their
                   questions.
                 </p>
-                <p style={{ marginTop: 12 }}>
-                  ThoughtFlows has online medical coding classes. Contact us to find out when the next
-                  session is and how it is taught.
+                <p style={{ marginTop: 8 }}>
+                  ThoughtFlows has online medical coding classes. To find out when the next session is and how it is taught, contact them.
+                </p>
+                <p style={{ marginTop: 8 }}>
+                  It is recommended for students interested in taking online medical coding classes.
                 </p>
               </div>
             </div>

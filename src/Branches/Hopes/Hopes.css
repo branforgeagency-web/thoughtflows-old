@@ -1,0 +1,533 @@
+/* ===== Hopes landing page – light theme ===== */
+.hopes-page {
+  --hp-teal: #097D8A;
+  --hp-teal-dark: #0b5e68;
+  --hp-mint: #e8f7f8;
+  --hp-ink: #0f172a;
+  --hp-text: #475569;
+  --hp-line: #e2e8f0;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+.hopes-page h2 {
+  font-size: clamp(24px, 3.5vw, 34px);
+  color: var(--hp-ink);
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.hopes-page h3 {
+  font-size: 19px;
+  color: var(--hp-ink);
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+.hopes-page p {
+  color: var(--hp-text);
+  font-size: 16px;
+  line-height: 1.75;
+}
+
+.hopes-accent {
+  color: var(--hp-teal);
+}
+
+.hopes-eyebrow {
+  display: inline-block;
+  background: var(--hp-mint);
+  color: var(--hp-teal);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  padding: 6px 14px;
+  border-radius: 30px;
+  margin-bottom: 14px;
+}
+
+.hopes-section {
+  padding: 80px 20px;
+  position: relative;
+}
+
+.hopes-section.alt {
+  background: linear-gradient(180deg, #f5fbfc 0%, #ffffff 100%);
+}
+
+.hopes-wrap {
+  max-width: 1180px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.hopes-center {
+  text-align: center;
+  max-width: 780px;
+  margin: 0 auto 10px;
+}
+
+/* Hero */
+.hopes-hero {
+  box-sizing: border-box;
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  background: linear-gradient(135deg, #eefafb 0%, #ffffff 45%, #f3f7ff 100%);
+  padding: 60px 5vw 40px;
+  overflow: hidden;
+  min-height: calc(100vh - 75px);
+  display: flex;
+  align-items: center;
+}
+
+.hopes-hero .hopes-wrap {
+  max-width: 1440px;
+  width: 100%;
+}
+
+.hopes-hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 30px;
+  align-items: center;
+}
+
+.hopes-hero-copy {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.hopes-hero h1 {
+  font-size: clamp(28px, 4.5vw, 46px);
+  line-height: 1.2;
+  color: var(--hp-ink);
+  font-weight: 800;
+  margin-bottom: 18px;
+}
+
+.hopes-hero h1 .sub {
+  display: block;
+  font-size: 0.52em;
+  font-weight: 600;
+  color: var(--hp-text);
+  margin-top: 12px;
+}
+
+.hopes-hero-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 22px 0 28px;
+}
+
+.hopes-hero-tags span {
+  background: #fff;
+  border: 1px solid var(--hp-line);
+  border-radius: 30px;
+  padding: 7px 14px;
+  font-size: 14px;
+  color: var(--hp-ink);
+  display: inline-flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.hopes-hero-tags svg {
+  color: var(--hp-teal);
+}
+
+.hopes-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  align-items: center;
+}
+
+.hopes-hero-img {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hopes-hero-img .ring {
+  position: absolute;
+  width: 85%;
+  aspect-ratio: 1;
+  border-radius: 50%;
+  background: radial-gradient(circle, #c9f0f3 0%, #e6f8f9 60%, transparent 70%);
+}
+
+.hopes-hero-img img {
+  position: relative;
+  max-height: min(600px, calc(100vh - 160px));
+  width: auto;
+  max-width: 100%;
+  border-radius: 20px;
+  box-shadow: 0 20px 40px rgba(15, 23, 42, 0.12);
+  z-index: 1;
+}
+
+.hopes-chip {
+  position: absolute;
+  z-index: 2;
+  background: #fff;
+  border: 1px solid var(--hp-line);
+  border-radius: 14px;
+  padding: 10px 14px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--hp-ink);
+  white-space: nowrap;
+}
+
+.hopes-chip svg {
+  color: var(--hp-teal);
+}
+
+.hopes-chip.c1 { top: 12%; left: -20px; }
+.hopes-chip.c2 { top: 48%; right: -20px; }
+.hopes-chip.c3 { bottom: 10%; left: 10px; }
+
+/* Buttons */
+.hopes-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 30px;
+  border-radius: 40px;
+  background: var(--hp-teal);
+  color: #fff !important;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 10px 24px rgba(9, 125, 138, 0.28);
+  transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+  cursor: pointer;
+}
+
+.hopes-btn:hover {
+  transform: translateY(-3px);
+  background: var(--hp-teal-dark);
+  box-shadow: 0 14px 30px rgba(9, 125, 138, 0.35);
+}
+
+.hopes-btn.light {
+  background: #fff;
+  color: var(--hp-teal) !important;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.12);
+}
+
+.hopes-btn.ghost {
+  background: transparent;
+  color: var(--hp-teal) !important;
+  border: 2px solid var(--hp-teal);
+  box-shadow: none;
+}
+
+/* Split layout */
+.hopes-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 56px;
+  align-items: center;
+}
+
+.hopes-split.rev > :first-child {
+  order: 2;
+}
+
+.hopes-photo {
+  position: relative;
+}
+
+.hopes-photo img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  border-radius: 22px;
+  box-shadow: 0 24px 50px rgba(15, 23, 42, 0.12);
+  position: relative;
+  z-index: 1;
+}
+
+.hopes-photo::before {
+  content: "";
+  position: absolute;
+  inset: 22px -18px -18px 22px;
+  border-radius: 22px;
+  background: var(--hp-mint);
+  z-index: 0;
+}
+
+.hopes-photo .badge {
+  position: absolute;
+  z-index: 2;
+  bottom: 24px;
+  left: -20px;
+  background: #fff;
+  border-radius: 16px;
+  padding: 14px 18px;
+  box-shadow: 0 14px 34px rgba(15, 23, 42, 0.14);
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+
+.hopes-photo .badge .ic {
+  width: 42px;
+  height: 42px;
+  border-radius: 12px;
+  background: var(--hp-mint);
+  color: var(--hp-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hopes-photo .badge strong {
+  display: block;
+  color: var(--hp-ink);
+  font-size: 15px;
+}
+
+.hopes-photo .badge small {
+  color: var(--hp-text);
+}
+
+/* Lists & Pills */
+.hopes-list {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+
+.hopes-list li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  color: #334155;
+  line-height: 1.6;
+}
+
+.hopes-list li svg {
+  color: var(--hp-teal);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.hopes-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin: 18px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.hopes-pills li {
+  background: #fff;
+  border: 1px solid var(--hp-line);
+  border-radius: 14px;
+  padding: 12px 16px;
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  color: var(--hp-ink);
+  font-weight: 500;
+  transition: all 0.25s ease;
+}
+
+.hopes-pills li:hover {
+  border-color: var(--hp-teal);
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(9, 125, 138, 0.1);
+}
+
+.hopes-pills li svg {
+  color: var(--hp-teal);
+}
+
+/* Grids + cards */
+.hopes-grid {
+  display: grid;
+  gap: 24px;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin-top: 36px;
+}
+
+.hopes-grid > * {
+  display: flex;
+  flex-direction: column;
+}
+
+.hopes-grid > * > .hopes-card,
+.hopes-grid > * > .hopes-mode {
+  flex: 1 1 auto;
+}
+
+.hopes-card {
+  background: #fff;
+  border: 1px solid var(--hp-line);
+  border-radius: 18px;
+  padding: 26px;
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.hopes-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 40px rgba(9, 125, 138, 0.12);
+  border-color: #b9e3e7;
+}
+
+.hopes-card p {
+  margin: 0;
+}
+
+.hopes-icon {
+  width: 52px;
+  height: 52px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, #e3f6f7, #cdeef1);
+  color: var(--hp-teal);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  transition: transform 0.3s ease;
+}
+
+.hopes-card:hover .hopes-icon {
+  transform: rotate(-8deg) scale(1.08);
+}
+
+/* Mode cards */
+.hopes-mode {
+  border-radius: 22px;
+  overflow: hidden;
+  background: #fff;
+  border: 1px solid var(--hp-line);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.06);
+}
+
+.hopes-mode .thumb {
+  height: 230px;
+  overflow: hidden;
+}
+
+.hopes-mode .thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.6s ease;
+}
+
+.hopes-mode:hover .thumb img {
+  transform: scale(1.06);
+}
+
+.hopes-mode .body {
+  padding: 28px;
+}
+
+.hopes-address-badge {
+  background: var(--hp-mint);
+  border-left: 4px solid var(--hp-teal);
+  padding: 14px 18px;
+  border-radius: 10px;
+  color: var(--hp-ink);
+  font-weight: 500;
+  margin: 16px 0;
+  line-height: 1.6;
+}
+
+.hopes-note {
+  background: #fffaf0;
+  border-left: 4px solid #f59e0b;
+  padding: 14px 18px;
+  border-radius: 8px;
+  color: #7c2d12;
+  font-size: 15px;
+  margin-top: 16px;
+  line-height: 1.6;
+}
+
+/* Branch & CTA */
+.hopes-branch {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 30px;
+  margin-top: 36px;
+}
+
+.hopes-branch-info {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.hopes-map {
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
+  min-height: 380px;
+}
+
+.hopes-map iframe {
+  width: 100%;
+  height: 100%;
+  min-height: 380px;
+  border: 0;
+}
+
+.hopes-cta {
+  background: linear-gradient(135deg, #097D8A 0%, #0b5e68 100%);
+  border-radius: 28px;
+  padding: 50px 30px;
+  color: #fff;
+  text-align: center;
+  margin-top: 60px;
+  box-shadow: 0 20px 40px rgba(9, 125, 138, 0.3);
+}
+
+.hopes-cta h2 {
+  color: #fff !important;
+}
+
+.hopes-cta p {
+  color: #e2f4f6 !important;
+  max-width: 780px;
+  margin: 0 auto 16px;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+  .hopes-hero-grid,
+  .hopes-split,
+  .hopes-branch {
+    grid-template-columns: 1fr;
+  }
+  .hopes-split.rev > :first-child {
+    order: unset;
+  }
+  .hopes-hero {
+    min-height: auto;
+    padding-bottom: 60px;
+  }
+  .hopes-photo .badge {
+    left: 10px;
+    bottom: 10px;
+  }
+}

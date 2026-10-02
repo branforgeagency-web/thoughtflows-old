@@ -3,14 +3,14 @@ import { BookOpen, Activity, FileText, ClipboardCheck, Award, Laptop, Target, Br
 import Reveal from "./Reveal";
 
 const offers = [
-  { icon: BookOpen, text: "Comprehensive training on medical coding" },
-  { icon: Activity, text: "Learning in medical terminology and anatomy" },
-  { icon: FileText, text: "Understanding of ICD-10-CM, CPT and HCPCS" },
-  { icon: ClipboardCheck, text: "Coding practice" },
-  { icon: Award, text: "Support for learners aspiring to a credible certification" },
-  { icon: Laptop, text: "Various modes of teaching" },
-  { icon: Target, text: "Help choosing a successful career in medical coding" },
-  { icon: Briefcase, text: "Assistance in getting placed" },
+  { icon: BookOpen, text: "Comprehensive training on medical coding." },
+  { icon: Activity, text: "Learn medical terminology and anatomy." },
+  { icon: FileText, text: "Understand ICD-10-CM, CPT and HCPCS." },
+  { icon: ClipboardCheck, text: "Practice coding." },
+  { icon: Award, text: "Aspiring to help learners secure a credible certification in medical coding." },
+  { icon: Laptop, text: "Various modes of teaching." },
+  { icon: Target, text: "Help learners choose a successful career in medical coding." },
+  { icon: Briefcase, text: "Assist learners in getting placed." },
 ];
 
 const factors = [
@@ -30,7 +30,7 @@ const TheniWhy = () => {
             <span className="theni-eyebrow">Why ThoughtFlows</span>
             <h2>Why Consider ThoughtFlows for Medical Coding Training in Theni?</h2>
             <p>
-              When considering different medical coding institutes in Theni, it is important to
+              When considering different Medical Coding institutes in Theni, it is important to
               evaluate the entire learning process, rather than just the name of a particular course.
               At ThoughtFlows, we provide:
             </p>
@@ -47,8 +47,7 @@ const TheniWhy = () => {
           </div>
           <Reveal>
             <p style={{ textAlign: "center", marginTop: 30 }}>
-              Medical coding aspirants compare and evaluate the above-mentioned points while deciding
-              which medical coding institute in Theni to take up their learning with.
+              Medical coding professionals compare and evaluate the above mentioned points, while deciding which medical coding institute in Theni, to take up their learning with.
             </p>
           </Reveal>
         </div>
