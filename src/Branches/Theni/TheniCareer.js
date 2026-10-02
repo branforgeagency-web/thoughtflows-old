@@ -23,9 +23,9 @@ const TheniCareer = () => {
           </Reveal>
           <div className="theni-grid">
             {[
-              { icon: ClipboardCheck, title: "Reinforce Knowledge", text: "To help with your certification goals, ThoughtFlows offers training to reinforce your knowledge." },
-              { icon: Award, title: "Practice & Assessments", text: "Get opportunities to practice coding and take assessments that build exam readiness." },
-              { icon: Search, title: "Know the Requirements", text: "When looking to achieve a certain certification, research the organization to determine the latest requirements. Once you have them, you can decide if you want to pursue the certification." },
+              { icon: ClipboardCheck, title: "Training & Assessments", text: "To help with your certification goals, ThoughtFlows offers training to reinforce your knowledge, give opportunities to practice coding, and provide assessments." },
+              { icon: Search, title: "Latest Requirements", text: "When looking to achieve a certain certification, research the organization to determine the latest requirements." },
+              { icon: Award, title: "Pursue Certification", text: "Once you have the requirements, you can decide if you want to pursue the certification." },
             ].map(({ icon: Icon, title, text }, i) => (
               <Reveal key={title} delay={i * 0.12}>
                 <div className="theni-card">

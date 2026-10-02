@@ -31,30 +31,38 @@ const TheniIntro = () => {
             <span className="theni-eyebrow">About the Course</span>
             <h2>Medical Coding Training in <span className="theni-accent">Theni</span></h2>
             <p>
-              We provide students with an understanding of medical terminology, anatomy and other
-              related fields. Students will learn about ICD-10-CM, CPT and HCPCS coding, participate
-              in various coding activities and prepare for various medical coding certification
-              exams. Courses are offered both online and onsite.
+              We provides students with an understanding of medical terminology, anatomy and other
+              related fields. Students will learn about ICD-10-CM, CPT and HCPCS coding. Students
+              will also have the opportunity to participate in various coding activities and prepare
+              for various medical coding certification exams. Courses are offered both online and onsite.
             </p>
             <p>
               Medical coders translate the documentation created by the health care team into
-              universally understood codes. The coding systems used in health care are complex;
-              therefore, interpreting and assigning the proper code requires sound knowledge of
-              medical terminology and anatomy.
+              universally understood codes. Medical coders require a strong command of medical
+              terminology and anatomy. The coding systems used in health care are complex; therefore,
+              interpreting and assigning the proper code to the documentation requires sound
+              knowledge of medical terminology and anatomy.
             </p>
             <p>
               ThoughtFlows teaches medical terminology and anatomy and uses a stepwise approach for
-              learning coding systems. This approach simplifies the complexity of various health care
-              coding systems, and builds a framework for understanding health care coding.
+              learning coding systems. This approach helps students understand and simplifies the
+              complexity of various health care coding systems. Students are not required to memorize
+              code numbers.
+            </p>
+            <p>
+              The medical coding training in Theni helps students and graduates memorize health care
+              terminology and anatomy, and builds a framework for understanding health care coding.
             </p>
           </Reveal>
         </div>
         <Reveal className="theni-wrap" style={{ marginTop: 40 }}>
-          <p style={{ textAlign: "center", maxWidth: 820, margin: "0 auto" }}>
+          <p style={{ textAlign: "center", maxWidth: 820, margin: "0 auto 12px" }}>
             When researching medical coding courses in Theni, consider what each course covers, how
             the courses are facilitated, what certification preparation is offered, what employment
-            assistance is provided and what types of courses are offered. We hope to meet and exceed
-            your expectations!
+            assistance is provided and what types of courses are offered.
+          </p>
+          <p style={{ textAlign: "center", fontWeight: 600, color: "#097D8A" }}>
+            We hope to meet and exceed your expectations!
           </p>
         </Reveal>
       </section>

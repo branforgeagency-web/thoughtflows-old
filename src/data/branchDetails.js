@@ -10,7 +10,7 @@ export const branchDetails = {
     email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thought_flows?stkn=a2xlYW43eG45dmt6',
     facebook: 'https://www.facebook.com/people/Thoughtflows-Medical-Coding-Academy-Gandhipuram-Coimbatore/61562789837696/',
-    routes: ['/premier-medical-coding-institute-gandhipuram', '/gandhipuram']
+    routes: ['/medical-coding-academy-gandhipuram', '/premier-medical-coding-institute-gandhipuram', '/gandhipuram']
   },
   hopes: {
     key: 'hopes',
@@ -23,7 +23,7 @@ export const branchDetails = {
     email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thought_flows?stkn=a2xlYW43eG45dmt6',
     facebook: 'https://www.facebook.com/thoughtflowscoimbatore/',
-    routes: ['/medical-coding-excellence-at-hopes', '/hopes']
+    routes: ['/medical-coding-academy-in-hopes', '/medical-coding-excellence-at-hopes', '/hopes']
   },
   saravanampatti: {
     key: 'saravanampatti',
@@ -36,7 +36,7 @@ export const branchDetails = {
     email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thought_flows?stkn=a2xlYW43eG45dmt6',
     facebook: 'https://www.facebook.com/Thoughtflowsacademy/',
-    routes: ['/top-medical-coding-training-saravanampatti', '/saravanampatti']
+    routes: ['/medical-coding-course-in-saravanampatti', '/top-medical-coding-training-saravanampatti', '/saravanampatti']
   },
   trichy: {
     key: 'trichy',

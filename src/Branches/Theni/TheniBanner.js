@@ -30,7 +30,7 @@ const TheniBanner = () => {
           </h1>
           <p style={{ maxWidth: 560 }}>
             Interested in medical coding courses in Theni? ThoughtFlows Medical Coding Academy offers
-            healthcare professionals the opportunity to learn medical coding, gain hands-on experience
+            healthcare professionals the opportunity to learn medical coding, gain hands on experience
             and obtain skills for employment in the medical coding industry.
           </p>
           <div className="theni-hero-tags">
