@@ -17,9 +17,15 @@
 //    src/config/sheetConfig.js in the website project.
 // 8. Whenever you edit this script, you must create a NEW deployment (or
 //    "Manage deployments" > edit > New version) for changes to go live.
+//
+// Enquiries are split into one tab per month, named like "Oct 2026", with
+// the newest month as the first tab. The month uses the script's time zone
+// (Project Settings > Time zone - set it to Asia/Kolkata).
+// If you have an old single "Enquiries" tab, run splitOldEnquiriesByMonth()
+// once from the editor to move its rows into the month tabs.
 
-var SHEET_NAME = "Enquiries";
-var ACCESS_TOKEN = "PASTE_A_LONG_RANDOM_TOKEN_HERE";
+var LEGACY_SHEET_NAME = "Enquiries";
+var ACCESS_TOKEN = "ThoughtFlows@Enquiry2026!SecureKey";
 
 var COLUMNS = [
   "Timestamp",
@@ -34,15 +40,35 @@ var COLUMNS = [
   "Message",
 ];
 
-function getSheet_() {
+function monthName_(date) {
+  return Utilities.formatDate(date, Session.getScriptTimeZone(), "MMM yyyy");
+}
+
+// Returns the tab for the given date's month, creating it (as the first
+// tab, so the newest month is always on the left) with headers if needed.
+function getMonthSheet_(date) {
   var ss = SpreadsheetApp.getActiveSpreadsheet();
-  var sheet = ss.getSheetByName(SHEET_NAME);
+  var name = monthName_(date);
+  var sheet = ss.getSheetByName(name);
   if (!sheet) {
-    sheet = ss.insertSheet(SHEET_NAME);
+    sheet = ss.insertSheet(name, 0);
     sheet.appendRow(COLUMNS);
     sheet.setFrozenRows(1);
+    sheet.getRange(1, 1, 1, COLUMNS.length).setFontWeight("bold");
   }
   return sheet;
+}
+
+// Every tab that holds enquiries (header row starts with "Timestamp").
+function getEnquirySheets_() {
+  return SpreadsheetApp.getActiveSpreadsheet()
+    .getSheets()
+    .filter(function (sheet) {
+      return (
+        sheet.getLastRow() > 0 &&
+        sheet.getRange(1, 1).getValue() === COLUMNS[0]
+      );
+    });
 }
 
 function jsonOut_(obj) {
@@ -52,16 +78,17 @@ function jsonOut_(obj) {
 }
 
 // Called by the website whenever someone submits the Contact form or the
-// Register popup - appends one row per enquiry.
+// Register popup - appends one row per enquiry to this month's tab.
 function doPost(e) {
   try {
     var data = JSON.parse(e.postData.contents);
     if (data.token !== ACCESS_TOKEN) {
       return jsonOut_({ ok: false, error: "Invalid token" });
     }
-    var sheet = getSheet_();
+    var now = new Date();
+    var sheet = getMonthSheet_(now);
     sheet.appendRow([
-      new Date(),
+      now,
       data.source || "",
       data.name || "",
       data.email || "",
@@ -78,21 +105,64 @@ function doPost(e) {
   }
 }
 
-// Called by the website's /admin page to read all enquiries back out.
+// Called by the website's /admin page to read all enquiries back out,
+// combined from every month tab.
 function doGet(e) {
   var token = e.parameter.token;
   if (token !== ACCESS_TOKEN) {
     return jsonOut_({ ok: false, error: "Invalid token" });
   }
-  var sheet = getSheet_();
-  var values = sheet.getDataRange().getValues();
-  var headers = values.shift();
-  var rows = values.map(function (row) {
-    var obj = {};
-    headers.forEach(function (h, i) {
-      obj[h] = row[i] instanceof Date ? row[i].toISOString() : row[i];
+  var rows = [];
+  getEnquirySheets_().forEach(function (sheet) {
+    var values = sheet.getDataRange().getValues();
+    var headers = values.shift();
+    values.forEach(function (row) {
+      var obj = {};
+      headers.forEach(function (h, i) {
+        obj[h] = row[i] instanceof Date ? row[i].toISOString() : row[i];
+      });
+      rows.push(obj);
     });
-    return obj;
+  });
+  // Oldest first, same order as the old single-tab sheet.
+  rows.sort(function (a, b) {
+    return String(a.Timestamp).localeCompare(String(b.Timestamp));
   });
   return jsonOut_({ ok: true, rows: rows });
+}
+
+// One-time helper: run this manually from the Apps Script editor (pick it in
+// the function dropdown, click Run) to move the rows from the old single
+// "Enquiries" tab into month tabs. The old tab is renamed to
+// "Enquiries (old)" and its header changed so it isn't counted twice.
+function splitOldEnquiriesByMonth() {
+  var ss = SpreadsheetApp.getActiveSpreadsheet();
+  var old = ss.getSheetByName(LEGACY_SHEET_NAME);
+  if (!old) return;
+  var values = old.getDataRange().getValues();
+  values.shift();
+  var byMonth = {};
+  values.forEach(function (row) {
+    var ts = row[0] instanceof Date ? row[0] : new Date(row[0]);
+    if (isNaN(ts.getTime())) return;
+    var name = monthName_(ts);
+    if (!byMonth[name]) byMonth[name] = { date: ts, rows: [] };
+    byMonth[name].rows.push(row.slice(0, COLUMNS.length));
+  });
+  // Oldest month first, so each new tab inserted at the front leaves the
+  // newest month on the left.
+  Object.keys(byMonth)
+    .sort(function (a, b) {
+      return byMonth[a].date - byMonth[b].date;
+    })
+    .forEach(function (name) {
+      var group = byMonth[name];
+      var sheet = getMonthSheet_(group.date);
+      sheet
+        .getRange(sheet.getLastRow() + 1, 1, group.rows.length, COLUMNS.length)
+        .setValues(group.rows);
+      sheet.sort(1);
+    });
+  old.setName(LEGACY_SHEET_NAME + " (old)");
+  old.getRange(1, 1).setValue("Timestamp (moved to month tabs)");
 }

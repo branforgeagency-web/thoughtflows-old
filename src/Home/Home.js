@@ -12,7 +12,6 @@ import Companies from "./Companies";
 import { PopupContext } from "../context/PopupContext";
 import { motion } from "framer-motion";
 import RegisterPopupForm from "../Forms/RegisterPopupForm";
-import AdvancedOfferPopup from "../Forms/AdvancedOfferPopup";
 
 const POPUP_SEEN_KEY = "tf_register_popup_seen";
 
@@ -132,7 +131,6 @@ const Home = () => {
         </motion.div>
       </div>
       <RegisterPopupForm />
-      <AdvancedOfferPopup />
     </>
   );
 };
