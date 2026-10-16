@@ -16,7 +16,7 @@ import SaravanampattiBranchInfo from './SaravanampattiBranchInfo';
 import SaravanampattiFAQ from './SaravanampattiFAQ';
 import saravanampattiFaqs from './saravanampattiFaqs';
 
-const PAGE_URL = 'https://www.thoughtflows.in/medical-coding-course-in-saravanampatti';
+const PAGE_URL = 'https://www.thoughtflows.in/Top-Medical-Coding-Training-Saravanampatti';
 
 const schema = {
   '@context': 'https://schema.org',
@@ -55,8 +55,8 @@ function Saravanampatti() {
   return (
     <>
       <Meta
-        title="Medical Coding Course in Saravanampatti | ThoughtFlows"
-        description="Join a Medical Coding Academy in Saravanampatti with practical training, CPC preparation, classroom and online learning, and placement assistance."
+        title="Medical Coding Training in Saravanampatti | ThoughtFlows"
+        description="Medical coding training in Saravanampatti, Coimbatore — CPC & CCS certification with AAPC-certified trainers, live chart practice and placement support."
         canonical={PAGE_URL}
       />
       <Helmet>

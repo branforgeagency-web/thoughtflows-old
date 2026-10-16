@@ -21,8 +21,7 @@ const HopesBanner = () => {
         >
           <span className="hopes-eyebrow">Hopes Branch · Now Enrolling</span>
           <h1>
-            Medical Coding Academy in <span className="hopes-accent">Hopes</span>
-            <span className="sub">Get Practical Training &amp; Placement Assistance</span>
+            Medical Coding Course in <span className="hopes-accent">Hopes, Coimbatore</span>
           </h1>
           <p style={{ maxWidth: 620, marginBottom: 12 }}>
             Choosing the right medical coding training can make a difference when you are starting a new career

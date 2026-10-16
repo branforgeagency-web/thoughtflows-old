@@ -158,8 +158,8 @@ const KeralaLanding = () => {
   return (
     <div className="region-landing">
       <Meta 
-        title="Best Medical Coding Course in Kerala | Kochi & Trivandrum Campuses | ThoughtFlows"
-        description="Launch your medical coding career in Kerala with ThoughtFlows. Leading AAPC CPC training institute with premier campuses in Kochi (Edappally) & Trivandrum (East Fort). 100% placement support & Gulf opportunities."
+        title="Medical Coding Course in Kerala | ThoughtFlows Academy"
+        description="Medical coding course in Kerala at ThoughtFlows — CPC & CCS certification with AAPC-certified trainers, live chart practice and placement support."
         canonical="https://www.thoughtflows.in/kerala"
       />
 
@@ -179,7 +179,7 @@ const KeralaLanding = () => {
                 🌴 Kerala's Leading Medical Coding Hub · Kochi & Trivandrum
               </div>
               <h1 className="region-hero-title">
-                Premier Medical Coding Training in <span>Kerala</span>
+                Medical Coding Course in <span>Kerala</span> — CPC &amp; CCS Training
               </h1>
               <p className="region-hero-subtitle">
                 Unlock high-growth careers in domestic healthcare IT parks and lucrative hospital systems across the UAE and Gulf. Enroll at our flagship <strong>Kochi</strong> or <strong>Trivandrum</strong> campuses with AAPC-certified mentors and guaranteed placement support.

@@ -108,8 +108,8 @@ const HyderabadLanding = () => {
   return (
     <div className="hyd-landing">
       <Meta 
-        title="Medical Coding Institute in Hyderabad | Ameerpet & Dilsukhnagar | ThoughtFlows"
-        description="Our faculty, course materials, and job placement support make our branches in Ameerpet and Dilsukhnagar the best choice for medical coding training in Hyderabad."
+        title="Medical Coding Institute in Hyderabad | ThoughtFlows"
+        description="Medical coding institute in Hyderabad — CPC & CCS certification at ThoughtFlows with AAPC-certified trainers, live chart practice and placement support."
         canonical="https://www.thoughtflows.in/hyderabad"
       />
 

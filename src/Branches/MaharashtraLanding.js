@@ -158,8 +158,8 @@ const MaharashtraLanding = () => {
   return (
     <div className="region-landing">
       <Meta 
-        title="Best Medical Coding Course in Maharashtra | Pune & Kolhapur | ThoughtFlows"
-        description="Enroll in the leading Medical Coding Course in Maharashtra at ThoughtFlows. Premier campuses in Pune and Kolhapur. AAPC CPC certification, 100% placement assurance, practical chart training & flexible batches."
+        title="Medical Coding Course in Maharashtra | ThoughtFlows"
+        description="Medical coding course in Maharashtra at ThoughtFlows — CPC & CCS certification with AAPC-certified trainers, live chart practice and placement support."
         canonical="https://www.thoughtflows.in/maharashtra"
       />
 
@@ -179,7 +179,7 @@ const MaharashtraLanding = () => {
                 🌟 Maharashtra's Leading Medical Coding Hub · Pune & Kolhapur
               </div>
               <h1 className="region-hero-title">
-                Premier Medical Coding Course in <span>Maharashtra</span>
+                Medical Coding Course in <span>Maharashtra</span> — CPC &amp; CCS Training
               </h1>
               <p className="region-hero-subtitle">
                 Build a thriving career in Western India's fast-growing healthcare technology sector. Get trained at our premier campuses in <strong>Pune</strong> and <strong>Kolhapur</strong> by AAPC-certified mentors with real-time chart practice and 100% placement assurance.

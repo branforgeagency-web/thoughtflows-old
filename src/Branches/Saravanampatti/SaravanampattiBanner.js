@@ -21,8 +21,7 @@ const SaravanampattiBanner = () => {
         >
           <span className="saravanampatti-eyebrow">Saravanampatti Branch · Now Enrolling</span>
           <h1>
-            Medical Coding Course in <span className="saravanampatti-accent">Saravanampatti</span>
-            <span className="sub">Start Your Medical Coding Career with Practical Training</span>
+            Medical Coding Training in <span className="saravanampatti-accent">Saravanampatti, Coimbatore</span>
           </h1>
           <p style={{ maxWidth: 620, marginBottom: 12 }}>
             Looking for a Medical Coding Course in Saravanampatti that combines structured learning with practical
