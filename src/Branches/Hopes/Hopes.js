@@ -16,7 +16,7 @@ import HopesBranchInfo from './HopesBranchInfo';
 import HopesFAQ from './HopesFAQ';
 import hopesFaqs from './hopesFaqs';
 
-const PAGE_URL = 'https://www.thoughtflows.in/Medical-Coding-Excellence-at-Hope';
+const PAGE_URL = 'https://www.thoughtflows.in/Medical-Coding-Excellence-at-Hopes';
 
 const schema = {
   '@context': 'https://schema.org',
