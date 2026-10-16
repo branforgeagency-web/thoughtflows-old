@@ -305,7 +305,7 @@ const CoimbatoreLanding = () => {
     <div className="cbe-lp">
       <Meta
         title="Medical Coding Classes in Coimbatore | ThoughtFlows"
-        description="Located in Saravanampatti, Hopes, and Gandhipuram, we offer in-person medical coding classes in Coimbatore. Trained over 35,000 students and employed over 30,000 of them."
+        description="Join medical coding classes in Coimbatore at ThoughtFlows — CPC & CCS training by AAPC-certified faculty, 3 branches, live practice and placement support."
         canonical="https://www.thoughtflows.in/coimbatore"
       />
 
@@ -326,7 +326,7 @@ const CoimbatoreLanding = () => {
             <span className="cbe-pill"><span className="cbe-dot" /> Saravanampatti · Hopes · Gandhipuram</span>
 
             <h1 className="cbe-h1">
-              Medical Coding Classes in <span>Coimbatore</span>
+              Medical Coding Classes in <span>Coimbatore</span> — CPC &amp; CCS Training
             </h1>
 
             <p className="cbe-hero-sub">

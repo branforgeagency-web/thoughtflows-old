@@ -35,7 +35,7 @@ const HyderabadBanner = () => {
               lineHeight: '1.25',
               color: '#0f172a'
             }}>
-              Build a Career in Medical Coding in <span style={{ color: '#097D8A' }}>Dilsukhnagar</span>
+              Medical Coding Course in <span style={{ color: '#097D8A' }}>Dilsukhnagar, Hyderabad</span>
             </h1>
           </div>
           <div>

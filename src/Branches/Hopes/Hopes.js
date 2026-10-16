@@ -16,7 +16,7 @@ import HopesBranchInfo from './HopesBranchInfo';
 import HopesFAQ from './HopesFAQ';
 import hopesFaqs from './hopesFaqs';
 
-const PAGE_URL = 'https://www.thoughtflows.in/medical-coding-academy-in-hopes';
+const PAGE_URL = 'https://www.thoughtflows.in/Medical-Coding-Excellence-at-Hope';
 
 const schema = {
   '@context': 'https://schema.org',
@@ -55,8 +55,8 @@ function Hopes() {
   return (
     <>
       <Meta
-        title="Medical Coding Academy in Hopes | ThoughtFlows"
-        description="Join a Medical Coding Course in Hopes and learn with practical training, CPC preparation, flexible online and classroom classes, and placement support."
+        title="Medical Coding Course in Hopes, Coimbatore | ThoughtFlows"
+        description="Medical coding course at ThoughtFlows Hopes, Coimbatore — CPC & CCS training with AAPC-certified trainers, live chart practice and placement support."
         canonical={PAGE_URL}
       />
       <Helmet>

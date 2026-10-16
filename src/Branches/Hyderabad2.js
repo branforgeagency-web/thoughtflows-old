@@ -19,7 +19,7 @@ function Hyderabad() {
   }, [])
   return (
     <>
-      <Meta title="Medical Coding Institute in Hyderabad | ThoughtFlows Academy" description="Get certified at ThoughtFlows Medical Coding Academy in Hyderabad — top medical coding institute with real practice, expert training, and career support." canonical="https://www.thoughtflows.in/Professional-Medical-Coding-Dilsukhnagar" />
+      <Meta title="Medical Coding Course in Dilsukhnagar | ThoughtFlows" description="Medical coding course in Dilsukhnagar, Hyderabad — CPC & CCS certification with AAPC-certified trainers, live chart practice and placement support." canonical="https://www.thoughtflows.in/Professional-Medical-Coding-Dilsukhnagar" />
 
       <HyderabadBanner />
       <HyderabadAbout />
