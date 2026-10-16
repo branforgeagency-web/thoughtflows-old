@@ -15,7 +15,7 @@ import GandhipuramBranchInfo from './GandhipuramBranchInfo';
 import GandhipuramFAQ from './GandhipuramFAQ';
 import gandhipuramFaqs from './gandhipuramFaqs';
 
-const PAGE_URL = 'https://www.thoughtflows.in/medical-coding-academy-gandhipuram';
+const PAGE_URL = 'https://www.thoughtflows.in/Premier-Medical-Coding-Institute-Gandhipuram';
 
 const schema = {
   '@context': 'https://schema.org',
