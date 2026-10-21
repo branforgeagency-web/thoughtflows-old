@@ -10,6 +10,7 @@ import postImage7 from '../images/Blog/three-business-people-discussing-graph-po
 import postImage8 from '../images/Blog/vetri108/Ram Blog Banner (22).png';
 import postImage9 from '../images/Blog/ai-coding/hero-banner.jpg';
 import postImage10 from '../images/Blog/certified-ai-coder/hero-banner.jpg';
+import postImage11 from '../images/Blog/fy-2027-icd-10/hero-banner.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
@@ -105,6 +106,14 @@ function BlogRef1() {
       info: `Learn what a Certified AI Medical Coder needs to know, why ICD-10-CM still matters, and how to prepare for AI-focused medical coding interviews.`,
       image: postImage10,
       id: "certified-ai-medical-coder",
+    },
+    {
+      date: "October 21, 2026",
+      title: "FY 2027 ICD-10-CM Updates: What Medical Coders Need to Know",
+      Comments: "0",
+      info: `Learn about FY 2027 ICD-10-CM updates, including new and deleted codes, key guideline changes, and what medical coders need to know to code accurately.`,
+      image: postImage11,
+      id: "fy-2027-icd-10-cm-updates",
     },
   ];
 
