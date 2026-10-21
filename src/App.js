@@ -21,6 +21,7 @@ import Blog3 from "../src/Blog/Blog3"
 import Blog8 from "../src/Blog/Blog8"
 import Blog9 from "./Blog/Blog9";
 import Blog10 from "./Blog/Blog10";
+import Blog11 from "./Blog/Blog11";
 import CIC from './Courses/CIC';
 import COC from './Courses/COC';
 import CPMA from './Courses/CPMA';
@@ -107,6 +108,9 @@ function AppContent() {
         <Route path="/blog/artificial-intelligence-in-medical-coding-a-beginners-guide" element={<Blog9 />} />
         <Route path="/blog/certified-ai-medical-coder" element={<Blog10 />} />
         <Route path="/certified-ai-medical-coder" element={<Blog10 />} />
+        <Route path="/blog/fy-2027-icd-10-cm-updates" element={<Blog11 />} />
+        <Route path="/fy-2027-icd-10-cm-updates" element={<Blog11 />} />
+        <Route path="/fy-2027-icd-10-cm-updates/" element={<Blog11 />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cpc" element={<CPC />} />
         <Route path="/cic" element={<CIC />} />
