@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Container, Row, Col } from 'react-bootstrap';
