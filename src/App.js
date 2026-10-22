@@ -1,5 +1,6 @@
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import 'slick-carousel/slick/slick.css';
 import Header from './Header';
 // import Header1 from './header1';
 import { useEffect } from 'react';

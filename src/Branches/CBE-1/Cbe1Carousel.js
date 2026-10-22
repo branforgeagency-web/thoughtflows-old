@@ -1,5 +1,6 @@
 import React from "react";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
 import image1 from "../../images/Branches/online/Group 1.jpg";
 import image2 from "../../images/Branches/online/Group 2.jpg";
 import image3 from "../../images/Branches/online/Group 3.jpg";
