@@ -23,6 +23,7 @@ import Blog8 from "../src/Blog/Blog8"
 import Blog9 from "./Blog/Blog9";
 import Blog10 from "./Blog/Blog10";
 import Blog11 from "./Blog/Blog11";
+import Blog12 from "./Blog/Blog12";
 import CIC from './Courses/CIC';
 import COC from './Courses/COC';
 import CPMA from './Courses/CPMA';
@@ -112,6 +113,10 @@ function AppContent() {
         <Route path="/blog/fy-2027-icd-10-cm-updates" element={<Blog11 />} />
         <Route path="/fy-2027-icd-10-cm-updates" element={<Blog11 />} />
         <Route path="/fy-2027-icd-10-cm-updates/" element={<Blog11 />} />
+        <Route path="/blog/best-medical-coding-course-in-india" element={<Blog12 />} />
+        <Route path="/best-medical-coding-course-in-india" element={<Blog12 />} />
+        <Route path="/best-medical-coding-course-in-india/" element={<Blog12 />} />
+        <Route path="/blog/best-medical-coding-course-in-india-fees-duration" element={<Blog12 />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cpc" element={<CPC />} />
         <Route path="/cic" element={<CIC />} />
