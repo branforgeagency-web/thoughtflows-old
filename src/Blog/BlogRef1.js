@@ -11,6 +11,7 @@ import postImage8 from '../images/Blog/vetri108/Ram Blog Banner (22).png';
 import postImage9 from '../images/Blog/ai-coding/hero-banner.jpg';
 import postImage10 from '../images/Blog/certified-ai-coder/hero-banner.jpg';
 import postImage11 from '../images/Blog/fy-2027-icd-10/hero-banner.jpg';
+import postImage12 from '../images/Blog/best-medical-coding-course-india/hero-banner.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
@@ -114,6 +115,14 @@ function BlogRef1() {
       info: `Learn about FY 2027 ICD-10-CM updates, including new and deleted codes, key guideline changes, and what medical coders need to know to code accurately.`,
       image: postImage11,
       id: "fy-2027-icd-10-cm-updates",
+    },
+    {
+      date: "October 24, 2026",
+      title: "Best Medical Coding Course in India: Fees, Duration & How to Choose",
+      Comments: "0",
+      info: "Choosing a medical coding course in India is harder than it should be. Learn about fees, course duration, AAPC certification, curriculum, and how to verify placement claims.",
+      image: postImage12,
+      id: "best-medical-coding-course-in-india",
     },
   ];
 
