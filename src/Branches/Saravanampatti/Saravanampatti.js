@@ -22,18 +22,50 @@ const schema = {
   '@context': 'https://schema.org',
   '@graph': [
     {
-      '@type': 'EducationalOrganization',
+      '@type': ['EducationalOrganization', 'LocalBusiness'],
       '@id': `${PAGE_URL}#branch`,
       name: 'ThoughtFlows Medical Coding Academy – Saravanampatti',
       url: PAGE_URL,
-      parentOrganization: { '@type': 'Organization', name: 'ThoughtFlows Medical Coding Academy', url: 'https://www.thoughtflows.in/' },
+      description:
+        'Medical coding training academy in Saravanampatti, Coimbatore offering CPC certification preparation, online and offline classes, and placement assistance.',
+      telephone: '+91-9384576852',
+      email: 'thoughtflowsinfo@gmail.com',
+      image: 'https://www.thoughtflows.in/images/Branches/cbe_saravanampatti_campus.jpg',
+      priceRange: '₹₹',
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Door No-171/2A, 1st Floor, Sathy Rd',
-        addressLocality: 'Saravanampatti, Coimbatore',
+        streetAddress: 'No-171/2A, 1st Floor, Promenade Tower, Sathy Rd, Saravanampatti',
+        addressLocality: 'Coimbatore',
         addressRegion: 'Tamil Nadu',
         postalCode: '641035',
         addressCountry: 'IN',
+      },
+      geo: {
+        '@type': 'GeoCoordinates',
+        latitude: 11.078158,
+        longitude: 77.003236,
+      },
+      openingHoursSpecification: [
+        {
+          '@type': 'OpeningHoursSpecification',
+          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+          opens: '09:00',
+          closes: '21:00',
+        },
+      ],
+      areaServed: {
+        '@type': 'City',
+        name: 'Coimbatore',
+      },
+      sameAs: [
+        'https://www.facebook.com/Thoughtflowsacademy/',
+        'https://www.instagram.com/thought_flows/',
+      ],
+      parentOrganization: {
+        '@type': 'Organization',
+        '@id': 'https://www.thoughtflows.in/#organization',
+        name: 'ThoughtFlows Medical Coding Academy',
+        url: 'https://www.thoughtflows.in/',
       },
     },
     {
