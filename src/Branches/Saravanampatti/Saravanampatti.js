@@ -14,69 +14,41 @@ import SaravanampattiPlacement from './SaravanampattiPlacement';
 import SaravanampattiWhy from './SaravanampattiWhy';
 import SaravanampattiBranchInfo from './SaravanampattiBranchInfo';
 import SaravanampattiFAQ from './SaravanampattiFAQ';
-import saravanampattiFaqs from './saravanampattiFaqs';
 
 const PAGE_URL = 'https://www.thoughtflows.in/Top-Medical-Coding-Training-Saravanampatti';
 
 const schema = {
   '@context': 'https://schema.org',
-  '@graph': [
+  '@type': ['EducationalOrganization', 'LocalBusiness'],
+  '@id': `${PAGE_URL}#branch`,
+  name: 'ThoughtFlows Medical Coding Academy',
+  url: PAGE_URL,
+  description:
+    'Medical coding training academy in Saravanampatti, Coimbatore offering CPC certification preparation, online and offline classes, and placement assistance.',
+  telephone: '+91-9384576852',
+  address: {
+    '@type': 'PostalAddress',
+    streetAddress: 'No-171/2A, 1st Promenade, Tower, Sathy Rd, Saravanampatti',
+    addressLocality: 'Coimbatore',
+    addressRegion: 'Tamil Nadu',
+    postalCode: '641035',
+    addressCountry: 'IN',
+  },
+  geo: {
+    '@type': 'GeoCoordinates',
+    latitude: 11.078158,
+    longitude: 77.003236,
+  },
+  openingHoursSpecification: [
     {
-      '@type': ['EducationalOrganization', 'LocalBusiness'],
-      '@id': `${PAGE_URL}#branch`,
-      name: 'ThoughtFlows Medical Coding Academy – Saravanampatti',
-      url: PAGE_URL,
-      description:
-        'Medical coding training academy in Saravanampatti, Coimbatore offering CPC certification preparation, online and offline classes, and placement assistance.',
-      telephone: '+91-9384576852',
-      email: 'thoughtflowsinfo@gmail.com',
-      image: 'https://www.thoughtflows.in/images/Branches/cbe_saravanampatti_campus.jpg',
-      priceRange: '₹₹',
-      address: {
-        '@type': 'PostalAddress',
-        streetAddress: 'No-171/2A, 1st Floor, Promenade Tower, Sathy Rd, Saravanampatti',
-        addressLocality: 'Coimbatore',
-        addressRegion: 'Tamil Nadu',
-        postalCode: '641035',
-        addressCountry: 'IN',
-      },
-      geo: {
-        '@type': 'GeoCoordinates',
-        latitude: 11.078158,
-        longitude: 77.003236,
-      },
-      openingHoursSpecification: [
-        {
-          '@type': 'OpeningHoursSpecification',
-          dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
-          opens: '09:00',
-          closes: '21:00',
-        },
-      ],
-      areaServed: {
-        '@type': 'City',
-        name: 'Coimbatore',
-      },
-      sameAs: [
-        'https://www.facebook.com/Thoughtflowsacademy/',
-        'https://www.instagram.com/thought_flows/',
-      ],
-      parentOrganization: {
-        '@type': 'Organization',
-        '@id': 'https://www.thoughtflows.in/#organization',
-        name: 'ThoughtFlows Medical Coding Academy',
-        url: 'https://www.thoughtflows.in/',
-      },
-    },
-    {
-      '@type': 'FAQPage',
-      mainEntity: saravanampattiFaqs.map((f) => ({
-        '@type': 'Question',
-        name: f.question,
-        acceptedAnswer: { '@type': 'Answer', text: f.answer },
-      })),
+      '@type': 'OpeningHoursSpecification',
+      dayOfWeek: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday'],
+      opens: '09:00',
+      closes: '21:00',
     },
   ],
+  areaServed: { '@type': 'City', name: 'Coimbatore' },
+  parentOrganization: { '@id': 'https://www.thoughtflows.in/#organization' },
 };
 
 function Saravanampatti() {

@@ -305,7 +305,7 @@ const CoimbatoreLanding = () => {
     <div className="cbe-lp">
       <Meta
         title="Medical Coding Classes in Coimbatore | ThoughtFlows"
-        description="Join medical coding classes in Coimbatore at ThoughtFlows — CPC & CCS training by AAPC-certified faculty, 3 branches, live practice and placement support."
+        description="Looking for a medical coding course in Coimbatore? Join ThoughtFlows for CPC & CCS training, practical coding sessions and placement support. Book a free demo!"
         canonical="https://www.thoughtflows.in/coimbatore"
       />
 
