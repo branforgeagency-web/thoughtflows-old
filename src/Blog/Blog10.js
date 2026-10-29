@@ -32,7 +32,7 @@ export default function Blog10() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  const canonicalUrl = "https://www.thoughtflows.in/certified-ai-medical-coder";
+  const canonicalUrl = "https://www.thoughtflows.in/blog/certified-ai-medical-coder";
 
   const schemaMarkup = {
     "@context": "https://schema.org",
