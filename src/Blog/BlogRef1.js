@@ -12,6 +12,7 @@ import postImage9 from '../images/Blog/ai-coding/hero-banner.jpg';
 import postImage10 from '../images/Blog/certified-ai-coder/hero-banner.jpg';
 import postImage11 from '../images/Blog/fy-2027-icd-10/hero-banner.jpg';
 import postImage12 from '../images/Blog/best-medical-coding-course-india/hero-banner.jpg';
+import postImage13 from '../images/Blog/medical-coding-tamilnadu/hero-banner.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
@@ -123,6 +124,14 @@ function BlogRef1() {
       info: "Choosing a medical coding course in India is harder than it should be. Learn about fees, course duration, AAPC certification, curriculum, and how to verify placement claims.",
       image: postImage12,
       id: "best-medical-coding-course-in-india",
+    },
+    {
+      date: "October 29, 2026",
+      title: "Medical Coding Course in Tamil Nadu: Is It Worth It in 2027?",
+      Comments: "0",
+      info: "Looking for a medical coding course in Tamil Nadu? Explore course fees, CPC certification, eligibility, training options and career opportunities at ThoughtFlows Academy.",
+      image: postImage13,
+      id: "medical-coding-course-in-tamilnadu",
     },
   ];
 
