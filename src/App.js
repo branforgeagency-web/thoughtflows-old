@@ -110,7 +110,7 @@ function AppContent() {
         <Route path="/blog/vetri-108-free-medical-coding-scholarships" element={<Blog8 />} />
         <Route path="/blog/artificial-intelligence-in-medical-coding-a-beginners-guide" element={<Blog9 />} />
         <Route path="/blog/certified-ai-medical-coder" element={<Blog10 />} />
-        <Route path="/certified-ai-medical-coder" element={<Blog10 />} />
+        {/* <Route path="/certified-ai-medical-coder" element={<Blog10 />} /> */}
         <Route path="/blog/fy-2027-icd-10-cm-updates" element={<Blog11 />} />
         <Route path="/fy-2027-icd-10-cm-updates" element={<Blog11 />} />
         <Route path="/fy-2027-icd-10-cm-updates/" element={<Blog11 />} />
@@ -118,8 +118,8 @@ function AppContent() {
         <Route path="/best-medical-coding-course-in-india" element={<Blog12 />} />
         <Route path="/best-medical-coding-course-in-india/" element={<Blog12 />} />
         <Route path="/blog/best-medical-coding-course-in-india-fees-duration" element={<Blog12 />} />
-        <Route path="/medical-coding-course-in-tamilnadu" element={<Blog13 />} />
-        <Route path="/medical-coding-course-in-tamilnadu/" element={<Blog13 />} />
+        {/* <Route path="/medical-coding-course-in-tamilnadu" element={<Blog13 />} />
+        <Route path="/medical-coding-course-in-tamilnadu/" element={<Blog13 />} /> */}
         <Route path="/blog/medical-coding-course-in-tamilnadu" element={<Blog13 />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/cpc" element={<CPC />} />
