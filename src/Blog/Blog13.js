@@ -48,7 +48,7 @@ export default function Blog13() {
   };
 
   const canonicalUrl =
-    "https://www.thoughtflows.in/medical-coding-course-in-tamilnadu";
+    "https://www.thoughtflows.in/blog/medical-coding-course-in-tamilnadu";
 
   const schemaMarkup = {
     "@context": "https://schema.org",
