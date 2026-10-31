@@ -661,3 +661,207 @@
   .tfbd-chip,
   .tfbd-cta-icon { transition: none; }
 }
+
+/* =====================================================================
+   Branch steps – zig-zag numbered cards with curved arrows
+   ===================================================================== */
+.tfst-track {
+  --per: 5;
+  --colgap: clamp(40px, 4.4vw, 64px);
+  --drop: 76px;
+  list-style: none;
+  margin: 0;
+  padding: 18px 0 var(--drop);
+  display: grid;
+  grid-template-columns: repeat(var(--per), minmax(0, 1fr));
+  column-gap: var(--colgap);
+  row-gap: calc(var(--drop) + 34px);
+}
+
+.tfst-item {
+  position: relative;
+  min-width: 0;
+}
+.tfst-item.is-low { margin-top: var(--drop); margin-bottom: calc(var(--drop) * -1); }
+
+.tfst-card {
+  position: relative;
+  height: 100%;
+  min-height: 300px;
+  padding: 40px 18px 18px;
+  border-radius: 24px;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 0 6px #ffffff, 0 22px 40px -20px rgba(7, 30, 55, 0.5);
+  transition: transform 0.45s var(--tfbs-ease), box-shadow 0.45s var(--tfbs-ease);
+}
+.tfst-card:hover,
+.tfst-card:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 0 0 6px #ffffff, 0 32px 50px -22px rgba(7, 30, 55, 0.6);
+}
+
+.tfst-card--teal   { background: linear-gradient(160deg, #1cc1cd 0%, #097d8a 100%); --tone-soft: #c9f1f4; --tone-ink: #097d8a; }
+.tfst-card--navy   { background: linear-gradient(160deg, #1f5fa3 0%, #073766 100%); --tone-soft: #d6e4f5; --tone-ink: #073766; }
+.tfst-card--violet { background: linear-gradient(160deg, #8f7bff 0%, #5a3fd6 100%); --tone-soft: #e3ddff; --tone-ink: #5a3fd6; }
+.tfst-card--ocean  { background: linear-gradient(160deg, #2fa8ff 0%, #1565c0 100%); --tone-soft: #d4ebff; --tone-ink: #1565c0; }
+.tfst-card--gold   { background: linear-gradient(160deg, #f0a43a 0%, #c9620c 100%); --tone-soft: #ffeccb; --tone-ink: #b35a00; }
+
+/* number badge overlapping the top-left corner */
+.tfst-badge {
+  position: absolute;
+  top: -16px;
+  left: -10px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--tone-ink);
+  background: var(--tone-soft);
+  border: 5px solid #ffffff;
+  box-shadow: 0 8px 16px -8px rgba(7, 30, 55, 0.45);
+  z-index: 2;
+}
+
+.tfst-state {
+  font-size: 10.5px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 4px;
+}
+
+.tfs .tfst-name,
+.tfbs .tfst-name {
+  margin: 0;
+  font-family: inherit;
+  font-size: 21px;
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.015em;
+  color: #ffffff;
+}
+
+/* whole card clickable via the title link */
+.tfbs .tfst-stretch { color: inherit; text-decoration: none; }
+.tfst-stretch::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 24px;
+  z-index: 1;
+}
+.tfst-stretch:focus-visible { outline: none; }
+.tfst-stretch:focus-visible::after { box-shadow: 0 0 0 3px #ffffff inset, 0 0 0 6px var(--tfbs-aqua); }
+
+.tfst-city {
+  font-size: 12.5px;
+  color: rgba(255, 255, 255, 0.78);
+  margin: 2px 0 12px;
+}
+
+.tfbs .tfst-line {
+  display: flex;
+  gap: 7px;
+  margin: 0 0 8px;
+  font-size: 12.5px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.9);
+}
+.tfst-line svg { width: 14px; height: 14px; flex: 0 0 14px; margin-top: 2px; opacity: 0.85; }
+.tfst-addr span {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+.tfst-addr { padding-right: 4px; }
+
+/* phone sits above the stretched link so it stays tappable */
+.tfbs .tfst-phone {
+  position: relative;
+  z-index: 2;
+  color: #ffffff;
+  font-weight: 600;
+  text-decoration: none;
+}
+.tfbs .tfst-phone:hover { text-decoration: underline; }
+
+.tfst-explore {
+  margin-top: auto;
+  padding-right: 70px;
+  font-size: 13px;
+  font-weight: 600;
+  color: #ffffff;
+  opacity: 0.9;
+  transition: transform 0.35s var(--tfbs-ease);
+}
+.tfst-card:hover .tfst-explore { transform: translateX(3px); }
+
+/* white notch in the bottom-right corner holding the original branch photo */
+.tfst-notch {
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  width: 76px;
+  height: 76px;
+  padding: 10px 0 0 10px;
+  background: #ffffff;
+  border-top-left-radius: 24px;
+  z-index: 2;
+  pointer-events: none;
+}
+/* inverted corners so the notch blends into the card */
+.tfst-notch::before,
+.tfst-notch::after {
+  content: "";
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background: radial-gradient(circle at 0 0, transparent 19.5px, #ffffff 20px);
+}
+.tfst-notch::before { top: -20px; right: 0; }
+.tfst-notch::after { left: -20px; bottom: 0; }
+
+.tfst-notch img {
+  display: block;
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--tone-soft, #e6f4f6);
+  background: #eef6f8;
+  transition: transform 0.5s var(--tfbs-ease);
+}
+.tfst-card:hover .tfst-notch img { transform: scale(1.08) rotate(-3deg); }
+
+/* curved arrows in the gap between cards */
+.tfst-arrow {
+  position: absolute;
+  left: calc(100% + 2px);
+  width: calc(var(--colgap) - 4px);
+  height: auto;
+  color: rgba(7, 55, 102, 0.55);
+  pointer-events: none;
+}
+.tfst-arrow--down { top: 58%; }
+.tfst-arrow--up { top: 4%; }
+
+/* single column on small phones: no zig-zag, cards full width */
+@media (max-width: 519px) {
+  .tfst-track { row-gap: 26px; padding-bottom: 8px; }
+  .tfst-card { min-height: 0; padding-bottom: 22px; }
+  .tfst-addr span { -webkit-line-clamp: 4; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tfst-card,
+  .tfst-explore,
+  .tfst-notch img { transition: none; }
+}
