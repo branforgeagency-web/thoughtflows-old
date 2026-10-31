@@ -304,31 +304,7 @@ const Header = () => {
   return (
     <>
       <header className="glass-header tf-header-overlay">
-        <nav className="navbar ">
-          {/* Logo */}
-
-
-          {/* Hamburger Menu - Only show on mobile/tablet */}
-          {isMobile && (
-            <div className="hamburger-menu">
-              <div
-                className="hamburger"
-                role="button"
-                tabIndex={0}
-                aria-label="Toggle menu"
-                aria-expanded={mobileMenuOpen}
-                onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    setMobileMenuOpen(!mobileMenuOpen);
-                  }
-                }}
-              >
-                ☰
-              </div>
-            </div>
-          )}
+        <nav className="navbar">
 
           {/* Navigation Menu */}
           <div
@@ -344,20 +320,42 @@ const Header = () => {
                 width: "100%",
                 maxWidth: "1400px",
                 margin: "0 auto",
-                padding: "0 24px",
+                padding: "0 16px",
                 boxSizing: "border-box"
               }}
               className={`tf-nav-row ${isHome ? 'w-full' : 'w-full'}`}
             >
               <div className="tf-nav-spacer" aria-hidden="true" />
               <div className="tf-nav-pill">
+                {/* Logo - always visible */}
                 <div className="logo tf-logo-chip tf-logo-inline">
                   <a href="/">
                     <img src={logo} alt="Website Logo" />
                   </a>
                 </div>
+
+                {/* Hamburger Menu - Only show on mobile/tablet, placed inline after logo */}
+                {isMobile && (
+                  <div
+                    className="hamburger"
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Toggle menu"
+                    aria-expanded={mobileMenuOpen}
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        setMobileMenuOpen(!mobileMenuOpen);
+                      }
+                    }}
+                  >
+                    {mobileMenuOpen ? '✕' : '☰'}
+                  </div>
+                )}
+
               <ul
-                className={`border-gray-300  sm:shadow md:shadow-none  menu ${mobileMenuOpen ? "open" : ""
+                className={`border-gray-300 sm:shadow md:shadow-none menu ${mobileMenuOpen ? "open" : ""
                   }`}
               >
 
@@ -407,33 +405,41 @@ const Header = () => {
                     Courses
                   </div>
                   {submenuOpen === "courses" && (
-                    <div className="mobile-submenu overflow-scroll text-center border-gray-300 shadow rounded">
+                    <div className="mobile-submenu border-gray-300 shadow rounded">
                       {submenu.courses.map((item, index) => (
-                        <div key={index} style={{ marginBottom: "20px" }}>
+                        <div key={index} style={{
+                          display: "block",
+                          width: "100%",
+                          borderBottom: index < submenu.courses.length - 1 ? "1px solid #e5f7f8" : "none",
+                          paddingBottom: "8px",
+                          marginBottom: "0"
+                        }}>
                           <div style={{
-                            fontWeight: 600,
-                            marginTop: "15px",
-                            marginBottom: "10px",
-                            fontSize: "16px",
-                            color: "#1f2937"
+                            fontWeight: 700,
+                            padding: "12px 16px 6px",
+                            fontSize: "13px",
+                            color: "#097D8A",
+                            textTransform: "uppercase",
+                            letterSpacing: "0.08em",
+                            borderLeft: "3px solid #097D8A",
+                            marginLeft: "8px",
+                            marginBottom: "4px"
                           }}>
                             {item.label}
                           </div>
-                          <div style={{ display: "flex", flexDirection: "column", gap: "8px", alignItems: "center" }}>
+                          <div style={{ display: "flex", flexDirection: "column", gap: "0px", alignItems: "flex-start", paddingLeft: "16px" }}>
                             {item.courseMenu.map((course, i) => (
                               <Link
-                                className="text-center text-cyan-500"
                                 style={{
                                   color: "#06b6d4",
-                                  position: "relative",
-                                  transition: "color 0.3s ease",
                                   display: "block",
-                                  padding: "8px 12px",
+                                  width: "100%",
+                                  padding: "7px 12px",
                                   textDecoration: "none",
                                   fontSize: "14px",
                                   fontWeight: "500",
-                                  width: "100%",
-                                  maxWidth: "200px"
+                                  borderRadius: "6px",
+                                  transition: "background 0.2s, color 0.2s"
                                 }}
                                 key={i}
                                 to={course.path}
@@ -441,33 +447,17 @@ const Header = () => {
                                   setMobileMenuOpen(false);
                                   setSubmenuOpen("");
                                 }}
-                                onMouseEnter={(e) => {
-                                  e.target.style.color = "#0891b2";
-                                  const underline = e.target.querySelector('.mobile-course-underline');
-                                  if (underline) underline.style.width = '100%';
-                                }}
-                                onMouseLeave={(e) => {
-                                  e.target.style.color = "#06b6d4";
-                                  const underline = e.target.querySelector('.mobile-course-underline');
-                                  if (underline) underline.style.width = '0%';
-                                }}
+                                onMouseEnter={(e) => { e.currentTarget.style.background = "#f0fdfe"; e.currentTarget.style.color = "#0891b2"; }}
+                                onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#06b6d4"; }}
                               >
                                 {course.label}
-                                <div className="mobile-course-underline" style={{
-                                  position: 'absolute',
-                                  bottom: '-2px',
-                                  left: '0',
-                                  width: '0%',
-                                  height: '1px',
-                                  backgroundColor: '#0891b2',
-                                  transition: 'width 0.3s ease'
-                                }}></div>
                               </Link>
                             ))}
                           </div>
                         </div>
                       ))}
                     </div>
+
                   )}
                 </li>
                 <li className="multiple-dropdown">
@@ -497,20 +487,28 @@ const Header = () => {
                     Branches
                   </div>
                   {submenuOpen === "branches" && (
-                    <div className="mobile-submenu text-center border-gray-300 shadow rounded">
+                    <div className="mobile-submenu border-gray-300 shadow rounded">
                       {submenu.branches.map((item, index) => (
-                        <div key={index}>
+                        <div key={index} style={{
+                          display: "block",
+                          width: "100%",
+                          borderBottom: index < submenu.branches.length - 1 ? "1px solid #e5f7f8" : "none",
+                          paddingBottom: "8px"
+                        }}>
                           {item.hubPath ? (
                             <Link
                               to={item.hubPath}
                               style={{
-                                display: "inline-block",
+                                display: "block",
                                 fontWeight: 700,
-                                marginTop: "14px",
-                                marginBottom: "4px",
+                                padding: "12px 16px 6px",
                                 color: "#097D8A",
-                                fontSize: "15px",
-                                textDecoration: "none"
+                                fontSize: "14px",
+                                textDecoration: "none",
+                                textTransform: "uppercase",
+                                letterSpacing: "0.08em",
+                                borderLeft: "3px solid #097D8A",
+                                marginLeft: "8px"
                               }}
                               onClick={() => {
                                 setMobileMenuOpen(false);
@@ -522,29 +520,47 @@ const Header = () => {
                           ) : (
                             <div
                               style={{
-                                fontWeight: 600,
-                                marginTop: "14px",
-                                marginBottom: "4px",
-                                color: "#000",
-                                fontSize: "15px"
+                                display: "block",
+                                fontWeight: 700,
+                                padding: "12px 16px 6px",
+                                color: "#1f2937",
+                                fontSize: "14px",
+                                textTransform: "uppercase",
+                                letterSpacing: "0.08em",
+                                borderLeft: "3px solid #e5e7eb",
+                                marginLeft: "8px"
                               }}
                             >
                               {item.label}
                             </div>
                           )}
-                          {item.courseMenu.map((branch, i) => (
-                            <Link
-                              style={{ color: "#06b6d4" }}
-                              key={i}
-                              to={branch.path}
-                              onClick={() => {
-                                setMobileMenuOpen(false);
-                                setSubmenuOpen("");
-                              }}
-                            >
-                              {branch.label}
-                            </Link>
-                          ))}
+                          <div style={{ display: "flex", flexDirection: "column", paddingLeft: "16px" }}>
+                            {item.courseMenu.map((branch, i) => (
+                              <Link
+                                style={{
+                                  color: "#06b6d4",
+                                  display: "block",
+                                  width: "100%",
+                                  padding: "7px 12px",
+                                  textDecoration: "none",
+                                  fontSize: "14px",
+                                  fontWeight: "500",
+                                  borderRadius: "6px",
+                                  transition: "background 0.2s, color 0.2s"
+                                }}
+                                key={i}
+                                to={branch.path}
+                                onClick={() => {
+                                  setMobileMenuOpen(false);
+                                  setSubmenuOpen("");
+                                }}
+                                onMouseEnter={(e) => { e.currentTarget.style.background = "#f0fdfe"; e.currentTarget.style.color = "#0891b2"; }}
+                                onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#06b6d4"; }}
+                              >
+                                {branch.label}
+                              </Link>
+                            ))}
+                          </div>
                         </div>
                       ))}
                     </div>
