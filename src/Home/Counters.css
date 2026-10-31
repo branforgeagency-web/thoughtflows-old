@@ -1,0 +1,182 @@
+/* ===== Stats – award-style laurel layout ===== */
+.tfaw {
+  --tfaw-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  position: relative;
+  overflow: hidden;
+  padding: clamp(64px, 8vw, 110px) 24px;
+  background:
+    radial-gradient(60% 70% at 50% 0%, rgba(201, 162, 74, 0.08) 0%, rgba(201, 162, 74, 0) 70%),
+    #f7f8f6;
+  color: #073766;
+  font-family: var(--secondary-font, 'Outfit', sans-serif);
+}
+
+.tfaw *,
+.tfaw *::before,
+.tfaw *::after { box-sizing: border-box; }
+
+.tfaw-inner {
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.tfaw-head {
+  text-align: center;
+  margin-bottom: clamp(40px, 5vw, 64px);
+}
+
+.tfaw-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: #8a96a3;
+  margin-bottom: 14px;
+}
+.tfaw-eyebrow::before,
+.tfaw-eyebrow::after {
+  content: '';
+  width: 26px;
+  height: 1px;
+  background: #c9a24a;
+}
+
+.tfaw .tfaw-heading {
+  margin: 0;
+  font-family: inherit;
+  font-size: clamp(30px, 4vw, 48px);
+  font-weight: 600;
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+  color: var(--darkblue, #073766);
+}
+.tfaw-heading em {
+  font-family: Georgia, 'Times New Roman', serif;
+  font-style: italic;
+  font-weight: 400;
+  color: #c9a24a;
+}
+
+.tfaw-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(28px, 4vw, 56px) clamp(32px, 6vw, 88px);
+}
+
+.tfaw-item {
+  display: flex;
+  align-items: center;
+  gap: clamp(18px, 2.4vw, 30px);
+  padding: 18px 22px 18px 14px;
+  border-radius: 24px;
+  transition: background 0.5s var(--tfaw-ease), box-shadow 0.5s var(--tfaw-ease);
+}
+.tfaw-item:hover {
+  background: #ffffff;
+  box-shadow: 0 22px 44px -28px rgba(7, 30, 55, 0.35);
+}
+
+/* wreath badge with the number inside */
+.tfaw-badge {
+  position: relative;
+  flex: 0 0 auto;
+  width: clamp(140px, 14vw, 172px);
+  aspect-ratio: 160 / 150;
+}
+.tfaw-wreath {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  filter: drop-shadow(0 6px 10px rgba(154, 116, 40, 0.18));
+  transition: transform 0.6s var(--tfaw-ease);
+}
+.tfaw-item:hover .tfaw-wreath { transform: rotate(-4deg) scale(1.03); }
+
+.tfaw-badge-text {
+  position: absolute;
+  left: 50%;
+  top: 47%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 70%;
+}
+
+.tfaw-num {
+  font-size: clamp(19px, 1.9vw, 24px);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+  color: var(--darkblue, #073766);
+  white-space: nowrap;
+}
+
+.tfaw-badge-label {
+  margin-top: 5px;
+  font-size: 9.5px;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: #9a7428;
+}
+
+.tfaw-body { min-width: 0; }
+
+.tfaw-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--primary-blue, #097d8a);
+  margin-bottom: 6px;
+}
+/* existing white line icons, tinted to the brand teal */
+.tfaw-tag img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+  filter: brightness(0) saturate(100%) invert(33%) sepia(87%) saturate(640%) hue-rotate(147deg) brightness(88%);
+}
+
+.tfaw .tfaw-title {
+  margin: 0 0 6px;
+  font-family: inherit;
+  font-size: clamp(18px, 1.7vw, 21px);
+  font-weight: 600;
+  color: var(--darkblue, #073766);
+  letter-spacing: -0.01em;
+}
+
+.tfaw .tfaw-text {
+  margin: 0;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: #66788a;
+}
+
+@media (max-width: 860px) {
+  .tfaw-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 480px) {
+  .tfaw { padding-left: 16px; padding-right: 16px; }
+  .tfaw-item { padding: 12px 6px; gap: 14px; }
+  .tfaw-badge { width: 124px; }
+  .tfaw-num { font-size: 18px; }
+  .tfaw .tfaw-text { font-size: 13.5px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tfaw-item,
+  .tfaw-wreath { transition: none; }
+}

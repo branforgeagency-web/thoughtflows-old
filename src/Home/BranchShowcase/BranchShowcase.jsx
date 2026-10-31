@@ -1,6 +1,6 @@
 import React from "react";
 import { motion, useReducedMotion } from "framer-motion";
-import BranchDirectory from "./BranchDirectory";
+import BranchSteps from "./BranchSteps";
 import "./BranchShowcase.css";
 
 const EASE = [0.22, 1, 0.36, 1];
@@ -9,10 +9,10 @@ const ACCORDION_ID = "tfbs-branches";
 export default function BranchShowcase() {
   const reduce = useReducedMotion();
 
-  const reveal = (delay = 0) => ({
+  const reveal = (delay = 0, amount = 0.35) => ({
     initial: reduce ? false : { opacity: 0, y: 22 },
     whileInView: { opacity: 1, y: 0 },
-    viewport: { once: true, amount: 0.35 },
+    viewport: { once: true, amount },
     transition: { duration: 0.8, ease: EASE, delay },
   });
 
@@ -52,8 +52,8 @@ export default function BranchShowcase() {
           </motion.div>
         </header>
 
-        <motion.div {...reveal(0.12)}>
-          <BranchDirectory id={ACCORDION_ID} />
+        <motion.div {...reveal(0.12, 0.02)}>
+          <BranchSteps id={ACCORDION_ID} />
         </motion.div>
       </div>
     </section>
