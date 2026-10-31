@@ -3862,6 +3862,171 @@ ul.menu.open {
   width: 100%;
 }
 
+/* ---------- Dark gradient navbar (desktop) ---------- */
+
+@media (min-width: 1024px) {
+  .glass-header {
+    background: transparent;
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    border-bottom: none;
+    box-shadow: none;
+  }
+}
+
+/* All pages: navbar floats transparently over the top banner (no white strip) */
+@media (min-width: 1024px) {
+  .tf-header-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: transparent !important;
+  }
+}
+
+/* Three-slot navbar: left nav links / centered logo / right CTA.
+   Using flex-grow on the outer zones (instead of absolute centering)
+   means the logo can never be covered by the nav links or button. */
+@media (min-width: 1024px) {
+  .tf-nav-left {
+    flex: 1 1 0%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .tf-nav-cta {
+    flex: 1 1 0%;
+    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+}
+
+.tf-logo-chip {
+  background: transparent;
+  box-shadow: none;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  flex: 0 0 auto;
+}
+
+/* Logo sitting inside the left corner of the nav pill itself */
+.tf-logo-inline {
+  margin-right: 18px;
+  padding-right: 18px;
+  border-right: 1px solid rgba(11, 58, 102, 0.18);
+}
+
+.tf-logo-inline img {
+  width: auto;
+  height: 34px;
+  max-height: 34px;
+  object-fit: contain;
+}
+
+@media (max-width: 1023px) {
+  .tf-logo-inline {
+    margin-right: 0;
+    padding-right: 0;
+    border-right: none;
+  }
+
+  .tf-logo-inline img {
+    height: auto;
+    max-height: none;
+  }
+}
+
+.tf-nav-pill {
+  display: flex;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .tf-nav-pill {
+    background: rgba(255, 255, 255, 0.94);
+    border-radius: 50px;
+    padding: 8px 26px;
+    box-shadow: 0 8px 20px rgba(3, 15, 24, 0.18);
+  }
+
+  .tf-nav-pill .menu {
+    gap: 22px !important;
+  }
+
+  .tf-nav-pill .menu li {
+    font-size: 12.5px;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .tf-nav-pill .menu li a,
+  .tf-nav-pill .menu li > div {
+    color: #0b3a66 !important;
+  }
+
+  .tf-nav-pill .menu li a:hover,
+  .tf-nav-pill .menu li a:active,
+  .tf-nav-pill .menu li > div:hover {
+    color: #097d8a !important;
+  }
+
+  /* "Branches" carries an extra class (multiple-dropdown-sub) and its own
+     Tailwind cyan utility that was winning out over the shared nav color -
+     force it to match every other nav item in both states. */
+  .tf-nav-pill .menu li.multiple-dropdown-sub > div {
+    color: #0b3a66 !important;
+  }
+
+  .tf-nav-pill .menu li.multiple-dropdown-sub > div:hover {
+    color: #097d8a !important;
+  }
+}
+
+.tf-nav-cta {
+  display: flex;
+  align-items: center;
+  justify-self: end;
+}
+
+.tf-apply-btn {
+  display: inline-flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 11px 24px;
+  border-radius: 50px;
+  background: #061c2e;
+  color: #ffffff !important;
+  font-family: var(--secondary-font);
+  font-size: 12.5px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  box-shadow: 0 8px 18px rgba(3, 15, 24, 0.3);
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.tf-apply-btn:hover {
+  background: #097d8a;
+  color: #ffffff !important;
+  text-decoration: none;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 1023px) {
+  .tf-nav-cta {
+    display: none;
+  }
+}
+
+
 /* globals.css or index.css */
 .perspective-1000 {
   perspective: 1000px;
@@ -3914,4 +4079,1247 @@ ul.menu.open {
   padding-top: 20px !important;
   min-height: 75vh !important;
   margin-top: 0 !important;
+}
+
+/* Centered nav pill: spacer | pill | CTA. Equal 1fr side columns keep the
+   pill dead-centre on desktop; mobile keeps the original left/right flex. */
+.tf-nav-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.tf-nav-spacer {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .tf-nav-row {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    column-gap: 16px;
+  }
+
+  .tf-nav-spacer {
+    display: block;
+  }
+
+  .tf-nav-row > .tf-nav-cta {
+    justify-content: flex-end;
+  }
+}
+
+/* ===== Why ThoughtFlows banner (GifSection) ===== */
+.tf-why-wrap {
+  padding: 40px 24px;
+  background: #ffffff;
+}
+
+.tf-why-card {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+  border-radius: 26px;
+  overflow: hidden;
+  padding: 44px 48px;
+  background:
+    radial-gradient(60% 80% at 85% 10%, rgba(255, 255, 255, 0.14) 0%, rgba(255, 255, 255, 0) 60%),
+    radial-gradient(50% 70% at 0% 100%, rgba(6, 28, 46, 0.35) 0%, rgba(6, 28, 46, 0) 70%),
+    linear-gradient(135deg, #0a7782 0%, #0e8f9b 50%, #1aa3ae 100%);
+  box-shadow: 0 30px 70px rgba(6, 60, 70, 0.3);
+  font-family: var(--secondary-font);
+  isolation: isolate;
+}
+
+/* animated light border */
+.tf-why-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1.5px;
+  background: linear-gradient(120deg, rgba(255,255,255,0.05), rgba(155,231,238,0.7), rgba(255,217,138,0.6), rgba(255,255,255,0.05));
+  background-size: 300% 300%;
+  -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  animation: tfWhyBorder 8s linear infinite;
+  pointer-events: none;
+  z-index: 3;
+}
+
+@keyframes tfWhyBorder {
+  to { background-position: 300% 0; }
+}
+
+.tf-why-grid {
+  position: absolute;
+  inset: -40% -20% -60% 20%;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 120px 120px;
+  transform: perspective(900px) rotateX(55deg) rotateZ(-28deg);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.tf-why-dots {
+  position: absolute;
+  top: 24px;
+  left: 42%;
+  width: 180px;
+  height: 120px;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.35) 1.5px, transparent 1.6px);
+  background-size: 16px 16px;
+  -webkit-mask: radial-gradient(circle, #000 30%, transparent 75%);
+  mask: radial-gradient(circle, #000 30%, transparent 75%);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.tf-why-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(40px);
+  pointer-events: none;
+  z-index: -1;
+  animation: tfWhyOrb 10s ease-in-out infinite alternate;
+}
+.tf-why-orb--a { width: 260px; height: 260px; right: 8%; top: -80px; background: rgba(155, 231, 238, 0.35); }
+.tf-why-orb--b { width: 220px; height: 220px; left: -60px; bottom: -60px; background: rgba(6, 28, 46, 0.45); animation-delay: 3s; }
+
+@keyframes tfWhyOrb {
+  from { transform: translate(0, 0) scale(1); }
+  to { transform: translate(30px, 20px) scale(1.15); }
+}
+
+.tf-why-glow {
+  position: absolute;
+  border-radius: 8px;
+  pointer-events: none;
+  z-index: -1;
+}
+.tf-why-glow--a {
+  width: 200px; height: 30px; top: 30px; left: 46%;
+  transform: rotate(-24deg);
+  background: linear-gradient(90deg, rgba(255, 217, 138, 0.2), rgba(255, 170, 120, 0.75));
+  box-shadow: 0 18px 40px rgba(255, 170, 120, 0.35);
+  animation: tfWhyDrift 7s ease-in-out infinite alternate;
+}
+.tf-why-glow--b {
+  width: 220px; height: 40px; top: 46%; left: 40%;
+  transform: rotate(-24deg);
+  background: linear-gradient(90deg, rgba(21, 174, 187, 0.2), rgba(64, 230, 170, 0.85));
+  box-shadow: 0 0 40px rgba(64, 230, 170, 0.45);
+  animation: tfWhyDrift 9s 1s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes tfWhyDrift {
+  from { translate: 0 0; }
+  to { translate: 24px -12px; }
+}
+
+.tf-why-plus {
+  position: absolute;
+  color: rgba(255, 255, 255, 0.35);
+  font-size: 26px;
+  font-weight: 300;
+  line-height: 1;
+  pointer-events: none;
+  z-index: -1;
+  animation: tfWhyPlus 6s ease-in-out infinite;
+}
+
+@keyframes tfWhyPlus {
+  0%, 100% { transform: translateY(0) rotate(0); opacity: 0.25; }
+  50% { transform: translateY(-14px) rotate(90deg); opacity: 0.7; }
+}
+
+/* ---- top row ---- */
+.tf-why-top {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 420px);
+  gap: 40px;
+  align-items: center;
+}
+
+.tf-why-eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.14);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 18px;
+}
+
+.tf-why-eyebrow-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: #ffd98a;
+  box-shadow: 0 0 10px #ffd98a;
+}
+
+.tf-why-title {
+  color: #ffffff;
+  font-size: 48px;
+  line-height: 1.1;
+  font-weight: 700;
+  margin: 0 0 14px;
+}
+
+.tf-why-highlight {
+  position: relative;
+  display: inline-block;
+  background: linear-gradient(90deg, #ffffff 0%, #c9f4f7 50%, #ffffff 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  animation: tfDvShimmer 5s linear infinite;
+}
+
+.tf-why-highlight::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  height: 6px;
+  width: 100%;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #ffd98a, rgba(255, 217, 138, 0));
+  transform-origin: left;
+  animation: tfWhyUnderline 1.4s 0.4s ease-out both;
+}
+
+@keyframes tfWhyUnderline {
+  from { transform: scaleX(0); }
+  to { transform: scaleX(1); }
+}
+
+.tf-why-sub {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 16px;
+  line-height: 1.6;
+  max-width: 520px;
+  margin: 0 0 20px;
+}
+
+.tf-why-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tf-why-tags span {
+  padding: 5px 12px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #0a5c65;
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* ---- right visual ---- */
+.tf-why-visual {
+  position: relative;
+  height: 280px;
+}
+
+.tf-why-panel {
+  position: absolute;
+  inset: 30px 40px 20px 40px;
+  border-radius: 20px;
+  padding: 16px 22px 18px;
+  background: linear-gradient(160deg, rgba(8, 70, 80, 0.92) 0%, rgba(4, 40, 48, 0.95) 100%);
+  border: 1px solid rgba(155, 231, 238, 0.25);
+  box-shadow: 0 30px 50px rgba(3, 30, 36, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.12);
+  overflow: hidden;
+  animation: tfWhyFloat 6s ease-in-out infinite;
+}
+
+@keyframes tfWhyFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+.tf-why-panel-head {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+
+.tf-why-panel-dots { display: inline-flex; gap: 5px; }
+.tf-why-panel-dots i { width: 7px; height: 7px; border-radius: 50%; background: rgba(255,255,255,0.25); }
+.tf-why-panel-dots i:first-child { background: #ff8a80; }
+.tf-why-panel-dots i:nth-child(2) { background: #ffd98a; }
+.tf-why-panel-dots i:nth-child(3) { background: #40e6aa; }
+
+.tf-why-panel-title {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.tf-why-bars {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  height: 110px;
+  gap: 8px;
+}
+
+.tf-why-bars span {
+  flex: 1;
+  border-radius: 4px 4px 2px 2px;
+  background: linear-gradient(180deg, #d8f6ff 0%, #17b1bd 55%, rgba(23, 177, 189, 0.15) 100%);
+  box-shadow: 0 0 14px rgba(23, 177, 189, 0.6);
+  transform-origin: bottom;
+  animation: tfWhyPulse 2.6s ease-in-out infinite;
+}
+
+@keyframes tfWhyPulse {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(0.7); }
+}
+
+.tf-why-line {
+  position: absolute;
+  left: 22px;
+  right: 22px;
+  bottom: 40px;
+  width: calc(100% - 44px);
+  height: 60px;
+  overflow: visible;
+}
+
+.tf-why-line path {
+  fill: none;
+  stroke: #ffd98a;
+  stroke-width: 2.5;
+  stroke-linecap: round;
+  stroke-dasharray: 320;
+  stroke-dashoffset: 320;
+  filter: drop-shadow(0 0 6px rgba(255, 217, 138, 0.8));
+  animation: tfWhyDraw 4s ease-in-out infinite;
+}
+
+@keyframes tfWhyDraw {
+  0% { stroke-dashoffset: 320; }
+  50%, 80% { stroke-dashoffset: 0; }
+  100% { stroke-dashoffset: -320; }
+}
+
+.tf-why-chip {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 14px 30px rgba(3, 30, 36, 0.3);
+  color: #0b3a66;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.2;
+  z-index: 2;
+}
+
+.tf-why-chip strong {
+  font-size: 24px;
+  font-weight: 800;
+  color: #0e8f9b;
+}
+
+.tf-why-chip--a { top: 0; left: 0; animation: tfWhyFloat 5s 0.5s ease-in-out infinite; }
+.tf-why-chip--b { bottom: 0; right: 0; animation: tfWhyFloat 5.5s 1.2s ease-in-out infinite; }
+
+.tf-why-check {
+  width: 26px; height: 26px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 50%;
+  background: #40e6aa;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+}
+
+.tf-why-ring {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  width: 78px;
+  height: 78px;
+  border-radius: 50%;
+  background: rgba(6, 28, 46, 0.85);
+  box-shadow: 0 14px 30px rgba(3, 30, 36, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  animation: tfWhyFloat 6.5s 0.8s ease-in-out infinite;
+}
+
+.tf-why-ring svg { position: absolute; inset: 6px; width: calc(100% - 12px); height: calc(100% - 12px); transform: rotate(-90deg); }
+.tf-why-ring-bg { fill: none; stroke: rgba(255, 255, 255, 0.15); stroke-width: 5; }
+.tf-why-ring-fg {
+  fill: none; stroke: #5fd6df; stroke-width: 5; stroke-linecap: round;
+  stroke-dasharray: 151; stroke-dashoffset: 151;
+  animation: tfWhyRing 2s 0.5s ease-out forwards;
+}
+
+@keyframes tfWhyRing { to { stroke-dashoffset: 30; } }
+
+.tf-why-ring span {
+  position: relative;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 1;
+  text-align: center;
+}
+.tf-why-ring small { display: block; font-size: 10px; font-weight: 500; opacity: 0.75; margin-top: 2px; }
+
+/* ---- feature cards ---- */
+.tf-why-features {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 0;
+}
+
+.tf-why-item {
+  position: relative;
+  padding: 22px 22px 20px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  transition: transform 0.35s ease, background 0.35s ease, box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+.tf-why-item::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  height: 3px; width: 100%;
+  background: linear-gradient(90deg, #ffd98a, #40e6aa);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s ease;
+}
+
+.tf-why-item:hover {
+  transform: translateY(-6px);
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 20px 40px rgba(3, 30, 36, 0.25);
+}
+
+.tf-why-item:hover::after { transform: scaleX(1); }
+
+.tf-why-num {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  font-size: 34px;
+  font-weight: 800;
+  color: rgba(255, 255, 255, 0.14);
+  line-height: 1;
+}
+
+.tf-why-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--accent-color, #15AEBB);
+  box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.3), 0 8px 18px rgba(3, 30, 36, 0.25);
+  margin-bottom: 14px;
+  transition: transform 0.35s ease;
+}
+
+.tf-why-item:hover .tf-why-icon { transform: scale(1.08) rotate(-4deg); }
+
+.tf-why-icon img { width: 48px; height: 48px; object-fit: contain; }
+
+.tf-why-item h3 {
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 6px;
+}
+
+.tf-why-item p {
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0;
+}
+
+@media (max-width: 1100px) {
+  .tf-why-top { grid-template-columns: 1fr; }
+  .tf-why-visual { display: none; }
+}
+
+@media (max-width: 900px) {
+  .tf-why-features { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 767px) {
+  .tf-why-wrap { padding: 24px 16px; }
+  .tf-why-card { padding: 24px 18px; border-radius: 20px; }
+  .tf-why-title { font-size: 32px; }
+  .tf-why-glow--a { left: 55%; width: 140px; }
+  .tf-why-glow--b { left: 45%; width: 150px; top: 30%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tf-why-card *, .tf-why-card::before { animation: none !important; }
+  .tf-why-ring-fg { stroke-dashoffset: 30; }
+  .tf-why-line path { stroke-dashoffset: 0; }
+}
+
+/* ===== Home hero: video + animated overlay copy ===== */
+.tf-hero {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  font-family: var(--secondary-font);
+}
+
+.tf-hero-video {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 620px;
+  max-height: 100vh;
+  object-fit: cover;
+}
+
+.tf-hero-shade {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(4, 30, 40, 0.82) 0%, rgba(4, 30, 40, 0.55) 45%, rgba(4, 30, 40, 0.05) 80%);
+  pointer-events: none;
+}
+
+.tf-hero-content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-42%);
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 64px;
+  z-index: 2;
+}
+
+.tf-hero-content > * { max-width: 640px; }
+
+.tf-hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 7px 16px;
+  border-radius: 50px;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.4px;
+}
+
+.tf-hero-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #40e6aa;
+  box-shadow: 0 0 0 0 rgba(64, 230, 170, 0.7);
+  animation: tfHeroPing 1.8s infinite;
+}
+
+@keyframes tfHeroPing {
+  0% { box-shadow: 0 0 0 0 rgba(64, 230, 170, 0.7); }
+  70% { box-shadow: 0 0 0 10px rgba(64, 230, 170, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(64, 230, 170, 0); }
+}
+
+.tf-hero-title {
+  color: #ffffff;
+  font-size: 52px;
+  line-height: 1.12;
+  font-weight: 600;
+  margin: 20px 0 16px;
+}
+
+.tf-hero-rotator {
+  display: block;
+  position: relative;
+  height: 1.2em;
+  overflow: hidden;
+}
+
+.tf-hero-role {
+  display: inline-block;
+  background: linear-gradient(90deg, #5fe3ee 0%, #40e6aa 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.tf-hero-sub {
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 17px;
+  line-height: 1.6;
+  margin: 0 0 28px;
+}
+
+.tf-hero-ctas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.tf-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  padding: 13px 28px;
+  border-radius: 50px;
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 0.6px;
+  text-decoration: none !important;
+  transition: transform 0.25s ease, background 0.25s ease, box-shadow 0.25s ease;
+}
+
+.tf-hero-btn--primary {
+  background: var(--accent-color, #15AEBB);
+  color: #ffffff !important;
+  box-shadow: 0 10px 24px rgba(21, 174, 187, 0.45);
+}
+
+.tf-hero-btn--primary:hover {
+  background: #0e8f9b;
+  transform: translateY(-2px);
+}
+
+.tf-hero-btn--ghost {
+  color: #ffffff !important;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.tf-hero-btn--ghost:hover {
+  background: rgba(255, 255, 255, 0.16);
+  transform: translateY(-2px);
+}
+
+.tf-hero-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.tf-hero-stat {
+  display: flex;
+  flex-direction: column;
+  padding: 12px 20px;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  cursor: default;
+}
+
+.tf-hero-stat strong {
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 1.1;
+}
+
+.tf-hero-stat span {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 12.5px;
+  margin-top: 2px;
+}
+
+@media (max-width: 1199px) {
+  .tf-hero-title { font-size: 42px; }
+  .tf-hero-content { padding: 0 40px; }
+}
+
+/* Tablet / mobile: video on top, copy panel below for legibility */
+@media (max-width: 767px) {
+  .tf-hero { background: #072a33; }
+  .tf-hero-video { min-height: 0; max-height: none; }
+  .tf-hero-shade { display: none; }
+  .tf-hero-content {
+    position: static;
+    transform: none;
+    padding: 32px 20px 40px;
+  }
+  .tf-hero-title { font-size: 32px; margin-top: 16px; }
+  .tf-hero-sub { font-size: 15px; }
+  .tf-hero-stat { flex: 1 1 calc(50% - 14px); }
+}
+
+/* ===== Diwali celebration overlay (home hero) ===== */
+.tf-dv {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* warm festive glow at the bottom */
+.tf-dv::before {
+  content: '';
+  position: absolute;
+  left: 0; right: 0; bottom: 0;
+  height: 45%;
+  background: linear-gradient(0deg, rgba(21, 174, 187, 0.22) 0%, rgba(21, 174, 187, 0) 100%);
+}
+
+.tf-dv-sparkle {
+  position: absolute;
+  border-radius: 50%;
+  background: #e6fbfd;
+  box-shadow: 0 0 6px 2px rgba(95, 214, 223, 0.8);
+  opacity: 0;
+  animation: tfDvTwinkle 3.6s ease-in-out infinite;
+}
+
+@keyframes tfDvTwinkle {
+  0%, 100% { opacity: 0; transform: scale(0.4); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+/* fireworks */
+.tf-dv-burst {
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+.tf-dv-burst span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--c);
+  box-shadow: 0 0 8px 2px var(--c);
+  opacity: 0;
+  animation: tfDvBurst 4.8s ease-out infinite;
+}
+
+@keyframes tfDvBurst {
+  0% { transform: rotate(var(--a)) translateX(0) scale(1); opacity: 0; }
+  4% { opacity: 1; }
+  30% { transform: rotate(var(--a)) translateX(70px) scale(0.9); opacity: 1; }
+  45% { transform: rotate(var(--a)) translateX(82px) translateY(14px) scale(0.4); opacity: 0; }
+  100% { opacity: 0; }
+}
+
+/* greeting: premium card in ThoughtFlows navy + teal */
+.tf-dv-greeting {
+  position: absolute;
+  right: 6%;
+  bottom: 60px;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 26px 36px 24px 26px;
+  border-radius: 14px;
+  background: transparent;
+  border: 1px solid rgba(21, 174, 187, 0.65);
+  outline: 1px solid rgba(21, 174, 187, 0.25);
+  outline-offset: 5px;
+  box-shadow: none;
+  overflow: hidden;
+  animation: tfDvGreetIn 1.4s 0.6s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+
+/* slow light sweep across the card */
+.tf-dv-greeting::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent, rgba(155, 231, 238, 0.18), transparent);
+  animation: tfDvSweep 6s 2s ease-in-out infinite;
+}
+
+@keyframes tfDvSweep {
+  0% { left: -60%; }
+  35%, 100% { left: 130%; }
+}
+
+.tf-dv-corner {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-color: #15AEBB;
+  border-style: solid;
+}
+.tf-dv-corner--tl { top: 7px; left: 7px; border-width: 1px 0 0 1px; }
+.tf-dv-corner--br { bottom: 7px; right: 7px; border-width: 0 1px 1px 0; }
+
+.tf-dv-emblem {
+  width: 66px;
+  height: 66px;
+  flex: 0 0 66px;
+  filter: drop-shadow(0 0 10px rgba(21, 174, 187, 0.5));
+}
+
+.tf-dv-emblem-flame {
+  transform-origin: 32px 30px;
+  animation: tfDvFlame 1.4s ease-in-out infinite alternate;
+}
+
+@keyframes tfDvFlame {
+  from { transform: scale(1, 1); opacity: 0.9; }
+  to { transform: scale(0.9, 1.1); opacity: 1; }
+}
+
+.tf-dv-greeting-text {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.tf-dv-greeting-small {
+  color: #9be7ee;
+  text-shadow: 0 1px 6px rgba(3, 20, 31, 0.8);
+  font-family: var(--secondary-font);
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+}
+
+.tf-dv-greeting-big {
+  font-family: var(--secondary-font);
+  font-size: 44px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  line-height: 1.05;
+  margin: 4px 0 2px;
+  background: linear-gradient(100deg, #5fd6df 0%, #ffffff 25%, #15AEBB 50%, #e6fbfd 70%, #5fd6df 100%);
+  background-size: 250% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  filter: drop-shadow(0 2px 8px rgba(3, 20, 31, 0.75));
+  animation: tfDvShimmer 7s linear infinite;
+}
+
+.tf-dv-divider {
+  position: relative;
+  display: block;
+  width: 180px;
+  height: 1px;
+  margin: 8px 0 9px;
+  background: linear-gradient(90deg, transparent, #15AEBB, transparent);
+}
+
+.tf-dv-divider i {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 7px;
+  height: 7px;
+  margin: -3.5px 0 0 -3.5px;
+  background: #ffd98a;
+  transform: rotate(45deg);
+  box-shadow: 0 0 8px rgba(255, 217, 138, 0.9);
+}
+
+.tf-dv-tagline {
+  font-family: var(--secondary-font);
+  font-size: 14px;
+  color: #ffffff;
+  text-shadow: 0 1px 6px rgba(3, 20, 31, 0.8);
+  letter-spacing: 0.5px;
+}
+
+@keyframes tfDvGreetIn {
+  from { opacity: 0; transform: translateY(20px) scale(0.95); }
+  to { opacity: 1; transform: none; }
+}
+
+@keyframes tfDvShimmer {
+  to { background-position: 250% center; }
+}
+
+
+@media (max-width: 1199px) {
+  .tf-dv-greeting-big { font-size: 36px; }
+}
+
+/* mobile: keep diyas + sparkles on the video, hide the busier pieces */
+@media (max-width: 767px) {
+  .tf-dv { bottom: auto; height: 56vw; }
+  .tf-dv-greeting { right: 16px; bottom: 20px; }
+  .tf-dv-greeting { padding: 12px 18px 12px 12px; gap: 10px; outline: none; }
+  .tf-dv-emblem { width: 38px; height: 38px; flex-basis: 38px; }
+  .tf-dv-greeting-small { font-size: 8.5px; letter-spacing: 2px; }
+  .tf-dv-greeting-big { font-size: 22px; }
+  .tf-dv-divider { width: 110px; margin: 4px 0; }
+  .tf-dv-tagline { display: none; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tf-dv *, .tf-dv::before { animation: none !important; }
+  .tf-dv-sparkle, .tf-dv-burst span { display: none; }
+}
+
+
+/* realistic fireworks canvas (Diwali hero) */
+.tf-dv-canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  pointer-events: none;
+}
+
+@media (max-width: 767px) {
+  .tf-dv-canvas { height: 100%; }
+}
+
+/* ===== Popular courses: expanding accordion cards ===== */
+.tf-pc-row {
+  display: flex;
+  gap: 16px;
+  height: 380px;
+  margin-bottom: 48px;
+  font-family: var(--secondary-font);
+}
+
+.tf-pc-card {
+  position: relative;
+  flex: 1 1 0;
+  min-width: 0;
+  border-radius: 26px;
+  overflow: hidden;
+  cursor: pointer;
+  background: linear-gradient(160deg, #d9f3f5 0%, #bfe9ed 100%);
+  box-shadow: 0 10px 24px rgba(10, 119, 130, 0.12);
+  transition: flex 1.8s cubic-bezier(0.25, 0.8, 0.25, 1), background 1.2s ease, box-shadow 1.2s ease;
+}
+
+.tf-pc-card.is-active {
+  flex: 3.2 1 0;
+  background: linear-gradient(160deg, #f4f8fa 0%, #e8eff2 100%);
+  box-shadow: 0 22px 44px rgba(6, 28, 46, 0.14);
+}
+
+/* soft decorative circles like the reference */
+.tf-pc-blob {
+  position: absolute;
+  left: -30px;
+  bottom: 40px;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.45);
+  box-shadow: 70px -30px 0 -30px rgba(255, 255, 255, 0.35);
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+.tf-pc-card.is-active .tf-pc-blob { opacity: 0; }
+
+.tf-pc-card *,
+.tf-pc-card *::before,
+.tf-pc-card *::after { box-sizing: border-box; }
+
+.tf-pc-text {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 250px;
+  max-width: calc(100% - 0px);
+  padding: 26px 22px 24px;
+}
+
+.tf-pc-card:not(.is-active) .tf-pc-text { width: 100%; padding-right: 30px; }
+
+.tf-pc-chip {
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 50px;
+  background: #15AEBB;
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 14px;
+}
+
+.tf-pc-title {
+  color: #0b3a66;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 12px;
+}
+
+.tf-pc-desc {
+  color: #5b6b78;
+  font-size: 14px;
+  line-height: 1.6;
+  margin: 0;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.9s ease, transform 0.9s ease;
+}
+
+.tf-pc-card.is-active .tf-pc-desc {
+  opacity: 1;
+  transform: none;
+  transition-delay: 0.8s;
+}
+
+.tf-pc-foot {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.tf-pc-card.is-active .tf-pc-foot { justify-content: flex-start; gap: 18px; }
+
+.tf-pc-more {
+  color: #0b3a66 !important;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none !important;
+  white-space: nowrap;
+}
+
+.tf-pc-arrow {
+  width: 44px;
+  height: 44px;
+  flex: 0 0 44px;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  color: #061c2e !important;
+  font-size: 18px;
+  text-decoration: none !important;
+  box-shadow: 0 6px 14px rgba(6, 28, 46, 0.1);
+  transition: background 1s ease, color 1s ease, transform 0.3s ease;
+}
+
+.tf-pc-card.is-active .tf-pc-arrow {
+  background: #15AEBB;
+  color: #ffffff !important;
+  box-shadow: 0 8px 18px rgba(21, 174, 187, 0.4);
+}
+
+.tf-pc-arrow:hover { transform: scale(1.08); }
+
+.tf-pc-arrow-icon {
+  width: 20px;
+  height: 20px;
+  transform: rotate(-45deg);
+  transition: transform 1.2s cubic-bezier(0.25, 0.8, 0.25, 1);
+}
+
+.tf-pc-card.is-active .tf-pc-arrow-icon { transform: rotate(0deg); }
+
+/* image: peeks in at the edge when collapsed, slides in when active */
+.tf-pc-media {
+  position: absolute;
+  top: 22px;
+  bottom: 22px;
+  right: 22px;
+  width: 300px;
+  max-width: 52%;
+  border-radius: 20px;
+  overflow: hidden;
+  transform: translateX(calc(100% - 4px));
+  transition: transform 1.9s cubic-bezier(0.25, 0.8, 0.25, 1);
+  z-index: 1;
+}
+
+.tf-pc-card:not(.is-active) .tf-pc-media {
+  right: 0;
+  max-width: none;
+  transform: translateX(calc(100% - 18px));
+  border-radius: 14px 0 0 14px;
+}
+
+.tf-pc-card.is-active .tf-pc-media { transform: none; }
+
+.tf-pc-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.08);
+  transition: transform 2.4s ease;
+}
+
+.tf-pc-card.is-active .tf-pc-media img { transform: scale(1); }
+
+@media (max-width: 1199px) {
+  .tf-pc-title { font-size: 20px; }
+  .tf-pc-media { width: 240px; }
+}
+
+/* tablet/mobile: stacked full cards, no accordion */
+@media (max-width: 991px) {
+  .tf-pc-row { flex-direction: column; height: auto; }
+  .tf-pc-card,
+  .tf-pc-card.is-active { flex: none; background: linear-gradient(160deg, #f4f8fa 0%, #e8eff2 100%); }
+  .tf-pc-text,
+  .tf-pc-card:not(.is-active) .tf-pc-text { width: 100%; padding-bottom: 20px; }
+  .tf-pc-desc { opacity: 1; transform: none; margin-bottom: 18px; }
+  .tf-pc-foot { justify-content: flex-start; gap: 18px; }
+  .tf-pc-media,
+  .tf-pc-card:not(.is-active) .tf-pc-media {
+    position: relative;
+    inset: auto;
+    width: auto;
+    max-width: none;
+    height: 200px;
+    margin: 0 18px 18px;
+    border-radius: 18px;
+    transform: none;
+  }
+  .tf-pc-blob { display: none; }
+}
+
+/* ===== Diwali 10% offer card (home hero) ===== */
+.tf-hero-offer {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 14px;
+  padding: 10px 22px 10px 10px;
+  margin: -6px 0 26px;
+  border-radius: 18px;
+  overflow: hidden;
+  background: rgba(6, 28, 46, 0.55);
+  border: 1px solid rgba(255, 217, 138, 0.55);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 14px 34px -12px rgba(0, 0, 0, 0.5), 0 0 30px rgba(255, 190, 90, 0.18);
+}
+
+/* soft light sweep */
+.tf-hero-offer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent, rgba(255, 236, 190, 0.25), transparent);
+  animation: tfOfferSweep 4.5s 1.5s ease-in-out infinite;
+  pointer-events: none;
+}
+
+@keyframes tfOfferSweep {
+  0% { left: -60%; }
+  40%, 100% { left: 130%; }
+}
+
+.tf-hero-offer-pct {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 74px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  line-height: 1;
+  color: #3a1d00;
+  background: linear-gradient(135deg, #ffe7a3 0%, #ffc457 55%, #ff9d3d 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.6);
+  animation: tfOfferPulse 2.4s ease-in-out infinite;
+}
+
+.tf-hero-offer-pct strong {
+  font-size: 30px;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.tf-hero-offer-pct span {
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 0.24em;
+  margin-top: 2px;
+}
+
+@keyframes tfOfferPulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.tf-hero-offer-text {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.tf-hero-offer-title {
+  color: #ffd98a;
+  font-size: 17px;
+  font-weight: 700;
+  letter-spacing: 0.01em;
+}
+
+.tf-hero-offer-sub {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 13.5px;
+}
+
+@media (max-width: 767px) {
+  .tf-hero-offer { margin: 0 0 22px; padding-right: 16px; }
+  .tf-hero-offer-pct { min-width: 64px; }
+  .tf-hero-offer-pct strong { font-size: 26px; }
+  .tf-hero-offer-title { font-size: 15px; }
+  .tf-hero-offer-sub { font-size: 12.5px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tf-hero-offer::after,
+  .tf-hero-offer-pct { animation: none; }
 }
