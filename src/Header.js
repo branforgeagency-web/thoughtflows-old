@@ -303,7 +303,7 @@ const Header = () => {
 
   return (
     <>
-      <header className={` ${isHome ? 'glass-header' : 'glass-header'}`}>
+      <header className="glass-header tf-header-overlay">
         <nav className="navbar ">
           {/* Logo */}
 
@@ -338,9 +338,8 @@ const Header = () => {
           >
             <div
               style={{
-                display: "grid",
-                gridTemplateColumns: "1fr auto 1fr",
                 alignItems: "center",
+                position: "relative",
                 height: "auto",
                 width: "100%",
                 maxWidth: "1400px",
@@ -348,13 +347,15 @@ const Header = () => {
                 padding: "0 24px",
                 boxSizing: "border-box"
               }}
-              className={` ${isHome ? 'w-full' : 'w-full'}`}
+              className={`tf-nav-row ${isHome ? 'w-full' : 'w-full'}`}
             >
-              <div className="logo">
-                <a href="/">
-                  <img src={logo} alt="Website Logo" />
-                </a>
-              </div>
+              <div className="tf-nav-spacer" aria-hidden="true" />
+              <div className="tf-nav-pill">
+                <div className="logo tf-logo-chip tf-logo-inline">
+                  <a href="/">
+                    <img src={logo} alt="Website Logo" />
+                  </a>
+                </div>
               <ul
                 className={`border-gray-300  sm:shadow md:shadow-none  menu ${mobileMenuOpen ? "open" : ""
                   }`}
@@ -480,7 +481,7 @@ const Header = () => {
                 <li className="multiple-dropdown-sub">
 
                   <div
-                    style={{ fontWeight: "500", cursor: "pointer", }}
+                    style={{ fontWeight: "500", cursor: "pointer", color: "#0b3a66" }}
                     onMouseEnter={() =>
                       !isMobile && setOpen({ submenu: "branches", open: true })
                     }
@@ -490,7 +491,7 @@ const Header = () => {
                         submenuOpen === "branches" ? "" : "branches"
                       )
                     }
-                    className={`py-2 text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${isBranchPage() ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                    className={`py-2 relative transition-all duration-300 ${isBranchPage() ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
                       }`}
                   >
                     Branches
@@ -611,6 +612,13 @@ const Header = () => {
                 </li>
 
               </ul>
+              </div>
+
+              <div className="tf-nav-cta">
+                <Link to="/contact" className="tf-apply-btn">
+                  Apply Now
+                </Link>
+              </div>
             </div>
 
             {/* Submenu */}
