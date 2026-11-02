@@ -12,7 +12,7 @@
   overflow: hidden;
   background: #ffffff;
   padding: clamp(72px, 9vw, 128px) 24px clamp(64px, 8vw, 112px);
-  font-family: var(--secondary-font, "Outfit", system-ui, sans-serif);
+  font-family: 'Crimson Text', serif;
 }
 
 .tfbs *,
@@ -65,7 +65,7 @@
 
 .tfbs .tfbs-heading {
   margin: 0;
-  font-family: inherit;
+  font-family: 'Playfair Display', serif;
   font-size: clamp(34px, 4.6vw, 64px);
   font-weight: 600;
   line-height: 1.04;
@@ -159,14 +159,15 @@
   z-index: 1;
   pointer-events: none;
   background:
-    radial-gradient(130% 115% at 0% 100%, rgba(6, 18, 30, 0.82) 0%, rgba(6, 18, 30, 0.5) 38%, rgba(6, 18, 30, 0) 68%),
-    linear-gradient(180deg, rgba(6, 18, 30, 0) 30%, rgba(6, 18, 30, 0.55) 100%);
+    radial-gradient(130% 115% at 0% 100%, color-mix(in srgb, var(--tfbs-cat-accent, #06121e) 55%, #06121e) 0%, color-mix(in srgb, var(--tfbs-cat-accent, #06121e) 28%, #06121e) 38%, rgba(6, 18, 30, 0) 68%),
+    linear-gradient(180deg, rgba(6, 18, 30, 0) 30%, color-mix(in srgb, var(--tfbs-cat-accent, #06121e) 45%, #06121e) 100%);
 }
 .tfbs-shade::after {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(6, 18, 30, 0.34);
+  background: color-mix(in srgb, var(--tfbs-cat-accent, #06121e) 22%, #06121e 78%);
+  opacity: 0.34;
   transition: opacity 760ms var(--tfbs-ease);
 }
 .tfbs-panel.is-active .tfbs-shade::after { opacity: 0; }
@@ -249,13 +250,25 @@
 }
 
 .tfbs-cat {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
   font-size: 11px;
   font-weight: 600;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.9);
+  color: color-mix(in srgb, var(--tfbs-cat-accent, #ffffff) 55%, #ffffff);
   margin-bottom: 10px;
   text-shadow: 0 1px 10px rgba(0, 0, 0, 0.6);
+}
+.tfbs-cat::before {
+  content: "";
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--tfbs-cat-accent, var(--tfbs-aqua));
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--tfbs-cat-accent, var(--tfbs-aqua)) 35%, transparent);
+  flex-shrink: 0;
 }
 
 .tfbs .tfbs-title {
@@ -319,9 +332,9 @@
   transition: background 0.3s var(--tfbs-ease), color 0.3s var(--tfbs-ease);
 }
 .tfbs-cta svg { width: 16px; height: 16px; transition: transform 0.3s var(--tfbs-ease); }
-.tfbs .tfbs-cta:hover { background: var(--tfbs-aqua); color: #ffffff; }
+.tfbs .tfbs-cta:hover { background: var(--tfbs-cat-accent, var(--tfbs-aqua)); color: #ffffff; }
 .tfbs-cta:hover svg { transform: translateX(3px); }
-.tfbs-cta:focus-visible { outline: 3px solid var(--tfbs-aqua); outline-offset: 3px; }
+.tfbs-cta:focus-visible { outline: 3px solid var(--tfbs-cat-accent, var(--tfbs-aqua)); outline-offset: 3px; }
 
 /* circular next arrow */
 .tfbs-arrow {
@@ -364,12 +377,12 @@
 }
 .tfbs-panel.is-active .tfbs-arrow:hover {
   transform: translateX(3px) scale(1.035);
-  background: var(--tfbs-aqua);
-  border-color: var(--tfbs-aqua);
+  background: var(--tfbs-cat-accent, var(--tfbs-aqua));
+  border-color: var(--tfbs-cat-accent, var(--tfbs-aqua));
   transition: transform 300ms var(--tfbs-ease), background 300ms var(--tfbs-ease);
 }
 .tfbs-arrow:focus { outline: none; }
-.tfbs-arrow:focus-visible { box-shadow: 0 0 0 3px #ffffff, 0 0 0 6px var(--tfbs-aqua); }
+.tfbs-arrow:focus-visible { box-shadow: 0 0 0 3px #ffffff, 0 0 0 6px var(--tfbs-cat-accent, var(--tfbs-aqua)); }
 
 /* ---------- tablet ---------- */
 @media (max-width: 1023px) {
@@ -702,11 +715,12 @@
   box-shadow: 0 0 0 6px #ffffff, 0 32px 50px -22px rgba(7, 30, 55, 0.6);
 }
 
-.tfst-card--teal   { background: linear-gradient(160deg, #1cc1cd 0%, #097d8a 100%); --tone-soft: #c9f1f4; --tone-ink: #097d8a; }
-.tfst-card--navy   { background: linear-gradient(160deg, #1f5fa3 0%, #073766 100%); --tone-soft: #d6e4f5; --tone-ink: #073766; }
-.tfst-card--violet { background: linear-gradient(160deg, #8f7bff 0%, #5a3fd6 100%); --tone-soft: #e3ddff; --tone-ink: #5a3fd6; }
-.tfst-card--ocean  { background: linear-gradient(160deg, #2fa8ff 0%, #1565c0 100%); --tone-soft: #d4ebff; --tone-ink: #1565c0; }
-.tfst-card--gold   { background: linear-gradient(160deg, #f0a43a 0%, #c9620c 100%); --tone-soft: #ffeccb; --tone-ink: #b35a00; }
+/* Tone per state, chosen for what each place is known for. */
+.tfst-card--teal   { background: linear-gradient(160deg, #c35a4a 0%, #7a241c 100%); --tone-soft: #f7dcd6; --tone-ink: #8a2e22; } /* Tamil Nadu — temple red */
+.tfst-card--navy   { background: linear-gradient(160deg, #35b878 0%, #0e6b42 100%); --tone-soft: #d2f0e0; --tone-ink: #0f6b42; } /* Kerala — nature green */
+.tfst-card--violet { background: linear-gradient(160deg, #c165a4 0%, #7a2f66 100%); --tone-soft: #f3dcee; --tone-ink: #7a2f66; } /* Telangana — royal purple */
+.tfst-card--ocean  { background: linear-gradient(160deg, #ff8a5c 0%, #c0431f 100%); --tone-soft: #ffe3d2; --tone-ink: #b03d1a; } /* Andhra Pradesh — spice terracotta */
+.tfst-card--gold   { background: linear-gradient(160deg, #f6ad37 0%, #c97400 100%); --tone-soft: #ffecc9; --tone-ink: #a35c00; } /* Maharashtra — Bhagwa saffron */
 
 /* number badge overlapping the top-left corner */
 .tfst-badge {

@@ -15,11 +15,8 @@ const WelcomSection = () => {
       </Col>
       <Col lg={6}>
         <h5>No.1 MEDICAL CODING TRAINING</h5>
-        <h1>Welcome to ThoughtFlows <br />Academy</h1>
-        <p>At ThoughtFlows, we are dedicated to providing the highest quality medical coding <br />
-          training to our students. Our programs are designed to give students the skills and <br />
-          knowledge they need to succeed in the competitive world of healthcare. <br />
-          Our experienced instructors provide expert coaching to help students become proficient in medical coding.</p>
+        <h1>Welcome to ThoughtFlows Academy</h1>
+        <p>At ThoughtFlows, we are dedicated to providing the highest quality medical coding training to our students. Our programs are designed to give students the skills and knowledge they need to succeed in the competitive world of healthcare. Our experienced instructors provide expert coaching to help students become proficient in medical coding.</p>
 
         <Row className='content-bxs'>
           <Col md={6} className='individual-bxs d-flex align-items-center'>

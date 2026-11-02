@@ -1,8 +1,6 @@
 import React, { useState } from 'react';
-import footerbg from '../src/images/footerbg.png';
-import footerlogo from '../src/images/image7.png';
+import footerlogo from '../src/images/image2.png';
 import { Col, Container, Row } from 'react-bootstrap';
-import footerSmall from '../src/images/Bgsmallfooter.png';
 import { Link, useLocation } from 'react-router-dom';
 import ZoomSignupForm from './Zoom';
 import { getBranchInfoByPath, defaultBranchDetails, getRegionBranchesByPath } from './data/branchDetails';
@@ -39,10 +37,6 @@ const Footer = () => {
             <div
                 className="footer-section"
                 style={{
-                    backgroundImage: `url(${footerbg})`,
-                    backgroundSize: 'cover',
-                    backgroundPosition: 'center',
-                    color: '#fff',
                     zIndex: 1,
                     position: 'relative',
                 }}
@@ -51,14 +45,9 @@ const Footer = () => {
                     <Container
                         className="small-footer"
                         style={{
-                            backgroundImage: `url(${footerSmall})`,
-                            backgroundSize: 'cover',
-                            backgroundPosition: 'center',
                             marginTop: '-190px',
                             zIndex: 2,
                             position: 'relative',
-                            padding: '50px 20px',
-                            borderRadius: '10px'
                         }}
                     >
                         <Row className="d-flex align-items-center text-center">
@@ -81,7 +70,7 @@ const Footer = () => {
                     </Container>
                 )}
 
-                <Container className="justify-content-between mt-5 main-footer">
+                <Container className="justify-content-between mt-5 main-footer footer-card">
                     <Col lg={3} className="text-left mb-4 mb-lg-0">
                         <img src={footerlogo} alt="footer logo" className="footerlogo mb-3" />
                         <p className="fw-light text-start">
@@ -339,11 +328,14 @@ const Footer = () => {
                             </a>
                         </div>
                     </Col>
+                    <div className="footer-watermark" aria-hidden="true">
+                        <span>ThoughtFlows</span>
+                    </div>
                 </Container>
             </div>
 
-            <div className="bg-light text-center py-2">
-                <p className="mb-0" style={{ fontSize: '14px' }}>
+            <div className="footer-bottom-bar">
+                <p className="mb-0">
                     &copy; 2026 Thoughtflows. All rights reserved.
                 </p>
             </div>
