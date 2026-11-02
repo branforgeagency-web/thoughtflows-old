@@ -1,20 +1,13 @@
 import React, { useEffect, useState } from 'react'
 import { Row, Col } from 'react-bootstrap'
-import { Link } from 'react-router-dom'
 import { motion, AnimatePresence } from 'framer-motion'
 import homevideo from '../images/hero-video.mp4'
 import DiwaliCelebration from './DiwaliCelebration'
 
-// Set to false after the festival to remove the Diwali overlay
+// Set to false after the festival to remove the Diwali overlay (wishes, sparkles, fireworks) and offer banner
 const SHOW_Diwali = true
 
 const ROLES = ['CPC Coder', 'CIC Coder', 'CRC Coder', 'Medical Coder']
-
-const STATS = [
-    { value: '9+', label: 'Years of Training' },
-    { value: '14', label: 'Branches Across India' },
-    { value: 'AAPC', label: '& AHIMA Certifications' },
-]
 
 const fadeUp = {
     hidden: { opacity: 0, y: 30 },
@@ -45,12 +38,13 @@ const HomeBanner = () => {
                     {SHOW_Diwali && <DiwaliCelebration />}
 
                     <div className='tf-hero-content'>
-                        <motion.span className='tf-hero-badge' variants={fadeUp} initial='hidden' animate='show' custom={0}>
-                            <span className='tf-hero-dot' />
-                            {SHOW_Diwali ? 'Diwali Offer — 10% OFF at all our branches' : 'Admissions Open — New Batches Starting'}
-                        </motion.span>
-
-                        <motion.h1 className='tf-hero-title' variants={fadeUp} initial='hidden' animate='show' custom={1}>
+                        <motion.h1
+                            className='tf-hero-title'
+                            variants={fadeUp}
+                            initial='hidden'
+                            animate='show'
+                            custom={1}
+                        >
                             Launch your career as a certified
                             <span className='tf-hero-rotator'>
                                 <AnimatePresence mode='wait'>
@@ -68,45 +62,10 @@ const HomeBanner = () => {
                             </span>
                         </motion.h1>
 
-                        <motion.p className='tf-hero-sub' variants={fadeUp} initial='hidden' animate='show' custom={2}>
+                        {/* <motion.p className='tf-hero-sub' variants={fadeUp} initial='hidden' animate='show' custom={2}>
                             Industry-focused medical coding training with expert trainers,
                             hands-on chart practice and dedicated placement support.
-                        </motion.p>
-
-                        {SHOW_Diwali && (
-                            <motion.div className='tf-hero-offer' variants={fadeUp} initial='hidden' animate='show' custom={2.5} role='note' aria-label='Diwali offer: 10% off at all Thoughtflows branches'>
-                                <span className='tf-hero-offer-pct'>
-                                    <strong>10%</strong>
-                                    <span>OFF</span>
-                                </span>
-                                <span className='tf-hero-offer-text'>
-                                    <span className='tf-hero-offer-title'>Diwali Special Offer</span>
-                                    <span className='tf-hero-offer-sub'>Valid at all our branches across India</span>
-                                </span>
-                            </motion.div>
-                        )}
-
-                        <motion.div className='tf-hero-ctas' variants={fadeUp} initial='hidden' animate='show' custom={3}>
-                            <Link to='/contact' className='tf-hero-btn tf-hero-btn--primary'>{SHOW_Diwali ? 'Claim 10% Offer' : 'Enroll Now'}</Link>
-                            <Link to='/cpc' className='tf-hero-btn tf-hero-btn--ghost'>Explore CPC Course →</Link>
-                        </motion.div>
-
-                        <div className='tf-hero-stats'>
-                            {STATS.map((s, i) => (
-                                <motion.div
-                                    key={s.label}
-                                    className='tf-hero-stat'
-                                    variants={fadeUp}
-                                    initial='hidden'
-                                    animate='show'
-                                    custom={4 + i}
-                                    whileHover={{ y: -4 }}
-                                >
-                                    <strong>{s.value}</strong>
-                                    <span>{s.label}</span>
-                                </motion.div>
-                            ))}
-                        </div>
+                        </motion.p> */}
                     </div>
                 </div>
             </Col>

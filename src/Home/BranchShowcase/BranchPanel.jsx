@@ -30,6 +30,7 @@ const BranchPanel = forwardRef(function BranchPanel(
       className={`tfbs-panel${isActive ? " is-active" : ""}`}
       aria-roledescription="branch panel"
       aria-label={`${branch.title}, ${index + 1} of ${total}`}
+      style={branch.accent ? { "--tfbs-cat-accent": branch.accent } : undefined}
     >
       <img
         className="tfbs-img"

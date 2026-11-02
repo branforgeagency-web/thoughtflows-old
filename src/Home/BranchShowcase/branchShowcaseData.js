@@ -18,6 +18,7 @@ export const SHOWCASE_BRANCHES = [
   {
     id: "coimbatore",
     category: "Tamil Nadu",
+    accent: "#b23a2e", // temple red/terracotta — Tamil Nadu
     title: "Coimbatore Academy",
     location: "Coimbatore, Tamil Nadu",
     description:
@@ -32,6 +33,7 @@ export const SHOWCASE_BRANCHES = [
   {
     id: "hyderabad",
     category: "Telangana",
+    accent: "#7a3466", // royal purple (Nizam heritage, pearls) — Telangana
     title: "Hyderabad Academy",
     location: "Hyderabad, Telangana",
     description:
@@ -46,6 +48,7 @@ export const SHOWCASE_BRANCHES = [
   {
     id: "kochi",
     category: "Kerala",
+    accent: "#1f8a52", // lush green (nature, God's Own Country) — Kerala
     title: "Kochi Academy",
     location: "Kochi, Kerala",
     description:

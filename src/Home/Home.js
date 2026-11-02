@@ -1,5 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import HomeBanner from "./HomeBanner";
+import DiwaliPopup from "./DiwaliPopup";
 import GifSection from "./GifSection";
 import WelcomSection from "./WelcomSection";
 import PopularCourses from "./PopularCourses";
@@ -50,6 +51,7 @@ const Home = () => {
         description="ThoughtFlows Medical Coding Academy offers a medical coding course with CPC training, expert faculty, and placement support for a successful career."
         canonical="https://www.thoughtflows.in/"
       />
+      <DiwaliPopup />
       <div style={{ overflow: "hidden" }}>
         <motion.div
           initial={{ opacity: 0 }}
@@ -78,6 +80,7 @@ const Home = () => {
         </motion.div>
 
         <motion.div
+          id="popular-courses"
           initial={{ y: 50, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
           viewport={{ once: true }}

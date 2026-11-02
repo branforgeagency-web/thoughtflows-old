@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import gradientbg from '../images/yellow_and_purple_pastel_gradient.png';
 import cic from '../images/cic.png';
 import cpc from '../images/cpc.png';
 import surgery from '../images/surgery.png';
@@ -28,9 +27,7 @@ const PopularCourses = () => {
         <div
             className="popular-courses py-5"
             style={{
-                backgroundImage: `url(${gradientbg})`,
-                backgroundSize: 'cover',
-                backgroundPosition: 'center'
+                backgroundColor: '#F6FBFC'
             }}
         >
             <Container>

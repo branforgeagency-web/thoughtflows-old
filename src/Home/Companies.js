@@ -57,7 +57,7 @@ const row3 = images.slice(26, 38);
 const Companies = () => {
     return (
         <div className="space-y-6 py-20">
-            <h2 className="text-center font-bold text-5xl text-secondaryy pb-5">Medical Coding Companies</h2>
+            <h2 className="companies-heading text-center font-bold text-5xl text-secondaryy pb-5">Medical Coding Companies</h2>
             {/* First Row */}
             <Marquee gradient={true} speed={50} direction="left">
                 {row1.map((image, index) => (

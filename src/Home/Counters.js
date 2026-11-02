@@ -2,121 +2,48 @@ import React from 'react';
 import CountUp from 'react-countup';
 import { motion, useReducedMotion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import counter1img from '../images/Vector.png';
-import counter2img from '../images/counter2.png';
-import counter3img from '../images/counter3.png';
-import counter4img from '../images/counter4.png';
+import trainingPhoto from '../images/Branches/gallery/training.jpg';
+import placementPhoto from '../images/Hyderabad/placement_success.jpg';
+import branchPhoto from '../images/Branches/showcase/coimbatore.jpg';
+import startPhoto from '../images/Branches/showcase/kochi.jpg';
 import './Counters.css';
-
-const STATS = [
-    {
-        end: 35000,
-        label: 'Training',
-        icon: counter1img,
-        title: 'Students Trained',
-        text: 'Learners trained in medical coding across our academy branches and online batches.',
-    },
-    {
-        end: 30000,
-        label: 'Placement',
-        icon: counter2img,
-        title: 'Career Placements',
-        text: 'Learners supported into medical coding and healthcare roles through our placement assistance.',
-    },
-    {
-        end: 49,
-        label: 'Courses',
-        icon: counter3img,
-        title: 'Courses Offered',
-        text: 'AAPC, AHIMA and specialty coding programs covering CPC, CIC, CRC and more.',
-    },
-    {
-        end: 14,
-        label: 'Branches',
-        icon: counter4img,
-        title: 'Academy Branches',
-        text: 'Training centres across Tamil Nadu, Kerala, Telangana, Andhra Pradesh and Maharashtra.',
-    },
-];
-
-/* ---------- laurel wreath (pure SVG, generated) ---------- */
-const CX = 80;
-const CY = 74;
-const R = 58;
-
-const leafAt = (deg, side, flip) => {
-    const t = (deg * Math.PI) / 180;
-    const x = CX + R * Math.cos(t);
-    const y = CY + R * Math.sin(t);
-    // leaves point along the branch (upwards), splayed in/out
-    const rot = deg + 90 + (flip ? -38 : 38);
-    const lx = side === 'left' ? x : 2 * CX - x;
-    const lr = side === 'left' ? rot : 180 - rot;
-    return { x: lx, y, r: lr };
-};
-
-const LEAF_ANGLES = [112, 128, 144, 160, 176, 192, 208, 224, 238];
-
-const Wreath = ({ id }) => {
-    const leaves = [];
-    ['left', 'right'].forEach((side) => {
-        LEAF_ANGLES.forEach((a, i) => {
-            const size = 1 - i * 0.045;
-            [false, true].forEach((flip) => {
-                const l = leafAt(a, side, flip);
-                leaves.push(
-                    <ellipse
-                        key={`${side}-${a}-${flip}`}
-                        cx={l.x}
-                        cy={l.y}
-                        rx={10 * size}
-                        ry={4.2 * size}
-                        transform={`rotate(${l.r} ${l.x} ${l.y})`}
-                        fill={`url(#${id}-leaf)`}
-                    />
-                );
-            });
-        });
-    });
-    const arc = (side) => {
-        const p = (deg) => {
-            const t = (deg * Math.PI) / 180;
-            const x = CX + R * Math.cos(t);
-            return [side === 'left' ? x : 2 * CX - x, CY + R * Math.sin(t)];
-        };
-        const [x1, y1] = p(100);
-        const [x2, y2] = p(244);
-        return `M${x1.toFixed(1)} ${y1.toFixed(1)} A${R} ${R} 0 0 ${side === 'left' ? 1 : 0} ${x2.toFixed(1)} ${y2.toFixed(1)}`;
-    };
-    return (
-        <svg className="tfaw-wreath" viewBox="0 0 160 150" aria-hidden="true">
-            <defs>
-                <linearGradient id={`${id}-leaf`} x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stopColor="#f3d98b" />
-                    <stop offset="55%" stopColor="#c9a24a" />
-                    <stop offset="100%" stopColor="#9a7428" />
-                </linearGradient>
-                <linearGradient id={`${id}-rib`} x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%" stopColor="#0b4f8a" />
-                    <stop offset="100%" stopColor="#073766" />
-                </linearGradient>
-            </defs>
-            <path d={arc('left')} stroke="#b8913d" strokeWidth="1.6" fill="none" />
-            <path d={arc('right')} stroke="#b8913d" strokeWidth="1.6" fill="none" />
-            {leaves}
-            {/* ribbon tying the branches */}
-            <path d="M66 134 L58 148 L66 145 L70 151 L74 138 Z" fill={`url(#${id}-rib)`} />
-            <path d="M94 134 L102 148 L94 145 L90 151 L86 138 Z" fill={`url(#${id}-rib)`} />
-            <circle cx="80" cy="133" r="7" fill={`url(#${id}-rib)`} />
-        </svg>
-    );
-};
 
 const EASE = [0.22, 1, 0.36, 1];
 
+/* small decorative flourish for the branches card, echoing the brand aqua */
+const Swirl = () => (
+    <svg className="tfaw-swirl" viewBox="0 0 160 140" fill="none" aria-hidden="true">
+        <path
+            d="M6 18 C 70 2, 118 28, 100 62 C 86 88, 40 86, 44 58 C 47 36, 86 30, 104 52 C 126 80, 110 118, 72 128 C 44 136, 18 124, 16 104"
+            stroke="url(#tfaw-swirl-grad)"
+            strokeWidth="5"
+            strokeLinecap="round"
+        />
+        <defs>
+            <linearGradient id="tfaw-swirl-grad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="#5fe3ee" />
+                <stop offset="100%" stopColor="#40e6aa" />
+            </linearGradient>
+        </defs>
+    </svg>
+);
+
 const Counters = () => {
     const reduce = useReducedMotion();
-    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.25 });
+    const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
+
+    const fade = (delay) => ({
+        initial: reduce ? false : { opacity: 0, y: 26 },
+        animate: inView ? { opacity: 1, y: 0 } : undefined,
+        transition: { duration: 0.8, ease: EASE, delay },
+    });
+
+    const scrollToCourses = (e) => {
+        e.preventDefault();
+        const el = document.getElementById('popular-courses');
+        if (!el) return;
+        el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
+    };
 
     return (
         <section className="tfaw" aria-labelledby="tfaw-heading" ref={ref}>
@@ -128,40 +55,77 @@ const Counters = () => {
                     </h2>
                 </header>
 
-                <div className="tfaw-grid">
-                    {STATS.map((s, i) => (
-                        <motion.article
-                            key={s.label}
-                            className="tfaw-item"
-                            initial={reduce ? false : { opacity: 0, y: 26 }}
-                            animate={inView ? { opacity: 1, y: 0 } : undefined}
-                            transition={{ duration: 0.8, ease: EASE, delay: i * 0.12 }}
-                        >
-                            <div className="tfaw-badge">
-                                <Wreath id={`tfaw-w${i}`} />
-                                <div className="tfaw-badge-text">
-                                    <strong className="tfaw-num">
-                                        {inView && !reduce ? (
-                                            <CountUp start={0} end={s.end} separator="," duration={2.6} />
-                                        ) : (
-                                            s.end.toLocaleString('en-IN')
-                                        )}
-                                        +
-                                    </strong>
-                                    <span className="tfaw-badge-label">{s.label}</span>
-                                </div>
-                            </div>
+                <div className="tfaw-bento">
+                    {/* Column 1: training photo + students-trained stat */}
+                    <div className="tfaw-col">
+                        <motion.div className="tfaw-tile tfaw-tile--photo" {...fade(0)}>
+                            <img src={trainingPhoto} alt="Trainers guiding students through live medical coding practice" loading="lazy" decoding="async" />
+                            <span className="tfaw-tile-shade" aria-hidden="true" />
+                            <span className="tfaw-tile-caption">Hands-on practice,<br />real coding charts</span>
+                        </motion.div>
+                        <motion.div className="tfaw-tile tfaw-tile--stat tfaw-tile--teal" {...fade(0.08)}>
+                            <strong className="tfaw-stat-num">
+                                {inView && !reduce ? <CountUp start={0} end={35000} separator="," duration={2.4} /> : '35,000'}+
+                            </strong>
+                            <span className="tfaw-stat-label">Students Trained</span>
+                        </motion.div>
+                    </div>
 
-                            <div className="tfaw-body">
-                                <span className="tfaw-tag">
-                                    <img src={s.icon} alt="" aria-hidden="true" />
-                                    {s.label}
+                    {/* Column 2: career placements, photo with big overlay number */}
+                    <motion.div className="tfaw-col tfaw-col--push" {...fade(0.14)}>
+                        <div className="tfaw-tile tfaw-tile--photo tfaw-tile--tall">
+                            <img
+                                src={placementPhoto}
+                                alt="Thoughtflows graduates celebrating their medical coding placements"
+                                loading="lazy"
+                                decoding="async"
+                                style={{ objectPosition: '50% 35%' }}
+                            />
+                            <span className="tfaw-tile-shade tfaw-tile-shade--strong" aria-hidden="true" />
+                            <span className="tfaw-tile-info">
+                                <span className="tfaw-tile-num">
+                                    {inView && !reduce ? <CountUp start={0} end={30000} separator="," duration={2.4} /> : '30,000'}+
                                 </span>
-                                <h3 className="tfaw-title">{s.title}</h3>
-                                <p className="tfaw-text">{s.text}</p>
-                            </div>
-                        </motion.article>
-                    ))}
+                                <span className="tfaw-tile-caption">Career Placements</span>
+                            </span>
+                        </div>
+                    </motion.div>
+
+                    {/* Column 3: courses, CTA card */}
+                    <motion.div className="tfaw-col tfaw-col--center" {...fade(0.2)}>
+                        <div className="tfaw-tile tfaw-tile--cta">
+                            <span className="tfaw-cta-num">49+</span>
+                            <p className="tfaw-cta-text">Courses across AAPC, AHIMA and specialty programs &mdash; CPC, CIC, CRC and more.</p>
+                            <a href="#popular-courses" className="tfaw-cta-btn" onClick={scrollToCourses}>
+                                Explore Courses
+                            </a>
+                        </div>
+                    </motion.div>
+
+                    {/* Column 4: academy branches, campus photo */}
+                    <motion.div className="tfaw-col" {...fade(0.26)}>
+                        <div className="tfaw-tile tfaw-tile--photo tfaw-tile--tall">
+                            <img src={branchPhoto} alt="Students training inside a Thoughtflows Academy branch" loading="lazy" decoding="async" />
+                            <span className="tfaw-tile-shade" aria-hidden="true" />
+                            <span className="tfaw-tile-caption">Train close to home,<br />wherever you are</span>
+                        </div>
+                    </motion.div>
+
+                    {/* Column 5: branches stat + a second campus photo */}
+                    <div className="tfaw-col">
+                        <motion.div className="tfaw-tile tfaw-tile--stat tfaw-tile--navy" {...fade(0.32)}>
+                            <Swirl />
+                            <strong className="tfaw-stat-num tfaw-stat-num--light">
+                                {inView && !reduce ? <CountUp start={0} end={14} duration={1.8} /> : '14'}+
+                            </strong>
+                            <span className="tfaw-stat-label tfaw-stat-label--light">Academy Branches</span>
+                        </motion.div>
+                        <motion.div className="tfaw-tile tfaw-tile--photo" {...fade(0.38)}>
+                            <img src={startPhoto} alt="A Thoughtflows Academy training room in session" loading="lazy" decoding="async" />
+                            <span className="tfaw-tile-shade" aria-hidden="true" />
+                            <span className="tfaw-tile-caption">Start your journey<br />today</span>
+                        </motion.div>
+                    </div>
                 </div>
             </div>
         </section>
