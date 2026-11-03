@@ -61,20 +61,20 @@ function Contact() {
   };
 
   const MAP_COORDINATES = {
-    saravanampatti: { top: '64.0%', left: '35.0%' },
-    hopes: { top: '72.0%', left: '36.5%' },
-    gandhipuram: { top: '71.5%', left: '32.0%' },
-    tirupati: { top: '44.72%', left: '48.43%' },
-    ameerpet: { top: '16.63%', left: '45.18%' },
-    trivandrum: { top: '80.51%', left: '26.93%' },
-    kochi: { top: '70.14%', left: '22.70%' },
-    trichy: { top: '72.5%', left: '42.5%' },
-    salem: { top: '62.5%', left: '39.8%' },
-    dilsukhnagar: { top: '18.64%', left: '48.43%' },
-    vizag: { top: '15.29%', left: '80.36%' },
-    pune: { top: '12.0%', left: '26.0%' },
-    kolhapur: { top: '25.0%', left: '23.0%' },
-    theni: { top: '74.0%', left: '36.0%' }
+    saravanampatti: { top: '66.43%', left: '34.76%' },
+    hopes: { top: '70.77%', left: '36.71%' },
+    gandhipuram: { top: '70.77%', left: '32.15%' },
+    salem: { top: '64.08%', left: '40.62%' },
+    trichy: { top: '71.44%', left: '42.25%' },
+    theni: { top: '76.25%', left: '33.22%' },
+    tirupati: { top: '45.02%', left: '48.76%' },
+    ameerpet: { top: '16.93%', left: '45.51%' },
+    dilsukhnagar: { top: '18.93%', left: '48.76%' },
+    vizag: { top: '15.59%', left: '80.69%' },
+    kochi: { top: '70.44%', left: '23.03%' },
+    trivandrum: { top: '80.81%', left: '27.27%' },
+    pune: { top: '22.74%', left: '19.54%' },
+    kolhapur: { top: '37.46%', left: '16.29%' }
   };
 
   const allBranches = useMemo(() => {
