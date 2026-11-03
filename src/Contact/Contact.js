@@ -470,10 +470,10 @@ ${formData.message || 'N/A'}`;
                   <p className="contact-raiou-quote-text">
                     "Empowering aspiring healthcare professionals with industry-leading medical coding curriculum, AAPC-certified trainers, and 100% placement assurance."
                   </p>
-                  <div className="contact-raiou-quote-author">
+                  {/* <div className="contact-raiou-quote-author">
                     <strong className="author-name">Mrs. Malathi R.</strong>
                     <span className="author-role">HEAD OF STUDENT ADMISSIONS</span>
-                  </div>
+                  </div> */}
                 </div>
               </div>
             </div>
