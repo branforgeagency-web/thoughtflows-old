@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from 'react';
-import contact from "../images/contact/6.jpg";
+import React, { useState, useEffect, useMemo } from 'react';
+import { Link } from 'react-router-dom';
+import supportTeamImg from "../images/contact/support-team.jpg";
+import contactHeroBg from "../images/contact/contact-banner-balls.jpg";
 import map from "../images/svg/map.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -9,6 +11,8 @@ import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { logEnquiry } from '../utils/enquiryLog';
 import { coursesList } from '../coursesList';
+import { BRANCHES, STATES } from "../Home/BranchShowcase/branchDirectoryData";
+import { branchDetails } from "../data/branchDetails";
 function Contact() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
@@ -39,158 +43,93 @@ function Contact() {
   const [errors, setErrors] = useState({});
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState({ type: '', message: '' });
+  const [newsletterEmail, setNewsletterEmail] = useState('');
+  const [newsletterStatus, setNewsletterStatus] = useState('');
+
+  const handleNewsletterSubmit = (e) => {
+    e.preventDefault();
+    if (newsletterEmail && newsletterEmail.includes('@')) {
+      setNewsletterStatus('Thank you for subscribing to ThoughtFlows newsletter!');
+      setNewsletterEmail('');
+      setTimeout(() => setNewsletterStatus(''), 4500);
+    }
+  };
 
   const handleLocationClick = (location) => {
     setSelectedLocation(location);
     setShowZoomPopup(true);
   };
 
-
-  const locations = [
-    {
-      name: 'Saravanampatti',
-      top: '64.0%', left: '35.0%', // Adjusted for distance
-      email: 'thoughtflowsinfo@gmail.com',
-      phone: '+91 93845 76852',
-      address: 'No-171/2A, 1st, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu 641035',
-      instagram: 'https://www.instagram.com/thought_flows?stkn=a2xlYW43eG45dmt6',
-      facebook: 'https://www.facebook.com/Thoughtflowsacademy/',
-    },
-    {
-      name: 'Hopes',
-      top: '72.0%', left: '36.5%', // Adjusted for distance
-      email: 'thoughtflowsinfo@gmail.com',
-      phone: '+91 93845 76852',
-      address: 'Door No.62 E/F , 1st Floor South Wing, Lalitha Towers Gandhi Street, Avinashi Rd, Coimbatore, Tamil Nadu 641004',
-      instagram: 'https://www.instagram.com/thought_flows?stkn=a2xlYW43eG45dmt6',
-      facebook: 'https://www.facebook.com/thoughtflowscoimbatore/',
-    },
-    {
-      name: 'Gandhipuram',
-      top: '71.5%', left: '32.0%', // Adjusted for distance
-      email: 'thoughtflowsinfo@gmail.com',
-      phone: '+91 93845 76852',
-      address: 'Jay Enclave, 1084, 3rd St, Cross Cut Road, Gandhipuram, Coimbatore, Tamil Nadu 641012',
-      instagram: 'https://www.instagram.com/thought_flows?stkn=a2xlYW43eG45dmt6',
-      facebook: 'https://www.facebook.com/people/Thoughtflows-Medical-Coding-Academy-Gandhipuram-Coimbatore/61562789837696/',
-    },
-    {
-      name: 'Tirupati',
-      top: '44.72%', left: '48.43%',
-      email: 'thoughtflowsinfo@gmail.com',
-      phone: '+91 87904 24835',
-      address: '20-1-171/C1 ,1st floor Upstairs MIOT Diagnostic center oppo.Sai Baba temple, Tirumala Bypass Rd, Korlagunta, Tirupati, Andhra Pradesh 517501',
-      instagram: 'https://www.instagram.com/medicalcoding_thoughtflowstpt?stkn=MTZvZHkzNWhwN3B0dg%3D%3D',
-      facebook: 'https://www.facebook.com/Thoughtflowsmedicalcodingacademytirupati',
-    },
-    {
-      name: 'Ameerpet',
-      top: '16.63%', left: '45.18%',
-      email: 'thoughtflowsinfo@gmail.com',
-      phone: '+91 87907 51742',
-      address: 'Level 6(5th Floor, Vasavi Mpm Grand, No: 606/A, Ameerpet X Road, Yella Reddy Guda, Hyderabad, Telangana 500073',
-      instagram: 'https://www.instagram.com/thoughtflowshyderabad?stkn=MTRtY2Z2bnNxNzZ1cQ%3D%3D',
-      facebook: 'https://www.facebook.com/Thoughtflowshyderabad/',
-    },
-    {
-      name: 'Trivandrum',
-      top: '80.51%', left: '26.93%',
-      email: 'thoughtflowsinfo@gmail.com',
-      phone: '+91 90480 23242',
-      address: '167, 1st Floor, Karimpanal Arcade, opp. to Padmanabhaswamy Temple, Fort, East Fort, Pazhavangadi, Thiruvananthapuram, Keralam 695023',
-      instagram: 'https://www.instagram.com/thoughtflowskerala?stkn=ZG9ybTE2aGZ6cDVn',
-      facebook: 'https://www.facebook.com/Thoughtflowskerala/',
-    },
-    {
-      name: 'Kochi',
-      top: '70.14%', left: '22.70%',
-      email: 'thoughtflowsinfo@gmail.com',
-      phone: '+91 90480 23242',
-      address: '4 th floor, Vee Vee Tower, road, near Bhima Jewels, NH Bye Pass, Edappally, Kochi, Ernakulam, Keralam 682024',
-      instagram: 'https://www.instagram.com/thoughtflows_kochi?stkn=M2tndXF5ZHc0dWZi',
-      facebook: 'https://www.facebook.com/thoughtflowsacademykochi/',
-    },
-    {
-      name: 'Trichy',
-      top: '72.5%', left: '42.5%', // Adjusted for distance
-      email: 'thoughtflowsinfo@gmail.com',
-      phone: '+91 93845 76852',
-      address: 'first floor, AMIL towers, 25, C-40, 3rd Cross Rd, Thillai Nagar, Tiruchirappalli, Tamil Nadu 620018',
-      instagram: 'https://www.instagram.com/thoughtflows_trichy?stkn=MzJlemxjcjM1MWg4',
-      facebook: 'https://www.facebook.com/Thoughtflowstrichy/',
-    },
-    {
-      name: 'Salem',
-      top: '62.5%', left: '39.8%', // Adjusted for distance
-      email: 'thoughtflowsinfo@gmail.com',
-      phone: '+91 81487 32017',
-      address: '1st floor, S Square Towers, Omalur Main Rd, Arthanari Nagar, Mamangam, Salem, Tamil Nadu 636302',
-      instagram: 'https://www.instagram.com/thoughtflowssalem?stkn=amU3YnowZmowOThq',
-      facebook: 'https://www.facebook.com/profile.php?id=61557903507460',
-    },
-    {
-      name: 'Dilsukhnagar',
-      top: '18.64%', left: '48.43%',
-      email: 'thoughtflowsinfo@gmail.com',
-      phone: '+91 90305 08844',
-      address: 'H.No:-16, Sai Towers, 11-477-/6/1/A 2nd floor, opp. pillar No:-1519, Indira Nagar, Dilsukhnagar, Hyderabad, Telangana 500102',
-      instagram: 'https://www.instagram.com/thoughtflowsdilsukhnagar?stkn=MW10NTZqd3Z3NWhnZw==',
-      facebook: 'https://www.facebook.com/profile.php?id=61592324790661',
-    },
-    {
-      name: 'Vizag',
-      top: '15.29%', left: '80.36%',
-      email: 'thoughtflowsinfo@gmail.com',
-      phone: '+91 89775 07230',
-      address: '7th floor, IT Grand Palace, 701/A, 1st Ln, Dwaraka Nagar, Visakhapatnam, Andhra Pradesh 530016',
-      instagram: 'https://www.instagram.com/thoughtflows_vizag?stkn=cTRqZmV3cGcwcHBq',
-      facebook: 'https://www.facebook.com/profile.php?id=61577112877261',
-    },
-    {
-      name: 'Pune',
-      top: '12.0%', left: '26.0%',
-      email: '',
-      phone: '',
-      address: '',
-      instagram: '',
-      facebook: '',
-    },
-    {
-      name: 'Kolhapur',
-      top: '25.0%', left: '23.0%',
-      email: '',
-      phone: '',
-      address: '',
-      instagram: '',
-      facebook: '',
-    },
-    {
-      name: 'Theni',
-      top: '74.0%', left: '36.0%',
-      email: 'thoughtflowsinfo@gmail.com',
-      phone: '',
-      address: '5A/22, Forest Road, Shivaji Nagar, NRT Nagar, Theni, Tamil Nadu 625531',
-      instagram: '',
-      facebook: '',
-    },
-  ];
-
-
-  const sectionStyle = {
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    background: 'linear-gradient(345deg, #88d4d9, rgb(240, 240, 240))',
-    borderRadius: '8px',
-    padding: '20px',
-    margin: '10px',
-    transition: '0.3s',
-    cursor: 'pointer',
-    boxShadow: '0 2px 10px rgba(0, 0, 0, 0.1)',
-    minHeight: '200px',
-    flex: isMobile ? '1 1 100%' : '1 1 calc(50% - 20px)',
+  const MAP_COORDINATES = {
+    saravanampatti: { top: '64.0%', left: '35.0%' },
+    hopes: { top: '72.0%', left: '36.5%' },
+    gandhipuram: { top: '71.5%', left: '32.0%' },
+    tirupati: { top: '44.72%', left: '48.43%' },
+    ameerpet: { top: '16.63%', left: '45.18%' },
+    trivandrum: { top: '80.51%', left: '26.93%' },
+    kochi: { top: '70.14%', left: '22.70%' },
+    trichy: { top: '72.5%', left: '42.5%' },
+    salem: { top: '62.5%', left: '39.8%' },
+    dilsukhnagar: { top: '18.64%', left: '48.43%' },
+    vizag: { top: '15.29%', left: '80.36%' },
+    pune: { top: '12.0%', left: '26.0%' },
+    kolhapur: { top: '25.0%', left: '23.0%' },
+    theni: { top: '74.0%', left: '36.0%' }
   };
+
+  const allBranches = useMemo(() => {
+    return BRANCHES.map((b) => {
+      const d = branchDetails[b.id] || {};
+      const coords = MAP_COORDINATES[b.id] || { top: '50%', left: '50%' };
+      return {
+        ...b,
+        ...coords,
+        email: d.email || 'thoughtflowsinfo@gmail.com',
+        phone: b.phone || d.phone || '',
+        phoneHref: b.phoneHref || (d.phoneClean ? `tel:${d.phoneClean}` : ''),
+        address: b.address || d.address || '',
+        instagram: d.instagram || '',
+        facebook: d.facebook || '',
+      };
+    });
+  }, []);
+
+  const [selectedState, setSelectedState] = useState('All');
+  const [selectedBranchId, setSelectedBranchId] = useState('gandhipuram');
+  const [branchSearch, setBranchSearch] = useState('');
+
+  const stateCounts = useMemo(() => {
+    const counts = { All: allBranches.length };
+    allBranches.forEach((b) => {
+      counts[b.state] = (counts[b.state] || 0) + 1;
+    });
+    return counts;
+  }, [allBranches]);
+
+  const filteredBranches = useMemo(() => {
+    let list = selectedState === 'All'
+      ? allBranches
+      : allBranches.filter((b) => b.state === selectedState);
+    if (branchSearch.trim()) {
+      const q = branchSearch.toLowerCase();
+      list = list.filter((b) =>
+        b.name.toLowerCase().includes(q) ||
+        b.city.toLowerCase().includes(q) ||
+        b.state.toLowerCase().includes(q) ||
+        (b.address && b.address.toLowerCase().includes(q))
+      );
+    }
+    return list;
+  }, [allBranches, selectedState, branchSearch]);
+
+  const activeBranch = useMemo(() => {
+    if (!filteredBranches.length) return allBranches[0];
+    return (
+      filteredBranches.find((b) => b.id === selectedBranchId) ||
+      allBranches.find((b) => b.id === selectedBranchId) ||
+      filteredBranches[0]
+    );
+  }, [allBranches, selectedBranchId, filteredBranches]);
 
   const activeStyle = {
     boxShadow: '0 4px 20px rgba(0, 0, 0, 0.2)',
@@ -211,7 +150,7 @@ function Contact() {
     const newErrors = {};
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-    if (!formData.name) newErrors.name = 'Name is required';
+    if (!formData.name.trim()) newErrors.name = 'Name is required';
     if (!formData.email) {
       newErrors.email = 'Email is required';
     } else if (!emailPattern.test(formData.email)) {
@@ -221,8 +160,10 @@ function Contact() {
     else if (!isValidPhone(formData.ph)) newErrors.ph = 'Phone number is invalid';
     if (!formData.course) newErrors.course = 'Please select a course';
     if (!formData.location) newErrors.location = 'Location is required';
-    if (formData.message.length < 10) {
-      newErrors.message = 'Message must be at least 10 characters long';
+    if (!formData.message.trim()) {
+      newErrors.message = 'Message is required';
+    } else if (formData.message.trim().length < 3) {
+      newErrors.message = 'Message must be at least 3 characters long';
     }
 
     setErrors(newErrors);
@@ -364,7 +305,7 @@ ${formData.message || 'N/A'}`;
                   <div>
                     <h3 className="font-semibold text-lg text-gray-800">Phone</h3>
                     <a
-                      href={`tel:${selectedLocation.phone.replace(/[^0-9+]/g, '')}`}
+                      href={selectedLocation.phoneHref || `tel:${selectedLocation.phone.split(/[/,&]/)[0].replace(/[^0-9+]/g, '')}`}
                       className="text-gray-600 hover:text-[#0D8F9C] transition-colors"
                     >
                       {selectedLocation.phone}
@@ -435,350 +376,615 @@ ${formData.message || 'N/A'}`;
         </div>
       )}
       <motion.div
-        className="contact-page "
+        className="contact-page"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        <motion.div
-          className="contact-header "
-          style={{ textAlign: 'center' }}
-          initial={{ opacity: 1 }}
-          animate={{ opacity: 1 }}
-          transition={{ duration: 0.7, delay: 0.2 }}
+        {/* ================= Hero Banner (Matching Raiou Design with Desk Image) ================= */}
+        <div
+          className="contact-raiou-hero"
+          style={{ backgroundImage: `url(${contactHeroBg})` }}
         >
-          <h1 style={{ fontSize: '2.5em', paddingTop: isMobile ? '50px' : isTablet ? '50px' : '50px', paddingBottom: isMobile ? '0px' : '0px' }}>Get in touch</h1>
-          <p style={{ fontSize: '16px', maxWidth: '700px', margin: 'auto' }}>
-            Feel Free To Reach Out To Us Using The Options Below, And Our Dedicated Team Will Respond To Your Inquiries Promptly.
-          </p>
-        </motion.div>
-
-        <div className="contact-container" style={{ display: 'flex', flexDirection: isMobile ? 'column-reverse' : 'row', justifyContent: 'center', alignItems: 'center', gap: isMobile ? '20px' : '0', marginBottom: '20px', marginTop: '0px' }}>
-          <motion.div
-            className="contact-form"
-            style={{ flex: 1, marginLeft: isMobile ? '0px' : isTablet ? '40px' : '100px', width: isMobile ? '100%' : 'auto' }}
-            initial={{ x: -100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-          >
-            <h2>How can we help?</h2>
-            <p>Have a question or feedback? Fill out the form below, and we'll get back to you as soon as possible.</p>
-
-            {/* Status Messages */}
-            {submitStatus.message && (
-              <motion.div
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                style={{
-                  padding: "12px 16px",
-                  borderRadius: "8px",
-                  marginBottom: "20px",
-                  textAlign: "center",
-                  backgroundColor: submitStatus.type === 'success' ? '#10b981' : '#ef4444',
-                  color: 'white',
-                  fontSize: "15px",
-                  fontWeight: "500",
-                }}
-              >
-                {submitStatus.message}
-              </motion.div>
-            )}
-
-            <motion.form
-              onSubmit={handleSubmit}
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-            >
-              <div style={{ marginBottom: '10px' }}>
-                <input
-                  type="text"
-                  name="name"
-                  placeholder="Name"
-                  required
-                  style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }}
-                  value={formData.name}
-                  onChange={handleInputChange}
-                />
-                {errors.name && <span style={{ color: 'red', fontSize: '0.8em' }}>{errors.name}</span>}
-              </div>
-              <div style={{ marginBottom: '10px' }}>
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email address"
-                  required
-                  style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }}
-                  value={formData.email}
-                  onChange={handleInputChange}
-                />
-                {errors.email && <span style={{ color: 'red', fontSize: '0.8em' }}>{errors.email}</span>}
-              </div>
-              <div style={{ marginBottom: '10px' }}>
-                <input
-                  type="tel"
-                  name="ph"
-                  placeholder="Phone"
-                  required
-                  style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }}
-                  value={formData.ph}
-                  onChange={handleInputChange}
-                />
-                {errors.ph && <span style={{ color: 'red', fontSize: '0.8em' }}>{errors.ph}</span>}
-              </div>
-              <div style={{ marginBottom: '10px' }}>
-                <select
-                  name="course"
-                  required
-                  style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }}
-                  value={formData.course}
-                  onChange={handleInputChange}
-                >
-                  <option value="">Select Course</option>
-                  {coursesList.map((group) => (
-                    <optgroup key={group.category} label={group.category}>
-                      {group.courses.map(course => (
-                        <option key={course} value={course}>{course}</option>
-                      ))}
-                    </optgroup>
-                  ))}
-                  <option value="OTHER">Other</option>
-                </select>
-                {errors.course && <span style={{ color: 'red', fontSize: '0.8em' }}>{errors.course}</span>}
-              </div>
-              <div style={{ marginBottom: '10px' }}>
-                <select
-                  name="location"
-                  required
-                  style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ccc', backgroundColor: '#fff', color: formData.location ? '#000' : '#757575' }}
-                  value={formData.location}
-                  onChange={handleInputChange}
-                >
-                  <option value="" disabled>Select Location</option>
-                  <option value="Saravanampatti, Coimbatore">Saravanampatti, Coimbatore</option>
-                  <option value="Hopes, Coimbatore">Hopes, Coimbatore</option>
-                  <option value="Gandhipuram, Coimbatore">Gandhipuram, Coimbatore</option>
-                  <option value="Salem">Salem</option>
-                  <option value="Trichy">Trichy</option>
-                  <option value="Tirupati">Tirupati</option>
-                  <option value="Ameerpet, Hyderabad">Ameerpet, Hyderabad</option>
-                  <option value="Dilsukhnagar, Hyderabad">Dilsukhnagar, Hyderabad</option>
-                  <option value="Kochi">Kochi</option>
-                  <option value="Trivandrum">Trivandrum</option>
-                  <option value="Vizag">Vizag</option>
-                  <option value="Pune, Maharashtra">Pune, Maharashtra</option>
-                  <option value="Kolhapur, Maharashtra">Kolhapur, Maharashtra</option>
-                  <option value="Theni">Theni</option>
-                  <option value="Online">Online</option>
-                </select>
-                {errors.location && <span style={{ color: 'red', fontSize: '0.8em' }}>{errors.location}</span>}
-              </div>
-              <div style={{ marginBottom: '10px' }}>
-                <textarea
-                  name="message"
-                  placeholder="Message"
-                  rows="4"
-                  required
-                  style={{ width: '100%', padding: '10px', borderRadius: '4px', border: '1px solid #ccc' }}
-                  value={formData.message}
-                  onChange={handleInputChange}
-                ></textarea>
-                {errors.message && <span style={{ color: 'red', fontSize: '0.8em' }}>{errors.message}</span>}
-              </div>
-              <motion.button
-                type="submit"
-                className="submit-button"
-                disabled={isSubmitting}
-                style={{
-                  padding: '10px 20px',
-                  fontSize: '1em',
-                  borderRadius: '4px',
-                  backgroundColor: isSubmitting ? '#94a3b8' : '#0D8F9C',
-                  color: '#fff',
-                  border: 'none',
-                  cursor: isSubmitting ? 'not-allowed' : 'pointer',
-                  opacity: isSubmitting ? 0.7 : 1,
-                  transition: 'all 0.3s ease'
-                }}
-                whileHover={{ scale: isSubmitting ? 1 : 1.05 }}
-                whileTap={{ scale: isSubmitting ? 1 : 0.95 }}
-              >
-                {isSubmitting ? 'Sending...' : 'Submit'}
-              </motion.button>
-            </motion.form>
-          </motion.div>
-          <motion.div
-            className="contact-image"
-            style={{ flex: 1, marginRight: isMobile ? '0px' : isTablet ? '40px' : '100px', width: isMobile ? '100%' : 'auto' }}
-            initial={{ x: 100, opacity: 0 }}
-            animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.7, delay: 0.4 }}
-          >
-            <img src={contact} alt='contact' style={{ width: '100%', maxWidth: isMobile ? '480px' : '100%', height: 'auto', borderRadius: '0px' }} />
-          </motion.div>
-        </div>
-
-        <motion.div
-          style={{ display: 'flex', flexDirection: isMobile ? 'column' : 'row', justifyContent: 'space-around', marginTop: '40px', alignItems: 'center', gap: isMobile ? '10px' : '0' }}
-          initial={{ y: 50, opacity: 0 }}
-          whileInView={{ y: 0, opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
-          <div>
-            <h2 className='highligh' style={{ color: "#0a848f", paddingLeft: isMobile ? '0px' : '20px', fontSize: isMobile ? '32px' : '50px', marginTop: isMobile ? '10px' : '55px', textAlign: isMobile ? 'center' : 'left' }}>OUR BRANCHES</h2>
-            <h2 style={{ marginTop: "20px", paddingLeft: isMobile ? '0px' : '20px', textAlign: isMobile ? 'center' : 'left' }}>Across South India & Maharashtra</h2>
-          </div>
-          <div style={{
-            width: isMobile ? '100%' : '410px',
-            maxWidth: isMobile ? '360px' : '410px',
-            height: isMobile ? 'auto' : '400px',
-            perspective: '1000px',
-            padding: isMobile ? '10px' : '25px',
-            margin: isMobile ? '0 auto' : '0'
-          }}>
-            <div
-              style={{
-                position: 'relative',
-                width: '100%',
-                height: '100%',
-                transformStyle: isMobile || isTablet ? 'none' : 'preserve-3d',
-                transition: isMobile || isTablet ? 'none' : 'transform 0.3s ease-out'
-              }}
-              onMouseMove={isMobile || isTablet ? undefined : (e) => {
-                const rect = e.currentTarget.getBoundingClientRect();
-                const x = (e.clientX - rect.left) / rect.width;
-                const y = (e.clientY - rect.top) / rect.height;
-                const tiltX = (y - 0.5) * 30;
-                const tiltY = (x - 0.5) * -30;
-                e.currentTarget.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.1)`;
-              }}
-              onMouseLeave={isMobile || isTablet ? undefined : (e) => {
-                e.currentTarget.style.transform = 'none';
-              }}
-            >
-              <img
-                src={map}
-                className='Map-img'
-                alt="map"
-                style={{
-                  width: '100%',
-                  height: '100%',
-                  objectFit: 'contain',
-                  borderRadius: '0px',
-                  pointerEvents: 'none'
-                }}
-              />
-              
-              {/* Overlay hover pins */}
-              {locations.map((loc) => (
-                <div
-                  key={loc.name}
-                  style={{
-                    position: 'absolute',
-                    top: loc.top,
-                    left: loc.left,
-                    width: '30px',
-                    height: '30px',
-                    backgroundColor: 'transparent', // Removed visual red dot
-                    transform: 'translate(-50%, -50%)',
-                    cursor: 'pointer',
-                    zIndex: 10
-                  }}
-                  onMouseEnter={() => setHoveredPin(loc.name)}
-                  onMouseLeave={() => setHoveredPin(null)}
-                  onClick={() => handleLocationClick(loc)}
-                >
-                  {hoveredPin === loc.name && (
-                    <div style={{
-                      position: 'absolute',
-                      bottom: '100%',
-                      left: '50%',
-                      transform: 'translateX(-50%)',
-                      backgroundColor: 'rgba(13, 143, 156, 0.9)',
-                      color: 'white',
-                      padding: '6px 12px',
-                      borderRadius: '6px',
-                      fontSize: '14px',
-                      fontWeight: '600',
-                      whiteSpace: 'nowrap',
-                      pointerEvents: 'none',
-                      marginBottom: '2px',
-                      boxShadow: '0 4px 6px rgba(0,0,0,0.1)'
-                    }}>
-                      {loc.name}
-                    </div>
-                  )}
-                </div>
-              ))}
+          <div className="contact-raiou-hero-container">
+            <div className="contact-raiou-hero-left">
+              <h1 className="contact-raiou-hero-title">
+                <span className="contact-raiou-pill">Contact</span>
+                <span className="contact-raiou-word">Us</span>
+              </h1>
+              <p className="contact-raiou-hero-desc">
+                Have a question or looking to begin your medical coding career? Fill out the form below, reach our counselors directly, or visit any of our 14 campuses across South India and Maharashtra.
+              </p>
             </div>
           </div>
-        </motion.div>
+        </div>
 
-        <motion.div
-          className="flex flex-col flex-wrap md:flex-row"
-          style={{ paddingBottom: '45px', paddingRight: '20px', paddingLeft: '20px' }}
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.7 }}
-        >
-          {locations.map((location, index) => (
-            <motion.div
-              key={location.name}
-              initial={{ y: 50, opacity: 0 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: index * 0.1 }}
-              onClick={() => handleLocationClick(location)}
-              style={{
-                ...sectionStyle,
-                position: 'relative',
-                transition: 'all 0.4s ease',
-                cursor: 'pointer',
-                borderRadius: '15px',
-                border: '1px solid rgba(255,255,255,0.18)',
-                padding: '20px',
-                textAlign: 'center'
-              }}
-              whileHover={{
-                y: -10,
-                scale: 1.02,
-                boxShadow: '0 15px 30px rgba(13, 143, 156, 0.3)',
-                background: '#34aebb',
-                borderColor: '#0D8F9C'
-              }}
-            >
-              <h2 style={{ textAlign: 'center', marginBottom: '10px', color: 'white' }}>{location.name}</h2>
-              <p style={{ color: 'rgba(255,255,255,0.8)', fontSize: '14px', marginBottom: '15px' }}>
-                Click to view full details
+        {/* ================= Section 1: Stay In Touch With Us ================= */}
+        <section className="contact-raiou-touch-section">
+          <div className="contact-raiou-touch-container">
+            {/* Left Column */}
+            <div className="contact-raiou-touch-left">
+              <div className="contact-raiou-decor-dots" aria-hidden="true">
+                <span className="dot dot-navy"></span>
+                <span className="dot dot-coral"></span>
+              </div>
+              <span className="contact-raiou-eyebrow">LET'S CONNECT</span>
+              <h2 className="contact-raiou-touch-title">Stay In Touch With Us</h2>
+              <p className="contact-raiou-touch-desc">
+                Reach out to ThoughtFlows Medical Coding Academy. Whether you need syllabus details, certification counseling, or fee assistance, our expert team is ready to guide you.
               </p>
 
-              <motion.button
-                onClick={(e) => {
-                  e.stopPropagation();
-                  handleLocationClick(location);
-                }}
-                style={{
-                  width: '40px',
-                  height: '40px',
-                  borderRadius: '50%',
-                  backgroundColor: 'rgb(20, 174, 186)',
-                  border: 'none',
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                  cursor: 'pointer',
-                  margin: '0 auto'
-                }}
-                whileHover={{ scale: 1.1, backgroundColor: '#0D8F9C' }}
-                whileTap={{ scale: 0.95 }}
-              >
-                <FontAwesomeIcon icon={faArrowDown} style={{ fontSize: '15px', color: 'white' }} />
-              </motion.button>
-            </motion.div>
-          ))}
-        </motion.div>
+              <div className="contact-raiou-info-list">
+                <div className="contact-raiou-info-item">
+                  <div className="contact-raiou-icon-circle">
+                    <i className="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div className="contact-raiou-info-text">
+                    <h3 className="contact-raiou-info-label">Our Address (Main Branch)</h3>
+                    <p className="contact-raiou-info-val">
+                      Jay Enclave, 1084, 3rd St, Cross Cut Road, Gandhipuram, Coimbatore, Tamil Nadu – 641012
+                    </p>
+                  </div>
+                </div>
+
+                <div className="contact-raiou-info-item">
+                  <div className="contact-raiou-icon-circle">
+                    <i className="fas fa-envelope"></i>
+                  </div>
+                  <div className="contact-raiou-info-text">
+                    <h3 className="contact-raiou-info-label">Email Address</h3>
+                    <a href="mailto:thoughtflowsinfo@gmail.com" className="contact-raiou-info-link">
+                      thoughtflowsinfo@gmail.com
+                    </a>
+                  </div>
+                </div>
+
+                <div className="contact-raiou-info-item">
+                  <div className="contact-raiou-icon-circle">
+                    <i className="fas fa-phone-alt"></i>
+                  </div>
+                  <div className="contact-raiou-info-text">
+                    <h3 className="contact-raiou-info-label">Telephone</h3>
+                    <a href="tel:+919384576852" className="contact-raiou-info-link">
+                      +91 93845 76852 / +91 95004 88825
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right Photo with Floating Quote Card */}
+            <div className="contact-raiou-touch-right">
+              <div className="contact-raiou-photo-wrapper">
+                <img
+                  src={supportTeamImg}
+                  alt="ThoughtFlows Student Admissions Counselor"
+                  className="contact-raiou-counselor-photo"
+                />
+
+                {/* Floating Quote Card */}
+                <div className="contact-raiou-quote-card">
+                  <div className="contact-raiou-quote-icon">
+                    <i className="fas fa-quote-left"></i>
+                  </div>
+                  <p className="contact-raiou-quote-text">
+                    "Empowering aspiring healthcare professionals with industry-leading medical coding curriculum, AAPC-certified trainers, and 100% placement assurance."
+                  </p>
+                  <div className="contact-raiou-quote-author">
+                    <strong className="author-name">Mrs. Malathi R.</strong>
+                    <span className="author-role">HEAD OF STUDENT ADMISSIONS</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= Section 2: Map + Send Message ================= */}
+        <section className="contact-raiou-form-map-section">
+          <div className="contact-raiou-form-map-card">
+            {/* Left: Embedded Live Google Map for Gandhipuram Main Branch */}
+            <div className="contact-raiou-map-container">
+              <iframe
+                title="ThoughtFlows Medical Coding Academy Gandhipuram Main Branch Map"
+                src="https://maps.google.com/maps?q=Jay%20Enclave%2C%201084%2C%203rd%20St%2C%20Cross%20Cut%20Road%2C%20Gandhipuram%2C%20Coimbatore%2C%20Tamil%20Nadu%20641012&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                className="contact-raiou-map-iframe"
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
+            </div>
+
+            {/* Right: Modern Contact Form */}
+            <div className="contact-raiou-form-container">
+              <h2 className="contact-raiou-form-title">Send Us a Message</h2>
+
+              {submitStatus.message && (
+                <div
+                  className="contact-raiou-status-msg"
+                  style={{
+                    backgroundColor: submitStatus.type === 'success' ? '#10b981' : '#ef4444'
+                  }}
+                >
+                  {submitStatus.message}
+                </div>
+              )}
+
+              <form onSubmit={handleSubmit} className="contact-raiou-form">
+                <div className="contact-raiou-form-row">
+                  <div className="contact-raiou-field">
+                    <label htmlFor="rf-name">First Name</label>
+                    <input
+                      id="rf-name"
+                      type="text"
+                      name="name"
+                      placeholder="First Name"
+                      required
+                      value={formData.name}
+                      onChange={handleInputChange}
+                    />
+                    {errors.name && <span className="field-error">{errors.name}</span>}
+                  </div>
+
+                  <div className="contact-raiou-field">
+                    <label htmlFor="rf-phone">Phone</label>
+                    <input
+                      id="rf-phone"
+                      type="tel"
+                      name="ph"
+                      placeholder="Phone Number"
+                      required
+                      value={formData.ph}
+                      onChange={handleInputChange}
+                    />
+                    {errors.ph && <span className="field-error">{errors.ph}</span>}
+                  </div>
+                </div>
+
+                <div className="contact-raiou-form-row">
+                  <div className="contact-raiou-field">
+                    <label htmlFor="rf-email">Email</label>
+                    <input
+                      id="rf-email"
+                      type="email"
+                      name="email"
+                      placeholder="Email"
+                      required
+                      value={formData.email}
+                      onChange={handleInputChange}
+                    />
+                    {errors.email && <span className="field-error">{errors.email}</span>}
+                  </div>
+
+                  <div className="contact-raiou-field">
+                    <label htmlFor="rf-course">Subject</label>
+                    <select
+                      id="rf-course"
+                      name="course"
+                      required
+                      value={formData.course}
+                      onChange={handleInputChange}
+                    >
+                      <option value="">-- Choose Subject --</option>
+                      {coursesList.map((group) => (
+                        <optgroup key={group.category} label={group.category}>
+                          {group.courses.map((course) => (
+                            <option key={course} value={course}>{course}</option>
+                          ))}
+                        </optgroup>
+                      ))}
+                      <option value="OTHER">Other Query</option>
+                    </select>
+                    {errors.course && <span className="field-error">{errors.course}</span>}
+                  </div>
+                </div>
+
+                <div className="contact-raiou-field">
+                  <label htmlFor="rf-location">Location</label>
+                  <select
+                    id="rf-location"
+                    name="location"
+                    required
+                    value={formData.location}
+                    onChange={handleInputChange}
+                  >
+                    <option value="" disabled>-- Choose Location --</option>
+                    <option value="Saravanampatti, Coimbatore">Saravanampatti, Coimbatore</option>
+                    <option value="Hopes, Coimbatore">Hopes, Coimbatore</option>
+                    <option value="Gandhipuram, Coimbatore">Gandhipuram, Coimbatore</option>
+                    <option value="Salem">Salem</option>
+                    <option value="Trichy">Trichy</option>
+                    <option value="Tirupati">Tirupati</option>
+                    <option value="Ameerpet, Hyderabad">Ameerpet, Hyderabad</option>
+                    <option value="Dilsukhnagar, Hyderabad">Dilsukhnagar, Hyderabad</option>
+                    <option value="Kochi">Kochi</option>
+                    <option value="Trivandrum">Trivandrum</option>
+                    <option value="Vizag">Vizag</option>
+                    <option value="Pune, Maharashtra">Pune, Maharashtra</option>
+                    <option value="Kolhapur, Maharashtra">Kolhapur, Maharashtra</option>
+                    <option value="Theni">Theni</option>
+                    <option value="Online Training">Online Training</option>
+                  </select>
+                  {errors.location && <span className="field-error">{errors.location}</span>}
+                </div>
+
+                <div className="contact-raiou-field">
+                  <label htmlFor="rf-message">Message</label>
+                  <textarea
+                    id="rf-message"
+                    name="message"
+                    rows="3"
+                    placeholder="Your Message..."
+                    required
+                    value={formData.message}
+                    onChange={handleInputChange}
+                  ></textarea>
+                  {errors.message && <span className="field-error">{errors.message}</span>}
+                </div>
+
+                <button
+                  type="submit"
+                  className="contact-raiou-submit-btn"
+                  disabled={isSubmitting}
+                >
+                  {isSubmitting ? 'Sending...' : 'Send Message'}
+                </button>
+              </form>
+            </div>
+          </div>
+        </section>
+
+        {/* ================= Section 3: Subscribe Newsletter ================= */}
+        <section className="contact-raiou-newsletter-section">
+          <div className="contact-raiou-newsletter-card">
+            <h2 className="contact-raiou-newsletter-title">Subscribe Our Newsletter</h2>
+            <form onSubmit={handleNewsletterSubmit} className="contact-raiou-newsletter-form">
+              <input
+                type="email"
+                placeholder="Email Address"
+                value={newsletterEmail}
+                onChange={(e) => setNewsletterEmail(e.target.value)}
+                required
+                className="contact-raiou-newsletter-input"
+              />
+              <button type="submit" className="contact-raiou-newsletter-btn">
+                Subscribe
+              </button>
+            </form>
+          </div>
+          {newsletterStatus && (
+            <div className="contact-raiou-newsletter-feedback">{newsletterStatus}</div>
+          )}
+        </section>
+
+        {/* ================= Redesigned Non-Card Campus Directory Section ================= */}
+        <section className="contact-directory-section" aria-labelledby="contact-branches-title">
+          {/* Section Header */}
+          <div className="contact-dir-header">
+            <span className="contact-dir-eyebrow">
+              <i className="fas fa-location-dot"></i> 14 Academy Campuses
+            </span>
+            <h2 id="contact-branches-title" className="contact-dir-title">
+              Our Branches Across South India &amp; Maharashtra
+            </h2>
+            <p className="contact-dir-desc">
+              Visit any of our premier medical coding academies for hands-on classroom training, CPC/CIC certification guidance, and direct counselor support.
+            </p>
+
+            {/* Filter bar: State pills + search */}
+            <div className="contact-dir-controls">
+              <div className="contact-dir-state-pills" role="group" aria-label="Filter campuses by state">
+                {['All', ...STATES].map((state) => {
+                  const count = stateCounts[state] || 0;
+                  if (state !== 'All' && count === 0) return null;
+                  const isActive = selectedState === state;
+                  return (
+                    <button
+                      key={state}
+                      type="button"
+                      className={`contact-dir-state-btn ${isActive ? 'is-active' : ''}`}
+                      onClick={() => {
+                        setSelectedState(state);
+                        if (state !== 'All') {
+                          const firstInState = allBranches.find((b) => b.state === state);
+                          if (firstInState) setSelectedBranchId(firstInState.id);
+                        }
+                      }}
+                      aria-pressed={isActive}
+                    >
+                      <span>{state === 'All' ? 'All Campuses' : state}</span>
+                      <span className="contact-dir-pill-count">{count}</span>
+                    </button>
+                  );
+                })}
+              </div>
+
+              <div className="contact-dir-search-wrap">
+                <i className="fas fa-search contact-dir-search-icon" aria-hidden="true"></i>
+                <input
+                  type="text"
+                  className="contact-dir-search-input"
+                  placeholder="Search campus, city or state..."
+                  value={branchSearch}
+                  onChange={(e) => setBranchSearch(e.target.value)}
+                  aria-label="Search campuses"
+                />
+                {branchSearch && (
+                  <button
+                    type="button"
+                    className="contact-dir-search-clear"
+                    onClick={() => setBranchSearch('')}
+                    aria-label="Clear search"
+                  >
+                    <i className="fas fa-times"></i>
+                  </button>
+                )}
+              </div>
+            </div>
+          </div>
+
+          {/* Interactive Split-Screen Layout (NO CARDS) */}
+          <div className="contact-dir-layout">
+            {/* Left Pane: Campus Directory List */}
+            <div className="contact-dir-list-wrap">
+              <div className="contact-dir-list-header">
+                <span className="contact-dir-col-num">#</span>
+                <span className="contact-dir-col-name">Campus &amp; Location</span>
+                <span className="contact-dir-col-contact">Helpline</span>
+                <span className="contact-dir-col-action">Details</span>
+              </div>
+
+              {filteredBranches.length > 0 ? (
+                <div className="contact-dir-rows" role="list">
+                  {filteredBranches.map((branch, index) => {
+                    const isSelected = activeBranch && activeBranch.id === branch.id;
+                    return (
+                      <div
+                        key={branch.id}
+                        role="listitem"
+                        className={`contact-dir-row ${isSelected ? 'is-selected' : ''}`}
+                        onClick={() => setSelectedBranchId(branch.id)}
+                        onMouseEnter={() => setSelectedBranchId(branch.id)}
+                        tabIndex={0}
+                        onKeyDown={(e) => {
+                          if (e.key === 'Enter' || e.key === ' ') {
+                            e.preventDefault();
+                            setSelectedBranchId(branch.id);
+                          }
+                        }}
+                      >
+                        <div className="contact-dir-col-num">
+                          <span className="contact-dir-row-index">
+                            {String(index + 1).padStart(2, '0')}
+                          </span>
+                        </div>
+
+                        <div className="contact-dir-col-name">
+                          <div className="contact-dir-campus-cell">
+                            <img
+                              src={branch.img}
+                              alt=""
+                              className="contact-dir-row-thumb"
+                              loading="lazy"
+                            />
+                            <div className="contact-dir-row-info">
+                              <h3 className="contact-dir-row-title">{branch.name}</h3>
+                              <div className="contact-dir-row-tags">
+                                <span className="contact-dir-state-tag">{branch.state}</span>
+                                <span className="contact-dir-city-tag">• {branch.city}</span>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div className="contact-dir-col-contact">
+                          {branch.phone ? (
+                            <a
+                              href={branch.phoneHref || `tel:${branch.phone}`}
+                              className="contact-dir-phone-link"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              <i className="fas fa-phone-alt"></i>
+                              <span>{branch.phone}</span>
+                            </a>
+                          ) : (
+                            <span className="contact-dir-phone-muted">Available via counselor</span>
+                          )}
+                        </div>
+
+                        <div className="contact-dir-col-action">
+                          <button
+                            type="button"
+                            className="contact-dir-select-btn"
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              handleLocationClick(branch);
+                            }}
+                            title="View Full Details"
+                            aria-label={`View details for ${branch.name}`}
+                          >
+                            <i className="fas fa-arrow-right"></i>
+                          </button>
+                        </div>
+                      </div>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="contact-dir-empty">
+                  <i className="fas fa-search-location contact-dir-empty-icon"></i>
+                  <p>No branches found matching "{branchSearch}".</p>
+                  <button
+                    type="button"
+                    className="contact-dir-reset-btn"
+                    onClick={() => {
+                      setBranchSearch('');
+                      setSelectedState('All');
+                    }}
+                  >
+                    Reset Filters
+                  </button>
+                </div>
+              )}
+            </div>
+
+            {/* Right Pane: Sticky Geographic Locator & Campus Spotlight */}
+            <aside className="contact-dir-sidebar" aria-label="Branch spotlight and interactive map">
+              {/* Interactive South India & Maharashtra Map */}
+              <div className="contact-dir-map-box">
+                <div className="contact-dir-map-header">
+                  <span className="contact-dir-map-label">
+                    <i className="fas fa-compass"></i> Interactive Campus Map
+                  </span>
+                  <span className="contact-dir-map-hint">Click pin to explore</span>
+                </div>
+                <div
+                  className="contact-dir-map-stage"
+                  style={{
+                    transformStyle: isMobile || isTablet ? 'none' : 'preserve-3d',
+                    transition: isMobile || isTablet ? 'none' : 'transform 0.3s ease-out'
+                  }}
+                  onMouseMove={isMobile || isTablet ? undefined : (e) => {
+                    const rect = e.currentTarget.getBoundingClientRect();
+                    const x = (e.clientX - rect.left) / rect.width;
+                    const y = (e.clientY - rect.top) / rect.height;
+                    const tiltX = (y - 0.5) * 16;
+                    const tiltY = (x - 0.5) * -16;
+                    e.currentTarget.style.transform = `rotateX(${tiltX}deg) rotateY(${tiltY}deg) scale(1.02)`;
+                  }}
+                  onMouseLeave={isMobile || isTablet ? undefined : (e) => {
+                    e.currentTarget.style.transform = 'none';
+                  }}
+                >
+                  <img
+                    src={map}
+                    className="contact-dir-map-graphic"
+                    alt="Map of ThoughtFlows Academy branch network"
+                  />
+                  {allBranches.map((branch) => {
+                    const isActive = activeBranch && activeBranch.id === branch.id;
+                    return (
+                      <div
+                        key={branch.id}
+                        className={`contact-dir-pin ${isActive ? 'is-active' : ''}`}
+                        style={{
+                          top: branch.top,
+                          left: branch.left,
+                        }}
+                        onMouseEnter={() => setHoveredPin(branch.name)}
+                        onMouseLeave={() => setHoveredPin(null)}
+                        onClick={() => setSelectedBranchId(branch.id)}
+                        aria-label={`Select ${branch.name} branch`}
+                        role="button"
+                        tabIndex={0}
+                      >
+                        <span className="contact-dir-pin-pulse" aria-hidden="true" />
+                        <span className="contact-dir-pin-dot" />
+                        {(hoveredPin === branch.name || isActive) && (
+                          <div className="contact-dir-pin-tooltip">
+                            <strong>{branch.name}</strong> • {branch.city}
+                          </div>
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+
+              {/* Active Campus Spotlight Feature Box */}
+              {activeBranch && (
+                <div className="contact-spotlight-dossier">
+                  <div className="contact-spotlight-photo-frame">
+                    <img
+                      src={activeBranch.img}
+                      alt={activeBranch.name}
+                      className="contact-spotlight-photo"
+                    />
+                    <div className="contact-spotlight-photo-overlay">
+                      <span className="contact-spotlight-badge">
+                        {activeBranch.state}
+                      </span>
+                      <span className="contact-spotlight-city">
+                        {activeBranch.city}
+                      </span>
+                    </div>
+                  </div>
+
+                  <div className="contact-spotlight-body">
+                    <div className="contact-spotlight-title-row">
+                      <h3 className="contact-spotlight-name">{activeBranch.name} Campus</h3>
+                      <span className="contact-spotlight-hours-tag">
+                        <i className="far fa-clock"></i> Mon–Sat 9AM–6:30PM
+                      </span>
+                    </div>
+
+                    {activeBranch.address ? (
+                      <p className="contact-spotlight-address">
+                        <i className="fas fa-location-dot"></i>
+                        <span>{activeBranch.address}</span>
+                      </p>
+                    ) : (
+                      <p className="contact-spotlight-address muted">
+                        <i className="fas fa-location-dot"></i>
+                        <span>Branch address details available via counseling support.</span>
+                      </p>
+                    )}
+
+                    <div className="contact-spotlight-contact-grid">
+                      {activeBranch.phone && (
+                        <a
+                          href={activeBranch.phoneHref || `tel:${activeBranch.phone.split(/[/,&]/)[0].replace(/[^0-9+]/g, '')}`}
+                          className="contact-spotlight-contact-item"
+                        >
+                          <div className="contact-spotlight-icon-circle">
+                            <i className="fas fa-phone-alt"></i>
+                          </div>
+                          <div>
+                            <span className="contact-spotlight-meta-label">Helpline</span>
+                            <span className="contact-spotlight-meta-val">{activeBranch.phone}</span>
+                          </div>
+                        </a>
+                      )}
+
+                      <a
+                        href={`mailto:${activeBranch.email || 'thoughtflowsinfo@gmail.com'}`}
+                        className="contact-spotlight-contact-item"
+                      >
+                        <div className="contact-spotlight-icon-circle">
+                          <i className="fas fa-envelope"></i>
+                        </div>
+                        <div>
+                          <span className="contact-spotlight-meta-label">Email Support</span>
+                          <span className="contact-spotlight-meta-val">{activeBranch.email || 'thoughtflowsinfo@gmail.com'}</span>
+                        </div>
+                      </a>
+                    </div>
+
+                    <div className="contact-spotlight-actions">
+                      <button
+                        type="button"
+                        className="contact-spotlight-btn-primary"
+                        onClick={() => handleLocationClick(activeBranch)}
+                      >
+                        <i className="fas fa-info-circle"></i>
+                        <span>View Campus Details</span>
+                      </button>
+
+                      {activeBranch.path && (
+                        <Link
+                          to={activeBranch.path}
+                          className="contact-spotlight-btn-secondary"
+                        >
+                          <span>Explore Campus</span>
+                          <i className="fas fa-arrow-right"></i>
+                        </Link>
+                      )}
+                    </div>
+                  </div>
+                </div>
+              )}
+            </aside>
+          </div>
+        </section>
 
       </motion.div>
     </>

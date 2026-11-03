@@ -21,12 +21,12 @@ const MaharashtraLanding = () => {
       name: "Pune Campus",
       tagline: "Medical Coding Course in Pune",
       badge: "IT & Healthcare Hub",
-      address: "Near IT Corridor, Kharadi & Shivajinagar Connectivity, Pune, Maharashtra - 411014",
-      phone: "+91 93845 76852",
+      address: "First Floor, India Land Building, Behind Grand High Street Mall Hinjewadi Phase 1, Hinjewadi, Pune 411057. Landmark - Opposite to Chroma Store Padmbhushan chowk Metro station",
+      phone: "+91 81213 45955 / +91 72195 57734",
       path: "/medical-coding-course-pune/",
       img: puneImg,
       features: [
-        "Proximity to Hinjawadi & Kharadi IT Parks",
+        "Proximity to Hinjawadi IT Park Phase 1",
         "Modern Multimedia Coding Systems",
         "Expert AAPC Certified Trainers",
         "Regular & Fast-Track Batches"
@@ -36,8 +36,8 @@ const MaharashtraLanding = () => {
       name: "Kolhapur Campus",
       tagline: "Medical Coding Training in Kolhapur",
       badge: "Western Maharashtra Hub",
-      address: "Central Location, Shahupuri & Railway Station Connectivity, Kolhapur, Maharashtra - 416001",
-      phone: "+91 93845 76852",
+      address: "Genesis group of institutions - Near Gaibi Titta, Radhanagari Road, opposite to Mahadik Petrol Pump, Tal - Radhanagari, Dist - Kolhapur, PIN-416212",
+      phone: "+91 83904 52121 / +91 72195 57734",
       path: "/Medical-Coding-Training-Kolhapur",
       img: kolhapurImg,
       features: [
@@ -130,7 +130,7 @@ const MaharashtraLanding = () => {
   const faqs = [
     {
       q: "Where are ThoughtFlows campuses in Maharashtra?",
-      a: "ThoughtFlows operates two prime centers in Maharashtra: Pune (near the IT corridor with smooth connectivity) and Kolhapur (Shahupuri / Station Road area). We also offer live interactive online classes for students across Mumbai, Nashik, Nagpur, Aurangabad, and other cities."
+      a: "ThoughtFlows operates two prime centers in Maharashtra: Pune (Hinjewadi Phase 1) and Kolhapur (Genesis Group of Institutions, Radhanagari Road). We also offer live interactive online classes for students across Mumbai, Nashik, Nagpur, Aurangabad, and other cities."
     },
     {
       q: "What career opportunities exist for medical coders in Maharashtra?",
