@@ -305,7 +305,7 @@ ${formData.message || 'N/A'}`;
                   <div>
                     <h3 className="font-semibold text-lg text-gray-800">Phone</h3>
                     <a
-                      href={`tel:${selectedLocation.phone.replace(/[^0-9+]/g, '')}`}
+                      href={selectedLocation.phoneHref || `tel:${selectedLocation.phone.split(/[/,&]/)[0].replace(/[^0-9+]/g, '')}`}
                       className="text-gray-600 hover:text-[#0D8F9C] transition-colors"
                     >
                       {selectedLocation.phone}
@@ -932,7 +932,7 @@ ${formData.message || 'N/A'}`;
                     <div className="contact-spotlight-contact-grid">
                       {activeBranch.phone && (
                         <a
-                          href={activeBranch.phoneHref || `tel:${activeBranch.phone}`}
+                          href={activeBranch.phoneHref || `tel:${activeBranch.phone.split(/[/,&]/)[0].replace(/[^0-9+]/g, '')}`}
                           className="contact-spotlight-contact-item"
                         >
                           <div className="contact-spotlight-icon-circle">

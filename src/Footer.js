@@ -236,7 +236,7 @@ const Footer = () => {
                                                 <div className="d-flex align-items-center">
                                                     <i className="fas fa-phone text-white me-1.5 flex-shrink-0" style={{ fontSize: '11px' }}></i>
                                                     <a
-                                                        href={`tel:${b.phoneClean || b.phone}`}
+                                                        href={`tel:${b.phoneClean || (b.phone ? b.phone.split(/[/,&]/)[0].replace(/[^0-9+]/g, '') : '')}`}
                                                         style={{ textDecoration: 'none', color: 'white', fontSize: '13px' }}
                                                     >
                                                         {b.phone}
@@ -272,7 +272,7 @@ const Footer = () => {
                                     <div className="d-flex align-items-center mb-2">
                                         <i className="fas fa-phone text-white me-2 flex-shrink-0"></i>
                                         <a
-                                            href={`tel:${currentBranch.phoneClean || currentBranch.phone}`}
+                                            href={`tel:${currentBranch.phoneClean || (currentBranch.phone ? currentBranch.phone.split(/[/,&]/)[0].replace(/[^0-9+]/g, '') : '')}`}
                                             style={{ textDecoration: 'none', color: 'white', fontSize: '14px' }}
                                         >
                                             {currentBranch.phone}
