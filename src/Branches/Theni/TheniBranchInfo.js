@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { BookOpen, ClipboardCheck, FileText, Award, UserCheck, Briefcase, MapPin, Laptop, Clock } from "lucide-react";
+import { BookOpen, ClipboardCheck, FileText, Award, UserCheck, Briefcase, MapPin, Laptop, Clock, Phone } from "lucide-react";
 import Reveal from "./Reveal";
 
 const steps = [
@@ -14,7 +14,7 @@ const steps = [
 
 const MAP_SRC =
   "https://maps.google.com/maps?q=" +
-  encodeURIComponent("5A/22, Forest Road, Shivaji Nagar, NRT Nagar, Theni, Tamil Nadu 625531") +
+  encodeURIComponent("Nattathi Nadar Educational Institutions, 15A/22, Forest Road, Shivaji Nagar, NRT Nagar, Theni, Tamil Nadu 625531") +
   "&z=15&output=embed";
 
 const TheniBranchInfo = () => {
@@ -61,14 +61,31 @@ const TheniBranchInfo = () => {
                   <div className="theni-icon"><MapPin size={24} /></div>
                   <div>
                     <h3>Address</h3>
-                    <address style={{ margin: 0, color: "#334155", lineHeight: 1.7 }}>
-                      5A/22, Forest Road, Shivaji Nagar,<br />
+                    <address style={{ margin: 0, color: "#334155", lineHeight: 1.7, fontStyle: "normal" }}>
+                      Nattathi Nadar Educational Institutions,<br />
+                      15A/22, Forest Road, Shivaji Nagar,<br />
                       NRT Nagar, Theni, Tamil Nadu – 625531
                     </address>
                   </div>
                 </div>
               </Reveal>
-              <Reveal x={-30} y={0} delay={0.1}>
+              <Reveal x={-30} y={0} delay={0.08}>
+                <div className="theni-card">
+                  <div className="theni-icon"><Phone size={24} /></div>
+                  <div>
+                    <h3>Contact &amp; Admissions</h3>
+                    <p style={{ margin: 0, color: "#334155", lineHeight: 1.7 }}>
+                      <a href="tel:+917538843236" style={{ color: "inherit", textDecoration: "none" }}>+91 75388 43236</a>
+                      {" & "}
+                      <a href="tel:+919384576852" style={{ color: "inherit", textDecoration: "none" }}>+91 93845 76852</a>
+                    </p>
+                    <p style={{ margin: 0, color: "#334155" }}>
+                      <a href="mailto:thoughtflowsinfo@gmail.com" style={{ color: "inherit", textDecoration: "none" }}>thoughtflowsinfo@gmail.com</a>
+                    </p>
+                  </div>
+                </div>
+              </Reveal>
+              <Reveal x={-30} y={0} delay={0.16}>
                 <div className="theni-card">
                   <div className="theni-icon"><Laptop size={24} /></div>
                   <div>
@@ -77,7 +94,7 @@ const TheniBranchInfo = () => {
                   </div>
                 </div>
               </Reveal>
-              <Reveal x={-30} y={0} delay={0.2}>
+              <Reveal x={-30} y={0} delay={0.24}>
                 <div className="theni-card">
                   <div className="theni-icon"><Clock size={24} /></div>
                   <div>

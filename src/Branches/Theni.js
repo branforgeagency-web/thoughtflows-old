@@ -26,12 +26,13 @@ const schema = {
       parentOrganization: { '@type': 'Organization', name: 'ThoughtFlows Medical Coding Academy', url: 'https://www.thoughtflows.in/' },
       address: {
         '@type': 'PostalAddress',
-        streetAddress: '5A/22, Forest Road, Shivaji Nagar, NRT Nagar',
+        streetAddress: 'Nattathi Nadar Educational Institutions, 15A/22, Forest Road, Shivaji Nagar, NRT Nagar',
         addressLocality: 'Theni',
         addressRegion: 'Tamil Nadu',
         postalCode: '625531',
         addressCountry: 'IN',
       },
+      telephone: '+91 75388 43236',
     },
     {
       '@type': 'FAQPage',

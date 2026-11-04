@@ -94,21 +94,24 @@ test('getBranchInfoByPath resolves correct branch data for each branch route', (
   expect(tirupati.phone).toContain('87904 24835');
   expect(tirupati.address).toContain('MIOT Diagnostic center');
 
-  // Pune and Kolhapur (left empty for future update)
+  // Pune and Kolhapur
   const pune = getBranchInfoByPath('/medical-coding-course-pune/');
   expect(pune).not.toBeNull();
-  expect(pune.phone).toBe('');
-  expect(pune.address).toBe('');
+  expect(pune.phone).toContain('81213 45955');
+  expect(pune.address).toContain('India Land Building');
 
   const kolhapur = getBranchInfoByPath('/Medical-Coding-Training-Kolhapur');
   expect(kolhapur).not.toBeNull();
-  expect(kolhapur.phone).toBe('');
-  expect(kolhapur.address).toBe('');
+  expect(kolhapur.phone).toContain('83904 52121');
+  expect(kolhapur.address).toContain('Genesis group of institutions');
 
   // Theni
   const theni = getBranchInfoByPath('/medical-coding-course-theni');
   expect(theni).not.toBeNull();
-  expect(theni.address).toContain('Forest Road');
+  expect(theni.phone).toContain('75388 43236');
+  expect(theni.phone).toContain('93845 76852');
+  expect(theni.address).toContain('Nattathi Nadar Educational Institutions');
+  expect(theni.address).toContain('15A/22, Forest Road');
 
   // Non-branch page returns null
   expect(getBranchInfoByPath('/about')).toBeNull();
