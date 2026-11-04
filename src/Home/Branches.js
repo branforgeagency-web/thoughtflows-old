@@ -32,9 +32,9 @@ import theniPhoto from "../images/Branches/cards/theni.jpg";
 const branchList = [
   { name: "Ameerpet", photo: ameerpetPhoto, region: "Telangana", img: ameerpetImg, path: "/Trusted-Medical-Coding-Ameerpet" },
   { name: "Dilsukhnagar", photo: dilsukhnagarPhoto, region: "Telangana", img: dilsukhnagarImg, path: "/Professional-Medical-Coding-Dilsukhnagar" },
+  { name: "Saravanampatti", photo: saravanampattiPhoto, region: "Tamil Nadu", img: saravanampattiImg, path: "/Top-Medical-Coding-Training-Saravanampatti" },
   { name: "Gandhipuram", photo: gandhipuramPhoto, region: "Tamil Nadu", img: gandhipuramImg, path: "/Premier-Medical-Coding-Institute-Gandhipuram" },
   { name: "Hopes", photo: hopesPhoto, region: "Tamil Nadu", img: hopesImg, path: "/Medical-Coding-Excellence-at-Hopes" },
-  { name: "Saravanampatti", photo: saravanampattiPhoto, region: "Tamil Nadu", img: saravanampattiImg, path: "/Top-Medical-Coding-Training-Saravanampatti" },
   { name: "Kochi", photo: kochiPhoto, region: "Kerala", img: kochiImg, path: "/Medical-Coding-Academy-Kochi" },
   { name: "Trivandrum", photo: trivandrumPhoto, region: "Kerala", img: trivandrumImg, path: "/Advanced-Medical-Coding-Tiruvandrum" },
   { name: "Salem", region: "Tamil Nadu", img: salemImg, path: "/Future-Ready-Medical-Coding-Salem" },

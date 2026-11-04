@@ -95,7 +95,7 @@ function Contact() {
   }, []);
 
   const [selectedState, setSelectedState] = useState('All');
-  const [selectedBranchId, setSelectedBranchId] = useState('gandhipuram');
+  const [selectedBranchId, setSelectedBranchId] = useState('saravanampatti');
   const [branchSearch, setBranchSearch] = useState('');
 
   const stateCounts = useMemo(() => {
@@ -422,7 +422,7 @@ ${formData.message || 'N/A'}`;
                   <div className="contact-raiou-info-text">
                     <h3 className="contact-raiou-info-label">Our Address (Main Branch)</h3>
                     <p className="contact-raiou-info-val">
-                      Jay Enclave, 1084, 3rd St, Cross Cut Road, Gandhipuram, Coimbatore, Tamil Nadu – 641012
+                      No-171/2A, 1st, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu – 641035
                     </p>
                   </div>
                 </div>
@@ -483,11 +483,11 @@ ${formData.message || 'N/A'}`;
         {/* ================= Section 2: Map + Send Message ================= */}
         <section className="contact-raiou-form-map-section">
           <div className="contact-raiou-form-map-card">
-            {/* Left: Embedded Live Google Map for Gandhipuram Main Branch */}
+            {/* Left: Embedded Live Google Map for Saravanampatti Main Branch */}
             <div className="contact-raiou-map-container">
               <iframe
-                title="ThoughtFlows Medical Coding Academy Gandhipuram Main Branch Map"
-                src="https://maps.google.com/maps?q=Jay%20Enclave%2C%201084%2C%203rd%20St%2C%20Cross%20Cut%20Road%2C%20Gandhipuram%2C%20Coimbatore%2C%20Tamil%20Nadu%20641012&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                title="ThoughtFlows Medical Coding Academy Saravanampatti Main Branch Map"
+                src="https://maps.google.com/maps?q=ThoughtFlows%20Medical%20Coding%20Academy%20Saravanampatti%20Coimbatore&t=&z=16&ie=UTF8&iwloc=&output=embed"
                 className="contact-raiou-map-iframe"
                 loading="lazy"
                 referrerPolicy="no-referrer-when-downgrade"
@@ -767,7 +767,14 @@ ${formData.message || 'N/A'}`;
                               loading="lazy"
                             />
                             <div className="contact-dir-row-info">
-                              <h3 className="contact-dir-row-title">{branch.name}</h3>
+                              <div className="flex items-center gap-2">
+                                <h3 className="contact-dir-row-title">{branch.name}</h3>
+                                {branch.id === 'saravanampatti' && (
+                                  <span className="text-[10px] font-bold uppercase tracking-wider px-2 py-0.5 rounded bg-[#15AEBB]/15 text-[#097D8A] border border-[#15AEBB]/30">
+                                    Main Branch
+                                  </span>
+                                )}
+                              </div>
                               <div className="contact-dir-row-tags">
                                 <span className="contact-dir-state-tag">{branch.state}</span>
                                 <span className="contact-dir-city-tag">• {branch.city}</span>
@@ -881,7 +888,7 @@ ${formData.message || 'N/A'}`;
                         <span className="contact-dir-pin-dot" />
                         {(hoveredPin === branch.name || isActive) && (
                           <div className="contact-dir-pin-tooltip">
-                            <strong>{branch.name}</strong> • {branch.city}
+                            <strong>{branch.name}</strong>{branch.id === 'saravanampatti' ? ' (Main Branch)' : ''} • {branch.city}
                           </div>
                         )}
                       </div>
@@ -911,7 +918,14 @@ ${formData.message || 'N/A'}`;
 
                   <div className="contact-spotlight-body">
                     <div className="contact-spotlight-title-row">
-                      <h3 className="contact-spotlight-name">{activeBranch.name} Campus</h3>
+                      <div className="flex items-center gap-2 flex-wrap">
+                        <h3 className="contact-spotlight-name">{activeBranch.name} Campus</h3>
+                        {activeBranch.id === 'saravanampatti' && (
+                          <span className="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full text-[10px] font-bold bg-[#15AEBB] text-white uppercase tracking-wider shadow-xs">
+                            ★ Main Branch
+                          </span>
+                        )}
+                      </div>
                       <span className="contact-spotlight-hours-tag">
                         <i className="far fa-clock"></i> Mon–Sat 9AM–6:30PM
                       </span>

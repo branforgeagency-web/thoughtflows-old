@@ -954,6 +954,7 @@ lj9n m .small-column {
 
 .footer-card {
   position: relative;
+  z-index: 0;
   overflow: hidden;
   background: #fff;
   border-radius: 28px;
@@ -981,8 +982,9 @@ lj9n m .small-column {
 
 .footer-watermark {
   position: absolute;
-  left: 0;
-  bottom: -18px;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-50%);
   width: 100%;
   text-align: center;
   z-index: -1;
@@ -991,12 +993,17 @@ lj9n m .small-column {
 }
 
 .footer-card .footer-watermark span {
-  font-size: 11vw;
+  display: inline-block;
+  font-size: clamp(60px, 7vw, 110px);
   font-weight: 800;
-  letter-spacing: 6px;
-  color: #eef1f2 !important;
+  letter-spacing: -0.03em;
   white-space: nowrap;
   line-height: 1;
+  background: linear-gradient(180deg, rgba(7, 55, 102, 0.75) 0%, rgba(9, 125, 138, 0.42) 45%, rgba(255, 255, 255, 0) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent !important;
+  -webkit-text-fill-color: transparent;
 }
 
 .footer-bottom-bar {
@@ -5971,7 +5978,8 @@ ul.menu.open {
   }
 
   .footer-card .footer-watermark span {
-    font-size: 18vw;
+    font-size: clamp(42px, 13vw, 80px);
+    letter-spacing: -0.02em;
   }
 
   .review-bubble-card {
@@ -7487,5 +7495,157 @@ html, body {
   }
   .submit-button-pill {
     width: 100%;
+  }
+}
+
+/* ===== Redesigned home CTA banner (Free Trial Lesson by Zoom) ===== */
+.tfb-wrap {
+  margin-top: -190px;
+  z-index: 2;
+  position: relative;
+}
+
+.tfb-cta {
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 28px;
+  background: linear-gradient(135deg, var(--darkblue) 0%, #0b4f6c 55%, var(--primary-blue) 100%);
+  border-radius: 28px;
+  padding: 42px 50px;
+  box-shadow: 0 25px 60px rgba(7, 55, 102, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.tfb-glow {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(50px);
+  pointer-events: none;
+}
+
+.tfb-glow-1 { width: 260px; height: 260px; left: -60px; top: -90px; background: rgba(21, 174, 187, 0.35); }
+.tfb-glow-2 { width: 220px; height: 220px; right: 8%; bottom: -120px; background: rgba(255, 255, 255, 0.12); }
+
+.tfb-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(rgba(255, 255, 255, 0.14) 1.4px, transparent 1.4px);
+  background-size: 18px 18px;
+  -webkit-mask-image: linear-gradient(115deg, rgba(0, 0, 0, 0.5) 0%, transparent 40%);
+  mask-image: linear-gradient(115deg, rgba(0, 0, 0, 0.5) 0%, transparent 40%);
+  pointer-events: none;
+}
+
+.tfb-left {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+}
+
+.tfb-icon {
+  flex-shrink: 0;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  color: #fff;
+}
+
+.tfb-eyebrow {
+  display: inline-block;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8fe6ee;
+  margin-bottom: 6px;
+}
+
+.tfb-heading {
+  margin: 0;
+  color: #fff !important;
+  font-size: 30px;
+  font-weight: 300;
+  line-height: 1.25;
+}
+
+.tfb-heading-bold {
+  display: block;
+  font-weight: 700;
+}
+
+.tfb-sub {
+  margin: 8px 0 0;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 14px;
+}
+
+.footer-section a.tfb-btn {
+  position: relative;
+  z-index: 1;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 16px 30px;
+  border-radius: 50px;
+  background: #ffffff;
+  color: var(--darkblue) !important;
+  font-family: var(--para-font);
+  font-size: 16px;
+  font-weight: 600;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  transition: box-shadow 0.25s ease, color 0.25s ease, background 0.25s ease;
+}
+
+.footer-section a.tfb-btn:hover {
+  color: #ffffff !important;
+  background: var(--accent-color);
+  box-shadow: 0 14px 32px rgba(21, 174, 187, 0.45);
+}
+
+.tfb-btn-arrow { transition: transform 0.25s ease; color: inherit; }
+.footer-section a.tfb-btn:hover .tfb-btn-arrow { transform: translateX(4px); }
+
+@media (max-width: 1023px) {
+  .tfb-cta { padding: 36px 40px; }
+  .tfb-heading { font-size: 26px; }
+}
+
+@media (max-width: 767px) {
+  .tfb-wrap { margin-top: -90px; }
+
+  .tfb-cta {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 22px;
+    padding: 28px 22px;
+    text-align: center;
+    border-radius: 22px;
+  }
+
+  .tfb-left {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .tfb-heading { font-size: 21px; }
+  .tfb-sub { font-size: 12px; }
+
+  .tfb-btn {
+    width: 100%;
+    justify-content: center;
   }
 }

@@ -8,7 +8,7 @@ import BranchShowcase from "./BranchShowcase/BranchShowcase";
 // Earlier branch sections kept for reference: ./BranchGallery, ./Branches.js
 import Counters from "./Counters";
 import Coaching from "./Coaching";
-import GoogleRev from "./GoogleRev";
+import StudentReviews from "./StudentReviews";
 import Meta from "../Meta";
 import Companies from "./Companies";
 import { PopupContext } from "../context/PopupContext";
@@ -125,7 +125,7 @@ const Home = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <GoogleRev />
+          <StudentReviews />
         </motion.div>
       </div>
       <RegisterPopupForm />
