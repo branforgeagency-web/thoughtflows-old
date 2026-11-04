@@ -23,7 +23,7 @@ export const SHOWCASE_BRANCHES = [
     location: "Coimbatore, Tamil Nadu",
     description:
       "Build your medical coding career with professional training, expert guidance and practical learning opportunities.",
-    campuses: ["Hopes", "Gandhipuram", "Saravanampatti"],
+    campuses: ["Saravanampatti", "Gandhipuram", "Hopes"],
     href: "/coimbatore",
     image: coimbatore,
     imageSm: coimbatoreSm,

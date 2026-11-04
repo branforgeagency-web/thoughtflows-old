@@ -117,4 +117,5 @@ test('getBranchInfoByPath resolves correct branch data for each branch route', (
   expect(getBranchInfoByPath('/about')).toBeNull();
   expect(getBranchInfoByPath('/')).toBeNull();
   expect(defaultBranchDetails.phone).toBeDefined();
+  expect(defaultBranchDetails.address).toContain('Saravanampatti');
 });

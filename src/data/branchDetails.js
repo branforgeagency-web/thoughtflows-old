@@ -190,7 +190,7 @@ export const defaultBranchDetails = {
   phone: '+91 93845 76852',
   phoneRaw: '9384576852',
   phoneClean: '+919384576852',
-  address: 'Jay Enclave, 1084, 3rd St, Cross Cut Road, Gandhipuram, Coimbatore, Tamil Nadu 641012',
+  address: 'No-171/2A, 1st, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu 641035',
   email: 'thoughtflowsinfo@gmail.com',
   instagram: 'https://www.instagram.com/thought_flows/',
   facebook: 'https://www.facebook.com/Thoughtflowsacademy/',
@@ -234,22 +234,13 @@ export const regionBranches = {
     displayName: 'Coimbatore Campuses',
     routes: [
       '/coimbatore', '/medical-coding-course-coimbatore',
-      '/medical-coding-excellence-at-hopes', '/hopes',
       '/top-medical-coding-training-saravanampatti', '/saravanampatti',
-      '/premier-medical-coding-institute-gandhipuram', '/gandhipuram'
+      '/premier-medical-coding-institute-gandhipuram', '/gandhipuram',
+      '/medical-coding-excellence-at-hopes', '/hopes'
     ],
     branches: [
       {
-        name: 'Hopes Branch',
-        locality: 'Avinashi Road',
-        address: 'Door No.62 E/F, 1st Floor South Wing, Lalitha Towers, Gandhi Street, Avinashi Rd, Coimbatore, Tamil Nadu - 641004',
-        phone: '+91 93845 76852',
-        phoneClean: '+919384576852',
-        email: 'thoughtflowsinfo@gmail.com',
-        path: '/Medical-Coding-Excellence-at-Hopes'
-      },
-      {
-        name: 'Saravanampatti Branch',
+        name: 'Saravanampatti Branch (Main Branch)',
         locality: 'IT Corridor, Sathy Road',
         address: 'No-171/2A, 1st Floor, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu - 641035',
         phone: '+91 93845 76852',
@@ -265,6 +256,15 @@ export const regionBranches = {
         phoneClean: '+919384576852',
         email: 'thoughtflowsinfo@gmail.com',
         path: '/Premier-Medical-Coding-Institute-Gandhipuram'
+      },
+      {
+        name: 'Hopes Branch',
+        locality: 'Avinashi Road',
+        address: 'Door No.62 E/F, 1st Floor South Wing, Lalitha Towers, Gandhi Street, Avinashi Rd, Coimbatore, Tamil Nadu - 641004',
+        phone: '+91 93845 76852',
+        phoneClean: '+919384576852',
+        email: 'thoughtflowsinfo@gmail.com',
+        path: '/Medical-Coding-Excellence-at-Hopes'
       }
     ]
   },

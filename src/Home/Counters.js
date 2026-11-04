@@ -2,10 +2,10 @@ import React from 'react';
 import CountUp from 'react-countup';
 import { motion, useReducedMotion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import trainingPhoto from '../images/Branches/gallery/training.jpg';
-import placementPhoto from '../images/Hyderabad/placement_success.jpg';
-import branchPhoto from '../images/Branches/showcase/coimbatore.jpg';
-import startPhoto from '../images/Branches/showcase/kochi.jpg';
+import trainingPhoto from '../images/Home/counters-training.jpg';
+import placementPhoto from '../images/Home/counters-placements.jpg';
+import branchPhoto from '../images/Home/counters-branch.jpg';
+import startPhoto from '../images/Home/counters-start.jpg';
 import './Counters.css';
 
 const EASE = [0.22, 1, 0.36, 1];

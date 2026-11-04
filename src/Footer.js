@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import footerlogo from '../src/images/image2.png';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Col, Container } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Video, ArrowRight } from 'lucide-react';
 import ZoomSignupForm from './Zoom';
 import { getBranchInfoByPath, defaultBranchDetails, getRegionBranchesByPath } from './data/branchDetails';
 
@@ -42,31 +44,50 @@ const Footer = () => {
                 }}
             >
                 {showSmallFooter && (
-                    <Container
-                        className="small-footer"
-                        style={{
-                            marginTop: '-190px',
-                            zIndex: 2,
-                            position: 'relative',
-                        }}
-                    >
-                        <Row className="d-flex align-items-center text-center">
-                            <Col lg={8}>
-                                <h2 className="fw-light text-center">Sign Up For a</h2>
-                                <h2 className="fw-bold">Free Trial Lesson by Zoom</h2>
-                            </Col>
-                            <Col className="home-btn p-1" lg={2}>
-                                <a
-                                    href="/#register"
-                                    role="button"
-                                    className=" button-animation"
-                                    onClick={handleRegisterClick}
-                                    style={{ cursor: 'pointer' }}
-                                >
-                                    Register Now
-                                </a>
-                            </Col>
-                        </Row>
+                    <Container className="tfb-wrap">
+                        <motion.div
+                            className="tfb-cta"
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.4 }}
+                            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                        >
+                            <span className="tfb-glow tfb-glow-1" aria-hidden="true" />
+                            <span className="tfb-glow tfb-glow-2" aria-hidden="true" />
+                            <div className="tfb-dots" aria-hidden="true" />
+
+                            <div className="tfb-left">
+                                <span className="tfb-icon">
+                                    <Video size={22} strokeWidth={2} />
+                                </span>
+                                <div>
+                                    <span className="tfb-eyebrow">Live &middot; 100% Free</span>
+                                    <h2 className="tfb-heading">
+                                        Sign Up For a{' '}
+                                        <span className="tfb-heading-bold">
+                                            Free Trial Lesson by Zoom
+                                        </span>
+                                    </h2>
+                                    <p className="tfb-sub">
+                                        30 minutes, one-on-one with a trainer &mdash; no cost, no obligation.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <motion.a
+                                href="/#register"
+                                role="button"
+                                className="tfb-btn"
+                                onClick={handleRegisterClick}
+                                style={{ cursor: 'pointer' }}
+                                whileHover={{ scale: 1.035 }}
+                                whileTap={{ scale: 0.97 }}
+                                transition={{ duration: 0.2 }}
+                            >
+                                Register Now
+                                <ArrowRight size={18} className="tfb-btn-arrow" />
+                            </motion.a>
+                        </motion.div>
                     </Container>
                 )}
 
