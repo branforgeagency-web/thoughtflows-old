@@ -4,6 +4,7 @@ import './Placements.css';
 import { placementData } from './placementData';
 import PlacementsCompanies from './PlacementsCompanies';
 import DiscountBanner from './DiscountBanner';
+import HandDrawnTitleReveal from './HandDrawnTitleReveal';
 import Marquee from 'react-fast-marquee';
 import { Link } from 'react-router-dom';
 import Meta from '../Meta';
@@ -33,18 +34,14 @@ const Placements = () => {
                 canonical="https://www.thoughtflows.in/placements"
             />
             {/* Banner Section */}
-            <section className="placements-banner">
-                <div className="placements-banner-content">
-                    <h1 className="placements-banner-title">{placementData.banner.title}</h1>
-                    <p className="placements-banner-subtitle">{placementData.banner.subtitle}</p>
-                    
-
-                </div>
-                
-                {/* Decorative floating students icons could go here */}
-                <div className="banner-decor-blob blob-1"></div>
-                <div className="banner-decor-blob blob-2"></div>
-                <div className="placements-banner-overlay"></div>
+            <section className="placements-hero">
+                <HandDrawnTitleReveal
+                    category="Placement Success"
+                    title={placementData.banner.title}
+                    subtitle={placementData.banner.subtitle}
+                    strokeColor="#0b3a66"
+                    headingLevel="h1"
+                />
             </section>
 
             {/* Introduction Section */}
