@@ -81,7 +81,7 @@ function Motto() {
 }
 
 const CSS = `
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap');
 
 .tf-motto-section, .tf-motto-section * {
   box-sizing: border-box;
@@ -110,11 +110,11 @@ const CSS = `
 
 .tf-motto-title {
   display: block;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-size: clamp(32px, 3.8vw, 54px);
   font-weight: 700;
   line-height: 1.05;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
   color: #102A43;
   background: linear-gradient(132deg, #0B3A66 0%, #15AEBB 100%);
   -webkit-background-clip: text;
@@ -194,10 +194,10 @@ const CSS = `
 }
 
 .tf-motto-subtitle {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-size: clamp(21px, 2vw, 28px);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   color: #102A43;
   margin: 0 0 16px;
 }

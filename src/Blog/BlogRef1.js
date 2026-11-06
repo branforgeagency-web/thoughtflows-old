@@ -149,12 +149,12 @@ const PostCard = ({ post }) => {
       <img src={post.image} alt={post.title} className="w-full aspect-video object-cover object-top bg-gray-100" />
       <div className="p-4">
         {/* <p className="text-gray-500 text-sm">{post.date}</p> */}
-        <h2 className="text-lg font-semibold mt-1">{post.title}</h2>
+        <h2 className="text-lg font-semibold mt-1 blog-card-title" style={{ fontFamily: "'Playfair Display', Georgia, 'Times New Roman', serif" }}>{post.title}</h2>
         <p className="text-gray-600 text-sm mt-2">{post.info}</p>
         <div className="mt-4 flex justify-between items-center">
           {/* <span className="text-gray-500 text-xs">Comments: {post.Comments}</span> */}
           <Link to={`/blog/${post.id}`}>
-                <button style={{ fontFamily: 'Poppins, sans-serif',borderRadius:"4px" }}>Continue Reading</button>
+                <button style={{ fontFamily: "'DM Sans', Arial, Helvetica, sans-serif",borderRadius:"4px" }}>Continue Reading</button>
               </Link>
         </div>
       </div>
@@ -164,7 +164,7 @@ const PostCard = ({ post }) => {
 
 
 return (
-  <div className="p-10 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+  <div className="p-10 grid gap-6 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3" style={{ fontFamily: "'DM Sans', Arial, Helvetica, sans-serif" }}>
     {postData.slice().reverse().map((post) => (
       <PostCard key={post.id} post={post} />
     ))}
@@ -183,7 +183,7 @@ return (
   //             {/* <p className='text-gray-600'><strong>Comments:</strong> {post.Comments}</p> */}
   //             <p className='mt-2' style={{width:"300px"}} >{post.info}</p>
   //             <Link to={`/blog${post.id}`}>
-  //               <button style={{ fontFamily: 'Poppins, sans-serif' }}>Continue Reading</button>
+  //               <button style={{ fontFamily: "'DM Sans', Arial, Helvetica, sans-serif" }}>Continue Reading</button>
   //             </Link>
   //           </div>
   //         ))}

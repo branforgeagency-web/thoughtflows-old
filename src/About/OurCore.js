@@ -161,7 +161,7 @@ function OurCore() {
 }
 
 const CSS = `
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap');
 
 .tf-coreacc-section, .tf-coreacc-section * {
   box-sizing: border-box;
@@ -198,11 +198,11 @@ const CSS = `
   display: block;
   max-width: 1360px;
   margin: 0 auto clamp(32px, 4.6vw, 52px);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-size: clamp(30px, 3.6vw, 50px);
   font-weight: 700;
   line-height: 1.05;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
   color: #102A43;
   background: linear-gradient(132deg, #0B3A66 0%, #15AEBB 100%);
   -webkit-background-clip: text;
@@ -325,10 +325,10 @@ const CSS = `
 }
 
 .tf-coreacc-content-title {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-size: clamp(22px, 2.3vw, 32px);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   color: #ffffff;
   text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 2px 16px rgba(0, 0, 0, 0.45);
   margin: 0 0 10px;

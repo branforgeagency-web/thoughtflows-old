@@ -3,7 +3,7 @@ import React from 'react';
 import './Placements.css';
 import { placementData } from './placementData';
 import PlacementsCompanies from './PlacementsCompanies';
-import DiscountBanner from './DiscountBanner';
+import PlacementSupportForm from './PlacementSupportForm';
 import HandDrawnTitleReveal from './HandDrawnTitleReveal';
 import Marquee from 'react-fast-marquee';
 import { Link } from 'react-router-dom';
@@ -157,7 +157,7 @@ const Placements = () => {
             </section>
 
             {/* CTA Section - Discount Banner */}
-            <DiscountBanner />
+            <PlacementSupportForm />
         </div>
     );
 };

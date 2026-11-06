@@ -1,3 +1,4 @@
+import './Blog/Blog.css';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'slick-carousel/slick/slick.css';
@@ -81,6 +82,10 @@ import AIMedicalCoding from './AIMedicalCoding/AIMedicalCoding';
 
 function AppContent() {
   const location = useLocation();
+  const isBlogRoute = location.pathname.startsWith('/blog') ||
+    location.pathname.startsWith('/fy-2027') ||
+    location.pathname.startsWith('/best-medical-coding-course-in-india') ||
+    location.pathname.startsWith('/medical-coding-course-in-tamilnadu');
   const hideHeaderFooter = location.pathname === '/vetri-108' ||
     location.pathname === '/ai-medical-coding' ||
     location.pathname === '/ai-powered-medical-coding';
@@ -94,7 +99,8 @@ function AppContent() {
     <>
       {!hideHeaderFooter && <Header />}
       {!hideHeaderFooter && <FloatingIcons />}
-      <Routes>
+      <div className={isBlogRoute ? "blog-theme-scope" : ""}>
+        <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path='/career' element={<Career />} />
@@ -191,6 +197,7 @@ function AppContent() {
         <Route path="/ai-powered-medical-coding" element={<AIMedicalCoding />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
+      </div>
       {!hideHeaderFooter && <Footer />}
     </>
   );

@@ -31,7 +31,7 @@ const ITEMS = REAL_STUDENTS.length >= 6 ? REAL_STUDENTS : FALLBACK_IMAGES;
    riding over the words.
    ------------------------------------------------------------------------ */
 const SPOTLIGHT_STYLE = `
-@import url('https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Instrument+Sans:wght@400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
 
 .tf-spotlight {
   position: relative;
@@ -97,7 +97,7 @@ const SPOTLIGHT_STYLE = `
   display: flex;
   align-items: center;
   gap: 14px;
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
   font-size: 11px;
   font-weight: 500;
   letter-spacing: 0.18em;
@@ -122,7 +122,7 @@ const SPOTLIGHT_STYLE = `
 }
 
 .tf-spotlight-headline {
-  font-family: 'Instrument Serif', serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-style: italic;
   font-weight: 400;
   font-size: clamp(42px, 8vw, 84px);
@@ -132,7 +132,7 @@ const SPOTLIGHT_STYLE = `
 }
 
 .tf-spotlight-note {
-  font-family: 'Instrument Sans', sans-serif;
+  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
   font-size: 13px;
   font-weight: 500;
   letter-spacing: 0.04em;

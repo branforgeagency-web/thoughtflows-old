@@ -1,0 +1,62 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
+/* ==========================================================================
+   Blog Typography Theme
+   Matching About Us and Placements:
+   - Headings/Titles: 'Playfair Display', Georgia, 'Times New Roman', serif
+   - Body/Accents:    'DM Sans', Arial, Helvetica, sans-serif
+   ========================================================================== */
+
+.blog-theme-scope {
+  font-family: 'DM Sans', Arial, Helvetica, sans-serif !important;
+  color: #1a202c;
+  line-height: 1.6;
+}
+
+/* All headings inside blog listing and individual blog posts */
+.blog-theme-scope h1,
+.blog-theme-scope h2,
+.blog-theme-scope h3,
+.blog-theme-scope h4,
+.blog-theme-scope h5,
+.blog-theme-scope h6,
+.blog-banner-title,
+.blog-card-title,
+.blog-post-title {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+  letter-spacing: -0.015em;
+  font-weight: 700 !important;
+}
+
+/* Body copy, paragraphs, lists, links, buttons, tables, FAQs */
+.blog-theme-scope p,
+.blog-theme-scope span,
+.blog-theme-scope li,
+.blog-theme-scope a,
+.blog-theme-scope button,
+.blog-theme-scope table,
+.blog-theme-scope th,
+.blog-theme-scope td,
+.blog-theme-scope input,
+.blog-theme-scope label {
+  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+}
+
+.blog-theme-scope strong,
+.blog-theme-scope b {
+  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+}
+
+/* Blog cards grid in BlogRef1 */
+.blog-card-container {
+  font-family: 'DM Sans', Arial, Helvetica, sans-serif !important;
+}
+
+.blog-card-title {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+}
+
+.blog-btn {
+  font-family: 'DM Sans', Arial, Helvetica, sans-serif !important;
+}

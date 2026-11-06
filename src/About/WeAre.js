@@ -69,7 +69,7 @@ function WeAre() {
 }
 
 const CSS = `
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap');
 
 .tf-weare-section, .tf-weare-section * {
   box-sizing: border-box;
@@ -107,11 +107,11 @@ const CSS = `
 
 .tf-weare-title {
   display: block;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-size: clamp(38px, 4.6vw, 64px);
   font-weight: 700;
   line-height: 1.02;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
   color: #102A43;
   background: linear-gradient(132deg, #0B3A66 0%, #15AEBB 100%);
   -webkit-background-clip: text;
