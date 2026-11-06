@@ -13,7 +13,6 @@ import { logEnquiry } from '../utils/enquiryLog';
 import { coursesList } from '../coursesList';
 import { BRANCHES, STATES } from "../Home/BranchShowcase/branchDirectoryData";
 import { branchDetails } from "../data/branchDetails";
-import SupportForm from './SupportForm';
 function Contact() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
@@ -399,9 +398,6 @@ ${formData.message || 'N/A'}`;
             </div>
           </div>
         </div>
-
-        {/* ================= Need Support? Quick Contact ================= */}
-        <SupportForm />
 
         {/* ================= Section 1: Stay In Touch With Us ================= */}
         <section className="contact-raiou-touch-section">
