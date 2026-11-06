@@ -1,4 +1,5 @@
 import React, { useEffect, useContext } from "react";
+import { useLocation } from "react-router-dom";
 import HomeBanner from "./HomeBanner";
 import DiwaliPopup from "./DiwaliPopup";
 import GifSection from "./GifSection";
@@ -19,8 +20,20 @@ const POPUP_SEEN_KEY = "tf_register_popup_seen";
 
 const Home = () => {
   const { setIsOpen } = useContext(PopupContext);
+  const location = useLocation();
 
   useEffect(() => {
+    // Arriving with a #popular-courses hash (e.g. the "Explore Courses"
+    // button on the About page) — scroll there once it has rendered,
+    // instead of resetting to the top.
+    if (location.hash === "#popular-courses") {
+      const el = document.getElementById("popular-courses");
+      if (el) {
+        el.scrollIntoView({ behavior: "smooth", block: "start" });
+        return;
+      }
+    }
+
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });
 
     // Show the registration popup once per browser session, after 4 seconds
