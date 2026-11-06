@@ -162,7 +162,7 @@ const AboutUsEditorial = () => {
 };
 
 const CSS = `
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap');
 
 .tf-about-section, .tf-about-section * {
   box-sizing: border-box;
@@ -198,11 +198,11 @@ const CSS = `
   left: 3.65%;
   z-index: 5;
   margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-size: clamp(76px, 10.4vw, 166px);
   font-weight: 700;
   line-height: 0.78;
-  letter-spacing: -0.087em;
+  letter-spacing: -0.015em;
   text-transform: uppercase;
   color: #102A43;
   background: linear-gradient(132deg, #0B3A66 0%, #15AEBB 100%);
@@ -245,7 +245,12 @@ const CSS = `
 .tf-about-left {
   position: absolute;
   left: 3.7%;
-  top: 56.7%;
+  /* Sits just below the title regardless of viewport width: the title's
+     own top offset (5.2%) plus its rendered two-line height (font-size
+     clamp(76px,10.4vw,166px) * line-height 0.78 * 2 lines) plus a fixed
+     gap -- so this can never collide with "US" the way a flat top:%
+     did at wider/shorter aspect ratios. */
+  top: calc(5.2% + clamp(118.56px, 16.224vw, 258.96px) + 28px);
   width: min(230px, 19.5vw);
   z-index: 4;
   font-size: clamp(10px, 0.83vw, 13px);
@@ -276,6 +281,20 @@ const CSS = `
 
 @keyframes tfFadeUp {
   to { opacity: 1; transform: translateY(0); }
+}
+
+/* Must come AFTER the base .tf-about-left rule above: at equal
+   specificity, CSS resolves same-selector conflicts by source order, not
+   by which media query "sounds" more specific. Placing this override
+   earlier in the file (e.g. inside the .tf-about-title media query near
+   the top) would be silently beaten by the base rule below it. This
+   keeps the left text block's top offset in lockstep with the title's
+   own +92px header-clearance nudge at >=1024px, so it can never overlap
+   the title's two-line height even at very wide/short aspect ratios. */
+@media (min-width: 1024px) {
+  .tf-about-left {
+    top: calc(5.2% + 92px + clamp(118.56px, 16.224vw, 258.96px) + 28px);
+  }
 }
 
 /* ---------- Main image ---------- */
@@ -383,11 +402,11 @@ const CSS = `
 }
 
 .tf-right-heading {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-size: clamp(25px, 2.7vw, 45px);
   font-weight: 700;
-  line-height: 0.98;
-  letter-spacing: -0.065em;
+  line-height: 1.04;
+  letter-spacing: -0.012em;
   color: #102A43;
   background: linear-gradient(132deg, #0B3A66 0%, #15AEBB 100%);
   -webkit-background-clip: text;

@@ -1843,13 +1843,14 @@ lj9n m .small-column {
 }
 
 .home-blog-container {
+  font-family: 'DM Sans', Arial, Helvetica, sans-serif !important;
   text-align: left;
   padding: 60px 20px;
   background: #e5f0ff;
 }
 
 .home-blog-container h2 {
-  font-family: var(--primary-font);
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
   font-weight: 700;
   font-size: 48px;
   line-height: 60px;
@@ -1860,8 +1861,8 @@ lj9n m .small-column {
 .home-blog-container h5 {
   color: var(--small-heading);
   font-size: 24px;
-  font-family: var(--primary-font);
-  font-weight: 500;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
+  font-weight: 600;
   margin-bottom: 0px;
 }
 
@@ -1873,6 +1874,7 @@ lj9n m .small-column {
 }
 
 .home-blog-title {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
   font-size: 28px;
   font-weight: bold;
   margin-bottom: 30px;
@@ -1917,6 +1919,7 @@ lj9n m .small-column {
 }
 
 .home-blog-heading {
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
@@ -1933,6 +1936,7 @@ lj9n m .small-column {
 }
 
 .home-blog-description {
+  font-family: 'DM Sans', Arial, Helvetica, sans-serif !important;
   font-size: 14px;
   color: #444;
   line-height: 1.5;

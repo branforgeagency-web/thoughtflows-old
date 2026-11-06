@@ -244,7 +244,7 @@ function Vision() {
 }
 
 const CSS = `
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700;800&family=DM+Sans:wght@400;500;600;700;800&display=swap');
 
 .tf-vmf-section, .tf-vmf-section * {
   box-sizing: border-box;
@@ -285,10 +285,10 @@ const CSS = `
 
 .tf-vmf-heading {
   margin: 0 0 clamp(26px, 3.4vw, 38px);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-weight: 600;
   line-height: 1.08;
-  letter-spacing: -0.03em;
+  letter-spacing: -0.015em;
 }
 
 .tf-vmf-heading-line1 {
@@ -440,10 +440,10 @@ const CSS = `
 }
 
 .tf-vmf-card-title {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
   font-size: clamp(18px, 1.5vw, 21px);
   font-weight: 700;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
   line-height: 1.18;
   color: #102A43;
   margin: 0 0 12px;

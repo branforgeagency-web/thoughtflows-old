@@ -1,194 +1,270 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap');
+
 /* Discount Banner Styles */
 .discount-banner-container {
-    padding: 0 20px 150px 20px;
+    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+    padding: 0 20px 170px 20px;
     background-color: white;
-    /* Wrapper bg can match main page or be white */
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
+}
+
+.discount-banner-container *,
+.discount-banner-container *::before,
+.discount-banner-container *::after {
+    box-sizing: border-box;
+}
+
+.discount-banner-outer {
+    position: relative;
+    max-width: 1200px;
+    width: 100%;
 }
 
 .discount-banner-wrapper {
+    position: relative;
     display: flex;
-    background-color: #FFF3E0;
-    /* Peach bg */
-    border-radius: 20px;
+    background-color: #FFFFFF;
+    border: 3px solid;
+    border-image: linear-gradient(135deg, #FF8A50, #E65100) 1;
+    border-radius: 28px;
     overflow: hidden;
-    max-width: 1200px;
-    width: 100%;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 20px 45px rgba(230, 81, 0, 0.12);
     flex-wrap: wrap;
+    z-index: 2;
 }
 
-.discount-text-section {
+/* ---- Illustration side ---- */
+.discount-illustration-section {
+    flex: 0 0 300px;
+    position: relative;
+    background: linear-gradient(160deg, #FFF3E8 0%, #FFE4D1 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 420px;
+}
+
+.phone-illustration {
+    width: 190px;
+    height: auto;
+    filter: drop-shadow(0 18px 20px rgba(230, 81, 0, 0.25));
+}
+
+/* ---- Content side ---- */
+.discount-content-section {
     flex: 1;
-    padding: 40px;
+    min-width: 320px;
+    padding: 44px 44px 36px;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    min-width: 300px;
 }
 
-.discount-text-section h2 {
+.discount-content-header {
+    margin-bottom: 26px;
+}
+
+.discount-text-section h2,
+.discount-content-header h2 {
     margin: 0;
     line-height: 1.2;
 }
 
-.discount-highlight-orange {
-    color: #E65100;
-    /* Deep Orange */
-    font-size: 2.5rem;
-    font-weight: 800;
-}
-
 .discount-main-offer {
-    color: #333;
-    font-size: 2rem;
-    font-weight: 700;
-    margin: 15px 0;
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    color: #C2410C;
+    font-size: 1.9rem;
+    font-weight: 800;
+    margin: 0 0 8px 0;
+    line-height: 1.2;
 }
 
 .discount-subtext {
-    color: #555;
-    font-size: 1.1rem;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-top: 10px;
+    color: #777;
+    font-size: 0.98rem;
+    margin: 0;
     font-weight: 500;
 }
 
-.discount-form-section {
-    flex: 1;
-    padding: 40px 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 300px;
+.discount-status-message {
+    padding: 10px 14px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+.discount-status-message.error {
+    background-color: #fdecea;
+    color: #a33a2d;
 }
 
 .discount-form {
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    gap: 18px;
     width: 100%;
-    max-width: 350px;
+}
+
+.discount-field-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.discount-field {
+    flex: 1;
+    min-width: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.discount-field label {
+    font-size: 0.78rem;
+    color: #9a9a9a;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    margin-bottom: 6px;
 }
 
 .discount-input {
-    padding: 12px 15px;
-    border: 1px solid #FFCC80;
-    border-radius: 5px;
-    background-color: #FFFDE7;
-    /* Light Yellow */
-    font-size: 0.95rem;
+    border: none;
+    border-bottom: 2px solid #F3D6C2;
+    background: transparent;
+    padding: 8px 2px;
+    font-size: 0.98rem;
     outline: none;
-    font-family: 'Poppins', sans-serif;
+    font-family: 'DM Sans', Arial, Helvetica, sans-serif;
     color: #333;
+    width: 100%;
+    border-radius: 0;
 }
 
 .discount-input::placeholder {
-    color: #888;
+    color: #bbb;
 }
 
 .discount-input:focus {
-    border-color: #E65100;
-    background-color: white;
+    border-bottom-color: #E65100;
 }
 
 .discount-select {
     cursor: pointer;
     color: #555;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23E65100' stroke-width='2'><polyline points='6 9 12 15 18 9'/></svg>");
+    background-repeat: no-repeat;
+    background-position: right 2px center;
+    background-size: 16px;
+    padding-right: 22px;
+}
+
+.discount-form-footer {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 6px;
 }
 
 .discount-submit-btn {
-    padding: 10px 20px;
-    background-color: transparent;
-    color: #E65100;
-    border: 2px solid #E65100;
+    padding: 13px 34px;
+    background: linear-gradient(135deg, #FF8A50, #E65100);
+    color: #fff;
+    border: none;
+    border-radius: 999px;
     font-weight: 700;
-    font-size: 1.1rem;
+    font-size: 0.9rem;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
     cursor: pointer;
     transition: all 0.3s ease;
+    box-shadow: 0 10px 22px rgba(230, 81, 0, 0.35);
     width: auto;
-    min-width: 120px;
-    align-self: flex-start;
-    margin-top: 10px;
+    min-width: 150px;
 }
 
 .discount-submit-btn:hover {
-    background-color: #E65100;
-    color: white;
+    filter: brightness(1.05);
+    box-shadow: 0 12px 26px rgba(230, 81, 0, 0.45);
 }
 
-.discount-image-section {
-    flex: 1;
-    display: flex;
-    align-items: flex-end;
-    /* Align image to bottom */
-    justify-content: center;
-    min-width: 300px;
-    padding-right: 0;
-    position: relative;
+.discount-submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
 }
 
-.discount-student-img {
-    width: 100%;
-    height: 100%;
-    max-height: 500px;
-    object-fit: cover;
-    display: block;
-    mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
-    -webkit-mask-image: linear-gradient(to bottom, black 80%, transparent 100%);
+/* ---- Coiled cord trailing below the card ---- */
+.discount-cord {
+    position: absolute;
+    left: 18px;
+    bottom: -150px;
+    width: 230px;
+    height: auto;
+    z-index: 1;
+    pointer-events: none;
 }
 
 /* Responsive */
-@media (max-width: 992px) {
+@media (max-width: 860px) {
     .discount-banner-wrapper {
         flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .discount-text-section,
-    .discount-form-section,
-    .discount-image-section {
-        width: 100%;
-        padding: 30px;
-        align-items: center;
-    }
-
-    .discount-form {
         align-items: stretch;
+        text-align: left;
+    }
+
+    .discount-illustration-section {
+        width: 100%;
+        min-height: 260px;
+        flex-basis: auto;
+    }
+
+    .discount-content-section {
+        padding: 32px 28px 28px;
+    }
+
+    .discount-form-footer {
+        justify-content: center;
     }
 
     .discount-submit-btn {
-        align-self: center;
-        width: 50%;
+        width: 100%;
     }
 
-    .discount-image-section {
-        height: 300px;
-        padding: 0;
+    .discount-cord {
+        width: 170px;
+        bottom: -110px;
+    }
+}
+
+@media (max-width: 480px) {
+    .discount-banner-container {
+        padding: 0 12px 130px 12px;
     }
 
-    .discount-student-img {
-        height: 100%;
-        width: auto;
-        object-position: top;
+    .discount-main-offer {
+        font-size: 1.5rem;
+    }
+
+    .discount-field-row {
+        gap: 0;
     }
 }
 
 /* Success State Styles */
 .offer-claimed-success {
     text-align: center;
-    padding: 20px;
+    padding: 20px 0;
     animation: fadeIn 0.5s ease-out;
 }
 
 .success-circle {
     width: 60px;
     height: 60px;
-    background-color: #E65100;
+    background: linear-gradient(135deg, #FF8A50, #E65100);
     color: white;
     border-radius: 50%;
     margin: 0 auto 15px;
@@ -200,9 +276,10 @@
 }
 
 .claimed-text {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
     font-size: 1.8rem;
     font-weight: 800;
-    color: #E65100;
+    color: #C2410C;
     margin-bottom: 10px;
     letter-spacing: 1px;
 }
@@ -230,6 +307,13 @@
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
