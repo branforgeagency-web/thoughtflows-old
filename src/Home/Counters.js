@@ -2,30 +2,39 @@ import React from 'react';
 import CountUp from 'react-countup';
 import { motion, useReducedMotion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import trainingPhoto from '../images/Home/counters-training.jpg';
-import placementPhoto from '../images/Home/counters-placements.jpg';
-import branchPhoto from '../images/Home/counters-branch.jpg';
-import startPhoto from '../images/Home/counters-start.jpg';
+import avatarA1 from '../images/CoreValues/loyalty.jpg';
+import avatarA2 from '../images/CoreValues/commitment.jpg';
+import avatarA3 from '../images/CoreValues/responsibility.jpg';
+import avatarB1 from '../images/CoreValues/consistency.jpg';
+import avatarB2 from '../images/CoreValues/creativity.jpg';
+import avatarB3 from '../images/CoreValues/passion.jpg';
+import placementsCareerCutout from '../images/Home/placements-career-cutout.png';
+import placementsTrainingCutout from '../images/Home/placements-training-cutout.png';
 import './Counters.css';
 
 const EASE = [0.22, 1, 0.36, 1];
 
-/* small decorative flourish for the branches card, echoing the brand aqua */
-const Swirl = () => (
-    <svg className="tfaw-swirl" viewBox="0 0 160 140" fill="none" aria-hidden="true">
+/* diagonal "up and to the right" arrow, used on every stat card */
+const ArrowUpRight = () => (
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
         <path
-            d="M6 18 C 70 2, 118 28, 100 62 C 86 88, 40 86, 44 58 C 47 36, 86 30, 104 52 C 126 80, 110 118, 72 128 C 44 136, 18 124, 16 104"
-            stroke="url(#tfaw-swirl-grad)"
-            strokeWidth="5"
+            d="M7 17L17 7M17 7H8M17 7V16"
+            stroke="currentColor"
+            strokeWidth="2.2"
             strokeLinecap="round"
+            strokeLinejoin="round"
         />
-        <defs>
-            <linearGradient id="tfaw-swirl-grad" x1="0" y1="0" x2="1" y2="1">
-                <stop offset="0%" stopColor="#5fe3ee" />
-                <stop offset="100%" stopColor="#40e6aa" />
-            </linearGradient>
-        </defs>
     </svg>
+);
+
+const AvatarStack = ({ photos }) => (
+    <div className="tfpr-avatars" aria-hidden="true">
+        {photos.map((src, i) => (
+            <span className="tfpr-avatar" key={i}>
+                <img src={src} alt="" loading="lazy" decoding="async" />
+            </span>
+        ))}
+    </div>
 );
 
 const Counters = () => {
@@ -33,99 +42,86 @@ const Counters = () => {
     const { ref, inView } = useInView({ triggerOnce: true, threshold: 0.2 });
 
     const fade = (delay) => ({
-        initial: reduce ? false : { opacity: 0, y: 26 },
+        initial: reduce ? false : { opacity: 0, y: 30 },
         animate: inView ? { opacity: 1, y: 0 } : undefined,
         transition: { duration: 0.8, ease: EASE, delay },
     });
 
-    const scrollToCourses = (e) => {
-        e.preventDefault();
-        const el = document.getElementById('popular-courses');
-        if (!el) return;
-        el.scrollIntoView({ behavior: reduce ? 'auto' : 'smooth', block: 'start' });
-    };
+    const floatIn = (delay) => ({
+        initial: reduce ? false : { opacity: 0, y: 40, scale: 0.96 },
+        animate: inView ? { opacity: 1, y: 0, scale: 1 } : undefined,
+        transition: { duration: 0.9, ease: EASE, delay },
+    });
 
     return (
-        <section className="tfaw" aria-labelledby="tfaw-heading" ref={ref}>
-            <div className="tfaw-inner">
-                <header className="tfaw-head">
-                    <span className="tfaw-eyebrow">Thoughtflows Academy</span>
-                    <h2 id="tfaw-heading" className="tfaw-heading">
-                        Your Path to <em>Success</em> in Medical Coding
+        <section className="tfpr" aria-labelledby="tfpr-heading" ref={ref}>
+            <div className="tfpr-inner">
+                <header className="tfpr-head">
+                    <h2 id="tfpr-heading" className="tfpr-heading">
+                        Placements and
+                        <br />
+                        Results
                     </h2>
                 </header>
 
-                <div className="tfaw-bento">
-                    {/* Column 1: training photo + students-trained stat */}
-                    <div className="tfaw-col">
-                        <motion.div className="tfaw-tile tfaw-tile--photo" {...fade(0)}>
-                            <img src={trainingPhoto} alt="Trainers guiding students through live medical coding practice" loading="lazy" decoding="async" />
-                            <span className="tfaw-tile-shade" aria-hidden="true" />
-                            <span className="tfaw-tile-caption">Hands-on practice,<br />real coding charts</span>
-                        </motion.div>
-                        <motion.div className="tfaw-tile tfaw-tile--stat tfaw-tile--teal" {...fade(0.08)}>
-                            <strong className="tfaw-stat-num">
-                                {inView && !reduce ? <CountUp start={0} end={35000} separator="," duration={2.4} /> : '35,000'}+
+                <div className="tfpr-row">
+                    {/* Card 1 — Placements */}
+                    <motion.div className="tfpr-card tfpr-card--blue" {...fade(0)}>
+                        <div className="tfpr-card-content">
+                            <div className="tfpr-card-top">
+                                <AvatarStack photos={[avatarA1, avatarA2, avatarA3]} />
+                                <span className="tfpr-plus-badge" aria-hidden="true">+</span>
+                            </div>
+                            <strong className="tfpr-card-num">
+                                {inView && !reduce ? <CountUp start={0} end={30000} separator="," duration={2.4} /> : '30,000'}+
                             </strong>
-                            <span className="tfaw-stat-label">Students Trained</span>
-                        </motion.div>
-                    </div>
-
-                    {/* Column 2: career placements, photo with big overlay number */}
-                    <motion.div className="tfaw-col tfaw-col--push" {...fade(0.14)}>
-                        <div className="tfaw-tile tfaw-tile--photo tfaw-tile--tall">
-                            <img
-                                src={placementPhoto}
-                                alt="Thoughtflows graduates celebrating their medical coding placements"
-                                loading="lazy"
-                                decoding="async"
-                                style={{ objectPosition: '50% 35%' }}
-                            />
-                            <span className="tfaw-tile-shade tfaw-tile-shade--strong" aria-hidden="true" />
-                            <span className="tfaw-tile-info">
-                                <span className="tfaw-tile-num">
-                                    {inView && !reduce ? <CountUp start={0} end={30000} separator="," duration={2.4} /> : '30,000'}+
+                            <span className="tfpr-card-sub">Placements</span>
+                            <span className="tfpr-card-foot">
+                                <span className="tfpr-arrow"><ArrowUpRight /></span>
+                                <span className="tfpr-foot-text">
+                                    Thoughtflows Academy
+                                    <strong>Placement Success</strong>
                                 </span>
-                                <span className="tfaw-tile-caption">Career Placements</span>
                             </span>
                         </div>
+                        <motion.span className="tfpr-card-photo" {...floatIn(0.15)}>
+                            <img
+                                src={placementsCareerCutout}
+                                alt="A Thoughtflows medical coding professional placed in her career"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </motion.span>
                     </motion.div>
 
-                    {/* Column 3: courses, CTA card */}
-                    <motion.div className="tfaw-col tfaw-col--center" {...fade(0.2)}>
-                        <div className="tfaw-tile tfaw-tile--cta">
-                            <span className="tfaw-cta-num">49+</span>
-                            <p className="tfaw-cta-text">Courses across AAPC, AHIMA and specialty programs &mdash; CPC, CIC, CRC and more.</p>
-                            <a href="#popular-courses" className="tfaw-cta-btn" onClick={scrollToCourses}>
-                                Explore Courses
-                            </a>
-                        </div>
-                    </motion.div>
-
-                    {/* Column 4: academy branches, campus photo */}
-                    <motion.div className="tfaw-col" {...fade(0.26)}>
-                        <div className="tfaw-tile tfaw-tile--photo tfaw-tile--tall">
-                            <img src={branchPhoto} alt="Students training inside a Thoughtflows Academy branch" loading="lazy" decoding="async" />
-                            <span className="tfaw-tile-shade" aria-hidden="true" />
-                            <span className="tfaw-tile-caption">Train close to home,<br />wherever you are</span>
-                        </div>
-                    </motion.div>
-
-                    {/* Column 5: branches stat + a second campus photo */}
-                    <div className="tfaw-col">
-                        <motion.div className="tfaw-tile tfaw-tile--stat tfaw-tile--navy" {...fade(0.32)}>
-                            <Swirl />
-                            <strong className="tfaw-stat-num tfaw-stat-num--light">
-                                {inView && !reduce ? <CountUp start={0} end={14} duration={1.8} /> : '14'}+
+                    {/* Card 2 — Results */}
+                    <motion.div className="tfpr-card tfpr-card--coral" {...fade(0.12)}>
+                        <div className="tfpr-card-content">
+                            <div className="tfpr-card-top">
+                                <AvatarStack photos={[avatarB1, avatarB2, avatarB3]} />
+                                <span className="tfpr-plus-badge tfpr-plus-badge--coral" aria-hidden="true">+</span>
+                            </div>
+                            <strong className="tfpr-card-num">
+                                {inView && !reduce ? <CountUp start={0} end={35000} separator="," duration={2.4} /> : '35,000'}+
                             </strong>
-                            <span className="tfaw-stat-label tfaw-stat-label--light">Academy Branches</span>
-                        </motion.div>
-                        <motion.div className="tfaw-tile tfaw-tile--photo" {...fade(0.38)}>
-                            <img src={startPhoto} alt="A Thoughtflows Academy training room in session" loading="lazy" decoding="async" />
-                            <span className="tfaw-tile-shade" aria-hidden="true" />
-                            <span className="tfaw-tile-caption">Start your journey<br />today</span>
-                        </motion.div>
-                    </div>
+                            <span className="tfpr-card-sub">Students Trained</span>
+                            <span className="tfpr-card-foot">
+                                <span className="tfpr-arrow"><ArrowUpRight /></span>
+                                <span className="tfpr-foot-text">
+                                    Thoughtflows Academy
+                                    <strong>Training Outcomes</strong>
+                                </span>
+                            </span>
+                        </div>
+                        <motion.span className="tfpr-card-photo" {...floatIn(0.26)}>
+                            <img
+                                src={placementsTrainingCutout}
+                                alt="A Thoughtflows graduate ready for her medical coding career"
+                                loading="lazy"
+                                decoding="async"
+                            />
+                        </motion.span>
+                    </motion.div>
                 </div>
             </div>
         </section>

@@ -4,7 +4,7 @@ import AboutBanner from './AboutBanner';
 import WeAre from './WeAre';
 import WeEmpower from './WeEmpower';
 import Motto from './Motto';
-import CountDown from './CountDown';
+import Counters from '../Home/Counters';
 import Vision from './Vision';
 import OurCore from './OurCore';
 import { Routes, Route } from 'react-router-dom';
@@ -61,13 +61,13 @@ const About = () => {
         </motion.section>
 
         <motion.section
-          id="countdown"
-          initial={{ scale: 0.8, opacity: 0 }}
+          id="academy-counters"
+          initial={{ scale: 0.9, opacity: 0 }}
           whileInView={{ scale: 1, opacity: 1 }}
           viewport={{ once: true }}
           transition={{ duration: 0.7 }}
         >
-          <CountDown />
+          <Counters />
         </motion.section>
 
         <motion.section

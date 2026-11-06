@@ -1,176 +1,151 @@
 import React, { useState, useEffect } from 'react';
-// import img5 from "../images/AboutImg/contact-dec-01.png";
 
+const STATS = [
+  { key: "count1", target: 35000, label: "Training" },
+  { key: "count2", target: 30000, label: "Placements" },
+  { key: "count3", target: 49, label: "Courses" },
+  { key: "count4", target: 14, label: "Branch" },
+];
 
 function CountDown() {
-  const [count1, setCount1] = useState(0);
-  const [count2, setCount2] = useState(0);
-  const [count3, setCount3] = useState(0);
-  const [count4, setCount4] = useState(0);
-  const [isHovered, setIsHovered] = useState({ box1: false, box2: false, box3: false, box4: false });
-  const target1 = 35000;
-  const target2 = 30000;
-  const target3 = 49;
-  const target4 = 14;
+  const [counts, setCounts] = useState({ count1: 0, count2: 0, count3: 0, count4: 0 });
   const duration = 3000;
 
   useEffect(() => {
-
     const intervalTime = 30;
-    const increment1 = target1 / (duration / intervalTime);
-    const increment2 = target2 / (duration / intervalTime);
-    const increment3 = target3 / (duration / intervalTime);
-    const increment4 = target4 / (duration / intervalTime);
+    const ids = STATS.map(({ key, target }) => {
+      const increment = target / (duration / intervalTime);
+      const id = setInterval(() => {
+        setCounts((prev) => {
+          const next = Math.min(prev[key] + increment, target);
+          if (next >= target) clearInterval(id);
+          return { ...prev, [key]: next };
+        });
+      }, intervalTime);
+      return id;
+    });
 
-    const interval1 = setInterval(() => {
-      setCount1((prevCount) => {
-        if (prevCount >= target1) {
-          clearInterval(interval1);
-          return target1;
-        }
-        return Math.min(prevCount + increment1, target1);
-      });
-    }, intervalTime);
-
-    const interval2 = setInterval(() => {
-      setCount2((prevCount) => {
-        if (prevCount >= target2) {
-          clearInterval(interval2);
-          return target2;
-        }
-        return Math.min(prevCount + increment2, target2);
-      });
-    }, intervalTime);
-
-    const interval3 = setInterval(() => {
-      setCount3((prevCount) => {
-        if (prevCount >= target3) {
-          clearInterval(interval3);
-          return target3;
-        }
-        return Math.min(prevCount + increment3, target3);
-      });
-    }, intervalTime);
-
-    const interval4 = setInterval(() => {
-      setCount4((prevCount) => {
-        if (prevCount >= target4) {
-          clearInterval(interval4);
-          return target4;
-        }
-        return Math.min(prevCount + increment4, target4);
-      });
-    }, intervalTime);
-
-
-
-    return () => {
-      clearInterval(interval1);
-      clearInterval(interval2);
-      clearInterval(interval3);
-      clearInterval(interval4);
-    };
-  }, [target1, target2, target3, target4, duration]);
+    return () => ids.forEach(clearInterval);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
 
   return (
+    <section className="tf-stats-section" aria-label="ThoughtFlows in numbers">
+      <style>{CSS}</style>
 
-    <div style={styles.container} className='countdown-container'>
-      <div className='countdown-container-card'
-        style={{ ...styles.box, ...styles.box1, ...(isHovered.box1 && styles.hoverEffect) }}
-        onMouseEnter={() => setIsHovered({ ...isHovered, box1: true })}
-        onMouseLeave={() => setIsHovered({ ...isHovered, box1: false })}
-      >
-        <div style={styles.number}>{Math.floor(count1).toLocaleString()}+</div>
-        <div style={styles.label}>Training</div>
-      </div>
-      <div className='countdown-container-card'
-        style={{ ...styles.box, ...styles.box2, ...(isHovered.box2 && styles.hoverEffect) }}
-        onMouseEnter={() => setIsHovered({ ...isHovered, box2: true })}
-        onMouseLeave={() => setIsHovered({ ...isHovered, box2: false })}
-      >
-        <div style={styles.number}>{Math.floor(count2).toLocaleString()}+</div>
-        <div style={styles.label}>Placements</div>
+      <div className="tf-stats-grid">
+        {STATS.map((s, i) => (
+          <div className="tf-stats-card tf-fadein" key={s.key} style={{ animationDelay: `${i * 100}ms` }}>
+            <div className="tf-stats-number">{Math.floor(counts[s.key]).toLocaleString()}+</div>
+            <div className="tf-stats-label">{s.label}</div>
+          </div>
+        ))}
       </div>
 
-      <div className='countdown-container-card'
-        style={{ ...styles.box, ...styles.box3, ...(isHovered.box3 && styles.hoverEffect) }}
-        onMouseEnter={() => setIsHovered({ ...isHovered, box3: true })}
-        onMouseLeave={() => setIsHovered({ ...isHovered, box3: false })}
-      >
-        <div style={styles.number}>{Math.floor(count3).toLocaleString()}+</div>
-        <div style={styles.label}>Courses</div>
+      <div className="tf-stats-index">
+        <span className="tf-index-line" aria-hidden="true" />
+        <span>ThoughtFlows Academy / 05</span>
       </div>
-
-      <div className='countdown-container-card'
-        style={{ ...styles.box, ...styles.box4, ...(isHovered.box4 && styles.hoverEffect) }}
-        onMouseEnter={() => setIsHovered({ ...isHovered, box4: true })}
-        onMouseLeave={() => setIsHovered({ ...isHovered, box4: false })}
-      >
-        <div style={styles.number}>{Math.floor(count4).toLocaleString()}+</div>
-        <div style={styles.label}>Branch</div>
-      </div>
-    </div>
-
+    </section>
   );
 }
 
-const styles = {
-  container: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'space-around',
-    gap: '20px',
-    padding: "0px 80px 0px 80px",
-    height: "300px",
-    width: "100%",
-    backgroundColor: "#15aebb",
-    borderTopLeftRadius: "500px",
-    borderBottomLeftRadius: "500px",
-    marginBottom:'35px'
-  },
-  box: {
-    width: '250px',
-    height: '150px',
-    display: 'flex',
-    flexDirection: 'column',
-    alignItems: 'center',
-    justifyContent: 'center',
-    borderRadius: '10px',
-    boxShadow: '4px 4px 8px #8376767a',
-    fontFamily: 'Reem Kufi',
-    transition: 'background-color 0.3s ease, box-shadow 0.3s ease',
+const CSS = `
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&display=swap');
 
-  },
-  box1: {
-    backgroundColor: 'transparent',
-  },
-  box2: {
-    backgroundColor: 'transparent',
-  },
-  box3: {
-    backgroundColor: 'transparent',
-  },
-  box4: {
-    backgroundColor: 'transparent',
-  },
-  number: {
-    fontSize: '30px',
-    fontWeight: 'bold',
-    color: '#fff',
-  },
-  label: {
-    color: '#fff',
-    marginTop: "25px",
-    fontWeight: "bold",
-    fontSize: "20px",
-    fontFamily: 'Poppins'
-  },
+.tf-stats-section, .tf-stats-section * {
+  box-sizing: border-box;
+}
 
-  hoverEffect: {
-    backgroundColor: 'transparent',
-    boxShadow: '0 8px 16px rgba(0, 0, 0, 0.2)',
-  },
-};
+.tf-stats-section {
+  position: relative;
+  width: 100%;
+  background: #F7F9FC;
+  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
+  padding: clamp(48px, 7vw, 88px) clamp(24px, 5.5vw, 96px);
+}
 
+.tf-stats-grid {
+  max-width: 1360px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.tf-stats-card {
+  background: #FFFFFF;
+  border-radius: 22px;
+  padding: clamp(28px, 3vw, 42px) 20px;
+  text-align: center;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.tf-stats-card:hover {
+  transform: translateY(-4px);
+}
+
+.tf-stats-number {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: clamp(32px, 3.4vw, 48px);
+  font-weight: 700;
+  letter-spacing: -0.03em;
+  color: #102A43;
+  background: linear-gradient(132deg, #0B3A66 0%, #15AEBB 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 8px;
+}
+
+.tf-stats-label {
+  font-size: clamp(12px, 1vw, 14px);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #526477;
+}
+
+.tf-fadein {
+  opacity: 0;
+  transform: translateY(16px);
+  animation: tfFadeUp 750ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes tfFadeUp { to { opacity: 1; transform: translateY(0); } }
+
+.tf-stats-index {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  justify-content: flex-end;
+  max-width: 1360px;
+  margin: clamp(28px, 4vw, 44px) auto 0;
+  color: rgba(16,42,67,0.43);
+  font-size: 9px;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+}
+
+.tf-index-line {
+  width: 28px;
+  height: 1px;
+  background: currentColor;
+  display: inline-block;
+}
+
+@media (max-width: 900px) {
+  .tf-stats-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .tf-stats-grid {
+    grid-template-columns: 1fr;
+  }
+}
+`;
 
 export default CountDown;
