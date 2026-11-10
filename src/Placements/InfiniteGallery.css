@@ -1,0 +1,104 @@
+.infinite-gallery-root {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background: #08080a;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: none;
+}
+
+.infinite-gallery-canvas {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: grab;
+    touch-action: none;
+    outline: none;
+    -webkit-user-drag: none;
+}
+
+.infinite-gallery-canvas.is-dragging {
+    cursor: grabbing;
+}
+
+.infinite-gallery-fallback {
+    display: none;
+    position: absolute;
+    inset: 0;
+    overflow: auto;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    background: #08080a;
+    box-sizing: border-box;
+}
+
+.infinite-gallery-fallback-active .infinite-gallery-fallback {
+    display: grid;
+}
+
+.infinite-gallery-fallback-card {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border-radius: 14px;
+    background-size: cover;
+    background-position: center;
+    background-color: #141418;
+    overflow: hidden;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.4);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 12px;
+    color: #fff;
+    box-sizing: border-box;
+}
+
+.infinite-gallery-fallback-card::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 45%, rgba(0, 0, 0, 0.78) 100%);
+}
+
+.infinite-gallery-fallback-tag {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    background: rgba(0, 0, 0, 0.45);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 999px;
+    padding: 4px 10px;
+    z-index: 1;
+}
+
+.infinite-gallery-fallback-title {
+    position: relative;
+    z-index: 1;
+    font-weight: 800;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.01em;
+}
+
+.infinite-gallery-fallback-year {
+    position: relative;
+    z-index: 1;
+    font-size: 11px;
+    opacity: 0.75;
+    margin-top: 2px;
+}
+
+@media (max-width: 480px) {
+    .infinite-gallery-fallback {
+        grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    }
+}

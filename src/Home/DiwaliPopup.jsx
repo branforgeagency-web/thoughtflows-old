@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 
 // Small floating "Happy Diwali + 10% Offer" popup, pinned below the navbar.
 // Toggle off with SHOW_Diwali in HomeBanner.js (kept in sync manually here).
-const SHOW_Diwali = true
+const SHOW_Diwali = false
 
 const DiwaliPopup = () => {
     const [closed, setClosed] = useState(false)

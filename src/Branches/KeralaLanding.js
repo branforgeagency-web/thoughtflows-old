@@ -7,6 +7,9 @@ import './RegionLanding.css';
 import kochiImg from '../images/Branches/kerala_kochi_campus.jpg';
 import trivandrumImg from '../images/Branches/kerala_trivandrum_campus.jpg';
 import keralaHeroImg from '../images/Branches/kerala_hero.jpg';
+import kochiLandmark from '../images/Landmarks/kochi_landmark.jpg';
+import trivandrumLandmark from '../images/Landmarks/trivandrum_landmark.jpg';
+import VelouraSkincareHero from './VelouraSkincareHero';
 
 const KeralaLanding = () => {
   const { setIsOpen } = useContext(PopupContext);
@@ -163,79 +166,28 @@ const KeralaLanding = () => {
         canonical="https://www.thoughtflows.in/kerala"
       />
 
-      {/* Hero Section */}
-      <section className="region-hero">
-        <div className="region-container">
-          <div className="region-hero-inner">
-            <div className="region-hero-content">
-              <div className="region-breadcrumb">
-                <Link to="/">Home</Link>
-                <span>/</span>
-                <span>Branches</span>
-                <span>/</span>
-                <span style={{ color: '#0f172a', fontWeight: 600 }}>Kerala</span>
-              </div>
-              <div className="region-hero-badge">
-                🌴 Kerala's Leading Medical Coding Hub · Kochi & Trivandrum
-              </div>
-              <h1 className="region-hero-title">
-                Medical Coding Course in <span>Kerala</span> — CPC &amp; CCS Training
-              </h1>
-              <p className="region-hero-subtitle">
-                Unlock high-growth careers in domestic healthcare IT parks and lucrative hospital systems across the UAE and Gulf. Enroll at our flagship <strong>Kochi</strong> or <strong>Trivandrum</strong> campuses with AAPC-certified mentors and guaranteed placement support.
-              </p>
-
-              <div className="region-hero-actions">
-                <a href="#campuses" className="btn-primary-action">
-                  Explore Kerala Campuses &darr;
-                </a>
-                <button onClick={() => setIsOpen(true)} className="btn-secondary-action">
-                  Enquire for Free Demo
-                </button>
-              </div>
-
-              <div className="region-hero-stats">
-                <div className="hero-stat-card">
-                  <div className="hero-stat-num">2</div>
-                  <div className="hero-stat-label">Kerala Campuses</div>
-                </div>
-                <div className="hero-stat-card">
-                  <div className="hero-stat-num">5000+</div>
-                  <div className="hero-stat-label">Graduates Placed</div>
-                </div>
-                <div className="hero-stat-card">
-                  <div className="hero-stat-num">95%+</div>
-                  <div className="hero-stat-label">CPC Exam Pass Rate</div>
-                </div>
-                <div className="hero-stat-card">
-                  <div className="hero-stat-num">100%</div>
-                  <div className="hero-stat-label">Placement Support</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="region-hero-visual">
-              <div className="hero-visual-card">
-                <img src={keralaHeroImg} alt="ThoughtFlows Kerala Medical Coding Training" />
-                <div className="hero-floating-chip chip-top">
-                  <div className="chip-icon">🎯</div>
-                  <div>
-                    <div style={{ fontSize: '12px', color: '#64748b' }}>Certification Success</div>
-                    <div style={{ fontWeight: 700, color: '#0f172a' }}>98.2% CPC Pass Rate</div>
-                  </div>
-                </div>
-                <div className="hero-floating-chip chip-bottom">
-                  <div className="chip-icon">💼</div>
-                  <div>
-                    <div style={{ fontSize: '12px', color: '#64748b' }}>Placement Support</div>
-                    <div style={{ fontWeight: 700, color: '#0f172a' }}>InfoPark & Gulf Jobs</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ================= HERO ================= */}
+      <VelouraSkincareHero
+        brandName="thoughtflows"
+        brandSubtitle="kerala"
+        brandAriaLabel="ThoughtFlows Medical Coding Classes in Kerala"
+        productImage={kochiLandmark}
+        faceImage={kochiImg}
+        cardImage={trivandrumLandmark}
+        leftImageAlt="Iconic Chinese Fishing Nets Fort Kochi Kerala"
+        rightImageAlt="ThoughtFlows Kerala Academy Modern Campus Interior"
+        cardImageAlt="Historic Padmanabhaswamy Temple Trivandrum Kerala"
+        exploreText="Free Demo"
+        exploreHref="/contact"
+        onExploreClick={() => {
+          window.location.href = "/contact";
+        }}
+        showTitles={false}
+        showNavLinks={false}
+        showSideControl={false}
+        showBottomRight={false}
+        showBottomLeft={false}
+      />
 
       {/* Campuses Section */}
       <section className="region-section" id="campuses">

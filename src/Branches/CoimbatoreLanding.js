@@ -8,10 +8,12 @@ import hopesImg from '../images/Branches/cbe_hopes_campus.jpg';
 import saravanampattiImg from '../images/Branches/cbe_saravanampatti_campus.jpg';
 import gandhipuramImg from '../images/Branches/cbe_gandhipuram_campus.jpg';
 import ishaBannerImg from '../images/Branches/isha_coimbatore_banner.jpg';
+import coimbatoreValparai from '../images/Landmarks/coimbatore_valparai.jpg';
 import handsOnImg from '../images/hands-on.png';
 import cpcImg from '../images/cpc.png';
 import teachingImg from '../images/Branches/theni-teaching.jpg';
 import placementBanner from '../images/Branches/placement banner.jpeg';
+import VelouraSkincareHero from './VelouraSkincareHero';
 
 const CoimbatoreLanding = () => {
   const { setIsOpen } = useContext(PopupContext);
@@ -238,13 +240,6 @@ const CoimbatoreLanding = () => {
     );
   };
 
-  const heroStats = [
-    { num: "35,000+", label: "students trained" },
-    { num: "30,000+", label: "students placed" },
-    { num: "90", label: "courses" },
-    { num: "3", label: "branches in Coimbatore" }
-  ];
-
   const candidateTypes = [
     { icon: "🎓", label: "B.Sc. / B.Pharm. graduates" },
     { icon: "🩺", label: "Nurses & lab technicians" },
@@ -310,75 +305,27 @@ const CoimbatoreLanding = () => {
       />
 
       {/* ================= HERO ================= */}
-      <section className="cbe-hero2">
-        <div className="cbe-hero2-blob one" aria-hidden="true" />
-        <div className="cbe-hero2-blob two" aria-hidden="true" />
-        <div className="cbe-wrap cbe-hero2-grid">
-          <div className="cbe-hero2-copy">
-            <nav className="cbe-crumb" aria-label="Breadcrumb">
-              <Link to="/">Home</Link>
-              <span>/</span>
-              <span>Branches</span>
-              <span>/</span>
-              <strong>Coimbatore</strong>
-            </nav>
-
-            <span className="cbe-pill"><span className="cbe-dot" /> Saravanampatti · Hopes · Gandhipuram</span>
-
-            <h1 className="cbe-h1">
-              Medical Coding Classes in <span>Coimbatore</span> — CPC &amp; CCS Training
-            </h1>
-
-            <p className="cbe-hero-sub">
-              Located in Saravanampatti, Hopes, and Gandhipuram, we offer in-person medical coding classes in Coimbatore. To date, we have trained over 35,000 students and employed over 30,000 of them. Our classes cover ICD-10-CM, CPT, and HCPCS Level II, and help students prepare for the AAPC CPC Certification Exam. The courses are open to students from life sciences, nursing, pharmacy, and allied health professions. Including this course, we offer a host of other services including free demo classes.
-            </p>
-
-            <div className="cbe-codes">
-              {['ICD-10-CM', 'CPT', 'HCPCS Level II', 'AAPC CPC'].map((c) => (
-                <span key={c}><Icon name="check" />{c}</span>
-              ))}
-            </div>
-
-            <div className="cbe-hero-actions">
-              <button onClick={() => setIsOpen(true)} className="cbe-btn cbe-btn-primary">
-                Book a Free Demo Class <Icon name="arrow" />
-              </button>
-              <a href="tel:+919384576852" className="cbe-btn cbe-btn-navy-outline">
-                <Icon name="phone" /> +91 93845 76852
-              </a>
-            </div>
-          </div>
-
-          <div className="cbe-hero2-visual">
-            <div className="cbe-arch-outline" aria-hidden="true" />
-            <div className="cbe-arch">
-              <img src={ishaBannerImg} alt="Isha Yoga Center Adiyogi Coimbatore ThoughtFlows" />
-            </div>
-            <div className="cbe-seal">
-              <strong>CPC</strong>
-              <span>AAPC exam prep</span>
-            </div>
-            <div className="cbe-landmark">
-              <span className="cbe-landmark-ico"><Icon name="pin" /></span>
-              <div>
-                <small>Landmark of Coimbatore</small>
-                <strong>Isha Yoga Center & Adiyogi, Coimbatore</strong>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className="cbe-wrap">
-          <div className="cbe-band">
-            {heroStats.map((s, i) => (
-              <div className="cbe-band-item" key={i}>
-                <strong>{s.num}</strong>
-                <span>{s.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      <VelouraSkincareHero
+        brandName="thoughtflows"
+        brandSubtitle="coimbatore"
+        brandAriaLabel="ThoughtFlows Medical Coding Classes in Coimbatore"
+        productImage={ishaBannerImg}
+        faceImage={saravanampattiImg}
+        cardImage={coimbatoreValparai}
+        leftImageAlt="Isha Yoga Center Adiyogi Coimbatore"
+        rightImageAlt="ThoughtFlows Coimbatore Academy Modern Campus Interior"
+        cardImageAlt="Scenic Valparai Tea Estates Coimbatore"
+        exploreText="Free Demo"
+        exploreHref="/contact"
+        onExploreClick={() => {
+          window.location.href = "/contact";
+        }}
+        showTitles={false}
+        showNavLinks={false}
+        showSideControl={false}
+        showBottomRight={false}
+        showBottomLeft={false}
+      />
 
       {/* In-page navigation */}
       <div className="cbe-subnav">

@@ -164,6 +164,49 @@
     font-weight: 600;
 }
 
+.placements-students-hint {
+    text-align: center;
+    color: #6b7a8a;
+    font-size: 0.95rem;
+    margin: -34px 0 34px;
+    font-weight: 500;
+}
+
+.placements-gallery-shell {
+    position: relative;
+    width: 100%;
+    max-width: 1350px;
+    margin: 0 auto;
+    height: 85svh;
+    max-height: 820px;
+    min-height: 480px;
+    border-radius: 22px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(11, 58, 102, 0.18);
+}
+
+@media (max-width: 860px) {
+    .placements-gallery-shell {
+        height: 72svh;
+        min-height: 420px;
+        border-radius: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .placements-students-hint {
+        margin: -24px 0 24px;
+        font-size: 0.85rem;
+        padding: 0 16px;
+    }
+
+    .placements-gallery-shell {
+        height: 68svh;
+        min-height: 380px;
+        border-radius: 12px;
+    }
+}
+
 .students-marquee-container {
     width: 100%;
     max-width: 1350px;
