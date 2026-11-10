@@ -3777,10 +3777,12 @@ h1 {
     color: #097c88;
     padding: 6px 8px;
     border-radius: 6px;
-    margin-left: auto;
+    margin-left: 0;
+    margin-right: 14px;
     min-width: 36px;
     min-height: 36px;
     user-select: none;
+    order: -1;
   }
 
   .hamburger:hover {
@@ -4176,10 +4178,12 @@ ul.menu.open {
     width: 150px;
   }
 
-  /* On mobile, the nav pill becomes a full-width bar with logo left, hamburger right */
+  /* On mobile, the nav pill becomes a full-width bar with hamburger on the left, then logo */
   .tf-nav-pill {
     width: 100%;
-    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
     padding: 6px 0;
   }
 
@@ -4197,6 +4201,10 @@ ul.menu.open {
 }
 
 @media (min-width: 1024px) {
+  .hamburger {
+    display: none !important;
+  }
+
   .tf-nav-pill {
     background: rgba(255, 255, 255, 0.94);
     border-radius: 50px;
