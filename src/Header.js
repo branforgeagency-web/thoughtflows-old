@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import "./App.css";
+import SideMenuBar from "./Home/SideMenuBar";
 // import logo from "./images/ThoughtFlow Christmas Version 4 Revised Collection.png"; // Christmas logo (temporarily removed)
 import logo from "./images/image2.png"; // Original logo (restored)
 
@@ -145,6 +146,7 @@ const Header = () => {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [submenuOpen, setSubmenuOpen] = useState(""); // Track which submenu is open
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+  const [sideMenuOpen, setSideMenuOpen] = useState(false);
 
   const location = useLocation();
   const isHome = location.pathname === '/';
@@ -303,61 +305,89 @@ const Header = () => {
 
   return (
     <>
-      <header className="glass-header tf-header-overlay">
-        <nav className="navbar">
-
-          {/* Navigation Menu */}
-          <div
-            className="App"
-            onMouseLeave={() => setOpen({ submenu: "", open: false })}
-            style={{ width: "100%", display: "flex" }}
-          >
-            <div
-              style={{
-                alignItems: "center",
-                position: "relative",
-                height: "auto",
-                width: "100%",
-                maxWidth: "1400px",
-                margin: "0 auto",
-                padding: "0 16px",
-                boxSizing: "border-box"
-              }}
-              className={`tf-nav-row ${isHome ? 'w-full' : 'w-full'}`}
+      {isHome ? (
+        <header className="tf-home-header">
+          <div className="tf-home-top-row">
+            <button
+              type="button"
+              className="tf-corner-hamburger-btn"
+              onClick={() => setSideMenuOpen(true)}
+              aria-label="Open menu"
             >
-              <div className="tf-nav-spacer" aria-hidden="true" />
-              <div className="tf-nav-pill">
-                {/* Logo - always visible */}
-                <div className="logo tf-logo-chip tf-logo-inline">
-                  <a href="/">
-                    <img src={logo} alt="Website Logo" />
-                  </a>
-                </div>
-
-                {/* Hamburger Menu - Only show on mobile/tablet, placed inline after logo */}
-                {isMobile && (
-                  <div
-                    className="hamburger"
-                    role="button"
-                    tabIndex={0}
-                    aria-label="Toggle menu"
-                    aria-expanded={mobileMenuOpen}
-                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-                    onKeyDown={(e) => {
-                      if (e.key === "Enter" || e.key === " ") {
-                        e.preventDefault();
-                        setMobileMenuOpen(!mobileMenuOpen);
-                      }
-                    }}
-                  >
-                    {mobileMenuOpen ? '✕' : '☰'}
-                  </div>
-                )}
-
-              <ul
-                className={`border-gray-300 sm:shadow md:shadow-none menu ${mobileMenuOpen ? "open" : ""
-                  }`}
+              <svg
+                width="28"
+                height="28"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2.2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                aria-hidden="true"
               >
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <line x1="3" y1="12" x2="21" y2="12" />
+                <line x1="3" y1="18" x2="21" y2="18" />
+              </svg>
+            </button>
+          </div>
+        </header>
+      ) : (
+        <header className="glass-header tf-header-overlay">
+          <nav className="navbar">
+
+            {/* Navigation Menu */}
+            <div
+              className="App"
+              onMouseLeave={() => setOpen({ submenu: "", open: false })}
+              style={{ width: "100%", display: "flex" }}
+            >
+              <div
+                style={{
+                  alignItems: "center",
+                  position: "relative",
+                  height: "auto",
+                  width: "100%",
+                  maxWidth: "1400px",
+                  margin: "0 auto",
+                  padding: "0 16px",
+                  boxSizing: "border-box"
+                }}
+                className="tf-nav-row w-full"
+              >
+                <div className="tf-nav-spacer" aria-hidden="true" />
+                <div className="tf-nav-pill">
+                  {/* Logo - always visible */}
+                  <div className="logo tf-logo-chip tf-logo-inline">
+                    <a href="/">
+                      <img src={logo} alt="Website Logo" />
+                    </a>
+                  </div>
+
+                  {/* Hamburger Menu - Only show on mobile/tablet, placed inline after logo */}
+                  {isMobile && (
+                    <div
+                      className="hamburger"
+                      role="button"
+                      tabIndex={0}
+                      aria-label="Toggle menu"
+                      aria-expanded={mobileMenuOpen}
+                      onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                      onKeyDown={(e) => {
+                        if (e.key === "Enter" || e.key === " ") {
+                          e.preventDefault();
+                          setMobileMenuOpen(!mobileMenuOpen);
+                        }
+                      }}
+                    >
+                      {mobileMenuOpen ? '✕' : '☰'}
+                    </div>
+                  )}
+
+                  <ul
+                    className={`border-gray-300 sm:shadow md:shadow-none menu ${mobileMenuOpen ? "open" : ""
+                      }`}
+                  >
 
                 <li>
                   <div
@@ -628,7 +658,7 @@ const Header = () => {
                 </li>
 
               </ul>
-              </div>
+            </div>
 
               <div className="tf-nav-cta">
                 <Link to="/contact" className="tf-apply-btn">
@@ -735,8 +765,13 @@ const Header = () => {
 
         </nav>
       </header>
+    )}
 
-
+      {/* Side Menu Bar (Home Theme Drawer) */}
+      <SideMenuBar
+        isOpen={sideMenuOpen}
+        onClose={() => setSideMenuOpen(false)}
+      />
 
     </>
   );

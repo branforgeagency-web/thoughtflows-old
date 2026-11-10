@@ -1,0 +1,566 @@
+/* =========================================================================
+   CINEMATIC FULL-SCREEN PRELOADER & HERO SECTION
+   Editorial, Architectural, Premium, Ultra-smooth Horizontal Curtain Split
+   ========================================================================= */
+
+:root {
+  --tf-cinematic-bg: #060709;
+  --tf-cinematic-white: #ffffff;
+  --tf-cinematic-muted: #5d636f;
+  --tf-cinematic-ease: cubic-bezier(0.8, 0, 0.3, 1);
+  --tf-cinematic-font: 'Plus Jakarta Sans', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+/* Base Hero Container */
+.cinematic-hero-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  min-height: 560px;
+  overflow: hidden;
+  background: var(--tf-cinematic-bg);
+  font-family: var(--tf-cinematic-font);
+  user-select: none;
+}
+
+/* =========================================================================
+   HERO UNDERLAYER (Video, Image, Dark Overlays, Center Card, Nav & Footer)
+   ========================================================================= */
+
+.hero-underlayer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Background video */
+.hero-media-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Subtle dark gradient overlay: darker at top/bottom for high legibility */
+.hero-gradient-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(6, 7, 9, 0.72) 0%,
+    rgba(6, 7, 9, 0.18) 35%,
+    rgba(6, 7, 9, 0.22) 65%,
+    rgba(6, 7, 9, 0.78) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
+}
+
+/* Footer Row */
+.hero-footer-row {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: clamp(20px, 3.5vw, 36px) clamp(24px, 5.5vw, 68px);
+  padding-bottom: max(clamp(20px, 3.5vw, 36px), env(safe-area-inset-bottom));
+}
+
+.hero-scroll-btn {
+  font-family: var(--tf-cinematic-font);
+  font-size: clamp(10.5px, 0.9vw, 12px);
+  font-weight: 600;
+  letter-spacing: 0.28em;
+  color: rgba(255, 255, 255, 0.8);
+  text-transform: uppercase;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  transition: color 0.3s ease;
+}
+
+.hero-scroll-btn:hover {
+  color: #ffffff;
+}
+
+.hero-scroll-btn::after {
+  content: '↓';
+  font-size: 13px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.hero-scroll-btn:hover::after {
+  transform: translateY(2px);
+}
+
+.hero-footer-tagline {
+  font-family: var(--tf-cinematic-font);
+  font-size: clamp(10px, 0.88vw, 11.5px);
+  font-weight: 500;
+  letter-spacing: 0.24em;
+  color: rgba(255, 255, 255, 0.68);
+  text-transform: uppercase;
+  text-align: right;
+}
+
+/* =========================================================================
+   CINEMATIC PRELOADER & HORIZONTAL CURTAIN SPLIT OVERLAY
+   ========================================================================= */
+
+.cinematic-curtain-overlay {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999999;
+  pointer-events: auto;
+  overflow: hidden;
+  background: transparent;
+}
+
+.cinematic-curtain-overlay.is-done {
+  display: none !important;
+  pointer-events: none !important;
+}
+
+/* Upper Half Curtain */
+.curtain-half.curtain-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  background: var(--tf-cinematic-bg);
+  z-index: 20;
+  transform: translateY(0);
+  transition: transform 1.25s var(--tf-cinematic-ease);
+  will-change: transform;
+}
+
+.curtain-sync-top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+/* Lower Half Curtain */
+.curtain-half.curtain-bottom {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 50%;
+  overflow: hidden;
+  background: var(--tf-cinematic-bg);
+  z-index: 20;
+  transform: translateY(0);
+  transition: transform 1.25s var(--tf-cinematic-ease);
+  will-change: transform;
+}
+
+.curtain-sync-bottom {
+  position: absolute;
+  top: -50vh;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+}
+
+/* Curtain Separation Action */
+.cinematic-curtain-overlay.is-split .curtain-top {
+  transform: translateY(-100%);
+}
+
+.cinematic-curtain-overlay.is-split .curtain-bottom {
+  transform: translateY(100%);
+}
+
+/* Seam Clip during seam stage (opens 4% center strip) */
+.cinematic-curtain-overlay.has-seam-gap .curtain-top {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2vh), 0 calc(100% - 2vh));
+}
+
+.cinematic-curtain-overlay.has-seam-gap .curtain-bottom {
+  clip-path: polygon(0 2vh, 100% 2vh, 100% 100%, 0 100%);
+}
+
+/* Center Seam Hairline & Horizontal Slit */
+.center-seam-slit {
+  position: absolute;
+  top: calc(50% - 2vh);
+  left: 0;
+  width: 100%;
+  height: 4vh;
+  z-index: 30;
+  pointer-events: none;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.85s var(--tf-cinematic-ease);
+  overflow: hidden;
+}
+
+.center-seam-slit.is-active {
+  transform: scaleX(1);
+}
+
+.center-seam-slit::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: rgba(255, 255, 255, 0.7);
+  box-shadow: 0 0 14px rgba(255, 255, 255, 0.95);
+  transform: translateY(-50%);
+}
+
+/* =========================================================================
+   PRELOADER CONTENT (Identical inside both Curtain Halves)
+   ========================================================================= */
+
+.preloader-content-wrap {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  background: var(--tf-cinematic-bg);
+  overflow: hidden;
+  font-family: var(--tf-cinematic-font);
+}
+
+/* Floating Background Tags */
+.float-tag {
+  position: absolute;
+  z-index: 10;
+  display: flex;
+  gap: 7px;
+  white-space: nowrap;
+}
+
+.float-tag.tag-tl {
+  top: clamp(26px, 7vh, 60px);
+  left: clamp(24px, 6vw, 76px);
+}
+
+.float-tag.tag-bl {
+  bottom: clamp(28px, 8vh, 64px);
+  left: clamp(24px, 6vw, 76px);
+}
+
+.float-tag.tag-br {
+  bottom: clamp(28px, 8vh, 64px);
+  right: clamp(24px, 6vw, 76px);
+}
+
+.tag-word-mask {
+  overflow: hidden;
+  display: inline-block;
+}
+
+.tag-word-inner {
+  display: inline-block;
+  font-family: var(--tf-cinematic-font);
+  font-size: clamp(10px, 1.05vw, 12px);
+  font-weight: 600;
+  letter-spacing: 0.26em;
+  color: var(--tf-cinematic-muted);
+  text-transform: uppercase;
+  transform: translateY(115%);
+  transition: transform 0.8s var(--tf-cinematic-ease);
+  will-change: transform;
+}
+
+.float-tag.show-tag .tag-word-inner {
+  transform: translateY(0%);
+  transition-delay: var(--tag-delay);
+}
+
+.float-tag.hide-tag .tag-word-inner {
+  transform: translateY(115%);
+  transition: transform 0.6s var(--tf-cinematic-ease);
+}
+
+/* =========================================================================
+   CENTRAL TYPOGRAPHY STAGE (Studio Name, Number, Enlarge Animation)
+   ========================================================================= */
+
+.preloader-center-stage {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 15;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+  pointer-events: none;
+  gap: 0px;
+  transition: gap 1.1s var(--tf-cinematic-ease);
+}
+
+/* Logo Letters 'TF' Mask & Inner */
+.char-tf-container,
+.char-t-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.char-tf-mask,
+.char-t-mask {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.char-tf-inner,
+.char-t-inner {
+  display: inline-block;
+  font-family: var(--tf-cinematic-font);
+  font-size: clamp(2.4rem, 5.2vw, 4.4rem);
+  font-weight: 800;
+  color: var(--tf-cinematic-white);
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0.04em;
+  transform: translateY(115%);
+  transition:
+    transform 0.8s var(--tf-cinematic-ease),
+    font-size 1.1s var(--tf-cinematic-ease);
+  will-change: transform, font-size;
+}
+
+/* In letters-in & later, TF stays visible */
+.stage-letters-in .char-tf-inner,
+.stage-letters-in .char-t-inner,
+.stage-letters-out .char-tf-inner,
+.stage-letters-out .char-t-inner,
+.stage-number-in .char-tf-inner,
+.stage-number-in .char-t-inner,
+.stage-enlarge .char-tf-inner,
+.stage-enlarge .char-t-inner,
+.stage-seam .char-tf-inner,
+.stage-seam .char-t-inner,
+.stage-tags-out .char-tf-inner,
+.stage-tags-out .char-t-inner,
+.stage-curtain-split .char-tf-inner,
+.stage-curtain-split .char-t-inner {
+  transform: translateY(0%);
+}
+
+/* Remaining Letters 'HOUGHT' & 'LOWS' */
+.rem-part-container,
+.remaining-letters-container {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  overflow: hidden;
+  max-width: 480px;
+  transition:
+    max-width 0.48s var(--tf-cinematic-ease),
+    opacity 0.35s ease;
+}
+
+.rem-char-mask {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.rem-char-inner {
+  display: inline-block;
+  font-family: var(--tf-cinematic-font);
+  font-size: clamp(2.4rem, 5.2vw, 4.4rem);
+  font-weight: 800;
+  color: var(--tf-cinematic-white);
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  transform: translateY(115%);
+  transition: transform 0.8s var(--tf-cinematic-ease);
+  transition-delay: var(--in-delay);
+  will-change: transform;
+}
+
+/* Reveal letters on letters-in */
+.stage-letters-in .rem-char-inner {
+  transform: translateY(0%);
+}
+
+/* Drop letters downward on letters-out */
+.stage-letters-out .rem-char-inner,
+.stage-number-in .rem-char-inner,
+.stage-enlarge .rem-char-inner,
+.stage-seam .rem-char-inner,
+.stage-tags-out .rem-char-inner,
+.stage-curtain-split .rem-char-inner {
+  transform: translateY(120%);
+  transition: transform 0.65s var(--tf-cinematic-ease);
+  transition-delay: var(--out-delay);
+}
+
+/* Collapse remaining letters container space once number arrives (so T & F join to form TF) */
+.stage-number-in .rem-part-container,
+.stage-number-in .remaining-letters-container,
+.stage-enlarge .rem-part-container,
+.stage-enlarge .remaining-letters-container,
+.stage-seam .rem-part-container,
+.stage-seam .remaining-letters-container,
+.stage-tags-out .rem-part-container,
+.stage-tags-out .remaining-letters-container,
+.stage-curtain-split .rem-part-container,
+.stage-curtain-split .remaining-letters-container {
+  max-width: 0;
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Number Container '01' */
+.number-container {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* Show number container starting from stage-number-in */
+.stage-number-in .number-container,
+.stage-enlarge .number-container,
+.stage-seam .number-container,
+.stage-tags-out .number-container,
+.stage-curtain-split .number-container {
+  display: inline-flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+.num-digit-mask {
+  overflow: hidden;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.num-digit-inner {
+  display: inline-block;
+  font-family: var(--tf-cinematic-font);
+  font-size: clamp(2.4rem, 5.2vw, 4.4rem);
+  font-weight: 800;
+  color: var(--tf-cinematic-white);
+  text-transform: uppercase;
+  line-height: 0.88;
+  letter-spacing: -0.02em;
+  transform: translateY(115%);
+  transition:
+    transform 0.8s var(--tf-cinematic-ease),
+    font-size 1.1s var(--tf-cinematic-ease);
+  transition-delay: var(--num-delay);
+  will-change: transform, font-size;
+}
+
+.stage-number-in .num-digit-inner {
+  transform: translateY(0%);
+}
+
+/* ENLARGED STATE (stage-enlarge, stage-seam, stage-tags-out, stage-curtain-split) */
+.stage-enlarge.preloader-center-stage,
+.stage-seam.preloader-center-stage,
+.stage-tags-out.preloader-center-stage,
+.stage-curtain-split.preloader-center-stage {
+  gap: clamp(18px, 3.2vw, 44px);
+}
+
+.stage-enlarge .char-tf-inner,
+.stage-enlarge .char-t-inner,
+.stage-seam .char-tf-inner,
+.stage-seam .char-t-inner,
+.stage-tags-out .char-tf-inner,
+.stage-tags-out .char-t-inner,
+.stage-curtain-split .char-tf-inner,
+.stage-curtain-split .char-t-inner {
+  /* Logo letters 'TF' stay like a compact logo mark beside the gigantic number */
+  font-size: clamp(2.2rem, 4.4vw, 3.8rem);
+  transform: translateY(0%);
+}
+
+.stage-enlarge .num-digit-inner,
+.stage-seam .num-digit-inner,
+.stage-tags-out .num-digit-inner,
+.stage-curtain-split .num-digit-inner {
+  /* Number enlarges dramatically to ~14rem desktop / ~6rem mobile */
+  font-size: clamp(6rem, 15vw, 14rem);
+  transform: translateY(0%);
+  line-height: 0.85;
+}
+
+/* Mobile & Tablet Fine-tuning */
+@media (max-width: 768px) {
+  .stage-enlarge.preloader-center-stage,
+  .stage-seam.preloader-center-stage,
+  .stage-tags-out.preloader-center-stage,
+  .stage-curtain-split.preloader-center-stage {
+    gap: clamp(12px, 3vw, 20px);
+  }
+
+  .stage-enlarge .char-tf-inner,
+  .stage-enlarge .char-t-inner,
+  .stage-seam .char-tf-inner,
+  .stage-seam .char-t-inner,
+  .stage-tags-out .char-tf-inner,
+  .stage-tags-out .char-t-inner,
+  .stage-curtain-split .char-tf-inner,
+  .stage-curtain-split .char-t-inner {
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+  }
+
+  .stage-enlarge .num-digit-inner,
+  .stage-seam .num-digit-inner,
+  .stage-tags-out .num-digit-inner,
+  .stage-curtain-split .num-digit-inner {
+    font-size: clamp(5.2rem, 16vw, 6.5rem);
+  }
+
+  .float-tag.tag-tl {
+    top: clamp(20px, 5vh, 36px);
+    left: clamp(16px, 4vw, 28px);
+  }
+  .float-tag.tag-bl {
+    bottom: clamp(24px, 6vh, 40px);
+    left: clamp(16px, 4vw, 28px);
+  }
+  .float-tag.tag-br {
+    bottom: clamp(24px, 6vh, 40px);
+    right: clamp(16px, 4vw, 28px);
+  }
+}
+
+/* =========================================================================
+   ACCESSIBILITY: REDUCED MOTION PREFERENCE
+   ========================================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .cinematic-curtain-overlay {
+    display: none !important;
+  }
+}

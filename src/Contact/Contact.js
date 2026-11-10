@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
 import supportTeamImg from "../images/contact/support-team.jpg";
-import contactHeroBg from "../images/contact/contact-banner-balls.jpg";
+import AsciiLogoBanner from "./AsciiLogoBanner";
 import map from "../images/svg/map.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faTimes } from '@fortawesome/free-solid-svg-icons';
@@ -381,23 +381,8 @@ ${formData.message || 'N/A'}`;
         animate={{ opacity: 1 }}
         transition={{ duration: 0.5 }}
       >
-        {/* ================= Hero Banner (Matching Raiou Design with Desk Image) ================= */}
-        <div
-          className="contact-raiou-hero"
-          style={{ backgroundImage: `url(${contactHeroBg})` }}
-        >
-          <div className="contact-raiou-hero-container">
-            <div className="contact-raiou-hero-left">
-              <h1 className="contact-raiou-hero-title">
-                <span className="contact-raiou-pill">Contact</span>
-                <span className="contact-raiou-word">Us</span>
-              </h1>
-              <p className="contact-raiou-hero-desc">
-                Have a question or looking to begin your medical coding career? Fill out the form below, reach our counselors directly, or visit any of our 14 campuses across South India and Maharashtra.
-              </p>
-            </div>
-          </div>
-        </div>
+        {/* ================= Hero Banner: Interactive ASCII Wordmark ================= */}
+        <AsciiLogoBanner text="CONTACT US" />
 
         {/* ================= Section 1: Stay In Touch With Us ================= */}
         <section className="contact-raiou-touch-section">

@@ -6,7 +6,10 @@ import './RegionLanding.css';
 
 import puneImg from '../images/Branches/maha_pune_campus.jpg';
 import kolhapurImg from '../images/Branches/maha_kolhapur_campus.jpg';
-import mahaHeroImg from '../images/Branches/maha_pune_campus.jpg';
+import mahaHeroImg from '../images/Branches/maharashtra_hero.jpg';
+import puneLandmark from '../images/Landmarks/pune_landmark.jpg';
+import kolhapurLandmark from '../images/Landmarks/kolhapur_landmark.jpg';
+import VelouraSkincareHero from './VelouraSkincareHero';
 
 const MaharashtraLanding = () => {
   const { setIsOpen } = useContext(PopupContext);
@@ -163,79 +166,28 @@ const MaharashtraLanding = () => {
         canonical="https://www.thoughtflows.in/maharashtra"
       />
 
-      {/* Hero Section */}
-      <section className="region-hero">
-        <div className="region-container">
-          <div className="region-hero-inner">
-            <div className="region-hero-content">
-              <div className="region-breadcrumb">
-                <Link to="/">Home</Link>
-                <span>/</span>
-                <span>Branches</span>
-                <span>/</span>
-                <span style={{ color: '#0f172a', fontWeight: 600 }}>Maharashtra</span>
-              </div>
-              <div className="region-hero-badge">
-                🌟 Maharashtra's Leading Medical Coding Hub · Pune & Kolhapur
-              </div>
-              <h1 className="region-hero-title">
-                Medical Coding Course in <span>Maharashtra</span> — CPC &amp; CCS Training
-              </h1>
-              <p className="region-hero-subtitle">
-                Build a thriving career in Western India's fast-growing healthcare technology sector. Get trained at our premier campuses in <strong>Pune</strong> and <strong>Kolhapur</strong> by AAPC-certified mentors with real-time chart practice and 100% placement assurance.
-              </p>
-
-              <div className="region-hero-actions">
-                <a href="#campuses" className="btn-primary-action">
-                  Explore Maharashtra Campuses &darr;
-                </a>
-                <button onClick={() => setIsOpen(true)} className="btn-secondary-action">
-                  Enquire for Free Demo
-                </button>
-              </div>
-
-              <div className="region-hero-stats">
-                <div className="hero-stat-card">
-                  <div className="hero-stat-num">2</div>
-                  <div className="hero-stat-label">Maharashtra Campuses</div>
-                </div>
-                <div className="hero-stat-card">
-                  <div className="hero-stat-num">5000+</div>
-                  <div className="hero-stat-label">Successful Placements</div>
-                </div>
-                <div className="hero-stat-card">
-                  <div className="hero-stat-num">95%+</div>
-                  <div className="hero-stat-label">CPC Exam Pass Rate</div>
-                </div>
-                <div className="hero-stat-card">
-                  <div className="hero-stat-num">100%</div>
-                  <div className="hero-stat-label">Placement Support</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="region-hero-visual">
-              <div className="hero-visual-card">
-                <img src={mahaHeroImg} alt="ThoughtFlows Maharashtra Medical Coding Training" />
-                <div className="hero-floating-chip chip-top">
-                  <div className="chip-icon">🎯</div>
-                  <div>
-                    <div style={{ fontSize: '12px', color: '#64748b' }}>Certification Success</div>
-                    <div style={{ fontWeight: 700, color: '#0f172a' }}>98.2% CPC Pass Rate</div>
-                  </div>
-                </div>
-                <div className="hero-floating-chip chip-bottom">
-                  <div className="chip-icon">💼</div>
-                  <div>
-                    <div style={{ fontSize: '12px', color: '#64748b' }}>Campus Placements</div>
-                    <div style={{ fontWeight: 700, color: '#0f172a' }}>Pune & Mumbai MNCs</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* ================= HERO ================= */}
+      <VelouraSkincareHero
+        brandName="thoughtflows"
+        brandSubtitle="maharashtra"
+        brandAriaLabel="ThoughtFlows Medical Coding Classes in Maharashtra"
+        productImage={puneLandmark}
+        faceImage={puneImg}
+        cardImage={kolhapurLandmark}
+        leftImageAlt="Historic Shaniwar Wada Fort Pune Maharashtra"
+        rightImageAlt="ThoughtFlows Maharashtra Modern Campus Interior"
+        cardImageAlt="Grand New Palace Kolhapur Maharashtra"
+        exploreText="Free Demo"
+        exploreHref="/contact"
+        onExploreClick={() => {
+          window.location.href = "/contact";
+        }}
+        showTitles={false}
+        showNavLinks={false}
+        showSideControl={false}
+        showBottomRight={false}
+        showBottomLeft={false}
+      />
 
       {/* Campuses Section */}
       <section className="region-section" id="campuses">

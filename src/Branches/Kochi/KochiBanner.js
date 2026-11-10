@@ -1,173 +1,34 @@
-import React from "react";
-import bannerImage from "../../images/homebannerbg.png";
-import kochi from "../../images/Branches/kochi branch.png";
-import banner2 from "../../images/Branches/lapgirl.png";
-// import cbe1banner from '../../images/Branches/cbe1bannerRight.png'
-import { Container, Row } from "react-bootstrap";
-import CountUp from "react-countup";
-import { Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
-// import bannerVid from "../../images/Branches/online/Comp.mp4"
-
+import React, { useContext } from "react";
+import { PopupContext } from "../../context/PopupContext";
+import VelouraSkincareHero from "../VelouraSkincareHero";
+import kochiLandmark from "../../images/Landmarks/kochi_landmark.jpg";
+import kochiCampus from "../../images/Branches/kerala_kochi_campus.jpg";
+import keralaBackwaters from "../../images/Landmarks/kerala_backwaters.jpg";
 
 const KochiBanner = () => {
+  const { setIsOpen } = useContext(PopupContext) || {};
   return (
-    <>
-      <Row
-        className="cbe1-banner"
-        style={{
-          backgroundImage: `url(${bannerImage})`,
-          backgroundSize: "cover",
-          backgroundPosition: "center",
-          overflow: "hidden",
-          backgroundRepeat: "no-repeat",
-          minHeight: "85vh",
-          height: "auto",
-          alignItems: "center",
-          padding: "20px 0 40px 0",
-          marginTop: "0px",
-          margin: 0
-        }}
-      >
-        <Col lg={1} xs={0}></Col>
-        <Col lg={3} md={4} xs={12} className='cbe1-banner-lft pt-5 px-4 mb-4 mb-lg-0 d-flex flex-column justify-content-lg-start justify-content-center align-items-lg-start align-items-center'>
-          <Col className='cbe1-banner-heading'>
-            <h1 style={{
-              fontSize: 'clamp(28px, 5vw, 40px)',
-              lineHeight: '1.2'
-            }}>Medical Coding Course in <br /> <span style={{ color: '#097D8A' }}>Kochi</span> with Placement Support</h1>
-          </Col>
-          <Col>
-            <p style={{
-              fontSize: 'clamp(14px, 3vw, 16px)',
-              marginTop: '20px',
-              maxWidth: '600px'
-            }}>Learn Medical Coding through Practical Training, CPC Certification Guidance, and Placement Support for Freshers, Professionals, and Career Switchers.</p>
-          </Col>
-          <Col className='cbe1-btn '>
-            <Link to="/contact" className=" button-animation d">
-              Book Free Demo Class
-            </Link>
-          </Col>
-        </Col>
-
-        <Col lg={7} md={8} xs={12} className='cbe1-banner-rht' style={{
-          display: 'flex',
-          justifyContent: 'center',
-          alignItems: 'center',
-          paddingTop: '0'
-        }}>
-          <img
-            src={kochi}
-            alt='bannergif'
-            className='bannergif banner-appear'
-            style={{
-              maxWidth: "100%",
-              width: "auto",
-              height: "auto",
-              objectFit: "contain",
-              marginBottom: "-40px"
-            }}
-          />
-        </Col>
-        <Col lg={1} xs={0}></Col>
-      </Row>
-      <Container fluid className='cbe1-counter px-3'
-        style={{
-          background: '#fff',
-          borderRadius: 'clamp(15px, 3vw, 80px)',
-          boxShadow: '0 3px 15px 0 rgba(0, 0, 0, 0.13)',
-          marginTop: '-40px',
-          padding: 'clamp(15px, 3vw, 30px)',
-          zIndex: 2,
-          position: 'relative',
-          maxWidth: '95%',
-          margin: 'clamp(-30px, -4vw, -40px) auto 0'
-        }}>
-        <Row className="align-items-center">
-          <Col lg={12}>
-            <Row className="gy-4 gx-3">
-              <Col xs={6} sm={6} md={3} lg={3} className="text-center">
-                <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
-                  <p style={{
-                    color: '#FFC100',
-                    fontWeight: '700',
-                    fontSize: 'clamp(18px, 3.5vw, 30px)',
-                    margin: 0,
-                    lineHeight: '1.2'
-                  }}>
-                    <CountUp start={0} end={35000} separator="," />+
-                  </p>
-                  <p style={{
-                    fontWeight: '500',
-                    fontSize: 'clamp(12px, 2.5vw, 18px)',
-                    marginTop: '5px',
-                    lineHeight: '1.2'
-                  }}>Training</p>
-                </div>
-              </Col>
-              <Col xs={6} sm={6} md={3} lg={3} className="text-center">
-                <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
-                  <p style={{
-                    color: '#F15BB5',
-                    fontWeight: '700',
-                    fontSize: 'clamp(18px, 3.5vw, 30px)',
-                    margin: 0,
-                    lineHeight: '1.2'
-                  }}>
-                    <CountUp start={0} end={30000} separator="," />+
-                  </p>
-                  <p style={{
-                    fontWeight: '500',
-                    fontSize: 'clamp(12px, 2.5vw, 18px)',
-                    marginTop: '5px',
-                    lineHeight: '1.2'
-                  }}>Placement</p>
-                </div>
-              </Col>
-              <Col xs={6} sm={6} md={3} lg={3} className="text-center">
-                <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
-                  <p style={{
-                    color: '#00BBFA',
-                    fontWeight: '700',
-                    fontSize: 'clamp(18px, 3.5vw, 30px)',
-                    margin: 0,
-                    lineHeight: '1.2'
-                  }}>
-                    <CountUp start={0} end={49} separator="," />+
-                  </p>
-                  <p style={{
-                    fontWeight: '500',
-                    fontSize: 'clamp(12px, 2.5vw, 18px)',
-                    marginTop: '5px',
-                    lineHeight: '1.2'
-                  }}>Courses</p>
-                </div>
-              </Col>
-              <Col xs={6} sm={6} md={3} lg={3} className="text-center">
-                <div className="counter-item" style={{ padding: 'clamp(8px, 2vw, 15px)' }}>
-                  <p style={{
-                    color: '#01F6D5',
-                    fontWeight: '700',
-                    fontSize: 'clamp(18px, 3.5vw, 30px)',
-                    margin: 0,
-                    lineHeight: '1.2'
-                  }}>
-                    <CountUp start={0} end={14} separator="," />+
-                  </p>
-                  <p style={{
-                    fontWeight: '500',
-                    fontSize: 'clamp(12px, 2.5vw, 18px)',
-                    marginTop: '5px',
-                    lineHeight: '1.2'
-                  }}>Branches</p>
-                </div>
-              </Col>
-            </Row>
-          </Col>
-        </Row>
-      </Container>
-    </>
+    <VelouraSkincareHero
+      brandName="thoughtflows"
+      brandSubtitle="kochi"
+      brandAriaLabel="ThoughtFlows Medical Coding Course in Kochi"
+      productImage={kochiLandmark}
+      faceImage={kochiCampus}
+      cardImage={keralaBackwaters}
+      leftImageAlt="Iconic Chinese Fishing Nets Fort Kochi Kerala"
+      rightImageAlt="ThoughtFlows Kochi Academy Modern Campus Interior"
+      cardImageAlt="Tranquil Kerala Backwaters and Houseboat"
+      exploreText="Free Demo"
+      exploreHref="/contact"
+      onExploreClick={() => {
+        window.location.href = "/contact";
+      }}
+      showTitles={false}
+      showNavLinks={false}
+      showSideControl={false}
+      showBottomRight={false}
+      showBottomLeft={false}
+    />
   );
 };
 

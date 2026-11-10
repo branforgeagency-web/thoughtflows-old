@@ -1,0 +1,265 @@
+/* ==========================================================================
+   3D Coverflow Carousel - ThoughtFlows Placements
+   ========================================================================== */
+
+:root {
+    --coverflow-card-size-desktop: clamp(230px, 22vw, 360px);
+    --coverflow-card-size-mobile: min(72vw, 300px);
+    --coverflow-radius-desktop: 26px;
+    --coverflow-radius-mobile: 21px;
+}
+
+/* Full-width, single-screen white carousel section */
+.coverflow-section {
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 0 65px;
+    box-sizing: border-box;
+    overflow: hidden;
+    user-select: none;
+    -webkit-user-select: none;
+    outline: none;
+    border: none;
+    box-shadow: none;
+}
+
+/* Header */
+.coverflow-header {
+    text-align: center;
+    margin-bottom: 30px;
+    z-index: 5;
+    background: transparent;
+    padding: 0 20px;
+}
+
+.coverflow-heading {
+    font-family: 'Playfair Display', Georgia, 'Times New Roman', serif;
+    font-size: clamp(2rem, 3.5vw, 2.6rem);
+    color: #0b3a66;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: -0.01em;
+}
+
+.coverflow-header-subtitle {
+    font-size: 0.95rem;
+    color: #64748b;
+    margin: 10px 0 0;
+    font-weight: 500;
+}
+
+/* Stage container: sets perspective for 3D coverflow */
+.coverflow-stage {
+    position: relative;
+    width: 100%;
+    height: calc(var(--coverflow-card-size-desktop) + 40px);
+    perspective: 1150px;
+    perspective-origin: 50% 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: visible;
+    pointer-events: auto;
+}
+
+/* Broad deck shadow: soft wide elliptical shadow beneath the complete card arrangement */
+.coverflow-deck-shadow {
+    position: absolute;
+    bottom: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: min(1100px, 94vw);
+    height: 50px;
+    background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(15, 23, 42, 0.08) 0%, rgba(15, 23, 42, 0.02) 50%, transparent 80%);
+    filter: blur(16px);
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Flat shadow plane for individual card shadows */
+.coverflow-shadow-plane {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Individual card shadow: absolutely positioned elliptical element underneath each card */
+.coverflow-card-shadow {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--coverflow-card-size-desktop);
+    height: 34px;
+    margin-left: calc(var(--coverflow-card-size-desktop) / -2);
+    margin-top: calc(var(--coverflow-card-size-desktop) / 2 - 12px);
+    background: radial-gradient(ellipse 50% 50% at 50% 50%, rgba(15, 23, 42, 0.28) 0%, rgba(15, 23, 42, 0.08) 45%, transparent 75%);
+    border-radius: 50%;
+    filter: blur(9px);
+    pointer-events: none;
+    will-change: transform, opacity;
+}
+
+/* 3D Cards track */
+.coverflow-track {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: 0;
+    height: 0;
+    transform-style: preserve-3d;
+    pointer-events: none;
+    z-index: 3;
+}
+
+/* Individual square card */
+.coverflow-card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--coverflow-card-size-desktop);
+    height: var(--coverflow-card-size-desktop);
+    aspect-ratio: 1 / 1;
+    margin-left: calc(var(--coverflow-card-size-desktop) / -2);
+    margin-top: calc(var(--coverflow-card-size-desktop) / -2);
+    border-radius: var(--coverflow-radius-desktop);
+    overflow: hidden;
+    cursor: pointer;
+    will-change: transform, opacity;
+    transform-style: preserve-3d;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    background-color: #ffffff;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+    pointer-events: auto;
+    transition: box-shadow 0.3s ease;
+}
+
+.coverflow-card.is-active {
+    box-shadow: 0 10px 32px rgba(15, 23, 42, 0.12);
+}
+
+.coverflow-card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    pointer-events: none;
+    user-select: none;
+    -webkit-user-select: none;
+    -webkit-user-drag: none;
+}
+
+/* Card bottom overlay showing student name, company & designation right on the card */
+.coverflow-card-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(11, 58, 102, 0.94) 0%, rgba(15, 23, 42, 0.42) 36%, transparent 64%);
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 16px 18px;
+    box-sizing: border-box;
+    pointer-events: none;
+}
+
+.coverflow-card-name {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 1.25;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.coverflow-card-company {
+    color: #38bdf8;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 3px;
+    letter-spacing: 0.02em;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.coverflow-card-designation {
+    color: #cbd5e1;
+    font-size: 11.5px;
+    font-weight: 500;
+    margin-top: 2px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+
+@media (max-width: 768px) {
+    .coverflow-section {
+        padding: 30px 0 45px;
+    }
+
+    .coverflow-heading {
+        font-size: 1.85rem;
+    }
+
+    .coverflow-header {
+        margin-bottom: 20px;
+    }
+
+    .coverflow-stage {
+        height: calc(var(--coverflow-card-size-mobile) + 30px);
+        perspective: 900px;
+    }
+
+    .coverflow-card {
+        width: var(--coverflow-card-size-mobile);
+        height: var(--coverflow-card-size-mobile);
+        margin-left: calc(var(--coverflow-card-size-mobile) / -2);
+        margin-top: calc(var(--coverflow-card-size-mobile) / -2);
+        border-radius: var(--coverflow-radius-mobile);
+    }
+
+    .coverflow-card-shadow {
+        width: var(--coverflow-card-size-mobile);
+        margin-left: calc(var(--coverflow-card-size-mobile) / -2);
+        margin-top: calc(var(--coverflow-card-size-mobile) / 2 - 10px);
+        filter: blur(7px);
+    }
+
+    .coverflow-card-overlay {
+        padding: 12px 14px;
+    }
+
+    .coverflow-card-name {
+        font-size: 14px;
+    }
+
+    .coverflow-card-company {
+        font-size: 11.5px;
+    }
+
+    .coverflow-card-designation {
+        font-size: 10.5px;
+    }
+}
