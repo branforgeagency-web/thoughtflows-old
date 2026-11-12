@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import mainPhoto from "../images/welcome/welcome-students-collab-v2.jpg";
-import mentorPhoto from "../images/Home/counters-training.jpg";
+import mainPhoto from "../images/AboutImg/about-workspace.jpg";
+import mentorPhoto from "../images/AboutImg/about-office-interior.jpg";
 import fallbackPhoto from "../images/AboutImg/about-image.jpg";
 
 /**
@@ -110,7 +110,7 @@ const AboutUsEditorial = () => {
         <div className="tf-main-image-wrap">
           <img
             src={mainImgSrc}
-            alt="Medical coding professionals reviewing healthcare documentation together on a laptop"
+            alt="ThoughtFlows Medical Coding Academy workspace with team members working at desks"
             className="tf-main-image"
             loading="lazy"
             onError={() => setMainImgSrc(fallbackPhoto)}
@@ -124,7 +124,7 @@ const AboutUsEditorial = () => {
           <div className="tf-small-image-wrap">
             <img
               src={mentorImgSrc}
-              alt="A medical coding trainer mentoring students during a professional healthcare education session"
+              alt="Modern ThoughtFlows Medical Coding Academy office and counseling cabin interior"
               className="tf-small-image"
               loading="lazy"
               onError={() => setMentorImgSrc(fallbackPhoto)}
@@ -324,7 +324,7 @@ const CSS = `
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 58%;
+  object-position: center center;
   scale: 1.055;
   translate: calc(var(--mouse-x) * -8px) calc(var(--mouse-y) * -6px);
   transition: translate 0.4s cubic-bezier(0.16, 1, 0.3, 1),
