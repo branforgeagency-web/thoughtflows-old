@@ -1,33 +1,34 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Branches.css";
+import { mediaUrl } from '../config/media';
+const ameerpetImg = mediaUrl("images/Branches/clean/Ameerpet.png");
+const dilsukhnagarImg = mediaUrl("images/Branches/clean/Dilsukhnagar.png");
+const gandhipuramImg = mediaUrl("images/Branches/clean/Gandhipuram.png");
+const hopesImg = mediaUrl("images/Branches/clean/Hopes.png");
+const kochiImg = mediaUrl("images/Branches/clean/Kochi.png");
+const salemImg = mediaUrl("images/Branches/clean/Salem.png");
+const saravanampattiImg = mediaUrl("images/Branches/clean/Saravanampatti.png");
+const tirupatiImg = mediaUrl("images/Branches/clean/Tirupati.png");
+const trichyImg = mediaUrl("images/Branches/clean/Trichy.png");
+const trivandrumImg = mediaUrl("images/Branches/clean/Trivandrum.png");
+const vizagImg = mediaUrl("images/Branches/clean/Vizag.png");
+const puneImg = mediaUrl("images/Branches/clean/Pune.png");
+const kolhapurImg = mediaUrl("images/Branches/clean/Kolhapur.png");
+const theniImg = mediaUrl("images/Branches/theni-teaching.jpg");
+const gandhipuramPhoto = mediaUrl("images/Branches/cards/gandhipuram.jpg");
+const hopesPhoto = mediaUrl("images/Branches/cards/hopes.jpg");
+const saravanampattiPhoto = mediaUrl("images/Branches/cards/saravanampatti.jpg");
+const kochiPhoto = mediaUrl("images/Branches/cards/kochi.jpg");
+const trivandrumPhoto = mediaUrl("images/Branches/cards/trivandrum.jpg");
+const kolhapurPhoto = mediaUrl("images/Branches/cards/kolhapur.jpg");
+const punePhoto = mediaUrl("images/Branches/cards/pune.jpg");
+const ameerpetPhoto = mediaUrl("images/Branches/cards/ameerpet.jpg");
+const dilsukhnagarPhoto = mediaUrl("images/Branches/cards/dilsukhnagar.jpg");
+const theniPhoto = mediaUrl("images/Branches/cards/theni.jpg");
 
-import ameerpetImg from "../images/Branches/clean/Ameerpet.png";
-import dilsukhnagarImg from "../images/Branches/clean/Dilsukhnagar.png";
-import gandhipuramImg from "../images/Branches/clean/Gandhipuram.png";
-import hopesImg from "../images/Branches/clean/Hopes.png";
-import kochiImg from "../images/Branches/clean/Kochi.png";
-import salemImg from "../images/Branches/clean/Salem.png";
-import saravanampattiImg from "../images/Branches/clean/Saravanampatti.png";
-import tirupatiImg from "../images/Branches/clean/Tirupati.png";
-import trichyImg from "../images/Branches/clean/Trichy.png";
-import trivandrumImg from "../images/Branches/clean/Trivandrum.png";
-import vizagImg from "../images/Branches/clean/Vizag.png";
-import puneImg from "../images/Branches/clean/Pune.png";
-import kolhapurImg from "../images/Branches/clean/Kolhapur.png";
-import theniImg from "../images/Branches/theni-teaching.jpg";
 
 // card-sized campus photos (portrait crops)
-import gandhipuramPhoto from "../images/Branches/cards/gandhipuram.jpg";
-import hopesPhoto from "../images/Branches/cards/hopes.jpg";
-import saravanampattiPhoto from "../images/Branches/cards/saravanampatti.jpg";
-import kochiPhoto from "../images/Branches/cards/kochi.jpg";
-import trivandrumPhoto from "../images/Branches/cards/trivandrum.jpg";
-import kolhapurPhoto from "../images/Branches/cards/kolhapur.jpg";
-import punePhoto from "../images/Branches/cards/pune.jpg";
-import ameerpetPhoto from "../images/Branches/cards/ameerpet.jpg";
-import dilsukhnagarPhoto from "../images/Branches/cards/dilsukhnagar.jpg";
-import theniPhoto from "../images/Branches/cards/theni.jpg";
 
 const branchList = [
   { name: "Ameerpet", photo: ameerpetPhoto, region: "Telangana", img: ameerpetImg, path: "/Trusted-Medical-Coding-Ameerpet" },

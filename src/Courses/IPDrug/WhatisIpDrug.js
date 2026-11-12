@@ -1,5 +1,6 @@
 import React from 'react';
-import ipdrug from "../../images/courseimage/Inpatient Drug.webp"
+import { mediaUrl } from '../../config/media';
+const ipdrug = mediaUrl("images/courseimage/Inpatient Drug.webp");
 
 const WhatisIpDrug = () => {
   return (

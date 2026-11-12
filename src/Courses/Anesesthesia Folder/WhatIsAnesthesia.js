@@ -1,5 +1,6 @@
 import React from 'react';
-import anesthesiaImg from "../../images/courseimage/Anesesthesia.webp";
+import { mediaUrl } from '../../config/media';
+const anesthesiaImg = mediaUrl("images/courseimage/Anesesthesia.webp");
 
 const moduleData = [
   {

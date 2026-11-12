@@ -4,12 +4,13 @@ import Meta from '../Meta';
 import { PopupContext } from '../context/PopupContext';
 import './RegionLanding.css';
 
-import puneImg from '../images/Branches/maha_pune_campus.jpg';
-import kolhapurImg from '../images/Branches/maha_kolhapur_campus.jpg';
-import mahaHeroImg from '../images/Branches/maharashtra_hero.jpg';
-import puneLandmark from '../images/Landmarks/pune_landmark.jpg';
-import kolhapurLandmark from '../images/Landmarks/kolhapur_landmark.jpg';
 import VelouraSkincareHero from './VelouraSkincareHero';
+import { mediaUrl } from '../config/media';
+const puneImg = mediaUrl('images/Branches/maha_pune_campus.jpg');
+const kolhapurImg = mediaUrl('images/Branches/maha_kolhapur_campus.jpg');
+const mahaHeroImg = mediaUrl('images/Branches/maharashtra_hero.jpg');
+const puneLandmark = mediaUrl('images/Landmarks/pune_landmark.jpg');
+const kolhapurLandmark = mediaUrl('images/Landmarks/kolhapur_landmark.jpg');
 
 const MaharashtraLanding = () => {
   const { setIsOpen } = useContext(PopupContext);

@@ -1,22 +1,23 @@
 import { branchDetails } from "../../data/branchDetails";
+import { mediaUrl } from '../../config/media';
+const ameerpetImg = mediaUrl("images/Branches/clean/Ameerpet.png");
+const dilsukhnagarImg = mediaUrl("images/Branches/clean/Dilsukhnagar.png");
+const gandhipuramImg = mediaUrl("images/Branches/clean/Gandhipuram.png");
+const hopesImg = mediaUrl("images/Branches/clean/Hopes.png");
+const kochiImg = mediaUrl("images/Branches/clean/Kochi.png");
+const kolhapurImg = mediaUrl("images/Branches/clean/Kolhapur.png");
+const puneImg = mediaUrl("images/Branches/clean/Pune.png");
+const salemImg = mediaUrl("images/Branches/clean/Salem.png");
+const saravanampattiImg = mediaUrl("images/Branches/clean/Saravanampatti.png");
+const tirupatiImg = mediaUrl("images/Branches/clean/Tirupati.png");
+const trichyImg = mediaUrl("images/Branches/clean/Trichy.png");
+const trivandrumImg = mediaUrl("images/Branches/clean/Trivandrum.png");
+const vizagImg = mediaUrl("images/Branches/clean/Vizag.png");
+const theniImg = mediaUrl("images/Branches/theni-teaching.jpg");
 
 // Original branch photos (src/images/Branches/clean) — the same images the
 // previous branch section used. Theni has no clean photo, so it keeps the
 // image the old section used for it.
-import ameerpetImg from "../../images/Branches/clean/Ameerpet.png";
-import dilsukhnagarImg from "../../images/Branches/clean/Dilsukhnagar.png";
-import gandhipuramImg from "../../images/Branches/clean/Gandhipuram.png";
-import hopesImg from "../../images/Branches/clean/Hopes.png";
-import kochiImg from "../../images/Branches/clean/Kochi.png";
-import kolhapurImg from "../../images/Branches/clean/Kolhapur.png";
-import puneImg from "../../images/Branches/clean/Pune.png";
-import salemImg from "../../images/Branches/clean/Salem.png";
-import saravanampattiImg from "../../images/Branches/clean/Saravanampatti.png";
-import tirupatiImg from "../../images/Branches/clean/Tirupati.png";
-import trichyImg from "../../images/Branches/clean/Trichy.png";
-import trivandrumImg from "../../images/Branches/clean/Trivandrum.png";
-import vizagImg from "../../images/Branches/clean/Vizag.png";
-import theniImg from "../../images/Branches/theni-teaching.jpg";
 
 /** Display order of states in the filter. */
 export const STATES = ["Tamil Nadu", "Kerala", "Telangana", "Andhra Pradesh", "Maharashtra"];

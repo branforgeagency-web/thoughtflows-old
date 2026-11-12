@@ -1,7 +1,8 @@
 import React from 'react';
-import branch from "../../images/Branches/image7 copy.png";
-import labImage from "../../images/Branches/online/lab.jpg";
 import { CheckCircle2, ChevronDown } from 'lucide-react';
+import { mediaUrl } from '../../config/media';
+const branch = mediaUrl("images/Branches/image7 copy.png");
+const labImage = mediaUrl("images/Branches/online/lab.jpg");
 
 function KochiCore() {
   const journeySteps = [

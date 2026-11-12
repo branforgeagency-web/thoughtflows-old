@@ -1,11 +1,12 @@
 import React from "react";
 import Reveal from "./Reveal";
-import imgTerm from "../../images/Branches/online/on1.jpg";
-import imgAnatomy from "../../images/Branches/online/on11.jpg";
-import imgIcd from "../../images/Branches/online/on7.jpg";
-import imgCpt from "../../images/Branches/online/on2.jpg";
-import imgHcpcs from "../../images/Branches/online/on13.jpg";
-import imgPractical from "../../images/AboutImg/about-image.jpg";
+import { mediaUrl } from '../../config/media';
+const imgTerm = mediaUrl("images/Branches/online/on1.jpg");
+const imgAnatomy = mediaUrl("images/Branches/online/on11.jpg");
+const imgIcd = mediaUrl("images/Branches/online/on7.jpg");
+const imgCpt = mediaUrl("images/Branches/online/on2.jpg");
+const imgHcpcs = mediaUrl("images/Branches/online/on13.jpg");
+const imgPractical = mediaUrl("images/AboutImg/about-image.jpg");
 
 const topics = [
   { img: imgTerm, tag: "Foundation", title: "Medical Terminology", text: "Familiarize yourself with the terminology and abbreviations used in the fields of medicine and healthcare." },

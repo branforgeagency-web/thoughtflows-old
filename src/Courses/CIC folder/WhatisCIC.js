@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import rightimg from '../../images/Group710.png'
 import { Row, Col } from 'react-bootstrap'
 import { FaArrowRightLong } from "react-icons/fa6";
-import cicWebp from "../../images/courseimage/Thought flows Img 2 CIC.webp"
-import cic1 from "../../images/Course Images/CIC Exam Overview.jpg"
+import { mediaUrl } from '../../config/media';
+const rightimg = mediaUrl('images/Group710.png');
+const cicWebp = mediaUrl("images/courseimage/Thought flows Img 2 CIC.webp");
+const cic1 = mediaUrl("images/Course Images/CIC Exam Overview.jpg");
 function WhatisCIC() {
 
   const [isExpanded, setIsExpanded] = useState(false);

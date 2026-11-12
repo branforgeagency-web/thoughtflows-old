@@ -1,6 +1,7 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import branch from "../../images/Branches/image7 copy.png";
+import { mediaUrl } from '../../config/media';
+const branch = mediaUrl("images/Branches/image7 copy.png");
 
 function TrichyOnline2() {
   return (

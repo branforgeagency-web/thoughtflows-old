@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { PopupContext } from "../../context/PopupContext";
 import VelouraSkincareHero from "../VelouraSkincareHero";
-import tirupathiLandmark from "../../images/Landmarks/tirupathi_landmark.jpg";
-import campusInterior from "../../images/Branches/cbe_saravanampatti_campus.jpg";
-import tirupathiChandragiri from "../../images/Landmarks/tirupathi_chandragiri.jpg";
+import { mediaUrl } from '../../config/media';
+const tirupathiLandmark = mediaUrl("images/Landmarks/tirupathi_landmark.jpg");
+const campusInterior = mediaUrl("images/Branches/cbe_saravanampatti_campus.jpg");
+const tirupathiChandragiri = mediaUrl("images/Landmarks/tirupathi_chandragiri.jpg");
 
 const TirupathiBanner = () => {
   const { setIsOpen } = useContext(PopupContext) || {};

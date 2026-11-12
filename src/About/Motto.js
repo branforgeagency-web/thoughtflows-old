@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import study1 from "../images/AboutImg/course-02.jpg";
-import study2 from "../images/AboutImg/course-05.jpg";
-import study3 from "../images/AboutImg/Our Motto-Support.png";
-import join from "../images/AboutImg/join.jpg";
+import { mediaUrl } from '../config/media';
+const study1 = mediaUrl("images/AboutImg/course-02.jpg");
+const study2 = mediaUrl("images/AboutImg/course-05.jpg");
+const study3 = mediaUrl("images/AboutImg/Our Motto-Support.png");
+const join = mediaUrl("images/AboutImg/join.jpg");
 
 const TABS = [
   { key: "Quality", label: "Quality" },

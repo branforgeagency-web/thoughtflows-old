@@ -1,5 +1,6 @@
 import React from 'react';
-import micro from "../../images/Branches/online/testtube.png";
+import { mediaUrl } from '../../config/media';
+const micro = mediaUrl("images/Branches/online/testtube.png");
 
 function KolhapurSticky() {
   return (

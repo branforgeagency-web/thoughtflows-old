@@ -1,9 +1,10 @@
 import React from 'react';
-import training from '../../images/Courses/training.png';
-import learning from '../../images/Courses/learning.png';
-import classroom from '../../images/Courses/classroom.png';
-import studyMaterial from '../../images/Courses/3d-model.png';
-import certificate from '../../images/Courses/certificate.png';
+import { mediaUrl } from '../../config/media';
+const training = mediaUrl('images/Courses/training.png');
+const learning = mediaUrl('images/Courses/learning.png');
+const classroom = mediaUrl('images/Courses/classroom.png');
+const studyMaterial = mediaUrl('images/Courses/3d-model.png');
+const certificate = mediaUrl('images/Courses/certificate.png');
 
 const features = [
     { icon: classroom, title: 'Review Operative Reports', description: 'Analyzing surgical documentation to extract relevant details.' },

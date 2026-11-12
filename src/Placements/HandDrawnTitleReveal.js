@@ -1,6 +1,7 @@
 import React, { useCallback, useState } from 'react';
 import { motion, useReducedMotion } from 'framer-motion';
-import bannerPattern from './banner-pattern.png';
+import { mediaUrl } from '../config/media';
+const bannerPattern = mediaUrl('Placements/banner-pattern.png');
 
 /* A loose, irregular closed loop — hand-drawn rather than a perfect
    ellipse: asymmetric control points, and the path end lands just short

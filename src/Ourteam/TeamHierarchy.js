@@ -3,133 +3,134 @@
 
 import { useEffect } from "react"
 import { TeamMember } from "./TeamMember"
-import Awanth from "../images/Profile images/blazer pic/Aswanth - Regional Head.webp"
-import Ashok from "../images/Profile images/Group 2.png"
-import Arun from "../images/Profile images/Group 2 copy.png"
-import Arputhakumar from "../images/Profile images/Group 2 copy 2.png"
-import Anakha from "../images/Profile images/Group 2 copy 3.png"
-import Aleena from "../images/Profile images/Group 2 copy 4.png"
-import Akshaya from "../images/Profile images/Group 2 copy 5.png"
-import Ajai from "../images/Profile images/blazer pic/Ajay suriya-TALENT ACQUISITION EXECUTIVE.png"
-import Aswini from "../images/Profile images/Group 2 copy 8.png"
-import Atchaya from "../images/Profile images/Group 2 copy 9.png"
-import Babu from "../images/Profile images/blazer pic/Babu-ODM Executive.png"
-import Deva from "../images/Profile images/Group 2 copy 11.png"
-import Devi from "../images/Profile images/Group 2 copy 12.png"
-import Dharshini from "../images/Profile images/Group 2 copy 13.png"
-import Elilarasi from "../images/Profile images/Group 2 copy 14.png"
-import Gayatri from "../images/Profile images/blazer pic/Gayathri - BRANCH HEAD.webp"
-import Gayathri from "../images/Profile images/blazer pic/Gayathri - HR Executive.webp"
-import Jasmin from "../images/Profile images/Group 2 copy 17.png"
-import Kalai from "../images/Profile images/Group 2 copy 18.png"
-import Kalaimathi from "../images/Profile images/Group 2 copy 19.png"
-import Kanchana from "../images/Profile images/blazer pic/Kanchana - HR Executive.webp"
-import Kartheeswari from "../images/Profile images/Group 2 copy 21.png"
-import Karthik from "../images/Profile images/blazer pic/Karthick - DM TL.webp"
-import Karthika from "../images/Profile images/Group 2 copy 23.png"
-import Keerthika from "../images/Profile images/Group 2 copy 24.png"
-import Kiruthika from "../images/Profile images/blazer pic/Kiruthika - Digital Marketing Executive.webp"
-import Kishore from "../images/Profile images/blazer pic/Kishore Senthil.png"
-import Kowsikan from "../images/Profile images/Group 2 copy 27.png"
-import Logeshwaran from "../images/Profile images/Group 2 copy 28.png"
-import Lokesh from "../images/Profile images/blazer pic/Lokesh Babu - Marketing Head.webp"
-import Madhumitha from "../images/Profile images/Group 2 copy 30.png"
-import Manoj from "../images/Profile images/blazer pic/Manoj - Training Department Head.webp"
-import Mohamed from "../images/Profile images/Group 2 copy 32.png"
-import Mounika from "../images/Profile images/blazer pic/Mounika - Trainer.jpeg"
-import group2copy34 from "../images/Profile images/Group 2 copy 34.png"
-import Pavithra from "../images/Profile images/blazer pic/Pavithra - Training Manager.png"
-import Peemuthannagari from "../images/Profile images/blazer pic/Peemuthannagari Supraja - HR Executive.webp"
-import group2copy37 from "../images/Profile images/Group 2 copy 37.png"
-import Prabhu from "../images/Profile images/blazer pic/Prabhu - HR Executive.webp"
-import Pradheesh from "../images/Profile images/blazer pic/Pradheesh.jpeg"
-import Priyadharshini from "../images/Profile images/Group 2 copy 40.png"
-import Ram from "../images/Profile images/Group 2 copy 41.png"
-import Punitha from "../images/Profile images/Group 2 copy 42.png"
-import kumar from "../images/Profile images/blazer pic/Ram Kumar - DM Executive.webp"
-import Reshma from "../images/Profile images/Group 2 copy 44.png"
-import Sabnam from "../images/Profile images/Group 2 copy 45.png"
-import Sanjay from "../images/Profile images/Group 2 copy 46.png"
-import group2copy47 from "../images/Profile images/Group 2 copy 47.png"
-import Sasikala from "../images/Profile images/Sasikala.png"
-import Sindhu from "../images/Profile images/Group 2 copy 48.png"
-import Sindhuja from "../images/Profile images/blazer pic/Sindhuja -  HR - Team Lead.jpeg"
-import Srujana from "../images/Profile images/Group 2 copy 50.png"
-import Sruthi from "../images/Profile images/Group 2 copy 51.png"
-import Subashini from "../images/Profile images/blazer pic/Subashini - HR Executive.webp"
-import Suvarna from "../images/Profile images/blazer pic/Maisani Suvarna - TA Executive.webp"
-import Subiksha from "../images/Profile images/Group 2 copy 54.png"
-import Swetha from "../images/Profile images/Group 2 copy 55.png"
-import thulasi from "../images/Profile images/Group 2 copy 56.png"
-import Vaanmathi from "../images/Profile images/Group 2 copy 57.png"
-import Vaishna from "../images/Profile images/Group 2 copy 58.png"
-import Veenadhari from "../images/Profile images/blazer pic/VEENA - FRANCHISE PARTNER.webp"
-import Vidya from "../images/Profile images/Group 2 copy 60.png"
-import Vignesh from "../images/Profile images/blazer pic/Vignesh - HR Executive.webp"
-import group2copy63 from "../images/Profile images/Group 2 copy 63.png"
-import Mittu from "../images/Profile images/Mittu - Franchise Partner - Kerala.png"
-import BalaMurali from "../images/Profile images/blazer pic/karthick revision .jpg"
-import Banumathy from "../images/Profile images/blazer pic/bhanu mathi.png"
 import Meta from '../Meta';
-import Shilpa from "../images/Profile images/Shilpa.png"
-import Sreenath from "../images/Profile images/blazer pic/Sreenath Reddy - Technical and Marketing Executive.jpeg"
-import Kamara from "../images/Profile images/blazer pic/Kammara Boya Shiva - HR Executive.webp"
-import Sobika from "../images/Profile images/Sobika.png"
-import Manasa from "../images/Profile images/Manasa.png"
-import Manojs from "../images/Profile images/blazer pic/Manoj Kumar - OFFICE ASSISTANT.webp"
-import Aasifa from "../images/Profile images/blazer pic/Aashifa - Trainer.webp"
-import Jadav from "../images/Profile images/Pooja Jadav-trainer.jpeg"
-import Prasanna from "../images/Profile images/blazer pic/Prasanna - Trainer.webp"
-import Rukshar from "../images/Profile images/blazer pic/Rukshar - HR Executive.webp"
-import basu from "../images/Profile images/basu.png"
-import shruthy from "../images/Profile images/blazer pic/Shruthy-TA Executive.png"
-import Sreelekha from "../images/Profile images/blazer pic/Sreelekha - HR Executive.webp"
-import PavithraN from "../images/Profile images/blazer pic/Pavithra N - HR Executive.webp"
-import KalaiMathi from "../images/Profile images/blazer pic/KalaiMathi - HR Executive.webp"
-import Kannan from "../images/Profile images/blazer pic/Kannan - HR.webp"
-import Logarasan from "../images/Profile images/blazer pic/Logarsan-HR Executive.png"
-import PriyadharshiniR from "../images/Profile images/blazer pic/Priyadharshini - HR Executive.webp"
-import SangaviP from "../images/Profile images/blazer pic/Sangavi - HR Executive.webp"
-import Megha from "../images/Profile images/blazer pic/Megha-TALENT ACQUISITION EXECUTIVE.png"
+import { mediaUrl } from '../config/media';
+const Awanth = mediaUrl("images/Profile images/blazer pic/Aswanth - Regional Head.webp");
+const Ashok = mediaUrl("images/Profile images/Group 2.png");
+const Arun = mediaUrl("images/Profile images/Group 2 copy.png");
+const Arputhakumar = mediaUrl("images/Profile images/Group 2 copy 2.png");
+const Anakha = mediaUrl("images/Profile images/Group 2 copy 3.png");
+const Aleena = mediaUrl("images/Profile images/Group 2 copy 4.png");
+const Akshaya = mediaUrl("images/Profile images/Group 2 copy 5.png");
+const Ajai = mediaUrl("images/Profile images/blazer pic/Ajay suriya-TALENT ACQUISITION EXECUTIVE.png");
+const Aswini = mediaUrl("images/Profile images/Group 2 copy 8.png");
+const Atchaya = mediaUrl("images/Profile images/Group 2 copy 9.png");
+const Babu = mediaUrl("images/Profile images/blazer pic/Babu-ODM Executive.png");
+const Deva = mediaUrl("images/Profile images/Group 2 copy 11.png");
+const Devi = mediaUrl("images/Profile images/Group 2 copy 12.png");
+const Dharshini = mediaUrl("images/Profile images/Group 2 copy 13.png");
+const Elilarasi = mediaUrl("images/Profile images/Group 2 copy 14.png");
+const Gayatri = mediaUrl("images/Profile images/blazer pic/Gayathri - BRANCH HEAD.webp");
+const Gayathri = mediaUrl("images/Profile images/blazer pic/Gayathri - HR Executive.webp");
+const Jasmin = mediaUrl("images/Profile images/Group 2 copy 17.png");
+const Kalai = mediaUrl("images/Profile images/Group 2 copy 18.png");
+const Kalaimathi = mediaUrl("images/Profile images/Group 2 copy 19.png");
+const Kanchana = mediaUrl("images/Profile images/blazer pic/Kanchana - HR Executive.webp");
+const Kartheeswari = mediaUrl("images/Profile images/Group 2 copy 21.png");
+const Karthik = mediaUrl("images/Profile images/blazer pic/Karthick - DM TL.webp");
+const Karthika = mediaUrl("images/Profile images/Group 2 copy 23.png");
+const Keerthika = mediaUrl("images/Profile images/Group 2 copy 24.png");
+const Kiruthika = mediaUrl("images/Profile images/blazer pic/Kiruthika - Digital Marketing Executive.webp");
+const Kishore = mediaUrl("images/Profile images/blazer pic/Kishore Senthil.png");
+const Kowsikan = mediaUrl("images/Profile images/Group 2 copy 27.png");
+const Logeshwaran = mediaUrl("images/Profile images/Group 2 copy 28.png");
+const Lokesh = mediaUrl("images/Profile images/blazer pic/Lokesh Babu - Marketing Head.webp");
+const Madhumitha = mediaUrl("images/Profile images/Group 2 copy 30.png");
+const Manoj = mediaUrl("images/Profile images/blazer pic/Manoj - Training Department Head.webp");
+const Mohamed = mediaUrl("images/Profile images/Group 2 copy 32.png");
+const Mounika = mediaUrl("images/Profile images/blazer pic/Mounika - Trainer.jpeg");
+const group2copy34 = mediaUrl("images/Profile images/Group 2 copy 34.png");
+const Pavithra = mediaUrl("images/Profile images/blazer pic/Pavithra - Training Manager.png");
+const Peemuthannagari = mediaUrl("images/Profile images/blazer pic/Peemuthannagari Supraja - HR Executive.webp");
+const group2copy37 = mediaUrl("images/Profile images/Group 2 copy 37.png");
+const Prabhu = mediaUrl("images/Profile images/blazer pic/Prabhu - HR Executive.webp");
+const Pradheesh = mediaUrl("images/Profile images/blazer pic/Pradheesh.jpeg");
+const Priyadharshini = mediaUrl("images/Profile images/Group 2 copy 40.png");
+const Ram = mediaUrl("images/Profile images/Group 2 copy 41.png");
+const Punitha = mediaUrl("images/Profile images/Group 2 copy 42.png");
+const kumar = mediaUrl("images/Profile images/blazer pic/Ram Kumar - DM Executive.webp");
+const Reshma = mediaUrl("images/Profile images/Group 2 copy 44.png");
+const Sabnam = mediaUrl("images/Profile images/Group 2 copy 45.png");
+const Sanjay = mediaUrl("images/Profile images/Group 2 copy 46.png");
+const group2copy47 = mediaUrl("images/Profile images/Group 2 copy 47.png");
+const Sasikala = mediaUrl("images/Profile images/Sasikala.png");
+const Sindhu = mediaUrl("images/Profile images/Group 2 copy 48.png");
+const Sindhuja = mediaUrl("images/Profile images/blazer pic/Sindhuja -  HR - Team Lead.jpeg");
+const Srujana = mediaUrl("images/Profile images/Group 2 copy 50.png");
+const Sruthi = mediaUrl("images/Profile images/Group 2 copy 51.png");
+const Subashini = mediaUrl("images/Profile images/blazer pic/Subashini - HR Executive.webp");
+const Suvarna = mediaUrl("images/Profile images/blazer pic/Maisani Suvarna - TA Executive.webp");
+const Subiksha = mediaUrl("images/Profile images/Group 2 copy 54.png");
+const Swetha = mediaUrl("images/Profile images/Group 2 copy 55.png");
+const thulasi = mediaUrl("images/Profile images/Group 2 copy 56.png");
+const Vaanmathi = mediaUrl("images/Profile images/Group 2 copy 57.png");
+const Vaishna = mediaUrl("images/Profile images/Group 2 copy 58.png");
+const Veenadhari = mediaUrl("images/Profile images/blazer pic/VEENA - FRANCHISE PARTNER.webp");
+const Vidya = mediaUrl("images/Profile images/Group 2 copy 60.png");
+const Vignesh = mediaUrl("images/Profile images/blazer pic/Vignesh - HR Executive.webp");
+const group2copy63 = mediaUrl("images/Profile images/Group 2 copy 63.png");
+const Mittu = mediaUrl("images/Profile images/Mittu - Franchise Partner - Kerala.png");
+const BalaMurali = mediaUrl("images/Profile images/blazer pic/karthick revision .jpg");
+const Banumathy = mediaUrl("images/Profile images/blazer pic/bhanu mathi.png");
+const Shilpa = mediaUrl("images/Profile images/Shilpa.png");
+const Sreenath = mediaUrl("images/Profile images/blazer pic/Sreenath Reddy - Technical and Marketing Executive.jpeg");
+const Kamara = mediaUrl("images/Profile images/blazer pic/Kammara Boya Shiva - HR Executive.webp");
+const Sobika = mediaUrl("images/Profile images/Sobika.png");
+const Manasa = mediaUrl("images/Profile images/Manasa.png");
+const Manojs = mediaUrl("images/Profile images/blazer pic/Manoj Kumar - OFFICE ASSISTANT.webp");
+const Aasifa = mediaUrl("images/Profile images/blazer pic/Aashifa - Trainer.webp");
+const Jadav = mediaUrl("images/Profile images/Pooja Jadav-trainer.jpeg");
+const Prasanna = mediaUrl("images/Profile images/blazer pic/Prasanna - Trainer.webp");
+const Rukshar = mediaUrl("images/Profile images/blazer pic/Rukshar - HR Executive.webp");
+const basu = mediaUrl("images/Profile images/basu.png");
+const shruthy = mediaUrl("images/Profile images/blazer pic/Shruthy-TA Executive.png");
+const Sreelekha = mediaUrl("images/Profile images/blazer pic/Sreelekha - HR Executive.webp");
+const PavithraN = mediaUrl("images/Profile images/blazer pic/Pavithra N - HR Executive.webp");
+const KalaiMathi = mediaUrl("images/Profile images/blazer pic/KalaiMathi - HR Executive.webp");
+const Kannan = mediaUrl("images/Profile images/blazer pic/Kannan - HR.webp");
+const Logarasan = mediaUrl("images/Profile images/blazer pic/Logarsan-HR Executive.png");
+const PriyadharshiniR = mediaUrl("images/Profile images/blazer pic/Priyadharshini - HR Executive.webp");
+const SangaviP = mediaUrl("images/Profile images/blazer pic/Sangavi - HR Executive.webp");
+const Megha = mediaUrl("images/Profile images/blazer pic/Megha-TALENT ACQUISITION EXECUTIVE.png");
+const Pranav = mediaUrl("images/Profile images/blazer pic/Pranav - DM Executive.webp");
+const Chandu = mediaUrl("images/Profile images/blazer pic/Chandu-ODM Executive.png");
+const Sharon = mediaUrl("images/Profile images/blazer pic/Sharon Roopavathy - Trainer.webp");
+const Charishma = mediaUrl("images/Profile images/blazer pic/Charishma- Trainer.webp");
+const KamatamVarsha = mediaUrl("images/Profile images/blazer pic/Kamatam Varsha - Trainer.webp");
+const Nayana = mediaUrl("images/Profile images/blazer pic/Nayana - Trainer.webp");
+const Santhiya = mediaUrl("images/Profile images/blazer pic/Santhiya - Trainer.png");
+const Jenny = mediaUrl("images/Profile images/blazer pic/Jenny Wilson.png");
+const SabihaSulthana = mediaUrl("images/Profile images/blazer pic/sabitha-Trainer.png");
+const Kavya = mediaUrl("images/Profile images/blazer pic/Kaviya-Trainer.png");
+const VishnupriyaDev = mediaUrl("images/Profile images/blazer pic/Vishnupriya Dev-HR Executive.png");
+const Guruvigneshwaran = mediaUrl("images/Profile images/blazer pic/Guru vigneshvar-HR Executive.png");
+const Julie = mediaUrl("images/Profile images/blazer pic/Julie-HR Executive.png");
+const Deepthi = mediaUrl("images/Profile images/blazer pic/Deepthi-HR Executive.png");
+const Dhivya = mediaUrl("images/Profile images/blazer pic/Dhivya-HR Executive.png");
+const Manjula = mediaUrl("images/Profile images/blazer pic/Manjula-HR Executive.png");
+const Sharanya = mediaUrl("images/Profile images/blazer pic/Sharanya-HR Executive.png");
+const Amrutha = mediaUrl("images/Profile images/blazer pic/Amrutha-HR Executive.png");
+const GVishnupriya = mediaUrl("images/Profile images/blazer pic/G Vishinupriya-HR Executive.png");
+const Nikitha = mediaUrl("images/Profile images/blazer pic/Nikitha-HR Executive.png");
+const KDivya = mediaUrl("images/Profile images/blazer pic/K Divya-HR Executive.png");
+const Aryasree = mediaUrl("images/Profile images/blazer pic/Aryasree-HR Execcutive.png");
+const Rahul = mediaUrl("images/Profile images/blazer pic/Rahul-HR Executive.png");
+const Tejaswini = mediaUrl("images/Profile images/blazer pic/Thajaswani-TALENT ACQUISITION EXECUTIVE.png");
+const ByreddyVinayAnandAkashReddy = mediaUrl("images/Profile images/blazer pic/Byreddy Vinay Anand Akash Reddy - TA Executive (2).png");
+const Shreelakshmi = mediaUrl("images/Profile images/blazer pic/Sree lakshmi-DM Executive.png");
+const DeepkKumarPujari = mediaUrl("images/Profile images/blazer pic/Depak kumar pujar-DM Executive.png");
+const SathyaSriVaishnavi = mediaUrl("images/Profile images/blazer pic/Sathya sree vaishnavi-MIS Executive.png");
+const SherlinRuth = mediaUrl("images/Profile images/blazer pic/Sherlin Ruth - HR Executive.png");
+const Santhosh = mediaUrl("images/Profile images/blazer pic/Santhosh_dm.jpg");
+const Jeron = mediaUrl("images/Profile images/blazer pic/JERON.jpg");
+const kiruthika = mediaUrl("images/Profile images/blazer pic/kiruthika D.png");
+const Kavitha = mediaUrl("images/Profile images/blazer pic/Kavitha.png");
+const BadawathKavitha = mediaUrl("images/Profile images/blazer pic/Badawath Kavitha.png");
+const Keerthiga = mediaUrl("images/Profile images/blazer pic/Keerthiga.png");
+const Priya = mediaUrl("images/Profile images/blazer pic/Priya.png");
+const LakshmiPavani = mediaUrl("images/Profile images/Group 1000002151.png");
+const Likitha = mediaUrl("images/Profile images/Group 1000002152.png");
 
-import Pranav from "../images/Profile images/blazer pic/Pranav - DM Executive.webp"
-import Chandu from "../images/Profile images/blazer pic/Chandu-ODM Executive.png"
-import Sharon from "../images/Profile images/blazer pic/Sharon Roopavathy - Trainer.webp"
-import Charishma from "../images/Profile images/blazer pic/Charishma- Trainer.webp"
-import KamatamVarsha from "../images/Profile images/blazer pic/Kamatam Varsha - Trainer.webp"
-import Nayana from "../images/Profile images/blazer pic/Nayana - Trainer.webp"
-import Santhiya from "../images/Profile images/blazer pic/Santhiya - Trainer.png"
-import Jenny from "../images/Profile images/blazer pic/Jenny Wilson.png"
-import SabihaSulthana from "../images/Profile images/blazer pic/sabitha-Trainer.png"
-import Kavya from "../images/Profile images/blazer pic/Kaviya-Trainer.png"
-import VishnupriyaDev from "../images/Profile images/blazer pic/Vishnupriya Dev-HR Executive.png"
-import Guruvigneshwaran from "../images/Profile images/blazer pic/Guru vigneshvar-HR Executive.png"
-import Julie from "../images/Profile images/blazer pic/Julie-HR Executive.png"
-import Deepthi from "../images/Profile images/blazer pic/Deepthi-HR Executive.png"
-import Dhivya from "../images/Profile images/blazer pic/Dhivya-HR Executive.png"
-import Manjula from "../images/Profile images/blazer pic/Manjula-HR Executive.png"
-import Sharanya from "../images/Profile images/blazer pic/Sharanya-HR Executive.png"
-import Amrutha from "../images/Profile images/blazer pic/Amrutha-HR Executive.png"
-import GVishnupriya from "../images/Profile images/blazer pic/G Vishinupriya-HR Executive.png"
-import Nikitha from "../images/Profile images/blazer pic/Nikitha-HR Executive.png"
-import KDivya from "../images/Profile images/blazer pic/K Divya-HR Executive.png"
-import Aryasree from "../images/Profile images/blazer pic/Aryasree-HR Execcutive.png"
-import Rahul from "../images/Profile images/blazer pic/Rahul-HR Executive.png"
-import Tejaswini from "../images/Profile images/blazer pic/Thajaswani-TALENT ACQUISITION EXECUTIVE.png"
-import ByreddyVinayAnandAkashReddy from "../images/Profile images/blazer pic/Byreddy Vinay Anand Akash Reddy - TA Executive (2).png"
-import Shreelakshmi from "../images/Profile images/blazer pic/Sree lakshmi-DM Executive.png"
-import DeepkKumarPujari from "../images/Profile images/blazer pic/Depak kumar pujar-DM Executive.png"
-import SathyaSriVaishnavi from "../images/Profile images/blazer pic/Sathya sree vaishnavi-MIS Executive.png"
-import SherlinRuth from "../images/Profile images/blazer pic/Sherlin Ruth - HR Executive.png"
-import Santhosh from "../images/Profile images/blazer pic/Santhosh_dm.jpg"
-import Jeron from "../images/Profile images/blazer pic/JERON.jpg"
-import kiruthika from "../images/Profile images/blazer pic/kiruthika D.png"
-import Kavitha from "../images/Profile images/blazer pic/Kavitha.png"
-import BadawathKavitha from "../images/Profile images/blazer pic/Badawath Kavitha.png"
-import Keerthiga from "../images/Profile images/blazer pic/Keerthiga.png"
-import Priya from "../images/Profile images/blazer pic/Priya.png"
-import LakshmiPavani from "../images/Profile images/Group 1000002151.png"
-import Likitha from "../images/Profile images/Group 1000002152.png"
 const profileImages = [
   BalaMurali, Banumathy, Kalai, Kalaimathi, Kanchana, Kartheeswari, Karthik, Karthika, Keerthika, Kiruthika, Kishore, Kowsikan,
   Logeshwaran, Lokesh, Madhumitha, Manoj, Mohamed, Mounika, group2copy34, Pavithra, Peemuthannagari, group2copy37,

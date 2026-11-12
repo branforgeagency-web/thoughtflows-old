@@ -1,5 +1,6 @@
 import React from 'react'
-import cdibanner from '../../images/Courses/TEST.png'
+import { mediaUrl } from '../../config/media';
+const cdibanner = mediaUrl('images/Courses/TEST.png');
 
 const CDIBanner = () => {
     return (

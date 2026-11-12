@@ -2,8 +2,9 @@
 
 
 import React from 'react';
-import num1 from "../../images/Courses/number-1.png";
-import num2 from "../../images/Courses/number-2.png";
+import { mediaUrl } from '../../config/media';
+const num1 = mediaUrl("images/Courses/number-1.png");
+const num2 = mediaUrl("images/Courses/number-2.png");
 
 const EligibleData = [
     {

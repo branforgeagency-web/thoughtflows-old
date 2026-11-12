@@ -4,8 +4,9 @@ import { useLocation } from "react-router-dom";
 import { useEffect } from "react";
 import "./App.css";
 import SideMenuBar from "./Home/SideMenuBar";
+import { mediaUrl } from './config/media';
+const logo = mediaUrl("images/image2.png"); // Original logo (restored)
 // import logo from "./images/ThoughtFlow Christmas Version 4 Revised Collection.png"; // Christmas logo (temporarily removed)
-import logo from "./images/image2.png"; // Original logo (restored)
 
 const DropdownMenu = ({ isBranchPage }) => {
   const menuItems = {

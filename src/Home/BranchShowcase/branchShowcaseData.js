@@ -1,9 +1,11 @@
-import coimbatore from "../../images/Branches/showcase/coimbatore.jpg";
-import coimbatoreSm from "../../images/Branches/showcase/coimbatore-sm.jpg";
-import hyderabad from "../../images/Branches/showcase/hyderabad.jpg";
-import hyderabadSm from "../../images/Branches/showcase/hyderabad-sm.jpg";
-import kochi from "../../images/Branches/showcase/kochi.jpg";
-import kochiSm from "../../images/Branches/showcase/kochi-sm.jpg";
+import { mediaUrl } from '../../config/media';
+const coimbatore = mediaUrl("images/Branches/showcase/coimbatore.jpg");
+const coimbatoreSm = mediaUrl("images/Branches/showcase/coimbatore-sm.jpg");
+const hyderabad = mediaUrl("images/Branches/showcase/hyderabad.jpg");
+const hyderabadSm = mediaUrl("images/Branches/showcase/hyderabad-sm.jpg");
+const kochi = mediaUrl("images/Branches/showcase/kochi.jpg");
+const kochiSm = mediaUrl("images/Branches/showcase/kochi-sm.jpg");
+
 
 /**
  * Branch showcase content.

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import hcc from "../../images/courseimage/Hierarchical Condition Category.webp"
-import hcc1 from "../../images/Course Images/HCC Exam Overview.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
+import { mediaUrl } from '../../config/media';
+const hcc = mediaUrl("images/courseimage/Hierarchical Condition Category.webp");
+const hcc1 = mediaUrl("images/Course Images/HCC Exam Overview.jpg");
 
 const WhatCRC = () => {
   const coursePages = [

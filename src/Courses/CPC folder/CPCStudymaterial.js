@@ -1,7 +1,8 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import Arrow from '../../images/next.png';
-import coursebg from '../../images/coursebg.png'
+import { mediaUrl } from '../../config/media';
+const Arrow = mediaUrl('images/next.png');
+const coursebg = mediaUrl('images/coursebg.png');
 
 const CPCStudymaterial = () => {
     return (

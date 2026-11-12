@@ -1,5 +1,6 @@
 import React from 'react';
-import emergency from "../../images/courseimage/Emergency.webp"
+import { mediaUrl } from '../../config/media';
+const emergency = mediaUrl("images/courseimage/Emergency.webp");
 
 const WhatIsEmergency = () => {
   return (

@@ -1,11 +1,12 @@
 import React from "react";
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
-import bgrev from '../../images/Group.png';
-import cristeena from '../../images/Testimonials/Cristeena rose (kochi).jpeg'
-import sajeena from '../../images/Testimonials/Sajeena (kochi).jpeg'
-import aleena from '../../images/Testimonials/Aleena (kochi).jpeg'
-import anitta from '../../images/Testimonials/Anitta (kochi).jpeg'
-import robiya from '../../images/Testimonials/Robiya (Kochi).jpeg'
+import { mediaUrl } from '../../config/media';
+const bgrev = mediaUrl('images/Group.png');
+const cristeena = mediaUrl('images/Testimonials/Cristeena rose (kochi).jpeg');
+const sajeena = mediaUrl('images/Testimonials/Sajeena (kochi).jpeg');
+const aleena = mediaUrl('images/Testimonials/Aleena (kochi).jpeg');
+const anitta = mediaUrl('images/Testimonials/Anitta (kochi).jpeg');
+const robiya = mediaUrl('images/Testimonials/Robiya (Kochi).jpeg');
 
 
 const testimonials = [

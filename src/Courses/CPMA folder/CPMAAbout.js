@@ -1,7 +1,8 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import Arrow from '../../images/next.png';
-import cpmaabt from '../../images/Courses/CPMAPIC.jpg'
+import { mediaUrl } from '../../config/media';
+const Arrow = mediaUrl('images/next.png');
+const cpmaabt = mediaUrl('images/Courses/CPMAPIC.jpg');
 
 const CPMAAbout = () => {
     return (

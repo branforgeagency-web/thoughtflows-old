@@ -4,16 +4,17 @@ import Meta from '../Meta';
 import { PopupContext } from '../context/PopupContext';
 import './CoimbatoreLanding.css';
 
-import hopesImg from '../images/Branches/cbe_hopes_campus.jpg';
-import saravanampattiImg from '../images/Branches/cbe_saravanampatti_campus.jpg';
-import gandhipuramImg from '../images/Branches/cbe_gandhipuram_campus.jpg';
-import ishaBannerImg from '../images/Branches/isha_coimbatore_banner.jpg';
-import coimbatoreValparai from '../images/Landmarks/coimbatore_valparai.jpg';
-import handsOnImg from '../images/hands-on.png';
-import cpcImg from '../images/cpc.png';
-import teachingImg from '../images/Branches/theni-teaching.jpg';
-import placementBanner from '../images/Branches/placement banner.jpeg';
 import VelouraSkincareHero from './VelouraSkincareHero';
+import { mediaUrl } from '../config/media';
+const hopesImg = mediaUrl('images/Branches/cbe_hopes_campus.jpg');
+const saravanampattiImg = mediaUrl('images/Branches/cbe_saravanampatti_campus.jpg');
+const gandhipuramImg = mediaUrl('images/Branches/cbe_gandhipuram_campus.jpg');
+const ishaBannerImg = mediaUrl('images/Branches/isha_coimbatore_banner.jpg');
+const coimbatoreValparai = mediaUrl('images/Landmarks/coimbatore_valparai.jpg');
+const handsOnImg = mediaUrl('images/hands-on.png');
+const cpcImg = mediaUrl('images/cpc.png');
+const teachingImg = mediaUrl('images/Branches/theni-teaching.jpg');
+const placementBanner = mediaUrl('images/Branches/placement banner.jpeg');
 
 const CoimbatoreLanding = () => {
   const { setIsOpen } = useContext(PopupContext);

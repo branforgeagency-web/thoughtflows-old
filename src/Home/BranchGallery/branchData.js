@@ -1,11 +1,13 @@
-import coimbatore from "../../images/Branches/gallery/coimbatore.jpg";
-import chennai from "../../images/Branches/gallery/chennai.jpg";
-import bangalore from "../../images/Branches/gallery/bangalore.jpg";
-import hyderabad from "../../images/Branches/gallery/hyderabad.jpg";
-import madurai from "../../images/Branches/gallery/madurai.jpg";
-import trichy from "../../images/Branches/gallery/trichy.jpg";
-import kochi from "../../images/Branches/gallery/kochi.jpg";
-import training from "../../images/Branches/gallery/training.jpg";
+import { mediaUrl } from '../../config/media';
+const coimbatore = mediaUrl("images/Branches/gallery/coimbatore.jpg");
+const chennai = mediaUrl("images/Branches/gallery/chennai.jpg");
+const bangalore = mediaUrl("images/Branches/gallery/bangalore.jpg");
+const hyderabad = mediaUrl("images/Branches/gallery/hyderabad.jpg");
+const madurai = mediaUrl("images/Branches/gallery/madurai.jpg");
+const trichy = mediaUrl("images/Branches/gallery/trichy.jpg");
+const kochi = mediaUrl("images/Branches/gallery/kochi.jpg");
+const training = mediaUrl("images/Branches/gallery/training.jpg");
+
 
 
 /**

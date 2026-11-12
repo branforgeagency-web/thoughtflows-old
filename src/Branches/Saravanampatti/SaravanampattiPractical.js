@@ -1,7 +1,8 @@
 import React from "react";
 import { FileCheck, School } from "lucide-react";
 import Reveal from "../Theni/Reveal";
-import practicalImg from "../../images/AboutImg/about-image.jpg";
+import { mediaUrl } from '../../config/media';
+const practicalImg = mediaUrl("images/AboutImg/about-image.jpg");
 
 const SaravanampattiPractical = () => {
   return (

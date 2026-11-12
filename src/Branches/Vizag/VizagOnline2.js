@@ -1,5 +1,6 @@
 import React from 'react'
-import triEnroll from "../../images/Branches/vizhag1.png"
+import { mediaUrl } from '../../config/media';
+const triEnroll = mediaUrl("images/Branches/vizhag1.png");
 
 
 function VizagEnroll() {

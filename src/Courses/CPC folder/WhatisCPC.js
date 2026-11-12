@@ -1,10 +1,11 @@
 import React, { useState } from 'react'
-import rightimg from '../../images/Group710.png'
 import { Row, Col } from 'react-bootstrap'
-import cpc from "../../images/Course Images/CPC.jpg"
-import cpc1 from "../../images/Course Images/CPC Exam Overview.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
-import cpcWebp from "../../images/courseimage/Thought flows Img 1 CPC.webp"
+import { mediaUrl } from '../../config/media';
+const rightimg = mediaUrl('images/Group710.png');
+const cpc = mediaUrl("images/Course Images/CPC.jpg");
+const cpc1 = mediaUrl("images/Course Images/CPC Exam Overview.jpg");
+const cpcWebp = mediaUrl("images/courseimage/Thought flows Img 1 CPC.webp");
 
 const WhatisCPC = () => {
 

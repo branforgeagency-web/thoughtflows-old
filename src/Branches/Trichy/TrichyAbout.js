@@ -1,6 +1,7 @@
 import React from 'react';
 import { Col, Row } from 'react-bootstrap';
-import imgabt from "../../images/Branches/online/Students.jpg";
+import { mediaUrl } from '../../config/media';
+const imgabt = mediaUrl("images/Branches/online/Students.jpg");
 
 
 const TrichyAbout = () => {

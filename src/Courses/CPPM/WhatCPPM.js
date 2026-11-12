@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import rightimg from "../../images/Group710.png";
 import { Row, Col } from "react-bootstrap";
-import cppma from "../../images/Course Images/CPPM.jpg"
-import cppma1 from "../../images/Course Images/CPPM1.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
+import { mediaUrl } from '../../config/media';
+const rightimg = mediaUrl("images/Group710.png");
+const cppma = mediaUrl("images/Course Images/CPPM.jpg");
+const cppma1 = mediaUrl("images/Course Images/CPPM1.jpg");
 
 const WhatCRC = () => {
   const coursePages = [

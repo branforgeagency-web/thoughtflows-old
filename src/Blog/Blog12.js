@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import heroBanner from "../images/Blog/best-medical-coding-course-india/hero-banner.jpg";
-import howToChooseImg from "../images/Blog/best-medical-coding-course-india/how-to-choose.jpg";
-import curriculumSkillsImg from "../images/Blog/best-medical-coding-course-india/curriculum-skills.jpg";
-import careerOpportunitiesImg from "../images/Blog/best-medical-coding-course-india/career-opportunities.jpg";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import {
@@ -32,6 +28,11 @@ import {
   FaTimesCircle,
   FaUsers,
 } from "react-icons/fa";
+import { mediaUrl } from '../config/media';
+const heroBanner = mediaUrl("images/Blog/best-medical-coding-course-india/hero-banner.jpg");
+const howToChooseImg = mediaUrl("images/Blog/best-medical-coding-course-india/how-to-choose.jpg");
+const curriculumSkillsImg = mediaUrl("images/Blog/best-medical-coding-course-india/curriculum-skills.jpg");
+const careerOpportunitiesImg = mediaUrl("images/Blog/best-medical-coding-course-india/career-opportunities.jpg");
 
 export default function Blog12() {
   const [openFaq, setOpenFaq] = useState(null);

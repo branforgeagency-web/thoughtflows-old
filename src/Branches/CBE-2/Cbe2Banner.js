@@ -1,9 +1,10 @@
 import React from 'react'
-import bannerImage from '../../images/homebannerbg.png'
-import hopes from '../../images/Branches/Pic 1.webp'
 import { Container, Row, Col } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 import CountUp from 'react-countup';
+import { mediaUrl } from '../../config/media';
+const bannerImage = mediaUrl('images/homebannerbg.png');
+const hopes = mediaUrl('images/Branches/Pic 1.webp');
 
 const Cbe2Banner = () => {
     return (

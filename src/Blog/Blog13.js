@@ -1,10 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import heroBanner from "../images/Blog/medical-coding-tamilnadu/hero-banner.jpg";
-import salaryImg from "../images/Blog/medical-coding-tamilnadu/salary-india.jpg";
-import whyChooseImg from "../images/Blog/medical-coding-tamilnadu/why-choose-thoughtflows.jpg";
-import startJourneyImg from "../images/Blog/medical-coding-tamilnadu/start-journey.jpg";
-import howToChooseImg from "../images/Blog/medical-coding-tamilnadu/how-to-choose.jpg";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import {
@@ -35,6 +30,12 @@ import {
   FaRobot,
   FaQuoteLeft,
 } from "react-icons/fa";
+import { mediaUrl } from '../config/media';
+const heroBanner = mediaUrl("images/Blog/medical-coding-tamilnadu/hero-banner.jpg");
+const salaryImg = mediaUrl("images/Blog/medical-coding-tamilnadu/salary-india.jpg");
+const whyChooseImg = mediaUrl("images/Blog/medical-coding-tamilnadu/why-choose-thoughtflows.jpg");
+const startJourneyImg = mediaUrl("images/Blog/medical-coding-tamilnadu/start-journey.jpg");
+const howToChooseImg = mediaUrl("images/Blog/medical-coding-tamilnadu/how-to-choose.jpg");
 
 export default function Blog13() {
   const [openFaq, setOpenFaq] = useState(null);

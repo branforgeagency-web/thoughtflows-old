@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { PopupContext } from "../../context/PopupContext";
 import VelouraSkincareHero from "../VelouraSkincareHero";
-import vizagLandmark from "../../images/Landmarks/vizag_landmark.jpg";
-import campusInterior from "../../images/Branches/cbe_saravanampatti_campus.jpg";
-import vizagKailasagiri from "../../images/Landmarks/vizag_kailasagiri.jpg";
+import { mediaUrl } from '../../config/media';
+const vizagLandmark = mediaUrl("images/Landmarks/vizag_landmark.jpg");
+const campusInterior = mediaUrl("images/Branches/cbe_saravanampatti_campus.jpg");
+const vizagKailasagiri = mediaUrl("images/Landmarks/vizag_kailasagiri.jpg");
 
 const VizagBanner = () => {
   const { setIsOpen } = useContext(PopupContext) || {};

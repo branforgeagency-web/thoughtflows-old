@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { PopupContext } from "../../context/PopupContext";
 import VelouraSkincareHero from "../VelouraSkincareHero";
-import hyderabadLandmark from "../../images/Landmarks/hyderabad_landmark.jpg";
-import dilsukhnagarCampus from "../../images/Hyderabad/dilsukhnagar_campus.jpg";
-import hyderabadLandmark2 from "../../images/Landmarks/hyderabad_landmark_2.jpg";
+import { mediaUrl } from '../../config/media';
+const hyderabadLandmark = mediaUrl("images/Landmarks/hyderabad_landmark.jpg");
+const dilsukhnagarCampus = mediaUrl("images/Hyderabad/dilsukhnagar_campus.jpg");
+const hyderabadLandmark2 = mediaUrl("images/Landmarks/hyderabad_landmark_2.jpg");
 
 const Hyderabad2Banner = () => {
   const { setIsOpen } = useContext(PopupContext) || {};

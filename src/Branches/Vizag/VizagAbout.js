@@ -1,6 +1,7 @@
 import React from "react";
-import labi from "../../images/Branches/vizhag3.png";
-import branch from "../../images/Branches/image7 copy.png";
+import { mediaUrl } from '../../config/media';
+const labi = mediaUrl("images/Branches/vizhag3.png");
+const branch = mediaUrl("images/Branches/image7 copy.png");
 // import bannerVid from ""
 
 function VizagAbout() {

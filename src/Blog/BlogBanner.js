@@ -6,7 +6,8 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import heroPhoto from "./blog-banner-workspace.jpg";
+import { mediaUrl } from '../config/media';
+const heroPhoto = mediaUrl("Blog/blog-banner-workspace.jpg");
 
 const CSS = `
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");

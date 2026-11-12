@@ -1,5 +1,6 @@
 import React from 'react';
-import wavebg from '../../images/Branches/wave-blue.png';
+import { mediaUrl } from '../../config/media';
+const wavebg = mediaUrl('images/Branches/wave-blue.png');
 
 const TirupathiSolidLayout = () => {
     return (

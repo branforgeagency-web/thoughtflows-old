@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { PopupContext } from "../../context/PopupContext";
 import VelouraSkincareHero from "../VelouraSkincareHero";
-import trivandrumLandmark from "../../images/Landmarks/trivandrum_landmark.jpg";
-import trivandrumCampus from "../../images/Branches/kerala_trivandrum_campus.jpg";
-import kovalamLandmark from "../../images/Landmarks/kovalam_landmark.jpg";
+import { mediaUrl } from '../../config/media';
+const trivandrumLandmark = mediaUrl("images/Landmarks/trivandrum_landmark.jpg");
+const trivandrumCampus = mediaUrl("images/Branches/kerala_trivandrum_campus.jpg");
+const kovalamLandmark = mediaUrl("images/Landmarks/kovalam_landmark.jpg");
 
 const TrivandrumBanner = () => {
   const { setIsOpen } = useContext(PopupContext) || {};

@@ -1,7 +1,8 @@
 import React from "react";
-import labs from "../../images/Branches/online/kochi.jpg";
-import branch from "../../images/Branches/image7 copy.png";
 import { Briefcase, Users, TrendingUp, Award, Building2, GraduationCap, BookOpen } from 'lucide-react';
+import { mediaUrl } from '../../config/media';
+const labs = mediaUrl("images/Branches/online/kochi.jpg");
+const branch = mediaUrl("images/Branches/image7 copy.png");
 
 function KochiAbout() {
   return (

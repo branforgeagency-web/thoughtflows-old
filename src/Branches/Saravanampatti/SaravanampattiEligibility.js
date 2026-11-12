@@ -1,7 +1,8 @@
 import React from "react";
 import { GraduationCap, UserCheck, Briefcase, Search, HeartPulse, Award } from "lucide-react";
 import Reveal from "../Theni/Reveal";
-import studentsImg from "../../images/Branches/online/Students.jpg";
+import { mediaUrl } from '../../config/media';
+const studentsImg = mediaUrl("images/Branches/online/Students.jpg");
 
 const audience = [
   { icon: GraduationCap, text: "Individuals who are recently graduates or fresher’s." },

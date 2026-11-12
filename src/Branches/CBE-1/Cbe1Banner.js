@@ -1,11 +1,12 @@
 import React from 'react'
-import bannerImage from '../../images/homebannerbg.png'
-import saravanampatti from '../../images/Branches/Pic 2 1.png'
 import { Container, Row } from 'react-bootstrap'
 import CountUp from 'react-countup';
 import { Col } from 'react-bootstrap'
 import { Link } from "react-router-dom";
 import './Cbe1Banner.css'
+import { mediaUrl } from '../../config/media';
+const bannerImage = mediaUrl('images/homebannerbg.png');
+const saravanampatti = mediaUrl('images/Branches/Pic 2 1.png');
 
 const Cbe1Banner = () => {
     return (

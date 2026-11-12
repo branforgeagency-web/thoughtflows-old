@@ -1,5 +1,6 @@
 import React from 'react'
-import Embanner from '../../images/Courses/TEST.png'
+import { mediaUrl } from '../../config/media';
+const Embanner = mediaUrl('images/Courses/TEST.png');
 
 function EMBanner() {
     return (

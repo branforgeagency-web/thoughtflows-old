@@ -4,29 +4,30 @@ import "slick-carousel/slick/slick.css";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { Container, Row, Col } from 'react-bootstrap';
-import test1 from"../../images/Branches/online/ambika.jpg"
-import test2 from"../../images/Branches/online/gayathri.jpg"
-import test3 from"../../images/Branches/online/praveena.jpg"
-import test4 from "../../images/Branches/online/suganthi.png"
-import client1 from "../../images/Branches/online/client.png"
-import client2 from "../../images/Branches/online/client1.png"
-import client3 from "../../images/Branches/online/client2.png"
-import client4 from "../../images/Branches/online/client3.png"
-import client5 from "../../images/Branches/online/client4.png"
 import Marquee from "react-fast-marquee";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper/modules";
-import kamale from "../../images/Kamale.G.png"
-import SUGANYA from '../../images/SUGANYA.G.png'
-import Ramya from '../../images/Ramya senthilkumar.png'
-import Vidhya from '../../images/Vidhya .K.png'
-import Rino from '../../images/Rino.png'
-import muhsina from '../../images/Muhsina Surmi.png'
-import nemmadi from '../../images/Nemmadi Udaychinna.png'
-import bgrev from '../../images/Group.png';
+import { mediaUrl } from '../../config/media';
+const test1 = mediaUrl("images/Branches/online/ambika.jpg");
+const test2 = mediaUrl("images/Branches/online/gayathri.jpg");
+const test3 = mediaUrl("images/Branches/online/praveena.jpg");
+const test4 = mediaUrl("images/Branches/online/suganthi.png");
+const client1 = mediaUrl("images/Branches/online/client.png");
+const client2 = mediaUrl("images/Branches/online/client1.png");
+const client3 = mediaUrl("images/Branches/online/client2.png");
+const client4 = mediaUrl("images/Branches/online/client3.png");
+const client5 = mediaUrl("images/Branches/online/client4.png");
+const kamale = mediaUrl("images/Kamale.G.png");
+const SUGANYA = mediaUrl('images/SUGANYA.G.png');
+const Ramya = mediaUrl('images/Ramya senthilkumar.png');
+const Vidhya = mediaUrl('images/Vidhya .K.png');
+const Rino = mediaUrl('images/Rino.png');
+const muhsina = mediaUrl('images/Muhsina Surmi.png');
+const nemmadi = mediaUrl('images/Nemmadi Udaychinna.png');
+const bgrev = mediaUrl('images/Group.png');
 const CustomArrow = ({ onClick, direction }) => (
   <div
     className={`custom-arrow custom-arrow-${direction}`}

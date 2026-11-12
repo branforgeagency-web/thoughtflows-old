@@ -1,5 +1,6 @@
 import React from 'react'
-import cdiImage from '../../images/courseimage/CDI - Images.jpg'
+import { mediaUrl } from '../../config/media';
+const cdiImage = mediaUrl('images/courseimage/CDI - Images.jpg');
 const WhatisCDI = () => {
     return (
         <div>

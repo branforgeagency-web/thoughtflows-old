@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { PopupContext } from "../../context/PopupContext";
 import VelouraSkincareHero from "../VelouraSkincareHero";
-import ishaBannerImg from "../../images/Branches/isha_coimbatore_banner.jpg";
-import saravanampattiCampus from "../../images/Branches/cbe_saravanampatti_campus.jpg";
-import coimbatoreValparai from "../../images/Landmarks/coimbatore_valparai.jpg";
+import { mediaUrl } from '../../config/media';
+const ishaBannerImg = mediaUrl("images/Branches/isha_coimbatore_banner.jpg");
+const saravanampattiCampus = mediaUrl("images/Branches/cbe_saravanampatti_campus.jpg");
+const coimbatoreValparai = mediaUrl("images/Landmarks/coimbatore_valparai.jpg");
 
 const SaravanampattiBanner = () => {
   const { setIsOpen } = useContext(PopupContext) || {};

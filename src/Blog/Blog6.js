@@ -1,10 +1,11 @@
 import { useEffect } from "react";
-import image from "./medic.jpg";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import postImage6 from '../images/Blog/manager-preparing-store-reopening.jpg';
 import Meta from "../Meta";
 
 import { FaCircle } from "react-icons/fa";
+import { mediaUrl } from '../config/media';
+const image = mediaUrl("Blog/medic.jpg");
+const postImage6 = mediaUrl('images/Blog/manager-preparing-store-reopening.jpg');
 export default function Blog6() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });

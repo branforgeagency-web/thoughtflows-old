@@ -1,9 +1,10 @@
 import React from 'react'
 // import cbe1About from ''
-import cbe1aboutbg from '../../images/Branches/cbe1Abt.png'
-import cbe1About from '../../images/Branches/cbe1bannerRight.png'
 import { Row, Col, Container } from 'react-bootstrap'
 import CountUp from 'react-countup';
+import { mediaUrl } from '../../config/media';
+const cbe1aboutbg = mediaUrl('images/Branches/cbe1Abt.png');
+const cbe1About = mediaUrl('images/Branches/cbe1bannerRight.png');
 
 const Cbe2About = () => {
     return (

@@ -1,21 +1,22 @@
 import React, { useState, useEffect, useRef } from 'react';
-import blogImage from '../images/Blog/blog.jpg';
-import postImage1 from '../images/Blog/medical-banner-with-doctor-working-laptop.jpg';
-import postImage2 from '../images/Blog/medical-banner-with-doctor-wearing-goggles.jpg';
-import postImage3 from '../images/Blog/health-wellness-digital-tablet-concept.jpg';
-import postImage4 from '../images/Blog/medium-shot-smiley-woman-holding-clipboard.jpg';
-import postImage5 from '../images/Blog/stomatolog-nurse-tooth-clinic-checking-patient-appointment-looking-computer-monitor-stomatology-assistant-teeth-doctor-discussing-reception-dental-office.jpg';
-import postImage6 from '../images/Blog/manager-preparing-store-reopening.jpg';
-import postImage7 from '../images/Blog/three-business-people-discussing-graph-points.jpg';
-import postImage8 from '../images/Blog/vetri108/Ram Blog Banner (22).png';
-import postImage9 from '../images/Blog/ai-coding/hero-banner.jpg';
-import postImage10 from '../images/Blog/certified-ai-coder/hero-banner.jpg';
-import postImage11 from '../images/Blog/fy-2027-icd-10/hero-banner.jpg';
-import postImage12 from '../images/Blog/best-medical-coding-course-india/hero-banner.jpg';
-import postImage13 from '../images/Blog/medical-coding-tamilnadu/hero-banner.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
+import { mediaUrl } from '../config/media';
+const blogImage = mediaUrl('images/Blog/blog.jpg');
+const postImage1 = mediaUrl('images/Blog/medical-banner-with-doctor-working-laptop.jpg');
+const postImage2 = mediaUrl('images/Blog/medical-banner-with-doctor-wearing-goggles.jpg');
+const postImage3 = mediaUrl('images/Blog/health-wellness-digital-tablet-concept.jpg');
+const postImage4 = mediaUrl('images/Blog/medium-shot-smiley-woman-holding-clipboard.jpg');
+const postImage5 = mediaUrl('images/Blog/stomatolog-nurse-tooth-clinic-checking-patient-appointment-looking-computer-monitor-stomatology-assistant-teeth-doctor-discussing-reception-dental-office.jpg');
+const postImage6 = mediaUrl('images/Blog/manager-preparing-store-reopening.jpg');
+const postImage7 = mediaUrl('images/Blog/three-business-people-discussing-graph-points.jpg');
+const postImage8 = mediaUrl('images/Blog/vetri108/Ram Blog Banner (22).png');
+const postImage9 = mediaUrl('images/Blog/ai-coding/hero-banner.jpg');
+const postImage10 = mediaUrl('images/Blog/certified-ai-coder/hero-banner.jpg');
+const postImage11 = mediaUrl('images/Blog/fy-2027-icd-10/hero-banner.jpg');
+const postImage12 = mediaUrl('images/Blog/best-medical-coding-course-india/hero-banner.jpg');
+const postImage13 = mediaUrl('images/Blog/medical-coding-tamilnadu/hero-banner.jpg');
 
 function BlogRef1() {
   const [showSidebar, setShowSidebar] = useState(false);

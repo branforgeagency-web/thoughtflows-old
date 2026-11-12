@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useMemo } from 'react';
 import { Link } from 'react-router-dom';
-import supportTeamImg from "../images/contact/support-team.jpg";
 import AsciiLogoBanner from "./AsciiLogoBanner";
-import map from "../images/svg/map.svg";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faArrowDown, faTimes } from '@fortawesome/free-solid-svg-icons';
 import Meta from '../Meta';
@@ -13,6 +11,9 @@ import { logEnquiry } from '../utils/enquiryLog';
 import { coursesList } from '../coursesList';
 import { BRANCHES, STATES } from "../Home/BranchShowcase/branchDirectoryData";
 import { branchDetails } from "../data/branchDetails";
+import { mediaUrl } from '../config/media';
+const supportTeamImg = mediaUrl("images/contact/support-team.jpg");
+const map = mediaUrl("images/svg/map.svg");
 function Contact() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });

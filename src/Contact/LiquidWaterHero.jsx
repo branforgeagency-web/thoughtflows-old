@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
-import localWaterImg from "../images/water-texture.jpg";
+import { mediaUrl } from '../config/media';
+const localWaterImg = mediaUrl("images/water-texture.jpg");
 
 /**
  * Full-Screen Interactive Liquid-Water Hero Banner

@@ -1,6 +1,7 @@
 import React from "react";
-import founder2 from "../images/Profile images/blazer pic/bhanu mathi.png";
-import founder1 from "../images/Profile images/blazer pic/balamurali.jpg";
+import { mediaUrl } from '../config/media';
+const founder2 = mediaUrl("images/Profile images/blazer pic/bhanu mathi.png");
+const founder1 = mediaUrl("images/Profile images/blazer pic/balamurali.jpg");
 
 function WeAre() {
   return (

@@ -1,7 +1,8 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import { motion, useScroll, useTransform } from "framer-motion";
-import contactVisual from "../images/contact/contact-banner-balls.jpg";
+import { mediaUrl } from '../config/media';
+const contactVisual = mediaUrl("images/contact/contact-banner-balls.jpg");
 
 /**
  * "Get in Touch" conversion banner for ThoughtFlows Medical Coding Academy.

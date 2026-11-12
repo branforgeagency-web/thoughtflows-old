@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
-import bgrev from '../../images/Group.png';
-import dharshini from "../../images/Testimonials/Dharshini (Trichy).jpeg"
+import { mediaUrl } from '../../config/media';
+const bgrev = mediaUrl('images/Group.png');
+const dharshini = mediaUrl("images/Testimonials/Dharshini (Trichy).jpeg");
 // import vijay from "../../images/Testimonials/Abhiram Reddy ( Ameerpet HYD ).jpeg"
 // import rithika from "../../images/Testimonials/Abhiram Reddy ( Ameerpet HYD ).jpeg"
 // import praveen from "../../images/Testimonials/Priyanka Suresh (Salem).jpeg"

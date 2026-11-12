@@ -1,8 +1,9 @@
 import React from "react";
 import { CheckCircle2, GraduationCap, Search, HeartPulse, Briefcase, UserCheck, Layers } from "lucide-react";
 import Reveal from "./Reveal";
-import coderImg from "../../images/Branches/online/on12.jpg";
-import studentsImg from "../../images/Branches/online/Students.jpg";
+import { mediaUrl } from '../../config/media';
+const coderImg = mediaUrl("images/Branches/online/on12.jpg");
+const studentsImg = mediaUrl("images/Branches/online/Students.jpg");
 
 const audience = [
   { icon: GraduationCap, text: "Degree holders (all fields)" },

@@ -1,5 +1,6 @@
 import React from 'react';
-import em from "../../images/courseimage/Evaluation and Management.webp"
+import { mediaUrl } from '../../config/media';
+const em = mediaUrl("images/courseimage/Evaluation and Management.webp");
 
 const WhatIsEvaluation = () => {
   return (

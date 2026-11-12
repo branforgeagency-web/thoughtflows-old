@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import cic from '../images/cic.png';
-import cpc from '../images/cpc.png';
-import surgery from '../images/surgery.png';
-import radio from '../images/radio.png';
-import anasthesia from '../images/anasthesia.png';
 import { Col, Row, Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
+import { mediaUrl } from '../config/media';
+const cic = mediaUrl('images/cic.png');
+const cpc = mediaUrl('images/cpc.png');
+const surgery = mediaUrl('images/surgery.png');
+const radio = mediaUrl('images/radio.png');
+const anasthesia = mediaUrl('images/anasthesia.png');
 
 const slidesContent = [
     { image: cpc, text: 'Certified Professional Coder', chip: 'CPC', link: '/cpc',

@@ -1,9 +1,10 @@
 import React from "react";
-import image1 from "../images/AboutImg/1 (1).png";
-import img2 from "../images/AboutImg/2 (1).png";
-import img3 from "../images/AboutImg/3 (1).png";
-import img4 from "../images/AboutImg/4 (1).png";
-import lecturePhoto from "../images/AboutImg/about-campus-lounge.jpg";
+import { mediaUrl } from '../config/media';
+const image1 = mediaUrl("images/AboutImg/1 (1).png");
+const img2 = mediaUrl("images/AboutImg/2 (1).png");
+const img3 = mediaUrl("images/AboutImg/3 (1).png");
+const img4 = mediaUrl("images/AboutImg/4 (1).png");
+const lecturePhoto = mediaUrl("images/AboutImg/about-campus-lounge.jpg");
 
 const FEATURES = [
   {

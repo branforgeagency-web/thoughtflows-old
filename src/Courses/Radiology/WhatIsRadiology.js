@@ -1,5 +1,6 @@
 import React from 'react';
-import radiologyImg from "../../images/courseimage/Radiology.webp";
+import { mediaUrl } from '../../config/media';
+const radiologyImg = mediaUrl("images/courseimage/Radiology.webp");
 
 
 const moduleData = [

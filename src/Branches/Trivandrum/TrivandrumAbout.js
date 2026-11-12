@@ -1,6 +1,7 @@
 import React from "react";
-import lab from "../../images/Branches/online/lab.jpg";
 import { Col, Row } from 'react-bootstrap';
+import { mediaUrl } from '../../config/media';
+const lab = mediaUrl("images/Branches/online/lab.jpg");
 
 
 function TrivandrumAbout() {

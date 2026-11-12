@@ -1,7 +1,8 @@
 import React from 'react';
-import gif1 from '../images/gif3.gif'
-import gif2 from '../images/gif1.gif'
-import gif3 from '../images/gif2.gif'
+import { mediaUrl } from '../config/media';
+const gif1 = mediaUrl('images/gif3.gif');
+const gif2 = mediaUrl('images/gif1.gif');
+const gif3 = mediaUrl('images/gif2.gif');
 
 const features = [
     {

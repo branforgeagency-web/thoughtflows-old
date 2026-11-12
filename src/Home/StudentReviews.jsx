@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import Kamale from "../images/Kamale.G.png";
-import SUGANYA from "../images/SUGANYA.G.png";
-import Ramya from "../images/Ramya senthilkumar.png";
-import Vidhya from "../images/Vidhya .K.png";
+import { mediaUrl } from '../config/media';
+const Kamale = mediaUrl("images/Kamale.G.png");
+const SUGANYA = mediaUrl("images/SUGANYA.G.png");
+const Ramya = mediaUrl("images/Ramya senthilkumar.png");
+const Vidhya = mediaUrl("images/Vidhya .K.png");
 
 /* ------------------------------------------------------------------ */
 /*  Small inline bits                                                  */

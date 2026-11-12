@@ -1,6 +1,7 @@
 import React from "react";
-import labi from "../../images/Branches/online/hydera1.jpg";
-import studentsImg from "../../images/Branches/online/Students.jpg";
+import { mediaUrl } from '../../config/media';
+const labi = mediaUrl("images/Branches/online/hydera1.jpg");
+const studentsImg = mediaUrl("images/Branches/online/Students.jpg");
 
 function KolhapurAbout() {
   return (

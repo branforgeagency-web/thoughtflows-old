@@ -1,10 +1,11 @@
 import { useEffect } from "react";
-import image from "./medic.jpg";
-import postImage5 from '../images/Blog/stomatolog-nurse-tooth-clinic-checking-patient-appointment-looking-computer-monitor-stomatology-assistant-teeth-doctor-discussing-reception-dental-office.jpg';
 import Meta from "../Meta";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { FaCircle } from "react-icons/fa";
+import { mediaUrl } from '../config/media';
+const image = mediaUrl("Blog/medic.jpg");
+const postImage5 = mediaUrl('images/Blog/stomatolog-nurse-tooth-clinic-checking-patient-appointment-looking-computer-monitor-stomatology-assistant-teeth-doctor-discussing-reception-dental-office.jpg');
 export default function Blog5() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: "smooth" });

@@ -1,7 +1,8 @@
 import React from "react";
-import crcabout from "../../images/Courses/CRCAbout.jpg";
-import coursebg from "../../images/coursebg.png";
 import { Link } from "react-router-dom";
+import { mediaUrl } from '../../config/media';
+const crcabout = mediaUrl("images/Courses/CRCAbout.jpg");
+const coursebg = mediaUrl("images/coursebg.png");
 const AboutEM = () => {
     return (
         <>

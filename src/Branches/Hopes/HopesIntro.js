@@ -1,7 +1,8 @@
 import React from "react";
 import { Layers, CheckCircle2 } from "lucide-react";
 import Reveal from "../Theni/Reveal";
-import coderImg from "../../images/Branches/online/on12.jpg";
+import { mediaUrl } from '../../config/media';
+const coderImg = mediaUrl("images/Branches/online/on12.jpg");
 
 const HopesIntro = () => {
   return (

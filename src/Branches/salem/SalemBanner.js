@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { PopupContext } from "../../context/PopupContext";
 import VelouraSkincareHero from "../VelouraSkincareHero";
-import salemLandmark from "../../images/Landmarks/salem_landmark.jpg";
-import campusInterior from "../../images/Branches/cbe_hopes_campus.jpg";
-import salemMettur from "../../images/Landmarks/salem_mettur.jpg";
+import { mediaUrl } from '../../config/media';
+const salemLandmark = mediaUrl("images/Landmarks/salem_landmark.jpg");
+const campusInterior = mediaUrl("images/Branches/cbe_hopes_campus.jpg");
+const salemMettur = mediaUrl("images/Landmarks/salem_mettur.jpg");
 
 const SalemBanner = () => {
   const { setIsOpen } = useContext(PopupContext) || {};

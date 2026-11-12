@@ -1,9 +1,10 @@
 import React, { useState } from 'react'
-import rightimg from '../../images/Group710.png'
 import { Row, Col } from 'react-bootstrap'
-import cocWebp from "../../images/courseimage/Thought flows Img 3 COC.webp"
-import coc1 from "../../images/Course Images/CIC Exam Overview-2.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
+import { mediaUrl } from '../../config/media';
+const rightimg = mediaUrl('images/Group710.png');
+const cocWebp = mediaUrl("images/courseimage/Thought flows Img 3 COC.webp");
+const coc1 = mediaUrl("images/Course Images/CIC Exam Overview-2.jpg");
 
 const WhatisCOC = () => {
 

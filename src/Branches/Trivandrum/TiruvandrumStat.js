@@ -1,8 +1,9 @@
 import React from "react";
-import wow from "../../images/Branches/online/wow1.png";
 import { GraduationCap, Briefcase, Globe, Award, TrendingUp, CheckCircle2 } from 'lucide-react';
 
 import CountUp from "react-countup";
+import { mediaUrl } from '../../config/media';
+const wow = mediaUrl("images/Branches/online/wow1.png");
 
 const AudienceCard = ({ title, icon: Icon, color }) => (
   <div className="bg-white rounded-xl p-4 shadow border-l-4 hover:shadow-md transition-all flex flex-col items-center text-center" style={{ borderLeftColor: color }}>

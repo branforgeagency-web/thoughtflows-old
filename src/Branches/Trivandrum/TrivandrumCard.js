@@ -1,5 +1,6 @@
 import React from "react";
-import branch from "../../images/Branches/image7 copy.png"; // Import your image here
+import { mediaUrl } from '../../config/media';
+const branch = mediaUrl("images/Branches/image7 copy.png"); // Import your image here
 
 const TrivandrumCard = () => {
   return (

@@ -4,12 +4,13 @@ import Meta from '../Meta';
 import { PopupContext } from '../context/PopupContext';
 import './RegionLanding.css';
 
-import kochiImg from '../images/Branches/kerala_kochi_campus.jpg';
-import trivandrumImg from '../images/Branches/kerala_trivandrum_campus.jpg';
-import keralaHeroImg from '../images/Branches/kerala_hero.jpg';
-import kochiLandmark from '../images/Landmarks/kochi_landmark.jpg';
-import trivandrumLandmark from '../images/Landmarks/trivandrum_landmark.jpg';
 import VelouraSkincareHero from './VelouraSkincareHero';
+import { mediaUrl } from '../config/media';
+const kochiImg = mediaUrl('images/Branches/kerala_kochi_campus.jpg');
+const trivandrumImg = mediaUrl('images/Branches/kerala_trivandrum_campus.jpg');
+const keralaHeroImg = mediaUrl('images/Branches/kerala_hero.jpg');
+const kochiLandmark = mediaUrl('images/Landmarks/kochi_landmark.jpg');
+const trivandrumLandmark = mediaUrl('images/Landmarks/trivandrum_landmark.jpg');
 
 const KeralaLanding = () => {
   const { setIsOpen } = useContext(PopupContext);

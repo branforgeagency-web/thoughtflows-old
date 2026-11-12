@@ -1,8 +1,9 @@
 import React from "react";
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
-import bgrev from '../../images/Group.png';
-import logeswari from "../../images/Testimonials/Logeswari Boopathi (Gandhipuram).jpeg"
-import swathi from "../../images/Testimonials/Swathi Hari (Gandhipuram).jpeg"    
+import { mediaUrl } from '../../config/media';
+const bgrev = mediaUrl('images/Group.png');
+const logeswari = mediaUrl("images/Testimonials/Logeswari Boopathi (Gandhipuram).jpeg");
+const swathi = mediaUrl("images/Testimonials/Swathi Hari (Gandhipuram).jpeg");
 
 const testimonials = [
   {

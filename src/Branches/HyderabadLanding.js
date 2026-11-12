@@ -4,13 +4,14 @@ import Meta from '../Meta';
 import { PopupContext } from '../context/PopupContext';
 import './HyderabadLanding.css';
 
-import hydHeroImg from '../images/Hyderabad/hyderabad_hero.jpg';
-import ameerpetImg from '../images/Hyderabad/ameerpet_campus.jpg';
-import dilsukhnagarImg from '../images/Hyderabad/dilsukhnagar_campus.jpg';
-import placementImg from '../images/Hyderabad/placement_success.jpg';
-import hyderabadLandmark from '../images/Landmarks/hyderabad_landmark.jpg';
-import hyderabadLandmark2 from '../images/Landmarks/hyderabad_landmark_2.jpg';
 import VelouraSkincareHero from './VelouraSkincareHero';
+import { mediaUrl } from '../config/media';
+const hydHeroImg = mediaUrl('images/Hyderabad/hyderabad_hero.jpg');
+const ameerpetImg = mediaUrl('images/Hyderabad/ameerpet_campus.jpg');
+const dilsukhnagarImg = mediaUrl('images/Hyderabad/dilsukhnagar_campus.jpg');
+const placementImg = mediaUrl('images/Hyderabad/placement_success.jpg');
+const hyderabadLandmark = mediaUrl('images/Landmarks/hyderabad_landmark.jpg');
+const hyderabadLandmark2 = mediaUrl('images/Landmarks/hyderabad_landmark_2.jpg');
 
 const HyderabadLanding = () => {
   const { setIsOpen } = useContext(PopupContext);

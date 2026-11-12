@@ -1,5 +1,6 @@
 import React from 'react';
-import ccs from "../../images/courseimage/Coding Specialist.webp"
+import { mediaUrl } from '../../config/media';
+const ccs = mediaUrl("images/courseimage/Coding Specialist.webp");
 
 const WhatisCCS = () => {
   return (

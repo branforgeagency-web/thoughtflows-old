@@ -1,5 +1,6 @@
 import React from "react";
-import rhiaIcon from "../../images/Courses/online-learning (1).png"
+import { mediaUrl } from '../../config/media';
+const rhiaIcon = mediaUrl("images/Courses/online-learning (1).png");
 
 const RhitOutline = () => {
   const courseModules = [

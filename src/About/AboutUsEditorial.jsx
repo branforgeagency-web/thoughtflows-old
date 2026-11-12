@@ -1,7 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
-import mainPhoto from "../images/AboutImg/about-workspace.jpg";
-import mentorPhoto from "../images/AboutImg/about-office-interior.jpg";
-import fallbackPhoto from "../images/AboutImg/about-image.jpg";
+import { mediaUrl } from '../config/media';
+const mainPhoto = mediaUrl("images/AboutImg/about-workspace.jpg");
+const mentorPhoto = mediaUrl("images/AboutImg/about-office-interior.jpg");
+const fallbackPhoto = mediaUrl("images/AboutImg/about-image.jpg");
 
 /**
  * ThoughtFlows Medical Coding Academy — "Beyond the Code" About Us section.
