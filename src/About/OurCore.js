@@ -1,16 +1,16 @@
 import React, { useState } from "react";
-import passionPhoto from "../images/CoreValues/passion.jpg";
-import loyaltyPhoto from "../images/CoreValues/loyalty.jpg";
-import commitmentPhoto from "../images/CoreValues/commitment.jpg";
-import responsibilityPhoto from "../images/CoreValues/responsibility.jpg";
-import consistencyPhoto from "../images/CoreValues/consistency.jpg";
-import creativityPhoto from "../images/CoreValues/creativity.jpg";
+import passionPhoto from "../images/CoreValues/core-passion.jpg";
+import loyaltyPhoto from "../images/CoreValues/core-loyalty.jpg";
+import commitmentPhoto from "../images/CoreValues/core-commitment.jpg";
+import responsibilityPhoto from "../images/CoreValues/core-responsibility.jpg";
+import consistencyPhoto from "../images/CoreValues/core-consistency.jpg";
+import creativityPhoto from "../images/CoreValues/core-creativity.jpg";
 
 /**
  * Our Core Values — fluid image-accordion.
  * One panel expanded at a time; collapsed panels show a vertical label.
- * Each panel shows the photo in its true colors — only a light bottom
- * gradient is used for text legibility, no dark/navy tint over the image.
+ * Each panel displays the real photo in full brightness with light frosted
+ * glass labels so no dark overlay dims the images.
  */
 
 const VALUES = [
@@ -18,7 +18,7 @@ const VALUES = [
     id: "passion",
     title: "Passion",
     image: passionPhoto,
-    position: "center 28%",
+    position: "center center",
     description:
       "Driven by our passion for healthcare education, we strive to provide top-tier training, making Thoughtflows Medical Coding Academy the leading choice for aspiring medical coders.",
   },
@@ -26,7 +26,7 @@ const VALUES = [
     id: "loyalty",
     title: "Loyalty",
     image: loyaltyPhoto,
-    position: "center 68%",
+    position: "center center",
     description:
       "We build lasting relationships with our trainees, fostering loyalty through our commitment to their professional growth and success in the medical coding field.",
   },
@@ -34,7 +34,7 @@ const VALUES = [
     id: "commitment",
     title: "Commitment",
     image: commitmentPhoto,
-    position: "center 35%",
+    position: "center center",
     description:
       "We are fully committed to excellence in innovation, technology, and training, ensuring our trainees receive the highest standard of education and career development.",
   },
@@ -42,7 +42,7 @@ const VALUES = [
     id: "responsibility",
     title: "Responsibility",
     image: responsibilityPhoto,
-    position: "center 30%",
+    position: "center center",
     description:
       "We take full responsibility for our trainees' learning journey, continuously offering support, mentorship, and opportunities for career advancement in medical coding.",
   },
@@ -50,7 +50,7 @@ const VALUES = [
     id: "consistency",
     title: "Consistency",
     image: consistencyPhoto,
-    position: "center 35%",
+    position: "center center",
     description:
       "Our commitment to quality and continuous improvement ensures we maintain the trust of our students and industry partners, year after year.",
   },
@@ -58,7 +58,7 @@ const VALUES = [
     id: "creativity",
     title: "Creativity",
     image: creativityPhoto,
-    position: "center 22%",
+    position: "center center",
     description:
       "Through creative teaching methods and dynamic learning modules, we simplify complex coding concepts, helping our trainees grasp and retain knowledge effectively.",
   },
@@ -123,7 +123,6 @@ function OurCore() {
                 className="tf-coreacc-bg"
                 style={{ objectPosition: v.position }}
               />
-              <span className="tf-coreacc-overlay" aria-hidden="true" />
 
               <span className="tf-coreacc-collapsed-label" aria-hidden={isActive}>
                 {v.title}
@@ -229,7 +228,7 @@ const CSS = `
   cursor: pointer;
   border-radius: clamp(22px, 2.6vw, 34px);
   flex: 0 0 clamp(80px, 6.6vw, 112px);
-  background: #0B2436;
+  background: #EAF0F6;
   transition: flex-basis 760ms cubic-bezier(0.22, 1, 0.36, 1),
               flex-grow 760ms cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -258,31 +257,29 @@ const CSS = `
   transform: scale(1);
 }
 
-.tf-coreacc-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  background: linear-gradient(0deg, rgba(8, 16, 24, 0.8) 0%, rgba(8, 16, 24, 0.35) 22%, rgba(8, 16, 24, 0) 42%);
-  pointer-events: none;
-}
-
 /* ---------- Collapsed label ---------- */
 .tf-coreacc-collapsed-label {
   position: absolute;
-  inset: 0;
+  top: 50%;
+  left: 50%;
   z-index: 3;
-  display: flex;
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
+  padding: 14px 8px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 4px 14px rgba(11, 58, 102, 0.14);
+  color: #0B3A66;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: clamp(13px, 1.1vw, 16px);
-  font-weight: 600;
+  font-size: clamp(12.5px, 1.05vw, 15px);
+  font-weight: 700;
   letter-spacing: 0.02em;
   white-space: nowrap;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.85), 0 2px 14px rgba(0, 0, 0, 0.55);
   writing-mode: vertical-rl;
-  transform: rotate(180deg);
+  transform: translate(-50%, -50%) rotate(180deg);
   opacity: 1;
   transition: opacity 420ms cubic-bezier(0.22, 1, 0.36, 1),
               transform 420ms cubic-bezier(0.22, 1, 0.36, 1);
@@ -290,7 +287,7 @@ const CSS = `
 
 .tf-coreacc-panel.active .tf-coreacc-collapsed-label {
   opacity: 0;
-  transform: rotate(180deg) scale(0.92);
+  transform: translate(-50%, -50%) rotate(180deg) scale(0.92);
   pointer-events: none;
 }
 
@@ -298,10 +295,16 @@ const CSS = `
 .tf-coreacc-content {
   position: absolute;
   z-index: 3;
-  left: clamp(22px, 2.6vw, 38px);
-  right: clamp(22px, 2.6vw, 38px);
-  bottom: clamp(24px, 3vw, 40px);
-  max-width: 48%;
+  left: clamp(18px, 2.2vw, 30px);
+  bottom: clamp(18px, 2.2vw, 30px);
+  max-width: min(440px, calc(100% - 96px));
+  padding: clamp(14px, 1.8vw, 22px) clamp(16px, 2vw, 26px);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.75);
+  box-shadow: 0 12px 30px rgba(11, 58, 102, 0.14);
   opacity: 0;
   transform: translateX(-18px);
   transition: opacity 480ms cubic-bezier(0.22, 1, 0.36, 1) 230ms,
@@ -316,12 +319,11 @@ const CSS = `
 .tf-coreacc-index {
   display: block;
   font-size: 10.5px;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.75);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.7);
-  margin-bottom: 10px;
+  color: #15AEBB;
+  margin-bottom: 6px;
 }
 
 .tf-coreacc-content-title {
@@ -329,17 +331,15 @@ const CSS = `
   font-size: clamp(22px, 2.3vw, 32px);
   font-weight: 700;
   letter-spacing: -0.01em;
-  color: #ffffff;
-  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8), 0 2px 16px rgba(0, 0, 0, 0.45);
-  margin: 0 0 10px;
+  color: #0B3A66;
+  margin: 0 0 8px;
 }
 
 .tf-coreacc-content-copy {
   font-size: clamp(12.5px, 0.95vw, 14px);
   line-height: 1.55;
   letter-spacing: -0.01em;
-  color: rgba(255, 255, 255, 0.92);
-  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.75), 0 2px 12px rgba(0, 0, 0, 0.4);
+  color: #334E68;
   margin: 0;
 }
 
@@ -356,7 +356,8 @@ const CSS = `
   align-items: center;
   justify-content: center;
   background: #ffffff;
-  color: #0B1E30;
+  color: #0B3A66;
+  box-shadow: 0 8px 20px rgba(11, 58, 102, 0.18);
   border: none;
   cursor: pointer;
   transition: transform 280ms cubic-bezier(0.22, 1, 0.36, 1);
@@ -435,16 +436,18 @@ const CSS = `
 
   .tf-coreacc-collapsed-label {
     writing-mode: horizontal-tb;
-    transform: none;
+    padding: 8px 18px;
+    transform: translate(-50%, -50%);
   }
 
   .tf-coreacc-panel.active .tf-coreacc-collapsed-label {
-    transform: scale(0.92);
+    transform: translate(-50%, -50%) scale(0.92);
   }
 
   .tf-coreacc-content {
-    max-width: none;
-    right: 66px;
+    max-width: calc(100% - 88px);
+    left: 16px;
+    bottom: 16px;
   }
 }
 

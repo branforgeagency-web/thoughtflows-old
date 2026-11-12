@@ -6,7 +6,7 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import heroPhoto from "./generated-blog-hero.jpg";
+import heroPhoto from "./blog-banner-workspace.jpg";
 
 const CSS = `
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
@@ -55,7 +55,7 @@ const CSS = `
   inset: -3%;
   background-image: url("${heroPhoto}");
   background-size: cover;
-  background-position: left center;
+  background-position: center center;
   filter: saturate(1.05) contrast(1.01) brightness(1.01);
   will-change: transform;
   opacity: 0.95;
@@ -521,7 +521,7 @@ const CSS = `
 
   .novere-image {
     inset: -5%;
-    background-position: left center;
+    background-position: center center;
     opacity: 0.32;
   }
 

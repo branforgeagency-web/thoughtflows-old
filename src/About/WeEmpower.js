@@ -3,7 +3,7 @@ import image1 from "../images/AboutImg/1 (1).png";
 import img2 from "../images/AboutImg/2 (1).png";
 import img3 from "../images/AboutImg/3 (1).png";
 import img4 from "../images/AboutImg/4 (1).png";
-import lecturePhoto from "../images/welcome/welcome-student-lecture-v2.jpg";
+import lecturePhoto from "../images/AboutImg/about-campus-lounge.jpg";
 
 const FEATURES = [
   {
@@ -65,12 +65,12 @@ function WeEmpower() {
             <div className="tf-empower-image-wrap">
               <img
                 src={lecturePhoto}
-                alt="ThoughtFlows students attentively following a classroom training session"
+                alt="Modern ThoughtFlows Medical Coding Academy lounge and collaborative break area"
                 className="tf-empower-image"
                 loading="lazy"
               />
               <span className="tf-empower-image-overlay" aria-hidden="true" />
-              <span className="tf-empower-image-badge">Inside a ThoughtFlows Classroom</span>
+              <span className="tf-empower-image-badge">Inside ThoughtFlows Academy</span>
             </div>
           </div>
         </div>
@@ -192,7 +192,7 @@ const CSS = `
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 30%;
+  object-position: center center;
 }
 
 .tf-empower-image-overlay {
