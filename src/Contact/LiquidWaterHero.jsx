@@ -632,9 +632,8 @@ export function LiquidWaterHero({
       if (!disposed && gl) buildTexture(gl);
     };
     sourceImage.onerror = () => {
-      if (sourceImage.src !== "/water-texture.jpg") {
-        sourceImage.src = "/water-texture.jpg";
-      }
+      imageLoaded = false;
+      if (!disposed && gl) buildTexture(gl);
     };
     sourceImage.src = activeImageSrc;
 
