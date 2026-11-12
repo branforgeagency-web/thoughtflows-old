@@ -1,6 +1,7 @@
 import React from 'react'
-import micro from "../../images/Branches/vizhag2.png"
-import microbg from "../../images/Branches/online/microbg.png"
+import { mediaUrl } from '../../config/media';
+const micro = mediaUrl("images/Branches/vizhag2.png");
+const microbg = mediaUrl("images/Branches/online/microbg.png");
 
 function VizagSticky() {
   return (

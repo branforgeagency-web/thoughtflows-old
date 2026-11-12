@@ -2,7 +2,8 @@ import React, { useState, useEffect, useContext } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { PopupContext } from '../context/PopupContext';
 import './AdvancedOfferPopup.css';
-import AdvanBanner from '../images/forms/advanpop.jpeg';
+import { mediaUrl } from '../config/media';
+const AdvanBanner = mediaUrl('images/forms/advanpop.jpeg');
 
 const AdvancedOfferPopup = () => {
     const { isOpen } = useContext(PopupContext);

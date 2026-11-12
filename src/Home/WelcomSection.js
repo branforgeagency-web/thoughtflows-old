@@ -1,11 +1,12 @@
 import React from 'react'
-import leftimg from '../images/thumbnail-/img1.png'
-import grp20 from '../images/Group20.png'
-import grp21 from '../images/Group21.png'
-import grp22 from '../images/Group22.png'
-import grp23 from '../images/Group23.png'
 import { Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
+import { mediaUrl } from '../config/media';
+const leftimg = mediaUrl('images/thumbnail-/img1.png');
+const grp20 = mediaUrl('images/Group20.png');
+const grp21 = mediaUrl('images/Group21.png');
+const grp22 = mediaUrl('images/Group22.png');
+const grp23 = mediaUrl('images/Group23.png');
 
 const WelcomSection = () => {
   return (

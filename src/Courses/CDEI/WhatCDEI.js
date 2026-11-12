@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import rightimg from "../../images/Group710.png";
 import { Row, Col } from "react-bootstrap";
-import cdei from "../../images/Course Images/CDEI.jpg"
-import cdei1 from "../../images/Course Images/CDEI1.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
+import { mediaUrl } from '../../config/media';
+const rightimg = mediaUrl("images/Group710.png");
+const cdei = mediaUrl("images/Course Images/CDEI.jpg");
+const cdei1 = mediaUrl("images/Course Images/CDEI1.jpg");
 
 const WhatCRC = () => {
   const coursePages = [

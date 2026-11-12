@@ -1,5 +1,6 @@
 import React from 'react'
-import cdeo from '../../images/Courses/TEST.png'
+import { mediaUrl } from '../../config/media';
+const cdeo = mediaUrl('images/Courses/TEST.png');
 
 const CRCBanner = () => {
     return (

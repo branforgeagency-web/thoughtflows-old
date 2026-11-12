@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { PopupContext } from "../../context/PopupContext";
 import VelouraSkincareHero from "../VelouraSkincareHero";
-import trichyLandmark from "../../images/Landmarks/trichy_landmark.jpg";
-import trichyCampus from "../../images/Branches/gallery/trichy.jpg";
-import trichySrirangam from "../../images/Landmarks/trichy_srirangam.jpg";
+import { mediaUrl } from '../../config/media';
+const trichyLandmark = mediaUrl("images/Landmarks/trichy_landmark.jpg");
+const trichyCampus = mediaUrl("images/Branches/gallery/trichy.jpg");
+const trichySrirangam = mediaUrl("images/Landmarks/trichy_srirangam.jpg");
 
 const TrichyBanner = () => {
   const { setIsOpen } = useContext(PopupContext) || {};

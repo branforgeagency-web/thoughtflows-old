@@ -3,11 +3,12 @@ import React from "react";
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import { Col, Row, Container } from "react-bootstrap";
-import blog1 from "../images/Blog/blog.jpg";
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 
 
 import BlogRef1 from "./BlogRef1";
+import { mediaUrl } from '../config/media';
+const blog1 = mediaUrl("images/Blog/blog.jpg");
 
 function Blogs() {
   return (

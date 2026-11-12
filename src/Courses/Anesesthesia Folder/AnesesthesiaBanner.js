@@ -1,5 +1,6 @@
 import React from 'react'
-import cpcbanner from '../../images/Courses/TEST.png'
+import { mediaUrl } from '../../config/media';
+const cpcbanner = mediaUrl('images/Courses/TEST.png');
 
 function AnesesthesiaBanner() {
     return (

@@ -1,10 +1,11 @@
 import React, { useState } from "react";
-import passionPhoto from "../images/CoreValues/core-passion.jpg";
-import loyaltyPhoto from "../images/CoreValues/core-loyalty.jpg";
-import commitmentPhoto from "../images/CoreValues/core-commitment.jpg";
-import responsibilityPhoto from "../images/CoreValues/core-responsibility.jpg";
-import consistencyPhoto from "../images/CoreValues/core-consistency.jpg";
-import creativityPhoto from "../images/CoreValues/core-creativity.jpg";
+import { mediaUrl } from '../config/media';
+const passionPhoto = mediaUrl("images/CoreValues/core-passion.jpg");
+const loyaltyPhoto = mediaUrl("images/CoreValues/core-loyalty.jpg");
+const commitmentPhoto = mediaUrl("images/CoreValues/core-commitment.jpg");
+const responsibilityPhoto = mediaUrl("images/CoreValues/core-responsibility.jpg");
+const consistencyPhoto = mediaUrl("images/CoreValues/core-consistency.jpg");
+const creativityPhoto = mediaUrl("images/CoreValues/core-creativity.jpg");
 
 /**
  * Our Core Values — fluid image-accordion.

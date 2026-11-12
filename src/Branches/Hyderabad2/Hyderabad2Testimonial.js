@@ -1,13 +1,14 @@
 import React from "react";
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
-import bgrev from '../../images/Group.png';
+import { mediaUrl } from '../../config/media';
+const bgrev = mediaUrl('images/Group.png');
+const yamini = mediaUrl("images/Testimonials/Yamini ( DILSUKHNAGAR HYD ).jpeg");
+const manisha = mediaUrl("images/Testimonials/MANISHA ( DILSUKHNAGAR HYD ).jpeg");
+const nemmadi1 = mediaUrl("images/Testimonials/Nemmadi Udaychinna ( DILSUKHNAGAR HYD ).jpeg");
+const madura = mediaUrl("images/Testimonials/MADHURA ( DILSUKHNAGAR HYD ).jpeg");
+const shivakrishna = mediaUrl("images/man.png");
+const nagalaxmi = mediaUrl("images/man.png");
 
-import yamini from "../../images/Testimonials/Yamini ( DILSUKHNAGAR HYD ).jpeg"
-import manisha from "../../images/Testimonials/MANISHA ( DILSUKHNAGAR HYD ).jpeg"
-import nemmadi1 from "../../images/Testimonials/Nemmadi Udaychinna ( DILSUKHNAGAR HYD ).jpeg"
-import madura from "../../images/Testimonials/MADHURA ( DILSUKHNAGAR HYD ).jpeg"
-import shivakrishna from "../../images/man.png"
-import nagalaxmi from "../../images/man.png"
 
 const testimonials = [
   {

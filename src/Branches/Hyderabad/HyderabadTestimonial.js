@@ -1,11 +1,12 @@
 import React from "react";
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
-import bgrev from '../../images/Group.png';
-import saikumar from "../../images/Testimonials/Sai Kumar renukuntla ( Ameerpet HYD ).jpeg"
-import sushma from "../../images/Testimonials/Sushma Palle ( Ameerpet HYD ).jpeg"
-import ramana from "../../images/Testimonials/Ramana ( Ameerpet HYD ).jpeg"
-import abhiram from "../../images/Testimonials/Abhiram Reddy ( Ameerpet HYD ).jpeg"
-import nagalaxmi from "../../images/man.png"
+import { mediaUrl } from '../../config/media';
+const bgrev = mediaUrl('images/Group.png');
+const saikumar = mediaUrl("images/Testimonials/Sai Kumar renukuntla ( Ameerpet HYD ).jpeg");
+const sushma = mediaUrl("images/Testimonials/Sushma Palle ( Ameerpet HYD ).jpeg");
+const ramana = mediaUrl("images/Testimonials/Ramana ( Ameerpet HYD ).jpeg");
+const abhiram = mediaUrl("images/Testimonials/Abhiram Reddy ( Ameerpet HYD ).jpeg");
+const nagalaxmi = mediaUrl("images/man.png");
 
 const testimonials = [
   {

@@ -1,5 +1,6 @@
 import React from "react";
-import labi from "../../images/Branches/online/hydera1.jpg";
+import { mediaUrl } from '../../config/media';
+const labi = mediaUrl("images/Branches/online/hydera1.jpg");
 
 function HyderabadAbout() {
   return (

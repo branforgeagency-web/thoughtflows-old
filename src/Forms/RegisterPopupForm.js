@@ -5,8 +5,9 @@ import { logEnquiry } from '../utils/enquiryLog';
 import './RegisterPopup.css';
 import { coursesList } from '../coursesList';
 import { isValidPhone, normalizePhone, PHONE_ERROR } from '../utils/phone';
+import { mediaUrl } from '../config/media';
+const RegisterBanner = mediaUrl('images/ai-medical-coding-banner.png');
 
-import RegisterBanner from '../images/ai-medical-coding-banner.png';
 
 const RegisterPopupForm = () => {
     const { isOpen, setIsOpen } = useContext(PopupContext);

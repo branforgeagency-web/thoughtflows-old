@@ -1,5 +1,6 @@
 import React from 'react';
-import rhia from "../../images/courseimage/Health Information Administrator.webp"
+import { mediaUrl } from '../../config/media';
+const rhia = mediaUrl("images/courseimage/Health Information Administrator.webp");
 
 const WhatisRHIA = () => {
   return (

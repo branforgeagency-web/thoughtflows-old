@@ -1,6 +1,7 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
-import coursebg from '../../images/coursebg.png'
+import { mediaUrl } from '../../config/media';
+const coursebg = mediaUrl('images/coursebg.png');
 
 const AboutCRC = () => {
     return (

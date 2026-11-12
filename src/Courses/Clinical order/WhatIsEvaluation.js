@@ -1,5 +1,6 @@
 import React from "react";
-import ccc from "../../images/courseimage/ccc.webp"
+import { mediaUrl } from '../../config/media';
+const ccc = mediaUrl("images/courseimage/ccc.webp");
 
 const WhatIsEvaluation = () => {
   return (

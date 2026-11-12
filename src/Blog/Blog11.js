@@ -1,11 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import heroBanner from "../images/Blog/fy-2027-icd-10/hero-banner.jpg";
-import keyChangesImg from "../images/Blog/fy-2027-icd-10/key-changes.jpg";
-import guidelineChangesImg from "../images/Blog/fy-2027-icd-10/guideline-changes.jpg";
-import codingMistakesImg from "../images/Blog/fy-2027-icd-10/coding-mistakes.jpg";
-import howToPrepareImg from "../images/Blog/fy-2027-icd-10/how-to-prepare.jpg";
-import thoughtflowsCtaImg from "../images/Blog/fy-2027-icd-10/thoughtflows-cta.jpg";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import {
@@ -26,6 +20,13 @@ import {
   FaClipboardCheck,
   FaTimesCircle,
 } from "react-icons/fa";
+import { mediaUrl } from '../config/media';
+const heroBanner = mediaUrl("images/Blog/fy-2027-icd-10/hero-banner.jpg");
+const keyChangesImg = mediaUrl("images/Blog/fy-2027-icd-10/key-changes.jpg");
+const guidelineChangesImg = mediaUrl("images/Blog/fy-2027-icd-10/guideline-changes.jpg");
+const codingMistakesImg = mediaUrl("images/Blog/fy-2027-icd-10/coding-mistakes.jpg");
+const howToPrepareImg = mediaUrl("images/Blog/fy-2027-icd-10/how-to-prepare.jpg");
+const thoughtflowsCtaImg = mediaUrl("images/Blog/fy-2027-icd-10/thoughtflows-cta.jpg");
 
 export default function Blog11() {
   const [openFaq, setOpenFaq] = useState(null);

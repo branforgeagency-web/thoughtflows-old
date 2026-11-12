@@ -1,5 +1,6 @@
 import React from "react";
-import homeblogImg1 from '../images/homeblog1.jpeg'
+import { mediaUrl } from '../config/media';
+const homeblogImg1 = mediaUrl('images/homeblog1.jpeg');
 
 const articles = [
   {

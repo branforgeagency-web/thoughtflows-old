@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { PopupContext } from "../../context/PopupContext";
 import VelouraSkincareHero from "../VelouraSkincareHero";
-import kolhapurLandmark from "../../images/Landmarks/kolhapur_landmark.jpg";
-import kolhapurCampus from "../../images/Branches/maha_kolhapur_campus.jpg";
-import kolhapurMahalaxmi from "../../images/Landmarks/kolhapur_mahalaxmi.jpg";
+import { mediaUrl } from '../../config/media';
+const kolhapurLandmark = mediaUrl("images/Landmarks/kolhapur_landmark.jpg");
+const kolhapurCampus = mediaUrl("images/Branches/maha_kolhapur_campus.jpg");
+const kolhapurMahalaxmi = mediaUrl("images/Landmarks/kolhapur_mahalaxmi.jpg");
 
 const KolhapurBanner = () => {
   const { setIsOpen } = useContext(PopupContext) || {};

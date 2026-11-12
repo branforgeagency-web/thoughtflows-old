@@ -1,8 +1,9 @@
 import React from "react";
 import { School, MonitorSmartphone, MapPin } from "lucide-react";
 import Reveal from "../Theni/Reveal";
-import classroomImg from "../../images/AboutImg/course-02.jpg";
-import onlineImg from "../../images/Branches/online/on8.png";
+import { mediaUrl } from '../../config/media';
+const classroomImg = mediaUrl("images/AboutImg/course-02.jpg");
+const onlineImg = mediaUrl("images/Branches/online/on8.png");
 
 const SaravanampattiModes = () => {
   return (

@@ -1,7 +1,8 @@
 import React from 'react'
 import { Row, Col } from 'react-bootstrap'
-import coursebg from '../../images/coursebg.png'
 import { Link } from "react-router-dom";
+import { mediaUrl } from '../../config/media';
+const coursebg = mediaUrl('images/coursebg.png');
 const AboutCRC = () => {
     return (
         <Row className='' style={{ padding: '80px 20px', alignItems: 'center' }}>

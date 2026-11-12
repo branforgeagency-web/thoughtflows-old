@@ -1,7 +1,8 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import cbe1aboutbg from '../../images/Branches/cbe1Abt.png';
-import studentsImg from '../../images/Branches/online/Students.jpg';
+import { mediaUrl } from '../../config/media';
+const cbe1aboutbg = mediaUrl('images/Branches/cbe1Abt.png');
+const studentsImg = mediaUrl('images/Branches/online/Students.jpg');
 
 const PuneAbout = () => {
   return (

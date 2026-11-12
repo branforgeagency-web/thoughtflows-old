@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { PopupContext } from "../../context/PopupContext";
 import VelouraSkincareHero from "../VelouraSkincareHero";
-import kochiLandmark from "../../images/Landmarks/kochi_landmark.jpg";
-import kochiCampus from "../../images/Branches/kerala_kochi_campus.jpg";
-import keralaBackwaters from "../../images/Landmarks/kerala_backwaters.jpg";
+import { mediaUrl } from '../../config/media';
+const kochiLandmark = mediaUrl("images/Landmarks/kochi_landmark.jpg");
+const kochiCampus = mediaUrl("images/Branches/kerala_kochi_campus.jpg");
+const keralaBackwaters = mediaUrl("images/Landmarks/kerala_backwaters.jpg");
 
 const KochiBanner = () => {
   const { setIsOpen } = useContext(PopupContext) || {};

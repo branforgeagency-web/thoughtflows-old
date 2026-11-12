@@ -1,8 +1,9 @@
 import React from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
-import pathology from '../../images/Branches/Pathology.jpg';
-import radiology from '../../images/Branches/Radiology.jpg';
+import { mediaUrl } from '../../config/media';
+const pathology = mediaUrl('images/Branches/Pathology.jpg');
+const radiology = mediaUrl('images/Branches/Radiology.jpg');
 
 
 const Cbe2Exams = () => {

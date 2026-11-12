@@ -1,9 +1,5 @@
 import React, { useEffect, useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import heroBanner from "../images/Blog/certified-ai-coder/hero-banner.jpg";
-import whoMakesDecisionImg from "../images/Blog/certified-ai-coder/who-makes-final-decision.jpg";
-import interviewQuestionsImg from "../images/Blog/certified-ai-coder/interview-questions.jpg";
-import futureCtaImg from "../images/Blog/certified-ai-coder/future-cta.jpg";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import {
@@ -20,6 +16,11 @@ import {
   FaChevronDown,
   FaChevronUp,
 } from "react-icons/fa";
+import { mediaUrl } from '../config/media';
+const heroBanner = mediaUrl("images/Blog/certified-ai-coder/hero-banner.jpg");
+const whoMakesDecisionImg = mediaUrl("images/Blog/certified-ai-coder/who-makes-final-decision.jpg");
+const interviewQuestionsImg = mediaUrl("images/Blog/certified-ai-coder/interview-questions.jpg");
+const futureCtaImg = mediaUrl("images/Blog/certified-ai-coder/future-cta.jpg");
 
 export default function Blog10() {
   const [openFaq, setOpenFaq] = useState(null);

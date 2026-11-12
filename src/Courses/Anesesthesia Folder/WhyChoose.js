@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import { Row } from 'react-bootstrap';
-import excellenceimg from '../../images/Courses/excellence.png';
-import careeradv from '../../images/Courses/career-advancement.png';
-import handson from '../../images/Courses/hands-on-experience.png';
 import { color } from 'framer-motion';
+import { mediaUrl } from '../../config/media';
+const excellenceimg = mediaUrl('images/Courses/excellence.png');
+const careeradv = mediaUrl('images/Courses/career-advancement.png');
+const handson = mediaUrl('images/Courses/hands-on-experience.png');
 
 const cardData = [
     {

@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { PopupContext } from "../../context/PopupContext";
 import VelouraSkincareHero from "../VelouraSkincareHero";
-import theniLandmark from "../../images/Landmarks/theni_landmark.jpg";
-import campusInterior from "../../images/Branches/cbe_saravanampatti_campus.jpg";
-import theniVaigai from "../../images/Landmarks/theni_vaigai.jpg";
+import { mediaUrl } from '../../config/media';
+const theniLandmark = mediaUrl("images/Landmarks/theni_landmark.jpg");
+const campusInterior = mediaUrl("images/Branches/cbe_saravanampatti_campus.jpg");
+const theniVaigai = mediaUrl("images/Landmarks/theni_vaigai.jpg");
 
 const TheniBanner = () => {
   const { setIsOpen } = useContext(PopupContext) || {};

@@ -1,8 +1,9 @@
 import React from 'react';
-import training from '../../images/Courses/training.png';
-import learning from '../../images/Courses/learning.png';
-import classroom from '../../images/Courses/classroom.png';
-import studyMaterial from '../../images/Courses/3d-model.png';
+import { mediaUrl } from '../../config/media';
+const training = mediaUrl('images/Courses/training.png');
+const learning = mediaUrl('images/Courses/learning.png');
+const classroom = mediaUrl('images/Courses/classroom.png');
+const studyMaterial = mediaUrl('images/Courses/3d-model.png');
 
 const features = [
     { icon: classroom, title: "ICD-10-CM Official Coding Guidelines", description: "For coding procedures and services." },

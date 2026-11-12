@@ -1,10 +1,11 @@
 
 import React, { useState } from 'react'
-import rightimg from '../../images/Group710.png'
 import { Row, Col } from 'react-bootstrap'
-import cpmaWebp from "../../images/courseimage/Thought flows Img 4 CPMA.webp"
-import cpma1 from "../../images/Course Images/CPMA1.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
+import { mediaUrl } from '../../config/media';
+const rightimg = mediaUrl('images/Group710.png');
+const cpmaWebp = mediaUrl("images/courseimage/Thought flows Img 4 CPMA.webp");
+const cpma1 = mediaUrl("images/Course Images/CPMA1.jpg");
 
 const WhatCPMA = () => {
 

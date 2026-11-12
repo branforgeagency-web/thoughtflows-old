@@ -1,11 +1,12 @@
 import React from 'react'
-import parrex from "../../images/Branches/online/kochi.jpg"
+import { mediaUrl } from '../../config/media';
+const kochiParallaxBg = mediaUrl("images/Branches/online/Kochi1.jpg");
 
 function KochiFlex() {
   return (
     <>
     
-    <div className="parallax-container">
+    <div className="parallax-container" style={{ backgroundImage: `url(${kochiParallaxBg})` }}>
       <div className="content-kochi" >
         <h2>Why ThoughtFlows is Considered Among the Best Medical Coding Institutes in Kerala</h2>
         <p>Students searching for the best Medical Coding institute in Kerala often compare factors such as training quality, certification guidance, practical learning opportunities, trainer expertise, and career support before making their decision.</p>

@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import ivr from "../../images/courseimage/IVR-Interventional Radiology.webp"
-import ivr1 from "../../images/Course Images/IVR Exam Overview.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
+import { mediaUrl } from '../../config/media';
+const ivr = mediaUrl("images/courseimage/IVR-Interventional Radiology.webp");
+const ivr1 = mediaUrl("images/Course Images/IVR Exam Overview.jpg");
 
 const WhatCRC = () => {
   const coursePages = [

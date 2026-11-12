@@ -1,5 +1,6 @@
 import React from 'react'
-import cdeibanner from '../../images/Courses/TEST.png'
+import { mediaUrl } from '../../config/media';
+const cdeibanner = mediaUrl('images/Courses/TEST.png');
 
 const CRCBanner = () => {
     return (

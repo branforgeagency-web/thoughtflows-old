@@ -1,7 +1,8 @@
 import React from "react";
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
-import bgrev from '../../images/Group.png';
-import avatarImg from "../../images/man.png";
+import { mediaUrl } from '../../config/media';
+const bgrev = mediaUrl('images/Group.png');
+const avatarImg = mediaUrl("images/man.png");
 
 const testimonials = [
   {

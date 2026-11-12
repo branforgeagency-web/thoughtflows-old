@@ -1,8 +1,9 @@
 import React from 'react';
-import triEnroll from "../../images/Branches/online/nurse-typing.jpg";
-import testLab from "../../images/Branches/online/testTrivandrum.jpg";
-import arrow from "../../images/Branches/online/imge3.jpg";
 import { FaCircle } from 'react-icons/fa';
+import { mediaUrl } from '../../config/media';
+const triEnroll = mediaUrl("images/Branches/online/nurse-typing.jpg");
+const testLab = mediaUrl("images/Branches/online/testTrivandrum.jpg");
+const arrow = mediaUrl("images/Branches/online/imge3.jpg");
 
 function TrivandrumOnline2() {
   return (

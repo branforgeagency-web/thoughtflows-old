@@ -1,5 +1,6 @@
 import React from 'react'
-import wow1 from "../../images/Branches/online/wow1.png"
+import { mediaUrl } from '../../config/media';
+const wow1 = mediaUrl("images/Branches/online/wow1.png");
 
 function KochiOnline() {
   return (

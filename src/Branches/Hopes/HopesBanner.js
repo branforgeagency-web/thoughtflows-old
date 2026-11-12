@@ -1,9 +1,10 @@
 import React, { useContext } from "react";
 import { PopupContext } from "../../context/PopupContext";
 import VelouraSkincareHero from "../VelouraSkincareHero";
-import ishaBannerImg from "../../images/Branches/isha_coimbatore_banner.jpg";
-import hopesCampus from "../../images/Branches/cbe_hopes_campus.jpg";
-import coimbatoreSiruvani from "../../images/Landmarks/coimbatore_siruvani.jpg";
+import { mediaUrl } from '../../config/media';
+const ishaBannerImg = mediaUrl("images/Branches/isha_coimbatore_banner.jpg");
+const hopesCampus = mediaUrl("images/Branches/cbe_hopes_campus.jpg");
+const coimbatoreSiruvani = mediaUrl("images/Landmarks/coimbatore_siruvani.jpg");
 
 const HopesBanner = () => {
   const { setIsOpen } = useContext(PopupContext) || {};

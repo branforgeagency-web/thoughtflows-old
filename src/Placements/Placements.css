@@ -17,7 +17,7 @@
     height: 70vh;
     min-height: 500px;
     background: linear-gradient(135deg, #0f3460 0%, #16213e 100%);
-    background-image: url('../images/Branches/placement banner.jpeg');
+    background-image: url('https://amplify-d16vhnu5amcbsu-ma-thoughtflowsstoragebucke-0tvgcluheq7z.s3.ap-south-1.amazonaws.com/media/images/Branches/placement%20banner.jpeg');
     background-size: 100% 100%;
     /* background-attachment: fixed; */
     display: flex;

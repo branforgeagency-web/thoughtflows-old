@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import cemc from "../../images/courseimage/Evaluation and Management.webp"
-import cemc1 from "../../images/Course Images/CEMC1.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
+import { mediaUrl } from '../../config/media';
+const cemc = mediaUrl("images/courseimage/Evaluation and Management.webp");
+const cemc1 = mediaUrl("images/Course Images/CEMC1.jpg");
 
 const WhatCRC = () => {
   const coursePages = [

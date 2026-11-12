@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { motion, useReducedMotion } from 'framer-motion';
-import imgTraining from '../images/why/training.png';
-import imgFlexible from '../images/why/flexible.png';
-import imgPlacement from '../images/why/placement.png';
-import imgHandsOn from '../images/why/hands-on.png';
-import imgCurriculum from '../images/why/curriculum.png';
 import './Coaching.css';
+import { mediaUrl } from '../config/media';
+const imgTraining = mediaUrl('images/why/training.png');
+const imgFlexible = mediaUrl('images/why/flexible.png');
+const imgPlacement = mediaUrl('images/why/placement.png');
+const imgHandsOn = mediaUrl('images/why/hands-on.png');
+const imgCurriculum = mediaUrl('images/why/curriculum.png');
 
 // Thoughtflows palette: teal, navy, violet accent, gold accent, ocean blue
 const cardData = [

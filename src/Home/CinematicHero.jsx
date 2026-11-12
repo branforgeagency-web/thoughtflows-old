@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
-import homevideo from '../images/hero-video.mp4';
 import './CinematicHero.css';
+import { mediaUrl } from '../config/media';
+const homevideo = mediaUrl('images/hero-video.mp4');
 
 const BRAND_PART_1 = 'T';
 const REMAINING_PART_1 = ['H', 'O', 'U', 'G', 'H', 'T'];

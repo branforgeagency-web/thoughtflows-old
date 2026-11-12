@@ -1,7 +1,8 @@
 import React, { useState } from "react";
-import cedc from "../../images/courseimage/Emergency.webp"
-import cedc1 from "../../images/Course Images/CEDE1.jpg"
 import { FaArrowRightLong } from "react-icons/fa6";
+import { mediaUrl } from '../../config/media';
+const cedc = mediaUrl("images/courseimage/Emergency.webp");
+const cedc1 = mediaUrl("images/Course Images/CEDE1.jpg");
 
 const WhatCRC = () => {
   const coursePages = [

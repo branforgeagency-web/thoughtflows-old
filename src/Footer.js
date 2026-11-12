@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
-import footerlogo from '../src/images/image2.png';
 import { Col, Container } from 'react-bootstrap';
 import { Link, useLocation } from 'react-router-dom';
 import { motion } from 'framer-motion';
 import { Video, ArrowRight } from 'lucide-react';
 import ZoomSignupForm from './Zoom';
 import { getBranchInfoByPath, defaultBranchDetails, getRegionBranchesByPath } from './data/branchDetails';
+import { mediaUrl } from './config/media';
+const footerlogo = mediaUrl('images/image2.png');
 
 const Footer = () => {
     const [showZoomPopup, setShowZoomPopup] = useState(false);

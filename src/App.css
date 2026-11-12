@@ -3438,7 +3438,6 @@ h1 {
 .parallax-container {
   position: relative;
   /* height: 500px; */
-  background-image: url("../src/images/Branches//online/Kochi1.jpg");
   background-color: #000000;
   background-attachment: fixed;
   background-position: center;

@@ -1,8 +1,9 @@
 import React from 'react';
 // import whychooseImg from '../../images/Branches/school-4-thumb-1.png.webp'
-import whychooseImg from '../../images/Branches/tf1.png'
 import { Col, Row } from 'react-bootstrap';
-import salem from '../../images/Branches/Frame 18.png'
+import { mediaUrl } from '../../config/media';
+const whychooseImg = mediaUrl('images/Branches/tf1.png');
+const salem = mediaUrl('images/Branches/Frame 18.png');
 const TirupathiContent = () => {
     return (
         <Row className="tirupathi-content-container">

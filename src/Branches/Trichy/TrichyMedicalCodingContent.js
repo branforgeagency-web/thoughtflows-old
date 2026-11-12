@@ -1,5 +1,6 @@
 import React from "react";
-import branch from "../../images/Branches/Radiology.jpg";
+import { mediaUrl } from '../../config/media';
+const branch = mediaUrl("images/Branches/Radiology.jpg");
 
 const MedicalCodingContent = () => {
     const sections = [

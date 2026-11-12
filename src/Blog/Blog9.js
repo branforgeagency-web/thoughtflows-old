@@ -1,12 +1,13 @@
 import React, { useEffect, useState } from "react";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import heroBanner from "../images/Blog/ai-coding/hero-banner.jpg";
-import howAiHelpsImg from "../images/Blog/ai-coding/how-ai-helps.jpg";
-import skillsNeededImg from "../images/Blog/ai-coding/skills-needed.jpg";
-import goodCareerImg from "../images/Blog/ai-coding/good-career-2026.jpg";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
 import { FaCalendarAlt, FaUserEdit, FaCheckCircle, FaLightbulb, FaRobot, FaUserCheck, FaChartLine } from "react-icons/fa";
+import { mediaUrl } from '../config/media';
+const heroBanner = mediaUrl("images/Blog/ai-coding/hero-banner.jpg");
+const howAiHelpsImg = mediaUrl("images/Blog/ai-coding/how-ai-helps.jpg");
+const skillsNeededImg = mediaUrl("images/Blog/ai-coding/skills-needed.jpg");
+const goodCareerImg = mediaUrl("images/Blog/ai-coding/good-career-2026.jpg");
 
 export default function Blog9() {
   const [openFaq, setOpenFaq] = useState(null);

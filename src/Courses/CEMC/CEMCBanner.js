@@ -1,5 +1,6 @@
 import React from 'react'
-import cemcbanner from '../../images/Courses/TEST.png'
+import { mediaUrl } from '../../config/media';
+const cemcbanner = mediaUrl('images/Courses/TEST.png');
 
 const CRCBanner = () => {
     return (

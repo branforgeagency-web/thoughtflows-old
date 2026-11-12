@@ -1,6 +1,7 @@
 import React from 'react';
 import { Row, Col } from 'react-bootstrap';
-import Arrow from '../../images/next.png';
+import { mediaUrl } from '../../config/media';
+const Arrow = mediaUrl('images/next.png');
 
 const CRCObjective = () => {
   return (

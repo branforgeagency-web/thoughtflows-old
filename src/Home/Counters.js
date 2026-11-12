@@ -2,15 +2,16 @@ import React from 'react';
 import CountUp from 'react-countup';
 import { motion, useReducedMotion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import avatarA1 from '../images/CoreValues/loyalty.jpg';
-import avatarA2 from '../images/CoreValues/commitment.jpg';
-import avatarA3 from '../images/CoreValues/responsibility.jpg';
-import avatarB1 from '../images/CoreValues/consistency.jpg';
-import avatarB2 from '../images/CoreValues/creativity.jpg';
-import avatarB3 from '../images/CoreValues/passion.jpg';
-import placementsCareerCutout from '../images/Home/placements-career-cutout.png';
-import placementsTrainingCutout from '../images/Home/placements-training-cutout.png';
 import './Counters.css';
+import { mediaUrl } from '../config/media';
+const avatarA1 = mediaUrl('images/CoreValues/loyalty.jpg');
+const avatarA2 = mediaUrl('images/CoreValues/commitment.jpg');
+const avatarA3 = mediaUrl('images/CoreValues/responsibility.jpg');
+const avatarB1 = mediaUrl('images/CoreValues/consistency.jpg');
+const avatarB2 = mediaUrl('images/CoreValues/creativity.jpg');
+const avatarB3 = mediaUrl('images/CoreValues/passion.jpg');
+const placementsCareerCutout = mediaUrl('images/Home/placements-career-cutout.png');
+const placementsTrainingCutout = mediaUrl('images/Home/placements-training-cutout.png');
 
 const EASE = [0.22, 1, 0.36, 1];
 

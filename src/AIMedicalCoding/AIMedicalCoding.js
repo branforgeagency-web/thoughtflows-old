@@ -3,7 +3,8 @@ import './AIMedicalCoding.css';
 import Meta from '../Meta';
 import { isValidPhone, normalizePhone, PHONE_ERROR } from '../utils/phone';
 import { logEnquiry } from '../utils/enquiryLog';
-import aiBanner from './ai-medical-coding-banner.png';
+import { mediaUrl } from '../config/media';
+const aiBanner = mediaUrl('AIMedicalCoding/ai-medical-coding-banner.png');
 
 /* ── animated counter hook ── */
 function useCounter(target, duration = 1600) {

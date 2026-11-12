@@ -1,21 +1,22 @@
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import image1 from "../../images/Branches/online/Group 1.jpg";
-import image2 from "../../images/Branches/online/Group 2.jpg";
-import image3 from "../../images/Branches/online/Group 3.jpg";
-import image4 from "../../images/Branches/online/Group 4.jpg";
-import image5 from "../../images/Branches/online/Group 5.jpg";
-import image6 from "../../images/Branches/online/Group 6.jpg";
-import image7 from "../../images/Branches/online/Group 7.jpg";
-import image8 from "../../images/Branches/online/Group 8.jpg";
-import image9 from "../../images/Branches/online/Group 9.jpg";
-import image10 from "../../images/Branches/online/Group 10.jpg";
-import image11 from "../../images/Branches/online/Group 11.jpg";
-import image12 from "../../images/Branches/online/Group 12.jpg";
-import image13 from "../../images/Branches/online/Group 13.jpg";
-import image14 from "../../images/Branches/online/Group 14.jpg";
-import image15 from "../../images/Branches/online/Group 15.jpg";
+import { mediaUrl } from '../../config/media';
+const image1 = mediaUrl("images/Branches/online/Group 1.jpg");
+const image2 = mediaUrl("images/Branches/online/Group 2.jpg");
+const image3 = mediaUrl("images/Branches/online/Group 3.jpg");
+const image4 = mediaUrl("images/Branches/online/Group 4.jpg");
+const image5 = mediaUrl("images/Branches/online/Group 5.jpg");
+const image6 = mediaUrl("images/Branches/online/Group 6.jpg");
+const image7 = mediaUrl("images/Branches/online/Group 7.jpg");
+const image8 = mediaUrl("images/Branches/online/Group 8.jpg");
+const image9 = mediaUrl("images/Branches/online/Group 9.jpg");
+const image10 = mediaUrl("images/Branches/online/Group 10.jpg");
+const image11 = mediaUrl("images/Branches/online/Group 11.jpg");
+const image12 = mediaUrl("images/Branches/online/Group 12.jpg");
+const image13 = mediaUrl("images/Branches/online/Group 13.jpg");
+const image14 = mediaUrl("images/Branches/online/Group 14.jpg");
+const image15 = mediaUrl("images/Branches/online/Group 15.jpg");
 
 // Custom Arrow Component
 const CustomArrow = ({ onClick, direction }) => (

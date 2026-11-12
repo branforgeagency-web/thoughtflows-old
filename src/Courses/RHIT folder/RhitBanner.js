@@ -1,5 +1,6 @@
 import React from 'react'
-import surgerybanner from '../../images/Courses/TEST.png'
+import { mediaUrl } from '../../config/media';
+const surgerybanner = mediaUrl('images/Courses/TEST.png');
 
 const RhitBanner = () => {
     return (

@@ -1,7 +1,8 @@
 import React from "react";
 import { Award, FileText, Users, TrendingUp, Bell, Search, ClipboardCheck } from "lucide-react";
 import Reveal from "./Reveal";
-import trainerImg from "../../images/Course Images/CEMC1.jpg";
+import { mediaUrl } from '../../config/media';
+const trainerImg = mediaUrl("images/Course Images/CEMC1.jpg");
 
 const support = [
   { icon: FileText, text: "Guidance for creating a resume" },

@@ -1,6 +1,7 @@
 import React from "react";
-import branch from "../../images/Branches/Radiology.jpg";
-import ipdrug1 from "../../images/Course Images/Where Do IPDRG Coders Work_.jpg"
+import { mediaUrl } from '../../config/media';
+const branch = mediaUrl("images/Branches/Radiology.jpg");
+const ipdrug1 = mediaUrl("images/Course Images/Where Do IPDRG Coders Work_.jpg");
 const IpDrugCoders = () => {
     const sections = [
         {

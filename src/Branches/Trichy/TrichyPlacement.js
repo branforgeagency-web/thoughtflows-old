@@ -1,5 +1,6 @@
 import React from 'react'
-import triEnroll from "../../images/Branches/online/nurse-typing.jpg";
+import { mediaUrl } from '../../config/media';
+const triEnroll = mediaUrl("images/Branches/online/nurse-typing.jpg");
 
 
 const TrichyPlacement = () => {

@@ -1,19 +1,20 @@
 import React from "react";
 import { Container, Row, Col, Carousel } from 'react-bootstrap';
-import bgrev from '../../images/Group.png';
-import kamale from "../../images/Kamale.G.png"
-import SUGANYA from '../../images/SUGANYA.G.png'
-import Ramya from '../../images/Ramya senthilkumar.png'
-import Vidhya from '../../images/Vidhya .K.png'
-import Rino from '../../images/Rino.png'
-import muhsina from '../../images/Muhsina Surmi.png'
-import nemmadi from '../../images/Nemmadi Udaychinna.png'
+import { mediaUrl } from '../../config/media';
+const bgrev = mediaUrl('images/Group.png');
+const kamale = mediaUrl("images/Kamale.G.png");
+const SUGANYA = mediaUrl('images/SUGANYA.G.png');
+const Ramya = mediaUrl('images/Ramya senthilkumar.png');
+const Vidhya = mediaUrl('images/Vidhya .K.png');
+const Rino = mediaUrl('images/Rino.png');
+const muhsina = mediaUrl('images/Muhsina Surmi.png');
+const nemmadi = mediaUrl('images/Nemmadi Udaychinna.png');
+const geethasri = mediaUrl("images/Testimonials/Geethasri (Hopes).jpeg");
+const vijayakumar = mediaUrl("images/Testimonials/Vijayakumar (Hopes).jpeg");
+const gopika = mediaUrl("images/Testimonials/Gopika (Hopes).jpeg");
+const shanmugapriyan = mediaUrl("images/Testimonials/Shanmugappriyan (Hopes).jpeg");
+const mohan = mediaUrl("images/man.png");
 // import mohan from "../../images/Testimonials/Mohan (Hopes).jpeg"
-import geethasri from "../../images/Testimonials/Geethasri (Hopes).jpeg"
-import vijayakumar from "../../images/Testimonials/Vijayakumar (Hopes).jpeg"
-import gopika from "../../images/Testimonials/Gopika (Hopes).jpeg"
-import shanmugapriyan from "../../images/Testimonials/Shanmugappriyan (Hopes).jpeg"
-import mohan from "../../images/man.png"
 
 const testimonials = [
   {

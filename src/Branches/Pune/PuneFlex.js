@@ -1,5 +1,6 @@
 import React from "react";
-import bg from "../../images/Branches/online/home-8-bg.jpg";
+import { mediaUrl } from '../../config/media';
+const bg = mediaUrl("images/Branches/online/home-8-bg.jpg");
 
 function PuneFlex() {
   return (

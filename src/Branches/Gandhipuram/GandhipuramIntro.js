@@ -12,7 +12,8 @@ import {
   GraduationCap
 } from "lucide-react";
 import Reveal from "../Theni/Reveal";
-import campusImg from "../../images/Branches/Pic 3.webp";
+import { mediaUrl } from '../../config/media';
+const campusImg = mediaUrl("images/Branches/Pic 3.webp");
 
 const areasCovered = [
   { icon: BookOpen, title: "Comprehension of Medical Terminology" },

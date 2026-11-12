@@ -1,5 +1,6 @@
 import React from 'react'
-import EDbanner from '../../images/Courses/TEST.png'
+import { mediaUrl } from '../../config/media';
+const EDbanner = mediaUrl('images/Courses/TEST.png');
 
 function EdBanner() {
     return (

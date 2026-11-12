@@ -1,10 +1,11 @@
 import React from 'react';
-import passion from '../../images/Branches/motivation.png'
-import loyalty from '../../images/Branches/customer-loyalty.png'
-import commitment from '../../images/Branches/deal.png'
-import responsibility from '../../images/Branches/norms.png'
-import consistency from '../../images/Branches/consistency.png'
-import creativity from '../../images/Branches/solution.png'
+import { mediaUrl } from '../../config/media';
+const passion = mediaUrl('images/Branches/motivation.png');
+const loyalty = mediaUrl('images/Branches/customer-loyalty.png');
+const commitment = mediaUrl('images/Branches/deal.png');
+const responsibility = mediaUrl('images/Branches/norms.png');
+const consistency = mediaUrl('images/Branches/consistency.png');
+const creativity = mediaUrl('images/Branches/solution.png');
 
 const Cbe1Core = () => {
     return (

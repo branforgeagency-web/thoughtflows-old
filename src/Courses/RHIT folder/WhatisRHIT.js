@@ -1,5 +1,6 @@
 import React from 'react';
-import rhit from "../../images/courseimage/Health Information Technician.webp"
+import { mediaUrl } from '../../config/media';
+const rhit = mediaUrl("images/courseimage/Health Information Technician.webp");
 
 const WhatisRHIT = () => {
   return (

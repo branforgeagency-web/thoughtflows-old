@@ -1,8 +1,9 @@
 import { useEffect } from "react";
-import image from "./medic.jpg";
 import Meta from "../Meta";
 import "@fortawesome/fontawesome-free/css/all.min.css";
-import postImage3 from '../images/Blog/health-wellness-digital-tablet-concept.jpg';
+import { mediaUrl } from '../config/media';
+const image = mediaUrl("Blog/medic.jpg");
+const postImage3 = mediaUrl('images/Blog/health-wellness-digital-tablet-concept.jpg');
 
 export default function Blog3() {
   useEffect(() => {

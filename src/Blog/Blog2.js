@@ -1,10 +1,11 @@
 import { useEffect } from "react";
-import image from "./medic.jpg";
-import postImage2 from '../images/Blog/medical-banner-with-doctor-wearing-goggles.jpg';
 import Meta from "../Meta";
 
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import { FaCircle } from "react-icons/fa";
+import { mediaUrl } from '../config/media';
+const image = mediaUrl("Blog/medic.jpg");
+const postImage2 = mediaUrl('images/Blog/medical-banner-with-doctor-wearing-goggles.jpg');
 export default function Blog2() {
   useEffect(() => {
     window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
