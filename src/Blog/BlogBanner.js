@@ -6,8 +6,7 @@ import {
   useSpring,
   useTransform,
 } from "framer-motion";
-import { mediaUrl } from '../config/media';
-const heroPhoto = mediaUrl("Blog/blog-banner-workspace.jpg");
+import heroPhoto from "./blog-banner-workspace.jpg";
 
 const CSS = `
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
@@ -46,117 +45,35 @@ const CSS = `
 
 .novere-media {
   position: absolute;
-  inset: -30px;
+  inset: -16px;
   z-index: 0;
   will-change: transform;
 }
 
 .novere-image {
   position: absolute;
-  inset: -3%;
+  inset: 0;
   background-image: url("${heroPhoto}");
   background-size: cover;
-  background-position: center center;
-  filter: saturate(1.05) contrast(1.01) brightness(1.01);
+  background-position: left center;
   will-change: transform;
-  opacity: 0.95;
+  opacity: 1;
 }
 
-/* Soft medical cyan ambient light */
-.novere-light {
-  position: absolute;
-  inset: 0;
-  z-index: 1;
-  pointer-events: none;
-  background:
-    radial-gradient(
-      circle at 18% 40%,
-      rgba(21, 174, 187, 0.12) 0%,
-      transparent 50%
-    ),
-    radial-gradient(
-      circle at 75% 45%,
-      rgba(11, 58, 102, 0.05) 0%,
-      transparent 55%
-    );
-}
-
-/* Crisp Light reading fade: medical coder visible on left, dissolves into pure white/ice-blue reading surface on right */
+/* Clear image on the left, smooth transition into pure white reading surface on the right */
 .novere-dark-overlay {
   position: absolute;
   inset: 0;
   z-index: 2;
   pointer-events: none;
-  background:
-    linear-gradient(
-      90deg,
-      rgba(247, 250, 252, 0.0) 0%,
-      rgba(247, 250, 252, 0.15) 35%,
-      rgba(247, 250, 252, 0.72) 52%,
-      rgba(255, 255, 255, 0.95) 68%,
-      #ffffff 100%
-    ),
-    linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.55) 0%,
-      transparent 18%,
-      transparent 72%,
-      rgba(240, 247, 250, 0.78) 100%
-    );
-}
-
-.novere-tree-shadow {
-  position: absolute;
-  top: -10%;
-  right: -5%;
-  z-index: 3;
-  width: 50%;
-  height: 120%;
-  pointer-events: none;
-  background: radial-gradient(
-    ellipse at 70% 50%,
-    rgba(255, 255, 255, 0.85) 0%,
-    transparent 70%
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0) 46%,
+    rgba(255, 255, 255, 0.85) 58%,
+    #ffffff 66%,
+    #ffffff 100%
   );
-}
-
-.novere-vignette {
-  position: absolute;
-  inset: 0;
-  z-index: 4;
-  pointer-events: none;
-  box-shadow:
-    inset 0 0 100px rgba(255, 255, 255, 0.7),
-    inset 0 -80px 90px rgba(230, 243, 247, 0.65);
-}
-
-.novere-grain {
-  position: absolute;
-  inset: -80%;
-  z-index: 5;
-  opacity: 0.025;
-  pointer-events: none;
-  mix-blend-mode: multiply;
-  background-image:
-    radial-gradient(
-      rgba(11, 58, 102, 0.4) 0.55px,
-      transparent 0.75px
-    ),
-    radial-gradient(
-      rgba(21, 174, 187, 0.3) 0.55px,
-      transparent 0.8px
-    );
-  background-position: 0 0, 7px 9px;
-  background-size: 8px 8px, 11px 11px;
-  animation: novere-grain 0.24s steps(2) infinite;
-}
-
-@keyframes novere-grain {
-  0% { transform: translate3d(-1%, 1%, 0); }
-  25% { transform: translate3d(1%, -2%, 0); }
-  50% { transform: translate3d(2%, 1%, 0); }
-  75% { transform: translate3d(-2%, -1%, 0); }
-  100% { transform: translate3d(1%, 2%, 0); }
 }
 
 /* Emblem / Header Accent */
@@ -167,7 +84,11 @@ const CSS = `
   z-index: 10;
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 10px;
+  padding: 7px 16px 7px 10px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.94);
+  box-shadow: 0 6px 20px rgba(11, 37, 69, 0.16);
   color: #0b2545;
   transform: translateZ(42px);
 }
@@ -344,7 +265,8 @@ const CSS = `
   max-width: min(420px, 34vw);
   z-index: 10;
   margin: 0;
-  color: #0b2545;
+  color: #ffffff;
+  text-shadow: 0 2px 14px rgba(7, 18, 32, 0.85), 0 1px 3px rgba(0, 0, 0, 0.65);
   font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
   font-size: clamp(22px, 2.3vw, 36px);
   font-weight: 700 !important;
@@ -355,7 +277,7 @@ const CSS = `
 
 .novere-bottom-title span {
   display: block;
-  color: #15AEBB;
+  color: #5ce1e6;
 }
 
 /* Footer Bar */
@@ -373,7 +295,8 @@ const CSS = `
 }
 
 .novere-brand {
-  color: #627d98;
+  color: rgba(255, 255, 255, 0.92);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
   font-family: 'DM Sans', Arial, Helvetica, sans-serif;
   font-size: clamp(11px, 0.9vw, 13.5px);
   font-weight: 500;
@@ -487,6 +410,17 @@ const CSS = `
 
 /* Tablet Screens (1024px and down) */
 @media (max-width: 1024px) {
+  .novere-dark-overlay {
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0) 0%,
+      rgba(255, 255, 255, 0) 36%,
+      rgba(255, 255, 255, 0.88) 48%,
+      #ffffff 56%,
+      #ffffff 100%
+    );
+  }
+
   .novere-content-wrapper {
     left: 48%;
     right: 4%;
@@ -517,33 +451,25 @@ const CSS = `
 /* Mobile Screens (768px and down) */
 @media (max-width: 768px) {
   .novere-media {
-    inset: -18px;
+    inset: 0;
   }
 
   .novere-image {
-    inset: -5%;
-    background-position: center center;
-    opacity: 0.32;
+    inset: 0;
+    background-position: center top;
+    opacity: 1;
   }
 
   .novere-dark-overlay {
     background:
       linear-gradient(
         180deg,
-        rgba(255, 255, 255, 0.75) 0%,
-        rgba(247, 250, 252, 0.92) 35%,
-        rgba(255, 255, 255, 0.98) 100%
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0) 28%,
+        rgba(255, 255, 255, 0.86) 46%,
+        rgba(255, 255, 255, 0.98) 64%,
+        #ffffff 100%
       );
-  }
-
-  .novere-tree-shadow {
-    display: none;
-  }
-
-  .novere-vignette {
-    box-shadow:
-      inset 0 0 60px rgba(255, 255, 255, 0.6),
-      inset 0 -60px 80px rgba(230, 243, 247, 0.6);
   }
 
   .novere-logo {
@@ -554,9 +480,10 @@ const CSS = `
   .novere-content-wrapper {
     left: 6%;
     right: 6%;
+    align-items: flex-end;
     justify-content: flex-end;
     padding-top: 70px;
-    padding-bottom: 50px;
+    padding-bottom: 56px;
   }
 
   .novere-content {
@@ -600,6 +527,8 @@ const CSS = `
 
   .novere-brand {
     font-size: 11px;
+    color: #627d98;
+    text-shadow: none;
   }
 
   .novere-services {
@@ -608,7 +537,6 @@ const CSS = `
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .novere-grain,
   .novere-services b,
   .novere-particle {
     animation: none;
@@ -630,12 +558,10 @@ const revealItem = {
   hidden: {
     opacity: 0,
     y: 22,
-    filter: "blur(8px)",
   },
   visible: {
     opacity: 1,
     y: 0,
-    filter: "blur(0px)",
     transition: {
       duration: 0.9,
       ease: [0.16, 1, 0.3, 1],
@@ -722,32 +648,10 @@ export default function BlogBanner() {
             y: reducedMotion ? 0 : imageY,
           }}
         >
-          <motion.div
-            className="novere-image"
-            initial={{ scale: 1.1 }}
-            animate={
-              reducedMotion
-                ? { scale: 1.06 }
-                : {
-                    scale: [1.06, 1.1, 1.07],
-                    x: ["0%", "-0.6%", "0%"],
-                    y: ["0%", "-0.3%", "0%"],
-                  }
-            }
-            transition={{
-              duration: 20,
-              ease: "easeInOut",
-              repeat: Infinity,
-              repeatType: "mirror",
-            }}
-          />
+          <div className="novere-image" />
         </motion.div>
 
-        <div className="novere-light" />
         <div className="novere-dark-overlay" />
-        <div className="novere-tree-shadow" />
-        <div className="novere-vignette" />
-        <div className="novere-grain" />
 
         <div className="novere-particles">
           <span className="novere-particle" />
@@ -880,12 +784,10 @@ export default function BlogBanner() {
           initial={{
             opacity: 0,
             y: 20,
-            filter: "blur(8px)",
           }}
           animate={{
             opacity: 1,
             y: 0,
-            filter: "blur(0px)",
           }}
           transition={{
             delay: 0.8,
