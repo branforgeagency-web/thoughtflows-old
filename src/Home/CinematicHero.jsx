@@ -19,7 +19,18 @@ const CinematicHero = () => {
   const [stage, setStage] = useState('init');
   const videoRef = useRef(null);
 
+  const startVideoPlayback = () => {
+    const video = videoRef.current;
+    if (!video) return;
+    video.muted = true;
+    if (video.paused) {
+      video.play().catch(() => {});
+    }
+  };
+
   useEffect(() => {
+    startVideoPlayback();
+
     // Check reduced motion preference
     const prefersReducedMotion =
       typeof window !== 'undefined' &&
@@ -28,9 +39,7 @@ const CinematicHero = () => {
 
     if (prefersReducedMotion) {
       setStage('complete');
-      if (videoRef.current) {
-        videoRef.current.play().catch(() => {});
-      }
+      startVideoPlayback();
       return;
     }
 
@@ -58,9 +67,7 @@ const CinematicHero = () => {
     timers.push(
       setTimeout(() => {
         setStage('curtain-split');
-        if (videoRef.current) {
-          videoRef.current.play().catch(() => {});
-        }
+        startVideoPlayback();
       }, 5900)
     );
 
@@ -236,17 +243,21 @@ const CinematicHero = () => {
           HERO UNDERLAYER (Video, Navigation & Footer)
           ========================================================================= */}
       <div className="hero-underlayer">
-        {/* Background Video (plays when curtain opens) */}
+        {/* Background Video (plays when curtain opens or as soon as buffered) */}
         <video
           ref={videoRef}
           className="hero-media-video"
-          src={homevideo}
           poster={FALLBACK_POSTER}
+          autoPlay
           muted
           loop
           playsInline
           preload="auto"
-        />
+          onLoadedData={startVideoPlayback}
+          onCanPlay={startVideoPlayback}
+        >
+          <source src={homevideo} type="video/mp4" />
+        </video>
 
         {/* Dark Gradient Overlay */}
         <div className="hero-gradient-overlay" aria-hidden="true" />
