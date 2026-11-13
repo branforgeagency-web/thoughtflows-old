@@ -1,7 +1,9 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { HelmetProvider } from 'react-helmet-async';
 import NotFound from './NotFound';
+import Gallery from './Gallery/Gallery';
+import { galleryItems } from './Gallery/galleryData';
 import { isValidPhone, normalizePhone } from './utils/phone';
 
 test('NotFound page renders a way back home', () => {
@@ -118,4 +120,39 @@ test('getBranchInfoByPath resolves correct branch data for each branch route', (
   expect(getBranchInfoByPath('/')).toBeNull();
   expect(defaultBranchDetails.phone).toBeDefined();
   expect(defaultBranchDetails.address).toContain('Saravanampatti');
+});
+
+test('Gallery page renders, filters by category and opens the lightbox', () => {
+  render(
+    <HelmetProvider>
+      <MemoryRouter>
+        <Gallery />
+      </MemoryRouter>
+    </HelmetProvider>
+  );
+
+  // Hero + every category tab is present
+  expect(screen.getByRole('heading', { level: 1, name: /inside thoughtflows/i })).toBeInTheDocument();
+  expect(screen.getByRole('tab', { name: /^all$/i })).toBeInTheDocument();
+  expect(screen.getByRole('tab', { name: /saravanampatti/i })).toBeInTheDocument();
+  expect(screen.getByRole('tab', { name: /gandhipuram/i })).toBeInTheDocument();
+  expect(screen.getByRole('tab', { name: /hopes/i })).toBeInTheDocument();
+
+  // "All" shows every photo, each with alt text
+  const allImages = screen.getAllByRole('img');
+  expect(allImages.length).toBe(galleryItems.length);
+  allImages.forEach((img) => expect(img).toHaveAttribute('alt'));
+
+  // Filtering narrows the grid down to one category
+  fireEvent.click(screen.getByRole('tab', { name: /saravanampatti/i }));
+  const svmCount = galleryItems.filter((i) => i.category === 'saravanampatti').length;
+  expect(screen.getAllByRole('img').length).toBe(svmCount);
+
+  // Clicking a photo opens the lightbox; Escape closes it
+  fireEvent.click(screen.getByRole('button', { name: /view cpc batch classroom in session/i }));
+  const dialog = screen.getByRole('dialog');
+  expect(dialog).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: /next photo/i })).toBeInTheDocument();
+  fireEvent.keyDown(document, { key: 'Escape' });
+  expect(screen.queryByRole('dialog')).not.toBeInTheDocument();
 });

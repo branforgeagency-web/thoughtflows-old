@@ -10,6 +10,7 @@ import GandhipuramEligibility from './GandhipuramEligibility';
 import GandhipuramModes from './GandhipuramModes';
 import GandhipuramCPCPlacement from './GandhipuramCPCPlacement';
 import GandhipuramWhy from './GandhipuramWhy';
+import GandhipuramGallery from './GandhipuramGallery';
 import GandhipuramFees from './GandhipuramFees';
 import GandhipuramBranchInfo from './GandhipuramBranchInfo';
 import GandhipuramFAQ from './GandhipuramFAQ';
@@ -70,6 +71,7 @@ function Gandhipuram() {
         <GandhipuramModes />
         <GandhipuramCPCPlacement />
         <GandhipuramWhy />
+        <GandhipuramGallery />
         <GandhipuramFees />
         <GandhipuramBranchInfo />
         <div className="gandhipuram-faq"><GandhipuramFAQ /></div>

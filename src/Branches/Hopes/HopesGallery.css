@@ -1,0 +1,319 @@
+/* ===== Hopes Branch Campus Gallery ===== */
+.hopes-gallery-section {
+  background: linear-gradient(180deg, #ffffff 0%, #f4fbfb 100%);
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.hopes-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 20px;
+  margin-top: 40px;
+}
+
+/* Asymmetric modern bento-style layout for 5 photos */
+.hopes-gallery-item {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #0f172a;
+  box-shadow: 0 10px 30px -10px rgba(9, 125, 138, 0.12);
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.hopes-gallery-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -12px rgba(9, 125, 138, 0.25);
+}
+
+/* Layout distribution for 7 photos */
+.hopes-gallery-item:nth-child(1) {
+  grid-column: span 7;
+  height: 380px;
+}
+
+.hopes-gallery-item:nth-child(2) {
+  grid-column: span 5;
+  height: 380px;
+}
+
+.hopes-gallery-item:nth-child(3) {
+  grid-column: span 4;
+  height: 300px;
+}
+
+.hopes-gallery-item:nth-child(4) {
+  grid-column: span 4;
+  height: 300px;
+}
+
+.hopes-gallery-item:nth-child(5) {
+  grid-column: span 4;
+  height: 300px;
+}
+
+.hopes-gallery-item:nth-child(6) {
+  grid-column: span 6;
+  height: 320px;
+}
+
+.hopes-gallery-item:nth-child(7) {
+  grid-column: span 6;
+  height: 320px;
+}
+
+.hopes-gallery-image-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hopes-gallery-image-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.hopes-gallery-item:hover .hopes-gallery-image-wrapper img {
+  transform: scale(1.06);
+}
+
+.hopes-gallery-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 24px;
+  background: linear-gradient(
+    180deg,
+    rgba(15, 23, 42, 0) 30%,
+    rgba(15, 23, 42, 0.65) 70%,
+    rgba(15, 23, 42, 0.92) 100%
+  );
+  color: #fff;
+  transition: opacity 0.3s ease;
+}
+
+.hopes-gallery-tag {
+  display: inline-block;
+  align-self: flex-start;
+  background: rgba(9, 125, 138, 0.85);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  padding: 4px 10px;
+  border-radius: 20px;
+  margin-bottom: 8px;
+}
+
+.hopes-gallery-title {
+  color: #ffffff !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  margin: 0 0 4px !important;
+  line-height: 1.35;
+}
+
+.hopes-gallery-caption {
+  color: rgba(255, 255, 255, 0.82) !important;
+  font-size: 13px !important;
+  margin: 0 !important;
+  line-height: 1.5;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.hopes-gallery-zoom-btn {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9);
+  color: #097D8A;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: scale(0.85);
+  transition: all 0.25s ease;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+.hopes-gallery-item:hover .hopes-gallery-zoom-btn {
+  opacity: 1;
+  transform: scale(1);
+}
+
+.hopes-gallery-zoom-btn:hover {
+  background: #097D8A;
+  color: #ffffff;
+}
+
+/* Lightbox Modal */
+.hopes-gallery-lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 99999;
+  background: rgba(10, 15, 25, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px;
+}
+
+.hopes-lightbox-close {
+  position: absolute;
+  top: 24px;
+  right: 28px;
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.hopes-lightbox-close:hover {
+  background: #ef4444;
+  border-color: #ef4444;
+}
+
+.hopes-lightbox-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.12);
+  color: #fff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  z-index: 2;
+}
+
+.hopes-lightbox-nav.is-prev {
+  left: 28px;
+}
+
+.hopes-lightbox-nav.is-next {
+  right: 28px;
+}
+
+.hopes-lightbox-nav:hover {
+  background: #097D8A;
+  border-color: #097D8A;
+}
+
+.hopes-lightbox-figure {
+  max-width: 900px;
+  width: 100%;
+  max-height: 85vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background: #0f172a;
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.hopes-lightbox-figure img {
+  width: 100%;
+  max-height: 65vh;
+  object-fit: contain;
+  background: #090d16;
+}
+
+.hopes-lightbox-figure figcaption {
+  padding: 20px 24px;
+  background: #0f172a;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.hopes-lightbox-tag {
+  color: #14b8a6;
+  font-size: 11px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.hopes-lightbox-figure figcaption strong {
+  font-size: 18px;
+  color: #f8fafc;
+}
+
+.hopes-lightbox-figure figcaption p {
+  color: #94a3b8 !important;
+  font-size: 14px !important;
+  margin: 0 !important;
+  line-height: 1.5;
+}
+
+.hopes-lightbox-figure figcaption small {
+  margin-top: 6px;
+  color: #64748b;
+  font-size: 12px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .hopes-gallery-item:nth-child(1),
+  .hopes-gallery-item:nth-child(2) {
+    grid-column: span 12;
+    height: 320px;
+  }
+  .hopes-gallery-item:nth-child(3),
+  .hopes-gallery-item:nth-child(4),
+  .hopes-gallery-item:nth-child(5) {
+    grid-column: span 4;
+    height: 260px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hopes-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .hopes-gallery-item:nth-child(n) {
+    grid-column: span 1;
+    height: 250px;
+  }
+  .hopes-lightbox-nav {
+    display: none;
+  }
+}

@@ -18,7 +18,7 @@ export const MEDIA_BASE_URL = (
  */
 export function mediaUrl(relativePath) {
   if (!relativePath) return '';
-  if (/^(https?:)?\/\//i.test(relativePath) || relativePath.startsWith('data:')) {
+  if (/^(https?:)?\/\//i.test(relativePath) || relativePath.startsWith('data:') || relativePath.startsWith('/')) {
     return relativePath;
   }
   const normalized = relativePath
