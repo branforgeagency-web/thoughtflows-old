@@ -606,6 +606,21 @@ const Header = () => {
                     className="py-2 whitespace-nowrap"
                   >
                     <Link
+                      to="/gallery"
+                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${location.pathname === '/gallery' ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                        }`}
+                    >
+                      Gallery
+                    </Link>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style={{ fontWeight: "500", cursor: "pointer" }}
+                    onMouseEnter={() => setOpen({ submenu: "", open: false })}
+                    className="py-2 whitespace-nowrap"
+                  >
+                    <Link
                       to="/blog"
                       className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${location.pathname.startsWith('/blog') ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
                         }`}

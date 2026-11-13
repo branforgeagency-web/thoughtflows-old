@@ -78,6 +78,7 @@ import Placements from './Placements/Placements';
 import YearlyPlacementList from './Placements/YearlyPlacementList';
 import Vetri108 from './Vetri108/Vetri108';
 import AIMedicalCoding from './AIMedicalCoding/AIMedicalCoding';
+import Gallery from './Gallery/Gallery';
 
 
 function AppContent() {
@@ -190,6 +191,7 @@ function AppContent() {
         <Route path='/hcc' element={<HCC />} />
         <Route path='/ivr' element={<IVR />} />
         <Route path='/cdi' element={<CDI />} />
+        <Route path="/gallery" element={<Gallery />} />
         <Route path="/placements" element={<Placements />} />
         <Route path="/placements/:year" element={<YearlyPlacementList />} />
         <Route path="/vetri-108" element={<Vetri108 />} />

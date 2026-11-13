@@ -120,6 +120,9 @@ const Footer = () => {
                             <li className="mb-3">
                                 <Link to="/placements" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Placements</Link>
                             </li>
+                            <li className="mb-3">
+                                <Link to="/gallery" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Gallery</Link>
+                            </li>
 
                             <li className="mb-3">
                                 <Link to="/contact" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Contact</Link>

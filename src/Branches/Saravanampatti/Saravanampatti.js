@@ -12,6 +12,7 @@ import SaravanampattiEligibility from './SaravanampattiEligibility';
 import SaravanampattiModes from './SaravanampattiModes';
 import SaravanampattiPlacement from './SaravanampattiPlacement';
 import SaravanampattiWhy from './SaravanampattiWhy';
+import SaravanampattiGallery from './SaravanampattiGallery';
 import SaravanampattiBranchInfo from './SaravanampattiBranchInfo';
 import SaravanampattiFAQ from './SaravanampattiFAQ';
 
@@ -77,6 +78,7 @@ function Saravanampatti() {
         <SaravanampattiModes />
         <SaravanampattiPlacement />
         <SaravanampattiWhy />
+        <SaravanampattiGallery />
         <SaravanampattiBranchInfo />
         <div className="saravanampatti-faq"><SaravanampattiFAQ /></div>
       </div>
