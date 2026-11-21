@@ -7660,3 +7660,19 @@ html, body {
     justify-content: center;
   }
 }
+
+/* Branch pages: the desktop navbar floats over the page (.tf-header-overlay),
+   so push each branch banner's content below it. */
+@media (min-width: 1024px) {
+  .cbe1-banner {
+    padding-top: 90px !important;
+  }
+  section.cbe-hero2 {
+    padding-top: 110px;
+  }
+  section.region-hero,
+  section.hyd-hero,
+  section.hopes-hero {
+    padding-top: 110px;
+  }
+}
