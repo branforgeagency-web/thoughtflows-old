@@ -4,8 +4,8 @@ import HomeBanner from "./HomeBanner";
 import GifSection from "./GifSection";
 import WelcomSection from "./WelcomSection";
 import PopularCourses from "./PopularCourses";
-import BranchShowcase from "./BranchShowcase/BranchShowcase";
-// Earlier branch sections kept for reference: ./BranchGallery, ./Branches.js
+import Branches from "./Branches";
+// Newer branch section kept for reference: ./BranchShowcase/BranchShowcase
 import Counters from "./Counters";
 import Coaching from "./Coaching";
 import StudentReviews from "./StudentReviews";
@@ -100,8 +100,14 @@ const Home = () => {
           <PopularCourses />
         </motion.div>
 
-        {/* Branch showcase animates its own content */}
-        <BranchShowcase />
+        <motion.div
+          initial={{ y: 50, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.7 }}
+        >
+          <Branches />
+        </motion.div>
 
         <motion.div
           initial={{ y: 50, opacity: 0 }}
