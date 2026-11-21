@@ -48,11 +48,6 @@ const Counters = () => {
         transition: { duration: 0.8, ease: EASE, delay },
     });
 
-    const floatIn = (delay) => ({
-        initial: reduce ? false : { opacity: 0, y: 40, scale: 0.96 },
-        animate: inView ? { opacity: 1, y: 0, scale: 1 } : undefined,
-        transition: { duration: 0.9, ease: EASE, delay },
-    });
 
     return (
         <section className="tfpr" aria-labelledby="tfpr-heading" ref={ref}>
@@ -85,14 +80,14 @@ const Counters = () => {
                                 </span>
                             </span>
                         </div>
-                        <motion.span className="tfpr-card-photo" {...floatIn(0.15)}>
+                        <span className="tfpr-card-photo">
                             <img
                                 src={placementsCareerCutout}
                                 alt="A Thoughtflows medical coding professional placed in her career"
                                 loading="lazy"
                                 decoding="async"
                             />
-                        </motion.span>
+                        </span>
                     </motion.div>
 
                     {/* Card 2 — Results */}
@@ -114,14 +109,14 @@ const Counters = () => {
                                 </span>
                             </span>
                         </div>
-                        <motion.span className="tfpr-card-photo" {...floatIn(0.26)}>
+                        <span className="tfpr-card-photo">
                             <img
                                 src={placementsTrainingCutout}
                                 alt="A Thoughtflows graduate ready for her medical coding career"
                                 loading="lazy"
                                 decoding="async"
                             />
-                        </motion.span>
+                        </span>
                     </motion.div>
                 </div>
             </div>

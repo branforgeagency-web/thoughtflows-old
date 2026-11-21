@@ -42,9 +42,17 @@ const Placements = () => {
             {/* Yearly Records Navigation Section */}
             <section className="yearly-records-nav">
                 <div className="container text-center">
-                    <h2 className="section-title">Previous Year Placements</h2>
-                    <p className="yearly-nav-subtitle">Explore our success stories from previous years</p>
+                    <h2 className="section-title">Year-wise Placements</h2>
+                    <p className="yearly-nav-subtitle">Explore our placement success stories year by year</p>
                     <div className="yearly-links-container">
+                        <Link to="/placements/2026" className="yearly-link-card">
+                            <span className="year-value">2026</span>
+                            <span className="record-count">Success Stories</span>
+                        </Link>
+                        <Link to="/placements/2025" className="yearly-link-card">
+                            <span className="year-value">2025</span>
+                            <span className="record-count">Success Stories</span>
+                        </Link>
                         <Link to="/placements/2024" className="yearly-link-card">
                             <span className="year-value">2024</span>
                             <span className="record-count">Success Stories</span>
