@@ -54,7 +54,7 @@
   padding: clamp(28px, 3vw, 40px);
   display: flex;
   align-items: stretch;
-  overflow: visible;
+  overflow: hidden;
   isolation: isolate;
   box-shadow: 0 20px 44px -26px rgba(7, 30, 55, 0.45);
   transition: transform 0.4s var(--tfpr-ease), box-shadow 0.4s var(--tfpr-ease);
@@ -186,18 +186,17 @@
   font-weight: 700;
 }
 
-/* transparent cutout photo, bleeding past the card's top/bottom edges */
+/* transparent cutout photo, sitting fully inside the card (no overlap, no animation) */
 .tfpr-card-photo {
   position: absolute;
   z-index: 1;
-  top: clamp(-26px, -3vw, -14px);
-  bottom: clamp(-26px, -3vw, -14px);
-  right: clamp(-6px, -1vw, 4px);
+  top: clamp(18px, 2.4vw, 30px);
+  bottom: 0;
+  right: clamp(10px, 2vw, 28px);
   width: clamp(150px, 19vw, 230px);
   pointer-events: none;
   display: flex;
   align-items: flex-end;
-  animation: tfpr-float 5.5s ease-in-out infinite;
 }
 .tfpr-card-photo img {
   width: 100%;
@@ -208,13 +207,7 @@
   filter: drop-shadow(0 18px 24px rgba(0, 0, 0, 0.3));
 }
 
-@keyframes tfpr-float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
-}
-
 @media (prefers-reduced-motion: reduce) {
-  .tfpr-card-photo { animation: none; }
   .tfpr-card, .tfpr-arrow { transition: none; }
 }
 
@@ -236,7 +229,7 @@
   .tfpr-card-content { width: 100%; }
   .tfpr-card-photo {
     top: auto;
-    bottom: clamp(-18px, -4vw, -10px);
+    bottom: 0;
     right: clamp(14px, 5vw, 26px);
     left: auto;
     width: clamp(130px, 40vw, 180px);

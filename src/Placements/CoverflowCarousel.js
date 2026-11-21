@@ -81,7 +81,7 @@ export const DEFAULT_TRAVEL_ITEMS = [
 ];
 
 /* ------------------------------------------------------------------ *
- * ThoughtFlows Placement Students: All 39 Placed Students
+ * ThoughtFlows Placement Students: All Placed Students
  * ------------------------------------------------------------------ */
 export function getAllPlacementStudents() {
     const rawStudents = (placementData && placementData.students) ? placementData.students : [];
@@ -89,7 +89,7 @@ export function getAllPlacementStudents() {
 
     return rawStudents.map((student, idx) => {
         const studentCompany = student.company || 'Healthcare Partner';
-        const studentDesignation = student.designation || 'Placed Student 2025';
+        const studentDesignation = student.designation || 'Placed Student 2026';
 
         return {
             id: student.id || (idx + 1),
@@ -106,7 +106,7 @@ export function getAllPlacementStudents() {
  * CoverflowCarousel
  *
  * A premium, full-width 3D coverflow image carousel.
- * - Displays all 39 placed students
+ * - Displays all placed students
  * - Clean edge-to-edge layout on white background
  * - Continuous exponential-smoothed requestAnimationFrame loop
  * - Direct DOM style mutation via element refs for 120fps performance
