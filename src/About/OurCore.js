@@ -118,7 +118,7 @@ function OurCore() {
             >
               <img
                 src={v.image}
-                alt=""
+                alt={v.title}
                 aria-hidden="true"
                 loading="lazy"
                 className="tf-coreacc-bg"

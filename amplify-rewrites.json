@@ -1,5 +1,11 @@
 [
   {
+    "source": "/",
+    "target": "/index-home.html",
+    "status": "200",
+    "condition": null
+  },
+  {
     "source": "/about",
     "target": "/about/index.html",
     "status": "200",
@@ -913,7 +919,7 @@
   },
   {
     "source": "/<*>",
-    "target": "/shell.html",
+    "target": "/index.html",
     "status": "404-200",
     "condition": null
   }

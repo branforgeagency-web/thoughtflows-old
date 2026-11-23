@@ -113,14 +113,14 @@ const Coaching = () => {
                                 <h3 className="tfwc-title" id={`tfwc-title-${i}`}>{card.title}</h3>
 
                                 <div className="tfwc-media">
-                                    <img src={card.img} alt="" loading="lazy" decoding="async" draggable="false" />
+                                    <img src={card.img} alt={card.title} loading="lazy" decoding="async" draggable="false" />
                                 </div>
 
                                 {/* description panel: slides up on hover / focus (always shown on touch layouts) */}
                                 <div className="tfwc-reveal">
                                     <p>{card.text}</p>
                                     <Link to={card.link} className="tfwc-link">
-                                        Learn More <ArrowIcon />
+                                        Learn More<span className="tf-sr-only"> about {card.title}</span> <ArrowIcon />
                                     </Link>
                                 </div>
                             </motion.article>

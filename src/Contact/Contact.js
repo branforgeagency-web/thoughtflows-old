@@ -748,7 +748,7 @@ ${formData.message || 'N/A'}`;
                           <div className="contact-dir-campus-cell">
                             <img
                               src={branch.img}
-                              alt=""
+                              alt={`${branch.name} campus`}
                               className="contact-dir-row-thumb"
                               loading="lazy"
                             />

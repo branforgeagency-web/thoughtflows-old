@@ -84,7 +84,7 @@ function WeEmpower() {
               style={{ animationDelay: `${320 + i * 100}ms` }}
             >
               <div className="tf-feature-icon-wrap">
-                <img src={f.img} alt="" className="tf-feature-icon" loading="lazy" />
+                <img src={f.img} alt={f.label} className="tf-feature-icon" loading="lazy" />
               </div>
               <h3 className="tf-feature-label">{f.label}</h3>
               <p className="tf-feature-copy">{f.description}</p>
