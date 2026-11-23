@@ -149,23 +149,42 @@ function AppContent() {
         <Route path='/anesesthesia' element={<Anesesthesia />} />
         <Route path='/anesthesia' element={<Navigate to="/anesesthesia" replace />} />
         <Route path='/home' element={<Navigate to="/" replace />} />
-        <Route path='/coimbatore' element={<CoimbatoreLanding />} />
-        <Route path='/medical-coding-course-coimbatore' element={<Navigate to="/coimbatore" replace />} />
+        <Route path='/medical-coding-training-coimbatore' element={<CoimbatoreLanding />} />
+        <Route path='/medical-coding-training-coimbatore/' element={<CoimbatoreLanding />} />
+        <Route path='/coimbatore' element={<Navigate to="/medical-coding-training-coimbatore" replace />} />
+        <Route path='/coimbatore/' element={<Navigate to="/medical-coding-training-coimbatore" replace />} />
+        <Route path='/medical-coding-course-coimbatore' element={<Navigate to="/medical-coding-training-coimbatore" replace />} />
+        <Route path='/medical-coding-course-coimbatore/' element={<Navigate to="/medical-coding-training-coimbatore" replace />} />
         <Route path='/kerala' element={<KeralaLanding />} />
         <Route path='/medical-coding-course-kerala' element={<Navigate to="/kerala" replace />} />
         <Route path='/hyderabad' element={<HyderabadLanding />} />
         <Route path='/medical-coding-course-hyderabad' element={<Navigate to="/hyderabad" replace />} />
         <Route path='/maharashtra' element={<MaharashtraLanding />} />
         <Route path='/medical-coding-course-maharashtra' element={<Navigate to="/maharashtra" replace />} />
-        <Route path='/Top-Medical-Coding-Training-Saravanampatti' element={<CbeBranch1 />} />
-        <Route path='/medical-coding-course-in-saravanampatti' element={<CbeBranch1 />} />
-        <Route path='/saravanampatti' element={<Navigate to="/medical-coding-course-in-saravanampatti" replace />} />
-        <Route path='/Medical-Coding-Excellence-at-Hopes' element={<CbeBranch2 />} />
-        <Route path='/medical-coding-academy-in-hopes' element={<CbeBranch2 />} />
-        <Route path='/hopes' element={<Navigate to="/medical-coding-academy-in-hopes" replace />} />
-        <Route path='/Premier-Medical-Coding-Institute-Gandhipuram' element={<CbeBranch3 />} />
-        <Route path='/medical-coding-academy-gandhipuram' element={<CbeBranch3 />} />
-        <Route path='/gandhipuram' element={<Navigate to="/medical-coding-academy-gandhipuram" replace />} />
+        <Route path='/medical-coding-institute-saravanampatti-coimbatore' element={<CbeBranch1 />} />
+        <Route path='/medical-coding-institute-saravanampatti-coimbatore/' element={<CbeBranch1 />} />
+        <Route path='/Top-Medical-Coding-Training-Saravanampatti' element={<Navigate to="/medical-coding-institute-saravanampatti-coimbatore" replace />} />
+        <Route path='/Top-Medical-Coding-Training-Saravanampatti/' element={<Navigate to="/medical-coding-institute-saravanampatti-coimbatore" replace />} />
+        <Route path='/medical-coding-course-in-saravanampatti' element={<Navigate to="/medical-coding-institute-saravanampatti-coimbatore" replace />} />
+        <Route path='/medical-coding-course-in-saravanampatti/' element={<Navigate to="/medical-coding-institute-saravanampatti-coimbatore" replace />} />
+        <Route path='/saravanampatti' element={<Navigate to="/medical-coding-institute-saravanampatti-coimbatore" replace />} />
+        <Route path='/saravanampatti/' element={<Navigate to="/medical-coding-institute-saravanampatti-coimbatore" replace />} />
+        <Route path='/medical-coding-classes-hopes-coimbatore' element={<CbeBranch2 />} />
+        <Route path='/medical-coding-classes-hopes-coimbatore/' element={<CbeBranch2 />} />
+        <Route path='/Medical-Coding-Excellence-at-Hopes' element={<Navigate to="/medical-coding-classes-hopes-coimbatore" replace />} />
+        <Route path='/Medical-Coding-Excellence-at-Hopes/' element={<Navigate to="/medical-coding-classes-hopes-coimbatore" replace />} />
+        <Route path='/medical-coding-academy-in-hopes' element={<Navigate to="/medical-coding-classes-hopes-coimbatore" replace />} />
+        <Route path='/medical-coding-academy-in-hopes/' element={<Navigate to="/medical-coding-classes-hopes-coimbatore" replace />} />
+        <Route path='/hopes' element={<Navigate to="/medical-coding-classes-hopes-coimbatore" replace />} />
+        <Route path='/hopes/' element={<Navigate to="/medical-coding-classes-hopes-coimbatore" replace />} />
+        <Route path='/medical-coding-course-gandhipuram-coimbatore' element={<CbeBranch3 />} />
+        <Route path='/medical-coding-course-gandhipuram-coimbatore/' element={<CbeBranch3 />} />
+        <Route path='/Premier-Medical-Coding-Institute-Gandhipuram' element={<Navigate to="/medical-coding-course-gandhipuram-coimbatore" replace />} />
+        <Route path='/Premier-Medical-Coding-Institute-Gandhipuram/' element={<Navigate to="/medical-coding-course-gandhipuram-coimbatore" replace />} />
+        <Route path='/medical-coding-academy-gandhipuram' element={<Navigate to="/medical-coding-course-gandhipuram-coimbatore" replace />} />
+        <Route path='/medical-coding-academy-gandhipuram/' element={<Navigate to="/medical-coding-course-gandhipuram-coimbatore" replace />} />
+        <Route path='/gandhipuram' element={<Navigate to="/medical-coding-course-gandhipuram-coimbatore" replace />} />
+        <Route path='/gandhipuram/' element={<Navigate to="/medical-coding-course-gandhipuram-coimbatore" replace />} />
         <Route path='/Expert-Medical-Coding-Tirupathi' element={<TirupathiBranch />} />
         <Route path='/admin' element={<Admin />} />
         <Route path='/Medical-Coding-Academy-Kochi' element={<Kochi />} />

@@ -26,7 +26,7 @@ export const SHOWCASE_BRANCHES = [
     description:
       "Build your medical coding career with professional training, expert guidance and practical learning opportunities.",
     campuses: ["Saravanampatti", "Gandhipuram", "Hopes"],
-    href: "/coimbatore",
+    href: "/medical-coding-training-coimbatore",
     image: coimbatore,
     imageSm: coimbatoreSm,
     focus: "42% 55%",

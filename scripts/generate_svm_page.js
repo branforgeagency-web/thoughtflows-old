@@ -14,12 +14,16 @@ const html = fs.readFileSync(indexHtmlPath, 'utf8');
 // ==========================================
 // 1. Saravanampatti (SVM) Landing Page
 // ==========================================
+const svmUrl = 'https://www.thoughtflows.in/medical-coding-institute-saravanampatti-coimbatore';
+const svmTitle = 'Medical Coding Institute in Coimbatore – Saravanampatti';
+const svmDesc = 'Enrol in a medical coding course in Saravanampatti, Coimbatore. AAPC CPC training with placement support at ThoughtFlows. Call or visit the branch today.';
+
 const svmSchema = {
   "@context": "https://schema.org",
   "@type": ["EducationalOrganization", "LocalBusiness"],
-  "@id": "https://www.thoughtflows.in/Top-Medical-Coding-Training-Saravanampatti#branch",
+  "@id": `${svmUrl}#branch`,
   "name": "ThoughtFlows Medical Coding Academy",
-  "url": "https://www.thoughtflows.in/Top-Medical-Coding-Training-Saravanampatti",
+  "url": svmUrl,
   "description": "Medical coding training academy in Saravanampatti, Coimbatore offering CPC certification preparation, online and offline classes, and placement assistance.",
   "telephone": "+91-9384576852",
   "address": {
@@ -50,21 +54,19 @@ const svmSchema = {
 const svmSchemaTag = `\n  <script type="application/ld+json">\n${JSON.stringify(svmSchema, null, 2)}\n  </script>\n`;
 
 let svmHtml = html;
-svmHtml = svmHtml.replace(
-  /<title>.*?<\/title>/i,
-  '<title>Medical Coding Training in Saravanampatti | ThoughtFlows</title>'
-);
-svmHtml = svmHtml.replace(
-  /<meta name="description" content=".*?"\/>/i,
-  '<meta name="description" content="Medical coding training in Saravanampatti, Coimbatore — CPC & CCS certification with AAPC-certified trainers, live chart practice and placement support."/>'
-);
+svmHtml = svmHtml.replace(/<title>.*?<\/title>/i, `<title>${svmTitle}</title>`);
+svmHtml = svmHtml.replace(/<meta name="description" content=".*?"\/>/i, `<meta name="description" content="${svmDesc}"/>`);
+svmHtml = svmHtml.replace(/<meta property="og:title" content=".*?"\/>/i, `<meta property="og:title" content="${svmTitle}"/>`);
+svmHtml = svmHtml.replace(/<meta property="og:description" content=".*?"\/>/i, `<meta property="og:description" content="${svmDesc}"/>`);
+svmHtml = svmHtml.replace(/<meta property="og:url" content=".*?"\/>/i, `<meta property="og:url" content="${svmUrl}"/>`);
+svmHtml = svmHtml.replace(/<meta name="twitter:title" content=".*?"\/>/i, `<meta name="twitter:title" content="${svmTitle}"/>`);
+svmHtml = svmHtml.replace(/<meta name="twitter:description" content=".*?"\/>/i, `<meta name="twitter:description" content="${svmDesc}"/>`);
 
-const svmHeadInsert = `  <link rel="canonical" href="https://www.thoughtflows.in/Top-Medical-Coding-Training-Saravanampatti" />${svmSchemaTag}`;
+const svmHeadInsert = `  <link rel="canonical" href="${svmUrl}" />${svmSchemaTag}`;
 svmHtml = svmHtml.replace('</head>', `${svmHeadInsert}</head>`);
 
 const svmRoutes = [
-  'Top-Medical-Coding-Training-Saravanampatti',
-  'medical-coding-course-in-saravanampatti'
+  'medical-coding-institute-saravanampatti-coimbatore'
 ];
 
 svmRoutes.forEach((route) => {
@@ -77,11 +79,11 @@ svmRoutes.forEach((route) => {
 });
 
 // ==========================================
-// 2. Coimbatore Main Landing Page (/coimbatore)
+// 2. Coimbatore Main Landing Page
 // ==========================================
-const cbeTitle = 'Medical Coding Classes in Coimbatore | ThoughtFlows';
-const cbeDesc = 'Looking for a medical coding course in Coimbatore? Join ThoughtFlows for CPC & CCS training, practical coding sessions and placement support. Book a free demo!';
-const cbeUrl = 'https://www.thoughtflows.in/coimbatore';
+const cbeTitle = 'Medical Coding Training in Coimbatore | ThoughtFlows';
+const cbeDesc = 'Medical coding classes in Coimbatore with AAPC CPC training, placement support and 3 branches: Gandhipuram, Hopes and Saravanampatti. Enquire today.';
+const cbeUrl = 'https://www.thoughtflows.in/medical-coding-training-coimbatore';
 
 let cbeHtml = html;
 cbeHtml = cbeHtml.replace(/<title>.*?<\/title>/i, `<title>${cbeTitle}</title>`);
@@ -98,8 +100,7 @@ const cbeHeadInsert = `  <link rel="canonical" href="${cbeUrl}" />\n`;
 cbeHtml = cbeHtml.replace('</head>', `${cbeHeadInsert}</head>`);
 
 const cbeRoutes = [
-  'coimbatore',
-  'medical-coding-course-coimbatore'
+  'medical-coding-training-coimbatore'
 ];
 
 cbeRoutes.forEach((route) => {

@@ -19,9 +19,6 @@ const CONCURRENCY = Number(process.env.PRERENDER_CONCURRENCY || 3);
 
 // Routes that exist in App.js but aren't in sitemap.xml (aliases kept as real pages)
 const EXTRA_ROUTES = [
-  '/medical-coding-course-in-saravanampatti',
-  '/medical-coding-academy-in-hopes',
-  '/medical-coding-academy-gandhipuram',
   '/fy-2027-icd-10-cm-updates',
   '/best-medical-coding-course-in-india',
   '/blog/best-medical-coding-course-in-india-fees-duration',
@@ -218,6 +215,13 @@ async function main() {
         fs.writeFileSync(res.file, res.html, 'utf8');
         console.log(`  ✓ ${r}  | h1: ${res.h1} | desc: ${res.desc}… | links: ${res.links}`);
       } else {
+        if (!res.skip) {
+          // Keep the hosting rewrite for this route working: serve the normal app shell instead
+          const file = outFile(r);
+          fs.mkdirSync(path.dirname(file), { recursive: true });
+          if (r !== '/' && !fs.existsSync(file)) fs.writeFileSync(file, TEMPLATE, 'utf8');
+          if (r === '/') fs.writeFileSync(file, TEMPLATE, 'utf8');
+        }
         console.log(`  ${res.skip ? '-' : '✗'} ${r}  ${res.reason}${res.errors && res.errors.length ? ' | ' + res.errors[0] : ''}`);
       }
       results.push(res);

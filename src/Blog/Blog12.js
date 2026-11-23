@@ -1224,7 +1224,7 @@ export default function Blog12() {
             </h2>
             <div className="bg-white p-6 md:p-8 rounded-xl shadow-sm mb-6 space-y-5">
               <p className="text-gray-700 leading-relaxed text-justify">
-                Most coaching centers answer the comparison checklist with vague adjectives. The true test of a credible institute is whether their claims can be independently checked. Here is what verifiable scale looks like, using <a href="https://www.thoughtflows.in/Premier-Medical-Coding-Institute-Gandhipuram" target="_blank" rel="noopener noreferrer" className="text-teal-700 font-bold hover:underline">ThoughtFlows Medical Coding Academy</a> as an empirical benchmark:
+                Most coaching centers answer the comparison checklist with vague adjectives. The true test of a credible institute is whether their claims can be independently checked. Here is what verifiable scale looks like, using <a href="https://www.thoughtflows.in/medical-coding-course-gandhipuram-coimbatore" target="_blank" rel="noopener noreferrer" className="text-teal-700 font-bold hover:underline">ThoughtFlows Medical Coding Academy</a> as an empirical benchmark:
               </p>
 
               <div className="grid md:grid-cols-2 gap-4">

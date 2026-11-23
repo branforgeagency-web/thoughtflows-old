@@ -1,5 +1,245 @@
 [
   {
+    "source": "/anesthesia",
+    "target": "/anesesthesia",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/anesthesia/",
+    "target": "/anesesthesia",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/home",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/home/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/coimbatore",
+    "target": "/medical-coding-training-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/coimbatore/",
+    "target": "/medical-coding-training-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-coimbatore",
+    "target": "/medical-coding-training-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-coimbatore/",
+    "target": "/medical-coding-training-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-kerala",
+    "target": "/kerala",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-kerala/",
+    "target": "/kerala",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-hyderabad",
+    "target": "/hyderabad",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-hyderabad/",
+    "target": "/hyderabad",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-maharashtra",
+    "target": "/maharashtra",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-maharashtra/",
+    "target": "/maharashtra",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/saravanampatti",
+    "target": "/medical-coding-institute-saravanampatti-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/saravanampatti/",
+    "target": "/medical-coding-institute-saravanampatti-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/Top-Medical-Coding-Training-Saravanampatti",
+    "target": "/medical-coding-institute-saravanampatti-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/Top-Medical-Coding-Training-Saravanampatti/",
+    "target": "/medical-coding-institute-saravanampatti-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-in-saravanampatti",
+    "target": "/medical-coding-institute-saravanampatti-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-in-saravanampatti/",
+    "target": "/medical-coding-institute-saravanampatti-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/hopes",
+    "target": "/medical-coding-classes-hopes-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/hopes/",
+    "target": "/medical-coding-classes-hopes-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/Medical-Coding-Excellence-at-Hopes",
+    "target": "/medical-coding-classes-hopes-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/Medical-Coding-Excellence-at-Hopes/",
+    "target": "/medical-coding-classes-hopes-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-academy-in-hopes",
+    "target": "/medical-coding-classes-hopes-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-academy-in-hopes/",
+    "target": "/medical-coding-classes-hopes-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/gandhipuram",
+    "target": "/medical-coding-course-gandhipuram-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/gandhipuram/",
+    "target": "/medical-coding-course-gandhipuram-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/Premier-Medical-Coding-Institute-Gandhipuram",
+    "target": "/medical-coding-course-gandhipuram-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/Premier-Medical-Coding-Institute-Gandhipuram/",
+    "target": "/medical-coding-course-gandhipuram-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-academy-gandhipuram",
+    "target": "/medical-coding-course-gandhipuram-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-academy-gandhipuram/",
+    "target": "/medical-coding-course-gandhipuram-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/kolhapur",
+    "target": "/Medical-Coding-Training-Kolhapur",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/kolhapur/",
+    "target": "/Medical-Coding-Training-Kolhapur",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/Advanced-Medical-Coding-Pune",
+    "target": "/medical-coding-course-pune",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/Advanced-Medical-Coding-Pune/",
+    "target": "/medical-coding-course-pune",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/pune",
+    "target": "/medical-coding-course-pune",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/pune/",
+    "target": "/medical-coding-course-pune",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/theni",
+    "target": "/medical-coding-course-theni",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/theni/",
+    "target": "/medical-coding-course-theni",
+    "status": "301",
+    "condition": null
+  },
+  {
     "source": "/",
     "target": "/index-home.html",
     "status": "200",
@@ -294,14 +534,14 @@
     "condition": null
   },
   {
-    "source": "/Top-Medical-Coding-Training-Saravanampatti",
-    "target": "/Top-Medical-Coding-Training-Saravanampatti/index.html",
+    "source": "/medical-coding-institute-saravanampatti-coimbatore",
+    "target": "/medical-coding-institute-saravanampatti-coimbatore/index.html",
     "status": "200",
     "condition": null
   },
   {
-    "source": "/Top-Medical-Coding-Training-Saravanampatti/",
-    "target": "/Top-Medical-Coding-Training-Saravanampatti/index.html",
+    "source": "/medical-coding-institute-saravanampatti-coimbatore/",
+    "target": "/medical-coding-institute-saravanampatti-coimbatore/index.html",
     "status": "200",
     "condition": null
   },
@@ -318,26 +558,26 @@
     "condition": null
   },
   {
-    "source": "/Medical-Coding-Excellence-at-Hopes",
-    "target": "/Medical-Coding-Excellence-at-Hopes/index.html",
+    "source": "/medical-coding-classes-hopes-coimbatore",
+    "target": "/medical-coding-classes-hopes-coimbatore/index.html",
     "status": "200",
     "condition": null
   },
   {
-    "source": "/Medical-Coding-Excellence-at-Hopes/",
-    "target": "/Medical-Coding-Excellence-at-Hopes/index.html",
+    "source": "/medical-coding-classes-hopes-coimbatore/",
+    "target": "/medical-coding-classes-hopes-coimbatore/index.html",
     "status": "200",
     "condition": null
   },
   {
-    "source": "/Premier-Medical-Coding-Institute-Gandhipuram",
-    "target": "/Premier-Medical-Coding-Institute-Gandhipuram/index.html",
+    "source": "/medical-coding-course-gandhipuram-coimbatore",
+    "target": "/medical-coding-course-gandhipuram-coimbatore/index.html",
     "status": "200",
     "condition": null
   },
   {
-    "source": "/Premier-Medical-Coding-Institute-Gandhipuram/",
-    "target": "/Premier-Medical-Coding-Institute-Gandhipuram/index.html",
+    "source": "/medical-coding-course-gandhipuram-coimbatore/",
+    "target": "/medical-coding-course-gandhipuram-coimbatore/index.html",
     "status": "200",
     "condition": null
   },
@@ -702,18 +942,6 @@
     "condition": null
   },
   {
-    "source": "/ai-powered-medical-coding",
-    "target": "/ai-powered-medical-coding/index.html",
-    "status": "200",
-    "condition": null
-  },
-  {
-    "source": "/ai-powered-medical-coding/",
-    "target": "/ai-powered-medical-coding/index.html",
-    "status": "200",
-    "condition": null
-  },
-  {
     "source": "/Medical-Coding-Training-Kolhapur",
     "target": "/Medical-Coding-Training-Kolhapur/index.html",
     "status": "200",
@@ -750,14 +978,14 @@
     "condition": null
   },
   {
-    "source": "/coimbatore",
-    "target": "/coimbatore/index.html",
+    "source": "/medical-coding-training-coimbatore",
+    "target": "/medical-coding-training-coimbatore/index.html",
     "status": "200",
     "condition": null
   },
   {
-    "source": "/coimbatore/",
-    "target": "/coimbatore/index.html",
+    "source": "/medical-coding-training-coimbatore/",
+    "target": "/medical-coding-training-coimbatore/index.html",
     "status": "200",
     "condition": null
   },
@@ -842,42 +1070,6 @@
   {
     "source": "/blog/best-medical-coding-course-in-india/",
     "target": "/blog/best-medical-coding-course-in-india/index.html",
-    "status": "200",
-    "condition": null
-  },
-  {
-    "source": "/medical-coding-course-in-saravanampatti",
-    "target": "/medical-coding-course-in-saravanampatti/index.html",
-    "status": "200",
-    "condition": null
-  },
-  {
-    "source": "/medical-coding-course-in-saravanampatti/",
-    "target": "/medical-coding-course-in-saravanampatti/index.html",
-    "status": "200",
-    "condition": null
-  },
-  {
-    "source": "/medical-coding-academy-in-hopes",
-    "target": "/medical-coding-academy-in-hopes/index.html",
-    "status": "200",
-    "condition": null
-  },
-  {
-    "source": "/medical-coding-academy-in-hopes/",
-    "target": "/medical-coding-academy-in-hopes/index.html",
-    "status": "200",
-    "condition": null
-  },
-  {
-    "source": "/medical-coding-academy-gandhipuram",
-    "target": "/medical-coding-academy-gandhipuram/index.html",
-    "status": "200",
-    "condition": null
-  },
-  {
-    "source": "/medical-coding-academy-gandhipuram/",
-    "target": "/medical-coding-academy-gandhipuram/index.html",
     "status": "200",
     "condition": null
   },
