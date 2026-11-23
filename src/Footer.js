@@ -250,7 +250,7 @@ const Footer = () => {
                         <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
                         <ul className="list-unstyled">
                             <li className="mb-3">
-                                <Link to="/coimbatore" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Coimbatore</Link>
+                                <Link to="/medical-coding-training-coimbatore" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Coimbatore</Link>
                             </li>
                             <li className="mb-3">
                                 <Link to="/kerala" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Kerala</Link>

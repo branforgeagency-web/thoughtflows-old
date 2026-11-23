@@ -10,7 +10,7 @@ export const branchDetails = {
     email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thought_flows?stkn=a2xlYW43eG45dmt6',
     facebook: 'https://www.facebook.com/people/Thoughtflows-Medical-Coding-Academy-Gandhipuram-Coimbatore/61562789837696/',
-    routes: ['/medical-coding-academy-gandhipuram', '/premier-medical-coding-institute-gandhipuram', '/gandhipuram']
+    routes: ['/medical-coding-course-gandhipuram-coimbatore', '/medical-coding-academy-gandhipuram', '/premier-medical-coding-institute-gandhipuram', '/gandhipuram']
   },
   hopes: {
     key: 'hopes',
@@ -23,7 +23,7 @@ export const branchDetails = {
     email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thought_flows?stkn=a2xlYW43eG45dmt6',
     facebook: 'https://www.facebook.com/thoughtflowscoimbatore/',
-    routes: ['/medical-coding-academy-in-hopes', '/medical-coding-excellence-at-hopes', '/hopes']
+    routes: ['/medical-coding-classes-hopes-coimbatore', '/medical-coding-academy-in-hopes', '/medical-coding-excellence-at-hopes', '/hopes']
   },
   saravanampatti: {
     key: 'saravanampatti',
@@ -36,7 +36,7 @@ export const branchDetails = {
     email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thought_flows?stkn=a2xlYW43eG45dmt6',
     facebook: 'https://www.facebook.com/Thoughtflowsacademy/',
-    routes: ['/medical-coding-course-in-saravanampatti', '/top-medical-coding-training-saravanampatti', '/saravanampatti']
+    routes: ['/medical-coding-institute-saravanampatti-coimbatore', '/medical-coding-course-in-saravanampatti', '/top-medical-coding-training-saravanampatti', '/saravanampatti']
   },
   trichy: {
     key: 'trichy',
@@ -233,10 +233,10 @@ export const regionBranches = {
     regionName: 'Coimbatore',
     displayName: 'Coimbatore Campuses',
     routes: [
-      '/coimbatore', '/medical-coding-course-coimbatore',
-      '/top-medical-coding-training-saravanampatti', '/saravanampatti',
-      '/premier-medical-coding-institute-gandhipuram', '/gandhipuram',
-      '/medical-coding-excellence-at-hopes', '/hopes'
+      '/medical-coding-training-coimbatore', '/coimbatore', '/medical-coding-course-coimbatore',
+      '/medical-coding-institute-saravanampatti-coimbatore', '/top-medical-coding-training-saravanampatti', '/saravanampatti',
+      '/medical-coding-course-gandhipuram-coimbatore', '/premier-medical-coding-institute-gandhipuram', '/gandhipuram',
+      '/medical-coding-classes-hopes-coimbatore', '/medical-coding-excellence-at-hopes', '/hopes'
     ],
     branches: [
       {
@@ -246,7 +246,7 @@ export const regionBranches = {
         phone: '+91 93845 76852',
         phoneClean: '+919384576852',
         email: 'thoughtflowsinfo@gmail.com',
-        path: '/Top-Medical-Coding-Training-Saravanampatti'
+        path: '/medical-coding-institute-saravanampatti-coimbatore'
       },
       {
         name: 'Gandhipuram Branch',
@@ -255,7 +255,7 @@ export const regionBranches = {
         phone: '+91 93845 76852',
         phoneClean: '+919384576852',
         email: 'thoughtflowsinfo@gmail.com',
-        path: '/Premier-Medical-Coding-Institute-Gandhipuram'
+        path: '/medical-coding-course-gandhipuram-coimbatore'
       },
       {
         name: 'Hopes Branch',
@@ -264,7 +264,7 @@ export const regionBranches = {
         phone: '+91 93845 76852',
         phoneClean: '+919384576852',
         email: 'thoughtflowsinfo@gmail.com',
-        path: '/Medical-Coding-Excellence-at-Hopes'
+        path: '/medical-coding-classes-hopes-coimbatore'
       }
     ]
   },

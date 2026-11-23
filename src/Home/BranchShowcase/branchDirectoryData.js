@@ -28,9 +28,9 @@ export const STATES = ["Tamil Nadu", "Kerala", "Telangana", "Andhra Pradesh", "M
  * Page links are the existing routes in App.js.
  */
 const BRANCH_LIST = [
-  { key: "saravanampatti", city: "Coimbatore", state: "Tamil Nadu", img: saravanampattiImg, path: "/Top-Medical-Coding-Training-Saravanampatti" },
-  { key: "gandhipuram", city: "Coimbatore", state: "Tamil Nadu", img: gandhipuramImg, path: "/Premier-Medical-Coding-Institute-Gandhipuram" },
-  { key: "hopes", city: "Coimbatore", state: "Tamil Nadu", img: hopesImg, path: "/Medical-Coding-Excellence-at-Hopes" },
+  { key: "saravanampatti", city: "Coimbatore", state: "Tamil Nadu", img: saravanampattiImg, path: "/medical-coding-institute-saravanampatti-coimbatore" },
+  { key: "gandhipuram", city: "Coimbatore", state: "Tamil Nadu", img: gandhipuramImg, path: "/medical-coding-course-gandhipuram-coimbatore" },
+  { key: "hopes", city: "Coimbatore", state: "Tamil Nadu", img: hopesImg, path: "/medical-coding-classes-hopes-coimbatore" },
   { key: "salem", city: "Salem", state: "Tamil Nadu", img: salemImg, path: "/Future-Ready-Medical-Coding-Salem" },
   { key: "trichy", city: "Tiruchirappalli", state: "Tamil Nadu", img: trichyImg, path: "/Career-Focused-Medical-Coding-Trichy" },
   { key: "theni", city: "Theni", state: "Tamil Nadu", img: theniImg, path: "/medical-coding-course-theni" },

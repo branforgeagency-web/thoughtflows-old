@@ -16,7 +16,7 @@ import GandhipuramBranchInfo from './GandhipuramBranchInfo';
 import GandhipuramFAQ from './GandhipuramFAQ';
 import gandhipuramFaqs from './gandhipuramFaqs';
 
-const PAGE_URL = 'https://www.thoughtflows.in/Premier-Medical-Coding-Institute-Gandhipuram';
+const PAGE_URL = 'https://www.thoughtflows.in/medical-coding-course-gandhipuram-coimbatore';
 
 const schema = {
   '@context': 'https://schema.org',
@@ -55,8 +55,8 @@ function Gandhipuram() {
   return (
     <>
       <Meta
-        title="Medical Coding Academy in Gandhipuram | ThoughtFlows"
-        description="Join a medical coding course in Gandhipuram and prepare for a career in medical coding with practical training, CPC preparation and placement support."
+        title="Medical Coding Course in Coimbatore – Gandhipuram Branch"
+        description="Join medical coding classes in Gandhipuram, Coimbatore. AAPC CPC training with placement support at ThoughtFlows. Visit the branch or enquire today."
         canonical={PAGE_URL}
       />
       <Helmet>

@@ -12,9 +12,9 @@ const DropdownMenu = ({ isBranchPage }) => {
   const menuItems = {
     Branches: {
       Coimbatore: [
-        { name: "Hopes", path: "/Medical-Coding-Excellence-at-Hopes" },
-        { name: "Saravanampatti", path: "/Top-Medical-Coding-Training-Saravanampatti" },
-        { name: "Gandhipuram", path: "/Premier-Medical-Coding-Institute-Gandhipuram" },
+        { name: "Hopes", path: "/medical-coding-classes-hopes-coimbatore" },
+        { name: "Saravanampatti", path: "/medical-coding-institute-saravanampatti-coimbatore" },
+        { name: "Gandhipuram", path: "/medical-coding-course-gandhipuram-coimbatore" },
       ],
       Kerala: [
         { name: "Kochi", path: "/Medical-Coding-Academy-Kochi" },
@@ -37,7 +37,7 @@ const DropdownMenu = ({ isBranchPage }) => {
   };
 
   const branchHubPaths = {
-    Coimbatore: "/coimbatore",
+    Coimbatore: "/medical-coding-training-coimbatore",
     Kerala: "/kerala",
     Hyderabad: "/hyderabad",
     Maharashtra: "/maharashtra",
@@ -155,11 +155,13 @@ const Header = () => {
   // Check if current page is a branch page
   const isBranchPage = () => {
     const branchPaths = [
-      '/coimbatore', '/kerala', '/hyderabad', '/maharashtra',
+      '/medical-coding-training-coimbatore', '/coimbatore', '/kerala', '/hyderabad', '/maharashtra',
       '/kochi', '/trivandrum', '/ameerpet', '/dilsukhnagar',
       '/tirupathi', '/trichy', '/salem', '/vizag',
-      '/Medical-Coding-Excellence-at-Hopes', '/Top-Medical-Coding-Training-Saravanampatti',
-      '/Premier-Medical-Coding-Institute-Gandhipuram', '/Medical-Coding-Academy-Kochi',
+      '/medical-coding-classes-hopes-coimbatore', '/Medical-Coding-Excellence-at-Hopes',
+      '/medical-coding-institute-saravanampatti-coimbatore', '/Top-Medical-Coding-Training-Saravanampatti',
+      '/medical-coding-course-gandhipuram-coimbatore', '/Premier-Medical-Coding-Institute-Gandhipuram',
+      '/Medical-Coding-Academy-Kochi',
       '/Advanced-Medical-Coding-Tiruvandrum', '/Trusted-Medical-Coding-Ameerpet',
       '/Professional-Medical-Coding-Dilsukhnagar', '/Expert-Medical-Coding-Tirupathi',
       '/Career-Focused-Medical-Coding-Trichy', '/Future-Ready-Medical-Coding-Salem',
@@ -260,11 +262,11 @@ const Header = () => {
     branches: [
       {
         label: "COIMBATORE",
-        hubPath: "/coimbatore",
+        hubPath: "/medical-coding-training-coimbatore",
         courseMenu: [
-          { label: "Hopes", path: "/Medical-Coding-Excellence-at-Hopes" },
-          { label: "Saravanampatti", path: "/Top-Medical-Coding-Training-Saravanampatti" },
-          { label: "Gandhipuram", path: "/Premier-Medical-Coding-Institute-Gandhipuram" },
+          { label: "Hopes", path: "/medical-coding-classes-hopes-coimbatore" },
+          { label: "Saravanampatti", path: "/medical-coding-institute-saravanampatti-coimbatore" },
+          { label: "Gandhipuram", path: "/medical-coding-course-gandhipuram-coimbatore" },
         ],
       },
       {

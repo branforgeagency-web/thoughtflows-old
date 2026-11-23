@@ -130,7 +130,7 @@ const SideMenuBar = ({ isOpen, onClose }) => {
                       <ul className="side-hub-sublinks">
                         <li>
                           <Link
-                            to="/coimbatore"
+                            to="/medical-coding-training-coimbatore"
                             className="side-sublink"
                             onClick={handleLinkClick}
                           >
@@ -140,7 +140,7 @@ const SideMenuBar = ({ isOpen, onClose }) => {
                         </li>
                         <li>
                           <Link
-                            to="/Medical-Coding-Excellence-at-Hopes"
+                            to="/medical-coding-classes-hopes-coimbatore"
                             className="side-sublink"
                             onClick={handleLinkClick}
                           >
@@ -150,7 +150,7 @@ const SideMenuBar = ({ isOpen, onClose }) => {
                         </li>
                         <li>
                           <Link
-                            to="/Premier-Medical-Coding-Institute-Gandhipuram"
+                            to="/medical-coding-course-gandhipuram-coimbatore"
                             className="side-sublink"
                             onClick={handleLinkClick}
                           >
@@ -160,7 +160,7 @@ const SideMenuBar = ({ isOpen, onClose }) => {
                         </li>
                         <li>
                           <Link
-                            to="/Top-Medical-Coding-Training-Saravanampatti"
+                            to="/medical-coding-institute-saravanampatti-coimbatore"
                             className="side-sublink"
                             onClick={handleLinkClick}
                           >

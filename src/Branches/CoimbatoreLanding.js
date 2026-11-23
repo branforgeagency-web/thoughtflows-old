@@ -58,7 +58,7 @@ const CoimbatoreLanding = () => {
       liveAround: "Saravanampatti, Kalapatti, Vilankurichi, Thudiyalur, Chinnavedampatti, Ganapathy, Keeranatham, Annur or Karamadai side.",
       address: "Door No-171/2A, 1st Floor, Sathy Road, Saravanampatti, Coimbatore - 641035",
       phone: "+91 93845 76852",
-      path: "/Top-Medical-Coding-Training-Saravanampatti",
+      path: "/medical-coding-institute-saravanampatti-coimbatore",
       mapUrl: "https://maps.google.com/?q=ThoughtFlows+Saravanampatti+Coimbatore",
       img: saravanampattiImg
     },
@@ -70,7 +70,7 @@ const CoimbatoreLanding = () => {
       liveAround: "Peelamedu, Hope College, Nava India, Singanallur, Uppilipalayam, Ramanathapuram, Ondipudur, Sulur or the airport road stretch.",
       address: "Door No.62 E/F, 1st Floor South Wing, Lalitha Towers, Gandhi Street, Avinashi Rd, Coimbatore - 641004",
       phone: "+91 93845 76852",
-      path: "/Medical-Coding-Excellence-at-Hopes",
+      path: "/medical-coding-classes-hopes-coimbatore",
       mapUrl: "https://maps.google.com/?q=ThoughtFlows+Hopes+Coimbatore",
       img: hopesImg
     },
@@ -82,7 +82,7 @@ const CoimbatoreLanding = () => {
       liveAround: "Gandhipuram, Cross Cut Road, RS Puram, Ukkadam, Town Hall, Saibaba Colony, Tatabad, Sivananda Colony — or if you are commuting in from a nearby town.",
       address: "Jay Enclave, 1084, 3rd Street, Cross Cut Road, Gandhipuram, Coimbatore - 641012",
       phone: "+91 93845 76852",
-      path: "/Premier-Medical-Coding-Institute-Gandhipuram",
+      path: "/medical-coding-course-gandhipuram-coimbatore",
       mapUrl: "https://maps.google.com/?q=ThoughtFlows+Gandhipuram+Coimbatore",
       img: gandhipuramImg
     }
@@ -304,9 +304,9 @@ const CoimbatoreLanding = () => {
   return (
     <div className="cbe-lp">
       <Meta
-        title="Medical Coding Classes in Coimbatore | ThoughtFlows"
-        description="Looking for a medical coding course in Coimbatore? Join ThoughtFlows for CPC & CCS training, practical coding sessions and placement support. Book a free demo!"
-        canonical="https://www.thoughtflows.in/coimbatore"
+        title="Medical Coding Training in Coimbatore | ThoughtFlows"
+        description="Medical coding classes in Coimbatore with AAPC CPC training, placement support and 3 branches: Gandhipuram, Hopes and Saravanampatti. Enquire today."
+        canonical="https://www.thoughtflows.in/medical-coding-training-coimbatore"
       />
 
       {/* ================= HERO ================= */}
