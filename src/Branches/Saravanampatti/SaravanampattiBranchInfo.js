@@ -31,7 +31,7 @@ const SaravanampattiBranchInfo = () => {
                   <address style={{ margin: 0, color: "#334155", lineHeight: 1.7, fontStyle: "normal" }}>
                     No-171/2A, 1st Promenade, Tower,<br />
                     Sathy Rd, Saravanampatti,<br />
-                    Coimbatore, Tamil Nadu – 641035
+                    Coimbatore, Tamil Nadu 641035
                   </address>
                 </div>
               </div>

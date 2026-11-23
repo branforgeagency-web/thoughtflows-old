@@ -30,8 +30,8 @@ const schema = {
       parentOrganization: { '@type': 'Organization', name: 'ThoughtFlows Medical Coding Academy', url: 'https://www.thoughtflows.in/' },
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Door No.62 E/F, 1st Floor South Wing, Lalitha Towers, Gandhi Street, Avinashi Rd',
-        addressLocality: 'Hopes, Peelamedu, Coimbatore',
+        streetAddress: 'Door No.62 E/F , 1st Floor South Wing, Lalitha Towers Gandhi Street, Avinashi Rd',
+        addressLocality: 'Coimbatore',
         addressRegion: 'Tamil Nadu',
         postalCode: '641004',
         addressCountry: 'IN',
