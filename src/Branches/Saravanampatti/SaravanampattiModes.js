@@ -38,7 +38,7 @@ const SaravanampattiModes = () => {
                 </p>
                 <div className="saravanampatti-address-badge">
                   <MapPin size={18} style={{ display: "inline", marginRight: 6, color: "#097D8A" }} />
-                  <strong>Address:</strong> Door No-171/2A, 1st Floor, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu – 641035
+                  <strong>Address:</strong> No-171/2A, 1st Promenade, Tower, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu – 641035
                 </div>
               </div>
             </div>

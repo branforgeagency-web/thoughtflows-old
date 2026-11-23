@@ -32,7 +32,7 @@ export const branchDetails = {
     phone: '+91 93845 76852',
     phoneRaw: '9384576852',
     phoneClean: '+919384576852',
-    address: 'No-171/2A, 1st, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu 641035',
+    address: 'No-171/2A, 1st Promenade, Tower, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu 641035',
     email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thought_flows?stkn=a2xlYW43eG45dmt6',
     facebook: 'https://www.facebook.com/Thoughtflowsacademy/',
@@ -101,7 +101,7 @@ export const branchDetails = {
     email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thoughtflowshyderabad?stkn=MTRtY2Z2bnNxNzZ1cQ%3D%3D',
     facebook: 'https://www.facebook.com/Thoughtflowshyderabad/',
-    routes: ['/trusted-medical-coding-ameerpet', '/ameerpet', '/hyderabad']
+    routes: ['/trusted-medical-coding-ameerpet', '/ameerpet']
   },
   dilsukhnagar: {
     key: 'dilsukhnagar',
@@ -110,7 +110,7 @@ export const branchDetails = {
     phone: '+91 90305 08844',
     phoneRaw: '9030508844',
     phoneClean: '+919030508844',
-    address: 'H.No:-16, Sai Towers, 11-477-/6/1/A 2nd floor, opp. pillar No:-1519, Indira Nagar, Dilsukhnagar, Hyderabad, Telangana 500102',
+    address: 'H.No:-16, Sai Towers, 11-477-/6/1/A 2nd floor, opp. pillar No:-1519, Indira Nagar, Dilsukhnagar, Hyderabad, Telangana 500060',
     email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thoughtflowsdilsukhnagar?stkn=MW10NTZqd3Z3NWhnZw==',
     facebook: 'https://www.facebook.com/profile.php?id=61592324790661',
@@ -190,7 +190,7 @@ export const defaultBranchDetails = {
   phone: '+91 93845 76852',
   phoneRaw: '9384576852',
   phoneClean: '+919384576852',
-  address: 'No-171/2A, 1st, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu 641035',
+  address: 'No-171/2A, 1st Promenade, Tower, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu 641035',
   email: 'thoughtflowsinfo@gmail.com',
   instagram: 'https://www.instagram.com/thought_flows/',
   facebook: 'https://www.facebook.com/Thoughtflowsacademy/',
@@ -203,9 +203,7 @@ export const regionBranches = {
     regionName: 'Hyderabad',
     displayName: 'Hyderabad Campuses',
     routes: [
-      '/hyderabad', '/medical-coding-course-hyderabad',
-      '/trusted-medical-coding-ameerpet', '/ameerpet',
-      '/professional-medical-coding-dilsukhnagar', '/dilsukhnagar'
+      '/hyderabad', '/medical-coding-course-hyderabad'
     ],
     branches: [
       {
@@ -220,7 +218,7 @@ export const regionBranches = {
       {
         name: 'Dilsukhnagar Branch',
         locality: 'Opp. Metro Pillar 1519',
-        address: 'H.No: 16, Sai Towers, 11-477/6/1/A, 2nd Floor, opp. Pillar No: 1519, Indira Nagar, Dilsukhnagar, Hyderabad, Telangana - 500102',
+        address: 'H.No: 16, Sai Towers, 11-477/6/1/A, 2nd Floor, opp. Pillar No: 1519, Indira Nagar, Dilsukhnagar, Hyderabad, Telangana - 500060',
         phone: '+91 90305 08844',
         phoneClean: '+919030508844',
         email: 'thoughtflowsinfo@gmail.com',
@@ -233,16 +231,13 @@ export const regionBranches = {
     regionName: 'Coimbatore',
     displayName: 'Coimbatore Campuses',
     routes: [
-      '/medical-coding-training-coimbatore', '/coimbatore', '/medical-coding-course-coimbatore',
-      '/medical-coding-institute-saravanampatti-coimbatore', '/top-medical-coding-training-saravanampatti', '/saravanampatti',
-      '/medical-coding-course-gandhipuram-coimbatore', '/premier-medical-coding-institute-gandhipuram', '/gandhipuram',
-      '/medical-coding-classes-hopes-coimbatore', '/medical-coding-excellence-at-hopes', '/hopes'
+      '/medical-coding-training-coimbatore', '/coimbatore', '/medical-coding-course-coimbatore'
     ],
     branches: [
       {
         name: 'Saravanampatti Branch (Main Branch)',
         locality: 'IT Corridor, Sathy Road',
-        address: 'No-171/2A, 1st Floor, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu - 641035',
+        address: 'No-171/2A, 1st Promenade, Tower, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu - 641035',
         phone: '+91 93845 76852',
         phoneClean: '+919384576852',
         email: 'thoughtflowsinfo@gmail.com',
@@ -273,9 +268,7 @@ export const regionBranches = {
     regionName: 'Kerala',
     displayName: 'Kerala Campuses',
     routes: [
-      '/kerala', '/medical-coding-course-kerala',
-      '/medical-coding-academy-kochi', '/kochi',
-      '/advanced-medical-coding-tiruvandrum', '/trivandrum', '/tiruvandrum'
+      '/kerala', '/medical-coding-course-kerala'
     ],
     branches: [
       {
@@ -303,9 +296,7 @@ export const regionBranches = {
     regionName: 'Maharashtra',
     displayName: 'Maharashtra Campuses',
     routes: [
-      '/maharashtra', '/medical-coding-course-maharashtra',
-      '/medical-coding-course-pune', '/medical-coding-course-pune/', '/advanced-medical-coding-pune', '/pune',
-      '/medical-coding-training-kolhapur', '/kolhapur'
+      '/maharashtra', '/medical-coding-course-maharashtra'
     ],
     branches: [
       {
@@ -337,9 +328,9 @@ export const regionBranches = {
  */
 export const getRegionBranchesByPath = (pathname) => {
   if (!pathname) return null;
-  const path = pathname.toLowerCase().trim();
+  const path = pathname.toLowerCase().trim().replace(/\/+$/, '') || '/';
   for (const region of Object.values(regionBranches)) {
-    if (region.routes.some((r) => r.toLowerCase() === path)) {
+    if (region.routes.some((r) => r.toLowerCase().replace(/\/+$/, '') === path)) {
       return region;
     }
   }
@@ -353,9 +344,9 @@ export const getRegionBranchesByPath = (pathname) => {
  */
 export const getBranchInfoByPath = (pathname) => {
   if (!pathname) return null;
-  const path = pathname.toLowerCase().trim();
+  const path = pathname.toLowerCase().trim().replace(/\/+$/, '') || '/';
   for (const branch of Object.values(branchDetails)) {
-    if (branch.routes.some((r) => r.toLowerCase() === path)) {
+    if (branch.routes.some((r) => r.toLowerCase().replace(/\/+$/, '') === path)) {
       return branch;
     }
   }

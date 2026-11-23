@@ -5,7 +5,7 @@ import Reveal from "../Theni/Reveal";
 
 const MAP_SRC =
   "https://maps.google.com/maps?q=" +
-  encodeURIComponent("Door No-171/2A, 1st Floor, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu 641035") +
+  encodeURIComponent("No-171/2A, 1st Promenade, Tower, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu 641035") +
   "&z=15&output=embed";
 
 const SaravanampattiBranchInfo = () => {
@@ -29,7 +29,7 @@ const SaravanampattiBranchInfo = () => {
                 <div>
                   <h3>Address</h3>
                   <address style={{ margin: 0, color: "#334155", lineHeight: 1.7, fontStyle: "normal" }}>
-                    Door No-171/2A, 1st Floor,<br />
+                    No-171/2A, 1st Promenade, Tower,<br />
                     Sathy Rd, Saravanampatti,<br />
                     Coimbatore, Tamil Nadu – 641035
                   </address>
