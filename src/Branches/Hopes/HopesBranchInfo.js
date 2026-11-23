@@ -5,7 +5,7 @@ import Reveal from "../Theni/Reveal";
 
 const MAP_SRC =
   "https://maps.google.com/maps?q=" +
-  encodeURIComponent("Door No.62 E/F, Lalitha Towers Gandhi Street, Avinashi Rd, Peelamedu, Hopes, Coimbatore, Tamil Nadu 641004") +
+  encodeURIComponent("Door No.62 E/F , 1st Floor South Wing, Lalitha Towers Gandhi Street, Avinashi Rd, Coimbatore, Tamil Nadu 641004") +
   "&z=15&output=embed";
 
 const HopesBranchInfo = () => {
@@ -29,10 +29,9 @@ const HopesBranchInfo = () => {
                 <div>
                   <h3>Address</h3>
                   <address style={{ margin: 0, color: "#334155", lineHeight: 1.7, fontStyle: "normal" }}>
-                    Door No.62 E/F, 1st Floor South Wing,<br />
-                    Lalitha Towers, Gandhi Street,<br />
-                    Avinashi Rd, Hopes, Peelamedu,<br />
-                    Coimbatore, Tamil Nadu – 641004
+                    Door No.62 E/F , 1st Floor South Wing,<br />
+                    Lalitha Towers Gandhi Street, Avinashi Rd,<br />
+                    Coimbatore, Tamil Nadu 641004
                   </address>
                 </div>
               </div>

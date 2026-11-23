@@ -29,7 +29,7 @@ const schema = {
       parentOrganization: { '@type': 'Organization', name: 'ThoughtFlows Medical Coding Academy', url: 'https://www.thoughtflows.in/' },
       address: {
         '@type': 'PostalAddress',
-        streetAddress: 'Jay Enclave, No.1084, 3rd Street, Cross Cut Road',
+        streetAddress: 'jay enclave, 1084, 3rd St, Cross Cut Road',
         addressLocality: 'Gandhipuram, Coimbatore',
         addressRegion: 'Tamil Nadu',
         postalCode: '641012',

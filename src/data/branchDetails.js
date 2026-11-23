@@ -6,7 +6,7 @@ export const branchDetails = {
     phone: '+91 93845 76852',
     phoneRaw: '9384576852',
     phoneClean: '+919384576852',
-    address: 'Jay Enclave, 1084, 3rd St, Cross Cut Road, Gandhipuram, Coimbatore, Tamil Nadu 641012',
+    address: 'jay enclave, 1084, 3rd St, Cross Cut Road, Gandhipuram, Coimbatore, Tamil Nadu 641012',
     email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thought_flows?stkn=a2xlYW43eG45dmt6',
     facebook: 'https://www.facebook.com/people/Thoughtflows-Medical-Coding-Academy-Gandhipuram-Coimbatore/61562789837696/',
@@ -45,7 +45,7 @@ export const branchDetails = {
     phone: '+91 93845 76852',
     phoneRaw: '9384576852',
     phoneClean: '+919384576852',
-    address: 'First floor, AMIL towers, 25, C-40, 3rd Cross Rd, Thillai Nagar, Tiruchirappalli, Tamil Nadu 620018',
+    address: 'first floor, AMIL towers, 25, C-40, 3rd Cross Rd, Thillai Nagar, Tiruchirappalli, Tamil Nadu 620018',
     email: 'thoughtflowsinfo@gmail.com',
     instagram: 'https://www.instagram.com/thoughtflows_trichy?stkn=MzJlemxjcjM1MWg4',
     facebook: 'https://www.facebook.com/Thoughtflowstrichy/',
@@ -209,7 +209,7 @@ export const regionBranches = {
       {
         name: 'Ameerpet Branch',
         locality: 'Ameerpet X Road',
-        address: 'Level 6 (5th Floor), Vasavi MPM Grand, No: 606/A, Ameerpet X Road, Yella Reddy Guda, Hyderabad, Telangana - 500073',
+        address: 'Level 6(5th Floor, Vasavi Mpm Grand, No: 606/A, Ameerpet X Road, Yella Reddy Guda, Hyderabad, Telangana 500073',
         phone: '+91 87907 51742',
         phoneClean: '+918790751742',
         email: 'thoughtflowsinfo@gmail.com',
@@ -218,7 +218,7 @@ export const regionBranches = {
       {
         name: 'Dilsukhnagar Branch',
         locality: 'Opp. Metro Pillar 1519',
-        address: 'H.No: 16, Sai Towers, 11-477/6/1/A, 2nd Floor, opp. Pillar No: 1519, Indira Nagar, Dilsukhnagar, Hyderabad, Telangana - 500060',
+        address: 'H.No:-16, Sai Towers, 11-477-/6/1/A 2nd floor, opp. pillar No:-1519, Indira Nagar, Dilsukhnagar, Hyderabad, Telangana 500060',
         phone: '+91 90305 08844',
         phoneClean: '+919030508844',
         email: 'thoughtflowsinfo@gmail.com',
@@ -237,7 +237,7 @@ export const regionBranches = {
       {
         name: 'Saravanampatti Branch (Main Branch)',
         locality: 'IT Corridor, Sathy Road',
-        address: 'No-171/2A, 1st Promenade, Tower, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu - 641035',
+        address: 'No-171/2A, 1st Promenade, Tower, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu 641035',
         phone: '+91 93845 76852',
         phoneClean: '+919384576852',
         email: 'thoughtflowsinfo@gmail.com',
@@ -246,7 +246,7 @@ export const regionBranches = {
       {
         name: 'Gandhipuram Branch',
         locality: 'Cross Cut Road',
-        address: 'Jay Enclave, 1084, 3rd St, Cross Cut Road, Gandhipuram, Coimbatore, Tamil Nadu - 641012',
+        address: 'jay enclave, 1084, 3rd St, Cross Cut Road, Gandhipuram, Coimbatore, Tamil Nadu 641012',
         phone: '+91 93845 76852',
         phoneClean: '+919384576852',
         email: 'thoughtflowsinfo@gmail.com',
@@ -255,7 +255,7 @@ export const regionBranches = {
       {
         name: 'Hopes Branch',
         locality: 'Avinashi Road',
-        address: 'Door No.62 E/F, 1st Floor South Wing, Lalitha Towers, Gandhi Street, Avinashi Rd, Coimbatore, Tamil Nadu - 641004',
+        address: 'Door No.62 E/F , 1st Floor South Wing, Lalitha Towers Gandhi Street, Avinashi Rd, Coimbatore, Tamil Nadu 641004',
         phone: '+91 93845 76852',
         phoneClean: '+919384576852',
         email: 'thoughtflowsinfo@gmail.com',
@@ -274,7 +274,7 @@ export const regionBranches = {
       {
         name: 'Kochi Branch',
         locality: 'Edappally, NH Bypass',
-        address: '4th Floor, Vee Vee Tower, Near Bhima Jewels, NH Bypass, Edappally, Kochi, Ernakulam, Kerala - 682024',
+        address: '4th floor, Vee Vee Tower, road, near Bhima Jewels, NH Bye Pass, Edappally, Kochi, Ernakulam, Keralam 682024',
         phone: '+91 90480 23242',
         phoneClean: '+919048023242',
         email: 'thoughtflowsinfo@gmail.com',
@@ -283,7 +283,7 @@ export const regionBranches = {
       {
         name: 'Trivandrum Branch',
         locality: 'East Fort',
-        address: '167, 1st Floor, Karimpanal Arcade, opp. Padmanabhaswamy Temple, East Fort, Thiruvananthapuram, Kerala - 695023',
+        address: '167, 1st Floor, Karimpanal Arcade, opp. to Padmanabhaswamy Temple, Fort, East Fort, Pazhavangadi, Thiruvananthapuram, Keralam 695023',
         phone: '+91 90480 23242',
         phoneClean: '+919048023242',
         email: 'thoughtflowsinfo@gmail.com',
