@@ -37,7 +37,7 @@ const HyderabadLanding = () => {
       name: "Dilsukhnagar Campus",
       tagline: "Professional Medical Coding Dilsukhnagar",
       badge: "South Hyderabad Metro Hub",
-      address: "H.No: 16, Sai Towers, 11-477/6/1/A, 2nd Floor, opp. Pillar No: 1519, Indira Nagar, Dilsukhnagar, Hyderabad, Telangana - 500102",
+      address: "H.No: 16, Sai Towers, 11-477/6/1/A, 2nd Floor, opp. Pillar No: 1519, Indira Nagar, Dilsukhnagar, Hyderabad, Telangana - 500060",
       phone: "+91 90305 08844",
       path: "/Professional-Medical-Coding-Dilsukhnagar",
       img: dilsukhnagarImg,

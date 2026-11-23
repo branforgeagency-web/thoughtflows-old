@@ -12,8 +12,8 @@ const Footer = () => {
     const [showZoomPopup, setShowZoomPopup] = useState(false);
     const location = useLocation();
 
-    const regionInfo = getRegionBranchesByPath(location.pathname);
     const branch = getBranchInfoByPath(location.pathname);
+    const regionInfo = !branch ? getRegionBranchesByPath(location.pathname) : null;
     const currentBranch = branch || defaultBranchDetails;
 
     const showSmallFooter = location.pathname === '/' || location.pathname === '/home';
@@ -265,7 +265,7 @@ const Footer = () => {
                     </Col>
 
                     <Col lg={3} className="text-start mb-4 mb-lg-0">
-                        <p className="fs-5 fw-bold">{regionInfo ? regionInfo.displayName.toUpperCase() : (currentBranch.displayName || (branch ? `${branch.name} Branch` : 'Contact')).toUpperCase()}</p>
+                        <p className="fs-5 fw-bold">{branch ? (branch.displayName || `${branch.name} Branch`).toUpperCase() : (regionInfo ? regionInfo.displayName.toUpperCase() : (currentBranch.displayName || 'Contact').toUpperCase())}</p>
                         <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
 
                         {regionInfo ? (

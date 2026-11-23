@@ -56,7 +56,7 @@ const CoimbatoreLanding = () => {
       locationDesc: "Our Saravanampatti centre sits on the Sathy Road side of the city, within the stretch that runs past TIDEL Park and the KGISL campus toward Kalapatti and Vilankurichi.",
       profileText: "This branch mostly fills with two groups. Students from the arts and science colleges clustered along this belt — Hindusthan, SNS, Dr. NGP, KPR, Sri Krishna. And people already working in the IT and BPO offices nearby who want a healthcare-side career with fixed shifts. Evening and weekend batches run strongest here for that reason.",
       liveAround: "Saravanampatti, Kalapatti, Vilankurichi, Thudiyalur, Chinnavedampatti, Ganapathy, Keeranatham, Annur or Karamadai side.",
-      address: "Door No-171/2A, 1st Floor, Sathy Road, Saravanampatti, Coimbatore - 641035",
+      address: "No-171/2A, 1st Promenade, Tower, Sathy Road, Saravanampatti, Coimbatore - 641035",
       phone: "+91 93845 76852",
       path: "/medical-coding-institute-saravanampatti-coimbatore",
       mapUrl: "https://maps.google.com/?q=ThoughtFlows+Saravanampatti+Coimbatore",

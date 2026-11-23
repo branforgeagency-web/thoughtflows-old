@@ -408,7 +408,7 @@ ${formData.message || 'N/A'}`;
                   <div className="contact-raiou-info-text">
                     <h3 className="contact-raiou-info-label">Our Address (Main Branch)</h3>
                     <p className="contact-raiou-info-val">
-                      No-171/2A, 1st, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu – 641035
+                      No-171/2A, 1st Promenade, Tower, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu – 641035
                     </p>
                   </div>
                 </div>
