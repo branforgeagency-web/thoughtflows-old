@@ -5,6 +5,7 @@ import 'slick-carousel/slick/slick.css';
 import Header from './Header';
 // import Header1 from './header1';
 import { useEffect } from 'react';
+import { Helmet } from 'react-helmet-async';
 import { BrowserRouter as Router, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import Home from './Home/Home';
 import About from './About/About';
@@ -98,6 +99,11 @@ function AppContent() {
 
   return (
     <>
+      {/* Site-wide fallback; each page's <Meta> overrides it */}
+      <Helmet>
+        <title>Medical Coding Course & Training | ThoughtFlows Academy</title>
+        <meta name="description" content="Get expert medical coding training at the best academy for comprehensive coaching. Start your career today!" />
+      </Helmet>
       {!hideHeaderFooter && <Header />}
       {!hideHeaderFooter && <FloatingIcons />}
       <div className={isBlogRoute ? "blog-theme-scope" : ""}>
