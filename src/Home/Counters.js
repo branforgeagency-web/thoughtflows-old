@@ -32,7 +32,7 @@ const AvatarStack = ({ photos }) => (
     <div className="tfpr-avatars" aria-hidden="true">
         {photos.map((src, i) => (
             <span className="tfpr-avatar" key={i}>
-                <img src={src} alt="" loading="lazy" decoding="async" />
+                <img src={src} alt="ThoughtFlows placed student" loading="lazy" decoding="async" />
             </span>
         ))}
     </div>

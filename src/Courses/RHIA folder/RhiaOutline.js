@@ -66,7 +66,7 @@ const RhiaOutline = () => {
             <div key={index} className="col-md-4">
               <div className="outline-item">
                 <div className="icon-wrapper">
-                  <img alt="" src={module.icon}/>
+                  <img alt={module.title} src={module.icon}/>
                 </div>
                 <h5 className="text-center">{module.title}</h5>
                 <ul>

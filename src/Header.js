@@ -352,8 +352,9 @@ const Header = () => {
 
                 {/* Logo - always visible */}
                 <div className="logo tf-logo-chip tf-logo-inline">
-                  <a href="/">
-                    <img src={logo} alt="Website Logo" />
+                  <a href="/" aria-label="ThoughtFlows Medical Coding Academy home">
+                    <img src={logo} alt="ThoughtFlows Medical Coding Academy logo" />
+                    <span className="tf-sr-only">ThoughtFlows Medical Coding Academy home</span>
                   </a>
                 </div>
 

@@ -1,0 +1,767 @@
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
+import { useEffect } from "react";
+import "./App.css";
+import SideMenuBar from "./Home/SideMenuBar";
+import { mediaUrl } from './config/media';
+const logo = mediaUrl("images/image2.png"); // Original logo (restored)
+// import logo from "./images/ThoughtFlow Christmas Version 4 Revised Collection.png"; // Christmas logo (temporarily removed)
+
+const DropdownMenu = ({ isBranchPage }) => {
+  const menuItems = {
+    Branches: {
+      Coimbatore: [
+        { name: "Hopes", path: "/Medical-Coding-Excellence-at-Hopes" },
+        { name: "Saravanampatti", path: "/Top-Medical-Coding-Training-Saravanampatti" },
+        { name: "Gandhipuram", path: "/Premier-Medical-Coding-Institute-Gandhipuram" },
+      ],
+      Kerala: [
+        { name: "Kochi", path: "/Medical-Coding-Academy-Kochi" },
+        { name: "Trivandrum", path: "/Advanced-Medical-Coding-Tiruvandrum" },
+      ],
+      Hyderabad: [
+        { name: "Ameerpet", path: "/Trusted-Medical-Coding-Ameerpet" },
+        { name: "Dilsukhnagar", path: "/Professional-Medical-Coding-Dilsukhnagar" },
+      ],
+      Maharashtra: [
+        { name: "Pune", path: "/medical-coding-course-pune/" },
+        { name: "Kolhapur", path: "/Medical-Coding-Training-Kolhapur" },
+      ],
+      Trichy: [{ name: "Trichy", path: "/Career-Focused-Medical-Coding-Trichy" }],
+      Salem: [{ name: "Salem", path: "/Future-Ready-Medical-Coding-Salem" }],
+      Theni: [{ name: "Theni", path: "/medical-coding-course-theni" }],
+      Vizag: [{ name: "Vizag", path: "/Innovative-Medical-Coding-Vizag" }],
+      Tirupati: [{ name: "Tirupati", path: "/Expert-Medical-Coding-Tirupathi" }],
+    },
+  };
+
+  const branchHubPaths = {
+    Coimbatore: "/coimbatore",
+    Kerala: "/kerala",
+    Hyderabad: "/hyderabad",
+    Maharashtra: "/maharashtra",
+  };
+
+  const [openMainMenu, setOpenMainMenu] = useState(null);
+  const [openSubMenu, setOpenSubMenu] = useState(null);
+
+  // Branches with no dropdown
+  const noDropdown = ["Trichy", "Salem", "Theni", "Vizag", "Tirupati"];
+
+  return (
+    <div className="relative inline-block">
+      <div
+        className={`cursor-pointer md:!text-cyan-500 py-2 relative transition-all duration-300 hover:text-cyan-400 ${isBranchPage() ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+          }`}
+        onMouseEnter={() => setOpenMainMenu("Branches")}
+        onMouseLeave={() => {
+          setOpenMainMenu(null);
+          setOpenSubMenu(null);
+        }}
+      >
+        Branches
+        {openMainMenu === "Branches" && (
+          <div className="absolute left-0 mt-2 w-64 shadow-lg rounded-md" style={{ backgroundColor: "#ffffff", backgroundImage: "linear-gradient(135deg, #dbeafe 0%, #ede9fe 50%, #fce7f3 100%)" }}>
+            {Object.keys(menuItems.Branches).map((branch) => {
+              const isNoDropdown = noDropdown.includes(branch);
+
+              return (
+                <div
+                  key={branch}
+                  className="relative group px-4 py-2 hover:bg-gray-200"
+                  style={{ fontWeight: "500", color: "#000" }}
+                  onMouseEnter={() => !isNoDropdown && setOpenSubMenu(branch)}
+                  onMouseLeave={() => !isNoDropdown && setOpenSubMenu(null)}
+                >
+                  {isNoDropdown ? (
+                    // Direct link (no dropdown)
+                    <Link
+                      to={menuItems.Branches[branch][0].path}
+                      className="block text-black"
+                      style={{ color: "#578fca", fontWeight: "400" }}
+                      onClick={() => {
+                        setOpenMainMenu(null);
+                        setOpenSubMenu(null);
+                      }}
+                    >
+                      {branch}
+                    </Link>
+                  ) : (
+                    <>
+                      <div className="flex justify-between items-center">
+                        <Link
+                          to={branchHubPaths[branch] || "#"}
+                          className="flex-1 text-black hover:text-cyan-600 transition-colors"
+                          style={{ color: "#000", fontWeight: "500", textDecoration: "none" }}
+                          onClick={() => {
+                            setOpenMainMenu(null);
+                            setOpenSubMenu(null);
+                          }}
+                        >
+                          {branch}
+                        </Link>
+                        <span 
+                          className="ml-2 cursor-pointer text-gray-500 font-bold px-1 hover:text-cyan-600"
+                          onClick={() => setOpenSubMenu(openSubMenu === branch ? null : branch)}
+                          title={`View ${branch} locations`}
+                        >
+                          {">"}
+                        </span>
+                      </div>
+
+                      {openSubMenu === branch && (
+                        <div className="absolute left-full top-0 w-64 shadow-lg rounded-md" style={{ backgroundColor: "#ffffff", backgroundImage: "linear-gradient(135deg, #dbeafe 0%, #ede9fe 50%, #fce7f3 100%)" }}>
+                          {menuItems.Branches[branch].map((subBranch) => (
+                            <Link
+                              key={subBranch.name}
+                              to={subBranch.path}
+                              className="block px-4 py-2 hover:bg-gray-200 text-black"
+                              style={{ color: "#578fca", fontWeight: "400" }}
+                              onClick={() => {
+                                setOpenMainMenu(null);
+                                setOpenSubMenu(null);
+                              }}
+                            >
+                              {subBranch.name}
+                            </Link>
+                          ))}
+                        </div>
+                      )}
+                    </>
+                  )}
+                </div>
+              );
+            })}
+          </div>
+        )}
+      </div>
+    </div>
+  );
+};
+
+
+
+const Header = () => {
+  const [open, setOpen] = useState({ submenu: "", open: false });
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [submenuOpen, setSubmenuOpen] = useState(""); // Track which submenu is open
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 1024);
+  const [sideMenuOpen, setSideMenuOpen] = useState(false);
+
+  const location = useLocation();
+  const isHome = location.pathname === '/';
+
+  // Check if current page is a branch page
+  const isBranchPage = () => {
+    const branchPaths = [
+      '/coimbatore', '/kerala', '/hyderabad', '/maharashtra',
+      '/kochi', '/trivandrum', '/ameerpet', '/dilsukhnagar',
+      '/tirupathi', '/trichy', '/salem', '/vizag',
+      '/Medical-Coding-Excellence-at-Hopes', '/Top-Medical-Coding-Training-Saravanampatti',
+      '/Premier-Medical-Coding-Institute-Gandhipuram', '/Medical-Coding-Academy-Kochi',
+      '/Advanced-Medical-Coding-Tiruvandrum', '/Trusted-Medical-Coding-Ameerpet',
+      '/Professional-Medical-Coding-Dilsukhnagar', '/Expert-Medical-Coding-Tirupathi',
+      '/Career-Focused-Medical-Coding-Trichy', '/Future-Ready-Medical-Coding-Salem',
+      '/Innovative-Medical-Coding-Vizag', '/Medical-Coding-Training-Kolhapur',
+      '/kolhapur', '/Advanced-Medical-Coding-Pune', '/pune',
+      '/medical-coding-course-pune', '/medical-coding-course-pune/',
+      '/medical-coding-course-theni', '/theni'
+    ];
+    return branchPaths.some((p) => p.toLowerCase() === location.pathname.toLowerCase());
+  };
+
+  // Check if current page is a course page
+  const isCoursePage = () => {
+    const coursePaths = [
+      '/cpc', '/cic', '/coc', '/cpma', '/crc', '/cpb', '/cedc', '/cemc',
+      '/cdeo', '/cdei', '/cppm', '/surgery', '/ed', '/em', '/radiology',
+      '/anesesthesia', '/ip-drg', '/hcc', '/ivr', '/ccs', '/ccs-p', '/rhia',
+      '/rhit', '/ccc', '/him', '/cdi'
+    ];
+    return coursePaths.includes(location.pathname.toLowerCase());
+  };
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth <= 1024);
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+  useEffect(() => {
+    setOpen({ submenu: "", open: false });
+    setMobileMenuOpen(false);
+  }, [location]);
+
+  useEffect(() => {
+    setOpen({ submenu: "", open: false });
+  }, [location]);
+
+  useEffect(() => {
+    if (mobileMenuOpen) {
+      document.body.style.overflow = "hidden"; // Disable scrolling
+    } else {
+      document.body.style.overflow = "auto"; // Enable scrolling when closed
+    }
+
+    return () => {
+      document.body.style.overflow = "auto"; // Cleanup on unmount
+    };
+  }, [mobileMenuOpen]);
+
+  const submenu = {
+    courses: [
+      {
+        label: "AAPC",
+        courseMenu: [
+          { label: "CPC", path: "/cpc" },
+          { label: "CIC", path: "/cic" },
+          { label: "COC", path: "/coc" },
+          { label: "CPMA", path: "/cpma" },
+          { label: "CRC", path: "/crc" },
+          { label: "CPB", path: "/cpb" },
+          { label: "CEDC", path: "/cedc" },
+          { label: "CEMC", path: "/cemc" },
+          { label: "CDEO", path: "/cdeo" },
+          { label: "CDEI", path: "/cdei" },
+          { label: "CPPM", path: "/cppm" },
+        ],
+      },
+      {
+        label: "SPECIALTY TRAINING",
+        courseMenu: [
+          { label: "SURGERY", path: "/surgery" },
+          { label: "ED", path: "/ed" },
+          { label: "EM", path: "/em" },
+          { label: "RADIOLOGY", path: "/radiology" },
+          { label: "ANESTHESIA", path: "/anesesthesia" },
+          { label: "IP DRG", path: "/ip-drg" },
+          { label: "HCC", path: "/hcc" },
+          { label: "IVR", path: "/ivr" },
+          { label: "CDI", path: "/cdi" },
+        ],
+      },
+      {
+        label: "AHIMA",
+        courseMenu: [
+          { label: "CCS", path: "/ccs" },
+          { label: "CCS-P", path: "/ccs-p" },
+          { label: "RHIA", path: "/rhia" },
+          { label: "RHIT", path: "/rhit" },
+        ],
+      },
+      {
+        label: "HIMAA",
+        courseMenu: [
+          { label: "CCC", path: "/ccc" },
+          { label: "HIM", path: "/him" },
+        ],
+      },
+    ],
+    branches: [
+      {
+        label: "COIMBATORE",
+        hubPath: "/coimbatore",
+        courseMenu: [
+          { label: "Hopes", path: "/Medical-Coding-Excellence-at-Hopes" },
+          { label: "Saravanampatti", path: "/Top-Medical-Coding-Training-Saravanampatti" },
+          { label: "Gandhipuram", path: "/Premier-Medical-Coding-Institute-Gandhipuram" },
+        ],
+      },
+      {
+        label: "KERALA",
+        hubPath: "/kerala",
+        courseMenu: [
+          { label: "Kochi", path: "/Medical-Coding-Academy-Kochi" },
+          { label: "Thiruvananthapuram", path: "/Advanced-Medical-Coding-Tiruvandrum" },
+        ],
+      },
+      {
+        label: "HYDERABAD",
+        hubPath: "/hyderabad",
+        courseMenu: [
+          { label: "Ameerpet", path: "/Trusted-Medical-Coding-Ameerpet" },
+          { label: "Dilsukhnagar", path: "/Professional-Medical-Coding-Dilsukhnagar" },
+        ],
+      },
+      {
+        label: "MAHARASHTRA",
+        hubPath: "/maharashtra",
+        courseMenu: [
+          { label: "Pune", path: "/medical-coding-course-pune/" },
+          { label: "Kolhapur", path: "/Medical-Coding-Training-Kolhapur" },
+        ],
+      },
+      {
+        label: "OTHER LOCATIONS",
+        courseMenu: [
+          { label: "Tirupathi", path: "/Expert-Medical-Coding-Tirupathi" },
+          { label: "Trichy", path: "/Career-Focused-Medical-Coding-Trichy" },
+          { label: "Salem", path: "/Future-Ready-Medical-Coding-Salem" },
+          { label: "Theni", path: "/medical-coding-course-theni" },
+          { label: "Vizag", path: "/Innovative-Medical-Coding-Vizag" },
+        ],
+      },
+    ],
+  };
+
+  return (
+    <>
+      <header className="glass-header tf-header-overlay">
+        <nav className="navbar">
+
+          {/* Navigation Menu */}
+          <div
+            className="App"
+            onMouseLeave={() => setOpen({ submenu: "", open: false })}
+            style={{ width: "100%", display: "flex" }}
+          >
+            <div
+              style={{
+                alignItems: "center",
+                position: "relative",
+                height: "auto",
+                width: "100%",
+                maxWidth: "1400px",
+                margin: "0 auto",
+                padding: "0 16px",
+                boxSizing: "border-box"
+              }}
+              className="tf-nav-row w-full"
+            >
+              <div className="tf-nav-spacer" aria-hidden="true" />
+              <div className="tf-nav-pill">
+                {/* Hamburger Menu - Only show on mobile/tablet, placed on the LEFT */}
+                {isMobile && (
+                  <div
+                    className="hamburger"
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Toggle menu"
+                    aria-expanded={mobileMenuOpen}
+                    onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+                    onKeyDown={(e) => {
+                      if (e.key === "Enter" || e.key === " ") {
+                        e.preventDefault();
+                        setMobileMenuOpen(!mobileMenuOpen);
+                      }
+                    }}
+                  >
+                    {mobileMenuOpen ? '✕' : '☰'}
+                  </div>
+                )}
+
+                {/* Logo - always visible */}
+                <div className="logo tf-logo-chip tf-logo-inline">
+                  <a href="/">
+                    <img src={logo} alt="Website Logo" />
+                  </a>
+                </div>
+
+                <ul
+                  className={`border-gray-300 sm:shadow md:shadow-none menu ${mobileMenuOpen ? "open" : ""
+                    }`}
+                >
+
+                <li>
+                  <div
+                    style={{ fontWeight: "500", cursor: "pointer" }}
+                    onMouseEnter={() => setOpen({ submenu: "", open: false })}
+                    className="py-2 whitespace-nowrap"
+                  >
+                    <Link
+                      to="/"
+                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${location.pathname === '/' ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                        }`}
+                    >
+                      Home
+                    </Link>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style={{ fontWeight: "500", cursor: "pointer" }}
+                    onMouseEnter={() => setOpen({ submenu: "", open: false })}
+                    className="py-2 whitespace-nowrap"
+                  >
+                    <Link
+                      to="/about"
+                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${location.pathname === '/about' ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                        }`}
+                    >
+                      About us
+                    </Link>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style={{ fontWeight: "500", cursor: "pointer" }}
+                    onMouseEnter={() =>
+                      !isMobile && setOpen({ submenu: "courses", open: true })
+                    }
+                    onClick={() =>
+                      isMobile &&
+                      setSubmenuOpen(submenuOpen === "courses" ? "" : "courses")
+                    }
+                    className={`py-2 whitespace-nowrap text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${isCoursePage() ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                      }`}
+                  >
+                    Courses
+                  </div>
+                  {submenuOpen === "courses" && (
+                    <div className="mobile-submenu border-gray-300 shadow rounded">
+                      {submenu.courses.map((item, index) => (
+                        <div key={index} style={{
+                          display: "block",
+                          width: "100%",
+                          borderBottom: index < submenu.courses.length - 1 ? "1px solid #e5f7f8" : "none",
+                          paddingBottom: "8px",
+                          marginBottom: "0"
+                        }}>
+                          <div style={{
+                            fontWeight: 700,
+                            padding: "12px 16px 6px",
+                            fontSize: "13px",
+                            color: "#097D8A",
+                            textTransform: "uppercase",
+                            letterSpacing: "0.08em",
+                            borderLeft: "3px solid #097D8A",
+                            marginLeft: "8px",
+                            marginBottom: "4px"
+                          }}>
+                            {item.label}
+                          </div>
+                          <div style={{ display: "flex", flexDirection: "column", gap: "0px", alignItems: "flex-start", paddingLeft: "16px" }}>
+                            {item.courseMenu.map((course, i) => (
+                              <Link
+                                style={{
+                                  color: "#06b6d4",
+                                  display: "block",
+                                  width: "100%",
+                                  padding: "7px 12px",
+                                  textDecoration: "none",
+                                  fontSize: "14px",
+                                  fontWeight: "500",
+                                  borderRadius: "6px",
+                                  transition: "background 0.2s, color 0.2s"
+                                }}
+                                key={i}
+                                to={course.path}
+                                onClick={() => {
+                                  setMobileMenuOpen(false);
+                                  setSubmenuOpen("");
+                                }}
+                                onMouseEnter={(e) => { e.currentTarget.style.background = "#f0fdfe"; e.currentTarget.style.color = "#0891b2"; }}
+                                onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#06b6d4"; }}
+                              >
+                                {course.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+
+                  )}
+                </li>
+                <li className="multiple-dropdown">
+                  <div
+                    style={{ fontWeight: "500", cursor: "pointer" }}
+                    onMouseEnter={() => setOpen({ submenu: "", open: false })}
+                  >
+                    <DropdownMenu isBranchPage={isBranchPage} />
+                  </div>
+                </li>
+                <li className="multiple-dropdown-sub">
+
+                  <div
+                    style={{ fontWeight: "500", cursor: "pointer", color: "#0b3a66" }}
+                    onMouseEnter={() =>
+                      !isMobile && setOpen({ submenu: "branches", open: true })
+                    }
+                    onClick={() =>
+                      isMobile &&
+                      setSubmenuOpen(
+                        submenuOpen === "branches" ? "" : "branches"
+                      )
+                    }
+                    className={`py-2 relative transition-all duration-300 ${isBranchPage() ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                      }`}
+                  >
+                    Branches
+                  </div>
+                  {submenuOpen === "branches" && (
+                    <div className="mobile-submenu border-gray-300 shadow rounded">
+                      {submenu.branches.map((item, index) => (
+                        <div key={index} style={{
+                          display: "block",
+                          width: "100%",
+                          borderBottom: index < submenu.branches.length - 1 ? "1px solid #e5f7f8" : "none",
+                          paddingBottom: "8px"
+                        }}>
+                          {item.hubPath ? (
+                            <Link
+                              to={item.hubPath}
+                              style={{
+                                display: "block",
+                                fontWeight: 700,
+                                padding: "12px 16px 6px",
+                                color: "#097D8A",
+                                fontSize: "14px",
+                                textDecoration: "none",
+                                textTransform: "uppercase",
+                                letterSpacing: "0.08em",
+                                borderLeft: "3px solid #097D8A",
+                                marginLeft: "8px"
+                              }}
+                              onClick={() => {
+                                setMobileMenuOpen(false);
+                                setSubmenuOpen("");
+                              }}
+                            >
+                              {item.label} &rarr;
+                            </Link>
+                          ) : (
+                            <div
+                              style={{
+                                display: "block",
+                                fontWeight: 700,
+                                padding: "12px 16px 6px",
+                                color: "#1f2937",
+                                fontSize: "14px",
+                                textTransform: "uppercase",
+                                letterSpacing: "0.08em",
+                                borderLeft: "3px solid #e5e7eb",
+                                marginLeft: "8px"
+                              }}
+                            >
+                              {item.label}
+                            </div>
+                          )}
+                          <div style={{ display: "flex", flexDirection: "column", paddingLeft: "16px" }}>
+                            {item.courseMenu.map((branch, i) => (
+                              <Link
+                                style={{
+                                  color: "#06b6d4",
+                                  display: "block",
+                                  width: "100%",
+                                  padding: "7px 12px",
+                                  textDecoration: "none",
+                                  fontSize: "14px",
+                                  fontWeight: "500",
+                                  borderRadius: "6px",
+                                  transition: "background 0.2s, color 0.2s"
+                                }}
+                                key={i}
+                                to={branch.path}
+                                onClick={() => {
+                                  setMobileMenuOpen(false);
+                                  setSubmenuOpen("");
+                                }}
+                                onMouseEnter={(e) => { e.currentTarget.style.background = "#f0fdfe"; e.currentTarget.style.color = "#0891b2"; }}
+                                onMouseLeave={(e) => { e.currentTarget.style.background = "transparent"; e.currentTarget.style.color = "#06b6d4"; }}
+                              >
+                                {branch.label}
+                              </Link>
+                            ))}
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </li>
+                <li>
+                  <div
+                    style={{ fontWeight: "500", cursor: "pointer" }}
+                    onMouseEnter={() => setOpen({ submenu: "", open: false })}
+                    className="py-2 whitespace-nowrap"
+                  >
+                    <Link
+                      to="/ourteam"
+                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${location.pathname === '/ourteam' ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                        }`}
+                    >
+                      Our team
+                    </Link>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style={{ fontWeight: "500", cursor: "pointer" }}
+                    onMouseEnter={() => setOpen({ submenu: "", open: false })}
+                    className="py-2 whitespace-nowrap"
+                  >
+                    <Link
+                      to="/placements"
+                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${location.pathname === '/placements' ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                        }`}
+                    >
+                      Placements
+                    </Link>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style={{ fontWeight: "500", cursor: "pointer" }}
+                    onMouseEnter={() => setOpen({ submenu: "", open: false })}
+                    className="py-2 whitespace-nowrap"
+                  >
+                    <Link
+                      to="/gallery"
+                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${location.pathname === '/gallery' ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                        }`}
+                    >
+                      Gallery
+                    </Link>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style={{ fontWeight: "500", cursor: "pointer" }}
+                    onMouseEnter={() => setOpen({ submenu: "", open: false })}
+                    className="py-2 whitespace-nowrap"
+                  >
+                    <Link
+                      to="/blog"
+                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${location.pathname.startsWith('/blog') ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                        }`}
+                    >
+                      Blog
+                    </Link>
+                  </div>
+                </li>
+                <li>
+                  <div
+                    style={{ fontWeight: "500", cursor: "pointer" }}
+                    onMouseEnter={() => setOpen({ submenu: "", open: false })}
+                    className="py-2 whitespace-nowrap"
+                  >
+                    <Link
+                      to="/contact"
+                      className={`text-cyan-500 relative transition-all duration-300 hover:text-cyan-400 ${location.pathname === '/contact' ? 'after:content-[""] after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-cyan-500 after:transition-all after:duration-300' : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-cyan-400 hover:after:transition-all hover:after:duration-300'
+                        }`}
+                    >
+                      Contact us
+                    </Link>
+                  </div>
+                </li>
+
+              </ul>
+            </div>
+
+              <div className="tf-nav-cta">
+                <Link to="/contact" className="tf-apply-btn">
+                  Apply Now
+                </Link>
+              </div>
+            </div>
+
+            {/* Submenu */}
+            {open.open && (
+              <div
+                style={{
+                  position: "absolute",
+                  top: "80%",
+                  left: "auto",
+                  display: "flex",
+                  justifyContent: "center",
+                  backgroundColor: "#ffffff",
+                  backgroundImage: "linear-gradient(135deg, #dbeafe 0%, #ede9fe 50%, #fce7f3 100%)",
+                  color: "black",
+                  width: open.submenu === "branches" ? "50%" : "50%",
+                  gap: "10%",
+                  padding: "20px",
+                  borderTop: "1px solid #ddd",
+                  boxShadow: "0px 4px 8px rgba(0, 0, 0, 0.1)",
+                  fontSize: "0.9rem",
+                  borderRadius: "0 0 8px 8px",
+                }}
+              >
+                {submenu[open.submenu]?.map((item, index) => (
+                  <div
+                    key={index}
+                    style={{
+                      margin: "10px",
+                      textAlign: "center",
+                      minWidth: "120px"
+                    }}
+                  >
+                    <div
+                      style={{
+                        fontSize: "1rem",
+                        fontWeight: "500",
+                        marginBottom: "15px",
+                        color: "#1f2937",
+                        borderBottom: "2px solid #06b6d4",
+                        paddingBottom: "5px"
+                      }}
+                    >
+                      {item.label}
+                    </div>
+                    <div style={{ display: "flex", flexDirection: "column", gap: "8px" }}>
+                      {item.courseMenu &&
+                        item.courseMenu.map((branch, i) => (
+                          <div
+                            key={i}
+                            style={{
+                              padding: "8px 0",
+                              fontSize: "0.85rem",
+                              borderBottom: "1px solid #f1f5f9"
+                            }}
+                          >
+                            <Link
+                              to={branch.path}
+                              style={{
+                                color: "#505050",
+                                textDecoration: "none",
+                                position: "relative",
+                                transition: "color 0.3s ease",
+                                display: "block",
+                                padding: "4px 8px",
+                                borderRadius: "4px",
+                                fontWeight: "500"
+                              }}
+                              onMouseEnter={(e) => {
+                                e.target.style.color = "#06b6d4";
+                                const underline = e.target.querySelector('.course-underline');
+                                if (underline) underline.style.width = '100%';
+                              }}
+                              onMouseLeave={(e) => {
+                                e.target.style.color = "#505050";
+                                const underline = e.target.querySelector('.course-underline');
+                                if (underline) underline.style.width = '0%';
+                              }}
+                            >
+                              {branch.label}
+                              <div className="course-underline" style={{
+                                position: 'absolute',
+                                bottom: '-2px',
+                                left: '0',
+                                width: '0%',
+                                height: '1px',
+                                backgroundColor: '#06b6d4',
+                                transition: 'width 0.3s ease'
+                              }}></div>
+                            </Link>
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+            )}
+          </div>
+
+        </nav>
+      </header>
+
+      {/* Side Menu Bar (Home Theme Drawer) */}
+      <SideMenuBar
+        isOpen={sideMenuOpen}
+        onClose={() => setSideMenuOpen(false)}
+      />
+
+    </>
+  );
+};
+
+export default Header;

@@ -143,7 +143,10 @@ function carryOverJsonLd(document, existingHtml) {
 }
 
 function outFile(route) {
-  return route === '/' ? path.join(BUILD_DIR, 'index.html') : path.join(BUILD_DIR, route.slice(1), 'index.html');
+  // The homepage goes to index-home.html, NOT index.html. index.html stays the plain app
+  // shell, because hosting rewrites send unknown URLs to it: if it held the homepage,
+  // every such URL would get the homepage's title, description and canonical.
+  return route === '/' ? path.join(BUILD_DIR, 'index-home.html') : path.join(BUILD_DIR, route.slice(1), 'index.html');
 }
 
 function renderRoute(route) {

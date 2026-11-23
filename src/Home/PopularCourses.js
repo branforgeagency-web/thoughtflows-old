@@ -15,7 +15,7 @@ const slidesContent = [
       desc: 'Specialty training in coding surgical procedures across body systems with real chart practice.' },
     { image: cic, text: 'Certified Inpatient Coder', chip: 'CIC', link: '/cic',
       desc: "AAPC's inpatient facility credential — ICD-10-CM/PCS coding and DRG assignment." },
-    { image: anasthesia, text: 'Anesthesia Department', chip: 'AD', link: '/Anesthesia',
+    { image: anasthesia, text: 'Anesthesia Department', chip: 'AD', link: '/anesesthesia',
       desc: 'Code anesthesia services accurately — base units, time, modifiers and physical status.' },
     { image: radio, text: 'Radiology Department', chip: 'RD', link: '/radiology',
       desc: 'Diagnostic and interventional radiology coding with hands-on case practice.' },
@@ -56,8 +56,9 @@ const PopularCourses = () => {
                                     <h3 className="tf-pc-title">{slide.text}</h3>
                                     <p className="tf-pc-desc">{slide.desc}</p>
                                     <div className="tf-pc-foot">
-                                        <Link to={slide.link} className="tf-pc-more">Read More</Link>
+                                        <Link to={slide.link} className="tf-pc-more">Read More<span className="tf-sr-only"> about the {slide.text} course</span></Link>
                                         <Link to={slide.link} className="tf-pc-arrow" aria-label={`Open ${slide.text}`}>
+                                            <span className="tf-sr-only">{slide.text}</span>
                                             <svg className="tf-pc-arrow-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
                                                 <path d="M5 12h14M13 6l6 6-6 6" />
                                             </svg>
@@ -79,7 +80,7 @@ const PopularCourses = () => {
                 </div>
                 <div className="col-lg-4 text-center home-btn">
                     <Link className="button-animation" to="/contact">
-                        Explore
+                        Explore<span className="tf-sr-only"> all medical coding courses</span>
                     </Link>
                 </div>
             </div>

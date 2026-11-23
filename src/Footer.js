@@ -123,6 +123,15 @@ const Footer = () => {
                             <li className="mb-3">
                                 <Link to="/gallery" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Gallery</Link>
                             </li>
+                            <li className="mb-3">
+                                <Link to="/career" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Careers</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/vetri-108" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">VETRI 108</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/ai-medical-coding" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">AI Medical Coding</Link>
+                            </li>
 
                             <li className="mb-3">
                                 <Link to="/contact" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Contact</Link>
@@ -236,6 +245,22 @@ const Footer = () => {
 
 
 
+                        </ul>
+                        <p className="fs-5 fw-bold mt-4">BRANCHES</p>
+                        <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
+                        <ul className="list-unstyled">
+                            <li className="mb-3">
+                                <Link to="/coimbatore" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Coimbatore</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/kerala" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Kerala</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/hyderabad" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Hyderabad</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/maharashtra" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Maharashtra</Link>
+                            </li>
                         </ul>
                     </Col>
 

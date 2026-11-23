@@ -1,0 +1,371 @@
+import React, { useState } from 'react';
+import { Col, Container } from 'react-bootstrap';
+import { Link, useLocation } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Video, ArrowRight } from 'lucide-react';
+import ZoomSignupForm from './Zoom';
+import { getBranchInfoByPath, defaultBranchDetails, getRegionBranchesByPath } from './data/branchDetails';
+import { mediaUrl } from './config/media';
+const footerlogo = mediaUrl('images/image2.png');
+
+const Footer = () => {
+    const [showZoomPopup, setShowZoomPopup] = useState(false);
+    const location = useLocation();
+
+    const regionInfo = getRegionBranchesByPath(location.pathname);
+    const branch = getBranchInfoByPath(location.pathname);
+    const currentBranch = branch || defaultBranchDetails;
+
+    const showSmallFooter = location.pathname === '/' || location.pathname === '/home';
+
+    const handleRegisterClick = (e) => {
+        e.preventDefault();
+        setShowZoomPopup(true);
+    };
+
+    return (
+        <>
+            {/* Zoom Popup */}
+            {showZoomPopup && (
+                <div
+                    className="fixed inset-0 bg-black bg-opacity-50 z-[99999] flex items-center justify-center"
+                    onClick={() => setShowZoomPopup(false)}
+                >
+                    <div onClick={e => e.stopPropagation()}>
+                        <ZoomSignupForm onClose={() => setShowZoomPopup(false)} />
+                    </div>
+                </div>
+            )}
+
+            <div
+                className="footer-section"
+                style={{
+                    zIndex: 1,
+                    position: 'relative',
+                }}
+            >
+                {showSmallFooter && (
+                    <Container className="tfb-wrap">
+                        <motion.div
+                            className="tfb-cta"
+                            initial={{ opacity: 0, y: 40 }}
+                            whileInView={{ opacity: 1, y: 0 }}
+                            viewport={{ once: true, amount: 0.4 }}
+                            transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
+                        >
+                            <span className="tfb-glow tfb-glow-1" aria-hidden="true" />
+                            <span className="tfb-glow tfb-glow-2" aria-hidden="true" />
+                            <div className="tfb-dots" aria-hidden="true" />
+
+                            <div className="tfb-left">
+                                <span className="tfb-icon">
+                                    <Video size={22} strokeWidth={2} />
+                                </span>
+                                <div>
+                                    <span className="tfb-eyebrow">Live &middot; 100% Free</span>
+                                    <h2 className="tfb-heading">
+                                        Sign Up For a{' '}
+                                        <span className="tfb-heading-bold">
+                                            Free Trial Lesson by Zoom
+                                        </span>
+                                    </h2>
+                                    <p className="tfb-sub">
+                                        30 minutes, one-on-one with a trainer &mdash; no cost, no obligation.
+                                    </p>
+                                </div>
+                            </div>
+
+                            <motion.a
+                                href="/#register"
+                                role="button"
+                                className="tfb-btn"
+                                onClick={handleRegisterClick}
+                                style={{ cursor: 'pointer' }}
+                                whileHover={{ scale: 1.035 }}
+                                whileTap={{ scale: 0.97 }}
+                                transition={{ duration: 0.2 }}
+                            >
+                                Register Now
+                                <ArrowRight size={18} className="tfb-btn-arrow" />
+                            </motion.a>
+                        </motion.div>
+                    </Container>
+                )}
+
+                <Container className="justify-content-between mt-5 main-footer footer-card">
+                    <Col lg={3} className="text-left mb-4 mb-lg-0">
+                        <img src={footerlogo} alt="footer logo" className="footerlogo mb-3" />
+                        <p className="fw-light text-start">
+                            Enroll at Thoughtflows Medical Coding Academy for top-notch medical coding training.
+                            Our courses are designed to provide comprehensive education and practical experience,
+                            ensuring students become proficient and certified medical coders.
+                        </p>
+                    </Col>
+                    <Col lg={1} className="text-start mb-4 mb-lg-0">
+                        <p className="fs-5 fw-bold">LINKS</p>
+                        <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
+                        <ul className="list-unstyled">
+                            <li className="mb-3">
+                                <Link to="/" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Home</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/about" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">About us</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/blog" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Blog</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/ourteam" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Our team</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/placements" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Placements</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/gallery" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Gallery</Link>
+                            </li>
+
+                            <li className="mb-3">
+                                <Link to="/contact" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Contact</Link>
+                            </li>
+
+                        </ul>
+                    </Col>
+                    <Col lg={1} className="text-start mb-4 mb-lg-0">
+                        <p className="fs-5 fw-bold">AAPC</p>
+                        <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
+                        <ul className="list-unstyled">
+                            <li className="mb-3">
+                                <Link to="/cpc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CPC</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/cic" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CIC</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/cpma" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CPMA</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/coc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">COC</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/crc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CRC</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/cpb" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CPB</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/cedc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CEDC</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/cemc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CEMC</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/cdeo" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CDEO</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/cdei" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CDEI</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/cppm" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CPPM</Link>
+                            </li>
+
+                        </ul>
+                    </Col>
+
+                    <Col lg={1} className="text-start mb-4 mb-lg-0">
+                        <p className="fs-5 fw-bold">Speciality</p>
+                        <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
+                        <ul className="list-unstyled">
+                            <li className="mb-3">
+                                <Link to="/surgery" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Surgery</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/ed" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">ED</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/em" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">EM</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/radiology" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Radiology</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/anesesthesia" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">Anesthesia</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/ip-drg" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">IP DRG</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/hcc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">HCC</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/ivr" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">IVR</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/cdi" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CDI</Link>
+                            </li>
+                        </ul>
+                    </Col>
+                    <Col lg={1} className="text-start mb-4 mb-lg-0">
+                        <p className="fs-5 fw-bold">AHIMA</p>
+                        <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
+                        <ul className="list-unstyled">
+                            <li className="mb-3">
+                                <Link to="/ccs" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CCS</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/ccs-p" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CCS-P</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/rhia" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">RHIA</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/rhit" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">RHIT</Link>
+                            </li>
+
+                        </ul>
+                    </Col>
+                    <Col lg={1} className="text-start mb-4 mb-lg-0">
+                        <p className="fs-5 fw-bold">HIMAA</p>
+                        <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
+                        <ul className="list-unstyled">
+                            <li className="mb-3">
+                                <Link to="/ccc" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">CCC</Link>
+                            </li>
+                            <li className="mb-3">
+                                <Link to="/him" className="text-decoration-none text-light relative transition-all duration-300 hover:text-white hover:after:content-[''] hover:after:absolute hover:after:bottom-0 hover:after:left-0 hover:after:w-full hover:after:h-0.5 hover:after:bg-white hover:after:transition-all hover:after:duration-300">HIM</Link>
+                            </li>
+
+
+
+                        </ul>
+                    </Col>
+
+                    <Col lg={3} className="text-start mb-4 mb-lg-0">
+                        <p className="fs-5 fw-bold">{regionInfo ? regionInfo.displayName.toUpperCase() : (currentBranch.displayName || (branch ? `${branch.name} Branch` : 'Contact')).toUpperCase()}</p>
+                        <hr className="text-left" style={{ width: '60px', borderColor: '#FFFFFF' }} />
+
+                        {regionInfo ? (
+                            <div className="d-flex flex-column gap-3 mb-2">
+                                {regionInfo.branches.map((b, idx) => (
+                                    <div key={idx} className="mb-2">
+                                        <div className="d-flex align-items-center mb-1">
+                                            <i className="fas fa-map-marker-alt text-white me-2 flex-shrink-0"></i>
+                                            <span style={{ fontSize: '13px', fontWeight: '700', color: '#ffffff' }}>
+                                                {b.name}
+                                            </span>
+                                        </div>
+                                        <div style={{ fontSize: '12.5px', lineHeight: '1.45', opacity: 0.85, paddingLeft: '22px', marginBottom: '4px' }}>
+                                            {b.address}
+                                        </div>
+                                        <div className="d-flex flex-wrap gap-3 align-items-center" style={{ fontSize: '13px', paddingLeft: '22px' }}>
+                                            {b.phone && (
+                                                <div className="d-flex align-items-center">
+                                                    <i className="fas fa-phone text-white me-1.5 flex-shrink-0" style={{ fontSize: '11px' }}></i>
+                                                    <a
+                                                        href={`tel:${b.phoneClean || (b.phone ? b.phone.split(/[/,&]/)[0].replace(/[^0-9+]/g, '') : '')}`}
+                                                        style={{ textDecoration: 'none', color: 'white', fontSize: '13px' }}
+                                                    >
+                                                        {b.phone}
+                                                    </a>
+                                                </div>
+                                            )}
+                                            {b.email && (
+                                                <div className="d-flex align-items-center">
+                                                    <i className="fas fa-envelope text-white me-1.5 flex-shrink-0" style={{ fontSize: '11px' }}></i>
+                                                    <a
+                                                        href={`mailto:${b.email}`}
+                                                        style={{ textDecoration: 'none', color: 'white', fontSize: '13px' }}
+                                                    >
+                                                        {b.email}
+                                                    </a>
+                                                </div>
+                                            )}
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        ) : (
+                            <>
+                                {currentBranch.address && (
+                                    <div className="d-flex align-items-start mb-2">
+                                        <i className="fas fa-map-marker-alt text-white me-2 mt-1 flex-shrink-0"></i>
+                                        <span style={{ fontSize: '13px', lineHeight: '1.45' }}>
+                                            {currentBranch.address}
+                                        </span>
+                                    </div>
+                                )}
+                                {currentBranch.phone && (
+                                    <div className="d-flex align-items-center mb-2">
+                                        <i className="fas fa-phone text-white me-2 flex-shrink-0"></i>
+                                        <a
+                                            href={`tel:${currentBranch.phoneClean || (currentBranch.phone ? currentBranch.phone.split(/[/,&]/)[0].replace(/[^0-9+]/g, '') : '')}`}
+                                            style={{ textDecoration: 'none', color: 'white', fontSize: '14px' }}
+                                        >
+                                            {currentBranch.phone}
+                                        </a>
+                                    </div>
+                                )}
+                                {currentBranch.email && (
+                                    <div className="d-flex align-items-center mb-2">
+                                        <i className="fas fa-envelope text-white me-2 flex-shrink-0"></i>
+                                        <a
+                                            href={`mailto:${currentBranch.email}`}
+                                            style={{ textDecoration: 'none', color: 'white', fontSize: '14px' }}
+                                        >
+                                            {currentBranch.email}
+                                        </a>
+                                    </div>
+                                )}
+                                {!currentBranch.address && !currentBranch.phone && !currentBranch.email && (
+                                    <p className="text-light fst-italic mb-3" style={{ fontSize: '13px', opacity: 0.85 }}>
+                                        Branch contact details coming soon.
+                                    </p>
+                                )}
+                            </>
+                        )}
+                        <div className="d-flex gap-3 mt-4">
+                            {currentBranch.instagram && (
+                                <a
+                                    href={currentBranch.instagram}
+                                    aria-label={`${currentBranch.name || 'ThoughtFlows'} Instagram`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-light"
+                                >
+                                    <i className="fab fa-instagram fa-lg"></i>
+                                </a>
+                            )}
+                            {currentBranch.facebook && (
+                                <a
+                                    href={currentBranch.facebook}
+                                    aria-label={`${currentBranch.name || 'ThoughtFlows'} Facebook`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="text-light"
+                                >
+                                    <i className="fab fa-facebook fa-lg"></i>
+                                </a>
+                            )}
+                            <a href="https://linkedin.com/company/thoughtflows-medical-coding-academy" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer" className="text-light">
+                                <i className="fab fa-linkedin fa-lg"></i>
+                            </a>
+                            <a href="https://youtube.com/@thoughtflowsmedicalcodinga6330" aria-label="YouTube" target="_blank" rel="noopener noreferrer" className="text-light">
+                                <i className="fab fa-youtube fa-lg"></i>
+                            </a>
+                        </div>
+                    </Col>
+                    <div className="footer-watermark" aria-hidden="true">
+                        <span>ThoughtFlows</span>
+                    </div>
+                </Container>
+            </div>
+
+            <div className="footer-bottom-bar">
+                <p className="mb-0">
+                    &copy; 2026 Thoughtflows. All rights reserved.
+                </p>
+            </div>
+        </>
+    );
+};
+
+export default Footer;
