@@ -137,7 +137,7 @@ function BlogRef1() {
       id: "medical-coding-course-in-tamilnadu",
     },
     {
-      date: "November 24, 2026",
+      date: "October 29, 2026",
       title: "AAPC CEUs: Requirements, Free Options & Renewal Guide",
       Comments: "0",
       info: "Understand AAPC CEU requirements, explore free and paid learning options, learn how to submit CEUs through the AAPC Tracker, and maintain your credentials.",

@@ -22,6 +22,7 @@ const EXTRA_ROUTES = [
   '/fy-2027-icd-10-cm-updates',
   '/best-medical-coding-course-in-india',
   '/blog/best-medical-coding-course-in-india-fees-duration',
+  '/aapc-ceus',
 ];
 // Never prerender these
 const SKIP_ROUTES = new Set(['/admin']);
