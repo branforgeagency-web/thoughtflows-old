@@ -1026,6 +1026,18 @@
     "condition": null
   },
   {
+    "source": "/aapc-ceus",
+    "target": "/blog/aapc-ceus",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/aapc-ceus/",
+    "target": "/blog/aapc-ceus",
+    "status": "301",
+    "condition": null
+  },
+  {
     "source": "/placements/2024",
     "target": "/placements/2024/index.html",
     "status": "200",
@@ -1226,6 +1238,18 @@
   {
     "source": "/blog/best-medical-coding-course-in-india-fees-duration/",
     "target": "/blog/best-medical-coding-course-in-india-fees-duration/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/aapc-ceus",
+    "target": "/blog/aapc-ceus/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/aapc-ceus/",
+    "target": "/blog/aapc-ceus/index.html",
     "status": "200",
     "condition": null
   },
