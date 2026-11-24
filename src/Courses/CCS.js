@@ -12,7 +12,7 @@ const CCS = () => {
     }, [])
     return (
         <>
-            <Meta title="Certified Coding Specialist (CCS) Course Training | ThoughtFlows" description="Certified Coding Specialist (CCS) training at ThoughtFlows with expert guidance, real coding practice, exam preparation, and career support." canonical="https://www.thoughtflows.in/ccs" />
+            <Meta title="CCS Certification Course | Online & Offline | ThoughtFlows" description="Become a Certified Coding Specialist (CCS) with an AI-integrated medical coding curriculum. Online & offline at ThoughtFlows. Enroll today." canonical="https://www.thoughtflows.in/ccs" />
             <CCSBanner />
             <WhatisCCS />
             <CCSObjective />

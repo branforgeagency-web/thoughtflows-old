@@ -5,6 +5,7 @@ import RhitBanner from './RHIT folder/RhitBanner';
 import RhitOutline from './RHIT folder/RhitOutline';
 // import WhatisIpDrug from './IPDrug/WhatisIpDrug';
 import WhatisRHIT from './RHIT folder/WhatisRHIT';
+import WhyChooseRHIT from './RHIT folder/WhyChooseRHIT';
 import AboutRhit from './RHIT folder/AboutRhit';
 import RHITWork from './RHIT folder/RHITWork';
 import RHITBenefits from './RHIT folder/RHITBenefits';
@@ -20,9 +21,10 @@ const RHIT = () => {
     }, [])
     return (
         <>
-            <Meta title="RHIT Course Training for Health Information Careers" description="Join RHIT course training at ThoughtFlows with expert instruction, health information technology practice, and career support." canonical="https://www.thoughtflows.in/rhit" />
+            <Meta title="RHIT Certification Course | Online & Offline | ThoughtFlows" description="Registered Health Information Technician (RHIT) training with an AI-integrated medical coding curriculum. Online & offline at ThoughtFlows." canonical="https://www.thoughtflows.in/rhit" />
             < RhitBanner />
             <WhatisRHIT />
+            <WhyChooseRHIT />
             <AboutRhit />
             <RHITWork />
             <RHITBenefits />

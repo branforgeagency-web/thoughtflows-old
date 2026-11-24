@@ -6,7 +6,7 @@ import EMObjectives from './EM folder/EMObjectives'
 import EMFeatures from './EM folder/EMFeatures'
 import WhatIsEvaluation from './EM folder/WhatIsEvaluation'
 import EmBook from './EM folder/EmBook'
-import WhyChoose from './ED folder/WhyChoose'
+import WhyChoose from './EM folder/WhyChooseEM'
 import EmEligible from './EM folder/EmEligible'
 import EmFAQ from './EM folder/EmFAQ'
 import EmDream from './EM folder/EmDream'
@@ -18,7 +18,7 @@ function EM() {
  },[])
   return (
     <>
-      <Meta title="Evaluation and Management (E&M) Coding Course | ThoughtFlows" description="Master E&M coding with ThoughtFlows Academy — expert training, real-case practice, exam guidance, and placement support for a successful medical coding career." canonical="https://www.thoughtflows.in/em" />
+      <Meta title="E/M Training Course | Online & Offline | ThoughtFlows" description="Evaluation and Management (E/M) training with an AI-integrated medical coding curriculum. Online & offline at ThoughtFlows. Enroll today." canonical="https://www.thoughtflows.in/em" />
 
       <EMBanner />
       <WhatIsEvaluation />

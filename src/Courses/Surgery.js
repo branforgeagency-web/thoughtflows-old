@@ -17,7 +17,7 @@ const Surgery = () => {
     }, [])
     return (
         <>
-            <Meta title="Certified Surgery Coder Course | ThoughtFlows Academy" description="Join the Certified Surgery Coder course at ThoughtFlows with expert-led training, surgical coding practice, and career-focused guidance." canonical="https://www.thoughtflows.in/surgery" />
+            <Meta title="CSC Certification Course | Online & Offline | ThoughtFlows" description="Become a Certified Surgery Coder (CSC) with an AI-integrated medical coding curriculum. Online & offline at ThoughtFlows. Enroll today." canonical="https://www.thoughtflows.in/surgery" />
             <SurgeryBanner />
             <WhatIsSurgery />
             <AboutSurgery />

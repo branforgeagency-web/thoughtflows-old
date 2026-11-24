@@ -1,78 +1,64 @@
 import React, { useState } from 'react';
 import { Row } from 'react-bootstrap';
-import { color } from 'framer-motion';
 import { mediaUrl } from '../../config/media';
 const excellenceimg = mediaUrl('images/Courses/excellence.png');
 const careeradv = mediaUrl('images/Courses/career-advancement.png');
 const handson = mediaUrl('images/Courses/hands-on-experience.png');
 
 const cardData = [
-    {
-        id: 1,
-        image: excellenceimg,
-        title: 'High Demand:',
-        description: '  Hospitals and inpatient facilities are actively seeking CIC-certified coders to manage accurate billing and ensure regulatory compliance, making it a highly sought-after skill.',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    },
-    {
-        id: 2,
-        image: careeradv,
-        title: 'Career Growth:',
-        description: 'Achieving CIC certification boosts your career, providing opportunities for promotions, higher salaries, and job advancement within the healthcare sector.',
-        className: 'col-lg-3 col-sm-12 active',
-        descriptionClass: 'text-light',
-        headingClass: 'text-white'
-    },
-    {
-        id: 3,
-        image: handson,
-        title: 'Job Security:',
-        description: '  Inpatient coding plays a crucial role in hospital revenue cycles, ensuring job stability as demand for skilled coders continues to rise',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    },
-
-
-    {
-        id: 4,
-        image: excellenceimg,
-        title: 'Professional Credibility',
-        description: 'CIC certification demonstrates your expertise and commitment to high standards in inpatient coding, increasing your professional credibility and trust with employers.',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    },
-
-
-    {
-        id: 5,
-        image: handson,
-        title: 'Industry Recognition',
-        description: 'The AAPC-awarded CIC certification is nationally recognized, enhancing your professional reputation across the healthcare industry.',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    },
-
-
-    // {
-    //     id: 6,
-    //     image: excellenceimg,
-    //     title: 'Placement Support',
-    //     description: 'Resume building, mock interviews, and job placement assistance.',
-    //     className: 'col-lg-3 col-sm-12',
-    //     headingClass: 'text-black'
-    // },
+  {
+    id: 1,
+    image: excellenceimg,
+    title: 'Official AAPC Licensed Academy',
+    description: 'Learn through an officially licensed AAPC academy with structured Certified Inpatient Coder (CIC) training, expert guidance and professional learning support.'
+  },
+  {
+    id: 2,
+    image: excellenceimg,
+    title: 'Expert CIC-Certified Trainers',
+    description: 'Learn from experienced trainers who guide you through inpatient medical coding concepts, guidelines and practical coding applications.'
+  },
+  {
+    id: 3,
+    image: careeradv,
+    title: 'Comprehensive CIC Training Curriculum',
+    description: 'Develop knowledge of inpatient coding, ICD-10-CM diagnosis coding, ICD-10-PCS procedure coding, medical terminology, anatomy and inpatient coding guidelines.'
+  },
+  {
+    id: 4,
+    image: handson,
+    title: 'Practical Inpatient Medical Coding Training',
+    description: 'Build practical coding skills through real-world medical records, inpatient coding scenarios, case studies and hands-on exercises.'
+  },
+  {
+    id: 5,
+    image: careeradv,
+    title: 'CIC Exam Preparation and Mock Tests',
+    description: 'Prepare for the AAPC CIC certification examination through chapter-wise assessments, practice questions, mock exams and performance feedback.'
+  },
+  {
+    id: 6,
+    image: careeradv,
+    title: 'Career Growth Opportunities',
+    description: 'CIC certification can strengthen your professional profile and open opportunities in inpatient medical coding, hospital coding and healthcare revenue cycle management.'
+  },
+  {
+    id: 7,
+    image: excellenceimg,
+    title: 'Medical Coding Placement Assistance',
+    description: 'Get career support through resume building, mock interviews and placement assistance to prepare for inpatient medical coding opportunities.'
+  }
 ];
 
-const WhyCPC = () => {
+const WhyCIC = () => {
   const [hoveredId, setHoveredId] = useState(null);
 
   return (
     <>
       <div className='px-4'>
-        <h2 className="text-center mt-3">Why Take CIC Training from Thoughtflows?</h2>
+        <h2 className="text-center mt-3">Why Choose ThoughtFlows for CIC Training?</h2>
       </div>
-      <Row className="why-cpc px-4" xs={1} md={3}>
+      <Row className="why-cpc px-4 flex flex-wrap justify-center" xs={1} md={3}>
         {cardData.map((card) => (
           <div
             key={card.id}
@@ -100,4 +86,4 @@ const WhyCPC = () => {
   );
 };
 
-export default WhyCPC;
+export default WhyCIC;

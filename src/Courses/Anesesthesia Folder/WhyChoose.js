@@ -1,89 +1,64 @@
 import React, { useState } from 'react';
 import { Row } from 'react-bootstrap';
-import { color } from 'framer-motion';
 import { mediaUrl } from '../../config/media';
 const excellenceimg = mediaUrl('images/Courses/excellence.png');
 const careeradv = mediaUrl('images/Courses/career-advancement.png');
 const handson = mediaUrl('images/Courses/hands-on-experience.png');
 
 const cardData = [
-    {
-        "id": 1,
-        "image": excellenceimg,
-        "title": "Expert Trainers",
-        "description": "Learn from AAPC-certified instructors with hands-on Anesesthesia coding experience.",
-        "className": "col-lg-3 col-sm-12",
-        "headingClass": "text-black"
-    },
-    {
-        "id": 2,
-        "image": careeradv,
-        "title": "Interactive Learning",
-        "description": "Live sessions enriched with case studies, PowerPoint presentations, and video tutorials.",
-        "className": "col-lg-3 col-sm-12 active",
-        "descriptionClass": "text-light",
-        "headingClass": "text-white"
-    },
-    {
-        "id": 3,
-        "image": handson,
-        "title": "Comprehensive Study Materials",
-        "description": "Access to detailed study guides and coding manuals.",
-        "className": "col-lg-3 col-sm-12",
-        "headingClass": "text-black"
-    },
-    {
-        "id": 4,
-        "image": handson,
-        "title": "Exclusive Content",
-        "description": "Specialized training on Anesesthesia time calculation and modifier usage.",
-        "className": "col-lg-3 col-sm-12",
-        "headingClass": "text-black"
-    },
-    {
-        "id": 5,
-        "image": handson,
-        "title": "Real-World Practice",
-        "description": "Hands-on coding practice with live Anesesthesia charts and case scenarios.",
-        "className": "col-lg-3 col-sm-12",
-        "headingClass": "text-black"
-    },
-    {
-        "id": 6,
-        "image": handson,
-        "title": "Mock Exams",
-        "description": "Chapter-wise assessments and full-length mock exams to ensure exam readiness.",
-        "className": "col-lg-3 col-sm-12",
-        "headingClass": "text-black"
-    },
-    {
-        "id": 7,
-        "image": handson,
-        "title": "Placement Support",
-        "description": "Resume building, mock interviews, and job placement assistance with top healthcare organizations.",
-        "className": "col-lg-3 col-sm-12",
-        "headingClass": "text-black"
-    },
-    {
-        "id": 8,
-        "image": handson,
-        "title": "Flexible Scheduling",
-        "description": "Classes available on weekdays and weekends for working professionals.",
-        "className": "col-lg-3 col-sm-12",
-        "headingClass": "text-black"
-    }
+  {
+    id: 1,
+    image: careeradv,
+    title: 'Growing Demand for Anesthesia Coders',
+    description: 'Hospitals, surgical centers and healthcare organizations require skilled anesthesia coders to accurately review anesthesia records, assign appropriate procedure codes and support accurate healthcare billing.'
+  },
+  {
+    id: 2,
+    image: careeradv,
+    title: 'Career Growth Opportunities',
+    description: 'Anesthesia coding training can strengthen your professional skills and help you explore career opportunities in hospitals, surgical centers, anesthesia departments and healthcare revenue cycle management.'
+  },
+  {
+    id: 3,
+    image: excellenceimg,
+    title: 'Expert Medical Coding Trainers',
+    description: 'Learn from experienced medical coding professionals who provide guidance on anesthesia coding concepts, CPT anesthesia codes, medical documentation and coding guidelines.'
+  },
+  {
+    id: 4,
+    image: careeradv,
+    title: 'Comprehensive Anesthesia Coding Curriculum',
+    description: 'Develop essential knowledge of anesthesia CPT codes, anesthesia procedures, physical status modifiers, qualifying circumstances, anesthesia time calculation, medical terminology and coding guidelines.'
+  },
+  {
+    id: 5,
+    image: handson,
+    title: 'Practical Anesthesia Coding Knowledge',
+    description: 'Build practical coding skills through anesthesia records, operative documentation, real-world coding scenarios, case studies and hands-on exercises.'
+  },
+  {
+    id: 6,
+    image: excellenceimg,
+    title: 'Official AAPC Licensed Academy – ThoughtFlows',
+    description: 'Learn anesthesia coding through structured medical coding training at ThoughtFlows, an officially licensed AAPC academy.'
+  },
+  {
+    id: 7,
+    image: excellenceimg,
+    title: 'Professional Recognition',
+    description: 'Develop specialized anesthesia coding knowledge and strengthen your professional profile for medical coding opportunities in hospitals, surgical centers and healthcare organizations.'
+  }
 ];
 
-
-const WhyCPC = () => {
+const WhyChooseAnesthesia = () => {
   const [hoveredId, setHoveredId] = useState(null);
 
   return (
     <>
       <div className='px-4'>
-        <h2 className="text-center mt-3">Why Take CAC Training from Thoughtflows?</h2>
+        <h2 className="text-center mt-3">Why Choose ThoughtFlows for Anesthesia Coding Training?</h2>
       </div>
-      <Row className="why-cpc px-4" xs={1} md={3}>
+      <Row className="why-cpc px-4 flex flex-wrap justify-center" xs={1} md={3}>
         {cardData.map((card) => (
           <div
             key={card.id}
@@ -111,4 +86,4 @@ const WhyCPC = () => {
   );
 };
 
-export default WhyCPC;
+export default WhyChooseAnesthesia;

@@ -1,79 +1,64 @@
 import React, { useState } from 'react';
 import { Row } from 'react-bootstrap';
-import { color } from 'framer-motion';
 import { mediaUrl } from '../../config/media';
 const excellenceimg = mediaUrl('images/Courses/excellence.png');
 const careeradv = mediaUrl('images/Courses/career-advancement.png');
 const handson = mediaUrl('images/Courses/hands-on-experience.png');
 
 const cardData = [
-    {
-        id: 1,
-        image: excellenceimg,
-        title: 'High Demand',
-        description: 'As healthcare regulations increase and audits become more stringent, the need for qualified auditors has risen significantly. CPMA professionals are essential for ensuring that healthcare facilities stay compliant.',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    },
-    {
-        id: 2,
-        image: careeradv,
-        title: 'Career Advancement:',
-        description: 'With a CPMA certification, you unlock opportunities for higher-paying roles and career progression in medical auditing and compliance.',
-        className: 'col-lg-3 col-sm-12 active',
-        descriptionClass: 'text-light',
-        headingClass: 'text-white'
-    },
-    {
-        id: 3,
-        image: handson,
-        title: 'Job Security',
-        description: ' The expanding complexity of healthcare billing and coding systems ensures job stability for certified auditors. Healthcare organizations are continually seeking professionals to manage risk and maximize revenue cycles.',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    },
-
-
-    {
-        id: 4,
-        image: handson,
-        title: 'Industry Recognition',
-        description: ' A CPMA certification is a recognized credential that signifies expertise in medical auditing, helping you gain trust and credibility in the industry.',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    },
-
-
-
-    // {
-    //     id: 5,
-    //     image: handson,
-    //     title: 'High Success Rate',
-    //     description: 'Our proven methods ensure high pass rates.',
-    //     className: 'col-lg-3 col-sm-12',
-    //     headingClass: 'text-black'
-    // },
-
-
-    // {
-    //     id: 6,
-    //     image: excellenceimg,
-    //     title: 'Placement Support',
-    //     description: 'Resume building, mock interviews, and job placement assistance.',
-    //     className: 'col-lg-3 col-sm-12',
-    //     headingClass: 'text-black'
-    // },
+  {
+    id: 1,
+    image: careeradv,
+    title: 'Growing Demand for Medical Auditors',
+    description: 'As healthcare regulations and auditing requirements become more complex, skilled medical auditors play an important role in ensuring coding accuracy and healthcare compliance.'
+  },
+  {
+    id: 2,
+    image: excellenceimg,
+    title: 'Expert CPMA-Certified Trainers',
+    description: 'Learn from experienced professionals who provide guidance on medical auditing concepts, coding accuracy, documentation requirements and compliance practices.'
+  },
+  {
+    id: 3,
+    image: careeradv,
+    title: 'Comprehensive CPMA Training Curriculum',
+    description: 'Develop essential knowledge of medical record auditing, Evaluation and Management (E/M) auditing, medical documentation, coding compliance and audit methodologies.'
+  },
+  {
+    id: 4,
+    image: excellenceimg,
+    title: 'Official AAPC Licensed Academy',
+    description: 'Train through an officially licensed AAPC academy with structured CPMA certification preparation and professional learning support.'
+  },
+  {
+    id: 5,
+    image: handson,
+    title: 'Practical Medical Auditing Experience',
+    description: 'Build practical knowledge through medical record reviews, auditing exercises, coding scenarios and real-world case studies.'
+  },
+  {
+    id: 6,
+    image: careeradv,
+    title: 'CPMA Exam Preparation and Mock Tests',
+    description: 'Prepare for the AAPC CPMA certification examination through chapter-wise assessments, practice questions, mock exams and performance feedback.'
+  },
+  {
+    id: 7,
+    image: excellenceimg,
+    title: 'Career Growth and Placement Assistance',
+    description: 'Explore opportunities in medical auditing, healthcare compliance and coding quality assurance with resume guidance, mock interviews and placement assistance.'
+  }
 ];
 
-const WhyCPC = () => {
+const WhyCPMA = () => {
   const [hoveredId, setHoveredId] = useState(null);
 
   return (
     <>
       <div className='px-4'>
-        <h2 className="text-center mt-3">Why Take CPMA Training from Thoughtflows?</h2>
+        <h2 className="text-center mt-3">Why Choose ThoughtFlows for CPMA Training?</h2>
       </div>
-      <Row className="why-cpc px-4" xs={1} md={3}>
+      <Row className="why-cpc px-4 flex flex-wrap justify-center" xs={1} md={3}>
         {cardData.map((card) => (
           <div
             key={card.id}
@@ -101,4 +86,4 @@ const WhyCPC = () => {
   );
 };
 
-export default WhyCPC;
+export default WhyCPMA;

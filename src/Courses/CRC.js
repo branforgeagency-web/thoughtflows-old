@@ -16,7 +16,7 @@ const CRC = () => {
   }, [])
   return (
     <>
-      <Meta title="CRC Classes | Certified Risk Adjustment Coder Training" description="Join CRC classes at ThoughtFlows for certified risk adjustment coder training with expert instruction, hands-on practice, and job support." canonical="https://www.thoughtflows.in/crc" />
+      <Meta title="CRC Certification Course | Online & Offline | ThoughtFlows" description="Become a Certified Risk Adjustment Coder (CRC) with an AI-integrated medical coding curriculum. Online & offline at ThoughtFlows. Enroll today." canonical="https://www.thoughtflows.in/crc" />
 
       <CRCBanner />
       <WhatCRC />

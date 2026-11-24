@@ -6,6 +6,7 @@ import CEDCObjective from './CEDC/CEDCObjective'
 import CEDCModule from './CEDC/CEDCModule'
 import WhatCEDC from './CEDC/WhatCEDC'
 import WHYCEDC from './CEDC/WHYCEDC'
+import WhyChooseCEDC from './CEDC/WhyChooseCEDC'
 import CEDCStudyMaterial from './CEDC/CEDCStudyMaterial'
 import CEDCFAQ from './CEDC/CEDCFAQ'
 import Meta from '../Meta';
@@ -16,10 +17,11 @@ const CEDC = () => {
   }, [])
   return (
     <>
-      <Meta title="CEDC Course Training | ThoughtFlows Medical Coding Academy" description="Enroll in CEDC course at ThoughtFlows with expert trainers, practical documentation training, exam guidance, and career support." canonical="https://www.thoughtflows.in/cedc" />
+      <Meta title="CEDC Certification Course | Online & Offline | ThoughtFlows" description="Become a Certified Emergency Department Coder (CEDC) with an AI-integrated medical coding curriculum. Online & offline at ThoughtFlows. Enroll today." canonical="https://www.thoughtflows.in/cedc" />
 
       <CEDCBanner />
       <WhatCEDC />
+      <WhyChooseCEDC />
       <WHYCEDC />
       <CEDCFeatures />
       <CEDCModule />

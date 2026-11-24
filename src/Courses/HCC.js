@@ -6,6 +6,7 @@ import HCCObjective from './HCC/HCCObjective'
 import HCCModule from './HCC/HCCModule'
 import WhatHCC from './HCC/WhatHCC'
 import WHYHCC from './HCC/WHYHCC'
+import WhyChooseHCC from './HCC/WhyChooseHCC'
 import HCCStudyMaterial from './HCC/HCCStudyMaterial'
 import HCCFAQ from './HCC/HCCFAQ'
 import Meta from '../Meta';
@@ -16,10 +17,11 @@ const HCC = () => {
   }, [])
   return (
     <>
-      <Meta title="Hierarchical Condition Category Course | ThoughtFlows" description="Join the Hierarchical Condition Category course at ThoughtFlows with expert training in HCC coding, risk adjustment models, and career support." canonical="https://www.thoughtflows.in/hcc" />
+      <Meta title="HCC Coding Course | Online & Offline | ThoughtFlows" description="Hierarchical Condition Category (HCC) training with an AI-integrated medical coding curriculum. Online & offline at ThoughtFlows. Enroll today." canonical="https://www.thoughtflows.in/hcc" />
 
       <HCCBanner />
       <WhatHCC />
+      <WhyChooseHCC />
       <WHYHCC />
       <HCCFeatures />
       <HCCModule />

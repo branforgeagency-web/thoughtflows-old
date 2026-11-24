@@ -6,6 +6,7 @@ import CPPMObjective from './CPPM/CPPMObjective'
 import CPPMModule from './CPPM/CPPMModule'
 import WhatCPPM from './CPPM/WhatCPPM'
 import WHYCPPM from './CPPM/WHYCPPM'
+import WhyChooseCPPM from './CPPM/WhyChooseCPPM'
 import CPPMStudyMaterial from './CPPM/CPPMStudyMaterial'
 import CPPMFAQ from './CPPM/CPPMFAQ'
 import Meta from '../Meta';
@@ -17,10 +18,11 @@ const CPPM = () => {
   }, [])
   return (
     <>
-      <Meta title="CPPM Course Training | ThoughtFlows Medical Coding Academy" description="Enroll in the CPPM course at ThoughtFlows to learn professional practice management with expert training, real-world scenarios, and career support." canonical="https://www.thoughtflows.in/cppm" />
+      <Meta title="CPPM Certification Course | Online & Offline | ThoughtFlows" description="Become a Certified Physician Practice Manager (CPPM) with an AI-integrated practice management curriculum. Online & offline at ThoughtFlows." canonical="https://www.thoughtflows.in/cppm" />
 
       <CPPMBanner />
       <WhatCPPM />
+      <WhyChooseCPPM />
       <WHYCPPM />
       <CPPMFeatures />
       <CPPMModule />
