@@ -749,6 +749,15 @@
       "referenced": true
     },
     {
+      "localPath": "src/images/Blog/aapc-ceus/aapc-ceu-tracker-walkthrough.mp4",
+      "relativePath": "images/Blog/aapc-ceus/aapc-ceu-tracker-walkthrough.mp4",
+      "s3Key": "media/images/Blog/aapc-ceus/aapc-ceu-tracker-walkthrough.mp4",
+      "url": "https://amplify-d16vhnu5amcbsu-ma-thoughtflowsstoragebucke-0tvgcluheq7z.s3.ap-south-1.amazonaws.com/media/images/Blog/aapc-ceus/aapc-ceu-tracker-walkthrough.mp4",
+      "sizeBytes": 11314490,
+      "contentType": "video/mp4",
+      "referenced": true
+    },
+    {
       "localPath": "src/images/Blog/medium-shot-smiley-woman-holding-clipboard.jpg",
       "relativePath": "images/Blog/medium-shot-smiley-woman-holding-clipboard.jpg",
       "s3Key": "media/images/Blog/medium-shot-smiley-woman-holding-clipboard.jpg",
