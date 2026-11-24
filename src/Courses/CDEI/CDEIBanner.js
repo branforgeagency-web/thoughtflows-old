@@ -1,6 +1,6 @@
 import React from 'react';
 import { mediaUrl } from '../../config/media';
-const cdeibanner = mediaUrl('images/AboutImg/about-workspace.jpg');
+const cdeibanner = mediaUrl('images/Courses/TEST.png');
 
 const CDEIBanner = () => {
     return (

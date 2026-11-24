@@ -1,6 +1,6 @@
 import React from 'react';
 import { mediaUrl } from '../../config/media';
-const surgerybanner = mediaUrl('images/AboutImg/about-workspace.jpg');
+const surgerybanner = mediaUrl('images/Courses/TEST.png');
 
 const SurgeryBanner = () => {
     return (

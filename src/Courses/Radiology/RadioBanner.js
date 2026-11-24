@@ -1,6 +1,6 @@
 import React from 'react';
 import { mediaUrl } from '../../config/media';
-const radiobanner = mediaUrl('images/AboutImg/about-workspace.jpg');
+const radiobanner = mediaUrl('images/Courses/TEST.png');
 
 const RadioBanner = () => {
     return (

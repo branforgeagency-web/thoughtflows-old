@@ -1,6 +1,6 @@
 import React from 'react';
 import { mediaUrl } from '../../config/media';
-const cicbanner = mediaUrl('images/AboutImg/about-workspace.jpg');
+const cicbanner = mediaUrl('images/Courses/TEST.png');
 
 const CICBanner = () => {
     return (
