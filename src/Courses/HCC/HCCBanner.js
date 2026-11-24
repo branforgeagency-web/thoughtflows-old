@@ -1,6 +1,6 @@
 import React from 'react';
 import { mediaUrl } from '../../config/media';
-const hccbanner = mediaUrl('images/Courses/TEST.png');
+const hccbanner = mediaUrl('images/AboutImg/about-workspace.jpg');
 
 const HCCBanner = () => {
     return (

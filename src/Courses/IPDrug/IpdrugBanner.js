@@ -1,6 +1,6 @@
 import React from 'react';
 import { mediaUrl } from '../../config/media';
-const ipdrgbanner = mediaUrl('images/Courses/TEST.png');
+const ipdrgbanner = mediaUrl('images/AboutImg/about-workspace.jpg');
 
 const IpdrugBanner = () => {
     return (
