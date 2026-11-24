@@ -31,7 +31,7 @@ const AdvancedOfferPopup = () => {
     const handleNavigate = () => {
         setIsVisible(false);
         setDismissed(true);
-        navigate('/vetri-108');
+        navigate('/contact');
     };
 
     if (!isVisible) return null;

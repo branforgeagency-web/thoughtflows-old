@@ -211,7 +211,7 @@ ${formData.message || 'N/A'}`;
                                 </button>
 
                                 <div className="form-features">
-                                    <span>● 100% Free Training</span>
+                                    <span>● Free Demo Class</span>
                                     <span>● Placement Support</span>
                                     <span>● Limited Seats</span>
                                 </div>

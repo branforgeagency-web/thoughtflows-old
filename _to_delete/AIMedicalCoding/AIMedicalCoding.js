@@ -380,14 +380,14 @@ const AIMedicalCoding = () => {
           <div className="aimc-shead">
             <span className="aimc-kick">Training Locations</span>
             <h2>Where our training is rolling out</h2>
-            <p>The program launches in Coimbatore with more Tamil Nadu cities opening soon.</p>
+            <p>The program is rolling out across major Tamil Nadu cities.</p>
           </div>
           <div className="aimc-loc-grid">
-            {['Coimbatore','Chennai','Madurai','Trichy','Salem','Erode','Vellore','Dindigul','Tirunelveli','Thanjavur'].map(city => (
-              <a key={city} href={`/free-medical-coding-course-${city.toLowerCase()}/`} className="aimc-loc aimc-open">
+            {['Chennai','Madurai','Trichy','Salem','Erode','Vellore','Dindigul','Tirunelveli','Thanjavur'].map(city => (
+              <a key={city} href="#aimc-apply" className="aimc-loc aimc-open">
                 <span className="aimc-city">{city}</span>
                 <span className="aimc-st"><span className="aimc-d"></span>🟢 Admissions Open</span>
-                <span className="aimc-btn aimc-btn-cyan aimc-btn-sm aimc-open-cta">Free Course in {city} →</span>
+                <span className="aimc-btn aimc-btn-cyan aimc-btn-sm aimc-open-cta">Enquire for {city} →</span>
               </a>
             ))}
           </div>
