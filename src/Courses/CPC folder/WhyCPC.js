@@ -1,6 +1,5 @@
 import React, { useState } from 'react';
 import { Row } from 'react-bootstrap';
-import { color } from 'framer-motion';
 import { mediaUrl } from '../../config/media';
 const excellenceimg = mediaUrl('images/Courses/excellence.png');
 const careeradv = mediaUrl('images/Courses/career-advancement.png');
@@ -10,38 +9,44 @@ const cardData = [
   {
     id: 1,
     image: excellenceimg,
-    title: 'Expert Instructors',
-    description: 'Experienced trainers who are CPC-certified provide personalized mentoring.'
+    title: 'Official AAPC Licensed Academy',
+    description: 'Train with an officially licensed AAPC academy and prepare for the Certified Professional Coder (CPC) certification through structured training and expert guidance.'
   },
   {
     id: 2,
-    image: careeradv,
-    title: 'Comprehensive Curriculum',
-    description: 'Covers all aspects of the CPC exam — from medical terminology to compliance and ethics.'
+    image: excellenceimg,
+    title: 'Expert CPC-Certified Trainers',
+    description: 'Learn from experienced CPC-certified trainers who provide personalized mentoring and guidance throughout your medical coding training.'
   },
   {
     id: 3,
-    image: handson,
-    title: 'Flexible Learning Modes',
-    description: 'Online and offline options tailored to your schedule.'
+    image: careeradv,
+    title: 'Comprehensive CPC Training Curriculum',
+    description: 'Master essential CPC exam subjects, including medical terminology, anatomy, ICD-10-CM diagnosis coding, CPT procedure coding, HCPCS Level II and medical coding guidelines.'
   },
   {
     id: 4,
     image: handson,
-    title: 'Practical Learning',
-    description: 'Hands-on practice with real-world coding scenarios and case studies.'
+    title: 'Flexible Online and Offline CPC Classes',
+    description: 'Choose online or classroom-based CPC training with flexible weekday and weekend batches to suit your learning schedule.'
   },
   {
     id: 5,
     image: handson,
-    title: 'High Success Rate',
-    description: 'Our proven methods ensure high pass rates.'
+    title: 'Practical Medical Coding Training',
+    description: 'Develop hands-on coding skills through real-world medical records, coding scenarios, case studies and practical exercises.'
   },
   {
     id: 6,
+    image: careeradv,
+    title: 'CPC Exam Preparation and Mock Tests',
+    description: 'Prepare for the AAPC CPC examination with chapter-wise assessments, full-length mock exams, timed practice tests and performance feedback.'
+  },
+  {
+    id: 7,
     image: excellenceimg,
-    title: 'Placement Support',
-    description: 'Resume building, mock interviews, and job placement assistance.'
+    title: 'Medical Coding Placement Assistance',
+    description: 'Get career support through resume building, mock interviews and placement assistance to prepare for medical coding opportunities in healthcare organizations.'
   }
 ];
 
@@ -51,9 +56,9 @@ const WhyCPC = () => {
   return (
     <>
       <div className='px-4'>
-        <h2 className="text-center mt-3">Why Take CPC Training from Thoughtflows?</h2>
+        <h2 className="text-center mt-3">Why Choose ThoughtFlows for CPC Training?</h2>
       </div>
-      <Row className="why-cpc px-4" xs={1} md={3}>
+      <Row className="why-cpc px-4 flex flex-wrap justify-center" xs={1} md={3}>
         {cardData.map((card) => (
           <div
             key={card.id}

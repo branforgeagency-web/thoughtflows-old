@@ -5,6 +5,7 @@ import RhiaBanner from './RHIA folder/RhiaBanner';
 import RhiaOutline from './RHIA folder/RhiaOutline';
 import WhatisIpDrug from './IPDrug/WhatisIpDrug';
 import WhatisRHIA from './RHIA folder/WhatisRHIA';
+import WhyChooseRHIA from './RHIA folder/WhyChooseRHIA';
 import AboutRhia from './RHIA folder/AboutRhia';
 import RHIAWork from './RHIA folder/RHIAWork';
 import RHIABenefits from './RHIA folder/RHIABenefits';
@@ -21,9 +22,10 @@ const RHIA = () => {
     return (
         <>
 
-            <Meta title="RHIA Certification Classes for Health Information Careers" description="Enroll in RHIA certification classes at ThoughtFlows with expert instruction, health information management practice, and career support." canonical="https://www.thoughtflows.in/rhia" />
+            <Meta title="RHIA Certification Course | Online & Offline | ThoughtFlows" description="Registered Health Information Administrator (RHIA) training with an AI-integrated medical coding curriculum. Online & offline at ThoughtFlows." canonical="https://www.thoughtflows.in/rhia" />
             <RhiaBanner />
             <WhatisRHIA />
+            <WhyChooseRHIA />
             <AboutRhia />
             <RHIAWork />
             <RHIABenefits />

@@ -1,88 +1,64 @@
 import React, { useState } from 'react';
 import { Row } from 'react-bootstrap';
-import { color } from 'framer-motion';
 import { mediaUrl } from '../../config/media';
 const excellenceimg = mediaUrl('images/Courses/excellence.png');
 const careeradv = mediaUrl('images/Courses/career-advancement.png');
 const handson = mediaUrl('images/Courses/hands-on-experience.png');
 
 const cardData = [
-    {
-        id: 1,
-        image: excellenceimg,
-        title: 'High Demand',
-        description: 'Skilled surgery coders are needed in hospitals and outpatient surgery centers.',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    },
-    {
-        id: 2,
-        image: careeradv,
-        title: 'Better Pay',
-        description: 'Specialized coding skills lead to higher salaries.',
-        className: 'col-lg-3 col-sm-12 active',
-        descriptionClass: 'text-light',
-        headingClass: 'text-white'
-    },
-    {
-        id: 3,
-        image: handson,
-        title: 'In-Depth Learning',
-        description: 'Master CPT, ICD-10-CM, and HCPCS codes for surgical procedures.',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    },
-    {
-        id: 4,
-        image: handson,
-        title: 'Compliance Focus',
-        description: 'Ensure accurate coding and adherence to regulations (AAPC, CMS).',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    },
-    {
-        id: 5,
-        image: handson,
-        title: 'Analytical Skills',
-        description: 'Develop attention to detail by analyzing operative notes.',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    },
-    {
-        id: 6,
-        image: excellenceimg,
-        title: 'Career Flexibility',
-        description: 'Work in diverse settings or remotely.',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    },
-    {
-        id: 7,
-        image: excellenceimg,
-        title: 'Credibility',
-        description: 'Certification boosts your professional reputation.',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    },
-    {
-        id: 8,
-        image: excellenceimg,
-        title: 'Continuous Growth',
-        description: 'Opportunities to specialize in various surgical fields.',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    }
+  {
+    id: 1,
+    image: careeradv,
+    title: 'Growing Demand for Surgical Coders',
+    description: 'Hospitals, surgical centers and healthcare organizations require skilled surgical coders to accurately interpret operative reports, assign procedure codes and support appropriate healthcare reimbursement.'
+  },
+  {
+    id: 2,
+    image: careeradv,
+    title: 'Career Growth Opportunities',
+    description: 'CSC certification can strengthen your professional profile and open career opportunities in surgical coding, hospital coding, outpatient coding and healthcare revenue cycle management.'
+  },
+  {
+    id: 3,
+    image: excellenceimg,
+    title: 'Expert CSC-Certified Trainers',
+    description: 'Learn from experienced professionals who provide guidance on surgical coding concepts, operative report interpretation, CPT coding guidelines, modifiers and medical documentation.'
+  },
+  {
+    id: 4,
+    image: careeradv,
+    title: 'Comprehensive CSC Training Curriculum',
+    description: 'Develop essential knowledge of surgical procedure coding, CPT surgical codes, anatomy, medical terminology, coding guidelines, surgical modifiers and documentation requirements.'
+  },
+  {
+    id: 5,
+    image: handson,
+    title: 'Practical Surgical Coding Knowledge',
+    description: 'Build practical skills through operative report reviews, real-world surgical coding scenarios, case studies and hands-on coding exercises.'
+  },
+  {
+    id: 6,
+    image: excellenceimg,
+    title: 'Official AAPC Licensed Academy – ThoughtFlows',
+    description: 'Prepare for the Certified Surgery Coder (CSC) certification through structured training at ThoughtFlows, an officially licensed AAPC academy.'
+  },
+  {
+    id: 7,
+    image: excellenceimg,
+    title: 'Professional Recognition',
+    description: 'Demonstrate your expertise in surgical procedure coding through the AAPC CSC credential, strengthening your professional credibility in the healthcare industry.'
+  }
 ];
 
-const WhyCPC = () => {
+const WhyTakeSurgery = () => {
   const [hoveredId, setHoveredId] = useState(null);
 
   return (
     <>
       <div className='px-4'>
-        <h2 className="text-center mt-3">Why Take CSC Training from Thoughtflows?</h2>
+        <h2 className="text-center mt-3">Why Choose ThoughtFlows for CSC Training?</h2>
       </div>
-      <Row className="why-cpc px-4" xs={1} md={3}>
+      <Row className="why-cpc px-4 flex flex-wrap justify-center" xs={1} md={3}>
         {cardData.map((card) => (
           <div
             key={card.id}
@@ -110,4 +86,4 @@ const WhyCPC = () => {
   );
 };
 
-export default WhyCPC;
+export default WhyTakeSurgery;

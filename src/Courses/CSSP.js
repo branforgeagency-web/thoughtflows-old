@@ -7,6 +7,7 @@ import CSSFeatures from './CCSP/CSSFeatures'
 import WhatIsEvaluation from './CCSP/WhatIsEvaluation'
 import CSSBook from './CCSP/CSSBook'
 import WhyChoose from './CCSP/WhyChoose'
+import WhyChooseCCSP from './CCSP/WhyChooseCCSP'
 import CSSEligible from './CCSP/CSSEligible'
 import CSSFAQ from './CCSP/CSSFAQ'
 import CSSDream from './CCSP/CSSDream'
@@ -25,7 +26,7 @@ function CSS() {
   }, [])
   return (
     <>
-      <Meta title="Certified Coding Specialist Physician Course | ThoughtFlows" description="Join the Certified Coding Specialist Physician course at ThoughtFlows with expert training, practical coding practice, and certification guidance." canonical="https://www.thoughtflows.in/ccs-p" />
+      <Meta title="CCSP Certification Course | Online & Offline | ThoughtFlows" description="Become a Certified Coding Specialist Physician (CCSP) with an AI-integrated medical coding curriculum. Online & offline at ThoughtFlows. Enroll today." canonical="https://www.thoughtflows.in/ccs-p" />
 
       <CSSBanner />
       <WhatIsEvaluation />
@@ -39,6 +40,7 @@ function CSS() {
       <CSSTypes />
       {/* <CSSFeatures /> */}
       {/* <WhyChoose /> */}
+      <WhyChooseCCSP />
       <CSSObjectives />
       {/* <CSSDream /> */}
       <CSSWho />

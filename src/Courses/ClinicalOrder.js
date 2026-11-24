@@ -25,7 +25,7 @@ function CO() {
   }, [])
   return (
     <>
-      <Meta title="Certified Cardiology Coder Training Course" description="Enroll in the Certified Cardiology Coder training course at ThoughtFlows with expert instruction, cardiology coding practice, and career support." canonical="https://www.thoughtflows.in/ccc" />
+      <Meta title="CCC Certification Course | Online & Offline | ThoughtFlows" description="Become a Certified Cardiology Coder (CCC) with an AI-integrated medical coding curriculum. Online & offline at ThoughtFlows. Enroll today." canonical="https://www.thoughtflows.in/ccc" />
 
       <COBanner />
       <WhatIsEvaluation />

@@ -1,88 +1,58 @@
 import React, { useState } from 'react';
 import { Row } from 'react-bootstrap';
-import { color } from 'framer-motion';
 import { mediaUrl } from '../../config/media';
 const excellenceimg = mediaUrl('images/Courses/excellence.png');
 const careeradv = mediaUrl('images/Courses/career-advancement.png');
 const handson = mediaUrl('images/Courses/hands-on-experience.png');
 
 const cardData = [
-    {
-        id: 1,
-        image: excellenceimg,
-        title: 'High Demand',
-        description: 'CCS-certified coders are sought after in hospitals and healthcare facilities.',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    },
-    {
-        id: 2,
-        image: careeradv,
-        title: 'Career Opportunities',
-        description: 'Access roles like Inpatient Coder, Coding Auditor, and Health Information Specialist.',
-        className: 'col-lg-3 col-sm-12 active',
-        descriptionClass: 'text-light',
-        headingClass: 'text-white'
-    },
-    {
-        id: 3,
-        image: handson,
-        title: 'Higher Salary Potential',
-        description: 'Earn higher pay and qualify for promotions with certification.',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    },
-    {
-        id: 4,
-        image: excellenceimg,
-        title: 'Job Security',
-        description: 'Inpatient coding expertise ensures stable and reliable career paths.',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    },
-    {
-        id: 5,
-        image: handson,
-        title: 'Professional Credibility',
-        description: 'Nationwide recognition of your coding skills and expertise.',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    },
-    {
-        id: 6,
-        image: excellenceimg,
-        title: 'Master Inpatient & Outpatient Coding',
-        description: 'Proficiency in coding diagnoses and procedures accurately.',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    },
-    {
-        id: 7,
-        image: handson,
-        title: 'Career Growth',
-        description: 'Opportunities to advance to leadership roles like Coding Supervisor or Auditor.',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    },
-    {
-        id: 8,
-        image: excellenceimg,
-        title: 'Contribute to Healthcare Quality',
-        description: 'Ensure accurate billing and compliance to support patient care.',
-        className: 'col-lg-3 col-sm-12',
-        headingClass: 'text-black'
-    }
+  {
+    id: 1,
+    image: excellenceimg,
+    title: 'Official AAPC-Licensed Education Provider',
+    description: 'Learn through ThoughtFlows, an officially listed AAPC-Licensed Education Provider in India, with structured medical coding training and professional guidance.'
+  },
+  {
+    id: 2,
+    image: careeradv,
+    title: 'Growing Demand for CCS-Certified Coders',
+    description: 'Hospitals, healthcare organizations, and medical billing companies seek skilled CCS-certified professionals to manage accurate inpatient and outpatient medical coding.'
+  },
+  {
+    id: 3,
+    image: careeradv,
+    title: 'Career Growth Opportunities',
+    description: 'CCS certification can strengthen your professional qualifications and help you explore opportunities in hospital coding, medical records management, and healthcare revenue cycle management.'
+  },
+  {
+    id: 4,
+    image: handson,
+    title: 'Comprehensive Inpatient & Outpatient Coding Knowledge',
+    description: 'Develop expertise in ICD-10-CM diagnosis coding, ICD-10-PCS procedure coding, CPT coding, and complex medical coding guidelines.'
+  },
+  {
+    id: 5,
+    image: excellenceimg,
+    title: 'Professional Recognition',
+    description: 'The CCS credential demonstrates your expertise in medical coding and strengthens your professional credibility within the healthcare industry.'
+  },
+  {
+    id: 6,
+    image: handson,
+    title: 'Industry-Relevant Coding Skills',
+    description: 'Build practical knowledge of medical documentation, coding accuracy, compliance requirements, and healthcare reimbursement processes to prepare for professional coding roles.'
+  }
 ];
 
-const WhyCPC = () => {
+const CcsSpecialist = () => {
   const [hoveredId, setHoveredId] = useState(null);
 
   return (
     <>
       <div className='px-4'>
-        <h2 className="text-center mt-3">Why Take CCS Training from Thoughtflows?</h2>
+        <h2 className="text-center mt-3">Why Choose ThoughtFlows for CCS Training?</h2>
       </div>
-      <Row className="why-cpc px-4" xs={1} md={3}>
+      <Row className="why-cpc px-4 flex flex-wrap justify-center" xs={1} md={3}>
         {cardData.map((card) => (
           <div
             key={card.id}
@@ -110,4 +80,4 @@ const WhyCPC = () => {
   );
 };
 
-export default WhyCPC;
+export default CcsSpecialist;

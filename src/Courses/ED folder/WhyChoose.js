@@ -1,56 +1,64 @@
 import React, { useState } from 'react';
 import { Row } from 'react-bootstrap';
-import { color } from 'framer-motion';
 import { mediaUrl } from '../../config/media';
 const excellenceimg = mediaUrl('images/Courses/excellence.png');
 const careeradv = mediaUrl('images/Courses/career-advancement.png');
 const handson = mediaUrl('images/Courses/hands-on-experience.png');
 
 const cardData = [
-    {
-        "id": 1,
-        "image": excellenceimg,
-        "title": "Expert Trainers",
-        "description": "Learn from experienced, AAPC-certified instructors with real-world experience.",
-        "className": "col-lg-3 col-sm-12",
-        "headingClass": "text-black"
-    },
-    {
-        "id": 2,
-        "image": careeradv,
-        "title": "Interactive Learning",
-        "description": "Engage with live sessions, case studies, and video tutorials.",
-        "className": "col-lg-3 col-sm-12 active",
-        "descriptionClass": "text-light",
-        "headingClass": "text-white"
-    },
-    {
-        "id": 3,
-        "image": handson,
-        "title": "Flexible Scheduling",
-        "description": "Weekday and weekend batches to suit your availability.",
-        "className": "col-lg-3 col-sm-12",
-        "headingClass": "text-black"
-    },
-    {
-        "id": 4,
-        "image": handson,
-        "title": "Placement Support",
-        "description": "Get assistance with resume building, mock interviews, and job placement in top healthcare organizations.",
-        "className": "col-lg-3 col-sm-12",
-        "headingClass": "text-black"
-    }
+  {
+    id: 1,
+    image: careeradv,
+    title: 'Growing Demand for Emergency Department Coders',
+    description: 'Hospitals and emergency care facilities require skilled medical coders to accurately review emergency department records, assign appropriate diagnosis and procedure codes, and support accurate healthcare billing.'
+  },
+  {
+    id: 2,
+    image: careeradv,
+    title: 'Career Growth Opportunities',
+    description: 'Emergency department coding training can strengthen your professional skills and help you explore career opportunities in hospital coding, emergency department coding and healthcare revenue cycle management.'
+  },
+  {
+    id: 3,
+    image: excellenceimg,
+    title: 'Expert Medical Coding Trainers',
+    description: 'Learn from experienced medical coding professionals who provide guidance on emergency department coding, medical documentation, CPT guidelines and ICD-10-CM diagnosis coding.'
+  },
+  {
+    id: 4,
+    image: careeradv,
+    title: 'Comprehensive ED Coding Curriculum',
+    description: 'Develop essential knowledge of emergency department evaluation and management (E/M) coding, CPT coding, ICD-10-CM diagnosis coding, medical terminology, modifiers and outpatient coding guidelines.'
+  },
+  {
+    id: 5,
+    image: handson,
+    title: 'Practical Emergency Department Coding Knowledge',
+    description: 'Build practical coding skills through emergency department medical records, real-world coding scenarios, case studies and hands-on exercises.'
+  },
+  {
+    id: 6,
+    image: excellenceimg,
+    title: 'Official AAPC Licensed Academy – ThoughtFlows',
+    description: 'Learn emergency department medical coding through structured training at ThoughtFlows, an officially licensed AAPC academy.'
+  },
+  {
+    id: 7,
+    image: excellenceimg,
+    title: 'Professional Recognition',
+    description: 'Develop specialized emergency department coding knowledge and strengthen your professional profile for medical coding opportunities in hospitals and healthcare organizations.'
+  }
 ];
 
-const WhyCPC = () => {
+const WhyChoose = () => {
   const [hoveredId, setHoveredId] = useState(null);
 
   return (
     <>
       <div className='px-4'>
-        <h2 className="text-center mt-3">Why Take CEDC Training from Thoughtflows?</h2>
+        <h2 className="text-center mt-3">Why Choose ThoughtFlows for Emergency Department (ED) Coding Training?</h2>
       </div>
-      <Row className="why-cpc px-4" xs={1} md={3}>
+      <Row className="why-cpc px-4 flex flex-wrap justify-center" xs={1} md={3}>
         {cardData.map((card) => (
           <div
             key={card.id}
@@ -78,4 +86,4 @@ const WhyCPC = () => {
   );
 };
 
-export default WhyCPC;
+export default WhyChoose;

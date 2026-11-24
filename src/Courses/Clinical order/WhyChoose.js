@@ -1,65 +1,58 @@
 import React, { useState } from 'react';
 import { Row } from 'react-bootstrap';
-import { color } from 'framer-motion';
 import { mediaUrl } from '../../config/media';
 const excellenceimg = mediaUrl('images/Courses/excellence.png');
 const careeradv = mediaUrl('images/Courses/career-advancement.png');
 const handson = mediaUrl('images/Courses/hands-on-experience.png');
 
 const cardData = [
-    {
-        "id": 1,
-        "image": excellenceimg,
-        "title": " Expert Instructors",
-        "description": "Our certified trainers have extensive industry experience and are skilled at making complex concepts easy to understand.",
-        "className": "col-lg-3 col-sm-12",
-        "headingClass": "text-black"
-    },
-    {
-        "id": 2,
-        "image": careeradv,
-        "title": "Interactive Training",
-        "description": "Live sessions, video tutorials, and interactive Q&A ensure an engaging learning experience.",
-        "className": "col-lg-3 col-sm-12 active",
-        "descriptionClass": "text-light",
-        "headingClass": "text-white"
-    },
-    {
-        "id": 3,
-        "image": handson,
-        "title": "Flexible Learning Options",
-        "description": "Choose between online or offline classes with options for weekdays and weekends to fit your schedule.",
-        "className": "col-lg-3 col-sm-12",
-        "headingClass": "text-black"
-    },
-    {
-        "id": 5,
-        "image": careeradv,
-        "title": "Comprehensive Curriculum",
-        "description": "Detailed modules covering ICD-10-CM, CPT, and HCPCS Level II, along with real-world case studies and hands-on practice.",
-        "className": "col-lg-3 col-sm-12 active",
-        "descriptionClass": "text-light",
-        "headingClass": "text-white"
-    },
-    {
-        "id": 4,
-        "image": handson,
-        "title": "Placement Assistance",
-        "description": "We offer resume building, mock interviews, and job placement support to help you land your dream job.",
-        "className": "col-lg-3 col-sm-12",
-        "headingClass": "text-black"
-    },
+  {
+    id: 1,
+    image: careeradv,
+    title: 'Growing Opportunities in Cardiology Coding',
+    description: 'Hospitals, cardiology departments, physician practices, and healthcare organizations require skilled professionals to manage accurate cardiovascular coding and documentation.'
+  },
+  {
+    id: 2,
+    image: handson,
+    title: 'Specialized Cardiovascular Coding Expertise',
+    description: 'Develop knowledge of cardiovascular anatomy, cardiac procedures, diagnostic testing, interventional cardiology, and relevant CPT and ICD-10-CM coding guidelines.'
+  },
+  {
+    id: 3,
+    image: excellenceimg,
+    title: 'Official AAPC-Licensed Academy – ThoughtFlows',
+    description: 'ThoughtFlows is an officially listed AAPC-Licensed Education Provider in India, offering specialized cardiology coding education with structured training and professional guidance.'
+  },
+  {
+    id: 4,
+    image: handson,
+    title: 'Practical Coding and Documentation Skills',
+    description: 'Learn to interpret cardiology medical records, assign appropriate procedure codes, understand modifiers, and apply coding guidelines accurately.'
+  },
+  {
+    id: 5,
+    image: careeradv,
+    title: 'Career Advancement in Healthcare',
+    description: 'Explore professional opportunities in cardiology coding, physician billing, hospital coding departments, and healthcare revenue cycle management.'
+  },
+  {
+    id: 6,
+    image: excellenceimg,
+    title: 'Professional Recognition',
+    description: 'Strengthen your professional profile with specialized cardiology coding knowledge and demonstrate your understanding of cardiovascular coding practices.'
+  }
 ];
 
-const WhyCPC = () => {
+const WhyChooseCCC = () => {
   const [hoveredId, setHoveredId] = useState(null);
 
   return (
     <>
       <div className='px-4'>
-        <h2 className="text-center mt-3">Why Take CPC Training from Thoughtflows?</h2>
+        <h2 className="text-center mt-3">Why Choose ThoughtFlows for CCC Training?</h2>
       </div>
-      <Row className="why-cpc px-4" xs={1} md={3}>
+      <Row className="why-cpc px-4 flex flex-wrap justify-center" xs={1} md={3}>
         {cardData.map((card) => (
           <div
             key={card.id}
@@ -87,4 +80,4 @@ const WhyCPC = () => {
   );
 };
 
-export default WhyCPC;
+export default WhyChooseCCC;

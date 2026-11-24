@@ -6,6 +6,7 @@ import CDEOObjective from './CDEO/CDEOObjective'
 import CDEOModule from './CDEO/CDEOModule'
 import WhatCDEO from './CDEO/WhatCDEO'
 import WHYCDEO from './CDEO/WHYCDEO'
+import WhyChooseCDEO from './CDEO/WhyChooseCDEO'
 import CDEOStudyMaterial from './CDEO/CDEOStudyMaterial'
 import CDEOFAQ from './CDEO/CDEOFAQ'
 import Meta from '../Meta';
@@ -16,9 +17,10 @@ const CDEO = () => {
   }, [])
   return (
     <>
-      <Meta title="CDEO Course Training | ThoughtFlows Medical Coding Academy" description="Enroll in the CDEO course at ThoughtFlows with expert trainers, practical coding training, exam guidance, and career support." canonical="https://www.thoughtflows.in/cdeo" />
+      <Meta title="CDEO Certification Course | Online & Offline | ThoughtFlows" description="Become a Certified Documentation Expert Outpatient (CDEO) with an AI-integrated clinical documentation curriculum. Online & offline at ThoughtFlows." canonical="https://www.thoughtflows.in/cdeo" />
       <CDEOBanner />
       <WhatCDEO />
+      <WhyChooseCDEO />
       <WHYCDEO />
       <CDEOFeatures />
       <CDEOModule />

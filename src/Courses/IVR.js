@@ -6,6 +6,7 @@ import IVRObjective from './IVR/IVRObjective'
 import IVRModule from './IVR/IVRModule'
 import WhatIVR from './IVR/WhatIVR'
 import WHYIVR from './IVR/WHYIVR'
+import WhyChooseIVR from './IVR/WhyChooseIVR'
 import IVRStudyMaterial from './IVR/IVRStudyMaterial'
 import IVRFAQ from './IVR/IVRFAQ'
 import Meta from '../Meta';
@@ -16,10 +17,11 @@ const IVR = () => {
   }, [])
   return (
     <>
-      <Meta title="Interventional Radiology Course | ThoughtFlows" description="Enroll in the Interventional Radiology course at ThoughtFlows with expert training, procedure-based coding practice, and career support." canonical="https://www.thoughtflows.in/ivr" />
+      <Meta title="Interventional Radiology Coding Course | ThoughtFlows" description="Interventional Radiology (IVR) coding training with an AI-integrated medical coding curriculum. Online & offline at ThoughtFlows. Enroll today." canonical="https://www.thoughtflows.in/ivr" />
 
       <IVRBanner />
       <WhatIVR />
+      <WhyChooseIVR />
       <WHYIVR />
       <IVRFeatures />
       <IVRModule />

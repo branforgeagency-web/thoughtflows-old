@@ -6,6 +6,7 @@ import CDEIObjective from './CDEI/CDEIObjective'
 import CDEIModule from './CDEI/CDEIModule'
 import WhatCDEI from './CDEI/WhatCDEI'
 import WHYCDEI from './CDEI/WHYCDEI'
+import WhyChooseCDEI from './CDEI/WhyChooseCDEI'
 import CDEIStudyMaterial from './CDEI/CDEIStudyMaterial'
 import CDEIFAQ from './CDEI/CDEIFAQ'
 import Meta from '../Meta';
@@ -16,10 +17,11 @@ const CDEI = () => {
   }, [])
   return (
     <>
-      <Meta title="CDEI Course Training | ThoughtFlows Medical Coding Academy" description="Join the CDEI course at ThoughtFlows to master inpatient documentation with expert guidance, practical learning, and career support." canonical="https://www.thoughtflows.in/cdei" />
+      <Meta title="CDEI Certification Course | Online & Offline | ThoughtFlows" description="Become a Certified Documentation Expert Inpatient (CDEI) with an AI-integrated clinical documentation curriculum. Online & offline at ThoughtFlows." canonical="https://www.thoughtflows.in/cdei" />
 
       <CDEIBanner />
       <WhatCDEI />
+      <WhyChooseCDEI />
       <WHYCDEI />
       <CDEIFeatures />
       <CDEIModule />
