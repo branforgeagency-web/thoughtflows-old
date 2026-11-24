@@ -77,8 +77,6 @@ import { PopupProvider } from './context/PopupContext';
 import FloatingIcons from './FloatingIcons';
 import Placements from './Placements/Placements';
 import YearlyPlacementList from './Placements/YearlyPlacementList';
-import Vetri108 from './Vetri108/Vetri108';
-import AIMedicalCoding from './AIMedicalCoding/AIMedicalCoding';
 import Gallery from './Gallery/Gallery';
 
 
@@ -88,9 +86,7 @@ function AppContent() {
     location.pathname.startsWith('/fy-2027') ||
     location.pathname.startsWith('/best-medical-coding-course-in-india') ||
     location.pathname.startsWith('/medical-coding-course-in-tamilnadu');
-  const hideHeaderFooter = location.pathname === '/vetri-108' ||
-    location.pathname === '/ai-medical-coding' ||
-    location.pathname === '/ai-powered-medical-coding';
+  const hideHeaderFooter = false;
 
   // Reset scroll on route change (SPA navigation keeps the previous scroll position otherwise)
   useEffect(() => {
@@ -219,9 +215,8 @@ function AppContent() {
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/placements" element={<Placements />} />
         <Route path="/placements/:year" element={<YearlyPlacementList />} />
-        <Route path="/vetri-108" element={<Vetri108 />} />
-        <Route path="/ai-medical-coding" element={<AIMedicalCoding />} />
-        <Route path="/ai-powered-medical-coding" element={<AIMedicalCoding />} />
+        <Route path="/ai-medical-coding" element={<Navigate to="/" replace />} />
+        <Route path="/ai-powered-medical-coding" element={<Navigate to="/" replace />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       </div>

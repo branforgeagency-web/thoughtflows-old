@@ -818,7 +818,7 @@ export default function Blog10() {
 
               {/* Bottom CTA Image Banner */}
               <div>
-                <Link to="/ai-medical-coding">
+                <Link to="/contact">
                   <img
                     src={futureCtaImg}
                     alt="Ready for the Future of Medical Coding? Build Your Coding Skills for an AI-Assisted Healthcare Industry. Start Learning with ThoughtFlows"

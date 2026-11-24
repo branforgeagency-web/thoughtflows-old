@@ -883,26 +883,146 @@
   },
   {
     "source": "/vetri-108",
-    "target": "/vetri-108/index.html",
-    "status": "200",
+    "target": "/",
+    "status": "301",
     "condition": null
   },
   {
     "source": "/vetri-108/",
-    "target": "/vetri-108/index.html",
-    "status": "200",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-chennai",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-chennai/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-coimbatore",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-coimbatore/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-dindigul",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-dindigul/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-erode",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-erode/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-madurai",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-madurai/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-salem",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-salem/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-thanjavur",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-thanjavur/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-tirunelveli",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-tirunelveli/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-trichy",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-trichy/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-vellore",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-vellore/",
+    "target": "/",
+    "status": "301",
     "condition": null
   },
   {
     "source": "/ai-medical-coding",
-    "target": "/ai-medical-coding/index.html",
-    "status": "200",
+    "target": "/",
+    "status": "301",
     "condition": null
   },
   {
     "source": "/ai-medical-coding/",
-    "target": "/ai-medical-coding/index.html",
-    "status": "200",
+    "target": "/",
+    "status": "301",
     "condition": null
   },
   {

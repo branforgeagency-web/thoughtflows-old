@@ -63,7 +63,7 @@ export default function Blog8() {
           className="w-full lg:w-1/2"
         >
           <p style={{ fontSize: "16px", fontWeight: "400" }}>
-            ThoughtFlows Medical Coding Academy proudly introduces <a href="https://thoughtflows-vetri108.web.app/" target="_blank" rel="noopener noreferrer" style={{ color: '#15aeb8', textDecoration: 'underline', fontWeight: 'bold' }}>VETRI 108</a>, a scholarship program created to support 1,008 aspiring Medical Coding professionals across Tamil Nadu.
+            ThoughtFlows Medical Coding Academy proudly introduces <strong>VETRI 108</strong>, a scholarship program created to support 1,008 aspiring Medical Coding professionals across Tamil Nadu.
           </p>
           <p style={{ fontSize: "16px", fontWeight: "400" }}>
             VETRI 108 offers Medical Coding training, scholarship opportunities, and placement support for graduates, freshers, and job seekers looking to build a future in the healthcare sector.
@@ -104,7 +104,7 @@ export default function Blog8() {
           className="w-full lg:w-1/2"
         >
           <p style={{ fontSize: "16px", fontWeight: "400" }}>
-            ThoughtFlows Medical Coding Academy proudly introduces <a href="https://thoughtflows-vetri108.web.app/" target="_blank" rel="noopener noreferrer" style={{ color: '#15aeb8', textDecoration: 'underline', fontWeight: 'bold' }}>VETRI 108</a>, a scholarship program created to support 1,008 aspiring Medical Coding professionals across Tamil Nadu.
+            ThoughtFlows Medical Coding Academy proudly introduces <strong>VETRI 108</strong>, a scholarship program created to support 1,008 aspiring Medical Coding professionals across Tamil Nadu.
           </p>
           <p style={{ fontSize: "16px", fontWeight: "400" }}>
             VETRI 108 offers Medical Coding training, scholarship opportunities, and placement support for graduates, freshers, and job seekers looking to build a future in the healthcare sector.
@@ -121,7 +121,7 @@ export default function Blog8() {
             </h2>
             <img src={postImage1} alt="VETRI 108 Medical Coding Scholarships" className="mx-auto block w-full rounded-lg mb-8 shadow-md" />
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
-              ThoughtFlows Medical Coding Academy proudly introduces <a href="https://thoughtflows-vetri108.web.app/" target="_blank" rel="noopener noreferrer" style={{ color: '#15aeb8', textDecoration: 'underline', fontWeight: 'bold' }}>VETRI 108</a>, a scholarship program created to support 1,008 aspiring Medical Coding professionals across Tamil Nadu.
+              ThoughtFlows Medical Coding Academy proudly introduces <strong>VETRI 108</strong>, a scholarship program created to support 1,008 aspiring Medical Coding professionals across Tamil Nadu.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
               VETRI 108 offers Medical Coding training, scholarship opportunities, and placement support for graduates, freshers, and job seekers looking to build a future in the healthcare sector. The program aims to help aspiring professionals gain industry-relevant skills, practical knowledge, and career guidance required for opportunities within the growing healthcare industry.
@@ -227,7 +227,7 @@ export default function Blog8() {
             </h2>
             <img src={postImage3} alt="Cities Covered" className="mx-auto block w-full rounded-lg mb-8 shadow-md" />
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">
-              The VETRI 108 program will be introduced across multiple cities in <a href="https://thoughtflows-vetri108.web.app/#locations" target="_blank" rel="noopener noreferrer" style={{ color: '#15aeb8', textDecoration: 'underline', fontWeight: 'bold' }}>Tamil Nadu</a>, including:
+              The VETRI 108 program will be introduced across multiple cities in <strong>Tamil Nadu</strong>, including:
             </p>
             <ul className="list-disc pl-6 mb-6">
               <li className="text-lg text-gray-700 leading-relaxed">Coimbatore</li>
@@ -276,7 +276,7 @@ export default function Blog8() {
               Graduates from any degree background, freshers, and job seekers interested in Medical Coding training and scholarship opportunities can apply and become part of this program.
             </p>
             <p className="text-lg text-gray-700 leading-relaxed text-justify font-bold">
-              Limited scholarship seats available. <a href="https://thoughtflows-vetri108.web.app/" target="_blank" rel="noopener noreferrer" style={{ color: '#15aeb8', textDecoration: 'underline' }}>Register now</a> and take the first step toward your healthcare career.
+              Limited scholarship seats available. Take the first step toward your healthcare career.
             </p>
           </section>
         </div>
