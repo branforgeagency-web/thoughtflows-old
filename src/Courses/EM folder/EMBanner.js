@@ -1,6 +1,6 @@
 import React from 'react';
 import { mediaUrl } from '../../config/media';
-const embanner = mediaUrl('images/AboutImg/about-workspace.jpg');
+const embanner = mediaUrl('images/Courses/TEST.png');
 
 const EMBanner = () => {
     return (

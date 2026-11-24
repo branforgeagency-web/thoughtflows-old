@@ -1,6 +1,6 @@
 import React from 'react';
 import { mediaUrl } from '../../config/media';
-const cpmabanner = mediaUrl('images/AboutImg/about-workspace.jpg');
+const cpmabanner = mediaUrl('images/Courses/TEST.png');
 
 const CPMABanner = () => {
     return (
