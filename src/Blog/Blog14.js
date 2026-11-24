@@ -30,12 +30,14 @@ import earnCeusLocal from "../images/Blog/aapc-ceus/how-to-earn-ceus.jpg";
 import afterCertLocal from "../images/Blog/aapc-ceus/what-happens-after-certification.jpg";
 import mistakesLocal from "../images/Blog/aapc-ceus/common-ceu-mistakes.jpg";
 import maintainLocal from "../images/Blog/aapc-ceus/maintaining-aapc-credentials.jpg";
+import videoLocal from "../images/Blog/aapc-ceus/aapc-ceu-tracker-walkthrough.mp4";
 
 const heroBanner = heroBannerLocal || mediaUrl("images/Blog/aapc-ceus/hero-banner.jpg");
 const earnCeusImg = earnCeusLocal || mediaUrl("images/Blog/aapc-ceus/how-to-earn-ceus.jpg");
 const afterCertImg = afterCertLocal || mediaUrl("images/Blog/aapc-ceus/what-happens-after-certification.jpg");
 const mistakesImg = mistakesLocal || mediaUrl("images/Blog/aapc-ceus/common-ceu-mistakes.jpg");
 const maintainImg = maintainLocal || mediaUrl("images/Blog/aapc-ceus/maintaining-aapc-credentials.jpg");
+const ceuTrackerVideo = videoLocal || mediaUrl("images/Blog/aapc-ceus/aapc-ceu-tracker-walkthrough.mp4");
 
 export default function Blog14() {
   const [openFaq, setOpenFaq] = useState(null);
@@ -963,18 +965,25 @@ export default function Blog14() {
               </div>
 
               {/* Video Walkthrough Box */}
-              <div className="p-5 bg-gradient-to-r from-slate-900 to-teal-900 text-white rounded-xl shadow-md mt-6">
+              <div className="p-5 md:p-6 bg-gradient-to-r from-slate-900 to-teal-900 text-white rounded-xl shadow-md mt-6">
                 <div className="flex items-center gap-3 mb-2">
                   <FaVideo className="text-teal-400 text-xl" />
-                  <h3 className="font-bold text-base">Watch: How to Use the AAPC CEU Tracker</h3>
+                  <h3 className="font-bold text-base md:text-lg">Watch: How to Use the AAPC CEU Tracker</h3>
                 </div>
-                <p className="text-xs text-gray-300 leading-relaxed mb-4">
+                <p className="text-xs md:text-sm text-gray-300 leading-relaxed mb-4">
                   The following walkthrough illustrates how to access educational resources, locate eligible CEU opportunities, view completion certificates, and manage CEU records directly through your AAPC member account:
                 </p>
-                <div className="bg-black/40 rounded-lg p-6 border border-teal-500/30 text-center">
-                  <FaLaptopMedical className="text-4xl text-teal-300 mx-auto mb-2" />
-                  <p className="text-sm font-semibold text-white">AAPC CEU Tracker Walkthrough Video & Tutorial</p>
-                  <p className="text-xs text-gray-400 mt-1">Available via your AAPC Member Dashboard under "My AAPC &gt; CEU Tracker &gt; Video Tutorials"</p>
+                <div className="rounded-xl overflow-hidden border border-teal-500/30 bg-black shadow-lg">
+                  <video
+                    controls
+                    preload="metadata"
+                    className="w-full h-auto max-h-[500px] mx-auto rounded-lg"
+                    style={{ backgroundColor: "#000" }}
+                  >
+                    <source src={ceuTrackerVideo} type="video/mp4" />
+                    <source src="/media/images/Blog/aapc-ceus/aapc-ceu-tracker-walkthrough.mp4" type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
                 </div>
               </div>
 
