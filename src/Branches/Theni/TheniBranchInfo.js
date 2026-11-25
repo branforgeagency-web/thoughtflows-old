@@ -62,9 +62,7 @@ const TheniBranchInfo = () => {
                   <div>
                     <h3>Address</h3>
                     <address style={{ margin: 0, color: "#334155", lineHeight: 1.7, fontStyle: "normal" }}>
-                      Nattathi Nadar Educational Institutions,<br />
-                      15A/22, Forest Road, Shivaji Nagar,<br />
-                      NRT Nagar, Theni, Tamil Nadu – 625531
+                      Nattathi Nadar Educational Institutions, 15A/22, Forest Road, Shivaji Nagar, NRT Nagar, Theni, Tamil Nadu - 625531
                     </address>
                   </div>
                 </div>
