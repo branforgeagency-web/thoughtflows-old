@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import Meta from '../Meta';
+import BranchVisitUs from './common/BranchVisitUs';
 
 import TrichyBanner from './Trichy/TrichyBanner'
 import TrichyAbout from './Trichy/TrichyAbout'
@@ -34,6 +35,7 @@ function TrichyBranches() {
       <TrichyOnline />
       <TrichyOnline2 />
       <TrichyGetinTouch />
+      <BranchVisitUs branchKey="trichy" />
       <TrichyTestimonial />
       {/* <TrichyExams />
       <TrichyDiscover />

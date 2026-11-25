@@ -10,6 +10,7 @@ import KochiStudents from "./Kochi/KochiStudents";
 import KochiOnline from "./Kochi/KochiOnline";
 import KochiOnline2 from "./Kochi/KochiOnline2";
 import Meta from '../Meta';
+import BranchVisitUs from './common/BranchVisitUs';
 import KochiTestimonial from './Kochi/KochiTestimonial';
 import KochiFAQ from './Kochi/KochiFAQ';
 
@@ -30,6 +31,7 @@ function Kochi() {
       <KochiOnline2 />
       <KochiOnline />
       {/* <KochiStudents /> */}
+      <BranchVisitUs branchKey="kochi" />
       <KochiFAQ />
       <KochiTestimonial />
     </>

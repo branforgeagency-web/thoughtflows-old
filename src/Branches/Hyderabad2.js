@@ -10,6 +10,7 @@ import HyderabadOnline2 from './Hyderabad2/Hyderabad2Online2'
 import HyderabadGetinTouch from './Hyderabad2/Hyderabad2GetinTouch'
 import HyderabadStudents from './Hyderabad2/Hyderabad2Students'
 import Meta from '../Meta';
+import BranchVisitUs from './common/BranchVisitUs';
 import Hyderabad2Testimonial from './Hyderabad2/Hyderabad2Testimonial'
 import Hyderabad2FAQ from './Hyderabad2/Hyderabad2FAQ'
 
@@ -30,6 +31,7 @@ function Hyderabad() {
       <HyderabadOnline2 />
       <HyderabadGetinTouch />
       {/* <HyderabadStudents /> */}
+      <BranchVisitUs branchKey="dilsukhnagar" />
       <Hyderabad2FAQ />
       <Hyderabad2Testimonial />
     </>

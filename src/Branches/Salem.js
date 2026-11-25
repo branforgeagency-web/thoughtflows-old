@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import Meta from '../Meta';
+import BranchVisitUs from './common/BranchVisitUs';
 
 import SalemBanner from './salem/SalemBanner'
 import SalemExams from './salem/SalemExams'
@@ -25,6 +26,7 @@ const SalemBranch = () => {
       <SalemSolidLayout />
       <SalemModern />
       <SalemGuiding />
+      <BranchVisitUs branchKey="salem" />
       <SalemTestimonial />
     </>
   )

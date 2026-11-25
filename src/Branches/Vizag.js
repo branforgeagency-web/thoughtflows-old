@@ -10,6 +10,7 @@ import VizagOnline2 from './Vizag/VizagOnline2'
 import VizagGetinTouch from './Vizag/VizagGetinTouch'
 import VizagStudents from './Vizag/VizagStudents'
 import Meta from '../Meta';
+import BranchVisitUs from './common/BranchVisitUs';
 
 function Vizag() {
   useEffect(() => {
@@ -27,6 +28,7 @@ function Vizag() {
       <VizagOnline />
       <VizagOnline2 />
       <VizagGetinTouch />
+      <BranchVisitUs branchKey="vizag" />
 
       <VizagStudents />
     </>

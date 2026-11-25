@@ -754,7 +754,7 @@ export default function Blog13() {
                   href="tel:+919384576852"
                   className="text-teal-600 font-bold hover:underline"
                 >
-                  +91 93845 76852
+                  093845 76852
                 </a>
                 .
               </p>
@@ -856,7 +856,7 @@ export default function Blog13() {
                   href="tel:+919384576852"
                   className="text-teal-600 font-bold hover:underline"
                 >
-                  +91 93845 76852
+                  093845 76852
                 </a>{" "}
                 to ask about fees, batches and demo-class availability. You can
                 also visit our{" "}
@@ -963,7 +963,7 @@ export default function Blog13() {
                   href="tel:+919384576852"
                   className="text-teal-600 font-bold hover:underline"
                 >
-                  +91 93845 76852
+                  093845 76852
                 </a>
                 .
               </p>
@@ -1574,7 +1574,7 @@ export default function Blog13() {
                   className="flex items-center gap-2 bg-teal-500 hover:bg-teal-400 text-white font-bold py-3 px-6 rounded-xl transition-colors"
                 >
                   <FaPhoneAlt />
-                  Call or WhatsApp: +91 93845 76852
+                  Call or WhatsApp: 093845 76852
                 </a>
                 <Link
                   to="/contact"
@@ -1626,7 +1626,7 @@ export default function Blog13() {
                 href="tel:+919384576852"
                 className="block bg-teal-400 hover:bg-teal-300 text-slate-900 font-bold text-sm py-2 px-4 rounded-lg transition-colors"
               >
-                +91 93845 76852
+                093845 76852
               </a>
               <Link
                 to="/contact"

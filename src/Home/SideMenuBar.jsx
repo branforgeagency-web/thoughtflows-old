@@ -504,7 +504,7 @@ const SideMenuBar = ({ isOpen, onClose }) => {
           <div className="side-menu-contact-info">
             <div>
               <span>Helpline: </span>
-              <a href="tel:+919159992424">+91 91599 92424</a> / <a href="tel:+919789330044">+91 97893 30044</a>
+              <a href="tel:+919159992424">091599 92424</a> / <a href="tel:+919789330044">097893 30044</a>
             </div>
             <div>
               <span>Email: </span>

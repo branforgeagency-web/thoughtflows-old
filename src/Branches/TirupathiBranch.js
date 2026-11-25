@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import Meta from '../Meta';
+import BranchVisitUs from './common/BranchVisitUs';
 import TirupathiBanner from './Tirupathi/TirupathiBanner'
 import TirupathiExams from './Tirupathi/TirupathiExams'
 import TirupathiContent from './Tirupathi/TirupathiContent'
@@ -24,6 +25,7 @@ const TirupathiBranch = () => {
       <TirupathiSolidLayout />
       <TirupathiModern />
       <TirupathiGuiding />
+      <BranchVisitUs branchKey="tirupati" />
       <TirupathiTestimonial />
     </>
   )

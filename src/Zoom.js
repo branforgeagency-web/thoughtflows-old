@@ -64,7 +64,7 @@ Course: ${values.course || 'Free Zoom Trial'}`;
 
     } catch (error) {
       console.error('Failed to send email:', error);
-      setSubmitError('Something went wrong. Please try again or call us on +91 93845 76852.');
+      setSubmitError('Something went wrong. Please try again or call us on 093845 76852.');
     } finally {
       setIsSubmitting(false)
     }

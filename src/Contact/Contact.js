@@ -306,7 +306,7 @@ ${formData.message || 'N/A'}`;
                   <div>
                     <h3 className="font-semibold text-lg text-gray-800">Phone</h3>
                     <a
-                      href={selectedLocation.phoneHref || `tel:${selectedLocation.phone.split(/[/,&]/)[0].replace(/[^0-9+]/g, '')}`}
+                      href={selectedLocation.phoneHref || `tel:${selectedLocation.phone.split(/[/,&]/)[0].replace(/[^0-9+]/g, '').replace(/^0/, '+91')}`}
                       className="text-gray-600 hover:text-[#0D8F9C] transition-colors"
                     >
                       {selectedLocation.phone}
@@ -432,7 +432,7 @@ ${formData.message || 'N/A'}`;
                   <div className="contact-raiou-info-text">
                     <h3 className="contact-raiou-info-label">Telephone</h3>
                     <a href="tel:+919384576852" className="contact-raiou-info-link">
-                      +91 93845 76852 / +91 95004 88825
+                      093845 76852 / 095004 88825
                     </a>
                   </div>
                 </div>
@@ -932,7 +932,7 @@ ${formData.message || 'N/A'}`;
                     <div className="contact-spotlight-contact-grid">
                       {activeBranch.phone && (
                         <a
-                          href={activeBranch.phoneHref || `tel:${activeBranch.phone.split(/[/,&]/)[0].replace(/[^0-9+]/g, '')}`}
+                          href={activeBranch.phoneHref || `tel:${activeBranch.phone.split(/[/,&]/)[0].replace(/[^0-9+]/g, '').replace(/^0/, '+91')}`}
                           className="contact-spotlight-contact-item"
                         >
                           <div className="contact-spotlight-icon-circle">

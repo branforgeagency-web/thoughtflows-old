@@ -14,7 +14,7 @@ const SaravanampattiBranchInfo = () => {
       <div className="saravanampatti-wrap">
         <Reveal className="saravanampatti-center">
           <span className="saravanampatti-eyebrow">Visit Us</span>
-          <h2>ThoughtFlows Medical Coding Academy – Saravanampatti Branch</h2>
+          <h2>Thoughtflows Medical Coding Academy</h2>
           <p>
             ThoughtFlows Medical Coding Academy in Saravanampatti provides a local option for learners who prefer
             classroom training, while online learning is also available.
@@ -40,7 +40,7 @@ const SaravanampattiBranchInfo = () => {
                 <div className="saravanampatti-icon"><Phone size={24} /></div>
                 <div>
                   <h3>Contact &amp; Admissions</h3>
-                  <p>Phone: +91 93845 76852</p>
+                  <p>Phone: 093845 76852</p>
                   <p>Email: thoughtflowsinfo@gmail.com</p>
                 </div>
               </div>

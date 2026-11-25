@@ -57,7 +57,7 @@ const CoimbatoreLanding = () => {
       profileText: "This branch mostly fills with two groups. Students from the arts and science colleges clustered along this belt — Hindusthan, SNS, Dr. NGP, KPR, Sri Krishna. And people already working in the IT and BPO offices nearby who want a healthcare-side career with fixed shifts. Evening and weekend batches run strongest here for that reason.",
       liveAround: "Saravanampatti, Kalapatti, Vilankurichi, Thudiyalur, Chinnavedampatti, Ganapathy, Keeranatham, Annur or Karamadai side.",
       address: "No-171/2A, 1st Promenade, Tower, Sathy Rd, Saravanampatti, Coimbatore, Tamil Nadu 641035",
-      phone: "+91 93845 76852",
+      phone: "093845 76852",
       path: "/medical-coding-institute-saravanampatti-coimbatore",
       mapUrl: "https://maps.google.com/?q=ThoughtFlows+Saravanampatti+Coimbatore",
       img: saravanampattiImg
@@ -69,7 +69,7 @@ const CoimbatoreLanding = () => {
       profileText: "Because it sits inside the city's biggest hospital belt, this centre sees the most nurses, lab technicians and pharmacy staff moving out of clinical shift work. Engineering and arts students from PSG, Kumaraguru and Sri Ramakrishna also enrol here. If you are currently on hospital duty and need a batch that fits around a roster, this is the branch to ask at.",
       liveAround: "Peelamedu, Hope College, Nava India, Singanallur, Uppilipalayam, Ramanathapuram, Ondipudur, Sulur or the airport road stretch.",
       address: "Door No.62 E/F , 1st Floor South Wing, Lalitha Towers Gandhi Street, Avinashi Rd, Coimbatore, Tamil Nadu 641004",
-      phone: "+91 93845 76852",
+      phone: "093845 76852",
       path: "/medical-coding-classes-hopes-coimbatore",
       mapUrl: "https://maps.google.com/?q=ThoughtFlows+Hopes+Coimbatore",
       img: hopesImg
@@ -81,7 +81,7 @@ const CoimbatoreLanding = () => {
       profileText: "Students commute to this centre from Pollachi, Mettupalayam, Tirupur, Udumalpet, Annur and Palladam. If you are travelling 40 kilometres or more, take a morning batch here and plan your return around the afternoon buses — our counsellors will help you pick the timing that works.",
       liveAround: "Gandhipuram, Cross Cut Road, RS Puram, Ukkadam, Town Hall, Saibaba Colony, Tatabad, Sivananda Colony — or if you are commuting in from a nearby town.",
       address: "jay enclave, 1084, 3rd St, Cross Cut Road, Gandhipuram, Coimbatore, Tamil Nadu 641012",
-      phone: "+91 93845 76852",
+      phone: "093845 76852",
       path: "/medical-coding-course-gandhipuram-coimbatore",
       mapUrl: "https://maps.google.com/?q=ThoughtFlows+Gandhipuram+Coimbatore",
       img: gandhipuramImg
@@ -279,7 +279,7 @@ const CoimbatoreLanding = () => {
           Free demo sessions run at all three Coimbatore branches — Saravanampatti, Hopes and Gandhipuram. Pick a branch, pick a day, and see the training for yourself.
         </p>
         <div className="cbe-cta-numbers">
-          Saravanampatti +91 93845 76852 · Hopes +91 93845 76852 · Gandhipuram +91 93845 76852 · WhatsApp +91 93845 76852
+          Saravanampatti 093845 76852 · Hopes 093845 76852 · Gandhipuram 093845 76852 · WhatsApp 093845 76852
         </div>
       </div>
       <div className="cbe-cta-actions">
@@ -337,7 +337,7 @@ const CoimbatoreLanding = () => {
                 Book a Free Demo Class <Icon name="arrow" />
               </button>
               <a href="tel:+919384576852" className="cbe-btn cbe-btn-navy-outline">
-                <Icon name="phone" /> +91 93845 76852
+                <Icon name="phone" /> 093845 76852
               </a>
             </div>
           </div>
@@ -581,7 +581,7 @@ const CoimbatoreLanding = () => {
 
                   <ul className="cbe-meta">
                     <li><Icon name="pin" /><span>{b.address}</span></li>
-                    <li><Icon name="phone" /><a href={`tel:${b.phone.replace(/\s/g, '')}`}>{b.phone}</a></li>
+                    <li><Icon name="phone" /><a href={`tel:${b.phone.replace(/\s/g, '').replace(/^0/, '+91')}`}>{b.phone}</a></li>
                   </ul>
 
                   <div className="cbe-branch-actions">
