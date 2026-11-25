@@ -29,9 +29,7 @@ const HopesBranchInfo = () => {
                 <div>
                   <h3>Address</h3>
                   <address style={{ margin: 0, color: "#334155", lineHeight: 1.7, fontStyle: "normal" }}>
-                    Door No.62 E/F , 1st Floor South Wing,<br />
-                    Lalitha Towers Gandhi Street, Avinashi Rd,<br />
-                    Coimbatore, Tamil Nadu 641004
+                    Door No.62 E/F , 1st Floor South Wing, Lalitha Towers Gandhi Street, Avinashi Rd, Coimbatore, Tamil Nadu 641004
                   </address>
                 </div>
               </div>

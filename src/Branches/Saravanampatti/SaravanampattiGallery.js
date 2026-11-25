@@ -101,10 +101,10 @@ const SaravanampattiGallery = () => {
   }, [activePhoto, showNext]);
 
   return (
-    <section className="svm-section svm-gallery-section" id="svm-campus-tour">
-      <div className="svm-wrap">
-        <Reveal className="svm-center">
-          <span className="svm-eyebrow">
+    <section className="saravanampatti-section svm-gallery-section" id="svm-campus-tour">
+      <div className="saravanampatti-wrap">
+        <Reveal className="saravanampatti-center">
+          <span className="saravanampatti-eyebrow">
             <Sparkles size={13} style={{ display: "inline", verticalAlign: "middle", marginRight: 5 }} />
             Flagship Campus Tour
           </span>

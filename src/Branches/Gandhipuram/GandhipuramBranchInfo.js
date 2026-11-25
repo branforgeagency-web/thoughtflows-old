@@ -29,9 +29,7 @@ const GandhipuramBranchInfo = () => {
                 <div>
                   <h3>Address</h3>
                   <address style={{ margin: 0, color: "#334155", lineHeight: 1.7, fontStyle: "normal" }}>
-                    jay enclave, 1084, 3rd St,<br />
-                    Cross Cut Road, Gandhipuram,<br />
-                    Coimbatore, Tamil Nadu 641012
+                    jay enclave, 1084, 3rd St, Cross Cut Road, Gandhipuram, Coimbatore, Tamil Nadu 641012
                   </address>
                 </div>
               </div>
