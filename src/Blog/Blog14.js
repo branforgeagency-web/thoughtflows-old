@@ -1296,7 +1296,7 @@ export default function Blog14() {
                 href="tel:+919384576852"
                 className="block bg-teal-400 hover:bg-teal-300 text-slate-900 font-bold text-sm py-2 px-4 rounded-lg transition-colors"
               >
-                +91 93845 76852
+                093845 76852
               </a>
               <Link
                 to="/contact"

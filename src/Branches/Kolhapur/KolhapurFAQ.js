@@ -54,7 +54,7 @@ const KolhapurFAQ = () => {
   const faqs = [
     {
       question: "Where is the ThoughtFlows Kolhapur center located?",
-      answer: "Our Kolhapur center is located at Genesis group of institutions - Near Gaibi Titta, Radhanagari Road, opposite to Mahadik Petrol Pump, Tal - Radhanagari, Dist - Kolhapur, PIN-416212. Contact our counselors at +91 83904 52121 / +91 72195 57734 to book an in-person campus visit or free demo session."
+      answer: "Our Kolhapur center is located at Genesis group of institutions - Near Gaibi Titta, Radhanagari Road, opposite to Mahadik Petrol Pump, Tal - Radhanagari, Dist - Kolhapur, PIN-416212. Contact our counselors at 083904 52121 / 072195 57734 to book an in-person campus visit or free demo session."
     },
     {
       question: "Who is eligible to join medical coding training in Kolhapur?",

@@ -13,6 +13,7 @@ import TrivandrumCard from './Trivandrum/TrivandrumCard'
 import TrivandrumCertifications from './Trivandrum/TrivandrumCertifications'
 import TrivandrumCompanies from './Trivandrum/TrivandrumCompanies'
 import Meta from '../Meta';
+import BranchVisitUs from './common/BranchVisitUs';
 import TrivandrumTestimonial from './Trivandrum/TrivandrumTestimonial'
 import TrivandrumFAQ from './Trivandrum/TrivandrumFAQ'
 
@@ -34,6 +35,7 @@ function Trivandrum() {
       <TiruvandrumStat />
       <TrivandrumOnline />
       <TrivandrumOnline2 />
+      <BranchVisitUs branchKey="trivandrum" />
       <TrivandrumFAQ />
       <TrivandrumTestimonial />
       {/* <TrivandrumStudent /> */}

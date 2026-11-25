@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react';
 import Meta from '../Meta';
+import BranchVisitUs from './common/BranchVisitUs';
 
 import KolhapurBanner from './Kolhapur/KolhapurBanner';
 import KolhapurAbout from './Kolhapur/KolhapurAbout';
@@ -33,6 +34,7 @@ function Kolhapur() {
       <KolhapurOnline />
       <KolhapurOnline2 />
       <KolhapurGetinTouch />
+      <BranchVisitUs branchKey="kolhapur" />
       <KolhapurFAQ />
       <KolhapurTestimonial />
     </>

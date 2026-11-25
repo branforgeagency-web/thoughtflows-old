@@ -73,9 +73,9 @@ const TheniBranchInfo = () => {
                   <div>
                     <h3>Contact &amp; Admissions</h3>
                     <p style={{ margin: 0, color: "#334155", lineHeight: 1.7 }}>
-                      <a href="tel:+917538843236" style={{ color: "inherit", textDecoration: "none" }}>+91 75388 43236</a>
+                      <a href="tel:+917538843236" style={{ color: "inherit", textDecoration: "none" }}>075388 43236</a>
                       {" & "}
-                      <a href="tel:+919384576852" style={{ color: "inherit", textDecoration: "none" }}>+91 93845 76852</a>
+                      <a href="tel:+919384576852" style={{ color: "inherit", textDecoration: "none" }}>093845 76852</a>
                     </p>
                     <p style={{ margin: 0, color: "#334155" }}>
                       <a href="mailto:thoughtflowsinfo@gmail.com" style={{ color: "inherit", textDecoration: "none" }}>thoughtflowsinfo@gmail.com</a>

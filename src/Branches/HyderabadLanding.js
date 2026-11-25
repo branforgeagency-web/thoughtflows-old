@@ -23,7 +23,7 @@ const HyderabadLanding = () => {
       tagline: "Trusted Medical Coding Academy Ameerpet",
       badge: "Metro Interchange Hub",
       address: "Level 6(5th Floor, Vasavi Mpm Grand, No: 606/A, Ameerpet X Road, Yella Reddy Guda, Hyderabad, Telangana 500073",
-      phone: "+91 87907 51742",
+      phone: "087907 51742",
       path: "/Trusted-Medical-Coding-Ameerpet",
       img: ameerpetImg,
       features: [
@@ -38,7 +38,7 @@ const HyderabadLanding = () => {
       tagline: "Professional Medical Coding Dilsukhnagar",
       badge: "South Hyderabad Metro Hub",
       address: "H.No:-16, Sai Towers, 11-477-/6/1/A 2nd floor, opp. pillar No:-1519, Indira Nagar, Dilsukhnagar, Hyderabad, Telangana 500060",
-      phone: "+91 90305 08844",
+      phone: "090305 08844",
       path: "/Professional-Medical-Coding-Dilsukhnagar",
       img: dilsukhnagarImg,
       features: [
@@ -235,7 +235,7 @@ const HyderabadLanding = () => {
                     <Link to={campus.path} className="hyd-explore-btn">
                       Explore Branch &rarr;
                     </Link>
-                    <a href={`tel:${campus.phone.replace(/\s+/g, '')}`} className="hyd-call-link">
+                    <a href={`tel:${campus.phone.replace(/\s+/g, '').replace(/^0/, '+91')}`} className="hyd-call-link">
                       📞 {campus.phone}
                     </a>
                   </div>

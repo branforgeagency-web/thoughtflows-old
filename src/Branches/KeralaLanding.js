@@ -22,7 +22,7 @@ const KeralaLanding = () => {
       tagline: "Medical Coding Academy in Kochi",
       badge: "Commercial Capital Hub",
       address: "4 th floor, Vee Vee Tower, road, near Bhima Jewels, NH Bye Pass, Edappally, Kochi, Ernakulam, Keralam 682024",
-      phone: "+91 90480 23242",
+      phone: "090480 23242",
       path: "/Medical-Coding-Academy-Kochi",
       img: kochiImg,
       features: [
@@ -37,7 +37,7 @@ const KeralaLanding = () => {
       tagline: "Advanced Medical Coding in Trivandrum",
       badge: "Capital City Hub",
       address: "167, 1st Floor, Karimpanal Arcade, opp. to Padmanabhaswamy Temple, Fort, East Fort, Pazhavangadi, Thiruvananthapuram, Keralam 695023",
-      phone: "+91 90480 23242",
+      phone: "090480 23242",
       path: "/Advanced-Medical-Coding-Tiruvandrum",
       img: trivandrumImg,
       features: [
@@ -273,7 +273,7 @@ const KeralaLanding = () => {
                     <Link to={campus.path} className="campus-explore-btn">
                       Explore Campus &rarr;
                     </Link>
-                    <a href={`tel:${campus.phone.replace(/\s+/g, '')}`} className="campus-contact-link">
+                    <a href={`tel:${campus.phone.replace(/\s+/g, '').replace(/^0/, '+91')}`} className="campus-contact-link">
                       📞 {campus.phone}
                     </a>
                   </div>

@@ -21,8 +21,8 @@ const MaharashtraLanding = () => {
       name: "Pune Campus",
       tagline: "Medical Coding Course in Pune",
       badge: "IT & Healthcare Hub",
-      address: "First Floor, India Land Building, Behind Grand High Street Mall Hinjewadi Phase 1, Hinjewadi, Pune 411057. Landmark - Opposite to Chroma Store Padmbhushan chowk Metro station",
-      phone: "+91 81213 45955 / +91 72195 57734",
+      address: "1st floor, Trios, Indialand Global Tech Park, Phase 1, Rajiv Gandhi Infotech Park, Hinjawadi, Maharashtra 411057",
+      phone: "072195 57734",
       path: "/medical-coding-course-pune/",
       img: puneImg,
       features: [
@@ -37,7 +37,7 @@ const MaharashtraLanding = () => {
       tagline: "Medical Coding Training in Kolhapur",
       badge: "Western Maharashtra Hub",
       address: "Genesis group of institutions - Near Gaibi Titta, Radhanagari Road, opposite to Mahadik Petrol Pump, Tal - Radhanagari, Dist - Kolhapur, PIN-416212",
-      phone: "+91 83904 52121 / +91 72195 57734",
+      phone: "083904 52121 / 072195 57734",
       path: "/Medical-Coding-Training-Kolhapur",
       img: kolhapurImg,
       features: [
@@ -273,7 +273,7 @@ const MaharashtraLanding = () => {
                     <Link to={campus.path} className="campus-explore-btn">
                       Explore Campus &rarr;
                     </Link>
-                    <a href={`tel:${campus.phone.replace(/\s+/g, '')}`} className="campus-contact-link">
+                    <a href={`tel:${campus.phone.replace(/\s+/g, '').replace(/^0/, '+91')}`} className="campus-contact-link">
                       📞 {campus.phone}
                     </a>
                   </div>

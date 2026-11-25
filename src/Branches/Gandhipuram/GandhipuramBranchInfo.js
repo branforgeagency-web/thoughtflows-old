@@ -14,7 +14,7 @@ const GandhipuramBranchInfo = () => {
       <div className="gandhipuram-wrap">
         <Reveal className="gandhipuram-center">
           <span className="gandhipuram-eyebrow">Visit Us</span>
-          <h2>ThoughtFlows Medical Coding Academy – Gandhipuram Branch</h2>
+          <h2>Thoughtflows Medical Coding Academy</h2>
           <p>
             ThoughtFlows Medical Coding Academy in Gandhipuram provides a local option for learners who
             prefer classroom training, while online learning is also available.
@@ -40,7 +40,7 @@ const GandhipuramBranchInfo = () => {
                 <div className="gandhipuram-icon"><Phone size={24} /></div>
                 <div>
                   <h3>Contact &amp; Admissions</h3>
-                  <p>Phone: +91 93845 76852</p>
+                  <p>Phone: 093845 76852</p>
                   <p>Email: thoughtflowsinfo@gmail.com</p>
                 </div>
               </div>

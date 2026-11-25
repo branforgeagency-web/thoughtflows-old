@@ -99,8 +99,8 @@ test('getBranchInfoByPath resolves correct branch data for each branch route', (
   // Pune and Kolhapur
   const pune = getBranchInfoByPath('/medical-coding-course-pune/');
   expect(pune).not.toBeNull();
-  expect(pune.phone).toContain('81213 45955');
-  expect(pune.address).toContain('India Land Building');
+  expect(pune.phone).toContain('72195 57734');
+  expect(pune.address).toContain('Indialand Global Tech Park');
 
   const kolhapur = getBranchInfoByPath('/Medical-Coding-Training-Kolhapur');
   expect(kolhapur).not.toBeNull();

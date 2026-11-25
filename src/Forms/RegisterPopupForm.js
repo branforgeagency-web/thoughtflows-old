@@ -114,7 +114,7 @@ ${formData.message || 'N/A'}`;
             }, 3000);
         } catch (error) {
             console.error('Failed to send email:', error);
-            setErrorMsg('Something went wrong. Please try again or call us on +91 93845 76852.');
+            setErrorMsg('Something went wrong. Please try again or call us on 093845 76852.');
         } finally {
             setIsSubmitting(false);
         }
