@@ -1,11 +1,5 @@
 import React from "react";
-import {
-  motion,
-  useMotionValue,
-  useReducedMotion,
-  useSpring,
-  useTransform,
-} from "framer-motion";
+import { motion } from "framer-motion";
 import { mediaUrl } from "../config/media";
 
 const heroPhoto = mediaUrl("images/AboutImg/about-office-interior.jpg");
@@ -47,9 +41,8 @@ const CSS = `
 
 .novere-media {
   position: absolute;
-  inset: -16px;
+  inset: 0;
   z-index: 0;
-  will-change: transform;
 }
 
 .novere-image {
@@ -58,7 +51,6 @@ const CSS = `
   background-image: url("${heroPhoto}");
   background-size: cover;
   background-position: left center;
-  will-change: transform;
   opacity: 1;
 }
 
@@ -572,48 +564,6 @@ const revealItem = {
 };
 
 export default function BlogBanner() {
-  const reducedMotion = useReducedMotion();
-
-  const pointerX = useMotionValue(0);
-  const pointerY = useMotionValue(0);
-
-  const smoothX = useSpring(pointerX, {
-    stiffness: 78,
-    damping: 24,
-    mass: 0.8,
-  });
-
-  const smoothY = useSpring(pointerY, {
-    stiffness: 78,
-    damping: 24,
-    mass: 0.8,
-  });
-
-  const imageX = useTransform(smoothX, [-0.5, 0.5], [-15, 15]);
-  const imageY = useTransform(smoothY, [-0.5, 0.5], [-10, 10]);
-
-  const contentX = useTransform(smoothX, [-0.5, 0.5], [5, -5]);
-  const contentY = useTransform(smoothY, [-0.5, 0.5], [4, -4]);
-
-  const handlePointerMove = (event) => {
-    if (reducedMotion) return;
-
-    const bounds = event.currentTarget.getBoundingClientRect();
-
-    pointerX.set(
-      (event.clientX - bounds.left) / bounds.width - 0.5
-    );
-
-    pointerY.set(
-      (event.clientY - bounds.top) / bounds.height - 0.5
-    );
-  };
-
-  const resetPointer = () => {
-    pointerX.set(0);
-    pointerY.set(0);
-  };
-
   const handleScrollToArticles = (e) => {
     e.preventDefault();
     const target = document.getElementById("blog-articles");
@@ -628,30 +578,16 @@ export default function BlogBanner() {
 
       <motion.div
         className="novere-hero"
-        initial={{
-          opacity: 0,
-          scale: 1.02,
-        }}
-        animate={{
-          opacity: 1,
-          scale: 1,
-        }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
         transition={{
           duration: 1.2,
           ease: [0.16, 1, 0.3, 1],
         }}
-        onPointerMove={handlePointerMove}
-        onPointerLeave={resetPointer}
       >
-        <motion.div
-          className="novere-media"
-          style={{
-            x: reducedMotion ? 0 : imageX,
-            y: reducedMotion ? 0 : imageY,
-          }}
-        >
+        <div className="novere-media">
           <div className="novere-image" />
-        </motion.div>
+        </div>
 
         <div className="novere-dark-overlay" />
 
@@ -726,10 +662,6 @@ export default function BlogBanner() {
             variants={contentContainer}
             initial="hidden"
             animate="visible"
-            style={{
-              x: reducedMotion ? 0 : contentX,
-              y: reducedMotion ? 0 : contentY,
-            }}
           >
             <motion.div variants={revealItem}>
               <span className="novere-kicker">
