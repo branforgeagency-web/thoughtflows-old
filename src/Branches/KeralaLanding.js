@@ -4,9 +4,10 @@ import Meta from '../Meta';
 import { PopupContext } from '../context/PopupContext';
 import './RegionLanding.css';
 import { mediaUrl } from '../config/media';
+import BranchLuxBanner from './common/BranchLuxBanner';
+import AI_INTERIORS from './common/aiInteriors';
 const kochiImg = mediaUrl("images/Branches/kerala_kochi_campus.jpg");
 const trivandrumImg = mediaUrl("images/Branches/kerala_trivandrum_campus.jpg");
-const keralaHeroImg = mediaUrl("images/Branches/kerala_hero.jpg");
 
 const KeralaLanding = () => {
   const { setIsOpen } = useContext(PopupContext);
@@ -164,71 +165,28 @@ const KeralaLanding = () => {
       />
 
       {/* Hero Section */}
-      <section className="region-hero">
-        <div className="region-container">
-          <div className="region-hero-inner">
-            <div className="region-hero-content">
-              <div className="region-hero-badge">
-                🌴 Kerala's Leading Medical Coding Hub · Kochi & Trivandrum
-              </div>
-              <h1 className="region-hero-title">
-                Medical Coding Course in <span>Kerala</span> — CPC &amp; CCS Training
-              </h1>
-              <p className="region-hero-subtitle">
-                Unlock high-growth careers in domestic healthcare IT parks and lucrative hospital systems across the UAE and Gulf. Enroll at our flagship <strong>Kochi</strong> or <strong>Trivandrum</strong> campuses with AAPC-certified mentors and guaranteed placement support.
-              </p>
-
-              <div className="region-hero-actions">
-                <a href="#campuses" className="btn-primary-action">
-                  Explore Kerala Campuses &darr;
-                </a>
-                <button onClick={() => setIsOpen(true)} className="btn-secondary-action">
-                  Enquire for Free Demo
-                </button>
-              </div>
-
-              <div className="region-hero-stats">
-                <div className="hero-stat-card">
-                  <div className="hero-stat-num">2</div>
-                  <div className="hero-stat-label">Kerala Campuses</div>
-                </div>
-                <div className="hero-stat-card">
-                  <div className="hero-stat-num">5000+</div>
-                  <div className="hero-stat-label">Graduates Placed</div>
-                </div>
-                <div className="hero-stat-card">
-                  <div className="hero-stat-num">95%+</div>
-                  <div className="hero-stat-label">CPC Exam Pass Rate</div>
-                </div>
-                <div className="hero-stat-card">
-                  <div className="hero-stat-num">100%</div>
-                  <div className="hero-stat-label">Placement Support</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="region-hero-visual">
-              <div className="hero-visual-card">
-                <img src={keralaHeroImg} alt="ThoughtFlows Kerala Medical Coding Training" />
-                <div className="hero-floating-chip chip-top">
-                  <div className="chip-icon">🎯</div>
-                  <div>
-                    <div style={{ fontSize: '12px', color: '#64748b' }}>Certification Success</div>
-                    <div style={{ fontWeight: 700, color: '#0f172a' }}>98.2% CPC Pass Rate</div>
-                  </div>
-                </div>
-                <div className="hero-floating-chip chip-bottom">
-                  <div className="chip-icon">💼</div>
-                  <div>
-                    <div style={{ fontSize: '12px', color: '#64748b' }}>Placement Support</div>
-                    <div style={{ fontWeight: 700, color: '#0f172a' }}>InfoPark & Gulf Jobs</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <BranchLuxBanner
+        location="Kerala – Kochi · Trivandrum"
+        titleLead="Medical Coding Course"
+        accent="Kerala"
+        subTitle="CPC & CCS Training"
+        heroImage={AI_INTERIORS.kerala[0]}
+        heroAlt="ThoughtFlows Medical Coding Academy Kerala campus interior"
+        badgeTitle="2 Branches in Kerala"
+        badgeText="Kochi · Trivandrum"
+        phone="090480 23242"
+        phoneHref="tel:+919048023242"
+        stripHeading="Our Branches"
+        campus={[
+          { img: AI_INTERIORS.kochi[0], label: "Kochi", alt: "ThoughtFlows Kochi branch", to: "/Medical-Coding-Academy-Kochi" },
+          { img: AI_INTERIORS.trivandrum[0], label: "Trivandrum", alt: "ThoughtFlows Trivandrum branch", to: "/Advanced-Medical-Coding-Tiruvandrum" },
+          { img: AI_INTERIORS.kerala[1], label: "Practical Training", alt: "Kerala practical medical coding training" },
+          { img: AI_INTERIORS.kerala[2], label: "Modern Classrooms", alt: "Kerala medical coding classroom" },
+        ]}
+        locationLabel="Kochi · Trivandrum"
+        exploreTo="#campuses"
+        exploreLabel="Explore Kerala Branches"
+      />
 
       {/* Campuses Section */}
       <section className="region-section" id="campuses">

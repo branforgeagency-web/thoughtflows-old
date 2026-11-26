@@ -1,74 +1,32 @@
 import React from "react";
-import { mediaUrl } from '../../config/media';
-import { Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
-const bannerImage = mediaUrl("images/homebannerbg.png");
-const pune = mediaUrl("/media/images/Branches/pune_frame.png");
+import BranchLuxBanner from "../common/BranchLuxBanner";
+import AI_INTERIORS from "../common/aiInteriors";
 
-const PuneBanner = () => {
-  return (
-    <Row
-      className="cbe1-banner"
-      style={{
-        backgroundImage: `url(${bannerImage})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        overflow: "hidden",
-        backgroundRepeat: "no-repeat",
-        minHeight: "75vh",
-        height: "auto",
-        alignItems: "flex-end",
-        padding: "40px 0 0 0",
-        marginTop: "0px",
-      }}
-    >
-      <Col lg={1} xs={0}></Col>
-      <Col
-        lg={4}
-        md={5}
-        xs={12}
-        className="cbe1-banner-lft px-4 mb-4 mb-lg-0 d-flex flex-column justify-content-center align-items-lg-start align-items-center"
-        style={{ paddingTop: "20px", paddingBottom: "60px" }}
-      >
-        <Col className="cbe1-banner-heading">
-          <h1 style={{ fontSize: "clamp(28px, 5vw, 40px)", lineHeight: "1.2" }}>
-            Medical Coding Course in{" "}
-            <span style={{ color: "#097D8A" }}>Pune</span>{" "}
-            <span style={{ display: "block", fontSize: "0.6em", marginTop: "10px" }}>
-              with CPC Certification Training
-            </span>
-          </h1>
-        </Col>
-        <Col>
-          <p style={{ fontSize: "clamp(14px, 3vw, 16px)", marginTop: "20px", maxWidth: "600px" }}>
-            Build your medical coding career with our medical coding classes in
-            Pune. Learn, grow, and step into rewarding healthcare opportunities.
-          </p>
-        </Col>
-        <Col className="cbe1-btn">
-          <Link to="/contact" className="button-animation d">
-            Register Now
-          </Link>
-        </Col>
-      </Col>
+// TODO: swap AI_INTERIORS.pune for real Pune interior photos when available
+const [heroImg, card1, card2, card3, card4] = AI_INTERIORS.pune;
 
-      <Col
-        lg={6}
-        md={7}
-        xs={12}
-        className="cbe1-banner-rht"
-        style={{ display: "flex", justifyContent: "center", alignItems: "flex-end", alignSelf: "flex-end", padding: 0 }}
-      >
-        <img
-          src={pune}
-          alt="Medical coding course in Pune at Thoughtflows"
-          className="bannergif banner-appear"
-          style={{ maxHeight: "580px", maxWidth: "100%", width: "auto", height: "auto", objectFit: "contain", display: "block" }}
-        />
-      </Col>
-      <Col lg={1} xs={0}></Col>
-    </Row>
-  );
-};
+const PuneBanner = () => (
+  <BranchLuxBanner
+    location="Maharashtra – Pune Branch"
+    titleLead="Medical Coding Course"
+    accent="Pune"
+    subTitle="with CPC Certification Training"
+    heroImage={heroImg}
+    heroAlt="ThoughtFlows Medical Coding Academy Pune branch interior"
+    badgeTitle="Pune Branch"
+    badgeText="ThoughtFlows Medical Coding Academy"
+    phone="072195 57734"
+    phoneHref="tel:+917219557734"
+    campus={[
+      { img: card1, label: "Modern Classrooms", alt: "Pune branch classroom" },
+      { img: card2, label: "Reception & Lobby", alt: "Pune branch reception" },
+      { img: card3, label: "Practical Training Lab", alt: "Pune branch practical training" },
+      { img: card4, label: "Learning Spaces", alt: "Pune branch learning space" },
+    ]}
+    locationLabel="Pune, Maharashtra"
+    exploreTo="/maharashtra"
+    exploreLabel="Explore Maharashtra Branches"
+  />
+);
 
 export default PuneBanner;

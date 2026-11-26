@@ -1,12 +1,13 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { motion } from 'framer-motion';
-import { Award, CheckCircle2, MapPin, Users, Star, BookOpen, Layers } from 'lucide-react';
+import { Award, MapPin, Users, Star, BookOpen, Layers, ArrowRight } from 'lucide-react';
 import Meta from '../Meta';
 import { PopupContext } from '../context/PopupContext';
 import './CoimbatoreLanding.css';
 import './CoimbatoreBanner.css';
 import { mediaUrl } from '../config/media';
+import CbeArchHero from './common/CbeArchHero';
 const hopesImg = mediaUrl("images/Interiors/hopes/hopes-reception-wave-ceiling.jpg");
 const saravanampattiImg = mediaUrl("images/Interiors/svm/svm-reception-welcome-lobby.jpg");
 const gandhipuramImg = mediaUrl("images/Interiors/gvm/gvm-reception-corridor.jpg");
@@ -312,129 +313,66 @@ const CoimbatoreLanding = () => {
       />
 
       {/* ================= HERO ================= */}
-      <section className="cbe-lux-hero">
-        <div className="cbe-lux-pattern" aria-hidden="true" />
-        <div className="cbe-lux-glow cbe-lux-glow-1" aria-hidden="true" />
-        <div className="cbe-lux-glow cbe-lux-glow-2" aria-hidden="true" />
+      <CbeArchHero
+        location="Saravanampatti · Hopes · Gandhipuram"
+        titleLead="Medical Coding Classes"
+        accent="Coimbatore"
+        subTitle="CPC & CCS Training"
+        badgeTitle="3 Branches in Coimbatore"
+        badgeText="Saravanampatti · Hopes · Gandhipuram"
+        image={hopesImg}
+        imageAlt="ThoughtFlows Coimbatore campus reception"
+      />
 
-        <div className="cbe-lux-inner">
-          <motion.div
-            className="cbe-lux-copy"
-            initial={{ opacity: 0, x: -40 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.75, ease: "easeOut" }}
-          >
-            <div className="cbe-lux-accent-rule" />
-
-            <motion.span
-              className="cbe-lux-eyebrow"
-              initial={{ opacity: 0, y: -12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.55, delay: 0.1 }}
-            >
-              <MapPin size={13} /> Saravanampatti · Hopes · Gandhipuram
-            </motion.span>
-
-            <h1 className="cbe-lux-title">
-              Medical Coding Classes in <span className="cbe-lux-accent">Coimbatore</span> — CPC &amp; CCS Training
-            </h1>
-
-            <p className="cbe-lux-desc">
-              Located in Saravanampatti, Hopes, and Gandhipuram, we offer in-person medical coding classes in Coimbatore. To date, we have trained over 35,000 students and employed over 30,000 of them. Our classes cover ICD-10-CM, CPT, and HCPCS Level II, and help students prepare for the AAPC CPC Certification Exam. The courses are open to students from life sciences, nursing, pharmacy, and allied health professions. Including this course, we offer a host of other services including free demo classes.
-            </p>
-
-            <div className="cbe-lux-tags">
-              {['ICD-10-CM', 'CPT', 'HCPCS Level II', 'AAPC CPC'].map((c) => (
-                <span key={c}><CheckCircle2 size={15} /> {c}</span>
-              ))}
-            </div>
-
-            <div className="cbe-lux-actions">
-              <button onClick={() => setIsOpen(true)} className="cbe-lux-btn primary" style={{ border: 'none' }}>
-                Book a Free Demo Class <Icon name="arrow" />
-              </button>
-              <a href="tel:+919384576852" className="cbe-lux-btn ghost">
-                <Icon name="phone" /> 093845 76852
-              </a>
-            </div>
-          </motion.div>
+      <section className="cbe-lux-after-banner">
+        <div className="cbe-lux-container">
+          <div className="cbe-lux-strip-heading" style={{ marginTop: 0 }}>
+            <span className="cbe-lux-strip-line" />
+            <span>Our Branches</span>
+            <span className="cbe-lux-strip-line" />
+          </div>
 
           <motion.div
-            className="cbe-lux-showcase"
-            initial={{ opacity: 0, y: 40 }}
+            className="cbe-lux-strip"
+            initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.85, delay: 0.2, ease: "easeOut" }}
+            transition={{ duration: 0.7, delay: 0.15 }}
           >
-            <div className="cbe-lux-frame-wrap">
-              <div className="cbe-lux-arch-frame">
-                <div className="cbe-lux-photo-box">
-                  <div className="cbe-lux-trio">
-                    <div className="cbe-lux-trio-item main">
-                      <img src={hopesImg} alt="ThoughtFlows Hopes Campus Interior" />
-                      <span className="cbe-lux-trio-label"><MapPin size={12} /> Hopes</span>
-                    </div>
-                    <div className="cbe-lux-trio-item">
-                      <img src={saravanampattiImg} alt="ThoughtFlows Saravanampatti Campus Interior" />
-                      <span className="cbe-lux-trio-label"><MapPin size={12} /> Saravanampatti</span>
-                    </div>
-                    <div className="cbe-lux-trio-item">
-                      <img src={gandhipuramImg} alt="ThoughtFlows Gandhipuram Campus Interior" />
-                      <span className="cbe-lux-trio-label"><MapPin size={12} /> Gandhipuram</span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <motion.div
-                className="cbe-lux-chip cbe-chip-tr"
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut" }}
-              >
-                <span className="cbe-lux-chip-icon"><Award size={16} /></span>
-                <div>
-                  <strong>CPC</strong>
-                  <small>AAPC exam prep</small>
-                </div>
-              </motion.div>
-
-              <motion.div
-                className="cbe-lux-chip cbe-chip-bl"
-                animate={{ y: [0, -8, 0] }}
-                transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut", delay: 0.9 }}
-              >
-                <span className="cbe-lux-chip-icon"><MapPin size={16} /></span>
-                <div>
-                  <strong>3 Coimbatore Campuses</strong>
-                  <small>Saravanampatti · Hopes · Gandhipuram</small>
-                </div>
-              </motion.div>
-            </div>
+            <Link to="/medical-coding-institute-saravanampatti-coimbatore" className="cbe-lux-strip-card">
+              <img src={saravanampattiImg} alt="ThoughtFlows Saravanampatti Campus Interior" />
+              <span className="cbe-lux-strip-label"><MapPin size={13} /> Saravanampatti</span>
+            </Link>
+            <Link to="/medical-coding-classes-hopes-coimbatore" className="cbe-lux-strip-card">
+              <img src={hopesImg} alt="ThoughtFlows Hopes Campus Interior" />
+              <span className="cbe-lux-strip-label"><MapPin size={13} /> Hopes (Peelamedu)</span>
+            </Link>
+            <Link to="/medical-coding-course-gandhipuram-coimbatore" className="cbe-lux-strip-card">
+              <img src={gandhipuramImg} alt="ThoughtFlows Gandhipuram Campus Interior" />
+              <span className="cbe-lux-strip-label"><MapPin size={13} /> Gandhipuram</span>
+            </Link>
+            <a href="#branches" className="cbe-lux-strip-card">
+              <img src={handsOnImg} alt="ThoughtFlows Coimbatore Workstations" />
+              <span className="cbe-lux-strip-label"><Layers size={13} /> 3+ Branches</span>
+            </a>
           </motion.div>
-        </div>
 
-        <motion.div
-          className="cbe-lux-stats"
-          initial={{ opacity: 0, y: 24 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.45 }}
-        >
-          {heroStats.map((s, i) => {
-            const StatIcons = [Users, Award, BookOpen, Layers];
-            const StatIcon = StatIcons[i] || Star;
-            return (
-              <React.Fragment key={i}>
-                {i > 0 && <div className="cbe-lux-stat-div" />}
-                <div className="cbe-lux-stat">
-                  <StatIcon size={20} className="cbe-lux-stat-icon" />
-                  <div>
-                    <strong>{s.num}</strong>
-                    <span>{s.label}</span>
-                  </div>
-                </div>
-              </React.Fragment>
-            );
-          })}
-        </motion.div>
+          <div className="cbe-lux-footer-bar">
+            <div className="cbe-lux-trust-items">
+              {heroStats.map((s, i) => {
+                const StatIcons = [Users, Award, BookOpen, Layers];
+                const StatIcon = StatIcons[i] || Star;
+                return (
+                  <span className="cbe-lux-trust-item" key={i}>
+                    <StatIcon size={17} /> {s.num} {s.label}
+                  </span>
+                );
+              })}
+            </div>
+            <a href="#branches" className="cbe-lux-explore-btn">
+              Explore All Branches <ArrowRight size={15} />
+            </a>
+          </div>
+        </div>
       </section>
 
       {/* In-page navigation */}
@@ -459,6 +397,9 @@ const CoimbatoreLanding = () => {
                 </div>
               ))}
             </div>
+            <p className="cbe-lux-intro-lead" style={{ marginBottom: 14, color: '#334155', lineHeight: 1.7 }}>
+              Located in Saravanampatti, Hopes, and Gandhipuram, we offer in-person medical coding classes in Coimbatore. To date, we have trained over 35,000 students and employed over 30,000 of them. Our classes cover ICD-10-CM, CPT, and HCPCS Level II, and help students prepare for the AAPC CPC Certification Exam. The courses are open to students from life sciences, nursing, pharmacy, and allied health professions. Including this course, we offer a host of other services including free demo classes.
+            </p>
             <p className="cbe-intro-text">
               The three types of candidates who want to do a medical coding course in Coimbatore are as follows. First, graduates of B.Sc. or B.Pharm. who do not have a job linked to their degree. Second, lab technicians and nurses who wish to give up their job which involves rotation of shifts. Third, employees working in a Coimbatore BPO who wishes to earn based on their skill rather than time.
             </p>

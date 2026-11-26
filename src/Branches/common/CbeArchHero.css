@@ -1,0 +1,281 @@
+/* ================================================================
+   Coimbatore branches – simple luxury hero (navy / teal / gold)
+   Used by CoimbatoreLanding, Saravanampatti, Hopes, Gandhipuram
+   ================================================================ */
+.tfa-hero {
+  --tfa-navy: #0b2239;
+  --tfa-teal: #097d8a;
+  --tfa-gold: #c9a45c;
+  --tfa-muted: #5b6b7b;
+  position: relative;
+  width: 100vw;
+  max-width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  padding: 128px 5vw 88px;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: linear-gradient(135deg, #f6f9fc 0%, #ffffff 50%, #f4f8fb 100%);
+  border-bottom: 1px solid #e8eef4;
+  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  color: var(--tfa-navy);
+}
+
+/* faint gold ring for depth */
+.tfa-hero::before {
+  content: "";
+  position: absolute;
+  top: -180px;
+  right: -140px;
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  border: 1px solid rgba(201, 164, 92, 0.25);
+  pointer-events: none;
+}
+
+.tfa-hero-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1240px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 72px;
+  align-items: center;
+}
+
+/* ---------- Copy ---------- */
+.tfa-hero-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  padding: 6px 15px;
+  border-radius: 999px;
+  background: #faf6ee;
+  border: 1px solid #ecdfc6;
+  font-size: 12.5px;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  margin-bottom: 22px;
+}
+
+.tfa-hero-pill svg { color: var(--tfa-gold); }
+
+.tfa-hero-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  font-size: clamp(34px, 3.8vw, 52px);
+  line-height: 1.15;
+  letter-spacing: -0.4px;
+  margin: 0;
+  color: var(--tfa-navy);
+}
+
+.tfa-hero-accent {
+  color: var(--tfa-teal);
+  font-style: italic;
+  font-weight: 500;
+}
+
+.tfa-hero-sub {
+  display: block;
+  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+  font-style: normal;
+  line-height: 1.4;
+  margin: 12px 0 0;
+  font-size: clamp(16px, 1.4vw, 19px);
+  font-weight: 600;
+  color: var(--tfa-navy);
+  letter-spacing: 0.2px;
+}
+
+.tfa-hero-rule {
+  display: block;
+  width: 56px;
+  height: 2px;
+  margin: 22px 0 18px;
+  background: var(--tfa-gold);
+  border-radius: 2px;
+}
+
+.tfa-hero .tfa-hero-tagline {
+  margin: 0 0 32px;
+  font-size: 16px;
+  color: var(--tfa-muted);
+  letter-spacing: 0.3px;
+}
+
+/* ---------- Buttons ---------- */
+.tfa-hero-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-bottom: 36px;
+}
+
+.tfa-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 9px;
+  box-sizing: border-box;
+  padding: 14px 28px;
+  border-radius: 999px;
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.tfa-btn-primary {
+  background: var(--tfa-navy);
+  color: #fff !important;
+  border: 1px solid var(--tfa-gold);
+  box-shadow: 0 10px 24px rgba(11, 34, 57, 0.2);
+}
+
+.tfa-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(11, 34, 57, 0.26);
+}
+
+.tfa-btn-ghost {
+  background: #fff;
+  color: var(--tfa-navy) !important;
+  border: 1px solid #d9e2ea;
+}
+
+.tfa-btn-ghost svg { color: var(--tfa-teal); }
+
+.tfa-btn-ghost:hover {
+  border-color: var(--tfa-gold);
+  transform: translateY(-2px);
+}
+
+/* ---------- Course line ---------- */
+.tfa-hero-features {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0;
+  padding: 18px 0 0;
+  border-top: 1px solid #e6ecf1;
+  max-width: 520px;
+}
+
+.tfa-hero-features li {
+  font-size: 13.5px;
+  font-weight: 600;
+  color: var(--tfa-navy);
+  letter-spacing: 0.3px;
+  padding: 0 16px;
+  border-left: 1px solid #d5dde5;
+  line-height: 1;
+}
+
+.tfa-hero-features li:first-child { padding-left: 0; border-left: 0; }
+
+/* ---------- Photo ---------- */
+.tfa-hero-media {
+  position: relative;
+  padding: 0 18px 18px 0;
+}
+
+.tfa-hero-frame {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  right: 0;
+  bottom: 0;
+  border: 1px solid var(--tfa-gold);
+  border-radius: 28px;
+  opacity: 0.7;
+}
+
+.tfa-hero-photo {
+  position: relative;
+  border-radius: 28px;
+  overflow: hidden;
+  aspect-ratio: 5 / 4;
+  max-height: 540px;
+  background: #e9eef3;
+  box-shadow: 0 30px 60px -20px rgba(11, 34, 57, 0.35);
+}
+
+.tfa-hero-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 1.2s ease;
+}
+
+.tfa-hero-media:hover .tfa-hero-photo img { transform: scale(1.03); }
+
+.tfa-hero-badge {
+  position: absolute;
+  left: -28px;
+  bottom: 44px;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px 20px 14px 14px;
+  background: rgba(255, 255, 255, 0.94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid #ecdfc6;
+  border-radius: 16px;
+  box-shadow: 0 16px 36px rgba(11, 34, 57, 0.16);
+}
+
+.tfa-hero-badge-icon {
+  display: grid;
+  place-items: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background: var(--tfa-navy);
+  color: var(--tfa-gold);
+  flex-shrink: 0;
+}
+
+.tfa-hero-badge strong {
+  display: block;
+  font-size: 14.5px;
+  font-weight: 700;
+  color: var(--tfa-navy);
+}
+
+.tfa-hero-badge small {
+  display: block;
+  margin-top: 2px;
+  font-size: 12px;
+  color: var(--tfa-muted);
+}
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1100px) {
+  .tfa-hero-inner { gap: 48px; }
+}
+
+@media (max-width: 991px) {
+  .tfa-hero { padding: 108px 5vw 64px; }
+  .tfa-hero-inner { grid-template-columns: 1fr; gap: 44px; }
+  .tfa-hero-media { max-width: 640px; }
+  .tfa-hero-badge { left: 16px; bottom: 34px; }
+}
+
+@media (max-width: 575px) {
+  .tfa-hero { padding: 96px 20px 52px; }
+  .tfa-hero-title { font-size: 32px; }
+  .tfa-hero-actions { flex-direction: column; }
+  .tfa-btn { width: 100%; }
+  .tfa-hero-features li { padding: 0 10px; font-size: 12.5px; }
+  .tfa-hero-media { padding: 0 12px 12px 0; }
+  .tfa-hero-frame { top: 12px; left: 12px; border-radius: 22px; }
+  .tfa-hero-photo { border-radius: 22px; aspect-ratio: 4 / 3; }
+  .tfa-hero-badge { padding: 10px 14px 10px 10px; bottom: 24px; }
+}

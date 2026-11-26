@@ -4,7 +4,8 @@ import Meta from '../Meta';
 import { PopupContext } from '../context/PopupContext';
 import './HyderabadLanding.css';
 import { mediaUrl } from '../config/media';
-const hydHeroImg = mediaUrl("images/Hyderabad/hyderabad_hero.jpg");
+import BranchLuxBanner from './common/BranchLuxBanner';
+import AI_INTERIORS from './common/aiInteriors';
 const ameerpetImg = mediaUrl("images/Hyderabad/ameerpet_campus.jpg");
 const dilsukhnagarImg = mediaUrl("images/Hyderabad/dilsukhnagar_campus.jpg");
 const placementImg = mediaUrl("images/Hyderabad/placement_success.jpg");
@@ -116,78 +117,28 @@ const HyderabadLanding = () => {
       {/* =========================================================
           1. HERO SECTION WITH AI-GENERATED HEALTHCARE WORKSTATION
           ========================================================= */}
-      <section className="hyd-hero">
-        <div className="hyd-container">
-          <div className="hyd-hero-grid">
-            <div className="hyd-hero-content">
-              
-              <div className="hyd-hero-badge">
-                ✨ From Beginner to Certified
-              </div>
-              
-              <h1 className="hyd-hero-title">
-                Medical Coding Institute in <span className="hyd-gradient-text">Hyderabad</span>
-              </h1>
-              
-              <p className="hyd-hero-subtitle">
-                Our faculty, course materials, and job placement support make our branches in Ameerpet and Dilsukhnagar the best choice for medical coding training in Hyderabad.
-              </p>
-
-              <div className="hyd-hero-actions">
-                <a href="#campuses" className="hyd-btn-primary">
-                  Explore Ameerpet & Dilsukhnagar &darr;
-                </a>
-                <button onClick={() => setIsOpen(true)} className="hyd-btn-secondary">
-                  Enquire for Free Demo
-                </button>
-              </div>
-
-              <div className="hyd-hero-stats">
-                <div>
-                  <div className="hyd-stat-num">2</div>
-                  <div className="hyd-stat-label">Hyderabad Centers</div>
-                </div>
-                <div>
-                  <div className="hyd-stat-num">100%</div>
-                  <div className="hyd-stat-label">Placement Support</div>
-                </div>
-                <div>
-                  <div className="hyd-stat-num">CPC & CCS</div>
-                  <div className="hyd-stat-label">Certification Prep</div>
-                </div>
-                <div>
-                  <div className="hyd-stat-num">Easy EMI</div>
-                  <div className="hyd-stat-label">Affordable Options</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Visual with AI Generated Medical Coding Workstation */}
-            <div className="hyd-hero-visual">
-              <div className="hyd-visual-wrapper">
-                <img 
-                  src={hydHeroImg} 
-                  alt="ThoughtFlows Medical Coding Institute in Hyderabad - Real-time Workstation Practice" 
-                />
-                <div className="hyd-floating-badge badge-top">
-                  <div className="hyd-badge-icon">🎯</div>
-                  <div>
-                    <div style={{ fontSize: '12px', color: '#64748b' }}>Certification Success</div>
-                    <div style={{ fontWeight: 700, color: '#0f172a' }}>98.4% CPC Pass Rate</div>
-                  </div>
-                </div>
-                <div className="hyd-floating-badge badge-bottom">
-                  <div className="hyd-badge-icon">💼</div>
-                  <div>
-                    <div style={{ fontSize: '12px', color: '#64748b' }}>Dedicated Careers</div>
-                    <div style={{ fontWeight: 700, color: '#0f172a' }}>100% Placement Support</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <BranchLuxBanner
+        location="Hyderabad – Ameerpet · Dilsukhnagar"
+        titleLead="Medical Coding Institute"
+        accent="Hyderabad"
+        subTitle="From Beginner to Certified"
+        heroImage={AI_INTERIORS.hyderabad[0]}
+        heroAlt="ThoughtFlows Medical Coding Academy Hyderabad campus interior"
+        badgeTitle="2 Branches in Hyderabad"
+        badgeText="Ameerpet · Dilsukhnagar"
+        phone="087907 51742"
+        phoneHref="tel:+918790751742"
+        stripHeading="Our Branches"
+        campus={[
+          { img: AI_INTERIORS.ameerpet[0], label: "Ameerpet", alt: "ThoughtFlows Ameerpet branch", to: "/Trusted-Medical-Coding-Ameerpet" },
+          { img: AI_INTERIORS.dilsukhnagar[0], label: "Dilsukhnagar", alt: "ThoughtFlows Dilsukhnagar branch", to: "/Professional-Medical-Coding-Dilsukhnagar" },
+          { img: AI_INTERIORS.hyderabad[1], label: "Practical Training", alt: "Hyderabad practical medical coding training" },
+          { img: AI_INTERIORS.hyderabad[2], label: "Modern Classrooms", alt: "Hyderabad medical coding classroom" },
+        ]}
+        locationLabel="Ameerpet · Dilsukhnagar"
+        exploreTo="#campuses"
+        exploreLabel="Explore Hyderabad Branches"
+      />
 
       {/* =========================================================
           2. CAMPUSES HUB SECTION (Ameerpet & Dilsukhnagar)

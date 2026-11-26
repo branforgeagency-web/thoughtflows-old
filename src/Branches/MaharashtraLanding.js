@@ -4,9 +4,10 @@ import Meta from '../Meta';
 import { PopupContext } from '../context/PopupContext';
 import './RegionLanding.css';
 import { mediaUrl } from '../config/media';
+import BranchLuxBanner from './common/BranchLuxBanner';
+import AI_INTERIORS from './common/aiInteriors';
 const puneImg = mediaUrl("images/Branches/maha_pune_campus.jpg");
 const kolhapurImg = mediaUrl("images/Branches/maha_kolhapur_campus.jpg");
-const mahaHeroImg = mediaUrl("images/Branches/maha_pune_campus.jpg");
 
 const MaharashtraLanding = () => {
   const { setIsOpen } = useContext(PopupContext);
@@ -164,71 +165,28 @@ const MaharashtraLanding = () => {
       />
 
       {/* Hero Section */}
-      <section className="region-hero">
-        <div className="region-container">
-          <div className="region-hero-inner">
-            <div className="region-hero-content">
-              <div className="region-hero-badge">
-                🌟 Maharashtra's Leading Medical Coding Hub · Pune & Kolhapur
-              </div>
-              <h1 className="region-hero-title">
-                Medical Coding Course in <span>Maharashtra</span> — CPC &amp; CCS Training
-              </h1>
-              <p className="region-hero-subtitle">
-                Build a thriving career in Western India's fast-growing healthcare technology sector. Get trained at our premier campuses in <strong>Pune</strong> and <strong>Kolhapur</strong> by AAPC-certified mentors with real-time chart practice and 100% placement assurance.
-              </p>
-
-              <div className="region-hero-actions">
-                <a href="#campuses" className="btn-primary-action">
-                  Explore Maharashtra Campuses &darr;
-                </a>
-                <button onClick={() => setIsOpen(true)} className="btn-secondary-action">
-                  Enquire for Free Demo
-                </button>
-              </div>
-
-              <div className="region-hero-stats">
-                <div className="hero-stat-card">
-                  <div className="hero-stat-num">2</div>
-                  <div className="hero-stat-label">Maharashtra Campuses</div>
-                </div>
-                <div className="hero-stat-card">
-                  <div className="hero-stat-num">5000+</div>
-                  <div className="hero-stat-label">Successful Placements</div>
-                </div>
-                <div className="hero-stat-card">
-                  <div className="hero-stat-num">95%+</div>
-                  <div className="hero-stat-label">CPC Exam Pass Rate</div>
-                </div>
-                <div className="hero-stat-card">
-                  <div className="hero-stat-num">100%</div>
-                  <div className="hero-stat-label">Placement Support</div>
-                </div>
-              </div>
-            </div>
-
-            <div className="region-hero-visual">
-              <div className="hero-visual-card">
-                <img src={mahaHeroImg} alt="ThoughtFlows Maharashtra Medical Coding Training" />
-                <div className="hero-floating-chip chip-top">
-                  <div className="chip-icon">🎯</div>
-                  <div>
-                    <div style={{ fontSize: '12px', color: '#64748b' }}>Certification Success</div>
-                    <div style={{ fontWeight: 700, color: '#0f172a' }}>98.2% CPC Pass Rate</div>
-                  </div>
-                </div>
-                <div className="hero-floating-chip chip-bottom">
-                  <div className="chip-icon">💼</div>
-                  <div>
-                    <div style={{ fontSize: '12px', color: '#64748b' }}>Campus Placements</div>
-                    <div style={{ fontWeight: 700, color: '#0f172a' }}>Pune & Mumbai MNCs</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <BranchLuxBanner
+        location="Maharashtra – Pune · Kolhapur"
+        titleLead="Medical Coding Course"
+        accent="Maharashtra"
+        subTitle="CPC & CCS Training"
+        heroImage={AI_INTERIORS.maharashtra[0]}
+        heroAlt="ThoughtFlows Medical Coding Academy Maharashtra campus interior"
+        badgeTitle="2 Branches in Maharashtra"
+        badgeText="Pune · Kolhapur"
+        phone="072195 57734"
+        phoneHref="tel:+917219557734"
+        stripHeading="Our Branches"
+        campus={[
+          { img: AI_INTERIORS.pune[0], label: "Pune", alt: "ThoughtFlows Pune branch", to: "/medical-coding-course-pune" },
+          { img: AI_INTERIORS.kolhapur[0], label: "Kolhapur", alt: "ThoughtFlows Kolhapur branch", to: "/Medical-Coding-Training-Kolhapur" },
+          { img: AI_INTERIORS.maharashtra[1], label: "Practical Training", alt: "Maharashtra practical medical coding training" },
+          { img: AI_INTERIORS.maharashtra[2], label: "Modern Classrooms", alt: "Maharashtra medical coding classroom" },
+        ]}
+        locationLabel="Pune · Kolhapur"
+        exploreTo="#campuses"
+        exploreLabel="Explore Maharashtra Branches"
+      />
 
       {/* Campuses Section */}
       <section className="region-section" id="campuses">
