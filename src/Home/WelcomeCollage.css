@@ -1,0 +1,136 @@
+/* Home – Welcome section photo collage (real interiors + video card) */
+.tfw-collage {
+  position: relative;
+  width: 100%;
+  max-width: 640px;
+  aspect-ratio: 730 / 820;
+  margin: 0 auto;
+  text-align: left;
+}
+
+.tfw-main,
+.tfw-side {
+  position: absolute;
+  overflow: hidden;
+  background: #e8eef3;
+}
+
+.tfw-main img,
+.tfw-side img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 1s ease;
+}
+
+.tfw-main:hover img,
+.tfw-side:hover img { transform: scale(1.04); }
+
+.tfw-main {
+  top: 3%;
+  left: 3%;
+  width: 60%;
+  height: 89%;
+  border-radius: 28px;
+  box-shadow: 0 24px 50px -18px rgba(11, 34, 57, 0.35);
+}
+
+.tfw-side {
+  top: 13%;
+  right: 0;
+  width: 45%;
+  height: 39%;
+  border-radius: 22px;
+  border: 5px solid #fff;
+  box-shadow: 0 20px 40px -14px rgba(11, 34, 57, 0.35);
+  z-index: 2;
+}
+
+.tfw-video {
+  position: absolute;
+  right: 7%;
+  bottom: 7%;
+  width: 49%;
+  padding: 12px 12px 16px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 22px 48px -14px rgba(11, 34, 57, 0.3);
+  z-index: 3;
+  display: block;
+  text-decoration: none;
+  transition: transform 0.25s ease;
+}
+
+.tfw-video:hover { transform: translateY(-4px); }
+
+.tfw-video-thumb {
+  position: relative;
+  display: block;
+  border-radius: 12px;
+  overflow: hidden;
+  aspect-ratio: 16 / 9;
+  background: #0f8fa3;
+}
+
+.tfw-video-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.tfw-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 54px;
+  height: 54px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: #fff;
+  display: grid;
+  place-items: center;
+  box-shadow: 0 0 0 8px rgba(255, 255, 255, 0.35);
+  transition: transform 0.25s ease;
+}
+
+.tfw-video:hover .tfw-play { transform: translate(-50%, -50%) scale(1.08); }
+
+.tfw-play svg {
+  width: 24px;
+  height: 24px;
+  margin-left: 3px;
+  fill: #0f8fa3;
+}
+
+.tfw-bar {
+  display: block;
+  height: 11px;
+  margin-top: 12px;
+  border-radius: 6px;
+  background: #eceff3;
+}
+
+.tfw-bar.short { width: 72%; margin-top: 9px; }
+
+.tfw-dash {
+  position: absolute;
+  left: -3%;
+  bottom: -2%;
+  width: 34%;
+  z-index: 0;
+}
+
+@media (max-width: 991px) {
+  .tfw-collage { max-width: 560px; margin-bottom: 36px; }
+}
+
+@media (max-width: 575px) {
+  .tfw-main { border-radius: 20px; }
+  .tfw-side { border-radius: 16px; border-width: 4px; }
+  .tfw-video { padding: 8px 8px 10px; border-radius: 14px; }
+  .tfw-play { width: 40px; height: 40px; box-shadow: 0 0 0 5px rgba(255,255,255,0.35); }
+  .tfw-play svg { width: 18px; height: 18px; }
+  .tfw-bar { height: 8px; margin-top: 8px; }
+}

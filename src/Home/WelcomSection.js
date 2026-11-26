@@ -2,7 +2,12 @@ import React from 'react'
 import { Row, Col } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 import { mediaUrl } from '../config/media';
-const leftimg = mediaUrl('images/thumbnail-/img1.png');
+import './WelcomeCollage.css';
+// Real campus interiors (swap paths here to change the collage photos)
+const collageMain = mediaUrl('images/Interiors/hopes/hopes-smart-classroom.jpg');
+const collageSide = mediaUrl('images/Interiors/hopes/hopes-reception-wave-ceiling.jpg');
+const videoUrl = 'https://youtu.be/Ph1XztrKgms?si=hHUCdVWwRHZKzoqa';
+const videoThumb = 'https://i.ytimg.com/vi/Ph1XztrKgms/hqdefault.jpg';
 const grp20 = mediaUrl('images/Group20.png');
 const grp21 = mediaUrl('images/Group21.png');
 const grp22 = mediaUrl('images/Group22.png');
@@ -12,7 +17,27 @@ const WelcomSection = () => {
   return (
     <Row className='welcome-section'>
       <Col lg={6} style={{ textAlign: 'center' }}>
-        <a href='https://youtu.be/Ph1XztrKgms?si=hHUCdVWwRHZKzoqa' target='_blank' rel='noopener noreferrer'><img src={leftimg} alt='leftimg' className='leftimg' /></a>
+        <div className='tfw-collage'>
+          <svg className='tfw-dash' viewBox='0 0 220 160' fill='none' aria-hidden='true'>
+            <path d='M10 10 C 0 90, 60 150, 210 140' stroke='#1b4d7a' strokeWidth='2' strokeDasharray='6 7' strokeLinecap='round' />
+          </svg>
+          <div className='tfw-main'>
+            <img src={collageMain} alt='Smart classroom at ThoughtFlows Hopes' loading='lazy' />
+          </div>
+          <div className='tfw-side'>
+            <img src={collageSide} alt='ThoughtFlows Medical Coding Academy reception' loading='lazy' />
+          </div>
+          <a className='tfw-video' href={videoUrl} target='_blank' rel='noopener noreferrer' aria-label='Watch: What is Medical Coding'>
+            <span className='tfw-video-thumb'>
+              <img src={videoThumb} alt='What is Medical Coding video' loading='lazy' />
+              <span className='tfw-play' aria-hidden='true'>
+                <svg viewBox='0 0 24 24'><path d='M8 5v14l11-7z' /></svg>
+              </span>
+            </span>
+            <span className='tfw-bar' />
+            <span className='tfw-bar short' />
+          </a>
+        </div>
       </Col>
       <Col lg={6}>
         <h5>No.1 MEDICAL CODING TRAINING</h5>
