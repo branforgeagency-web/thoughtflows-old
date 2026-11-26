@@ -246,7 +246,7 @@ export default function Blog10() {
         className="hidden lg:flex"
       >
         <div style={{ width: "45%", marginTop: "90px", marginLeft: "80px", marginBottom: "40px" }}>
-          <h1
+          <div role="heading" aria-level="1" className="h1"
             style={{
               color: "white",
               fontSize: "32px",
@@ -255,7 +255,7 @@ export default function Blog10() {
             }}
           >
             Certified AI Medical Coder: Why Your Next Interview Won't Ask a Single ICD-10 Question
-          </h1>
+          </div>
           <div className="flex items-center gap-6 text-gray-300 text-sm mt-4">
             <span className="flex items-center gap-2">
               <FaUserEdit className="text-teal-400" /> ThoughtFlows Editorial Team | Medical Coding Academy

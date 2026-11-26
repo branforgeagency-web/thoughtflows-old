@@ -395,7 +395,7 @@ ${formData.message || 'N/A'}`;
                 <span className="dot dot-coral"></span>
               </div>
               <span className="contact-raiou-eyebrow">LET'S CONNECT</span>
-              <h2 className="contact-raiou-touch-title">Stay In Touch With Us</h2>
+              <h1 className="contact-raiou-touch-title">Stay In Touch With Us</h1>
               <p className="contact-raiou-touch-desc">
                 Reach out to ThoughtFlows Medical Coding Academy. Whether you need syllabus details, certification counseling, or fee assistance, our expert team is ready to guide you.
               </p>

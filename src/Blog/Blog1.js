@@ -187,8 +187,8 @@ export default function Blog1() {
   return (
     <>
       <Meta
-        title="What is Medical Coding? Complete Guide for Beginners | ThoughtFlows"
-        description="Discover what medical coding is, why it matters, and how to start your career. ThoughtFlows' complete beginner's guide covers ICD-10, CPT, certifications, and more."
+        title="What is Medical Coding? Beginner's Guide | ThoughtFlows"
+        description="What medical coding is, why it matters and how to start your career. ThoughtFlows' beginner's guide covers ICD-10, CPT, certifications and more."
         canonical="https://www.thoughtflows.in/blog/what-is-medical-coding-complete-guide-for-beginners-thoughtflows"
       />
       <div

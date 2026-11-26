@@ -27,7 +27,7 @@ const YearlyPlacementList = () => {
                     </Link>
                 </div>
 
-                <h2 className="year-title">{year} Placement Success Stories</h2>
+                <h1 className="year-title">{year} Placement Success Stories</h1>
 
                 {data.length > 0 ? (
                     <div className="table-responsive">

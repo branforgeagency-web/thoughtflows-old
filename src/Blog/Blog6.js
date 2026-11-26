@@ -33,8 +33,8 @@ export default function Blog6() {
   return (
     <>
       <Meta
-        title="The Role of Medical Coders in Modern Healthcare | ThoughtFlows"
-        description="Discover the essential role of medical coders in modern healthcare — from billing and compliance to patient care and data reporting. ThoughtFlows explains it all."
+        title="Role of Medical Coders in Modern Healthcare | ThoughtFlows"
+        description="The essential role of medical coders in modern healthcare — from billing and compliance to patient care and data reporting, explained by ThoughtFlows."
         canonical="https://www.thoughtflows.in/blog/the-role-of-medical-coders-in-modern-healthcare-essential-insights"
       />
       <div

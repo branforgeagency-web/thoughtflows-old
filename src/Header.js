@@ -25,7 +25,7 @@ const DropdownMenu = ({ isBranchPage }) => {
         { name: "Dilsukhnagar", path: "/Professional-Medical-Coding-Dilsukhnagar" },
       ],
       Maharashtra: [
-        { name: "Pune", path: "/medical-coding-course-pune/" },
+        { name: "Pune", path: "/medical-coding-course-pune" },
         { name: "Kolhapur", path: "/Medical-Coding-Training-Kolhapur" },
       ],
       Trichy: [{ name: "Trichy", path: "/Career-Focused-Medical-Coding-Trichy" }],
@@ -289,7 +289,7 @@ const Header = () => {
         label: "MAHARASHTRA",
         hubPath: "/maharashtra",
         courseMenu: [
-          { label: "Pune", path: "/medical-coding-course-pune/" },
+          { label: "Pune", path: "/medical-coding-course-pune" },
           { label: "Kolhapur", path: "/Medical-Coding-Training-Kolhapur" },
         ],
       },

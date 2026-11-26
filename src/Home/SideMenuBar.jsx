@@ -303,7 +303,7 @@ const SideMenuBar = ({ isOpen, onClose }) => {
                         </li>
                         <li>
                           <Link
-                            to="/medical-coding-course-pune/"
+                            to="/medical-coding-course-pune"
                             className="side-sublink"
                             onClick={handleLinkClick}
                           >

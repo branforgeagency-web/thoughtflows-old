@@ -17,7 +17,7 @@ const CICBanner = () => {
                     className='max-w-6xl mx-auto px-4 text-center'
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
-                    <h1
+                    <div
                         className='text-center animate-fade-in'
                         style={{
                             fontFamily: "'Outfit', sans-serif",
@@ -58,7 +58,7 @@ const CICBanner = () => {
                         >
                             Medical Coding Curriculum
                         </span>
-                    </h1>
+                    </div>
 
                     {/* Pill: Certified Inpatient Coder (CIC) · Online & Offline */}
                     <div className='mt-6 sm:mt-8 flex justify-center'>
@@ -95,7 +95,7 @@ const CICBanner = () => {
                                 }}
                             />
                             <span style={{ position: 'relative' }}>
-                                Certified Inpatient Coder (CIC) · Online &amp; Offline
+                                <h1 style={{ display: 'inline', fontSize: 'inherit', fontWeight: 'inherit', lineHeight: 'inherit', color: 'inherit', margin: 0, fontFamily: 'inherit' }}>Certified Inpatient Coder (CIC)</h1> · Online &amp; Offline
                             </span>
                         </div>
                     </div>

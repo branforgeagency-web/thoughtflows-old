@@ -59,7 +59,7 @@ export default function Blog13() {
         headline:
           "Medical Coding Course in Tamil Nadu: Is It Worth It in 2027?",
         description:
-          "Looking for a medical coding course in Tamil Nadu? Explore course fees, CPC certification, eligibility, training options and career opportunities at ThoughtFlows Academy.",
+          "Medical coding course in Tamil Nadu: course fees, CPC certification, eligibility, training options and career opportunities at ThoughtFlows Academy.",
         image:
           "https://www.thoughtflows.in/images/medical-coding-course-tamilnadu.jpg",
         datePublished: "2026-10-29",
@@ -407,7 +407,7 @@ export default function Blog13() {
         </title>
         <meta
           name="description"
-          content="Looking for a medical coding course in Tamil Nadu? Explore course fees, CPC certification, eligibility, training options and career opportunities at ThoughtFlows Academy."
+          content="Medical coding course in Tamil Nadu: course fees, CPC certification, eligibility, training options and career opportunities at ThoughtFlows Academy."
         />
         <meta
           name="keywords"
@@ -478,7 +478,7 @@ export default function Blog13() {
           <span className="inline-block bg-teal-500 text-gray-900 font-bold text-xs uppercase px-3 py-1 rounded-full mb-3 tracking-wider">
             Tamil Nadu Career Guide — 2027
           </span>
-          <h1
+          <div role="heading" aria-level="1" className="h1"
             style={{
               color: "white",
               fontSize: "32px",
@@ -487,7 +487,7 @@ export default function Blog13() {
             }}
           >
             Medical Coding Course in Tamil Nadu: Is It Worth It in 2027?
-          </h1>
+          </div>
           <div className="flex flex-wrap items-center gap-6 text-gray-300 text-sm mt-4">
             <span className="flex items-center gap-2">
               <FaUserEdit className="text-teal-400" /> By ThoughtFlows Medical

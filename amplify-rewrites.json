@@ -1207,38 +1207,38 @@
   },
   {
     "source": "/fy-2027-icd-10-cm-updates",
-    "target": "/fy-2027-icd-10-cm-updates/index.html",
-    "status": "200",
+    "target": "/blog/fy-2027-icd-10-cm-updates",
+    "status": "301",
     "condition": null
   },
   {
     "source": "/fy-2027-icd-10-cm-updates/",
-    "target": "/fy-2027-icd-10-cm-updates/index.html",
-    "status": "200",
+    "target": "/blog/fy-2027-icd-10-cm-updates",
+    "status": "301",
     "condition": null
   },
   {
     "source": "/best-medical-coding-course-in-india",
-    "target": "/best-medical-coding-course-in-india/index.html",
-    "status": "200",
+    "target": "/blog/best-medical-coding-course-in-india",
+    "status": "301",
     "condition": null
   },
   {
     "source": "/best-medical-coding-course-in-india/",
-    "target": "/best-medical-coding-course-in-india/index.html",
-    "status": "200",
+    "target": "/blog/best-medical-coding-course-in-india",
+    "status": "301",
     "condition": null
   },
   {
     "source": "/blog/best-medical-coding-course-in-india-fees-duration",
-    "target": "/blog/best-medical-coding-course-in-india-fees-duration/index.html",
-    "status": "200",
+    "target": "/blog/best-medical-coding-course-in-india",
+    "status": "301",
     "condition": null
   },
   {
     "source": "/blog/best-medical-coding-course-in-india-fees-duration/",
-    "target": "/blog/best-medical-coding-course-in-india-fees-duration/index.html",
-    "status": "200",
+    "target": "/blog/best-medical-coding-course-in-india",
+    "status": "301",
     "condition": null
   },
   {

@@ -39,7 +39,7 @@ export default function Blog11() {
     setOpenFaq(openFaq === index ? null : index);
   };
 
-  const canonicalUrl = "https://thoughtflows.in/fy-2027-icd-10-cm-updates/";
+  const canonicalUrl = "https://www.thoughtflows.in/blog/fy-2027-icd-10-cm-updates";
 
   const schemaMarkup = {
     "@context": "https://schema.org",
@@ -300,7 +300,7 @@ export default function Blog11() {
         className="hidden lg:flex"
       >
         <div style={{ width: "45%", marginTop: "90px", marginLeft: "80px", marginBottom: "40px" }}>
-          <h1
+          <div role="heading" aria-level="1" className="h1"
             style={{
               color: "white",
               fontSize: "32px",
@@ -309,7 +309,7 @@ export default function Blog11() {
             }}
           >
             FY 2027 ICD-10-CM Updates: What Medical Coders Need to Know
-          </h1>
+          </div>
           <div className="flex items-center gap-6 text-gray-300 text-sm mt-4">
             <span className="flex items-center gap-2">
               <FaUserEdit className="text-teal-400" /> ThoughtFlows Editorial Team | Medical Coding Academy

@@ -19,7 +19,7 @@ function Pune() {
       <Meta
         title="Medical Coding Course in Pune | CPC Training | Thoughtflows"
         description="Join medical coding classes in Pune at Thoughtflows. Learn ICD-10-CM, CPT & HCPCS from certified coders with CPC prep, real charts & flexible batches."
-        canonical="https://www.thoughtflows.in/medical-coding-course-pune/"
+        canonical="https://www.thoughtflows.in/medical-coding-course-pune"
       />
 
       <PuneBanner />

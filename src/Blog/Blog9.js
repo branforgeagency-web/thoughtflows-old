@@ -28,7 +28,7 @@ export default function Blog9() {
       {
         "@type": "Article",
         "headline": "Artificial Intelligence in Medical Coding: A Beginner's Guide",
-        "description": "Learn how artificial intelligence in medical coding works, its real accuracy limits, job outlook, and the skills beginners need to build an AI-ready career.",
+        "description": "How artificial intelligence in medical coding works, its real accuracy limits, job outlook and the skills beginners need for an AI-ready career.",
         "datePublished": "2026-09-26",
         "dateModified": "2026-09-26",
         "author": {
@@ -152,8 +152,8 @@ export default function Blog9() {
   return (
     <>
       <Helmet>
-        <title>AI in Medical Coding: A Beginner's Guide (2026) | ThoughtFlows</title>
-        <meta name="description" content="Learn how artificial intelligence in medical coding works, its real accuracy limits, job outlook, and the skills beginners need to build an AI-ready career." />
+        <title>AI in Medical Coding: A Beginner's Guide | ThoughtFlows</title>
+        <meta name="description" content="How artificial intelligence in medical coding works, its real accuracy limits, job outlook and the skills beginners need for an AI-ready career." />
         <link rel="canonical" href={canonicalUrl} />
         <script type="application/ld+json">
           {JSON.stringify(schemaMarkup)}
@@ -204,7 +204,7 @@ export default function Blog9() {
         className="hidden lg:flex"
       >
         <div style={{ width: "45%", marginTop: "110px", marginLeft: "80px" }}>
-          <h1
+          <div role="heading" aria-level="1" className="h1"
             style={{
               color: "white",
               fontSize: "34px",
@@ -213,7 +213,7 @@ export default function Blog9() {
             }}
           >
             Artificial Intelligence in Medical Coding: A Beginner's Guide
-          </h1>
+          </div>
           <div className="flex items-center gap-6 text-gray-300 text-sm mt-4">
             <span className="flex items-center gap-2">
               <FaUserEdit className="text-teal-400" /> Santhosh, Blogger | ThoughtFlows Medical Coding Academy

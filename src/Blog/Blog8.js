@@ -27,7 +27,7 @@ export default function Blog8() {
     <>
       <Helmet>
         <title>VETRI 108 Free Medical Coding Scholarships | ThoughtFlows</title>
-        <meta name="description" content="VETRI 108 by ThoughtFlows offers free Medical Coding scholarships, training, and placement support for graduates, freshers, and job seekers across Tamil Nadu." />
+        <meta name="description" content="VETRI 108 by ThoughtFlows offers free medical coding scholarships, training and placement support for graduates and job seekers across Tamil Nadu." />
         <link rel="canonical" href="https://www.thoughtflows.in/blog/vetri-108-free-medical-coding-scholarships" />
       </Helmet>
       
@@ -81,7 +81,7 @@ export default function Blog8() {
         }}
         className="hidden lg:flex"
       >
-        <h1
+        <div role="heading" aria-level="1" className="h1"
           style={{
             width: "45%",
             marginTop: "155px",
@@ -91,7 +91,7 @@ export default function Blog8() {
           }}
         >
           108 Free Scholarships for Future Medical Coders by ThoughtFlows
-        </h1>
+        </div>
         <div
           style={{
             background: "white",

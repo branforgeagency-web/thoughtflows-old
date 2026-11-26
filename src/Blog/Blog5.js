@@ -26,7 +26,7 @@ export default function Blog5() {
   return (
     <>
       <Meta
-        title="Exploring ICD-10-CM: Key Changes You Need to Know | ThoughtFlows"
+        title="ICD-10-CM: Key Changes You Need to Know | ThoughtFlows"
         description="Stay updated on the latest ICD-10-CM changes. ThoughtFlows breaks down key updates, new codes, and how they impact medical coding accuracy and compliance."
         canonical="https://www.thoughtflows.in/blog/exploring-icd10cm-key-changes-you-need-to-know-for-accurate-medical-coding"
       />

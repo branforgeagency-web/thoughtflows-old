@@ -54,7 +54,7 @@ function Theni() {
     <>
       <Meta
         title="Medical Coding Course in Theni | ThoughtFlows"
-        description="Build practical medical coding skills with structured training, flexible classroom and online learning, certification preparation, and placement assistance."
+        description="Build practical medical coding skills with structured training, classroom and online learning, certification preparation and placement assistance."
         canonical={PAGE_URL}
       />
       <Helmet>
