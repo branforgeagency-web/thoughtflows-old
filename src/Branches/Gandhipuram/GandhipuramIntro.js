@@ -47,6 +47,18 @@ const GandhipuramIntro = () => {
           <span className="gandhipuram-eyebrow">Foundation to Advanced</span>
           <h2>Build Medical Coding Skills From Foundation to Advanced Concepts</h2>
           <p>
+            ThoughtFlows Medical Coding Academy in Gandhipuram offers structured medical coding training
+            for graduates, freshers, job seekers, and learners from different educational backgrounds.
+          </p>
+          <p>
+            The program covers the knowledge and practical skills needed to understand medical records, assign
+            codes, follow coding guidelines, and prepare for certification. Training also includes assessments,
+            CPC preparation, and placement assistance.
+          </p>
+          <p style={{ fontWeight: 600 }}>
+            Choose classroom learning at the Gandhipuram branch or join live online training based on your schedule and preferred learning style.
+          </p>
+          <p>
             No medical background or experience with medical coding is required to join the program.
             We will cover the basics of interpreting medical documents so that you will feel comfortable
             learning the aspects of coding such as understanding diagnosis and procedure classification.

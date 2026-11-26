@@ -1,11 +1,13 @@
 import React from "react";
-import { Layers, CheckCircle2 } from "lucide-react";
+import { Layers, CheckCircle2, BookOpen } from "lucide-react";
 import Reveal from "../Theni/Reveal";
 import { mediaUrl } from '../../config/media';
+const coderImg2 = mediaUrl("images/Interiors/hopes/hopes-smart-classroom.jpg");
 const coderImg = mediaUrl("images/Interiors/hopes/hopes-creative-batch-classroom.jpg");
 
 const HopesIntro = () => {
   return (
+    <>
     <section className="hopes-section">
       <div className="hopes-wrap hopes-split">
         <Reveal x={-40} y={0} className="hopes-photo">
@@ -22,6 +24,40 @@ const HopesIntro = () => {
         <Reveal x={40} y={0}>
           <span className="hopes-eyebrow">Structured Pathway</span>
           <h2>Learn Medical Coding Step by Step</h2>
+          <p>
+            Choosing the right medical coding training can make a difference when you are starting a new career
+            or developing skills for better opportunities. ThoughtFlows Medical Coding Academy provides structured
+            learning for graduates, freshers, job seekers, working professionals and candidates looking for a career change.
+          </p>
+          <p>
+            The Medical Coding Academy in Hopes offers a learning approach that combines medical coding concepts,
+            practical exercises, assessments and CPC preparation. Learners can choose between classroom and online
+            formats based on their schedule and preferred way of learning.
+          </p>
+          <p style={{ fontWeight: 600 }}>
+            The Medical Coding Course in Hopes covers the essential areas of medical coding, including medical terminology,
+            anatomy and physiology, ICD-10-CM, CPT, HCPCS, modifiers and coding guidelines. Practical learning and regular
+            assessments help learners move from basic concepts towards applying coding knowledge to different cases.
+          </p>
+        </Reveal>
+      </div>
+    </section>
+    <section className="hopes-section" style={{ paddingTop: 0 }}>
+      <div className="hopes-wrap hopes-split rev">
+        <Reveal x={40} y={0} className="hopes-photo">
+          <img src={coderImg2} alt="Smart classroom training at the Hopes branch" />
+          <div className="badge">
+            <span className="ic"><BookOpen size={22} /></span>
+            <div>
+              <strong>Classroom &amp; Online</strong>
+              <small>Learn in the format that suits you</small>
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal x={-40} y={0}>
+          <span className="hopes-eyebrow">Course Progression</span>
+          <h2>From Terminology to Confident Coding</h2>
           <p>
             Medical coding is the art of translating the services and procedures performed by a patient into
             a Universal Code. This code is then sent to insurance companies to process payment. The terminology
@@ -44,6 +80,7 @@ const HopesIntro = () => {
         </Reveal>
       </div>
     </section>
+    </>
   );
 };
 
