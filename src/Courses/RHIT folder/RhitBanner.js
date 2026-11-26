@@ -17,7 +17,7 @@ const RhitBanner = () => {
                     className='max-w-6xl mx-auto px-4 text-center'
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
-                    <h1
+                    <div
                         className='text-center animate-fade-in'
                         style={{
                             fontFamily: "'Outfit', sans-serif",
@@ -58,7 +58,7 @@ const RhitBanner = () => {
                         >
                             Medical Coding Curriculum
                         </span>
-                    </h1>
+                    </div>
 
                     {/* Pill: Registered Health Information Technician (RHIT) · Online & Offline */}
                     <div className='mt-6 sm:mt-8 flex justify-center'>
@@ -95,7 +95,7 @@ const RhitBanner = () => {
                                 }}
                             />
                             <span style={{ position: 'relative' }}>
-                                Registered Health Information Technician (RHIT) · Online &amp; Offline
+                                <h1 style={{ display: 'inline', fontSize: 'inherit', fontWeight: 'inherit', lineHeight: 'inherit', color: 'inherit', margin: 0, fontFamily: 'inherit' }}>Registered Health Information Technician (RHIT)</h1> · Online &amp; Offline
                             </span>
                         </div>
                     </div>

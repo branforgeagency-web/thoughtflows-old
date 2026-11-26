@@ -17,7 +17,7 @@ const CCSBanner = () => {
                     className='max-w-6xl mx-auto px-4 text-center'
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
-                    <h1
+                    <div
                         className='text-center animate-fade-in'
                         style={{
                             fontFamily: "'Outfit', sans-serif",
@@ -58,7 +58,7 @@ const CCSBanner = () => {
                         >
                             Medical Coding Curriculum
                         </span>
-                    </h1>
+                    </div>
 
                     {/* Pill: Certified Coding Specialist (CCS) · Online & Offline */}
                     <div className='mt-6 sm:mt-8 flex justify-center'>
@@ -95,7 +95,7 @@ const CCSBanner = () => {
                                 }}
                             />
                             <span style={{ position: 'relative' }}>
-                                Certified Coding Specialist (CCS) · Online &amp; Offline
+                                <h1 style={{ display: 'inline', fontSize: 'inherit', fontWeight: 'inherit', lineHeight: 'inherit', color: 'inherit', margin: 0, fontFamily: 'inherit' }}>Certified Coding Specialist (CCS)</h1> · Online &amp; Offline
                             </span>
                         </div>
                     </div>

@@ -24,7 +24,7 @@ const MaharashtraLanding = () => {
       badge: "IT & Healthcare Hub",
       address: "1st floor, Trios, Indialand Global Tech Park, Phase 1, Rajiv Gandhi Infotech Park, Hinjawadi, Maharashtra 411057",
       phone: "072195 57734",
-      path: "/medical-coding-course-pune/",
+      path: "/medical-coding-course-pune",
       img: puneImg,
       features: [
         "Proximity to Hinjawadi IT Park Phase 1",

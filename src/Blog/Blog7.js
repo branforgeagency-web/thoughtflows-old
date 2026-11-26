@@ -26,7 +26,7 @@ export default function Blog6() {
   return (
     <>
       <Meta
-        title="Medical Coding Career Path: Opportunities and Growth | ThoughtFlows"
+        title="Medical Coding Career Path & Growth | ThoughtFlows"
         description="Explore the medical coding career path — from entry-level roles to specializations and advancement. ThoughtFlows guides you through every stage of growth."
         canonical="https://www.thoughtflows.in/blog/medical-coding-career-path-opportunities-and-growth-in-healthcare"
       />

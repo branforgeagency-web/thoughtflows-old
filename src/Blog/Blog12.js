@@ -441,10 +441,10 @@ export default function Blog12() {
   return (
     <>
       <Helmet>
-        <title>Best Medical Coding Course in India: Fees, Duration & How to Choose</title>
+        <title>Best Medical Coding Course in India: Fees & Duration</title>
         <meta
           name="description"
-          content="Looking for the best medical coding course in India? Discover all-inclusive fees, realistic course durations, eligibility criteria, AAPC CPC certification details, and how to verify placement claims."
+          content="Best medical coding course in India? Compare fees, course duration, eligibility and AAPC CPC certification, and learn how to verify placement claims."
         />
         <meta
           name="keywords"
@@ -506,7 +506,7 @@ export default function Blog12() {
           <span className="inline-block bg-teal-500 text-gray-900 font-bold text-xs uppercase px-3 py-1 rounded-full mb-3 tracking-wider">
             Comprehensive Career Guide
           </span>
-          <h1
+          <div role="heading" aria-level="1" className="h1"
             style={{
               color: "white",
               fontSize: "32px",
@@ -515,7 +515,7 @@ export default function Blog12() {
             }}
           >
             Best Medical Coding Course in India — Fees, Duration & How to Choose
-          </h1>
+          </div>
           <div className="flex flex-wrap items-center gap-6 text-gray-300 text-sm mt-4">
             <span className="flex items-center gap-2">
               <FaUserEdit className="text-teal-400" /> ThoughtFlows Academy Research Team

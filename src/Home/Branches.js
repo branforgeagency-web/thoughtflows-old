@@ -43,7 +43,7 @@ const branchList = [
   { name: "Theni", photo: theniPhoto, region: "Tamil Nadu", img: theniImg, path: "/medical-coding-course-theni" },
   { name: "Tirupati", region: "Andhra Pradesh", img: tirupatiImg, path: "/Expert-Medical-Coding-Tirupathi" },
   { name: "Vizag", region: "Andhra Pradesh", img: vizagImg, path: "/Innovative-Medical-Coding-Vizag" },
-  { name: "Pune", photo: punePhoto, region: "Maharashtra", img: puneImg, path: "/medical-coding-course-pune/" },
+  { name: "Pune", photo: punePhoto, region: "Maharashtra", img: puneImg, path: "/medical-coding-course-pune" },
   { name: "Kolhapur", photo: kolhapurPhoto, region: "Maharashtra", img: kolhapurImg, path: "/Medical-Coding-Training-Kolhapur" },
 ];
 

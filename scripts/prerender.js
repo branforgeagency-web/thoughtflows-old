@@ -18,12 +18,8 @@ const SETTLE_MS = Number(process.env.PRERENDER_SETTLE_MS || 3500); // time for d
 const CONCURRENCY = Number(process.env.PRERENDER_CONCURRENCY || 3);
 
 // Routes that exist in App.js but aren't in sitemap.xml (aliases kept as real pages)
-const EXTRA_ROUTES = [
-  '/fy-2027-icd-10-cm-updates',
-  '/best-medical-coding-course-in-india',
-  '/blog/best-medical-coding-course-in-india-fees-duration',
-  '/aapc-ceus',
-];
+const EXTRA_ROUTES = [];
+// (Old aliases such as /fy-2027-icd-10-cm-updates and /aapc-ceus now 301 to their /blog/ URL in amplify-rewrites.json)
 // Never prerender these
 const SKIP_ROUTES = new Set(['/admin']);
 
@@ -122,8 +118,38 @@ function cleanUp(document) {
   if (document.querySelector('link[rel="canonical"][data-rh]')) {
     document.querySelectorAll('link[rel="canonical"]:not([data-rh])').forEach((d) => d.remove());
   }
+  // Social tags: every page gets its own og:/twitter: title, description and URL
+  // (the template only carries the homepage's values)
+  syncSocialTags(document);
   // Drop jsdom-only leftovers
   document.querySelectorAll('iframe[src*="facebook"], iframe[src*="google"]').forEach((n) => n.remove());
+}
+
+function syncSocialTags(document) {
+  const head = document.head;
+  const titleEl = document.querySelector('title');
+  const title = titleEl ? titleEl.textContent.trim() : '';
+  const descEl = document.querySelector('meta[name="description"]');
+  const desc = descEl ? (descEl.getAttribute('content') || '').trim() : '';
+  const canEl = document.querySelector('link[rel="canonical"]');
+  let url = canEl ? canEl.getAttribute('href') : '';
+  if (!url) {
+    const p = document.defaultView.location.pathname.replace(/\/+$/, '');
+    url = ORIGIN + (p || '/');
+  }
+  const set = (attr, key, value) => {
+    if (!value) return;
+    const all = [...head.querySelectorAll(`meta[${attr}="${key}"]`)];
+    all.slice(1).forEach((m) => m.remove());
+    let m = all[0];
+    if (!m) { m = document.createElement('meta'); m.setAttribute(attr, key); head.appendChild(m); }
+    m.setAttribute('content', value);
+  };
+  set('property', 'og:title', title);
+  set('property', 'og:description', desc);
+  set('property', 'og:url', url);
+  set('name', 'twitter:title', title);
+  set('name', 'twitter:description', desc);
 }
 
 function carryOverJsonLd(document, existingHtml) {

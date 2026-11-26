@@ -12,7 +12,13 @@ const Career = () => {
                 description="Explore medical coding career opportunities with ThoughtFlows. Get trained, certified, and placed in top healthcare companies with our expert-led programs."
                 canonical="https://www.thoughtflows.in/career"
             />
-            <div>Career</div>
+            <section className="container py-5" style={{ marginTop: '100px' }}>
+                <h1 className="h2 mb-3">Medical Coding Careers at ThoughtFlows</h1>
+                <p>
+                    Explore medical coding career opportunities with ThoughtFlows Academy. Get trained, certified
+                    and placed in leading healthcare companies through our expert-led programs.
+                </p>
+            </section>
         </>
     )
 }

@@ -264,7 +264,7 @@ export default function Blog14() {
           <span className="inline-block bg-teal-500 text-gray-900 font-bold text-xs uppercase px-3 py-1 rounded-full mb-3 tracking-wider">
             AAPC Credential Maintenance Guide
           </span>
-          <h1
+          <div role="heading" aria-level="1" className="h1"
             style={{
               color: "white",
               fontSize: "30px",
@@ -273,7 +273,7 @@ export default function Blog14() {
             }}
           >
             Know About Your CEUs: Requirements, Free Learning Options and How to Maintain Your Certification
-          </h1>
+          </div>
           <div className="flex flex-wrap items-center gap-6 text-gray-300 text-sm mt-4">
             <span className="flex items-center gap-2">
               <FaUserEdit className="text-teal-400" /> By ThoughtFlows Medical Coding Academy

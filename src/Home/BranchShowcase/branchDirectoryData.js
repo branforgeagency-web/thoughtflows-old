@@ -40,7 +40,7 @@ const BRANCH_LIST = [
   { key: "dilsukhnagar", city: "Hyderabad", state: "Telangana", img: dilsukhnagarImg, path: "/Professional-Medical-Coding-Dilsukhnagar" },
   { key: "tirupati", city: "Tirupati", state: "Andhra Pradesh", img: tirupatiImg, path: "/Expert-Medical-Coding-Tirupathi" },
   { key: "vizag", city: "Visakhapatnam", state: "Andhra Pradesh", img: vizagImg, path: "/Innovative-Medical-Coding-Vizag" },
-  { key: "pune", city: "Pune", state: "Maharashtra", img: puneImg, path: "/medical-coding-course-pune/" },
+  { key: "pune", city: "Pune", state: "Maharashtra", img: puneImg, path: "/medical-coding-course-pune" },
   { key: "kolhapur", city: "Kolhapur", state: "Maharashtra", img: kolhapurImg, path: "/Medical-Coding-Training-Kolhapur" },
 ];
 

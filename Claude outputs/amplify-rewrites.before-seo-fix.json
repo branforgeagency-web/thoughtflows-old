@@ -1,0 +1,1262 @@
+[
+  {
+    "source": "/anesthesia",
+    "target": "/anesesthesia",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/anesthesia/",
+    "target": "/anesesthesia",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/home",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/home/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/coimbatore",
+    "target": "/medical-coding-training-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/coimbatore/",
+    "target": "/medical-coding-training-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-coimbatore",
+    "target": "/medical-coding-training-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-coimbatore/",
+    "target": "/medical-coding-training-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-kerala",
+    "target": "/kerala",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-kerala/",
+    "target": "/kerala",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-hyderabad",
+    "target": "/hyderabad",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-hyderabad/",
+    "target": "/hyderabad",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-maharashtra",
+    "target": "/maharashtra",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-maharashtra/",
+    "target": "/maharashtra",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/saravanampatti",
+    "target": "/medical-coding-institute-saravanampatti-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/saravanampatti/",
+    "target": "/medical-coding-institute-saravanampatti-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/Top-Medical-Coding-Training-Saravanampatti",
+    "target": "/medical-coding-institute-saravanampatti-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/Top-Medical-Coding-Training-Saravanampatti/",
+    "target": "/medical-coding-institute-saravanampatti-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-in-saravanampatti",
+    "target": "/medical-coding-institute-saravanampatti-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-in-saravanampatti/",
+    "target": "/medical-coding-institute-saravanampatti-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/hopes",
+    "target": "/medical-coding-classes-hopes-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/hopes/",
+    "target": "/medical-coding-classes-hopes-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/Medical-Coding-Excellence-at-Hopes",
+    "target": "/medical-coding-classes-hopes-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/Medical-Coding-Excellence-at-Hopes/",
+    "target": "/medical-coding-classes-hopes-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-academy-in-hopes",
+    "target": "/medical-coding-classes-hopes-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-academy-in-hopes/",
+    "target": "/medical-coding-classes-hopes-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/gandhipuram",
+    "target": "/medical-coding-course-gandhipuram-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/gandhipuram/",
+    "target": "/medical-coding-course-gandhipuram-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/Premier-Medical-Coding-Institute-Gandhipuram",
+    "target": "/medical-coding-course-gandhipuram-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/Premier-Medical-Coding-Institute-Gandhipuram/",
+    "target": "/medical-coding-course-gandhipuram-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-academy-gandhipuram",
+    "target": "/medical-coding-course-gandhipuram-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-academy-gandhipuram/",
+    "target": "/medical-coding-course-gandhipuram-coimbatore",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/kolhapur",
+    "target": "/Medical-Coding-Training-Kolhapur",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/kolhapur/",
+    "target": "/Medical-Coding-Training-Kolhapur",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/Advanced-Medical-Coding-Pune",
+    "target": "/medical-coding-course-pune",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/Advanced-Medical-Coding-Pune/",
+    "target": "/medical-coding-course-pune",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/pune",
+    "target": "/medical-coding-course-pune",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/pune/",
+    "target": "/medical-coding-course-pune",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/theni",
+    "target": "/medical-coding-course-theni",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/theni/",
+    "target": "/medical-coding-course-theni",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/",
+    "target": "/index-home.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/about",
+    "target": "/about/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/about/",
+    "target": "/about/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog",
+    "target": "/blog/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/",
+    "target": "/blog/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/how-to-prepare-for-the-cpc-exam-expert-tips-and-strategies-for-success",
+    "target": "/blog/how-to-prepare-for-the-cpc-exam-expert-tips-and-strategies-for-success/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/how-to-prepare-for-the-cpc-exam-expert-tips-and-strategies-for-success/",
+    "target": "/blog/how-to-prepare-for-the-cpc-exam-expert-tips-and-strategies-for-success/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/exploring-icd10cm-key-changes-you-need-to-know-for-accurate-medical-coding",
+    "target": "/blog/exploring-icd10cm-key-changes-you-need-to-know-for-accurate-medical-coding/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/exploring-icd10cm-key-changes-you-need-to-know-for-accurate-medical-coding/",
+    "target": "/blog/exploring-icd10cm-key-changes-you-need-to-know-for-accurate-medical-coding/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/the-role-of-medical-coders-in-modern-healthcare-essential-insights",
+    "target": "/blog/the-role-of-medical-coders-in-modern-healthcare-essential-insights/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/the-role-of-medical-coders-in-modern-healthcare-essential-insights/",
+    "target": "/blog/the-role-of-medical-coders-in-modern-healthcare-essential-insights/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/medical-coding-career-path-opportunities-and-growth-in-healthcare",
+    "target": "/blog/medical-coding-career-path-opportunities-and-growth-in-healthcare/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/medical-coding-career-path-opportunities-and-growth-in-healthcare/",
+    "target": "/blog/medical-coding-career-path-opportunities-and-growth-in-healthcare/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/contact",
+    "target": "/contact/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/contact/",
+    "target": "/contact/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/career",
+    "target": "/career/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/career/",
+    "target": "/career/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/cpc",
+    "target": "/cpc/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/cpc/",
+    "target": "/cpc/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/what-is-medical-coding-complete-guide-for-beginners-thoughtflows",
+    "target": "/blog/what-is-medical-coding-complete-guide-for-beginners-thoughtflows/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/what-is-medical-coding-complete-guide-for-beginners-thoughtflows/",
+    "target": "/blog/what-is-medical-coding-complete-guide-for-beginners-thoughtflows/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/why-medical-coding-is-the-backbone-of-the-healthcare-industry",
+    "target": "/blog/why-medical-coding-is-the-backbone-of-the-healthcare-industry/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/why-medical-coding-is-the-backbone-of-the-healthcare-industry/",
+    "target": "/blog/why-medical-coding-is-the-backbone-of-the-healthcare-industry/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/top-5-medical-coding-mistakes-and-how-to-avoid-them-for-a-successful-career",
+    "target": "/blog/top-5-medical-coding-mistakes-and-how-to-avoid-them-for-a-successful-career/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/top-5-medical-coding-mistakes-and-how-to-avoid-them-for-a-successful-career/",
+    "target": "/blog/top-5-medical-coding-mistakes-and-how-to-avoid-them-for-a-successful-career/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/vetri-108-free-medical-coding-scholarships",
+    "target": "/blog/vetri-108-free-medical-coding-scholarships/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/vetri-108-free-medical-coding-scholarships/",
+    "target": "/blog/vetri-108-free-medical-coding-scholarships/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/artificial-intelligence-in-medical-coding-a-beginners-guide",
+    "target": "/blog/artificial-intelligence-in-medical-coding-a-beginners-guide/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/artificial-intelligence-in-medical-coding-a-beginners-guide/",
+    "target": "/blog/artificial-intelligence-in-medical-coding-a-beginners-guide/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/cic",
+    "target": "/cic/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/cic/",
+    "target": "/cic/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/coc",
+    "target": "/coc/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/coc/",
+    "target": "/coc/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/cpma",
+    "target": "/cpma/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/cpma/",
+    "target": "/cpma/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/crc",
+    "target": "/crc/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/crc/",
+    "target": "/crc/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/surgery",
+    "target": "/surgery/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/surgery/",
+    "target": "/surgery/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/ed",
+    "target": "/ed/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/ed/",
+    "target": "/ed/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/em",
+    "target": "/em/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/em/",
+    "target": "/em/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/ccc",
+    "target": "/ccc/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/ccc/",
+    "target": "/ccc/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/radiology",
+    "target": "/radiology/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/radiology/",
+    "target": "/radiology/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/anesesthesia",
+    "target": "/anesesthesia/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/anesesthesia/",
+    "target": "/anesesthesia/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-institute-saravanampatti-coimbatore",
+    "target": "/medical-coding-institute-saravanampatti-coimbatore/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-institute-saravanampatti-coimbatore/",
+    "target": "/medical-coding-institute-saravanampatti-coimbatore/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/Expert-Medical-Coding-Tirupathi",
+    "target": "/Expert-Medical-Coding-Tirupathi/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/Expert-Medical-Coding-Tirupathi/",
+    "target": "/Expert-Medical-Coding-Tirupathi/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-classes-hopes-coimbatore",
+    "target": "/medical-coding-classes-hopes-coimbatore/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-classes-hopes-coimbatore/",
+    "target": "/medical-coding-classes-hopes-coimbatore/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-gandhipuram-coimbatore",
+    "target": "/medical-coding-course-gandhipuram-coimbatore/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-gandhipuram-coimbatore/",
+    "target": "/medical-coding-course-gandhipuram-coimbatore/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/Medical-Coding-Academy-Kochi",
+    "target": "/Medical-Coding-Academy-Kochi/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/Medical-Coding-Academy-Kochi/",
+    "target": "/Medical-Coding-Academy-Kochi/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/Advanced-Medical-Coding-Tiruvandrum",
+    "target": "/Advanced-Medical-Coding-Tiruvandrum/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/Advanced-Medical-Coding-Tiruvandrum/",
+    "target": "/Advanced-Medical-Coding-Tiruvandrum/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/Trusted-Medical-Coding-Ameerpet",
+    "target": "/Trusted-Medical-Coding-Ameerpet/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/Trusted-Medical-Coding-Ameerpet/",
+    "target": "/Trusted-Medical-Coding-Ameerpet/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/Innovative-Medical-Coding-Vizag",
+    "target": "/Innovative-Medical-Coding-Vizag/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/Innovative-Medical-Coding-Vizag/",
+    "target": "/Innovative-Medical-Coding-Vizag/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/Career-Focused-Medical-Coding-Trichy",
+    "target": "/Career-Focused-Medical-Coding-Trichy/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/Career-Focused-Medical-Coding-Trichy/",
+    "target": "/Career-Focused-Medical-Coding-Trichy/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/ip-drg",
+    "target": "/ip-drg/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/ip-drg/",
+    "target": "/ip-drg/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/ccs",
+    "target": "/ccs/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/ccs/",
+    "target": "/ccs/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/rhia",
+    "target": "/rhia/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/rhia/",
+    "target": "/rhia/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/rhit",
+    "target": "/rhit/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/rhit/",
+    "target": "/rhit/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/him",
+    "target": "/him/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/him/",
+    "target": "/him/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/ccs-p",
+    "target": "/ccs-p/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/ccs-p/",
+    "target": "/ccs-p/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/cpb",
+    "target": "/cpb/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/cpb/",
+    "target": "/cpb/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/cedc",
+    "target": "/cedc/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/cedc/",
+    "target": "/cedc/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/cemc",
+    "target": "/cemc/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/cemc/",
+    "target": "/cemc/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/cdeo",
+    "target": "/cdeo/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/cdeo/",
+    "target": "/cdeo/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/cdei",
+    "target": "/cdei/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/cdei/",
+    "target": "/cdei/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/cppm",
+    "target": "/cppm/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/cppm/",
+    "target": "/cppm/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/hcc",
+    "target": "/hcc/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/hcc/",
+    "target": "/hcc/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/ivr",
+    "target": "/ivr/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/ivr/",
+    "target": "/ivr/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/cdi",
+    "target": "/cdi/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/cdi/",
+    "target": "/cdi/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/Professional-Medical-Coding-Dilsukhnagar",
+    "target": "/Professional-Medical-Coding-Dilsukhnagar/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/Professional-Medical-Coding-Dilsukhnagar/",
+    "target": "/Professional-Medical-Coding-Dilsukhnagar/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/Future-Ready-Medical-Coding-Salem",
+    "target": "/Future-Ready-Medical-Coding-Salem/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/Future-Ready-Medical-Coding-Salem/",
+    "target": "/Future-Ready-Medical-Coding-Salem/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/ourteam",
+    "target": "/ourteam/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/ourteam/",
+    "target": "/ourteam/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/gallery",
+    "target": "/gallery/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/gallery/",
+    "target": "/gallery/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/placements",
+    "target": "/placements/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/placements/",
+    "target": "/placements/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/vetri-108",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/vetri-108/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-chennai",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-chennai/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-coimbatore",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-coimbatore/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-dindigul",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-dindigul/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-erode",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-erode/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-madurai",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-madurai/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-salem",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-salem/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-thanjavur",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-thanjavur/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-tirunelveli",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-tirunelveli/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-trichy",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-trichy/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-vellore",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/free-medical-coding-course-vellore/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/ai-medical-coding",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/ai-medical-coding/",
+    "target": "/",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/aapc-ceus",
+    "target": "/blog/aapc-ceus",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/aapc-ceus/",
+    "target": "/blog/aapc-ceus",
+    "status": "301",
+    "condition": null
+  },
+  {
+    "source": "/placements/2024",
+    "target": "/placements/2024/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/placements/2024/",
+    "target": "/placements/2024/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/placements/2023",
+    "target": "/placements/2023/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/placements/2023/",
+    "target": "/placements/2023/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/placements/2022",
+    "target": "/placements/2022/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/placements/2022/",
+    "target": "/placements/2022/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/Medical-Coding-Training-Kolhapur",
+    "target": "/Medical-Coding-Training-Kolhapur/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/Medical-Coding-Training-Kolhapur/",
+    "target": "/Medical-Coding-Training-Kolhapur/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-pune",
+    "target": "/medical-coding-course-pune/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-pune/",
+    "target": "/medical-coding-course-pune/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-theni",
+    "target": "/medical-coding-course-theni/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-course-theni/",
+    "target": "/medical-coding-course-theni/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-training-coimbatore",
+    "target": "/medical-coding-training-coimbatore/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/medical-coding-training-coimbatore/",
+    "target": "/medical-coding-training-coimbatore/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/kerala",
+    "target": "/kerala/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/kerala/",
+    "target": "/kerala/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/hyderabad",
+    "target": "/hyderabad/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/hyderabad/",
+    "target": "/hyderabad/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/maharashtra",
+    "target": "/maharashtra/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/maharashtra/",
+    "target": "/maharashtra/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/fy-2027-icd-10-cm-updates",
+    "target": "/blog/fy-2027-icd-10-cm-updates/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/fy-2027-icd-10-cm-updates/",
+    "target": "/blog/fy-2027-icd-10-cm-updates/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/certified-ai-medical-coder",
+    "target": "/blog/certified-ai-medical-coder/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/certified-ai-medical-coder/",
+    "target": "/blog/certified-ai-medical-coder/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/medical-coding-course-in-tamilnadu",
+    "target": "/blog/medical-coding-course-in-tamilnadu/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/medical-coding-course-in-tamilnadu/",
+    "target": "/blog/medical-coding-course-in-tamilnadu/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/best-medical-coding-course-in-india",
+    "target": "/blog/best-medical-coding-course-in-india/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/best-medical-coding-course-in-india/",
+    "target": "/blog/best-medical-coding-course-in-india/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/fy-2027-icd-10-cm-updates",
+    "target": "/fy-2027-icd-10-cm-updates/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/fy-2027-icd-10-cm-updates/",
+    "target": "/fy-2027-icd-10-cm-updates/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/best-medical-coding-course-in-india",
+    "target": "/best-medical-coding-course-in-india/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/best-medical-coding-course-in-india/",
+    "target": "/best-medical-coding-course-in-india/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/best-medical-coding-course-in-india-fees-duration",
+    "target": "/blog/best-medical-coding-course-in-india-fees-duration/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/best-medical-coding-course-in-india-fees-duration/",
+    "target": "/blog/best-medical-coding-course-in-india-fees-duration/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/aapc-ceus",
+    "target": "/blog/aapc-ceus/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/blog/aapc-ceus/",
+    "target": "/blog/aapc-ceus/index.html",
+    "status": "200",
+    "condition": null
+  },
+  {
+    "source": "/<*>",
+    "target": "/index.html",
+    "status": "404-200",
+    "condition": null
+  }
+]

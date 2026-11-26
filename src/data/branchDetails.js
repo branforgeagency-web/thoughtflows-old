@@ -318,7 +318,7 @@ export const regionBranches = {
         phone: '072195 57734',
         phoneClean: '+917219557734',
         email: 'thoughtflowsinfo@gmail.com',
-        path: '/medical-coding-course-pune/'
+        path: '/medical-coding-course-pune'
       },
       {
         name: 'Kolhapur Branch',

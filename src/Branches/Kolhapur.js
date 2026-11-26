@@ -22,7 +22,7 @@ function Kolhapur() {
     <>
       <Meta
         title="Medical Coding Course in Kolhapur | ThoughtFlows Academy"
-        description="Advance your healthcare career with ThoughtFlows Medical Coding Academy in Kolhapur — expert-led CPC training, practical clinical charts, and 100% placement support."
+        description="Medical coding course in Kolhapur by ThoughtFlows — expert-led CPC training, practical clinical charts and 100% placement support."
         canonical="https://www.thoughtflows.in/Medical-Coding-Training-Kolhapur"
       />
 

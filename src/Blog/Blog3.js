@@ -34,7 +34,7 @@ export default function Blog3() {
   return (
     <>
       <Meta
-        title="Top 5 Medical Coding Mistakes and How to Avoid Them | ThoughtFlows"
+        title="Top 5 Medical Coding Mistakes & How to Avoid Them"
         description="Learn the top 5 medical coding mistakes — from incorrect codes to compliance issues — and get expert tips to avoid them for a successful coding career."
         canonical="https://www.thoughtflows.in/blog/top-5-medical-coding-mistakes-and-how-to-avoid-them-for-a-successful-career"
       />

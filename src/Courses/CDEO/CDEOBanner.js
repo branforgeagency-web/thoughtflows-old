@@ -17,7 +17,7 @@ const CDEOBanner = () => {
                     className='max-w-6xl mx-auto px-4 text-center'
                     style={{ fontFamily: "'Outfit', sans-serif" }}
                 >
-                    <h1
+                    <div
                         className='text-center animate-fade-in'
                         style={{
                             fontFamily: "'Outfit', sans-serif",
@@ -58,7 +58,7 @@ const CDEOBanner = () => {
                         >
                             Clinical Documentation Curriculum
                         </span>
-                    </h1>
+                    </div>
 
                     {/* Pill: Certified Documentation Expert Outpatient (CDEO) · Online & Offline */}
                     <div className='mt-6 sm:mt-8 flex justify-center'>
@@ -95,7 +95,7 @@ const CDEOBanner = () => {
                                 }}
                             />
                             <span style={{ position: 'relative' }}>
-                                Certified Documentation Expert Outpatient (CDEO) · Online &amp; Offline
+                                <h1 style={{ display: 'inline', fontSize: 'inherit', fontWeight: 'inherit', lineHeight: 'inherit', color: 'inherit', margin: 0, fontFamily: 'inherit' }}>Certified Documentation Expert Outpatient (CDEO)</h1> · Online &amp; Offline
                             </span>
                         </div>
                     </div>

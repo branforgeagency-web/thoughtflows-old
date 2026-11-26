@@ -29,7 +29,7 @@ export default function Blog4() {
   return (
     <>
       <Meta
-        title="How to Prepare for the CPC Exam: Expert Tips and Strategies | ThoughtFlows"
+        title="How to Prepare for the CPC Exam: Expert Tips | ThoughtFlows"
         description="Ace the CPC exam with expert preparation tips from ThoughtFlows — covering study plans, key topics, practice exams, and time management strategies."
         canonical="https://www.thoughtflows.in/blog/how-to-prepare-for-the-cpc-exam-expert-tips-and-strategies-for-success"
       />

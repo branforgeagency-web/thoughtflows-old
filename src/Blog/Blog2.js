@@ -137,8 +137,8 @@ export default function Blog2() {
   return (
     <>
       <Meta
-        title="Why Medical Coding is the Backbone of the Healthcare Industry | ThoughtFlows"
-        description="Explore why medical coding is essential to healthcare — from billing accuracy to compliance, patient care, and research. Learn how ThoughtFlows trains future coders."
+        title="Medical Coding: Backbone of Healthcare | ThoughtFlows"
+        description="Why medical coding is essential to healthcare — billing accuracy, compliance, patient care and research — and how ThoughtFlows trains future coders."
         canonical="https://www.thoughtflows.in/blog/why-medical-coding-is-the-backbone-of-the-healthcare-industry"
       />
       <div
