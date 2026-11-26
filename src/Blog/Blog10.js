@@ -222,7 +222,7 @@ export default function Blog10() {
             lineHeight: "1.3",
           }}
         >
-          Certified AI Medical Coder: Why Your Next Interview Won't Ask a Single ICD-10 Question
+          Certified AI Medical Coder: Why Interviews Skip ICD-10 Questions
         </h1>
         <div className="flex flex-wrap justify-center items-center gap-4 text-gray-300 text-sm pb-4 px-4">
           <span className="flex items-center gap-1">
@@ -254,7 +254,7 @@ export default function Blog10() {
               lineHeight: "1.35",
             }}
           >
-            Certified AI Medical Coder: Why Your Next Interview Won't Ask a Single ICD-10 Question
+            Certified AI Medical Coder: Why Interviews Skip ICD-10 Questions
           </div>
           <div className="flex items-center gap-6 text-gray-300 text-sm mt-4">
             <span className="flex items-center gap-2">

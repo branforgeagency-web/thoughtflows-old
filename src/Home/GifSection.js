@@ -55,7 +55,7 @@ const GifSection = () => {
                             <span className='tf-why-icon'>
                                 <img src={f.img} alt={f.alt} />
                             </span>
-                            <h3>{f.title}</h3>
+                            <p className="h3">{f.title}</p>
                             <p>{f.text}</p>
                         </div>
                     ))}

@@ -11,7 +11,7 @@ function KochiAbout() {
         <div className="trivandrum-abt-1">
           <img src={labs} alt="labs"  style={{width:"300px", borderRadius: "15px", objectFit: "cover"}}/>
           <div>
-            <h2 className="highlight" style={{marginBottom: "20px"}}>Why Medical Coding is Gaining Popularity Among Students and Professionals in Kochi</h2>
+            <h2 className="highlight" style={{marginBottom: "20px"}}>Why Medical Coding is Gaining Popularity in Kochi</h2>
             <p style={{ fontSize: "16px", textAlign: "justify", lineHeight: "26px" }}>
               Kochi is one of Kerala's major healthcare and business hubs, with growing opportunities in healthcare support services and revenue cycle management. As awareness of healthcare careers continues to increase, many graduates and professionals in Kochi are exploring Medical Coding as a career path that combines healthcare knowledge with professional growth opportunities.
             </p>
@@ -86,7 +86,7 @@ function KochiAbout() {
           <div className="text-center mb-12">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
               Medical Coding Training in Kochi for{' '}
-              <span style={{ color: '#097D8A' }}>Graduates, Professionals & Career Switchers</span>
+              <span style={{ color: '#097D8A' }}>Graduates & Professionals</span>
             </h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
               Whether you are a recent graduate, a working professional, or planning a career restart — Medical Coding offers a structured pathway into the healthcare industry.

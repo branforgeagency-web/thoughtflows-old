@@ -47,7 +47,7 @@ export default function Blog6() {
         }}
         className="  lg:hidden "
       >
-        <h2
+        <div role="heading" aria-level="1" className="h2"
           style={{
             padding: "50px",
             color: "white",
@@ -56,7 +56,7 @@ export default function Blog6() {
           }}
         >
           The Role of Medical Coders in Modern Healthcare
-        </h2>
+        </div>
         <div
           style={{
             background: "white",

@@ -221,6 +221,13 @@ form {
   font-family: var(--para-font);
 }
 
+/* Text styled like a heading but not marked up as one (keeps the page's heading order clean
+   for SEO/accessibility): use the heading font, same as real h1-h6 */
+p.h1, p.h2, p.h3, p.h4, p.h5, p.h6,
+div.h1, div.h2, div.h3, div.h4, div.h5, div.h6 {
+  font-family: var(--primary-font);
+}
+
 .container {
   max-width: 1400px;
   padding: 0 20px;
@@ -504,7 +511,8 @@ body {
   width: 650px;
 }
 
-.welcome-section h5 {
+.welcome-section h5,
+.welcome-section .h5 {
   color: var(--small-heading);
   font-size: 24px;
   font-family: 'Crimson Text', serif;
@@ -609,7 +617,8 @@ lj9n m .small-column {
   font-weight: 500;
 }
 
-.popular-courses h5 {
+.popular-courses h5,
+.popular-courses p.h5 {
   color: var(--small-heading);
   font-size: 24px;
   font-family: 'Crimson Text', serif;
@@ -4814,7 +4823,8 @@ ul.menu.open {
 
 .tf-why-icon img { width: 48px; height: 48px; object-fit: contain; }
 
-.tf-why-item h3 {
+.tf-why-item h3,
+.tf-why-item .h3 {
   color: #ffffff;
   font-size: 18px;
   font-weight: 600;
@@ -7688,4 +7698,18 @@ html, body {
   clip: rect(0, 0, 0, 0) !important;
   white-space: nowrap !important;
   border: 0 !important;
+}
+
+/* Former <h5>/<h3> now rendered as <p class="h5|h3"> so the page's <h1> is its first heading.
+   Keep them looking exactly like the old headings (undo the generic "section p" rules). */
+.welcome-section p.h5 {
+  font-size: 24px !important;
+  line-height: 1.2;
+  font-weight: 500;
+  font-family: 'Crimson Text', serif;
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+.tf-why-item p.h3 {
+  line-height: 1.2;
 }

@@ -13,7 +13,7 @@ const HyderabadCore = () => {
             <h2 className='m-3'>Our Core Values</h2>
             <div className="features-grid">
                 <div style={{ paddingTop: "" }}>
-                    <h2>Behind the training is a set of values that guide how we work with every student who joins us.</h2>
+                    <h2>The values that guide how we work with every student</h2>
                 </div>
                 <div className="feature-card purple">
                     <img src={passion} alt='passion' />

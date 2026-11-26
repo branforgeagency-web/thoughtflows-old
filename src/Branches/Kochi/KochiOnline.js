@@ -9,7 +9,7 @@ function KochiOnline() {
 
       <img  src={wow1}  alt='wow1'/>
       <div className='content-onkochi'>
-       <h2>Medical Coding Training in Kerala for Aspiring Healthcare Professionals</h2>
+       <h2>Medical Coding Training in Kerala for Healthcare Careers</h2>
        <p>
          ThoughtFlows provides Medical Coding training in Kerala for students, graduates, healthcare professionals, and career switchers looking to build a future in the healthcare industry. Students from Kochi, Ernakulam, Thrissur, Calicut, Trivandrum, Kottayam, Palakkad, Kannur, and other regions across Kerala choose our programs for their practical learning approach, certification guidance, and career-focused support.
        </p>

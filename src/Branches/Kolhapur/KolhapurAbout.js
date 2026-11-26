@@ -7,7 +7,7 @@ function KolhapurAbout() {
   return (
     <>
       <div className="trivandrum-abt">
-        <h4 style={{ color: "#21A7D0", textAlign: "center" }}>Why Choose</h4>
+        <p className="h4" style={{ color: "#21A7D0", textAlign: "center" }}>Why Choose</p>
         <h2 style={{ textAlign: "center", marginBottom: "30px" }}>
           Our Institute in Kolhapur?
         </h2>

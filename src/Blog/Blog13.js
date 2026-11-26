@@ -1338,7 +1338,7 @@ export default function Blog13() {
               className="text-2xl md:text-3xl font-bold mb-4 flex items-center gap-3"
             >
               <FaClipboardCheck className="text-teal-600" /> Medical Coding
-              Learning Roadmap: From Training to Certification to a Job
+              Roadmap: Training, Certification, Job
             </h2>
             <div className="bg-white p-6 md:p-8 rounded-xl shadow-sm">
               <p className="text-gray-700 leading-relaxed text-justify mb-6">

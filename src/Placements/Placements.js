@@ -31,7 +31,9 @@ const Placements = () => {
             {/* Introduction Section */}
             <section className="placements-intro">
                 <div className="container">
-                    <h2 className="placements-intro-title">{placementData.introduction.title}</h2>
+                    {placementData.introduction.title && (
+                        <h2 className="placements-intro-title">{placementData.introduction.title}</h2>
+                    )}
                     <p className="placements-intro-text">{placementData.introduction.text}</p>
                 </div>
             </section>

@@ -13,7 +13,7 @@ const KolhapurCore = () => {
             <div className="features-grid">
                 <div>
                     <h4 style={{ color: "#073766" }}>What We Stand For</h4>
-                    <h2>The core principles that guide our training methodology, student support, and commitment to building leading medical coders in Kolhapur.</h2>
+                    <h2>Core principles behind our medical coding training in Kolhapur</h2>
                 </div>
                 <div className="feature-card purple">
                     <img src={passion} alt='passion' />

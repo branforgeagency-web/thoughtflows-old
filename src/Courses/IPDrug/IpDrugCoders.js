@@ -34,15 +34,17 @@ const IpDrugCoders = () => {
                     <div className="w-full lg:w-1/2">
                         <img
                             src={section.image}
-                            alt={section.title || "Description Image"}
+                            alt={section.title || "Where IPDRG medical coders work"}
                             className="w-full h-96 object-cover rounded-lg shadow-lg"
                         />
                     </div>
                     {/* Text Section */}
                     <div className="w-full lg:w-1/2 mt-8 lg:mt-0 lg:px-12">
-                        <h2 className="text-4xl font-bold text-primaryy mb-6">
-                            {section.title}
-                        </h2>
+                        {section.title && (
+                            <h2 className="text-4xl font-bold text-primaryy mb-6">
+                                {section.title}
+                            </h2>
+                        )}
                         <p className="text-lg text-gray-700 leading-relaxed mb-4">
                             {section.details}
                         </p>
