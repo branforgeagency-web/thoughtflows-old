@@ -297,10 +297,10 @@ export default function Blog14() {
           }}
         >
           <p className="text-sm text-gray-700 leading-relaxed">
-            Passing an AAPC certification examination is an important milestone in a medical coding career. However, earning a certification is not the end of the learning process. Certified professionals must continue updating their knowledge to keep pace with changes in coding guidelines, healthcare regulations and industry practices.
+            Whether you have recently earned your CPC certification or have years of experience, understanding CEU requirements is essential to keeping your AAPC credentials in good standing.
           </p>
           <p className="text-sm text-gray-700 leading-relaxed mt-3">
-            This is where Continuing Education Units (CEUs) play an important role. They help medical coding professionals maintain their AAPC credentials while continuing to develop their knowledge and skills.
+            This guide explains AAPC CEUs, including certification requirements, free and paid learning opportunities, submission procedures and what happens if you miss your CEU deadline.
           </p>
         </div>
       </div>
@@ -325,24 +325,18 @@ export default function Blog14() {
 
             {/* Section 1: Intro Section */}
             <section id="intro-ceus" className="bg-white p-6 md:p-8 rounded-xl shadow-sm space-y-4">
-              <h1
+              <h2
                 style={{ color: "#1d4971" }}
                 className="text-2xl md:text-3xl font-bold leading-tight flex items-center gap-3"
               >
                 <FaBookMedical className="text-teal-600 flex-shrink-0" />
-                <span>Know About Your CEUs: Requirements, Free Learning Options and How to Maintain Your Certification</span>
-              </h1>
+                <span>What Are AAPC CEUs and Why Do They Matter?</span>
+              </h2>
               <p className="text-base text-gray-700 leading-relaxed text-justify">
                 Passing an AAPC certification examination is an important milestone in a medical coding career. However, earning a certification is not the end of the learning process. Certified professionals must continue updating their knowledge to keep pace with changes in coding guidelines, healthcare regulations and industry practices.
               </p>
               <p className="text-base text-gray-700 leading-relaxed text-justify">
                 This is where Continuing Education Units (CEUs) play an important role. They help medical coding professionals maintain their AAPC credentials while continuing to develop their knowledge and skills.
-              </p>
-              <p className="text-base text-gray-700 leading-relaxed text-justify">
-                Whether you have recently earned your CPC certification or have years of experience in medical coding, understanding CEU requirements is essential.
-              </p>
-              <p className="text-base text-gray-700 leading-relaxed text-justify">
-                This guide explains AAPC CEUs, including certification requirements, free and paid learning opportunities, submission procedures and what happens if you miss your CEU deadline.
               </p>
             </section>
 

@@ -2,8 +2,8 @@ import React from "react";
 import { School, MonitorSmartphone, MapPin } from "lucide-react";
 import Reveal from "../Theni/Reveal";
 import { mediaUrl } from '../../config/media';
-const classroomImg = mediaUrl("images/AboutImg/course-02.jpg");
-const onlineImg = mediaUrl("images/Branches/online/on8.png");
+const classroomImg = mediaUrl("images/Interiors/hopes/hopes-classroom-podium-view.jpg");
+const onlineImg = mediaUrl("images/Interiors/hopes/hopes-corporate-boardroom-culture.jpg");
 
 const HopesModes = () => {
   return (

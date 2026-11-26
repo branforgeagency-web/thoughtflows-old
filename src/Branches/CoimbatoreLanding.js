@@ -1,17 +1,19 @@
 import React, { useEffect, useState, useContext } from 'react';
 import { Link } from 'react-router-dom';
+import { motion } from 'framer-motion';
+import { Award, CheckCircle2, MapPin, Users, Star, BookOpen, Layers } from 'lucide-react';
 import Meta from '../Meta';
 import { PopupContext } from '../context/PopupContext';
 import './CoimbatoreLanding.css';
+import './CoimbatoreBanner.css';
 import { mediaUrl } from '../config/media';
-const hopesImg = mediaUrl("images/Branches/cbe_hopes_campus.jpg");
-const saravanampattiImg = mediaUrl("images/Branches/cbe_saravanampatti_campus.jpg");
-const gandhipuramImg = mediaUrl("images/Branches/cbe_gandhipuram_campus.jpg");
-const ishaBannerImg = mediaUrl("images/Branches/isha_coimbatore_banner.jpg");
-const handsOnImg = mediaUrl("images/hands-on.png");
-const cpcImg = mediaUrl("images/cpc.png");
-const teachingImg = mediaUrl("images/Branches/theni-teaching.jpg");
-const placementBanner = mediaUrl("images/Branches/placement banner.jpeg");
+const hopesImg = mediaUrl("images/Interiors/hopes/hopes-reception-wave-ceiling.jpg");
+const saravanampattiImg = mediaUrl("images/Interiors/svm/svm-reception-welcome-lobby.jpg");
+const gandhipuramImg = mediaUrl("images/Interiors/gvm/gvm-reception-corridor.jpg");
+const handsOnImg = mediaUrl("images/Interiors/svm/svm-founders-floor-workstations.jpg");
+const cpcImg = mediaUrl("images/Interiors/gvm/gvm-training-classroom.jpg");
+const teachingImg = mediaUrl("images/Interiors/hopes/hopes-creative-batch-classroom.jpg");
+const placementBanner = mediaUrl("images/Interiors/hopes/hopes-corporate-boardroom-culture.jpg");
 
 const CoimbatoreLanding = () => {
   const { setIsOpen } = useContext(PopupContext);
@@ -310,67 +312,129 @@ const CoimbatoreLanding = () => {
       />
 
       {/* ================= HERO ================= */}
-      <section className="cbe-hero2">
-        <div className="cbe-hero2-blob one" aria-hidden="true" />
-        <div className="cbe-hero2-blob two" aria-hidden="true" />
-        <div className="cbe-wrap cbe-hero2-grid">
-          <div className="cbe-hero2-copy">
+      <section className="cbe-lux-hero">
+        <div className="cbe-lux-pattern" aria-hidden="true" />
+        <div className="cbe-lux-glow cbe-lux-glow-1" aria-hidden="true" />
+        <div className="cbe-lux-glow cbe-lux-glow-2" aria-hidden="true" />
 
-            <span className="cbe-pill"><span className="cbe-dot" /> Saravanampatti · Hopes · Gandhipuram</span>
+        <div className="cbe-lux-inner">
+          <motion.div
+            className="cbe-lux-copy"
+            initial={{ opacity: 0, x: -40 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.75, ease: "easeOut" }}
+          >
+            <div className="cbe-lux-accent-rule" />
 
-            <h1 className="cbe-h1">
-              Medical Coding Classes in <span>Coimbatore</span> — CPC &amp; CCS Training
+            <motion.span
+              className="cbe-lux-eyebrow"
+              initial={{ opacity: 0, y: -12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.55, delay: 0.1 }}
+            >
+              <MapPin size={13} /> Saravanampatti · Hopes · Gandhipuram
+            </motion.span>
+
+            <h1 className="cbe-lux-title">
+              Medical Coding Classes in <span className="cbe-lux-accent">Coimbatore</span> — CPC &amp; CCS Training
             </h1>
 
-            <p className="cbe-hero-sub">
+            <p className="cbe-lux-desc">
               Located in Saravanampatti, Hopes, and Gandhipuram, we offer in-person medical coding classes in Coimbatore. To date, we have trained over 35,000 students and employed over 30,000 of them. Our classes cover ICD-10-CM, CPT, and HCPCS Level II, and help students prepare for the AAPC CPC Certification Exam. The courses are open to students from life sciences, nursing, pharmacy, and allied health professions. Including this course, we offer a host of other services including free demo classes.
             </p>
 
-            <div className="cbe-codes">
+            <div className="cbe-lux-tags">
               {['ICD-10-CM', 'CPT', 'HCPCS Level II', 'AAPC CPC'].map((c) => (
-                <span key={c}><Icon name="check" />{c}</span>
+                <span key={c}><CheckCircle2 size={15} /> {c}</span>
               ))}
             </div>
 
-            <div className="cbe-hero-actions">
-              <button onClick={() => setIsOpen(true)} className="cbe-btn cbe-btn-primary">
+            <div className="cbe-lux-actions">
+              <button onClick={() => setIsOpen(true)} className="cbe-lux-btn primary" style={{ border: 'none' }}>
                 Book a Free Demo Class <Icon name="arrow" />
               </button>
-              <a href="tel:+919384576852" className="cbe-btn cbe-btn-navy-outline">
+              <a href="tel:+919384576852" className="cbe-lux-btn ghost">
                 <Icon name="phone" /> 093845 76852
               </a>
             </div>
-          </div>
+          </motion.div>
 
-          <div className="cbe-hero2-visual">
-            <div className="cbe-arch-outline" aria-hidden="true" />
-            <div className="cbe-arch">
-              <img src={ishaBannerImg} alt="Isha Yoga Center Adiyogi Coimbatore ThoughtFlows" />
-            </div>
-            <div className="cbe-seal">
-              <strong>CPC</strong>
-              <span>AAPC exam prep</span>
-            </div>
-            <div className="cbe-landmark">
-              <span className="cbe-landmark-ico"><Icon name="pin" /></span>
-              <div>
-                <small>Landmark of Coimbatore</small>
-                <strong>Isha Yoga Center & Adiyogi, Coimbatore</strong>
+          <motion.div
+            className="cbe-lux-showcase"
+            initial={{ opacity: 0, y: 40 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.85, delay: 0.2, ease: "easeOut" }}
+          >
+            <div className="cbe-lux-frame-wrap">
+              <div className="cbe-lux-arch-frame">
+                <div className="cbe-lux-photo-box">
+                  <div className="cbe-lux-trio">
+                    <div className="cbe-lux-trio-item main">
+                      <img src={hopesImg} alt="ThoughtFlows Hopes Campus Interior" />
+                      <span className="cbe-lux-trio-label"><MapPin size={12} /> Hopes</span>
+                    </div>
+                    <div className="cbe-lux-trio-item">
+                      <img src={saravanampattiImg} alt="ThoughtFlows Saravanampatti Campus Interior" />
+                      <span className="cbe-lux-trio-label"><MapPin size={12} /> Saravanampatti</span>
+                    </div>
+                    <div className="cbe-lux-trio-item">
+                      <img src={gandhipuramImg} alt="ThoughtFlows Gandhipuram Campus Interior" />
+                      <span className="cbe-lux-trio-label"><MapPin size={12} /> Gandhipuram</span>
+                    </div>
+                  </div>
+                </div>
               </div>
+
+              <motion.div
+                className="cbe-lux-chip cbe-chip-tr"
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut" }}
+              >
+                <span className="cbe-lux-chip-icon"><Award size={16} /></span>
+                <div>
+                  <strong>CPC</strong>
+                  <small>AAPC exam prep</small>
+                </div>
+              </motion.div>
+
+              <motion.div
+                className="cbe-lux-chip cbe-chip-bl"
+                animate={{ y: [0, -8, 0] }}
+                transition={{ duration: 3.6, repeat: Infinity, ease: "easeInOut", delay: 0.9 }}
+              >
+                <span className="cbe-lux-chip-icon"><MapPin size={16} /></span>
+                <div>
+                  <strong>3 Coimbatore Campuses</strong>
+                  <small>Saravanampatti · Hopes · Gandhipuram</small>
+                </div>
+              </motion.div>
             </div>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="cbe-wrap">
-          <div className="cbe-band">
-            {heroStats.map((s, i) => (
-              <div className="cbe-band-item" key={i}>
-                <strong>{s.num}</strong>
-                <span>{s.label}</span>
-              </div>
-            ))}
-          </div>
-        </div>
+        <motion.div
+          className="cbe-lux-stats"
+          initial={{ opacity: 0, y: 24 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, delay: 0.45 }}
+        >
+          {heroStats.map((s, i) => {
+            const StatIcons = [Users, Award, BookOpen, Layers];
+            const StatIcon = StatIcons[i] || Star;
+            return (
+              <React.Fragment key={i}>
+                {i > 0 && <div className="cbe-lux-stat-div" />}
+                <div className="cbe-lux-stat">
+                  <StatIcon size={20} className="cbe-lux-stat-icon" />
+                  <div>
+                    <strong>{s.num}</strong>
+                    <span>{s.label}</span>
+                  </div>
+                </div>
+              </React.Fragment>
+            );
+          })}
+        </motion.div>
       </section>
 
       {/* In-page navigation */}

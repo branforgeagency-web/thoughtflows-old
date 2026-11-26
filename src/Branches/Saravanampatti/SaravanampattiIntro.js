@@ -2,7 +2,7 @@ import React from "react";
 import { Layers, CheckCircle2 } from "lucide-react";
 import Reveal from "../Theni/Reveal";
 import { mediaUrl } from '../../config/media';
-const coderImg = mediaUrl("images/Branches/online/on12.jpg");
+const coderImg = mediaUrl("images/Interiors/svm/svm-clinical-anatomy-session.jpg");
 
 const SaravanampattiIntro = () => {
   return (

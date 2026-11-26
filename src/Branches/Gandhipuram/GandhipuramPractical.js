@@ -2,7 +2,7 @@ import React from "react";
 import { CheckCircle2, FileCheck, Award, Layers } from "lucide-react";
 import Reveal from "../Theni/Reveal";
 import { mediaUrl } from '../../config/media';
-const practicalImg = mediaUrl("images/AboutImg/about-image.jpg");
+const practicalImg = mediaUrl("images/Interiors/gvm/gvm-pergola-study-cubicles.jpg");
 
 const practicalPoints = [
   "Interpret and extract diagnoses and procedures from different kinds of documentation",
