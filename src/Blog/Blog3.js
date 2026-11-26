@@ -48,7 +48,7 @@ export default function Blog3() {
         }}
         className="  lg:hidden "
       >
-        <h2
+        <div role="heading" aria-level="1" className="h2"
           style={{
             padding: "50px",
             color: "white",
@@ -57,7 +57,7 @@ export default function Blog3() {
           }}
         >
           5 Common Medical Coding Mistakes—and How to Fix Them Like a Pro!
-        </h2>
+        </div>
         <div
           style={{
             background: "white",

@@ -43,7 +43,7 @@ export default function Blog4() {
         }}
         className="  lg:hidden "
       >
-        <h2
+        <div role="heading" aria-level="1" className="h2"
           style={{
             padding: "50px",
             color: "white",
@@ -51,7 +51,7 @@ export default function Blog4() {
             textAlign: "center"
           }}
         >
-          How to Prepare for the CPC Exam   <br></br> Expert Tips and Strategies    </h2>
+          How to Prepare for the CPC Exam   <br></br> Expert Tips and Strategies    </div>
         <div
           style={{
             background: "white",

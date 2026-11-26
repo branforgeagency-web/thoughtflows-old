@@ -34,7 +34,7 @@ const PopularCourses = () => {
             <Container>
                 <Row className="text-center text-lg-start mb-4">
                     <Col>
-                        <h5 className="text-uppercase pt-4">Thoughtflows Academy</h5>
+                        <p className="h5 text-uppercase pt-4">Thoughtflows Academy</p>
                         <h2>Your Path to Success in Medical Coding</h2>
                     </Col>
                 </Row>

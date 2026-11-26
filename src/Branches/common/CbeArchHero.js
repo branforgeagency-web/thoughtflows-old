@@ -43,8 +43,8 @@ const CbeArchHero = ({
 
           <h1 className="tfa-hero-title">
             {titleLead} in <span className="tfa-hero-accent">{accent}</span>
-            {subTitle && <span className="tfa-hero-sub">{subTitle}</span>}
           </h1>
+          {subTitle && <p className="tfa-hero-sub">{subTitle}</p>}
           <span className="tfa-hero-rule" aria-hidden="true" />
           {tagline && <p className="tfa-hero-tagline">{tagline}</p>}
 

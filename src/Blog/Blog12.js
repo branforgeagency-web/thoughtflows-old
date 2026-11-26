@@ -1180,7 +1180,7 @@ export default function Blog12() {
           {/* Section 9: How to Compare Institutes Checklist */}
           <section id="comparison-checklist" className="max-w-4xl mx-auto py-6">
             <h2 style={{ color: "#1d4971" }} className="text-2xl md:text-3xl font-bold mb-4 flex items-center gap-3">
-              <FaClipboardCheck className="text-teal-600" /> The Comparison Checklist: How to Separate Serious Institutes from Sales Offices
+              <FaClipboardCheck className="text-teal-600" /> Comparison Checklist: Serious Institutes vs Sales Offices
             </h2>
             <div className="bg-white p-6 md:p-8 rounded-xl shadow-sm mb-6">
               <p className="text-gray-700 leading-relaxed text-justify mb-4">

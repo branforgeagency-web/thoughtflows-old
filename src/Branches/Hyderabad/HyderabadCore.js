@@ -14,7 +14,7 @@ const HyderabadCore = () => {
             <div className="features-grid">
                 <div style={{paddingTop:""}}>
                     <h4 style={{color:"#073766"}}>What We Stand For</h4>
-                    <h2>Behind every great result is a set of values we live by — the principles that shape how we train, support, and stand by every student who walks through our doors.</h2>
+                    <h2>The values behind how we train and support every student</h2>
                 </div>
                 <div className="feature-card purple">
                     <img src={passion} alt='passion'/>

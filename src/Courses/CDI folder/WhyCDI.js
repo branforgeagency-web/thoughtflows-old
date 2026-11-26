@@ -50,7 +50,7 @@ const WhyCDI = () => {
   return (
     <>
       <div className='px-4'>
-        <h2 className="text-center mt-3">Why Choose ThoughtFlows for CDI (Clinical Documentation Improvement) Training?</h2>
+        <h2 className="text-center mt-3">Why Choose ThoughtFlows for CDI Training?</h2>
       </div>
       <Row className="why-cpc px-4 flex flex-wrap justify-center" xs={1} md={3}>
         {cardData.map((card) => (

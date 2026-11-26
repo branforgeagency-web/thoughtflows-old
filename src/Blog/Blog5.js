@@ -40,7 +40,7 @@ export default function Blog5() {
         }}
         className="  lg:hidden "
       >
-        <h2
+        <div role="heading" aria-level="1" className="h2"
           style={{
             padding: "50px",
             color: "white",
@@ -48,7 +48,7 @@ export default function Blog5() {
             textAlign: "center",
           }}
         >
-          Exploring ICD-10-CM: Key Changes You Need to Know        </h2>
+          Exploring ICD-10-CM: Key Changes You Need to Know        </div>
         <div
           style={{
             background: "white",

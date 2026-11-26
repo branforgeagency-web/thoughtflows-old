@@ -51,7 +51,7 @@ export default function Blog2() {
     },
     {
       id: "Compliance",
-      title: "Medical Coding and Compliance: Safeguarding Legal and Ethical Standards",
+      title: "Medical Coding and Compliance: Legal and Ethical Standards",
     },
     {
       id: "Improves",
@@ -151,7 +151,7 @@ export default function Blog2() {
         }}
         className="  lg:hidden "
       >
-        <h2
+        <div role="heading" aria-level="1" className="h2"
           style={{
             padding: "50px",
             color: "white",
@@ -159,7 +159,7 @@ export default function Blog2() {
             textAlign: "center",
           }}
         >
-          Why Medical Coding is the Backbone of the Healthcare Industry        </h2>
+          Why Medical Coding is the Backbone of the Healthcare Industry        </div>
         <div
           style={{
             background: "white",
@@ -323,7 +323,7 @@ export default function Blog2() {
           >
             {/* Heading */}
             <h2 style={{ color: "#1d4971" }} className="text-3xl md:text-4xl font-bold text-center mt-20 text-gray-900 mb-6">
-              Medical Coding and Compliance: Safeguarding Legal and Ethical Standards
+              Medical Coding and Compliance: Legal and Ethical Standards
             </h2>
             {/* Introductory Paragraph */}
             <p className="text-lg text-gray-700 leading-relaxed text-justify mb-6">

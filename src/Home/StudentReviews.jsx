@@ -284,7 +284,7 @@ const StudentReviews = () => {
                     <motion.img
                       className="sr-photo"
                       src={Ramya}
-                      alt=""
+                      alt="Portrait of Ramya Senthilkumar, CPC certified ThoughtFlows student"
                       draggable={false}
                       animate={{
                         scale: activeCard === 2 ? 1.09 : 1.04,

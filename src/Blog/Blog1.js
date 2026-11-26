@@ -201,7 +201,7 @@ export default function Blog1() {
         }}
         className="  lg:hidden "
       >
-        <h2
+        <div role="heading" aria-level="1" className="h2"
           style={{
             padding: "50px",
             color: "white",
@@ -210,7 +210,7 @@ export default function Blog1() {
           }}
         >
           What is Medical Coding? A Beginner's Guide to Success
-        </h2>
+        </div>
         <div
           style={{
             background: "white",

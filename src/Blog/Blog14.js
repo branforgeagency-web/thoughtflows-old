@@ -224,7 +224,7 @@ export default function Blog14() {
               lineHeight: "1.35",
             }}
           >
-            Know About Your CEUs: Requirements, Free Learning Options and How to Maintain Your Certification
+            AAPC CEUs: Requirements, Free Options &amp; How to Stay Certified
           </h1>
           <div className="flex flex-wrap justify-center items-center gap-4 text-gray-300 text-xs mt-4">
             <span className="flex items-center gap-1">
@@ -272,7 +272,7 @@ export default function Blog14() {
               lineHeight: "1.35",
             }}
           >
-            Know About Your CEUs: Requirements, Free Learning Options and How to Maintain Your Certification
+            AAPC CEUs: Requirements, Free Options &amp; How to Stay Certified
           </div>
           <div className="flex flex-wrap items-center gap-6 text-gray-300 text-sm mt-4">
             <span className="flex items-center gap-2">

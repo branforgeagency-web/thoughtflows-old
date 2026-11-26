@@ -40,7 +40,7 @@ export default function Blog6() {
         }}
         className="  lg:hidden "
       >
-        <h2
+        <div role="heading" aria-level="1" className="h2"
           style={{
             padding: "50px",
             color: "white",
@@ -48,7 +48,7 @@ export default function Blog6() {
             textAlign: "center",
           }}
         >
-          Medical Coding Career Path: Opportunities and Growth         </h2>
+          Medical Coding Career Path: Opportunities and Growth         </div>
         <div
           style={{
             background: "white",

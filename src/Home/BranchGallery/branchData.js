@@ -21,7 +21,7 @@ export const BRANCHES = [
     title: "Coimbatore Campus",
     image: coimbatore,
     alt: "Trainer leading a medical coding session at the Thoughtflows Coimbatore campus",
-    href: "/coimbatore",
+    href: "/medical-coding-training-coimbatore",
   },
   {
     id: "chennai",
