@@ -2,7 +2,7 @@ import React from "react";
 import { GraduationCap, UserCheck, Briefcase, Search, HeartPulse } from "lucide-react";
 import Reveal from "../Theni/Reveal";
 import { mediaUrl } from '../../config/media';
-const studentsImg = mediaUrl("images/Branches/online/Students.jpg");
+const studentsImg = mediaUrl("images/Interiors/hopes/hopes-smart-classroom.jpg");
 
 const audience = [
   { icon: Search, text: "Individuals seeking first employment" },

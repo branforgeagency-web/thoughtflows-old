@@ -2,7 +2,7 @@ import React from "react";
 import { FileText, Users, Search, TrendingUp, Bell, CheckCircle2 } from "lucide-react";
 import Reveal from "../Theni/Reveal";
 import { mediaUrl } from '../../config/media';
-const trainerImg = mediaUrl("images/Course Images/CEMC1.jpg");
+const trainerImg = mediaUrl("images/Interiors/hopes/hopes-director-executive-office.jpg");
 
 const placementServices = [
   { icon: FileText, title: "Resume Assistance", text: "Learning how to incorporate your coding training and other related skills on your resume." },

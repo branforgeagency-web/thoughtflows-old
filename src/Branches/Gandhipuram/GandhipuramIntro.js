@@ -13,7 +13,7 @@ import {
 } from "lucide-react";
 import Reveal from "../Theni/Reveal";
 import { mediaUrl } from '../../config/media';
-const campusImg = mediaUrl("images/Branches/Pic 3.webp");
+const campusImg = mediaUrl("images/Interiors/gvm/gvm-classroom-perspective.jpg");
 
 const areasCovered = [
   { icon: BookOpen, title: "Comprehension of Medical Terminology" },

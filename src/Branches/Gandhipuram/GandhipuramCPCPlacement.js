@@ -2,7 +2,7 @@ import React from "react";
 import { Award, Briefcase, FileText, Users, Search, ClipboardCheck } from "lucide-react";
 import Reveal from "../Theni/Reveal";
 import { mediaUrl } from '../../config/media';
-const trainerImg = mediaUrl("images/Course Images/CEMC1.jpg");
+const trainerImg = mediaUrl("images/Interiors/gvm/gvm-bunker-lounge.jpg");
 
 const GandhipuramCPCPlacement = () => {
   return (

@@ -2,7 +2,7 @@ import React from "react";
 import { CheckCircle2, FileCheck, School } from "lucide-react";
 import Reveal from "../Theni/Reveal";
 import { mediaUrl } from '../../config/media';
-const practicalImg = mediaUrl("images/AboutImg/about-image.jpg");
+const practicalImg = mediaUrl("images/Interiors/hopes/hopes-cherry-blossom-workstations.jpg");
 
 const HopesPractical = () => {
   return (

@@ -2,7 +2,7 @@ import React from "react";
 import { FileText, Users, Search, TrendingUp, Bell } from "lucide-react";
 import Reveal from "../Theni/Reveal";
 import { mediaUrl } from '../../config/media';
-const trainerImg = mediaUrl("images/Course Images/CEMC1.jpg");
+const trainerImg = mediaUrl("images/Interiors/svm/svm-executive-directors-office.jpg");
 
 const placementServices = [
   { icon: FileText, title: "Resume Writing", text: "Writing a resume that captures your training and other qualifications in an eye-catching format." },

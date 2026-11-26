@@ -12,7 +12,6 @@ import HopesEligibility from './HopesEligibility';
 import HopesModes from './HopesModes';
 import HopesPlacement from './HopesPlacement';
 import HopesWhy from './HopesWhy';
-import HopesGallery from './HopesGallery';
 import HopesBranchInfo from './HopesBranchInfo';
 import HopesFAQ from './HopesFAQ';
 import hopesFaqs from './hopesFaqs';
@@ -74,7 +73,6 @@ function Hopes() {
         <HopesModes />
         <HopesPlacement />
         <HopesWhy />
-        <HopesGallery />
         <HopesBranchInfo />
         <div className="hopes-faq"><HopesFAQ /></div>
       </div>

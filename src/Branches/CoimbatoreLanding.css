@@ -985,7 +985,7 @@
 @keyframes cbeFade { from { opacity: 0; transform: translateY(-4px); } to { opacity: 1; transform: none; } }
 
 /* ---------- Scroll reveal ---------- */
-.cbe-lp .reveal { opacity: 0; transform: translateY(24px); transition: opacity .7s ease, transform .7s ease; }
+.cbe-lp .reveal { opacity: 1; transform: none; transition: opacity .7s ease, transform .7s ease; }
 .cbe-lp .reveal.in { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
   .cbe-lp .reveal { opacity: 1; transform: none; transition: none; }
