@@ -28,10 +28,16 @@ const IMG = {
   theniTeach:  mediaUrl("images/Branches/theni-teaching.jpg"),
 };
 
+// Real branch interior photos (media/images/Interiors/<branch>/...)
+const real = (branch, n) =>
+  mediaUrl(`images/Interiors/${branch}/${branch}-interior-${String(n).padStart(2, "0")}.jpg`);
+
 const AI_INTERIORS = {
-  ameerpet:     [IMG.ameerpet,   IMG.hydHero,    IMG.office,  IMG.lab,      IMG.students],
-  dilsukhnagar: [IMG.dilsukh,    IMG.placement,  IMG.course,  IMG.nurse,    IMG.hydera1],
-  kochi:        [IMG.kochi,      IMG.keralaHero, IMG.office,  IMG.students, IMG.crc],
+  // [hero, Modern Classrooms, Reception & Lobby, Practical Training Lab, Learning Spaces]
+  ameerpet:     [real("ameerpet", 2), real("ameerpet", 5), real("ameerpet", 1), real("ameerpet", 4), real("ameerpet", 6)],
+  dilsukhnagar: [real("dilsukhnagar", 8), real("dilsukhnagar", 7), real("dilsukhnagar", 9), real("dilsukhnagar", 2), real("dilsukhnagar", 5)],
+  // Kochi labels: [hero, Modern Classrooms, Reception & Lobby, Practice Lab, Workstations]
+  kochi:        [real("kochi", 2), real("kochi", 3), real("kochi", 6), real("kochi", 5), real("kochi", 7)],
   trivandrum:   [IMG.trivandrum, IMG.keralaHero, IMG.about,   IMG.lab,      IMG.nurse],
   pune:         [IMG.pune,       IMG.kolhapur,   IMG.office,  IMG.course,   IMG.students],
   kolhapur:     [IMG.kolhapur,   IMG.pune,       IMG.about,   IMG.lab,      IMG.crc],
@@ -40,8 +46,9 @@ const AI_INTERIORS = {
   trichy:       [IMG.office,     IMG.theniTeach, IMG.students, IMG.pune,    IMG.nurse],
   salem:        [IMG.keralaHero, IMG.course,     IMG.lab,     IMG.about,    IMG.dilsukh],
   theni:        [IMG.theniTeach, IMG.office,     IMG.students, IMG.kochi,   IMG.crc],
-  hyderabad:    [IMG.hydHero,    IMG.lab,        IMG.office],
-  kerala:       [IMG.keralaHero, IMG.students,   IMG.course],
+  // Hyderabad region page: [hero, Practical Training, Modern Classrooms]
+  hyderabad:    [real("ameerpet", 6), real("ameerpet", 4), real("dilsukhnagar", 7)],
+  kerala:       [IMG.keralaHero, real("kochi", 5), real("kochi", 3)],
   maharashtra:  [IMG.pune,       IMG.nurse,      IMG.office],
 };
 

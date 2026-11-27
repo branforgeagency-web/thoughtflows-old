@@ -5,11 +5,16 @@
 // 3. Medical Coding Seminars & Industry Masterclasses
 // 4. Cultural Events, Functions & Milestone Celebrations
 
+import { BRANCH_INTERIOR_PHOTOS, BRANCH_INTERIOR_NAMES } from "../Branches/common/branchInteriorPhotos";
+
 export const galleryCategories = [
   { id: "all", label: "All" },
   { id: "saravanampatti", label: "Saravanampatti (SVM)" },
   { id: "gandhipuram", label: "Gandhipuram (GVM)" },
   { id: "hopes", label: "Hopes" },
+  { id: "ameerpet", label: "Ameerpet" },
+  { id: "dilsukhnagar", label: "Dilsukhnagar" },
+  { id: "kochi", label: "Kochi" },
   { id: "workshops", label: "Workshops & Training" },
   { id: "seminars", label: "Seminars & Masterclasses" },
   { id: "events", label: "Events & Functions" },
@@ -20,8 +25,8 @@ export const galleryCollections = [
     id: "campuses",
     categoryId: "all",
     title: "Campuses & Facilities",
-    tagline: "3 Coimbatore Campuses",
-    description: "Explore our operational training labs, smart batch halls, and breakout lounges across Coimbatore.",
+    tagline: "Coimbatore, Hyderabad & Kochi",
+    description: "Explore our operational training labs, smart batch halls, and breakout lounges across Coimbatore, Hyderabad and Kochi.",
     badge: "Infrastructure",
     color: "from-cyan-500 to-blue-600",
   },
@@ -295,10 +300,28 @@ export const galleryItems = [
     title: "Cherry Blossom Workstation Hub – Hopes",
     caption: "Signature open-plan workstation hall beneath a pink cherry blossom floral canopy with bright, pleasant illumination.",
   },
+
+  // =========================================================================
+  // Ameerpet & Dilsukhnagar (Hyderabad) and Kochi campuses
+  // (photo list lives in src/Branches/common/branchInteriorPhotos.js)
+  // =========================================================================
+  ...["ameerpet", "dilsukhnagar", "kochi"].flatMap((branch) =>
+    BRANCH_INTERIOR_PHOTOS[branch].map((photo) => ({
+      id: photo.id,
+      category: branch,
+      tags: photo.tags,
+      badge: photo.tag,
+      location: BRANCH_INTERIOR_NAMES[branch],
+      src: photo.src,
+      title: `${photo.title} – ${BRANCH_INTERIOR_NAMES[branch]}`,
+      caption: photo.caption,
+      featured: photo.featured,
+    }))
+  ),
 ];
 
 export const galleryStats = [
-  { value: "3", label: "Coimbatore Campuses" },
+  { value: "6", label: "Campuses Pictured" },
   { value: "100+", label: "Hands-on Workshops" },
   { value: "50+", label: "Seminars & Events" },
   { value: "25,000+", label: "Certified Coders" },

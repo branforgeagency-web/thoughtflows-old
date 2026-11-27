@@ -1,7 +1,10 @@
 import React from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
-import { mediaUrl } from '../../config/media';
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import { mediaUrl } from "../../config/media";
+import { LuxHead } from "../common/LuxSections";
+
 const image1 = mediaUrl("images/Branches/online/Group 1.jpg");
 const image2 = mediaUrl("images/Branches/online/Group 2.jpg");
 const image3 = mediaUrl("images/Branches/online/Group 3.jpg");
@@ -18,59 +21,19 @@ const image13 = mediaUrl("images/Branches/online/Group 13.jpg");
 const image14 = mediaUrl("images/Branches/online/Group 14.jpg");
 const image15 = mediaUrl("images/Branches/online/Group 15.jpg");
 
-// Custom Arrow Component
-const CustomArrow = ({ onClick, direction }) => (
-  <div
-    className={`custom-arrow custom-arrow-${direction}`}
+const Arrow = ({ onClick, direction }) => (
+  <button
+    type="button"
+    className={`lux-arrow is-${direction}`}
     onClick={onClick}
-    style={{
-      display: "flex",
-      alignItems: "center",
-      justifyContent: "center",
-      borderRadius: "50%",
-      backgroundColor: direction === "left" ? "#9B5DE6" : "#F15BB5",
-      color: "white",
-      width: "70px",
-      height: "70px",
-      cursor: "pointer",
-      position: "absolute",
-      top: "50%",
-      zIndex: 10,
-      [direction === "left" ? "left" : "right"]: "10px", // Position left or right
-      transform: "translateY(-50%)",
-      animation: "bounce 2s infinite", // Optional animation
-    }}
+    aria-label={direction === "left" ? "Previous" : "Next"}
   >
-    <span
-      style={{
-        fontSize: "18px",
-        fontWeight: "bold",
-        textTransform: "uppercase",
-      }}
-    >
-      {direction === "left" ? "Prev" : "Next"}
-    </span>
-  </div>
+    {direction === "left" ? <ChevronLeft size={22} /> : <ChevronRight size={22} />}
+  </button>
 );
 
 const KochiOnline2 = () => {
-  const images = [
-    image1,
-    image2,
-    image3,
-    image4,
-    image5,
-    image6,
-    image7,
-    image8,
-    image9,
-    image10,
-    image11,
-    image12,
-    image13,
-    image15,
-    image14,
-  ];
+  const images = [image1, image2, image3, image4, image5, image6, image7, image8, image9, image10, image11, image12, image13, image15, image14];
 
   const settings = {
     dots: false,
@@ -78,51 +41,31 @@ const KochiOnline2 = () => {
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
-    prevArrow: <CustomArrow direction="left" />,
-    nextArrow: <CustomArrow direction="right" />,
+    prevArrow: <Arrow direction="left" />,
+    nextArrow: <Arrow direction="right" />,
     responsive: [
-      {
-        breakpoint: 768,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-        },
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        },
-      },
+      { breakpoint: 768, settings: { slidesToShow: 2, slidesToScroll: 1 } },
+      { breakpoint: 480, settings: { slidesToShow: 1, slidesToScroll: 1 } },
     ],
   };
 
   return (
-    <div style={{ margin: "20px", marginLeft: "40px", paddingBottom: "50px" }}>
-      <h3 style={{ textAlign: "center", color: "#16ADBB" }}>Test Yourself</h3>
-      <h2 style={{ textAlign: "center", marginTop: "20px", marginBottom: "30px" }}>
-        Online Exams
-      </h2>
-      <Slider {...settings}>
-        {images.map((img, index) => (
-          <div key={index} style={{ position: "relative", overflow: "hidden" }}>
-            <img
-              src={img}
-              alt={`Slide ${index + 1}`}
-              style={{
-                width: "90%",
-                height: "auto",
-                objectFit: "cover",
-                margin: "0 20px",
-                borderRadius: "15px",
-                zIndex: 1,
-              }}
-            />
-          </div>
-        ))}
-      </Slider>
-    </div>
+    <section className="lux-exams">
+      <div className="lux-container" style={{ maxWidth: 1240, margin: "0 auto", position: "relative" }}>
+        <LuxHead eyebrow="Test Yourself" title="Online Exams" />
+        <Slider {...settings}>
+          {images.map((img, index) => (
+            <div key={index}>
+              <img
+                src={img}
+                alt={`Slide ${index + 1}`}
+                style={{ width: "92%", height: "auto", objectFit: "cover", margin: "0 auto", borderRadius: "16px" }}
+              />
+            </div>
+          ))}
+        </Slider>
+      </div>
+    </section>
   );
 };
 

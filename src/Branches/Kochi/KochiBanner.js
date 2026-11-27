@@ -2,7 +2,7 @@ import React from "react";
 import BranchLuxBanner from "../common/BranchLuxBanner";
 import AI_INTERIORS from "../common/aiInteriors";
 
-// TODO: swap AI_INTERIORS.kochi for real Kochi interior photos when available
+// Real kochi interior photos (see common/aiInteriors.js)
 const [heroImg, card1, card2, card3, card4] = AI_INTERIORS.kochi;
 
 const KochiBanner = () => (
@@ -20,8 +20,8 @@ const KochiBanner = () => (
     campus={[
       { img: card1, label: "Modern Classrooms", alt: "Kochi branch classroom" },
       { img: card2, label: "Reception & Lobby", alt: "Kochi branch reception" },
-      { img: card3, label: "Practical Training Lab", alt: "Kochi branch practical training" },
-      { img: card4, label: "Learning Spaces", alt: "Kochi branch learning space" },
+      { img: card3, label: "Practice Lab", alt: "Kochi branch practice lab" },
+      { img: card4, label: "Workstations", alt: "Kochi branch workstations" },
     ]}
     locationLabel="Kochi, Kerala"
     exploreTo="/kerala"

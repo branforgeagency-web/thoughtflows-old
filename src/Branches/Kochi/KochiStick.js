@@ -1,42 +1,30 @@
 import React from "react";
-import { mediaUrl } from '../../config/media';
-const micro = mediaUrl("images/Branches/online/testtube.png");
-const microbg = mediaUrl("images/Branches/online/microbg.png");
+import { mediaUrl } from "../../config/media";
+import { LuxSection, LuxSplit, LuxHead } from "../common/LuxSections";
 
 function KochiStick() {
   return (
-    <>
-      <div className="stick-k">
-        <div className="sticky-kochi">
-          <img
-            src={micro} alt='micro'
-            style={{ marginLeft: "", objectPosition: "right",borderRadius:"10px" }}
-          />
-        </div>
-        <div className="static-trichy" style={{ marginLeft: "100px" }}>
-          <div id="static-1" style={{paddingTop:"40px"}}>
-            <h2 className="highh">
-              CPC Certification Guidance
-            </h2>
+    <LuxSection tone="light">
+      <LuxSplit
+        image={mediaUrl("images/Interiors/kochi/kochi-interior-06.jpg")}
+        imageAlt="ThoughtFlows Kochi campus lobby and learning spaces"
+        eyebrow="Certification & Careers"
+        title="CPC Certification Guidance &"
+        accent="Placement Support"
+      >
+        <div className="lux-stack">
+          <div className="lux-stack-item">
+            <h3>CPC Certification Guidance</h3>
             <p>
-              Professional certification is an important milestone for many aspiring Medical Coders.
-            </p>
-            <p>
-              Our CPC certification guidance is designed to help students prepare effectively through structured learning, coding practice sessions, mock assessments, exam preparation support, and mentor guidance.
-            </p>
-            <p>
-              Certification preparation helps learners strengthen their coding knowledge and improve their confidence as they pursue career opportunities in the Medical Coding field.
+              Professional certification is an important milestone for many aspiring Medical Coders. Our CPC certification guidance is designed to help students prepare effectively through structured learning, coding practice sessions, mock assessments, exam preparation support, and mentor guidance. Certification preparation helps learners strengthen their coding knowledge and improve their confidence as they pursue career opportunities in the Medical Coding field.
             </p>
           </div>
-          <div id="static-1">
-            <h2 className="highh">
-              Placement Support to Help You Start Your Career
-            </h2>
+          <div className="lux-stack-item">
+            <h3>Placement Support to Help You Start Your Career</h3>
             <p>
-              For many students, enrolling in a Medical Coding course is ultimately about building a successful career. Along with training, ThoughtFlows provides placement support designed to help students prepare for employment opportunities within the healthcare industry.
+              For many students, enrolling in a Medical Coding course is ultimately about building a successful career. Along with training, ThoughtFlows provides placement support designed to help students prepare for employment opportunities within the healthcare industry. Our support includes:
             </p>
-            <p>Our support includes:</p>
-            <ul style={{fontSize: "16px", lineHeight: "26px", marginLeft: "20px"}}>
+            <ul style={{ margin: "12px 0 12px 20px", lineHeight: 1.8, color: "#5b6b7b", fontSize: 15.5 }}>
               <li>Resume Preparation Guidance</li>
               <li>Interview Readiness Sessions</li>
               <li>Industry Awareness Training</li>
@@ -48,10 +36,9 @@ function KochiStick() {
               Our goal is to help students become professionally prepared and confident when pursuing career opportunities.
             </p>
           </div>
-          
         </div>
-      </div>
-    </>
+      </LuxSplit>
+    </LuxSection>
   );
 }
 

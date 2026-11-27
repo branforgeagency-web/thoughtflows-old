@@ -1006,3 +1006,5 @@ const CSS = `
   .sr-logo, .sr-card { transition-duration: 0.01s; }
 }
 `;
+
+export { CSS as STUDENT_REVIEWS_CSS };

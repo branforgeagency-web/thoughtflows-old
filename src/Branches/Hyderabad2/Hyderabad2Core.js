@@ -1,64 +1,23 @@
-import React from 'react';
-import { mediaUrl } from '../../config/media';
-const passion = mediaUrl('images/Branches/motivation.png');
-const loyalty = mediaUrl('images/Branches/customer-loyalty.png');
-const commitment = mediaUrl('images/Branches/deal.png');
-const responsibility = mediaUrl('images/Branches/norms.png');
-const consistency = mediaUrl('images/Branches/consistency.png');
-const creativity = mediaUrl('images/Branches/solution.png');
+import React from "react";
+import { Handshake, Heart, Repeat, ShieldCheck, Target } from "lucide-react";
+import { LuxSection, LuxHead, LuxValues } from "../common/LuxSections";
 
-const HyderabadCore = () => {
-    return (
-        <div className="cbe1-features-container" style={{ paddingTop: "40px" }}>
-            <h2 className='m-3'>Our Core Values</h2>
-            <div className="features-grid">
-                <div style={{ paddingTop: "" }}>
-                    <h2>The values that guide how we work with every student</h2>
-                </div>
-                <div className="feature-card purple">
-                    <img src={passion} alt='passion' />
-                    <h3>Passion</h3>
-                    <p>
-                        We genuinely enjoy what we teach, and students feel it. That energy is a big part of the reputation we've earned as a medical coding institute in Dilsukhnagar.
-                    </p>
-
-                </div>
-                <div className="feature-card dark">
-                    <img src={loyalty} alt='loyalty' />
-                    <h3>Loyalty</h3>
-                    <p>
-                        Loyalty is earned, not claimed. Ask our past trainees — many stay in touch, refer their friends, and speak for us long after their course ends.
-                    </p>
-
-                </div>
-                <div className="feature-card purple">
-                    <img src={commitment} alt='commitment' />
-                    <h3>Commitment</h3>
-                    <p>
-                        We measure ourselves by your progress. Our trainers stay with you until the concepts truly click and you're ready to work.
-                    </p>
-
-                </div>
-                <div className="feature-card dark">
-                    <img src={responsibility} alt='responsibility' />
-                    <h3>Responsibility</h3>
-                    <p>
-                        We take your career seriously. From the quality of our teaching to keeping our methods current, we hold ourselves accountable for where you end up.
-                    </p>
-
-                </div>
-                <div className="feature-card purple">
-                    <img src={consistency} alt='consistency' />
-                    <h3>Consistency</h3>
-                    <p>
-                        The standards we set years ago are the ones we still hold today. That steadiness is what's built lasting trust with our students.
-                    </p>
-
-                </div>
-
-            </div>
-        </div>
-    );
-}
+const HyderabadCore = () => (
+  <LuxSection tone="light">
+    <LuxHead
+      title="Our Core Values"
+      intro={"The values that guide how we work with every student"}
+    />
+    <LuxValues
+      items={[
+        { icon: Heart, title: "Passion", text: "We genuinely enjoy what we teach, and students feel it. That energy is a big part of the reputation we've earned as a medical coding institute in Dilsukhnagar." },
+        { icon: Handshake, title: "Loyalty", text: "Loyalty is earned, not claimed. Ask our past trainees — many stay in touch, refer their friends, and speak for us long after their course ends." },
+        { icon: Target, title: "Commitment", text: "We measure ourselves by your progress. Our trainers stay with you until the concepts truly click and you're ready to work." },
+        { icon: ShieldCheck, title: "Responsibility", text: "We take your career seriously. From the quality of our teaching to keeping our methods current, we hold ourselves accountable for where you end up." },
+        { icon: Repeat, title: "Consistency", text: "The standards we set years ago are the ones we still hold today. That steadiness is what's built lasting trust with our students." },
+      ]}
+    />
+  </LuxSection>
+);
 
 export default HyderabadCore;
