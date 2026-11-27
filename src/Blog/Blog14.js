@@ -26,19 +26,13 @@ import {
   FaBuilding,
 } from "react-icons/fa";
 import { mediaUrl } from "../config/media";
-import heroBannerLocal from "../images/Blog/aapc-ceus/hero-banner.jpg";
-import earnCeusLocal from "../images/Blog/aapc-ceus/how-to-earn-ceus.jpg";
-import afterCertLocal from "../images/Blog/aapc-ceus/what-happens-after-certification.jpg";
-import mistakesLocal from "../images/Blog/aapc-ceus/common-ceu-mistakes.jpg";
-import maintainLocal from "../images/Blog/aapc-ceus/maintaining-aapc-credentials.jpg";
-import videoLocal from "../images/Blog/aapc-ceus/aapc-ceu-tracker-walkthrough.mp4";
 
-const heroBanner = heroBannerLocal || mediaUrl("images/Blog/aapc-ceus/hero-banner.jpg");
-const earnCeusImg = earnCeusLocal || mediaUrl("images/Blog/aapc-ceus/how-to-earn-ceus.jpg");
-const afterCertImg = afterCertLocal || mediaUrl("images/Blog/aapc-ceus/what-happens-after-certification.jpg");
-const mistakesImg = mistakesLocal || mediaUrl("images/Blog/aapc-ceus/common-ceu-mistakes.jpg");
-const maintainImg = maintainLocal || mediaUrl("images/Blog/aapc-ceus/maintaining-aapc-credentials.jpg");
-const ceuTrackerVideo = videoLocal || mediaUrl("images/Blog/aapc-ceus/aapc-ceu-tracker-walkthrough.mp4");
+const heroBanner = mediaUrl("images/Blog/aapc-ceus/hero-banner.jpg");
+const earnCeusImg = mediaUrl("images/Blog/aapc-ceus/how-to-earn-ceus.jpg");
+const afterCertImg = mediaUrl("images/Blog/aapc-ceus/what-happens-after-certification.jpg");
+const mistakesImg = mediaUrl("images/Blog/aapc-ceus/common-ceu-mistakes.jpg");
+const maintainImg = mediaUrl("images/Blog/aapc-ceus/maintaining-aapc-credentials.jpg");
+const ceuTrackerVideo = mediaUrl("images/Blog/aapc-ceus/aapc-ceu-tracker-walkthrough.mp4");
 
 export default function Blog14() {
   const [openFaq, setOpenFaq] = useState(null);
