@@ -39,7 +39,7 @@ const AI_INTERIORS = {
   // Kochi labels: [hero, Modern Classrooms, Reception & Lobby, Practice Lab, Workstations]
   kochi:        [real("kochi", 2), real("kochi", 3), real("kochi", 6), real("kochi", 5), real("kochi", 7)],
   trivandrum:   [IMG.trivandrum, IMG.keralaHero, IMG.about,   IMG.lab,      IMG.nurse],
-  pune:         [IMG.pune,       IMG.kolhapur,   IMG.office,  IMG.course,   IMG.students],
+  pune:         [real("pune", 5), real("pune", 1), real("pune", 2), real("pune", 3), real("pune", 6)],
   kolhapur:     [IMG.kolhapur,   IMG.pune,       IMG.about,   IMG.lab,      IMG.crc],
   tirupati:     [IMG.hydHero,    IMG.office,     IMG.students, IMG.course,  IMG.nurse],
   vizag:        [IMG.placement,  IMG.keralaHero, IMG.lab,     IMG.about,    IMG.crc],
@@ -49,7 +49,7 @@ const AI_INTERIORS = {
   // Hyderabad region page: [hero, Practical Training, Modern Classrooms]
   hyderabad:    [real("ameerpet", 6), real("ameerpet", 4), real("dilsukhnagar", 7)],
   kerala:       [IMG.keralaHero, real("kochi", 5), real("kochi", 3)],
-  maharashtra:  [IMG.pune,       IMG.nurse,      IMG.office],
+  maharashtra:  [real("pune", 3), real("pune", 2), real("pune", 1)],
 };
 
 export default AI_INTERIORS;

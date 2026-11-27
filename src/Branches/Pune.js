@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react';
 import Meta from '../Meta';
 import BranchVisitUs from './common/BranchVisitUs';
+import { LuxScope } from './common/LuxSections';
 
 import PuneBanner from './Pune/PuneBanner';
 import PuneAbout from './Pune/PuneAbout';
@@ -23,12 +24,14 @@ function Pune() {
       />
 
       <PuneBanner />
-      <PuneAbout />
-      <PuneTransform />
-      <PuneCore />
-      <PuneContents />
-      <BranchVisitUs branchKey="pune" />
-      <PuneFAQ />
+      <LuxScope>
+        <PuneAbout />
+        <PuneTransform />
+        <PuneCore />
+        <PuneContents />
+        <BranchVisitUs branchKey="pune" />
+        <PuneFAQ />
+      </LuxScope>
     </>
   );
 }

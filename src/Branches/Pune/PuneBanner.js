@@ -2,7 +2,6 @@ import React from "react";
 import BranchLuxBanner from "../common/BranchLuxBanner";
 import AI_INTERIORS from "../common/aiInteriors";
 
-// TODO: swap AI_INTERIORS.pune for real Pune interior photos when available
 const [heroImg, card1, card2, card3, card4] = AI_INTERIORS.pune;
 
 const PuneBanner = () => (
