@@ -6,7 +6,8 @@ import './RegionLanding.css';
 import { mediaUrl } from '../config/media';
 import BranchLuxBanner from './common/BranchLuxBanner';
 import AI_INTERIORS from './common/aiInteriors';
-const kochiImg = mediaUrl("images/Branches/kerala_kochi_campus.jpg");
+// Real Kochi interior photo
+const kochiImg = AI_INTERIORS.kochi[0];
 const trivandrumImg = mediaUrl("images/Branches/kerala_trivandrum_campus.jpg");
 
 const KeralaLanding = () => {

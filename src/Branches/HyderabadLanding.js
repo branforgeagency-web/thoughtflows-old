@@ -6,9 +6,10 @@ import './HyderabadLanding.css';
 import { mediaUrl } from '../config/media';
 import BranchLuxBanner from './common/BranchLuxBanner';
 import AI_INTERIORS from './common/aiInteriors';
-const ameerpetImg = mediaUrl("images/Hyderabad/ameerpet_campus.jpg");
-const dilsukhnagarImg = mediaUrl("images/Hyderabad/dilsukhnagar_campus.jpg");
-const placementImg = mediaUrl("images/Hyderabad/placement_success.jpg");
+// Real branch interior photos
+const ameerpetImg = AI_INTERIORS.ameerpet[0];
+const dilsukhnagarImg = AI_INTERIORS.dilsukhnagar[0];
+const placementImg = mediaUrl("images/Interiors/ameerpet/ameerpet-interior-08.jpg");
 
 const HyderabadLanding = () => {
   const { setIsOpen } = useContext(PopupContext);
@@ -123,7 +124,7 @@ const HyderabadLanding = () => {
         accent="Hyderabad"
         subTitle="From Beginner to Certified"
         heroImage={AI_INTERIORS.hyderabad[0]}
-        heroAlt="ThoughtFlows Medical Coding Academy Hyderabad campus interior"
+        heroAlt="Colour-glass work pods and discussion lounge at ThoughtFlows Ameerpet, Hyderabad"
         badgeTitle="2 Branches in Hyderabad"
         badgeText="Ameerpet · Dilsukhnagar"
         phone="087907 51742"
@@ -327,7 +328,7 @@ const HyderabadLanding = () => {
             <div className="hyd-spotlight-img-wrap">
               <img 
                 src={placementImg} 
-                alt="ThoughtFlows Hyderabad Medical Coding Certification and Placement Success" 
+                alt="Smart classroom at ThoughtFlows Hyderabad where students prepare for CPC certification and placement" 
               />
             </div>
           </div>

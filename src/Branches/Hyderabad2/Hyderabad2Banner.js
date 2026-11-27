@@ -2,7 +2,7 @@ import React from "react";
 import BranchLuxBanner from "../common/BranchLuxBanner";
 import AI_INTERIORS from "../common/aiInteriors";
 
-// TODO: swap AI_INTERIORS.dilsukhnagar for real Dilsukhnagar interior photos when available
+// Real dilsukhnagar interior photos (see common/aiInteriors.js)
 const [heroImg, card1, card2, card3, card4] = AI_INTERIORS.dilsukhnagar;
 
 const Hyderabad2Banner = () => (

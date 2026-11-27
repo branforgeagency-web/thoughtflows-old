@@ -1069,3 +1069,61 @@
     padding: 40px 24px;
   }
 }
+
+/* =========================================================
+   Banner-matched typography & palette (navy · teal · gold,
+   Playfair Display headings + Plus Jakarta Sans body)
+   ========================================================= */
+.hyd-landing {
+  --hyd-navy-dark: #0b2239;
+  --hyd-navy-mid: #0f2b47;
+  --hyd-slate-dark: #0b2239;
+  --hyd-slate-gray: #5b6b7b;
+  --hyd-gold: #c9a45c;
+  font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+}
+.hyd-landing p,
+.hyd-landing li,
+.hyd-landing a,
+.hyd-landing button,
+.hyd-landing span { font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif; }
+
+.hyd-landing .hyd-title,
+.hyd-landing .hyd-campus-title,
+.hyd-landing .hyd-spotlight-title,
+.hyd-landing .hyd-cta-title,
+.hyd-landing .hyd-pillar-title,
+.hyd-landing .hyd-value-title,
+.hyd-landing .hyd-why-card-title {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-weight: 600;
+  letter-spacing: -0.3px;
+}
+.hyd-landing .hyd-title { color: #0b2239; }
+.hyd-landing .hyd-title span {
+  font-family: 'Playfair Display', Georgia, serif;
+  font-style: italic;
+  font-weight: 500;
+  color: #097d8a;
+}
+.hyd-landing .hyd-title::after {
+  content: "";
+  display: block;
+  width: 56px;
+  height: 2px;
+  margin: 18px auto 0;
+  background: #c9a45c;
+  border-radius: 2px;
+}
+.hyd-landing .hyd-eyebrow {
+  background: #faf6ee;
+  color: #0b2239;
+  border: 1px solid #ecdfc6;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+.hyd-landing .hyd-faq-q { font-family: 'Plus Jakarta Sans', 'Outfit', sans-serif; }
+.hyd-landing .hyd-campus-card,
+.hyd-landing .hyd-campus-img-wrap img { border-radius: 22px; }
+.hyd-landing .hyd-campus-card { overflow: hidden; }
+.hyd-landing .hyd-campus-tagline { color: #c9a45c; font-weight: 600; }

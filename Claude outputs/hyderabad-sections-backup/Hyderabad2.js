@@ -1,0 +1,46 @@
+import React, { useEffect } from 'react'
+
+import HyderabadBanner from './Hyderabad2/Hyderabad2Banner'
+import HyderabadAbout from './Hyderabad2/Hyderabad2About'
+import HyderabadFlex from './Hyderabad2/Hyderaba2dFlex'
+import HyderabadCore from './Hyderabad2/Hyderabad2Core'
+import HyderabadSticky from './Hyderabad2/Hyderabad2Sticky'
+import HyderabadOnline from './Hyderabad2/Hyderabad2Online'
+import HyderabadOnline2 from './Hyderabad2/Hyderabad2Online2'
+import HyderabadGetinTouch from './Hyderabad2/Hyderabad2GetinTouch'
+import HyderabadStudents from './Hyderabad2/Hyderabad2Students'
+import Meta from '../Meta';
+import BranchVisitUs from './common/BranchVisitUs';
+import BranchInteriorGallery from './common/BranchInteriorGallery';
+import Hyderabad2Testimonial from './Hyderabad2/Hyderabad2Testimonial'
+import Hyderabad2FAQ from './Hyderabad2/Hyderabad2FAQ'
+
+function Hyderabad() {
+  useEffect(() => {
+    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+  }, [])
+  return (
+    <>
+      <Meta title="Medical Coding Course in Dilsukhnagar | ThoughtFlows" description="Medical coding course in Dilsukhnagar, Hyderabad — CPC & CCS certification with AAPC-certified trainers, live chart practice and placement support." canonical="https://www.thoughtflows.in/Professional-Medical-Coding-Dilsukhnagar" />
+
+      <HyderabadBanner />
+      <HyderabadAbout />
+      <HyderabadFlex />
+      <HyderabadCore />
+      <HyderabadSticky />
+      <HyderabadOnline />
+      <HyderabadOnline2 />
+      <HyderabadGetinTouch />
+      {/* <HyderabadStudents /> */}
+      <BranchInteriorGallery
+        branchKey="dilsukhnagar"
+        description="Take a look inside our Dilsukhnagar campus — bright training classrooms, coding workstations, a glass conference room and a welcoming student lounge."
+      />
+      <BranchVisitUs branchKey="dilsukhnagar" />
+      <Hyderabad2FAQ />
+      <Hyderabad2Testimonial />
+    </>
+  )
+}
+
+export default Hyderabad

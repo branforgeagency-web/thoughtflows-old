@@ -11,6 +11,7 @@ import HyderabadGetinTouch from './Hyderabad2/Hyderabad2GetinTouch'
 import HyderabadStudents from './Hyderabad2/Hyderabad2Students'
 import Meta from '../Meta';
 import BranchVisitUs from './common/BranchVisitUs';
+import { LuxScope } from './common/LuxSections';
 import Hyderabad2Testimonial from './Hyderabad2/Hyderabad2Testimonial'
 import Hyderabad2FAQ from './Hyderabad2/Hyderabad2FAQ'
 
@@ -23,17 +24,19 @@ function Hyderabad() {
       <Meta title="Medical Coding Course in Dilsukhnagar | ThoughtFlows" description="Medical coding course in Dilsukhnagar, Hyderabad — CPC & CCS certification with AAPC-certified trainers, live chart practice and placement support." canonical="https://www.thoughtflows.in/Professional-Medical-Coding-Dilsukhnagar" />
 
       <HyderabadBanner />
-      <HyderabadAbout />
-      <HyderabadFlex />
-      <HyderabadCore />
-      <HyderabadSticky />
-      <HyderabadOnline />
-      <HyderabadOnline2 />
-      <HyderabadGetinTouch />
-      {/* <HyderabadStudents /> */}
-      <BranchVisitUs branchKey="dilsukhnagar" />
-      <Hyderabad2FAQ />
-      <Hyderabad2Testimonial />
+      <LuxScope>
+        <HyderabadAbout />
+        <HyderabadFlex />
+        <HyderabadCore />
+        <HyderabadSticky />
+        <HyderabadOnline />
+        <HyderabadOnline2 />
+        <HyderabadGetinTouch />
+        {/* <HyderabadStudents /> */}
+        <BranchVisitUs branchKey="dilsukhnagar" />
+        <Hyderabad2FAQ />
+        <Hyderabad2Testimonial />
+      </LuxScope>
     </>
   )
 }

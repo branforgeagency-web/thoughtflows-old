@@ -3,7 +3,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faFacebookF, faTwitter, faInstagram, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 import { Link } from 'react-router-dom';
 import { mediaUrl } from '../config/media';
-import postImage14Local from '../images/Blog/aapc-ceus/hero-banner.jpg';
 const blogImage = mediaUrl('images/Blog/blog.jpg');
 const postImage1 = mediaUrl('images/Blog/medical-banner-with-doctor-working-laptop.jpg');
 const postImage2 = mediaUrl('images/Blog/medical-banner-with-doctor-wearing-goggles.jpg');
@@ -18,7 +17,7 @@ const postImage10 = mediaUrl('images/Blog/certified-ai-coder/hero-banner.jpg');
 const postImage11 = mediaUrl('images/Blog/fy-2027-icd-10/hero-banner.jpg');
 const postImage12 = mediaUrl('images/Blog/best-medical-coding-course-india/hero-banner.jpg');
 const postImage13 = mediaUrl('images/Blog/medical-coding-tamilnadu/hero-banner.jpg');
-const postImage14 = postImage14Local || mediaUrl('images/Blog/aapc-ceus/hero-banner.jpg');
+const postImage14 = mediaUrl('images/Blog/aapc-ceus/hero-banner.jpg');
 
 function BlogRef1() {
   const [showSidebar, setShowSidebar] = useState(false);

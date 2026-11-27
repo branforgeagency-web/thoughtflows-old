@@ -11,6 +11,7 @@ import KochiOnline from "./Kochi/KochiOnline";
 import KochiOnline2 from "./Kochi/KochiOnline2";
 import Meta from '../Meta';
 import BranchVisitUs from './common/BranchVisitUs';
+import { LuxScope } from './common/LuxSections';
 import KochiTestimonial from './Kochi/KochiTestimonial';
 import KochiFAQ from './Kochi/KochiFAQ';
 
@@ -23,17 +24,19 @@ function Kochi() {
       <Meta title="Medical Coding Course in Kochi | ThoughtFlows Academy" description="ThoughtFlows Medical Coding Academy in Kochi — expert-led medical coding course in Kochi with practical training and placement assistance." canonical="https://www.thoughtflows.in/Medical-Coding-Academy-Kochi" />
 
       <KochiBanner />
-      <KochiAbout />
-      <KochiChoice />
-      <KochiCore />
-      <KochiFlex />
-      <KochiStick />
-      <KochiOnline2 />
-      <KochiOnline />
-      {/* <KochiStudents /> */}
-      <BranchVisitUs branchKey="kochi" />
-      <KochiFAQ />
-      <KochiTestimonial />
+      <LuxScope>
+        <KochiAbout />
+        <KochiChoice />
+        <KochiCore />
+        <KochiFlex />
+        <KochiStick />
+        <KochiOnline2 />
+        <KochiOnline />
+        {/* <KochiStudents /> */}
+        <BranchVisitUs branchKey="kochi" />
+        <KochiFAQ />
+        <KochiTestimonial />
+      </LuxScope>
     </>
   );
 }
