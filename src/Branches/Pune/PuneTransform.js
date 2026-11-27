@@ -4,8 +4,8 @@ import { LuxCTA } from '../common/LuxSections';
 
 const PuneTransform = () => (
   <LuxCTA
-    image={mediaUrl('images/Interiors/pune/pune-interior-05.jpg')}
-    imageAlt="Collaborative breakout lounge at ThoughtFlows Pune"
+    image={mediaUrl('images/Interiors/pune/pune-interior-09.jpg')}
+    imageAlt="Mentor discussion table at ThoughtFlows Pune"
     to="/contact"
     label="Register Now"
     blocks={[
