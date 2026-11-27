@@ -1,0 +1,452 @@
+/* =========================================================
+   Maharashtra Regional Landing Page
+   Matches BranchLuxBanner & LuxSections:
+   navy (#0b2239) · teal (#097d8a) · gold (#c9a45c)
+   Playfair Display + Plus Jakarta Sans
+   ========================================================= */
+
+.mh-landing {
+  --mh-navy: #0b2239;
+  --mh-teal: #097d8a;
+  --mh-teal-dark: #065b64;
+  --mh-gold: #c9a45c;
+  --mh-muted: #5b6b7b;
+  --mh-line: #e8eef4;
+  --mh-serif: 'Playfair Display', Georgia, serif;
+  --mh-sans: 'Plus Jakarta Sans', 'Outfit', sans-serif;
+
+  font-family: var(--mh-sans);
+  color: var(--mh-navy);
+  background: #ffffff;
+  overflow-x: hidden;
+}
+
+.mh-campus-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.mh-campus-card {
+  background: #ffffff;
+  border: 1px solid var(--mh-line);
+  border-radius: 22px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 18px 42px -28px rgba(11, 34, 57, 0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.mh-campus-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 28px 54px -26px rgba(11, 34, 57, 0.32);
+  border-color: rgba(201, 164, 92, 0.55);
+}
+
+.mh-campus-media {
+  position: relative;
+  height: 250px;
+  overflow: hidden;
+  background: var(--mh-navy);
+}
+
+.mh-campus-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s ease;
+}
+
+.mh-campus-card:hover .mh-campus-media img {
+  transform: scale(1.04);
+}
+
+.mh-campus-badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(11, 34, 57, 0.88);
+  backdrop-filter: blur(8px);
+  color: #f3e6c9;
+  border: 1px solid rgba(201, 164, 92, 0.45);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
+
+.mh-campus-body {
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.mh-campus-title {
+  font-family: var(--mh-serif);
+  font-size: 26px;
+  font-weight: 600;
+  color: var(--mh-navy);
+  margin: 0 0 12px;
+}
+
+.mh-campus-location {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  font-size: 14.5px;
+  line-height: 1.6;
+  color: var(--mh-muted);
+  margin-bottom: 18px;
+}
+
+.mh-campus-location svg {
+  color: var(--mh-teal);
+  flex-shrink: 0;
+  margin-top: 3px;
+}
+
+.mh-campus-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  display: grid;
+  gap: 10px;
+  flex: 1;
+}
+
+.mh-campus-features li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14.5px;
+  color: var(--mh-navy);
+}
+
+.mh-campus-features li svg {
+  color: var(--mh-teal);
+  flex-shrink: 0;
+}
+
+.mh-campus-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding-top: 18px;
+  border-top: 1px solid var(--mh-line);
+  flex-wrap: wrap;
+}
+
+.mh-explore-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 11px 22px;
+  border-radius: 999px;
+  background: var(--mh-navy);
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.mh-explore-btn:hover {
+  background: var(--mh-teal);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.mh-phone-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  color: var(--mh-teal);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.mh-phone-link:hover {
+  color: var(--mh-navy);
+}
+
+/* Courses grid */
+.mh-courses-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.mh-course-card {
+  background: #ffffff;
+  border: 1px solid var(--mh-line);
+  border-radius: 20px;
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.mh-course-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 44px -26px rgba(11, 34, 57, 0.24);
+  border-color: rgba(201, 164, 92, 0.55);
+}
+
+.mh-course-org {
+  display: inline-block;
+  align-self: flex-start;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: #faf6ee;
+  border: 1px solid #ecdfc6;
+  color: var(--mh-navy);
+  font-size: 11.5px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+}
+
+.mh-course-name {
+  font-family: var(--mh-serif);
+  font-size: 21px;
+  font-weight: 600;
+  color: var(--mh-navy);
+  margin: 0 0 10px;
+}
+
+.mh-course-desc {
+  font-size: 14.5px;
+  line-height: 1.65;
+  color: var(--mh-muted);
+  margin: 0 0 18px;
+  flex: 1;
+}
+
+.mh-course-meta {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.mh-meta-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 5px 11px;
+  border-radius: 999px;
+  background: #f4f8fb;
+  color: var(--mh-navy);
+  font-size: 12.5px;
+  font-weight: 500;
+}
+
+.mh-course-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--mh-teal);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.mh-course-link:hover {
+  color: var(--mh-navy);
+}
+
+/* Partners */
+.mh-partners {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.mh-partner-pill {
+  padding: 10px 20px;
+  border-radius: 999px;
+  background: #ffffff;
+  border: 1px solid var(--mh-line);
+  color: var(--mh-navy);
+  font-size: 14px;
+  font-weight: 600;
+  box-shadow: 0 8px 20px -16px rgba(11, 34, 57, 0.25);
+}
+
+/* FAQ */
+.mh-faq-list {
+  max-width: 880px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.mh-faq-item {
+  background: #ffffff;
+  border: 1px solid var(--mh-line);
+  border-radius: 16px;
+  overflow: hidden;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.mh-faq-item.open {
+  border-color: var(--mh-teal);
+  box-shadow: 0 12px 30px -16px rgba(9, 125, 138, 0.28);
+}
+
+.mh-faq-btn {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  background: none;
+  border: none;
+  padding: 20px 24px;
+  cursor: pointer;
+  text-align: left;
+  font-family: var(--mh-sans);
+}
+
+.mh-faq-q {
+  font-family: var(--mh-sans);
+  font-size: 16.5px;
+  font-weight: 600;
+  color: var(--mh-navy);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.mh-faq-item.open .mh-faq-q {
+  color: var(--mh-teal-dark);
+}
+
+.mh-faq-toggle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+  background: #f0f9fa;
+  color: var(--mh-teal);
+  transition: transform 0.25s ease, background-color 0.25s ease, color 0.25s ease;
+}
+
+.mh-faq-item.open .mh-faq-toggle {
+  transform: rotate(180deg);
+  background: var(--mh-teal);
+  color: #ffffff;
+}
+
+.mh-faq-a {
+  padding: 0 24px 22px;
+  font-size: 15.5px;
+  line-height: 1.7;
+  color: var(--mh-muted);
+}
+
+/* Bottom CTA */
+.mh-cta-box {
+  background: radial-gradient(ellipse at top right, #12385a 0%, var(--mh-navy) 65%);
+  border-radius: 26px;
+  padding: 56px 42px;
+  text-align: center;
+  color: #e7edf3;
+  border: 1px solid rgba(201, 164, 92, 0.28);
+}
+
+.mh-cta-box h2 {
+  font-family: var(--mh-serif);
+  font-size: clamp(26px, 3vw, 38px);
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 14px;
+}
+
+.mh-cta-box p {
+  max-width: 660px;
+  margin: 0 auto 28px;
+  font-size: 16px;
+  line-height: 1.7;
+  color: #cbd5e1;
+}
+
+.mh-cta-actions {
+  display: flex;
+  justify-content: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.mh-btn-gold {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 28px;
+  border-radius: 999px;
+  background: var(--mh-gold);
+  color: var(--mh-navy);
+  border: none;
+  font-family: var(--mh-sans);
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.25s ease, background 0.25s ease;
+}
+
+.mh-btn-gold:hover {
+  transform: translateY(-2px);
+  background: #d8b56f;
+}
+
+.mh-btn-outline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 26px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.28);
+  font-family: var(--mh-sans);
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.25s ease, transform 0.25s ease;
+}
+
+.mh-btn-outline:hover {
+  background: rgba(255, 255, 255, 0.16);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+@media (max-width: 991px) {
+  .mh-campus-grid {
+    grid-template-columns: 1fr;
+  }
+  .mh-courses-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .mh-courses-grid {
+    grid-template-columns: 1fr;
+  }
+  .mh-cta-box {
+    padding: 40px 24px;
+  }
+}

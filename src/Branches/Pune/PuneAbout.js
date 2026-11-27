@@ -1,38 +1,28 @@
 import React from 'react';
-import { Row, Col } from 'react-bootstrap';
 import { mediaUrl } from '../../config/media';
-const cbe1aboutbg = mediaUrl('images/Branches/cbe1Abt.png');
-const studentsImg = mediaUrl('images/Branches/online/Students.jpg');
+import { LuxSection, LuxSplit } from '../common/LuxSections';
 
-const PuneAbout = () => {
-  return (
-    <div
-      style={{
-        backgroundImage: `url(${cbe1aboutbg})`,
-        backgroundSize: 'cover',
-        backgroundPosition: 'center',
-        overflow: 'hidden',
-        backgroundRepeat: 'no-repeat',
-      }}
+const PuneAbout = () => (
+  <LuxSection tone="light">
+    <LuxSplit
+      image={mediaUrl('images/Interiors/pune/pune-interior-01.jpg')}
+      imageAlt="Smart coding classroom at ThoughtFlows Pune"
+      eyebrow="Pune Campus"
+      title="Pune's Trusted"
+      accent="Medical Coding Institute"
     >
-      <Row className='cbe1-about'>
-        <Col lg={1}></Col>
-        <Col lg={5}>
-          <h2>Pune's Trusted Medical Coding Institute</h2>
-          <p>Are you interested in studying medical coding in Pune? Thoughtflows Medical Coding Academy has industry-centric medical coding courses in Pune. The courses are geared towards graduates, nursing and life sciences students and allied health professionals. Through this training you will learn HCPCS, CPT and ICD-10-CM coding and also prepare for the CPC exam. The trainers are practitioners with industry experience. Thoughtflows Medical Coding Academy has working relationships with hospitals and other facilities in the healthcare industry. Additionally, it provides students with learning resources and professionally related services. The medical coding courses will equip you to begin a career in medical coding.</p>
-        </Col>
-        <Col lg={5} style={{ textAlign: 'center' }}>
-          <img
-            src={studentsImg}
-            alt='Medical coding students at Thoughtflows Pune'
-            className='cbe1About'
-            style={{ width: '320px', maxWidth: '100%', height: '300px', objectFit: 'cover', borderRadius: '12px' }}
-          />
-        </Col>
-        <Col lg={1}></Col>
-      </Row>
-    </div>
-  );
-};
+      <p>
+        Are you interested in studying medical coding in Pune? Thoughtflows Medical Coding Academy has
+        industry-centric medical coding courses in Pune geared towards graduates, nursing and life sciences
+        students and allied health professionals.
+      </p>
+      <p>
+        Through this training you will learn HCPCS, CPT and ICD-10-CM coding and prepare for the CPC exam.
+        Our trainers are practitioners with industry experience, backed by working relationships with hospitals
+        and healthcare facilities to equip you for a career in medical coding.
+      </p>
+    </LuxSplit>
+  </LuxSection>
+);
 
 export default PuneAbout;
