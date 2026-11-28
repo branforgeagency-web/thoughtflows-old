@@ -1,106 +1,113 @@
-import React from 'react';
-import { mediaUrl } from '../../config/media';
-const micro = mediaUrl("images/Branches/online/microscope.jpg");
-const microbg = mediaUrl("images/Branches/online/microbg.png");
+import React from "react";
+import { mediaUrl } from "../../config/media";
+import { LuxSection, LuxSplit, LuxHead } from "../common/LuxSections";
+
+const roadmapSteps = [
+  { title: "Medical Coding Training", tag: "Foundation" },
+  { title: "CPC Certification Preparation", tag: "Exam Prep" },
+  { title: "Medical Coder", tag: "₹2.5–4.5 LPA" },
+  { title: "Senior Medical Coder", tag: "₹4–7 LPA" },
+  { title: "Quality Analyst", tag: "₹6–10 LPA" },
+  { title: "Team Lead", tag: "₹8–15 LPA" },
+  { title: "Coding Manager", tag: "₹12–25+ LPA" },
+];
 
 function TiruvandrumSticky() {
   return (
     <>
-      <div className="relative">
-        {/* Full-width image with 50vh height */}
-        <div className="w-full">
-          <img src={micro} alt="Microscope" className="w-full h-[50vh] object-cover" />
-        </div>
-
-        {/* Text content below the image */}
-        <div className="relative z-20 px-5 py-10 md:px-20 lg:px-32">
-          <div className="space-y-16">
-            {/* Section 1 */}
-            <div id="static-1">
-              <h2 className="text-3xl lg:text-4xl font-bold text-secondaryy">
-                CPC Certification Guidance
-              </h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                The Certified Professional Coder (CPC) credential is one of the most recognized Medical Coding certifications in the healthcare industry. CPC certification validates coding knowledge and demonstrates professional competency in medical coding practices.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                ThoughtFlows provides CPC focused training designed to help students understand coding concepts, medical documentation, coding guidelines, and exam oriented preparation. With expert guidance and structured learning, students can strengthen their coding knowledge and prepare confidently for certification goals.
+      <LuxSection tone="tint">
+        <LuxSplit
+          image={mediaUrl("images/Interiors/trivandrum/trivandrum-interior-07.jpg")}
+          imageAlt="Director's cabin and mentoring room at ThoughtFlows Trivandrum"
+          eyebrow="Certification & Placement"
+          title="CPC Guidance &"
+          accent="Placement Support"
+        >
+          <div className="lux-stack">
+            <div className="lux-stack-item">
+              <h3>CPC Certification Guidance</h3>
+              <p>
+                The Certified Professional Coder (CPC) credential is one of the most recognized Medical Coding certifications in the healthcare industry. ThoughtFlows provides CPC-focused training covering coding concepts, medical documentation, coding guidelines, and mock assessments so you can prepare with confidence.
               </p>
             </div>
-
-            {/* Section 2 */}
-            <div id="static-2">
-              <h2 className="text-3xl lg:text-4xl font-bold text-secondaryy mb-8">
-                Career Path Roadmap
-              </h2>
-              <div className="relative pl-8 border-l-4 border-teal-500 space-y-8 mt-4">
-                <div className="relative">
-                  <div className="absolute -left-10 mt-1.5 w-4 h-4 rounded-full bg-teal-500 border-4 border-white shadow"></div>
-                  <h3 className="text-xl font-bold text-gray-800">Medical Coding Training</h3>
-                </div>
-                
-                <div className="relative">
-                  <div className="absolute -left-10 mt-1.5 w-4 h-4 rounded-full bg-teal-500 border-4 border-white shadow"></div>
-                  <h3 className="text-xl font-bold text-gray-800">CPC Certification Preparation</h3>
-                </div>
-
-                <div className="relative bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                  <div className="absolute -left-[42px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-pink-500 border-4 border-white shadow"></div>
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                    <h3 className="text-xl font-bold text-gray-800 m-0">Medical Coder</h3>
-                    <span className="inline-block px-4 py-1.5 bg-pink-100 text-pink-700 font-semibold rounded-full text-sm">₹2.5–4.5 LPA</span>
-                  </div>
-                </div>
-
-                <div className="relative bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                  <div className="absolute -left-[42px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-purple-500 border-4 border-white shadow"></div>
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                    <h3 className="text-xl font-bold text-gray-800 m-0">Senior Medical Coder</h3>
-                    <span className="inline-block px-4 py-1.5 bg-purple-100 text-purple-700 font-semibold rounded-full text-sm">₹4–7 LPA</span>
-                  </div>
-                </div>
-
-                <div className="relative bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                  <div className="absolute -left-[42px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-blue-500 border-4 border-white shadow"></div>
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                    <h3 className="text-xl font-bold text-gray-800 m-0">Quality Analyst</h3>
-                    <span className="inline-block px-4 py-1.5 bg-blue-100 text-blue-700 font-semibold rounded-full text-sm">₹6–10 LPA</span>
-                  </div>
-                </div>
-
-                <div className="relative bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                  <div className="absolute -left-[42px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-yellow-500 border-4 border-white shadow"></div>
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                    <h3 className="text-xl font-bold text-gray-800 m-0">Team Lead</h3>
-                    <span className="inline-block px-4 py-1.5 bg-yellow-100 text-yellow-700 font-semibold rounded-full text-sm">₹8–15 LPA</span>
-                  </div>
-                </div>
-
-                <div className="relative bg-white p-4 rounded-lg shadow-sm border border-gray-100">
-                  <div className="absolute -left-[42px] top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-green-500 border-4 border-white shadow"></div>
-                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
-                    <h3 className="text-xl font-bold text-gray-800 m-0">Coding Manager</h3>
-                    <span className="inline-block px-4 py-1.5 bg-green-100 text-green-700 font-semibold rounded-full text-sm">₹12–25+ LPA</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Section 3 */}
-            <div id="static-3">
-              <h2 className="text-3xl lg:text-4xl font-bold text-secondaryy">
-                Placement Support & Career Growth Opportunities
-              </h2>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                With 35,000+ students trained and 25,000+ career placements and transitions supported, ThoughtFlows has helped aspiring healthcare professionals build successful careers in the Medical Coding industry.
-              </p>
-              <p className="text-lg text-gray-700 leading-relaxed">
-                Our dedicated placement support team assists students with resume building, interview preparation, mock interviews, HR guidance, career counseling, and job referral support. Medical Coding professionals can explore opportunities in hospitals, healthcare BPOs, revenue cycle management (RCM) companies, medical coding organizations, healthcare technology companies, insurance support services, and health information management organizations across India and global healthcare markets.
+            <div className="lux-stack-item">
+              <h3>Placement Support &amp; Career Growth</h3>
+              <p>
+                With 35,000+ students trained and 25,000+ career placements supported, our dedicated placement team assists with resume building, interview preparation, mock interviews, HR guidance, and job referral support across hospitals, RCM companies, and global healthcare markets.
               </p>
             </div>
           </div>
+        </LuxSplit>
+      </LuxSection>
+
+      <LuxSection tone="light">
+        <LuxHead
+          eyebrow="Growth Trajectory"
+          title="Medical Coding"
+          accent="Career Path Roadmap"
+          intro="A structured progression from foundational training to senior leadership roles in healthcare revenue cycle management."
+        />
+        <div
+          style={{
+            maxWidth: 780,
+            margin: "0 auto",
+            display: "grid",
+            gap: 12,
+          }}
+        >
+          {roadmapSteps.map((step, index) => (
+            <div
+              key={step.title}
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "space-between",
+                gap: 16,
+                padding: "14px 20px",
+                borderRadius: 14,
+                background: "#f6f9fc",
+                border: "1px solid #e8eef4",
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center", gap: 14 }}>
+                <span
+                  style={{
+                    width: 30,
+                    height: 30,
+                    borderRadius: "50%",
+                    background: "#097d8a",
+                    color: "#ffffff",
+                    display: "inline-flex",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    fontSize: 13.5,
+                    fontWeight: 700,
+                    flexShrink: 0,
+                  }}
+                >
+                  {index + 1}
+                </span>
+                <span style={{ fontSize: 16, fontWeight: 600, color: "#0b2239" }}>
+                  {step.title}
+                </span>
+              </div>
+              <span
+                style={{
+                  padding: "6px 14px",
+                  borderRadius: 999,
+                  background: "rgba(9, 125, 138, 0.1)",
+                  color: "#097d8a",
+                  fontSize: 13,
+                  fontWeight: 700,
+                  whiteSpace: "nowrap",
+                }}
+              >
+                {step.tag}
+              </span>
+            </div>
+          ))}
         </div>
-      </div>
+      </LuxSection>
     </>
   );
 }
