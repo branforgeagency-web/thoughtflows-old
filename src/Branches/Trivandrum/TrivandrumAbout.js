@@ -1,7 +1,7 @@
 import React from "react";
 import { Col, Row } from 'react-bootstrap';
 import { mediaUrl } from '../../config/media';
-const lab = mediaUrl("images/Branches/online/lab.jpg");
+const lab = mediaUrl("images/Interiors/trivandrum/trivandrum-interior-05.jpg");
 
 
 function TrivandrumAbout() {

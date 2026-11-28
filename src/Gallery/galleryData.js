@@ -15,6 +15,7 @@ export const galleryCategories = [
   { id: "ameerpet", label: "Ameerpet" },
   { id: "dilsukhnagar", label: "Dilsukhnagar" },
   { id: "kochi", label: "Kochi" },
+  { id: "trivandrum", label: "Trivandrum" },
   { id: "pune", label: "Pune" },
   { id: "workshops", label: "Workshops & Training" },
   { id: "seminars", label: "Seminars & Masterclasses" },
@@ -306,7 +307,7 @@ export const galleryItems = [
   // Ameerpet & Dilsukhnagar (Hyderabad), Kochi and Pune campuses
   // (photo list lives in src/Branches/common/branchInteriorPhotos.js)
   // =========================================================================
-  ...["ameerpet", "dilsukhnagar", "kochi", "pune"].flatMap((branch) =>
+  ...["ameerpet", "dilsukhnagar", "kochi", "pune", "trivandrum"].flatMap((branch) =>
     BRANCH_INTERIOR_PHOTOS[branch].map((photo) => ({
       id: photo.id,
       category: branch,
