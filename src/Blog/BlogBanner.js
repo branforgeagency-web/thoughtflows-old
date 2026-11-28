@@ -1,769 +1,427 @@
 import React from "react";
-import { motion } from "framer-motion";
+import { Link } from "react-router-dom";
+import { motion, useReducedMotion } from "framer-motion";
 import { mediaUrl } from "../config/media";
 
-const heroPhoto = mediaUrl("images/AboutImg/about-office-interior.jpg");
+const backdropPhoto = mediaUrl("images/Interiors/ameerpet/ameerpet-interior-06.jpg");
+
+const STATS = [
+  { value: "14+", label: "IN-DEPTH GUIDES", tone: "amber" },
+  { value: "FY 2027", label: "ICD-10-CM UPDATES", tone: "teal" },
+  { value: "100%", label: "MENTOR REVIEWED", tone: "dark" },
+  { value: "4", label: "CORE SPECIALTIES", tone: "dark" },
+];
+
+const PILLARS = ["CPC PREP", "ICD-10 UPDATES", "AI CODING", "CAREER ROADMAPS"];
 
 const CSS = `
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;1,500;1,600;1,700&family=DM+Sans:ital,opsz,wght@0,9..40,400..800;1,9..40,400..700&display=swap");
 
-.novere-stage * {
+.tf-blog-mint {
+  position: relative;
+  inline-size: 100%;
+  overflow: clip;
+  background-color: #eaf9f8;
+  font-family: "DM Sans", Arial, Helvetica, sans-serif;
+  color: #08292b;
+  isolation: isolate;
+}
+
+.tf-blog-mint *,
+.tf-blog-mint *::before,
+.tf-blog-mint *::after {
   box-sizing: border-box;
 }
 
-.novere-stage button,
-.novere-stage a {
-  font: inherit;
-}
-
-.novere-stage {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  height: 100svh;
-  height: 100dvh;
-  max-height: 100dvh;
-  overflow: hidden;
-  background: #f7fafc;
-  background: linear-gradient(135deg, #f0f7fb 0%, #ffffff 45%, #eef7fa 100%);
-  font-family: "DM Sans", Arial, Helvetica, sans-serif;
-}
-
-.novere-hero {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  isolation: isolate;
-  background: transparent;
-  transform-style: preserve-3d;
-}
-
-.novere-media {
+.tf-blog-mint__bg-img {
   position: absolute;
   inset: 0;
-  z-index: 0;
-}
-
-.novere-image {
-  position: absolute;
-  inset: 0;
-  background-image: url("${heroPhoto}");
-  background-size: cover;
-  background-position: left center;
-  opacity: 1;
-}
-
-/* Clear image on the left, smooth transition into pure white reading surface on the right */
-.novere-dark-overlay {
-  position: absolute;
-  inset: 0;
-  z-index: 2;
-  pointer-events: none;
-  background: linear-gradient(
-    90deg,
-    rgba(255, 255, 255, 0) 0%,
-    rgba(255, 255, 255, 0) 46%,
-    rgba(255, 255, 255, 0.85) 58%,
-    #ffffff 66%,
-    #ffffff 100%
-  );
-}
-
-/* Emblem / Header Accent */
-.novere-logo {
-  position: absolute;
-  top: clamp(24px, 4.5vh, 48px);
-  left: 5%;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  padding: 7px 16px 7px 10px;
-  border-radius: 999px;
-  background: rgba(255, 255, 255, 0.94);
-  box-shadow: 0 6px 20px rgba(11, 37, 69, 0.16);
-  color: #0b2545;
-  transform: translateZ(42px);
-}
-
-.novere-logo svg {
+  z-index: -2;
+  inline-size: 100%;
+  block-size: 100%;
+  object-fit: cover;
+  object-position: right center;
   display: block;
-  width: clamp(38px, 3.5vw, 48px);
-  height: auto;
-  color: #15AEBB;
 }
 
-.novere-badge-text {
-  font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 0.16em;
-  text-transform: uppercase;
-  color: #0b3a66;
-}
-
-/* Main right content wrapper (vertically centered on desktop) */
-.novere-content-wrapper {
+/* Soft mint-aqua directional wash with subtle transparency behind left copy */
+.tf-blog-mint__wash {
   position: absolute;
-  top: 0;
-  bottom: 0;
-  left: 58%;
-  right: 4%;
-  z-index: 10;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  padding-top: clamp(70px, 9vh, 96px);
-  padding-bottom: clamp(50px, 7vh, 80px);
+  inset: 0;
+  z-index: -1;
   pointer-events: none;
+  background:
+    linear-gradient(
+      95deg,
+      rgba(235, 249, 248, 0.8) 0%,
+      rgba(238, 251, 250, 0.72) 38%,
+      rgba(235, 249, 248, 0.52) 56%,
+      rgba(229, 248, 246, 0.28) 76%,
+      rgba(215, 245, 243, 0.12) 100%
+    ),
+    radial-gradient(36rem 24rem at 85% 30%, rgba(20, 184, 166, 0.12), transparent 70%);
 }
 
-.novere-content {
-  position: relative;
-  width: min(100%, 620px);
-  color: #0b2545;
-  pointer-events: auto;
+.tf-blog-mint__inner {
+  max-inline-size: 1400px;
+  margin-inline: auto;
+  padding-block: clamp(2.5rem, 5dvh, 3.75rem) clamp(1.75rem, 3.5dvh, 2.5rem);
+  padding-inline: clamp(1.25rem, 3.5vw, 3rem);
 }
 
-.novere-kicker {
+@media (min-width: 1024px) {
+  .tf-blog-mint__inner {
+    padding-block-start: clamp(6.75rem, 11dvh, 8.25rem);
+  }
+}
+
+.tf-blog-mint__copy {
+  max-inline-size: 680px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.tf-blog-mint__kicker {
   display: inline-flex;
   align-items: center;
-  gap: 8px;
-  padding: 6px 14px;
+  gap: 0.5rem;
+  padding-block: 0.36rem;
+  padding-inline: 0.9rem;
   border-radius: 999px;
-  background: rgba(21, 174, 187, 0.12);
-  border: 1px solid rgba(21, 174, 187, 0.35);
-  color: #0d8291;
-  font-size: 11px;
+  background: rgba(13, 148, 136, 0.1);
+  border: 1px solid rgba(13, 148, 136, 0.24);
+  color: #0f766e;
+  font-size: 0.72rem;
   font-weight: 700;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.11em;
   text-transform: uppercase;
-  margin-bottom: clamp(14px, 1.8vh, 20px);
 }
 
-.novere-title {
-  margin: 0;
-  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
-  font-size: clamp(38px, 4.4vw, 68px);
+.tf-blog-mint__kicker-dot {
+  inline-size: 0.42rem;
+  block-size: 0.42rem;
+  border-radius: 999px;
+  background: #14b8a6;
+  box-shadow: 0 0 0 3px rgba(20, 184, 166, 0.22);
+}
+
+.tf-blog-mint__title {
+  margin-block: 1.15rem 0;
+  font-family: "DM Sans", Arial, Helvetica, sans-serif !important;
+  font-size: clamp(2.35rem, 1.5rem + 2.6vw, 4.15rem);
   font-weight: 800 !important;
   line-height: 1.04;
-  letter-spacing: -0.025em;
-  text-wrap: balance;
-  color: #0b2545;
-}
-
-.novere-title span.highlight {
-  color: #15AEBB;
-  background: linear-gradient(135deg, #0b6b82 0%, #15AEBB 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.novere-description {
-  max-width: 500px;
-  margin: clamp(14px, 2vh, 22px) 0 0;
-  color: #486581;
-  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
-  font-size: clamp(14px, 1.1vw, 17px);
-  font-weight: 400;
-  line-height: 1.6;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.03em;
+  color: #07292b;
   text-wrap: balance;
 }
 
-/* CTA */
-.novere-button {
-  position: relative;
+.tf-blog-mint__serif-italic {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif !important;
+  font-style: italic !important;
+  font-weight: 600 !important;
+  color: #0d9488;
+  padding-inline-end: 0.08em;
+}
+
+.tf-blog-mint__lead {
+  max-inline-size: 50ch;
+  margin-block: 1.15rem 0;
+  font-size: clamp(0.975rem, 0.92rem + 0.28vw, 1.075rem);
+  line-height: 1.62;
+  color: #3d5a5c;
+}
+
+.tf-blog-mint__lead strong {
+  color: #07292b;
+  font-weight: 700;
+}
+
+.tf-blog-mint__actions {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.85rem;
+  margin-block-start: 1.75rem;
+}
+
+.tf-blog-mint__cta-primary {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  gap: 10px;
-  min-height: clamp(44px, 4.8vh, 52px);
-  margin-top: clamp(20px, 3vh, 32px);
-  padding: 0 clamp(22px, 2.2vw, 30px);
-  overflow: hidden;
-  border: 1px solid rgba(11, 58, 102, 0.18);
+  gap: 0.55rem;
+  min-block-size: 2.85rem;
+  padding-block: 0.6rem;
+  padding-inline: 1.45rem;
   border-radius: 999px;
-  color: #ffffff;
-  background: linear-gradient(135deg, #0b3a66 0%, #0d8291 100%);
-  box-shadow:
-    0 10px 24px rgba(11, 58, 102, 0.18),
-    0 2px 6px rgba(11, 58, 102, 0.08);
-  text-decoration: none;
-  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
-  font-size: clamp(13px, 0.95vw, 15px);
+  background: #0d6e66;
+  color: #ffffff !important;
+  font-size: 0.9rem;
   font-weight: 600;
-  cursor: pointer;
-  transition:
-    transform 250ms ease,
-    box-shadow 350ms ease,
-    background 350ms ease;
+  text-decoration: none !important;
+  box-shadow: 0 10px 24px rgba(13, 110, 102, 0.24);
+  transition: transform 220ms ease, background-color 220ms ease, box-shadow 220ms ease;
 }
 
-.novere-button::before {
-  content: "";
-  position: absolute;
-  top: -80%;
-  bottom: -80%;
-  left: -65%;
-  width: 38%;
-  opacity: 0;
-  transform: skewX(-19deg);
-  background: linear-gradient(
-    90deg,
-    transparent,
-    rgba(255, 255, 255, 0.4),
-    transparent
-  );
-  transition:
-    left 700ms cubic-bezier(0.2, 0.75, 0.25, 1),
-    opacity 250ms ease;
-}
-
-.novere-button span,
-.novere-button svg {
-  position: relative;
-  z-index: 2;
-}
-
-.novere-button svg {
-  width: 15px;
-  height: 15px;
-  transition: transform 350ms cubic-bezier(0.2, 0.8, 0.2, 1);
-}
-
-.novere-button:hover {
-  color: #ffffff;
-  background: linear-gradient(135deg, #072a4c 0%, #15AEBB 100%);
-  box-shadow:
-    0 14px 34px rgba(11, 58, 102, 0.28),
-    0 4px 10px rgba(11, 58, 102, 0.15);
+.tf-blog-mint__cta-primary:hover {
   transform: translateY(-2px);
+  background: #09544e;
+  box-shadow: 0 14px 28px rgba(13, 110, 102, 0.3);
 }
 
-.novere-button:hover::before {
-  left: 135%;
-  opacity: 1;
+.tf-blog-mint__cta-primary:focus-visible,
+.tf-blog-mint__cta-secondary:focus-visible {
+  outline: 2px solid #0d9488;
+  outline-offset: 3px;
 }
 
-.novere-button:hover svg {
-  transform: translateX(4px);
+.tf-blog-mint__cta-primary svg {
+  inline-size: 0.95rem;
+  block-size: 0.95rem;
+  transition: transform 220ms ease;
 }
 
-/* Bottom Left Statement — Strictly constrained */
-.novere-bottom-title {
-  position: absolute;
-  left: 5%;
-  bottom: 8.5%;
-  max-width: min(420px, 34vw);
-  z-index: 10;
-  margin: 0;
-  color: #ffffff;
-  text-shadow: 0 2px 14px rgba(7, 18, 32, 0.85), 0 1px 3px rgba(0, 0, 0, 0.65);
-  font-family: 'Playfair Display', Georgia, 'Times New Roman', serif !important;
-  font-size: clamp(22px, 2.3vw, 36px);
-  font-weight: 700 !important;
-  line-height: 1.15;
-  letter-spacing: -0.02em;
-  transform: translateZ(44px);
+.tf-blog-mint__cta-primary:hover svg {
+  transform: translateX(3px);
 }
 
-.novere-bottom-title span {
-  display: block;
-  color: #5ce1e6;
-}
-
-/* Footer Bar */
-.novere-footer {
-  position: absolute;
-  right: 0;
-  bottom: clamp(14px, 2.5vh, 24px);
-  left: 0;
-  z-index: 10;
-  display: flex;
+.tf-blog-mint__cta-secondary {
+  display: inline-flex;
   align-items: center;
-  justify-content: space-between;
-  padding: 0 clamp(20px, 5vw, 56px);
-  transform: translateZ(28px);
-}
-
-.novere-brand {
-  color: rgba(255, 255, 255, 0.92);
-  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.8);
-  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
-  font-size: clamp(11px, 0.9vw, 13.5px);
-  font-weight: 500;
-  letter-spacing: -0.01em;
-}
-
-.novere-services {
-  display: flex;
-  align-items: center;
-  gap: clamp(8px, 1.2vw, 16px);
-  color: #627d98;
-  font-family: 'DM Sans', Arial, Helvetica, sans-serif;
-  font-size: clamp(11px, 0.9vw, 13px);
-  font-weight: 500;
-  letter-spacing: -0.01em;
-}
-
-.novere-services b {
-  color: #15AEBB;
-  font-size: 0.74em;
-  font-weight: 600;
-  animation: novere-spark 3.5s ease-in-out infinite;
-}
-
-.novere-services b:nth-of-type(2) {
-  animation-delay: 1.2s;
-}
-
-.novere-services b:nth-of-type(3) {
-  animation-delay: 2.4s;
-}
-
-@keyframes novere-spark {
-  0%, 100% {
-    opacity: 0.45;
-    transform: scale(0.85) rotate(0deg);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.25) rotate(90deg);
-  }
-}
-
-/* Ambient floating medical cyan bubbles */
-.novere-particles {
-  position: absolute;
-  inset: 0;
-  z-index: 6;
-  overflow: hidden;
-  pointer-events: none;
-}
-
-.novere-particle {
-  position: absolute;
-  width: 4px;
-  height: 4px;
+  justify-content: center;
+  min-block-size: 2.85rem;
+  padding-block: 0.6rem;
+  padding-inline: 1.35rem;
   border-radius: 999px;
-  opacity: 0;
-  background: rgba(21, 174, 187, 0.75);
-  box-shadow: 0 0 10px rgba(21, 174, 187, 0.45);
-  animation: novere-particle-rise linear infinite;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(7, 41, 43, 0.16);
+  color: #07292b !important;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none !important;
+  transition: transform 220ms ease, background-color 220ms ease, border-color 220ms ease;
 }
 
-.novere-particle:nth-child(1) {
-  left: 11%;
-  bottom: 17%;
-  animation-duration: 8s;
-  animation-delay: -2s;
+.tf-blog-mint__cta-secondary:hover {
+  transform: translateY(-2px);
+  background: #ffffff;
+  border-color: rgba(13, 148, 136, 0.45);
 }
 
-.novere-particle:nth-child(2) {
-  left: 20%;
-  bottom: 10%;
-  animation-duration: 10s;
-  animation-delay: -7s;
+/* 4-column editorial stats row */
+.tf-blog-mint__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem clamp(1.75rem, 3.5vw, 3rem);
+  margin-block-start: clamp(2rem, 4dvh, 2.75rem);
 }
 
-.novere-particle:nth-child(3) {
-  left: 32%;
-  bottom: 15%;
-  animation-duration: 9s;
-  animation-delay: -4s;
+.tf-blog-mint__stat {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
-.novere-particle:nth-child(4) {
-  left: 45%;
-  bottom: 8%;
-  animation-duration: 11s;
-  animation-delay: -5s;
+.tf-blog-mint__stat-value {
+  font-size: clamp(1.35rem, 1.1rem + 0.8vw, 1.75rem);
+  font-weight: 800;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
-.novere-particle:nth-child(5) {
-  left: 60%;
-  bottom: 18%;
-  animation-duration: 8.5s;
-  animation-delay: -1s;
+.tf-blog-mint__stat-value--amber {
+  color: #f59e0b;
 }
 
-@keyframes novere-particle-rise {
-  0% {
-    opacity: 0;
-    transform: translate3d(0, 20px, 0) scale(0.5);
-  }
-  15% { opacity: 0.75; }
-  70% { opacity: 0.35; }
-  100% {
-    opacity: 0;
-    transform: translate3d(24px, -170px, 0) scale(1.2);
-  }
+.tf-blog-mint__stat-value--teal {
+  color: #0d9488;
 }
 
-/* Tablet Screens (1024px and down) */
-@media (max-width: 1024px) {
-  .novere-dark-overlay {
+.tf-blog-mint__stat-value--dark {
+  color: #07292b;
+}
+
+.tf-blog-mint__stat-label {
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #547274;
+}
+
+/* Bottom pillar strip */
+.tf-blog-mint__pillars {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem 0.9rem;
+  margin-block-start: clamp(2rem, 4dvh, 2.75rem);
+  padding-block-start: 1.1rem;
+  border-block-start: 1px solid rgba(7, 41, 43, 0.08);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #5a7a7c;
+}
+
+.tf-blog-mint__pillar-sep {
+  color: rgba(7, 41, 43, 0.22);
+}
+
+@media (max-width: 900px) {
+  .tf-blog-mint__wash {
     background: linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0) 0%,
-      rgba(255, 255, 255, 0) 36%,
-      rgba(255, 255, 255, 0.88) 48%,
-      #ffffff 56%,
-      #ffffff 100%
+      180deg,
+      rgba(235, 249, 248, 0.95) 0%,
+      rgba(238, 251, 250, 0.88) 62%,
+      rgba(235, 249, 248, 0.65) 100%
     );
-  }
-
-  .novere-content-wrapper {
-    left: 48%;
-    right: 4%;
-    padding-top: 80px;
-    padding-bottom: 50px;
-  }
-
-  .novere-content {
-    width: 100%;
-    max-width: 520px;
-  }
-
-  .novere-title {
-    font-size: clamp(34px, 4.6vw, 54px);
-  }
-
-  .novere-bottom-title {
-    max-width: 280px;
-    font-size: clamp(18px, 2.2vw, 24px);
-    bottom: 8%;
-  }
-
-  .novere-services {
-    display: none;
-  }
-}
-
-/* Mobile Screens (768px and down) */
-@media (max-width: 768px) {
-  .novere-media {
-    inset: 0;
-  }
-
-  .novere-image {
-    inset: 0;
-    background-position: center top;
-    opacity: 1;
-  }
-
-  .novere-dark-overlay {
-    background:
-      linear-gradient(
-        180deg,
-        rgba(255, 255, 255, 0) 0%,
-        rgba(255, 255, 255, 0) 28%,
-        rgba(255, 255, 255, 0.86) 46%,
-        rgba(255, 255, 255, 0.98) 64%,
-        #ffffff 100%
-      );
-  }
-
-  .novere-logo {
-    top: 24px;
-    left: 6%;
-  }
-
-  .novere-content-wrapper {
-    left: 6%;
-    right: 6%;
-    align-items: flex-end;
-    justify-content: flex-end;
-    padding-top: 70px;
-    padding-bottom: 56px;
-  }
-
-  .novere-content {
-    width: 100%;
-    max-width: 460px;
-    text-align: right;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-  }
-
-  .novere-title {
-    max-width: 460px;
-    font-size: clamp(32px, 9vw, 46px);
-    line-height: 1.04;
-  }
-
-  .novere-description {
-    max-width: 360px;
-    margin-top: 14px;
-    font-size: 14px;
-    line-height: 1.5;
-  }
-
-  .novere-button {
-    min-height: 44px;
-    margin-top: 20px;
-    padding: 0 22px;
-    font-size: 13px;
-  }
-
-  /* Hide competing absolute bottom text on small mobile to avoid any overlap */
-  .novere-bottom-title {
-    display: none;
-  }
-
-  .novere-footer {
-    bottom: 16px;
-    padding: 0 6%;
-  }
-
-  .novere-brand {
-    font-size: 11px;
-    color: #627d98;
-    text-shadow: none;
-  }
-
-  .novere-services {
-    display: none;
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .novere-services b,
-  .novere-particle {
-    animation: none;
+  .tf-blog-mint__cta-primary,
+  .tf-blog-mint__cta-primary svg,
+  .tf-blog-mint__cta-secondary {
+    transition: none;
   }
 }
 `;
 
-const contentContainer = {
-  hidden: {},
-  visible: {
-    transition: {
-      delayChildren: 0.45,
-      staggerChildren: 0.12,
-    },
-  },
-};
-
-const revealItem = {
-  hidden: {
-    opacity: 0,
-    y: 22,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.9,
-      ease: [0.16, 1, 0.3, 1],
-    },
-  },
-};
-
 export default function BlogBanner() {
+  const prefersReducedMotion = useReducedMotion();
+
   const handleScrollToArticles = (e) => {
     e.preventDefault();
     const target = document.getElementById("blog-articles");
     if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
+      target.scrollIntoView({
+        behavior: prefersReducedMotion ? "auto" : "smooth",
+      });
     }
   };
 
+  const motionProps = (delay = 0) =>
+    prefersReducedMotion
+      ? {}
+      : {
+          initial: { opacity: 0, y: 16 },
+          animate: { opacity: 1, y: 0 },
+          transition: { duration: 0.6, delay, ease: [0.16, 1, 0.3, 1] },
+        };
+
   return (
-    <section className="novere-stage" aria-label="ThoughtFlows Blog Banner">
+    <section
+      className="tf-blog-mint"
+      aria-label="ThoughtFlows Blog Banner"
+    >
       <style>{CSS}</style>
 
-      <motion.div
-        className="novere-hero"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          duration: 1.2,
-          ease: [0.16, 1, 0.3, 1],
-        }}
-      >
-        <div className="novere-media">
-          <div className="novere-image" />
-        </div>
+      <img
+        src={backdropPhoto}
+        alt=""
+        aria-hidden="true"
+        className="tf-blog-mint__bg-img"
+        loading="eager"
+        fetchPriority="high"
+      />
+      <div className="tf-blog-mint__wash" aria-hidden="true" />
 
-        <div className="novere-dark-overlay" />
-
-        <div className="novere-particles">
-          <span className="novere-particle" />
-          <span className="novere-particle" />
-          <span className="novere-particle" />
-          <span className="novere-particle" />
-          <span className="novere-particle" />
-        </div>
-
-        {/* Brand Badge in Top Left */}
-        <motion.div
-          className="novere-logo"
-          initial={{
-            opacity: 0,
-            scale: 0.8,
-            y: -10,
-          }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-            y: 0,
-          }}
-          transition={{
-            delay: 0.3,
-            duration: 0.8,
-            ease: [0.16, 1, 0.3, 1],
-          }}
-        >
-          <svg
-            viewBox="0 0 52 52"
-            fill="none"
-            aria-hidden="true"
+      <div className="tf-blog-mint__inner">
+        <div className="tf-blog-mint__copy">
+          <motion.span
+            className="tf-blog-mint__kicker"
+            {...motionProps(0.05)}
           >
-            <circle
-              cx="26"
-              cy="26"
-              r="22"
-              stroke="currentColor"
-              strokeWidth="2"
-            />
-            {/* Open medical coding knowledge book emblem */}
-            <path
-              d="M17 21C20.5 19.5 24 20 26 21.5V33.5C24 32 20.5 31.5 17 33V21Z"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M35 21C31.5 19.5 28 20 26 21.5V33.5C28 32 31.5 31.5 35 33V21Z"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            />
-            <path
-              d="M26 15V17"
-              stroke="currentColor"
-              strokeWidth="2"
-              strokeLinecap="round"
-            />
-          </svg>
-          <span className="novere-badge-text">Knowledge Hub</span>
-        </motion.div>
+            <span className="tf-blog-mint__kicker-dot" aria-hidden="true" />
+            Knowledge Hub &bull; Journal &bull; Live
+          </motion.span>
 
-        {/* Main Content (Right Side, Vertically Centered) */}
-        <div className="novere-content-wrapper">
+          <motion.h1
+            className="tf-blog-mint__title"
+            {...motionProps(0.12)}
+          >
+            Insights that
+            <br />
+            <em className="tf-blog-mint__serif-italic">code</em> healthcare&apos;s
+            future.
+          </motion.h1>
+
+          <motion.p
+            className="tf-blog-mint__lead"
+            {...motionProps(0.18)}
+          >
+            <strong>ThoughtFlows Medical Coding Journal.</strong> Expert
+            ICD-10-CM updates, AAPC CPC preparation strategies, AI coding
+            guides, and career roadmaps — built for clarity from study to
+            certification.
+          </motion.p>
+
           <motion.div
-            className="novere-content"
-            variants={contentContainer}
-            initial="hidden"
-            animate="visible"
+            className="tf-blog-mint__actions"
+            {...motionProps(0.24)}
           >
-            <motion.div variants={revealItem}>
-              <span className="novere-kicker">
-                <span>✦</span> Medical Coding &amp; Career Journal
-              </span>
-            </motion.div>
-
-            <motion.h1
-              className="novere-title"
-              variants={revealItem}
+            <a
+              className="tf-blog-mint__cta-primary"
+              href="#blog-articles"
+              onClick={handleScrollToArticles}
             >
-              Insights that code
-              <br />
-              <span className="highlight">healthcare's future.</span>
-            </motion.h1>
+              <span>Explore Articles</span>
+              <svg viewBox="0 0 16 16" fill="none" aria-hidden="true">
+                <path
+                  d="M3 8H13M9.5 4.5L13 8L9.5 11.5"
+                  stroke="currentColor"
+                  strokeWidth="1.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </a>
 
-            <motion.p
-              className="novere-description"
-              variants={revealItem}
+            <Link
+              className="tf-blog-mint__cta-secondary"
+              to="/blog/fy-2027-icd-10-cm-updates"
             >
-              Expert ICD-10 updates, AAPC CPC preparation strategies, AI medical coding guides, and career roadmaps from industry mentors.
-            </motion.p>
-
-            <motion.div variants={revealItem}>
-              <motion.a
-                className="novere-button"
-                href="#blog-articles"
-                onClick={handleScrollToArticles}
-                whileTap={{ scale: 0.97 }}
-              >
-                <span>Explore latest articles</span>
-
-                <svg
-                  viewBox="0 0 16 16"
-                  fill="none"
-                  aria-hidden="true"
-                >
-                  <path
-                    d="M3 8H13M9.5 4.5L13 8L9.5 11.5"
-                    stroke="currentColor"
-                    strokeWidth="1.35"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-              </motion.a>
-            </motion.div>
+              Read FY 2027 ICD-10 Guide
+            </Link>
           </motion.div>
         </div>
 
-        {/* Bottom Left Statement — Bounded to Left Column */}
-        <motion.h2
-          className="novere-bottom-title"
-          initial={{
-            opacity: 0,
-            y: 20,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            delay: 0.8,
-            duration: 1,
-            ease: [0.16, 1, 0.3, 1],
-          }}
+        <motion.div
+          className="tf-blog-mint__stats"
+          {...motionProps(0.3)}
         >
-          Learn with precision.
-          <span>Code with confidence.</span>
-        </motion.h2>
+          {STATS.map((stat) => (
+            <div key={stat.label} className="tf-blog-mint__stat">
+              <span
+                className={`tf-blog-mint__stat-value tf-blog-mint__stat-value--${stat.tone}`}
+              >
+                {stat.value}
+              </span>
+              <span className="tf-blog-mint__stat-label">{stat.label}</span>
+            </div>
+          ))}
+        </motion.div>
 
-        {/* Footer Bar */}
-        <motion.footer
-          className="novere-footer"
-          initial={{
-            opacity: 0,
-            y: 10,
-          }}
-          animate={{
-            opacity: 1,
-            y: 0,
-          }}
-          transition={{
-            delay: 1,
-            duration: 0.8,
-          }}
+        <motion.div
+          className="tf-blog-mint__pillars"
+          aria-label="Blog topics"
+          {...motionProps(0.36)}
         >
-          <span className="novere-brand">
-            thoughtflows.in · medical coding knowledge hub
-          </span>
-
-          <div className="novere-services">
-            <span>cpc preparation</span>
-            <b>✦</b>
-            <span>icd-10 updates</span>
-            <b>✦</b>
-            <span>ai in healthcare</span>
-            <b>✦</b>
-            <span>career growth</span>
-          </div>
-        </motion.footer>
-      </motion.div>
+          {PILLARS.map((pillar, idx) => (
+            <React.Fragment key={pillar}>
+              {idx > 0 && (
+                <span className="tf-blog-mint__pillar-sep" aria-hidden="true">
+                  |
+                </span>
+              )}
+              <span>{pillar}</span>
+            </React.Fragment>
+          ))}
+        </motion.div>
+      </div>
     </section>
   );
 }
