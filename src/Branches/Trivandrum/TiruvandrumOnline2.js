@@ -1,50 +1,45 @@
-import React from 'react';
-import { FaCircle } from 'react-icons/fa';
-import { mediaUrl } from '../../config/media';
-const triEnroll = mediaUrl("images/Branches/online/nurse-typing.jpg");
-const testLab = mediaUrl("images/Interiors/trivandrum/trivandrum-interior-03.jpg");
-const arrow = mediaUrl("images/Branches/online/imge3.jpg");
+import React from "react";
+import { mediaUrl } from "../../config/media";
+import { LuxSection, LuxSplit, LuxStack, LuxCTA } from "../common/LuxSections";
 
 function TrivandrumOnline2() {
   return (
     <>
-      <div className="bg-third lg:mx-5 mx-4 mb-20 px-3 py-10 rounded-xl shadow-md">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:px-20 px-3">
-          {/* Left Column: Image */}
-          <div className="flex items-center justify-center">
-            <img src={testLab} alt="Training Lab" className="w-full h-auto rounded-lg shadow-lg" />
-          </div>
+      <LuxSection tone="light">
+        <LuxSplit
+          image={mediaUrl("images/Interiors/trivandrum/trivandrum-interior-03.jpg")}
+          imageAlt="Workshop and group training hall at ThoughtFlows Trivandrum"
+          eyebrow="Learning Experience"
+          title="Practical &"
+          accent="Flexible Training"
+        >
+          <LuxStack
+            blocks={[
+              {
+                title: "Practical Learning Environment",
+                text: "Students gain practical exposure to medical coding concepts through hands-on learning, real-world coding scenarios, and industry-relevant training methodologies that build confidence for a successful healthcare career.",
+              },
+              {
+                title: "Flexible Learning Options",
+                text: "Online and classroom training options are available to support different learning preferences. Flexible batch schedules help students, fresh graduates, and working professionals balance their academic or work commitments.",
+              },
+            ]}
+          />
+        </LuxSplit>
+      </LuxSection>
 
-          {/* Right Column: Content */}
-          <div className="flex flex-col justify-center space-y-8">
-            {/* First Section */}
-            <div className="flex flex-col items-start space-y-4">
-              <div className="flex items-center space-x-2">
-                {/* <FaCircle className="text-primaryy text-2xl" /> */}
-                <h2 className="font-bold sm:text-2xl lg:text-3xl text-secondaryy leading-tight">
-                  Practical Learning Environment
-                </h2>
-              </div>
-              <p className="text-lg text-gray-700 leading-relaxed tracking-wide">
-                Students gain practical exposure to medical coding concepts through hands-on learning, real world coding scenarios, and industry relevant training methodologies. This practical approach helps learners develop the skills and confidence required for a successful healthcare career.
-              </p>
-            </div>
-
-            {/* Second Section */}
-            <div className="flex flex-col items-start space-y-4">
-              <div className="flex items-center space-x-2">
-                {/* <FaCircle className="text-secondaryy text-2xl" /> */}
-                <h2 className="font-bold sm:text-2xl lg:text-3xl text-secondaryy leading-tight">
-                  Flexible Learning Options
-                </h2>
-              </div>
-              <p className="text-lg text-gray-700 leading-relaxed tracking-wide">
-                Online and classroom training options are available to support different learning preferences. Flexible batch schedules help students, fresh graduates, and working professionals pursue Medical Coding training while balancing their academic or professional commitments.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      <LuxCTA
+        blocks={[
+          {
+            title: "Start Your Medical Coding Career in Trivandrum",
+            text: "Join ThoughtFlows Medical Coding Academy at East Fort, Trivandrum—or learn live online from anywhere in Kerala—with AAPC-certified trainers, hands-on chart practice, and 100% placement support.",
+          },
+        ]}
+        image={mediaUrl("images/Interiors/trivandrum/trivandrum-interior-01.jpg")}
+        imageAlt="ThoughtFlows Trivandrum reception and front desk"
+        to="/contact"
+        label="Contact Us Now"
+      />
     </>
   );
 }
