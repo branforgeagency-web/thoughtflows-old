@@ -2,7 +2,7 @@ import React from 'react';
 import { FaCircle } from 'react-icons/fa';
 import { mediaUrl } from '../../config/media';
 const triEnroll = mediaUrl("images/Branches/online/nurse-typing.jpg");
-const testLab = mediaUrl("images/Branches/online/testTrivandrum.jpg");
+const testLab = mediaUrl("images/Interiors/trivandrum/trivandrum-interior-03.jpg");
 const arrow = mediaUrl("images/Branches/online/imge3.jpg");
 
 function TrivandrumOnline2() {

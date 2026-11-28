@@ -38,7 +38,8 @@ const AI_INTERIORS = {
   dilsukhnagar: [real("dilsukhnagar", 8), real("dilsukhnagar", 7), real("dilsukhnagar", 9), real("dilsukhnagar", 2), real("dilsukhnagar", 5)],
   // Kochi labels: [hero, Modern Classrooms, Reception & Lobby, Practice Lab, Workstations]
   kochi:        [real("kochi", 2), real("kochi", 3), real("kochi", 6), real("kochi", 5), real("kochi", 7)],
-  trivandrum:   [IMG.trivandrum, IMG.keralaHero, IMG.about,   IMG.lab,      IMG.nurse],
+  // Trivandrum labels: [hero, Modern Classrooms, Reception & Lobby, Practical Training Lab, Learning Spaces]
+  trivandrum:   [real("trivandrum", 1), real("trivandrum", 2), real("trivandrum", 4), real("trivandrum", 3), real("trivandrum", 5)],
   pune:         [real("pune", 5), real("pune", 1), real("pune", 2), real("pune", 3), real("pune", 6)],
   kolhapur:     [IMG.kolhapur,   IMG.pune,       IMG.about,   IMG.lab,      IMG.crc],
   tirupati:     [IMG.hydHero,    IMG.office,     IMG.students, IMG.course,  IMG.nurse],
@@ -48,7 +49,7 @@ const AI_INTERIORS = {
   theni:        [IMG.theniTeach, IMG.office,     IMG.students, IMG.kochi,   IMG.crc],
   // Hyderabad region page: [hero, Practical Training, Modern Classrooms]
   hyderabad:    [real("ameerpet", 6), real("ameerpet", 4), real("dilsukhnagar", 7)],
-  kerala:       [IMG.keralaHero, real("kochi", 5), real("kochi", 3)],
+  kerala:       [real("trivandrum", 3), real("kochi", 5), real("trivandrum", 2)],
   maharashtra:  [real("pune", 3), real("pune", 2), real("pune", 1)],
 };
 

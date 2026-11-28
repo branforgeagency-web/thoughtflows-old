@@ -3,12 +3,11 @@ import { Link } from 'react-router-dom';
 import Meta from '../Meta';
 import { PopupContext } from '../context/PopupContext';
 import './RegionLanding.css';
-import { mediaUrl } from '../config/media';
 import BranchLuxBanner from './common/BranchLuxBanner';
 import AI_INTERIORS from './common/aiInteriors';
-// Real Kochi interior photo
+// Real Kochi & Trivandrum interior photos
 const kochiImg = AI_INTERIORS.kochi[0];
-const trivandrumImg = mediaUrl("images/Branches/kerala_trivandrum_campus.jpg");
+const trivandrumImg = AI_INTERIORS.trivandrum[0];
 
 const KeralaLanding = () => {
   const { setIsOpen } = useContext(PopupContext);

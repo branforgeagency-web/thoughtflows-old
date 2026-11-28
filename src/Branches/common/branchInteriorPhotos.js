@@ -351,6 +351,68 @@ export const BRANCH_INTERIOR_PHOTOS = {
       tags: ["events", "campus"],
     },
   ],
+
+  trivandrum: [
+    {
+      id: "trivandrum-reception-desk",
+      src: "images/Interiors/trivandrum/trivandrum-interior-01.jpg",
+      title: "Reception & Welcome Desk",
+      tag: "Reception",
+      caption: "Modern ThoughtFlows reception counter with branded wall signage and warm timber slat partition.",
+      tags: ["campus"],
+      featured: true,
+    },
+    {
+      id: "trivandrum-smart-classroom",
+      src: "images/Interiors/trivandrum/trivandrum-interior-02.jpg",
+      title: "Smart Coding Classroom",
+      tag: "Classroom",
+      caption: "Air-conditioned classroom with white study desks, ergonomic chairs and motivational wall quote.",
+      tags: ["workshops", "campus"],
+      featured: true,
+    },
+    {
+      id: "trivandrum-workshop-hall",
+      src: "images/Interiors/trivandrum/trivandrum-interior-03.jpg",
+      title: "Workshop & Group Training Hall",
+      tag: "Training Lab",
+      caption: "Glass-partitioned training hall with a long collaborative study table for hands-on chart coding.",
+      tags: ["workshops", "seminars", "campus"],
+      featured: true,
+    },
+    {
+      id: "trivandrum-waiting-lounge",
+      src: "images/Interiors/trivandrum/trivandrum-interior-04.jpg",
+      title: "Student Waiting Lounge",
+      tag: "Lobby & Lounge",
+      caption: "Comfortable L-shaped sectional sofa lounge beside the frosted glass ThoughtFlows entrance.",
+      tags: ["campus"],
+    },
+    {
+      id: "trivandrum-counseling-desk",
+      src: "images/Interiors/trivandrum/trivandrum-interior-05.jpg",
+      title: "Admissions & Counseling Desk",
+      tag: "Counseling",
+      caption: "Student admissions desk with wall-mounted ThoughtFlows course brochure racks.",
+      tags: ["campus"],
+    },
+    {
+      id: "trivandrum-coordinator-desk",
+      src: "images/Interiors/trivandrum/trivandrum-interior-06.jpg",
+      title: "Academic Coordinator Desk",
+      tag: "Academic Desk",
+      caption: "Executive wooden desk and seating area tucked behind the timber slat partition.",
+      tags: ["campus"],
+    },
+    {
+      id: "trivandrum-directors-cabin",
+      src: "images/Interiors/trivandrum/trivandrum-interior-07.jpg",
+      title: "Director's Cabin & Counseling Room",
+      tag: "Executive Cabin",
+      caption: "Glass-enclosed executive cabin with mahogany desk for one-to-one career mentoring.",
+      tags: ["campus"],
+    },
+  ],
 };
 
 /** Display names used in captions / headings. */
@@ -359,4 +421,5 @@ export const BRANCH_INTERIOR_NAMES = {
   dilsukhnagar: "Dilsukhnagar",
   kochi: "Kochi",
   pune: "Pune",
+  trivandrum: "Trivandrum",
 };
